@@ -1,6 +1,6 @@
 <div align="center">
 
-# MPIE-Bench
+# <img src="docs/assets/apple-pie-icon.png" alt="" width="42" height="41" /> MPIE-Bench
 
 ### Multi-Person Interaction-Aware Character-Consistent Editing Benchmark
 
