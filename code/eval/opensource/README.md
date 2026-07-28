@@ -2,12 +2,12 @@
 
 Generate PNGs into the official pack layout, then score with the six-axis E2E pipeline.
 
-**Model inventory (paper main table):** [`docs/02_pipeline_design/eval_model_zoo.md`](../../../docs/02_pipeline_design/eval_model_zoo.md)  
-**Generation notes:** [`docs/02_pipeline_design/eval_opensource.md`](../../../docs/02_pipeline_design/eval_opensource.md)  
-**Scoring:** [`docs/02_pipeline_design/eval_e2e.md`](../../../docs/02_pipeline_design/eval_e2e.md)  
+**Model inventory:** [`docs/eval_model_zoo.md`](../../../docs/eval_model_zoo.md)  
+**Generation notes:** [`docs/eval_opensource.md`](../../../docs/eval_opensource.md)  
+**Scoring:** [`docs/eval_e2e.md`](../../../docs/eval_e2e.md)  
 Closed-source entry: `../closedsource/`.
 
-## Pack Layout (summary)
+## Pack Layout
 
 ```
 $MPIE_TEST_PACK/   # default: repo data/testset
@@ -30,16 +30,13 @@ $MPIE_TEST_PACK/   # default: repo data/testset
 | bagel | bagel | BAGEL-7B-MoT | run_bagel.py |
 | firered | firered | FireRed-Image-Edit-1.1 | run_firered.py |
 
-Extra (not in paper main table): `qwen-image-edit-2511` → `run_qwen_edit.py`.
-
 ## Full 2500 × multi-GPU
 
 ```bash
 export MPIE_TEST_PACK="$PWD/data/testset"
 export MPIE_WEIGHTS="${MPIE_WEIGHTS:-$HOME/mpie_weights}"
 cd code/eval
-# paper 7 open-source models:
-bash run_opensource_full_8gpu.sh all
+bash run_opensource_full_8gpu.sh all          # paper open-7
 # or one model:
 bash run_opensource_full_8gpu.sh firered
 ```

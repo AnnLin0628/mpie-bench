@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Anat/Inter Checklist_V — VLM Walk the same way as humans 0/1 Sample table (not the old six-axis score_vlm_v1）。
 
-protocol: docs/02_pipeline_design/eval_human_consistency_anat_inter.md §5
+protocol: docs/eval_human_consistency_anat_inter.md §5
 Place the order: $PACK/judgments/human_consistency/checklist_vlm/<judge>/<model_id>/<sample_id>.json
 
 By default it only runs _split.json Entries in (with H/M same set).

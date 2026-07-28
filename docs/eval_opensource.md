@@ -17,8 +17,6 @@
 | bagel | ✅ | Missing `flash_attn` (cross-device link failure → install wheel directly) |
 | firered | ✅ | conda `firered`; weights `FireRed-Image-Edit-1.1`; `--offload none --max-refs 3` on high-VRAM GPUs |
 
-Extra (not in paper main table): `qwen-image-edit-2511` — `--offload sequential`; runner still available.
-
 ## Environment & Paths (Final)
 
 ```bash
@@ -44,7 +42,7 @@ export HF_HUB_OFFLINE=1
 
 | conda | Purpose |
 |---|---|
-| `mpie_edit` | kontext (+ optional qwen extra) |
+| `mpie_edit` | kontext |
 | `omnigen2` / `uno` / `ace` / `bagel` / `dreamo` / `firered` | One env per model |
 | launcher | **Auto** `conda activate`; no manual switching needed |
 
@@ -95,12 +93,11 @@ Rough estimate: 7 models × 2500 × 8-GPU sharding, serial ~ **1–2 days** (ACE
 4. **Offline `load_lora_weights`**: must pass explicit `weight_name` (ACE Turbo/subject, DreamO Turbo both hit this).
 5. **pack**: full run uses the official N=2500 pack (`data/testset`).
 
-### 1) flux1-kontext-dev / omnigen2 / firered (+ optional qwen)
+### 1) flux1-kontext-dev / omnigen2 / firered
 
 - kontext: loading + fp8 quant takes several minutes on first run; ~1 min per sample.
 - omnigen2: `--offload model`.
 - firered: `bash run_opensource_full_8gpu.sh firered`; weights dir `FireRed-Image-Edit-1.1`.
-- optional qwen (not paper main table): `--offload sequential` (24G GPU).
 
 ### 2) UNO
 
@@ -259,4 +256,4 @@ export MPIE_BENCH_EVAL=$PWD/opensource   # when under code/eval
 HIGH_VRAM=1 NGPU=8 bash run_opensource_full_8gpu.sh kontext
 ```
 
-With `HIGH_VRAM=1`, launcher enables `pipe ready` stagger for kontext/qwen by default and can disable fp8 / adjust offload (see script comments).
+With `HIGH_VRAM=1`, launcher enables `pipe ready` stagger for kontext by default and can disable fp8 / adjust offload (see script comments).

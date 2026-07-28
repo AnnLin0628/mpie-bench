@@ -11,7 +11,7 @@ One entrypoint scores all **six** main-table axes after you place generated imag
 | **Instruction** | `score_instr_v2.py` | VLM API + frozen QA bank (`instr_qa_v2/`) |
 | **Quality** | `score_hpsv2.py` | HPSv2 weights in the eval env |
 
-Orchestrator: [`code/eval/run_eval_e2e.sh`](../../code/eval/run_eval_e2e.sh).
+Orchestrator: [`code/eval/run_eval_e2e.sh`](../code/eval/run_eval_e2e.sh).
 
 ## 1. Prepare
 

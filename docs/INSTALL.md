@@ -2,7 +2,7 @@
 
 This guide installs the **scoring** stack used by `code/eval/run_eval_e2e.sh`.
 It does **not** install open-source image editors (optional; see
-[`02_pipeline_design/eval_opensource.md`](02_pipeline_design/eval_opensource.md)).
+[eval_opensource.md](eval_opensource.md)).
 
 You need:
 

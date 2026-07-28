@@ -3,9 +3,9 @@
 """Shared Anat/Inter checklist helpers: coding, construct scores, summaries, majority vote, tau, mesh mapping.
 
 See:
-  docs/02_pipeline_design/eval_construct_validity_principle.md
-  docs/02_pipeline_design/eval_human_consistency_anat_inter.md
-  docs/02_pipeline_design/eval_human_consistency_analysis_protocol.md
+  docs/eval_construct_validity_principle.md
+  docs/eval_human_consistency_anat_inter.md
+  docs/eval_human_consistency_analysis_protocol.md
 Current: checklist_anat_inter_v4 + analysis rules v4.1
 """
 from __future__ import annotations

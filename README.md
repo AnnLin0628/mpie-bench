@@ -111,7 +111,7 @@ bash code/eval/run_eval_e2e.sh --model my-model --axes id,qual,mesh
 EVAL_LIMIT=20 bash code/eval/run_eval_e2e.sh --model my-model
 ```
 
-Guides: [INSTALL](docs/INSTALL.md) · [E2E](docs/02_pipeline_design/eval_e2e.md) · [BASELINES](docs/BASELINES.md).
+Guides: [INSTALL](docs/INSTALL.md) · [E2E](docs/eval_e2e.md) · [BASELINES](docs/BASELINES.md).
 
 ## Evaluation protocol
 
@@ -133,8 +133,8 @@ Protocol **v3** scores six complementary axes in one pipeline:
 > inflate scores.
 
 Read the
-[construct-validity principle](docs/02_pipeline_design/eval_construct_validity_principle.md)
-and the full [v3 protocol](docs/02_pipeline_design/eval_protocol_v3.md).
+[construct-validity principle](docs/eval_construct_validity_principle.md)
+and the full [v3 protocol](docs/eval_protocol_v3.md).
 
 ## Optional baseline generation
 
@@ -150,8 +150,8 @@ LIMIT=2 NGPU=1 bash run_opensource_full_8gpu.sh kontext
 # bash run_opensource_full_8gpu.sh all
 ```
 
-Model list: [`eval_model_zoo.md`](docs/02_pipeline_design/eval_model_zoo.md). Setup notes:
-[open-source generation](docs/02_pipeline_design/eval_opensource.md). For API
+Model list: [`eval_model_zoo.md`](docs/eval_model_zoo.md). Setup notes:
+[open-source generation](docs/eval_opensource.md). For API
 models, see the [closed-source runner guide](code/eval/closedsource/README.md).
 
 ## Repository layout
@@ -182,8 +182,8 @@ Store secrets only in environment variables or `configs/eval.env`.
 
 - **[Install](docs/INSTALL.md)** — conda/pip + weight download
 - **[Closed-source baselines](docs/BASELINES.md)** — optional 3-model artifacts
-- **[End-to-end evaluation](docs/02_pipeline_design/eval_e2e.md)** — `run_eval_e2e.sh`
-- **[Evaluation protocol v3](docs/02_pipeline_design/eval_protocol_v3.md)** — main-table definition
+- **[End-to-end evaluation](docs/eval_e2e.md)** — `run_eval_e2e.sh`
+- **[Evaluation protocol v3](docs/eval_protocol_v3.md)** — main-table definition
 - **[Documentation index](docs/README.md)** — full index
 
 ## Project status

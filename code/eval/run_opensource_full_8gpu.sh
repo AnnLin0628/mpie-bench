@@ -11,7 +11,7 @@
 # Shared disk/FUSE Do not run multiple processes at the same time mmap Loading; Available:
 #   HIGH_VRAM=1 NGPU=8 bash run_opensource_full_8gpu.sh kontext
 # （HIGH_VRAM=1 default STAGGER_READY_RE='pipe ready'）
-# See details docs/02_pipeline_design/eval_opensource.md
+# See details docs/eval_opensource.md
 set -euo pipefail
 
 source "$(conda info --base)/etc/profile.d/conda.sh"
@@ -23,7 +23,7 @@ CODE="${MPIE_BENCH_EVAL:-${SCRIPT_DIR}/opensource}"
 export MPIE_WEIGHTS="${MPIE_WEIGHTS:-${HOME}/mpie_weights}"
 export MPIE_CODE="${MPIE_CODE:-$HOME/mpie_code}"
 
-# HIGH_VRAM=1：kontext Not on fp8, the entire mold is loaded;qwen use --offload none;Default staggered loading
+# HIGH_VRAM=1: kontext without fp8 (full load); default staggered loading
 HIGH_VRAM="${HIGH_VRAM:-0}"
 NGPU="${NGPU:-8}"
 LIMIT="${LIMIT:-0}"
@@ -209,14 +209,6 @@ run_one() {
         launch_model mpie_edit flux1-kontext-dev run_kontext.py
       fi
       ;;
-    qwen|qwen-image-edit-2511)
-      if [[ "$HIGH_VRAM" == "1" ]]; then
-        # Compatible with old runner(only --no-offload) and new runner（--offload none equivalence)
-        launch_model mpie_edit qwen-image-edit-2511 run_qwen_edit.py --no-offload
-      else
-        launch_model mpie_edit qwen-image-edit-2511 run_qwen_edit.py --offload sequential
-      fi
-      ;;
     omnigen2)
       launch_model omnigen2 omnigen2 run_omnigen2.py --offload model
       ;;
@@ -259,7 +251,7 @@ rc=0
 MODELS=()
 case "$WHAT" in
   all|both)
-    # Paper main-table open editors (7). Qwen is extra: pass qwen explicitly.
+    # Paper main-table open editors (7).
     MODELS=(kontext dreamo omnigen2 uno ace bagel firered)
     ;;
   *)

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """mesh_v3 → Checklist_M Second value placement (mesh_bin/）。
 
-protocol: docs/02_pipeline_design/eval_human_consistency_anat_inter.md §4
+protocol: docs/eval_human_consistency_anat_inter.md §4
 
 Default read $PACK/judgments/human_consistency/_thresholds.json(If none, the default is started).
 If so _split.json, by default only export split internal entry;--all-mesh Export all mesh_v3。

@@ -358,14 +358,15 @@ Narrative may allow: **Mesh stronger on I1 (penetration), VLM stronger on I4/A5 
 
 ## 9. Engineering Checklist
 
-Runbook: [`eval_human_consistency_runbook.md`](eval_human_consistency_runbook.md) · Annotation guide: [`eval_human_consistency_annot_guide.md`](eval_human_consistency_annot_guide.md)
+Analysis protocol: [`eval_human_consistency_analysis_protocol.md`](eval_human_consistency_analysis_protocol.md)
 
 ### 9.1 Samples and Annotation
 
 - [x] `select_consistency_split.py` → `_split.json` (+ `annot_templates/*.csv`, `_protocol.json`, starter `_thresholds.json`)  
 - [x] Annotation preview HTML: `build_annot_preview.py` → `annot_preview/` (CSV template synced)  
 - [x] **Annotation frontend 8080**: `annot_frontend/app.py` (homepage shows 3 annotators needed: ann_01/02/03; principles+checklist+persist)  
-- [x] Text guide `GUIDELINES.md` / `eval_human_consistency_annot_guide.md` (diagram pack still pending)  
+- [x] Checklist wording in this document (construct items + severity)  
+
 - [x] `import_human_checklist.py` → `human/` + `_consensus/` (majority vote §3.6)  
 - [ ] Recruit 3 annotators for real fill + onboarding quiz  
 
@@ -478,7 +479,7 @@ Week 4: Hard-case review, sensitivity, paper paragraphs
 |------|------|
 | This doc | Experiment master spec (authoritative record) |
 | `eval_mesh_*_spec.md` | Mesh initial continuous scores |
-| `eval_vlm_judge_v1.md` | Legacy six-axis VLM (appendix control, **does not replace V**) |
+| VLM Count scorer (`score_vlm_v1.py`) | Legacy multi-axis VLM fields may exist in dumps; main table uses Count only |
 | `code/eval/checklist_common.py` | Encoding / pass / majority vote / default τ / M mapping |
 | `code/eval/select_consistency_split.py` | Stratified sampling → `_split.json` |
 | `code/eval/export_mesh_checklist.py` | M mapping → `mesh_bin/` |
@@ -487,9 +488,7 @@ Week 4: Hard-case review, sensitivity, paper paragraphs
 | `code/eval/run_score_checklist_vlm.sh` | V batch entry |
 | `code/eval/import_human_checklist.py` | CSV→human/_consensus |
 | `code/eval/compute_agreement.py` | κ / reports |
-| `code/eval/build_annot_preview.py` | Annotation preview HTML |
-| `code/eval/prep_consistency_selfcheck.py` | Prep self-check |
-| `eval_human_consistency_runbook.md` | Runbook |
+| `eval_human_consistency_analysis_protocol.md` | Agreement analysis protocol |
 
 ---
 

@@ -32,6 +32,7 @@ docs/PROGRESS.md
 docs/00_proposal/
 docs/01_research/
 docs/03_licensing/
+docs/02_pipeline_design/
 
 # Local / private ops notes and cluster scripts (never publish)
 code/eval/FIX_*.md
@@ -51,21 +52,30 @@ code/eval/check_opensource*.sh
 code/eval/cleanup_*.sh
 code/eval/install_*offline*.sh
 code/eval/install_multihmr*.sh
+code/eval/fix_*.sh
+code/eval/run_all_opensource_*.sh
+code/eval/run_mesh_v31_full_*.sh
+code/eval/smoke_*.py
+code/eval/analyze_human_consistency_*.py
+code/eval/run_gt_full2500_*.sh
+code/eval/summarize_gt_*.py
+
 # machine-local env scripts (keep public setup_eval.sh)
 env/setup_4090*.sh
 env/setup_h20*.sh
 !env/setup_eval.sh
-docs/02_pipeline_design/salvage_*.md
-docs/02_pipeline_design/eval_*_status.md
-docs/02_pipeline_design/eval_machine_roles.md
-docs/02_pipeline_design/exp_*.md
-docs/02_pipeline_design/eval_opensource_*.md
-!docs/02_pipeline_design/eval_opensource.md
-# Historical research notes (superseded by protocol v3 / e2e docs)
-docs/02_pipeline_design/eval_protocol_v2.md
-docs/02_pipeline_design/eval_vlm_judge_v1.md
-docs/02_pipeline_design/eval_instr_vqa_redesign.md
-docs/02_pipeline_design/caption_prompt_v1.md
+
+# Historical / local-only design notes
+docs/eval_protocol_v2.md
+docs/eval_vlm_judge_v1.md
+docs/eval_instr_vqa_redesign.md
+docs/caption_prompt_v1.md
+docs/eval_opensource_*.md
+!docs/eval_opensource.md
+docs/salvage_*.md
+docs/eval_*_status.md
+docs/eval_machine_roles.md
+docs/exp_*.md
 
 # local eval secrets/config
 configs/eval.env
@@ -74,12 +84,3 @@ configs/eval.env
 data/testset/**/*.log
 data/testset/**/_build*
 data/testset/**/_logs/
-
-# additional local helper scripts (not part of the public API)
-code/eval/fix_*.sh
-code/eval/run_all_opensource_*.sh
-code/eval/run_mesh_v31_full_*.sh
-code/eval/smoke_*.py
-code/eval/analyze_human_consistency_*.py
-code/eval/run_gt_full2500_*.sh
-code/eval/summarize_gt_*.py

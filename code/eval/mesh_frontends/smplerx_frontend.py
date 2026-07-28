@@ -145,7 +145,7 @@ class SMPLerXFrontend:
         # We keep this narrow to avoid fragile deep imports; raise if missing.
         raise ImportError(
             "No packaged MPIE inferencer; add demo/mpie_infer.py in SMPLer-X repo "
-            "(see docs/02_pipeline_design/exp_alt_mesh.md for a template)."
+            "(see docs/exp_alt_mesh.md for a template)."
         )
 
     def infer(

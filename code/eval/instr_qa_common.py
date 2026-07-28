@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Instr QA v2 shared helpers (TIFA / MultiHuman-style).
 
-Protocol: docs/02_pipeline_design/eval_instr_vqa_redesign.md
+Protocol: docs/eval_instr_vqa_redesign.md
 
 Layout:
   $PACK/instr_qa_v2/<sample_id>.json          # frozen questions (Stage A)

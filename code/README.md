@@ -27,7 +27,7 @@ cp ../configs/eval.env.example ../configs/eval.env   # edit paths + API key
 bash eval/run_eval_e2e.sh --model <model_id>
 ```
 
-Guide: [`docs/02_pipeline_design/eval_e2e.md`](../docs/02_pipeline_design/eval_e2e.md).  
+Guide: [`docs/eval_e2e.md`](../docs/eval_e2e.md).  
 Optional closed-source baselines: [`docs/BASELINES.md`](../docs/BASELINES.md).
 
 ## Data pipeline (optional; for extending the benchmark)
@@ -51,7 +51,7 @@ python common/make_splits.py --db $DB --test-size 2500 --val-size 500 --dry-run
 ## Baseline generation (optional)
 
 Paper open-source zoo (7): `kontext` `dreamo` `omnigen2` `uno` `ace` `bagel` `firered`  
-(see [`docs/02_pipeline_design/eval_model_zoo.md`](../docs/02_pipeline_design/eval_model_zoo.md)).
+(see [`docs/eval_model_zoo.md`](../docs/eval_model_zoo.md)).
 
 ```bash
 cd eval

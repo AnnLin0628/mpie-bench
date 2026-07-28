@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """MPIE VLM Judge v1 — gateway API Criticize referees in parallel (can resume running from breakpoint).
 
-protocol: docs/02_pipeline_design/eval_vlm_judge_v1.md
+protocol: docs/eval_protocol_v3.md (Count axis)
 layout: $PACK/outputs/<model>/ + manifest → $PACK/judgments/vlm_judge_v1/<model>/
 
 Design points (the terminal will not lose progress even if it is interrupted):

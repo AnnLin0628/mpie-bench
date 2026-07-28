@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Smoke / pack ArcFace ID scorer (eval protocol v2).
 
-Implements a practical subset of docs/02_pipeline_design/eval_id_protocol.md:
+Implements a practical subset of docs/eval_id_protocol.md:
   - ref embeddings from pack images (largest face; optional freeze file)
   - gen faces × refs → Hungarian assignment
   - GT-visible branch: if GT has no face match for a ref → exclude that person

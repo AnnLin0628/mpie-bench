@@ -3,7 +3,7 @@
 > Main table: **Anat / Inter from Multi-HMR mesh**; Count / Instr from VLM; ID=ArcFace; Qual=HPSv2.  
 > Contact density: C0–C3 ([contact_density_c3_merge.md](contact_density_c3_merge.md)).  
 > Specs: [`eval_mesh_inter_spec.md`](eval_mesh_inter_spec.md) · [`eval_mesh_anat_spec.md`](eval_mesh_anat_spec.md).  
-> Entrypoint: [`run_eval_e2e.sh`](../../code/eval/run_eval_e2e.sh) ([eval_e2e.md](eval_e2e.md)).
+> Entrypoint: [`run_eval_e2e.sh`](../code/eval/run_eval_e2e.sh) ([eval_e2e.md](eval_e2e.md)).
 
 Index: [`README.md`](README.md).
 

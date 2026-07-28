@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 """Aggregate VLM Judge v1 judgments into summary tables + HTML report.
 
-Protocol: docs/02_pipeline_design/eval_vlm_judge_v1.md
-  S_count / S_id / S_anat / S_inter / S_instr / S_qual ∈ [0,1]
-  low confidence → excluded from main-table means (still counted in coverage)
+Protocol: docs/eval_protocol_v3.md (Count axis from vlm_judge_v1 judgments).
+  Main-table Count uses S_count; other VLM axes are legacy/control only.
 """
 from __future__ import annotations
 
@@ -150,8 +149,7 @@ CLOSED_MODEL_ORDER = (
     "gemini-3-pro-image",
     "seedream-5-pro",
 )
-# Paper main-table open editors (see docs/02_pipeline_design/eval_model_zoo.md).
-# qwen-image-edit-2511 has a runner but is not in the paper lineup.
+# Paper main-table open editors (see docs/eval_model_zoo.md).
 OPEN_MODEL_ORDER = (
     "flux1-kontext-dev",
     "dreamo",

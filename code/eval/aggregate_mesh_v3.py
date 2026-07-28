@@ -79,14 +79,6 @@ FALLBACK_MESH: Dict[str, dict] = {
         "anat_leftover_frac_mean": 0.658826497589755,
         "n": 100,
     },
-    "qwen-image-edit-2511": {
-        "S_inter_mesh": 0.6780260688477352,
-        "S_anat_mesh": 0.7594886186260978,
-        "P_anat_extra_mean": 0.2834247089867515,
-        "anat_orphan_frac_mean": 0.03126711264939858,
-        "anat_leftover_frac_mean": 0.6168575276808643,
-        "n": 100,
-    },
     "seedream-5-pro": {
         "S_inter_mesh": 0.8433466254300976,
         "S_anat_mesh": 0.7810046345102089,
