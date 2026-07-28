@@ -5,24 +5,26 @@
 
 # Open-Source Baseline Image Generation
 
-## One-Line Status
+## One-Line Status (paper main-table 7)
 
 | model_id | Smoke test LIMIT=2 | Key blockers & fixes (summary) |
 |---|---|---|
 | flux1-kontext-dev | ✅ | Terminal "hang" is log redirection; CLIP truncation can be ignored |
-| qwen-image-edit-2511 | ✅ | `--offload sequential` |
+| dreamo | ✅ | Missing cv2/einops/timm; local symlink LoRA; BEN2+Turbo under mirror; facexlib weights on first run; Turbo `load_lora_weights` offline needs `weight_name` |
 | omnigen2 | ✅ | `--offload model` |
 | uno | ✅ | Offline missing CLIP/T5; path name must contain `clip`; use bf16 on-the-fly conversion when no standalone fp8 |
 | ace | ✅ | Missing scepter/diffusers/peft; whole-model `.to(cuda)` OOM → sequential+768; offline LoRA needs `weight_name`; do not use `pillow_convert`; new diffusers `preprocess(None)` needs patch |
 | bagel | ✅ | Missing `flash_attn` (cross-device link failure → install wheel directly) |
-| dreamo | ✅ | Missing cv2/einops/timm; local symlink LoRA; BEN2+Turbo under mirror; facexlib weights on first run; Turbo `load_lora_weights` offline needs `weight_name` |
+| firered | ✅ | conda `firered`; weights `FireRed-Image-Edit-1.1`; `--offload none --max-refs 3` on high-VRAM GPUs |
+
+Extra (not in paper main table): `qwen-image-edit-2511` — `--offload sequential`; runner still available.
 
 ## Environment & Paths (Final)
 
 ```bash
-export MPIE_TEST_PACK=~/mpie_testset_pack          # manifest must have 2500 lines
-export MPIE_WEIGHTS=~/mpie_weights
-export MPIE_CODE=~/mpie_code
+export MPIE_TEST_PACK="${MPIE_TEST_PACK:-$PWD/data/testset}"   # manifest must have 2500 lines
+export MPIE_WEIGHTS="${MPIE_WEIGHTS:-$HOME/mpie_weights}"
+export MPIE_CODE="${MPIE_CODE:-$HOME/mpie_code}"
 
 # ACE
 export FLUX_FILL_PATH=~/mpie_weights/flux1-fill-dev
@@ -42,8 +44,8 @@ export HF_HUB_OFFLINE=1
 
 | conda | Purpose |
 |---|---|
-| `mpie_edit` | kontext + qwen |
-| `omnigen2` / `uno` / `ace` / `bagel` / `dreamo` | One env per model |
+| `mpie_edit` | kontext (+ optional qwen extra) |
+| `omnigen2` / `uno` / `ace` / `bagel` / `dreamo` / `firered` | One env per model |
 | launcher | **Auto** `conda activate`; no manual switching needed |
 
 Logs: stdout goes to `/tmp/mpie_opensource_full_logs/<model_id>_shard*.log`; seeing only `[launch]` in the foreground is normal.
@@ -56,8 +58,8 @@ Logs: stdout goes to `/tmp/mpie_opensource_full_logs/<model_id>_shard*.log`; see
 cd "$MPIE_ROOT/code/eval"
 chmod +x run_opensource_full_8gpu.sh
 
-# Models run serially; NGPU=1 for single GPU
-for m in kontext qwen omnigen2 uno ace bagel dreamo; do
+# Models run serially; NGPU=1 for single GPU (paper main-table 7)
+for m in kontext dreamo omnigen2 uno ace bagel firered; do
   echo "===== SMOKE $m ====="
   LIMIT=2 NGPU=1 bash run_opensource_full_8gpu.sh "$m" || {
     echo "FAIL $m"; tail -100 /tmp/mpie_opensource_full_logs/${m}*_shard0.log
@@ -65,7 +67,7 @@ for m in kontext qwen omnigen2 uno ace bagel dreamo; do
   }
 done
 
-for mid in flux1-kontext-dev qwen-image-edit-2511 omnigen2 uno ace bagel dreamo; do
+for mid in flux1-kontext-dev dreamo omnigen2 uno ace bagel firered; do
   echo -n "$mid "; ls "$MPIE_TEST_PACK/outputs/$mid"/*.png 2>/dev/null | wc -l
 done
 # Target: 2 per model
@@ -75,6 +77,7 @@ Full run (after all smoke tests pass):
 
 ```bash
 # Use the same shell with CLIP/T5/FLUX_* / ACE exports
+# `all` = paper 7 open-source models (not Qwen)
 nohup bash run_opensource_full_8gpu.sh all > /tmp/mpie_opensource_full_master.log 2>&1 &
 ```
 
@@ -92,11 +95,12 @@ Rough estimate: 7 models × 2500 × 8-GPU sharding, serial ~ **1–2 days** (ACE
 4. **Offline `load_lora_weights`**: must pass explicit `weight_name` (ACE Turbo/subject, DreamO Turbo both hit this).
 5. **pack**: full run uses the official N=2500 pack (`data/testset`).
 
-### 1) flux1-kontext-dev / qwen / omnigen2
+### 1) flux1-kontext-dev / omnigen2 / firered (+ optional qwen)
 
 - kontext: loading + fp8 quant takes several minutes on first run; ~1 min per sample.
-- qwen: `--offload sequential` (24G GPU).
 - omnigen2: `--offload model`.
+- firered: `bash run_opensource_full_8gpu.sh firered`; weights dir `FireRed-Image-Edit-1.1`.
+- optional qwen (not paper main table): `--offload sequential` (24G GPU).
 
 ### 2) UNO
 
@@ -223,10 +227,10 @@ self.load_lora_weights(
 ## Packaging Results
 
 ```bash
-cd ~/mpie_testset_pack
+cd "$MPIE_TEST_PACK"
 tar czf ~/mpie_full_outputs_opensource7_$(date +%Y%m%d).tgz \
-  outputs/flux1-kontext-dev outputs/qwen-image-edit-2511 \
-  outputs/omnigen2 outputs/uno outputs/ace outputs/bagel outputs/dreamo
+  outputs/flux1-kontext-dev outputs/dreamo \
+  outputs/omnigen2 outputs/uno outputs/ace outputs/bagel outputs/firered
 ```
 
 ## Related Files

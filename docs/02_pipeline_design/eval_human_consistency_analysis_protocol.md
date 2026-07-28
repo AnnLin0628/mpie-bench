@@ -219,7 +219,7 @@ Do not report only (a) and claim "Mesh fully captures interaction/anatomy qualit
 
 | Constraint | Target |
 |------------|--------|
-| Five open-source models | **flux / dreamo / uno / omnigen2 / ace** evenly represented (~20% each); **exclude** bagel (not evaluated), qwen (too poor) |
+| Five open-source models | **Annotation subsample only** (not the paper zoo): **flux / dreamo / uno / omnigen2 / ace** evenly (~20% each); this round excluded bagel/qwen. Paper main-table open-7 is Kontext / DreamO / OmniGen2 / UNO / ACE++ / BAGEL / FireRed — see [`eval_model_zoo.md`](eval_model_zoo.md). |
 | Contact density | **C2+C3 only** (exclude overly simple C0/C1) |
 | Hard-case slots | **≥ 60%** (`is_hard_slot`; signal=mesh hard_score preferred, else VLM-v1 failure score) |
 | Closed-source | **Not sampled this round** (discrimination pool open-source only) |
@@ -251,7 +251,7 @@ Do not report only (a) and claim "Mesh fully captures interaction/anatomy qualit
 | Date | Content |
 |------|---------|
 | 2026-07-19 | **Gold changed to 10-person item mean then round**; main paper per-item ρ; mesh→item mapping item_map_v6.2 written into paper |
-| 2026-07-19 | **split v4_open5_c23**: 5 open-source evenly + C2/C3 only; exclude bagel/qwen and C0/C1 |
+| 2026-07-19 | **split v4_open5_c23**: human-consistency annotation subsample (5 open models, C2/C3); not the paper main-table open-7 |
 | 2026-07-19 | split v3_open_heavy (deprecated): weak models≥80%, single closed-source≤5%, hard≥60% |
 | 2026-07-18 | **v5.1**: human Inter all items mandatory; cancel system intent item hiding; `intent_human` stratification; main paper P0=`Q*`↔`S_*_mesh`; frontend 8080 synced |
 | 2026-07-18 | **v5.0**: I1/A1/A2/A3 three-level severity; S uses `/2` normalization; mesh dual-threshold mapping; main paper prioritizes ordered items↔continuous mesh + Q_* |

@@ -141,15 +141,16 @@ and the full [v3 protocol](docs/02_pipeline_design/eval_protocol_v3.md).
 Run an open-source baseline before scoring:
 
 ```bash
-# create a conda env with the scoring dependencies (ArcFace / HPSv2 / etc.)
-
 cd code/eval
-export MPIE_TEST_PACK=/path/to/mpie_testset_pack
-export MPIE_WEIGHTS=/path/to/mpie_weights
+export MPIE_TEST_PACK="$PWD/../../data/testset"
+export MPIE_WEIGHTS="${MPIE_WEIGHTS:-$HOME/mpie_weights}"
+# paper open-source zoo: kontext | dreamo | omnigen2 | uno | ace | bagel | firered
 LIMIT=2 NGPU=1 bash run_opensource_full_8gpu.sh kontext
+# full paper open-source set:
+# bash run_opensource_full_8gpu.sh all
 ```
 
-For additional models and known setup issues, see
+Model list: [`eval_model_zoo.md`](docs/02_pipeline_design/eval_model_zoo.md). Setup notes:
 [open-source generation](docs/02_pipeline_design/eval_opensource.md). For API
 models, see the [closed-source runner guide](code/eval/closedsource/README.md).
 

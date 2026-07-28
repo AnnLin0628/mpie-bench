@@ -259,7 +259,8 @@ rc=0
 MODELS=()
 case "$WHAT" in
   all|both)
-    MODELS=(kontext qwen omnigen2 uno ace bagel dreamo)
+    # Paper main-table open editors (7). Qwen is extra: pass qwen explicitly.
+    MODELS=(kontext dreamo omnigen2 uno ace bagel firered)
     ;;
   *)
     MODELS=("$WHAT")
@@ -277,7 +278,7 @@ if [[ "$SEED_TAG" == "1" || "$SEED_TAG" == "true" || "$SEED_TAG" == "yes" ]] && 
   _cov_suffix="_s${SEED}"
   echo "  (seed-tag: counting outputs/*${_cov_suffix}/)"
 fi
-for mid in flux1-kontext-dev qwen-image-edit-2511 omnigen2 uno ace bagel dreamo firered; do
+for mid in flux1-kontext-dev dreamo omnigen2 uno ace bagel firered; do
   n=$(ls "$PACK/outputs/${mid}${_cov_suffix}"/*.png 2>/dev/null | wc -l || echo 0)
   echo "  ${mid}${_cov_suffix} png=$n / $N"
 done

@@ -9,7 +9,7 @@ Examples (on a GPU host):
   python score_mesh_v3.py --pack "$MPIE_TEST_PACK" --gt-only --limit 50
 
   # one model
-  python score_mesh_v3.py --pack "$MPIE_TEST_PACK" --model-id qwen-image-edit-2511
+  python score_mesh_v3.py --pack "$MPIE_TEST_PACK" --model-id firered
 
   # all models under outputs/
   python score_mesh_v3.py --pack "$MPIE_TEST_PACK" --all-models

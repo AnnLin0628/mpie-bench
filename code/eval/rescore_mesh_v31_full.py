@@ -11,7 +11,7 @@ No GPU / Multi-HMR. Requires intermediate fields already in mesh_v3 JSON
 Example:
   python rescore_mesh_v31_full.py \\
     --pack ~/mpie_testset_pack \\
-    --models gpt-image-2,gemini-3-pro-image,seedream-5-pro,flux1-kontext-dev,dreamo,omnigen2,uno,ace,qwen-image-edit-2511
+    --models gpt-image-2,gemini-3-pro-image,seedream-5-pro,flux1-kontext-dev,dreamo,omnigen2,uno,ace,bagel,firered
 """
 from __future__ import annotations
 
@@ -37,7 +37,8 @@ PAPER_MODELS = [
     "omnigen2",
     "uno",
     "ace",
-    "qwen-image-edit-2511",
+    "bagel",
+    "firered",
 ]
 
 

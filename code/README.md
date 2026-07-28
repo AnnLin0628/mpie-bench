@@ -15,9 +15,9 @@ pip install -r ../env/requirements-mesh.txt
 ```
 
 ```bash
-export MPIE_TEST_PACK=/path/to/mpie-bench/data/testset
-export MPIE_WEIGHTS=/path/to/mpie_weights
-export MULTIHMR_REPO=/path/to/multi-hmr
+export MPIE_TEST_PACK="$PWD/../data/testset"
+export MPIE_WEIGHTS="${MPIE_WEIGHTS:-$HOME/mpie_weights}"
+export MULTIHMR_REPO="${MULTIHMR_REPO:-$HOME/models/multi-hmr}"
 ```
 
 ## Evaluation (six axes, end-to-end)
@@ -50,8 +50,12 @@ python common/make_splits.py --db $DB --test-size 2500 --val-size 500 --dry-run
 
 ## Baseline generation (optional)
 
+Paper open-source zoo (7): `kontext` `dreamo` `omnigen2` `uno` `ace` `bagel` `firered`  
+(see [`docs/02_pipeline_design/eval_model_zoo.md`](../docs/02_pipeline_design/eval_model_zoo.md)).
+
 ```bash
 cd eval
 LIMIT=2 NGPU=1 bash run_opensource_full_8gpu.sh kontext
+# bash run_opensource_full_8gpu.sh all   # paper open-7
 # Closed-source APIs — see eval/closedsource/README.md
 ```

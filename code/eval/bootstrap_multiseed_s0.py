@@ -8,7 +8,7 @@ Example:
   python bootstrap_multiseed_s0.py \\
     --subset-pack ~/mpie_testset_pack_seed150 \\
     --full-pack ~/mpie_testset_pack \\
-    --bases flux1-kontext-dev,ace,omnigen2,dreamo,uno,bagel,qwen-image-edit-2511
+    --bases flux1-kontext-dev,dreamo,omnigen2,uno,ace,bagel,firered
 """
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ def main() -> None:
     ap.add_argument("--full-pack", required=True)
     ap.add_argument(
         "--bases",
-        default="flux1-kontext-dev,ace,omnigen2,dreamo,uno,bagel,qwen-image-edit-2511",
+        default="flux1-kontext-dev,dreamo,omnigen2,uno,ace,bagel,firered",
     )
     ap.add_argument("--seed", type=int, default=0, help="usually 0")
     ap.add_argument("--link", action="store_true", help="symlink instead of copy")

@@ -1,7 +1,11 @@
 # Lessons from Top Benches · MPIE Improvements and Follow-Up Work
 
-> **Status: 2026-07-17** · Benchmarks compared: Qwen-Image-Bench, ImgEdit / GEdit, Boogu Arena (and Boogu's self-critique of ImgEdit)  
-> Goal: turn "what to learn" into executable items, not narrative only. Overall progress: [`../PROGRESS.md`](../PROGRESS.md).
+> **Historical note (2026-07-17 planning snapshot).** Several action items below are
+> already done in the released paper/repo — notably FireRed is in the **main-table
+> open-source 7** (replacing Qwen-Image-Edit). For the current zoo see
+> [`eval_model_zoo.md`](eval_model_zoo.md). Do not treat “add FireRed” rows as TODO.
+>
+> Benchmarks compared: Qwen-Image-Bench, ImgEdit / GEdit, Boogu Arena (and Boogu's self-critique of ImgEdit).
 
 ---
 

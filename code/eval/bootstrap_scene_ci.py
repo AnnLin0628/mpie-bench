@@ -33,7 +33,8 @@ MODEL_ORDER = [
     "omnigen2",
     "uno",
     "ace",
-    "qwen-image-edit-2511",
+    "bagel",
+    "firered",
 ]
 
 DISPLAY = {
@@ -45,7 +46,8 @@ DISPLAY = {
     "omnigen2": "OmniGen2",
     "uno": "UNO",
     "ace": "ACE++",
-    "qwen-image-edit-2511": "Qwen-Image-Edit",
+    "bagel": "BAGEL",
+    "firered": "FireRed-Image-Edit",
 }
 
 

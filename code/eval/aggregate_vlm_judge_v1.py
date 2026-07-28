@@ -150,14 +150,16 @@ CLOSED_MODEL_ORDER = (
     "gemini-3-pro-image",
     "seedream-5-pro",
 )
+# Paper main-table open editors (see docs/02_pipeline_design/eval_model_zoo.md).
+# qwen-image-edit-2511 has a runner but is not in the paper lineup.
 OPEN_MODEL_ORDER = (
     "flux1-kontext-dev",
-    "qwen-image-edit-2511",
+    "dreamo",
     "omnigen2",
     "uno",
     "ace",
     "bagel",
-    "dreamo",
+    "firered",
 )
 MODEL_DISPLAY_ORDER = CLOSED_MODEL_ORDER + OPEN_MODEL_ORDER
 

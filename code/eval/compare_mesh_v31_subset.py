@@ -130,7 +130,7 @@ def main() -> None:
     ap.add_argument("--sample-ids-file", required=True)
     ap.add_argument(
         "--models",
-        default="gpt-image-2,gemini-3-pro-image,seedream-5-pro,flux1-kontext-dev,dreamo,omnigen2,uno,ace,qwen-image-edit-2511",
+        default="gpt-image-2,gemini-3-pro-image,seedream-5-pro,flux1-kontext-dev,dreamo,omnigen2,uno,ace,bagel,firered",
     )
     ap.add_argument("--out", required=True, help="output directory")
     # fig2 "visibly bad" probes (row1 fused-limb cases)

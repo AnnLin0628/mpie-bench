@@ -29,7 +29,8 @@ PAPER_MODELS = [
     "omnigen2",
     "uno",
     "ace",
-    "qwen-image-edit-2511",
+    "bagel",
+    "firered",
 ]
 
 FIG2_SIDS = [
