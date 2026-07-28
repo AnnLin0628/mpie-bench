@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T293",
+  "instruction": "A wide-angle candid documentary photograph taken inside a white-walled motion capture studio with a red carpet and overhead projector. The man in the black polo and blue shorts (R1) stands on the left, facing right in profile, and places his right hand on the shoulder of the woman in the white t-shirt and blue jeans (R2). The woman (R2) stands on the right, facing away from the camera with her back turned. Both appear focused on the physical guidance. Bright overhead fluorescent lighting casts soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his right hand on R2's shoulder",
+    "R2 receives physical guidance from R1",
+    "R1 is the guiding person while R2 is the guided person",
+    "R2 faces away with her back turned during the contact",
+    "white-walled motion capture studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one placing his right hand on R2's shoulder, rather than R2 placing her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates shoulder contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving physical guidance from R1, rather than R1 receiving guidance from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is guided by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 make contact with R2's shoulder while R2 has her back turned, instead of R2 making contact with R1's shoulder while R1 has his back turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's shoulder as R2 faces away"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 acting as the physical guide with his hand on R2, while R2 stands as the guided person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guide role and R2 guided role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__405a8e47b7e8__T9",
+  "instruction": "Candid documentary photograph, medium shot. In a bright indoor workshop, the man with the afro (R2) in a gray button-down shirt stands on the left, smiling as he shakes hands with the man in the rust-red turtleneck and green apron (R3) on the right. Their right hands are clasped in a handshake over a wooden table. The man in the green apron (R3) smiles warmly, resting his left hand on the table. A laptop and colorful glass vases sit on the left, and a cardboard tube container is in the center. Bright natural light streams from a window, creating a warm atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the afro-haired man whose right hand is clasped with R3's right hand",
+    "R3 keeps his free left hand resting on the wooden table during the right-hand clasp",
+    "R2 and R3 clasp right hands with each other over the table while R3's other hand stays on the table",
+    "wooden table positioned under the clasped hands and supporting R3's left hand",
+    "bright indoor workshop setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the afro-haired man whose right hand is clasped with R3's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the afro-haired handshake participant clasping R3's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3, rather than R2, the participant with his free left hand resting on the wooden table during the right-hand clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the table-resting free left hand while shaking R2's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R2 and R3 have their right hands clasped with each other over the table, with R3's other hand on the table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 right-hand clasp with R3's free hand on the table"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

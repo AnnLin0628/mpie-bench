@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__eee3f103ea42__T1",
+  "instruction": "Candid documentary medium shot of a sandy beach under an overcast sky. On the left, the older man in the red athletic shirt (R3) wears sunglasses and smiles, looking to the right. On the right, the older man in the dark camo shirt (R1) smiles and holds the left arm of the man in the red athletic shirt (R3) with both hands. The lighting is diffuse with cool coastal tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the active holder of R3's left arm, rather than R3 holding R1's arm",
+    "R3 is the person whose left arm is being held by R1, rather than R1 being held by R3",
+    "R1 holds R3's left arm with both hands",
+    "R3 smiles while looking to the right as R1 holds his arm",
+    "R3 wears sunglasses",
+    "the scene is on a sandy beach under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R3's left arm, rather than R3 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active holder of R3's left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person whose left arm is being held by R1, rather than R1 being the person whose arm is held by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 receives the arm-holding contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use both hands to hold R3's left arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3's arm with both hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

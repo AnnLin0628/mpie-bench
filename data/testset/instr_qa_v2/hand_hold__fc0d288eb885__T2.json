@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc0d288eb885__T2",
+  "instruction": "Candid documentary photograph, full-length shot. On a sunny city sidewalk, the smiling woman in the white halter dress (R1) and the person in the denim jacket and khaki shorts (R2) walk hand-in-hand. On the left, the woman (R1) holds her dress hem and looks happily at her partner. On the right, the person (R2) holds a colorful rainbow flag in their left hand while walking forward. They hold hands in the center, sharing a warm, smiling gaze as they walk. The scene is bathed in soft, warm natural daylight, enhancing the joyful mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 carries the colorful rainbow flag while R1 does not",
+    "R1 holds her dress hem while R2 does not",
+    "R1 and R2 have different free-hand duties while walking hand-in-hand",
+    "R1 and R2 walk together while holding hands",
+    "R2 holds a colorful rainbow flag",
+    "R1 holds the hem of her dress",
+    "The pair is on a sunny city sidewalk"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the person carrying the colorful rainbow flag while the pair walks hand-in-hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the rainbow flag rather than R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the person holding up the dress hem while walking hand-in-hand with the partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the dress hem rather than R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R1 and R2 have different free-hand roles, with R1 holding her dress hem and R2 holding the rainbow flag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dress-hem holder while R2 is the flag carrier"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain a handhold while walking together"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

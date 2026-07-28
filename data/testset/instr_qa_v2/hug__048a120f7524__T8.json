@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T8",
+  "instruction": "Candid medium close-up photograph in a minimalist indoor studio. On the left, the long-haired person in a green shirt (R2) looks up with a calm, intense gaze. On the right, the blonde-haired man in a gray shirt (R1) looks down, their faces positioned very close to one another. Soft studio lighting highlights their expressions against a plain gray background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the blonde-haired man looking down toward R2",
+    "R2 is the long-haired person looking up toward R1",
+    "R1 and R2 have their faces positioned very close to one another",
+    "R2 has a calm, intense upward gaze while R1 looks downward",
+    "minimalist indoor studio with a plain gray background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking down toward R2, rather than R2 being the one looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 downward gaze role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking up toward R1, rather than R1 being the one looking up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 upward gaze role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold a calm, intense upward gaze while R1 looks downward in the close interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contrasting gaze configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

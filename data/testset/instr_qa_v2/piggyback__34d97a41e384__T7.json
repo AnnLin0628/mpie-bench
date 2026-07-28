@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__34d97a41e384__T7",
+  "instruction": "A styled outdoor portrait with a medium shot captures a couple standing in front of a patterned grey marble wall. The bearded man in the brown cable-knit sweater (R1), wearing a dark fedora and round glasses, stands on the right looking left. The woman in the white knit sweater (R2), wearing a beige fedora, stands on the left looking in the same direction. The man wraps his arm over her shoulder, resting his hand on her chest, which she gently holds. The lighting is bright and even, emphasizing the warm brown and white tones against the cool marble background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps his arm over R2's shoulder rather than R2 wrapping her arm over R1's shoulder",
+    "R1's hand rests on R2's chest while R2 gently holds that hand",
+    "R2 is the person receiving R1's arm-over-shoulder contact",
+    "R1 and R2 look in the same direction while standing close together",
+    "The couple is posed in front of a patterned grey marble wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap his arm over R2's shoulder, rather than R2 wrapping her arm over R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person placing an arm over R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest his hand on R2's chest while R2 holds that hand, rather than R2 resting her hand on R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand is on R2's chest and R2 holds R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the arm-over-shoulder contact from R1, rather than R1 receiving that contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the receiver of R1's shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing close to R2 with his arm draped across her shoulder area?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role is draping an arm over R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 gently holding R1's hand as it rests against her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is holding R1's hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

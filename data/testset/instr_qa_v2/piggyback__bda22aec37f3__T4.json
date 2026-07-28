@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__bda22aec37f3__T4",
+  "instruction": "Candid family photograph, medium shot. In a bright indoor room with a white paneled glass door in the background, the blonde woman in a coral hoodie (R1) stands on the left, holding the right hand of the young blonde girl in a blue denim dress (R3) high up. The girl (R3) sits on the shoulders of the bald man with glasses in a dark sweater (R2), who smiles looking forward. The woman (R1) holds the girl's (R3) left hand lower down. Soft, natural indoor light illuminates the warm scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 supports and carries R3 on his shoulders",
+    "R3 is the child sitting on R2's shoulders rather than carrying him",
+    "R1 holds R3's right hand high up",
+    "R1 holds R3's left hand lower down",
+    "R1 steadies R3 by holding her hands while R2 carries R3",
+    "bright indoor room with a white paneled glass door in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R3's weight on his shoulders, rather than R3 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports and carries R3 on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one sitting on R2's shoulders, rather than R2 sitting on R3's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the child sitting on R2's shoulders rather than carrying him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, not R2, holding R3's right hand high up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3's right hand high up"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding R3's left hand lower down while R3 is being carried by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3's left hand lower down"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 steady R3 by holding her hands while R2 carries R3 on his shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 steadies R3 by holding her hands while R2 carries R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

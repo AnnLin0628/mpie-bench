@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T11",
+  "instruction": "A clean studio photograph captured in a high-angle full shot. In a minimalist white studio with a seamless white floor, the woman in the black outfit (R1) is positioned in the foreground with her back to the camera, moving forward in a dynamic stance. In the background, the woman in the white outfit (R2) faces forward and slightly left, extending her arms outward toward the other dancer. Both barefoot performers are captured mid-movement in a fluid contemporary dance sequence. Bright, diffused studio lighting illuminates the scene, casting soft, distinct shadows on the white floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the foreground dancer with her back to the camera",
+    "R2 is the background dancer facing forward",
+    "R2 extends her arms outward toward R1",
+    "R1 moves forward in a dynamic dance stance",
+    "R1 and R2 are barefoot performers in a contemporary dance sequence",
+    "The scene is a minimalist white studio with a seamless white floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer in the foreground with her back to the camera, rather than R2 being in that foreground back-facing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground back-facing dance role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer in the background facing forward and extending her arms outward toward R1, rather than R1 taking that background arm-extending role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 background arm-extension role toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 moving forward in a dynamic stance while R2 reaches her arms outward toward R1, rather than the movement roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 forward movement versus R2 outward-reaching role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have her back to the camera while R2 faces forward during the dance sequence?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "opposing body orientations of R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

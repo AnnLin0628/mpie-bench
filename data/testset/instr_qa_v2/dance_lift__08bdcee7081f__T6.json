@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__08bdcee7081f__T6",
+  "instruction": "Candid action photograph, medium shot from a low angle. Outdoors on a concrete ledge under a blue sky with fluffy clouds, the man in a black t-shirt and blue jeans (R2) lies on his back with his knees bent. He supports the woman in a black crop top and denim shorts (R1) with his feet against her upper thighs. The woman (R1) stands upright, leaning forward, reaching her hands down to meet the man's (R2) raised hands. Bright natural sunlight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's weight from below using his feet against her upper thighs",
+    "R1 is the elevated/held partner standing upright and leaning forward over R2",
+    "R2 lies on his back with bent knees while supporting R1",
+    "R1 reaches her hands downward to meet R2's raised hands",
+    "R2 is lying on a concrete ledge",
+    "The interaction occurs outdoors under a blue sky with clouds"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight from below with his feet against her upper thighs, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's weight from below using his feet against her upper thighs"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing upright and leaning forward over R2 while R2 lies on his back, rather than R2 standing over R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the elevated/held partner standing upright and leaning forward over R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 reach her hands downward to meet R2's raised hands, rather than R2 reaching downward to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches her hands downward to meet R2's raised hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 lying on his back with his knees bent while participating in the lift with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on his back with bent knees while supporting R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned above R2 as the partner being supported during the dance-like lift?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the elevated/held partner standing upright and leaning forward over R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__3a1ade1661a0__T3",
+  "instruction": "Candid action photograph, medium full shot. Inside an indoor boxing gym, the dark-skinned boxer in red shorts (R2) on the left leans forward, throwing a body shot. The light-skinned boxer in black shorts (R1) on the right stands close, defending and clinching. The fighters are partially obscured by the black ropes of the boxing ring under bright overhead gym lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 throws a body shot toward R1",
+    "R1 defends and clinches against R2's attack",
+    "R2 leans forward as the attacking boxer while R1 stands close as the clinching defender",
+    "R1 and R2 are fighting inside a boxing ring",
+    "black boxing ring ropes partially obscure the fighters",
+    "the scene is an indoor boxing gym under bright overhead lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing a body shot toward R1, rather than R1 throwing a body shot toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 throws a body shot toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 defending and clinching in response to R2's attack, rather than R2 defending and clinching in response to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends and clinches against R2's attack"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward as the attacking puncher while R1 stands close as the clinching defender, rather than those duties being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward as the attacking boxer while R1 stands close as the clinching defender"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 engaged close together in a boxing clinch-and-punch exchange, with R1 as the clinching defender and R2 as the puncher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct close-contact boxing roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

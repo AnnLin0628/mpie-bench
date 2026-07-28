@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__5d956fec4c77__T1",
+  "instruction": "Candid cinematic full shot of a cozy bedroom where an elderly couple dances. On the left, the elderly woman with glasses (R2) stands barefoot in a white shirt and light trousers, smiling warmly at her partner. On the right, the elderly bald man (R1) in a striped shirt and khaki pants stands with his back-three-quarters to the camera, dancing. They face each other on a dark patterned rug, gesturing playfully. Warm, soft indoor lighting illuminates the scene, highlighting the rich red and blue tones of the rug and the neutral curtains in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the smiling dancer looking warmly toward her partner R1",
+    "R1 is the dancer shown back-three-quarters to the camera while dancing with R2",
+    "R1 and R2 face each other while dancing and gesturing playfully",
+    "R1 and R2 dance on a dark patterned rug",
+    "The interaction takes place in a cozy bedroom with warm indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer smiling warmly at her partner R1, rather than R1 being the specified smiling dancer looking warmly at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the smiling partner directed toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer shown with his back three-quarters to the camera while dancing with R2, rather than R2 having that back-three-quarters pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-three-quarters dancing pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other as dance partners while gesturing playfully?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are facing dance partners with playful gestures"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T16",
+  "instruction": "Cinematic full shot of a boxing training session inside a gym ring. On the left, the woman in the black and orange sports top (R1), wearing black leggings and white sneakers, stands holding a red focus mitt. On the right, the Asian woman in the white sports bra (R2), wearing black leggings with sheer panels and beige sneakers, throws a punch with her black boxing glove. The trainer (R1) stands firmly to absorb the blow, while the boxer (R2) lunges forward with athletic focus. The background features red ring ropes and hanging punching bags under cool, dim gym lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the red focus mitt that absorbs R2's punch",
+    "R2 throws the punch toward R1's mitt while R1 absorbs it",
+    "R1 is the trainer standing firmly and R2 is the boxer lunging forward",
+    "red focus mitt",
+    "black boxing glove",
+    "gym ring with red ropes and hanging punching bags"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the red focus mitt to absorb R2's punch, rather than R2 holding the mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the red focus mitt that absorbs R2's punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing a punch with a boxing glove toward R1's focus mitt, rather than R1 throwing a punch toward R2's mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 throws the punch toward R1's mitt while R1 absorbs it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the trainer standing firmly to absorb the blow while R2 is the boxer lunging forward to deliver it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the trainer standing firmly and R2 is the boxer lunging forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lunge forward in an attacking boxing motion while R1 remains planted as the mitt holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges forward while R1 holds position"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red focus mitt being used as the target for the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red focus mitt"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 using a black boxing glove to throw the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black boxing glove"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

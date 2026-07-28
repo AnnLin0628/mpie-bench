@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T19",
+  "instruction": "A cinematic video still captures a medium shot of two women dancing in an indoor studio with a seamless pink and purple backdrop. In the foreground, the dancing Black woman in the red fringed halter dress (R1) smiles joyfully with eyes closed, her body angled left and hands raised. Behind her to the left, the blonde woman in the black dress (R3) dances energetically with her left arm raised and a wide smile. Soft, colorful studio lighting bathes the scene in warm pink and purple hues, creating a shallow depth of field that keeps the focus on the foreground dancer.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the foreground dancing woman and visual focus rather than R3",
+    "R3 dances behind R1 with her arm raised rather than being the foreground focus",
+    "R1 dances with eyes closed, a joyful smile, and hands raised",
+    "R3 dances energetically with a wide smile and one arm raised",
+    "the dancers are in an indoor studio with a pink and purple seamless backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground dancer kept in focus, rather than R3 being the foreground focus?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground dancing woman and visual focus rather than R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 dancing behind R1, rather than R1 dancing behind R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 dances behind R1 rather than being the foreground focus"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 dancing with her eyes closed, a joyful smile, and her hands raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances with eyes closed, a joyful smile, and hands raised"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 dancing energetically with a wide smile and one arm raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 dances energetically with a wide smile and one arm raised"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the dancers shown in an indoor studio with a seamless pink and purple backdrop?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the dancers are in an indoor studio with a pink and purple seamless backdrop"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

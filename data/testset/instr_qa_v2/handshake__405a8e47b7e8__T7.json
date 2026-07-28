@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__405a8e47b7e8__T7",
+  "instruction": "A candid medium shot of a bright indoor workshop with white wood-paneled walls. On the left, the man with the afro (R2) wearing a gray button-down shirt stands looking at his partner. On the right, the man with the fade haircut (R3) wearing a rust-red turtleneck sweater and a green apron stands facing him, gesturing with his hand near a yellow cylindrical container on the wooden table. They make friendly eye contact. Colorful glass vases and an open laptop sit on the left. Bright natural light fills the room.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 gestures with his hand near the yellow cylindrical container while R2 looks at him",
+    "R2 is the watching partner facing R3 rather than the person gesturing near the container",
+    "R3 is the man actively gesturing during the interaction with R2",
+    "yellow cylindrical container on the wooden table",
+    "colorful glass vases and an open laptop on the table",
+    "bright indoor workshop with white wood-paneled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person gesturing with his hand near the yellow cylindrical container, rather than R2 doing that gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 gestures near the container while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner standing and looking at R3 while R3 performs the hand gesture near the table, rather than R2 being the one gesturing near the table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 watches R3 as R3 gestures"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 face R2 while gesturing with his hand during their interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 faces R2 and gestures"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

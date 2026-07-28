@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0bad6254113c__T2",
+  "instruction": "A candid wedding photograph, medium shot. At an outdoor wedding venue at night, the groom in the white embroidered sherwani (R1) stands on the left, looking down affectionately at his bride with a smile. The bride in the red bridal lehenga (R2) stands on the right, leaning her head gently onto his shoulder with a serene, smiling expression. The background is softly out of focus, showing warm decorative lights and structures. The lighting is warm and festive, casting a soft glow on the couple.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans her head gently onto R1's shoulder",
+    "R1 provides the shoulder that R2 rests on",
+    "R1 looks down affectionately at R2 while smiling",
+    "R2 maintains a serene smiling expression while leaning against R1",
+    "The couple is shown at an outdoor wedding venue at night",
+    "Warm decorative lights glow softly in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning her head gently onto R1's shoulder, rather than R1 leaning his head onto R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head onto R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the shoulder-supporting partner receiving R2's head, rather than R2 serving as the shoulder support for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides the shoulder that R2 rests on"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down affectionately at R2 while she leans on him, rather than R2 looking down at R1 in that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down affectionately at R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her head resting against R1's shoulder as part of their close couple pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests against R1's shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain upright and close to R2 while she leans her head onto him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stays upright as R2 leans on him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

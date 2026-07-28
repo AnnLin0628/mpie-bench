@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0ad2fbf9fbdb__T2",
+  "instruction": "Cinematic film still, full-body shot. On a shaded dirt path in a lush green forest, the dark-haired woman in a cream ruffled dress (R1) walks on the left, pointing forward and upward with her raised right hand. Beside her, the short-haired woman in a white ruffled blouse and tan trousers (R2) walks on the right, looking up in the direction of the gesture. R2's left arm remains linked through R1's right arm. Soft, diffused daylight filters through the dense green canopy, creating a natural, serene atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 points forward and upward with her raised right hand while R2 looks up in the direction of R1's gesture",
+    "R2's left arm is linked through R1's right arm",
+    "R1 serves as the gesturing guide while R2 attends to where R1 points",
+    "R1 and R2 walk beside each other with their arms linked",
+    "They are on a shaded dirt path in a lush green forest"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one pointing forward and upward with a raised right hand while R2 looks up toward the gesture, rather than R2 pointing and R1 looking?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gestures direction while R2 follows the gesture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's left arm linked through R1's right arm, rather than R1's left arm being linked through R2's right arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 links her arm through R1's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 act as the guiding person indicating something ahead while R2 responds by looking in that indicated direction, rather than R2 guiding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides with a pointing gesture while R2 follows visually"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together with R2's arm linked through R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk arm-in-arm with R2 linked to R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 raising her right hand to point while remaining arm-linked with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points while maintaining linked-arm contact with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

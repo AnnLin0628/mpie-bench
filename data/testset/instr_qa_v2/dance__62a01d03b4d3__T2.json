@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T2",
+  "instruction": "Candid dance photograph, full shot. Indoors against a plain light wall, a couple performs a tango. The man in the grey suit (R1) stands on the left, facing right. The woman in the black halter dress (R2) is on the right, kicking her leg back with motion blur. He holds her waist as they dance. Even, soft lighting illuminates the scene, highlighting their elegant posture and movement.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's waist while they perform a tango",
+    "R2 kicks her leg back with motion blur while R1 holds her waist",
+    "R1 is the waist-holding partner and R2 is the kicking partner",
+    "the interaction is a couple tango dance with direct body contact",
+    "the scene is indoors against a plain light wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's waist as they dance, rather than R2 holding R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's waist while they perform a tango"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer kicking her leg back while R1 holds her waist, rather than R1 kicking his leg back while R2 holds his waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kicks her leg back with motion blur while R1 holds her waist"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have the waist-supporting contact role while R2 has the leg-kicking movement role in the tango?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the waist-holding partner and R2 is the kicking partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 performing a tango dance with R1 making contact at R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the interaction is a couple tango dance with direct body contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 moving into a backward leg kick while remaining in a dance hold with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kicks her leg back with motion blur while R1 holds her waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T1",
+  "instruction": "A candid action photograph captures a martial arts sequence inside a karate dojo with yellow walls and red-and-blue floor mats. On the left, the woman in a black karate uniform with a red belt (R2) lunges forward, throwing a right-hand punch toward her opponent. On the right, the older man in a black karate uniform with white stripes (R1) stands in a defensive stance, blocking her incoming punch with his raised left forearm. Both wear protective safety glasses. The scene is illuminated by bright, even indoor overhead lighting, capturing the dynamic energy of the sparring session.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 blocks R2's incoming punch with his raised left forearm",
+    "R2 lunges forward and throws a right-hand punch toward R1",
+    "R1 is the defender while R2 is the attacker in the sparring exchange",
+    "R1 and R2 both wear protective safety glasses",
+    "the sparring takes place inside a karate dojo with red-and-blue floor mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 blocking R2's incoming punch with his raised left forearm, rather than R2 blocking a punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 blocks R2's incoming punch with his raised left forearm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward and throwing a right-hand punch toward R1, rather than R1 lunging forward and punching toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges forward and throws a right-hand punch toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the attacker whose punch is being defended against by R1, rather than R1 being the attacker whose punch is blocked by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the defender while R2 is the attacker in the sparring exchange"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in a defensive stance while R2 is performing the punching action toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends while R2 punches"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the martial arts exchange take place inside a karate dojo with red-and-blue floor mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the sparring takes place inside a karate dojo with red-and-blue floor mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

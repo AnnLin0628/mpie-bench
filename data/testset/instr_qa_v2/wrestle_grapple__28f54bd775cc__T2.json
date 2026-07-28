@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T2",
+  "instruction": "A candid full-shot photograph from an eye-level angle shows an indoor martial arts studio with wooden walls and a black mat. In the center-right, the martial artist in the black gi (R1) is kneeling, leaning forward to control the partner's leg. On the left, the martial artist in the pink gi (R2) lies on her back, facing up with her legs raised. The martial artist in the black gi (R1) holds the leg of the martial artist in the pink gi (R2) to secure a grappling position. The scene is illuminated by warm indoor lighting with natural tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is kneeling and leaning forward to control R2's leg",
+    "R1 holds R2's leg to secure a grappling position rather than R2 holding R1's leg",
+    "R2 lies on her back with her legs raised while R1 controls the leg",
+    "R1 wears a black gi and R2 wears a pink gi as martial arts partners",
+    "the grappling takes place on a black mat",
+    "the setting is an indoor martial arts studio with wooden walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 controlling R2's raised leg from a kneeling position, rather than R2 controlling R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls R2's leg in the grappling position"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold the leg of R2 to secure the grappling position, rather than R2 holding R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's leg to secure control"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner lying on her back with legs raised while R1 leans forward over her leg, rather than R1 lying on his back with legs raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the grounded partner and R1 is the kneeling controller"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 kneeling and leaning forward as the active grappler while R2 is on her back in the grappling position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels forward while R2 lies on her back"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have her legs raised as R1 controls one of R2's legs during the martial arts grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's legs are raised while R1 controls the leg"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the grappling interaction taking place on a black mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat used as the grappling surface"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

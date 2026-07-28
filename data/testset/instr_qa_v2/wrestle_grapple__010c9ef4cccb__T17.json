@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T17",
+  "instruction": "Candid action photograph, medium close-up. Inside a minimalist indoor martial arts dojo, the older man with short grey hair (R3) on the left and the bearded young man (R4) on the right practice judo techniques. The older man (R3), wearing a white gi with a circular shoulder patch, stands in profile facing right, firmly grabbing the extended arm of the bearded young man (R4), who wears a white gi and faces left. The older man raises his other hand defensively with a focused expression. Bright, diffused indoor lighting illuminates the scene against a plain grey background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 firmly grabs R4's extended arm",
+    "R4's extended arm is the arm being controlled by R3",
+    "R3 raises his other hand defensively while gripping R4",
+    "R3 and R4 practice judo grappling with R3 controlling R4's arm",
+    "R4 faces R3 while his arm is held",
+    "minimalist indoor martial arts dojo setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 firmly grabbing R4's extended arm, rather than R4 grabbing R3's extended arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 firmly grabs R4's extended arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person whose extended arm is being controlled by R3, rather than R3's arm being controlled by R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's extended arm is the arm being controlled by R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 raise his other hand defensively while keeping hold of R4, rather than R4 raising a defensive hand while holding R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 raises his other hand defensively while gripping R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R4 practicing a judo grappling technique in which R3 controls R4's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 practice judo grappling with R3 controlling R4's arm"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 facing R3 while R3 holds R4's extended arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 faces R3 while his arm is held"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T218",
+  "instruction": "Candid documentary photograph, wide shot from a low angle. Inside a studio with a red carpet and dark wall panels, the bearded man in the black polo shirt and blue shorts (R1) stands in the foreground with his back to the camera, balancing on his left leg while kicking his right leg backward. In the background, the woman in the white t-shirt and blue jeans (R2) stands watching him. The scene is illuminated by overhead studio lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 performs the balancing backward kick while R2 watches",
+    "R2 is the observer of R1's movement rather than the performer",
+    "R1 balances on his left leg and kicks his right leg backward",
+    "R2 stands in the background watching R1",
+    "studio setting with red carpet and dark wall panels"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person balancing on one leg and kicking his right leg backward while R2 watches, rather than R2 doing the kick while R1 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the balancing backward kick while R2 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing as the watcher of R1's movement, rather than R1 being the watcher of R2's movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the observer of R1's movement rather than the performer"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 balance on his left leg while kicking his right leg backward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances on his left leg and kicks his right leg backward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand in the background watching R1's action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in the background watching R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

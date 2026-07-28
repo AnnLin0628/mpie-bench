@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T9",
+  "instruction": "Candid documentary photograph, full shot at eye-level. Inside a martial arts gym with grey mats, the man in the white t-shirt (R1) on the left and the man in the grey t-shirt (R2) on the right are locked in a tight Muay Thai clinch. The man in the white t-shirt (R1) wears black goggles and white shin guards, looking forward with a focused expression as his head presses against his partner's shoulder. The man in the grey t-shirt (R2) wears black shorts and black-and-yellow shin guards, wrapping his arms around his partner's torso. In the background, a bystander in a black t-shirt and white pants stands watching. Neutral indoor overhead lighting casts soft shadows across the cool grey training area.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 presses his head against R2's shoulder in the Muay Thai clinch",
+    "R2 wraps his arms around R1's torso in the clinch",
+    "R1 and R2 are locked in a tight Muay Thai clinch",
+    "R1 wears black goggles during the clinch",
+    "R1 and R2 wear shin guards as martial arts protective gear",
+    "the interaction takes place inside a martial arts gym with grey mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one pressing his head against R2's shoulder, rather than R2 pressing his head against R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 presses his head against R2's shoulder in the Muay Thai clinch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one wrapping his arms around R1's torso, rather than R1 being described as wrapping his arms around R2's torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms around R1's torso in the clinch"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 locked in a tight Muay Thai clinch with R1's head pressed into R2's shoulder and R2's arms around R1's torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are locked in a tight Muay Thai clinch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__21a7f6d8bbb1__T6",
+  "instruction": "Cinematic film still, medium low-angle shot inside a dimly lit boxing ring. The shirtless Black man with braided hair (R2) on the left lunges forward in profile, wearing dark shorts and boxing gloves, throwing a punch. The shirtless tattooed white man (R1) on the right, wearing black shorts and gloves, ducks and leans back against the ring ropes to evade the strike. The background is dark with cool blue-gray tones and dramatic overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward and throws a punch toward R1",
+    "R1 ducks and leans back to evade R2's strike",
+    "R1 is backed against the ring ropes while avoiding R2's attack",
+    "R2 wears boxing gloves while punching and R1 wears gloves while defending",
+    "ring ropes are present as part of the boxing-ring interaction",
+    "the scene takes place inside a dimly lit boxing ring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer throwing a punch toward R1, rather than R1 throwing a punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges forward and throws a punch toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 ducking and leaning back to evade R2's strike, rather than R2 ducking to evade R1's strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 ducks and leans back to evade R2's strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the fighter leaning back against the ring ropes while R2 lunges forward at him, rather than R2 being backed against the ropes by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is backed against the ring ropes while avoiding R2's attack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have the attacking role in the exchange while R1 has the evasive defending role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attacks while R1 evades"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the interaction take place inside a dimly lit boxing ring?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene takes place inside a dimly lit boxing ring"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

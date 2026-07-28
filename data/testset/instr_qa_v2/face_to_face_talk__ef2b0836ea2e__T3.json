@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ef2b0836ea2e__T3",
+  "instruction": "Candid lifestyle close-up photograph from an overhead angle of a cozy indoor living room. On a gray fabric couch, the bearded man with glasses (R2) in a pink t-shirt lies on the left, smiling gently down at the woman in the white t-shirt (R1) lying on the right. The woman (R1) looks up at him with a bright smile, her left hand touching his neck. Soft, diffused natural light illuminates the scene, creating a warm and intimate mood with muted colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 touches R2's neck with her left hand rather than R2 touching R1's neck",
+    "R2 smiles/gazes down at R1 while R1 looks up at him",
+    "R1 and R2 lie close together facing each other on the couch",
+    "gray fabric couch supporting both people",
+    "cozy indoor living room setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 touching R2's neck with her left hand, rather than R2 touching R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's neck with her left hand rather than R2 touching R1's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 smiling down toward R1 while R1 looks up at him, rather than the reverse arrangement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles/gazes down at R1 while R1 looks up at him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 lying close together face-to-face on the couch, with R1's hand making contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 lie close together facing each other on the couch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

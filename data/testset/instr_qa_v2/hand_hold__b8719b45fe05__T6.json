@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b8719b45fe05__T6",
+  "instruction": "Candid outdoor full shot from a high angle of a couple walking down a rocky path next to a marble wall. The woman in the white sweater and beige hat (R1) is on the left, looking towards her partner while touching the stone wall with her right hand. The man in the brown sweater and dark hat (R2) walks on the right, holding her hand and looking down. Soft natural daylight casts gentle shadows, emphasizing the cool blue-gray marble background and their warm-toned autumn attire.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's hand while they walk together",
+    "R1 touches the stone wall with her right hand while R2 does not",
+    "R1 looks toward R2 while R2 looks down",
+    "R1 and R2 are walking together down a rocky path",
+    "A stone or marble wall is next to them and is being touched by R1",
+    "The scene is outdoors in soft natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding R1's hand while they walk, rather than R1 being described as holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one touching the stone wall with her right hand while R2 walks beside her, rather than R2 being the one touching the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches the wall, not R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk beside R1 while looking down and holding her hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks down while holding R1's hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking outdoors on a rocky path beside the marble wall?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor rocky path beside marble wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

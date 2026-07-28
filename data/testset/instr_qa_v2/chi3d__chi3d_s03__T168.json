@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T168",
+  "instruction": "A candid wide-angle photograph from a high angle shows a motion capture studio with a red carpet. The woman in the white patterned t-shirt (R2) and the man in the black polo and blue shorts (R1) walk forward side-by-side while holding hands. The woman looks down, and the man looks ahead. The background features white walls, a radiator, and overhead studio lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the hand-holding partner who looks ahead while walking forward",
+    "R2 is the hand-holding partner who looks down while walking forward",
+    "R1 and R2 walk forward side-by-side while holding each other's hands",
+    "R1 and R2 are walking on a red carpet",
+    "The scene is a motion capture studio with white walls, a radiator, and overhead lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While R1 and R2 walk forward holding hands, is R1 the one looking ahead rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the hand-holding partner who looks ahead"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While R1 and R2 walk forward holding hands, is R2 the one looking down rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the hand-holding partner who looks down"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward side-by-side while maintaining hand contact with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk forward side-by-side while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

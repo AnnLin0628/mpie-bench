@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__043852ee1028__T1",
+  "model_id": "seedream-5-pro",
+  "S_instr": 0.5049019607843136,
+  "S_instr_role": 0.75,
+  "S_instr_asymm": 0.3333333333333333,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.75,
+  "S_instr_prop_object": null,
+  "n_main": 5,
+  "n_all": 5,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2's waist, rather than R2 wrapping her arms around R1's waist?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "R1's arms around R2's waist are not visible"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R4's waist, rather than R4 wrapping her arms around R2's waist?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R2 may hold R4, but R4 also wraps R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the middle participant who is held by R1 while also holding R4, rather than R4 being the middle participant in that role?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R2 is in the middle, but the holding chain is unclear"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing toward R2 while holding R2 around the waist?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R1 faces R2, but waist holding is not visible"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 at the front end of the close contact chain, being held around the waist by R2?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R4 is at the right end held at the waist"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "arm_around_shoulder__043852ee1028__T1",
+    "model_id": "seedream-5-pro",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 26.38,
+    "written_at": "2026-07-17T14:31:50",
+    "gen_relpath": "outputs/seedream-5-pro/arm_around_shoulder__043852ee1028__T1.png",
+    "qa_relpath": "instr_qa_v2/arm_around_shoulder__043852ee1028__T1.json",
+    "n_questions": 5
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__49a12311aeff__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures three women inside a bright, modern gym. On the left, the black-haired woman in a black hoodie (R3) stands in profile facing right, gesturing with open hands. In the center, the gray-haired woman in a black sports bra (R1) smiles warmly as she leans toward the right. On the right, the red-haired woman in a black sports bra (R2) faces left, smiling and reaching out to embrace the gray-haired woman. The background features gym equipment and white walls. The scene is illuminated by bright, even indoor lighting, creating a cheerful and supportive atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 reaches out to embrace R1",
+    "R1 leans toward R2 as the target of R2's reaching embrace",
+    "R3 gestures with open hands outside the R1-R2 embrace interaction",
+    "R1 and R2 face each other while smiling during the contact",
+    "the women are inside a bright modern gym with gym equipment and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman reaching out to embrace R1, rather than R1 being the woman reaching out to embrace R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the reaching embrace toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning toward R2 as the target of R2's reaching embrace, rather than R2 being the target of an embrace initiated by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives or leans into R2's initiated embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gesturing with open hands outside the R1-R2 embrace interaction, rather than being the person R2 reaches out to embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the gesturing non-contact participant while R1 and R2 engage"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand in profile and gesture with open hands while R1 and R2 engage with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 gestures while R1 and R2 are the interacting pair"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other with R2 reaching toward R1 and R1 smiling while leaning in?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other with distinct leaning and reaching roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

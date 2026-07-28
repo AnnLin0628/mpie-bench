@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__1ddc90aadf2f__T1",
+  "instruction": "Clean studio photograph, medium shot. In a white photography studio with vertical light tubes, the brunette cheerleader (R2) stands in the foreground left, facing forward with a slight smile while holding orange pom-poms low. Behind her to the right, the blonde cheerleader (R1) stands in the background, facing forward and smiling. Both wear matching white \"WARSAW METS\" t-shirts and white skirts with red and yellow waistbands, performing a synchronized routine in a staggered formation. The scene is brightly lit with clean studio light and soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the foreground cheerleader holding orange pom-poms low",
+    "R1 stands behind R2 in the staggered cheer formation",
+    "R2 faces forward with a slight smile while R1 smiles in the background",
+    "R1 and R2 perform a synchronized cheer routine in a staggered formation",
+    "orange pom-poms held by R2",
+    "white photography studio with vertical light tubes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the foreground cheerleader holding orange pom-poms low, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the pom-poms in the foreground"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing behind R2 in the staggered formation, rather than R2 standing behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is behind R2 in the formation"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 performing a synchronized cheer routine in a staggered formation, with R2 forward and R1 behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "staggered synchronized cheer routine roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

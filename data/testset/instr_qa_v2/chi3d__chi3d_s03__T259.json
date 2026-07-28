@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T259",
+  "instruction": "A candid documentary wide shot from a slightly high angle shows an indoor motion capture studio with a red carpeted floor and white walls. On the left, the man in the black polo shirt and blue shorts (R1) stands facing right, extending his left arm to touch the shoulder of the woman in the white t-shirt and blue jeans (R2). The woman (R2) stands on the right, facing forward with a neutral expression. The room is brightly lit by overhead fluorescent lights, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 initiates shoulder contact by extending his arm toward R2",
+    "R2 receives the shoulder touch from R1 rather than touching R1",
+    "R1 faces toward R2 while making contact with her shoulder",
+    "R2 stands facing forward while being touched on the shoulder by R1",
+    "indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending an arm to touch R2's shoulder, rather than R2 extending an arm to touch R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates shoulder contact by extending his arm toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is being touched by R1, rather than R1 being the person whose shoulder is touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder touch from R1 rather than touching R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face toward R2 while reaching out to make shoulder contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces toward R2 while making contact with her shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

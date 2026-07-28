@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T9",
+  "instruction": "Candid full-shot photograph of an indoor martial arts studio with wooden walls. The standing martial artist in the black gi (R1) leans forward on the left, holding the ankle of the martial artist in the pink gi (R2). R2 lies inverted on the black mat, rolling backward with legs raised. The scene is captured from a low angle with warm, natural side lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the standing martial artist who leans forward and holds R2's ankle",
+    "R2 is the inverted martial artist lying on the mat with legs raised",
+    "R1 controls R2 by holding R2's ankle rather than being held by R2",
+    "R2 rolls backward on the black mat while R1 remains standing",
+    "black mat",
+    "indoor martial arts studio with wooden walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's ankle rather than R2 holding R1's ankle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls R2 by holding R2's ankle"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the standing martial artist leaning forward over R2 while R2 is the one inverted on the mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 standing over inverted R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 rolling backward with legs raised while R1 remains upright and holds R2's ankle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the backward roll while R1 holds the ankle"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 lying inverted on the mat as R1 maintains contact with R2's ankle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 inverted on mat with R1 holding ankle"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black mat under R2 during the martial arts grappling action?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

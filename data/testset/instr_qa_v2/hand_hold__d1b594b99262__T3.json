@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d1b594b99262__T3",
+  "instruction": "Candid medium shot of two men walking down an outdoor stone staircase. On the left, the Black man in the gray polo shirt (R2) looks towards his partner with a warm smile. On the right, the bearded man in the black t-shirt (R1) walks beside him, looking down and smiling. They hold hands across the metal handrail between them. The background is filled with soft green foliage, illuminated by warm, natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks toward R1 with a warm smile while R1 looks downward and smiles",
+    "R1 is the bearded man in a black t-shirt walking beside R2 during the hand-hold",
+    "R1 and R2 hold hands with the metal handrail between them",
+    "the metal handrail separates the two men as they hold hands across it",
+    "the two men are walking down an outdoor stone staircase",
+    "soft green foliage and warm natural daylight appear in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking toward R1 with a warm smile while R1 looks downward and smiles, rather than R1 looking toward R2 while R2 looks downward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs his gaze and smile toward R1 while R1 looks down"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the bearded man in the black t-shirt walking beside R2 as they hold hands, rather than R2 being the bearded man in the black t-shirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the bearded black-shirt role in the hand-holding pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other across the metal handrail between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain hand contact across the handrail"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side by side down the staircase while maintaining their hand-hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

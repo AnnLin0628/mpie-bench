@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__e43be850a275__T2",
+  "instruction": "A candid documentary photograph, full-length shot of a couple in a dimly lit indoor parking garage. On the right, the man in the black leather jacket (R1) stands facing forward, head turned left to make direct eye contact with the woman. On the left, the woman in the black V-neck top (R2) stands facing forward, head turned right, looking back at him. They stand side-by-side, holding hands in the center with their inner hands clasped as they share an intimate look. The scene is lit by overhead fluorescent lights, casting soft shadows on the concrete floor in a cool, desaturated color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 turns his head left toward R2 while they hold hands",
+    "R2 turns her head right toward R1 while they hold hands",
+    "R1 and R2 stand side-by-side with their inner hands clasped together in the center",
+    "R1 and R2 make direct eye contact during the hand-hold",
+    "the couple is in a dimly lit indoor parking garage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner who turns his head left toward R2 during the hand-hold, rather than R2 turning her head left toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 turns his head left toward R2 while they hold hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner who turns her head right toward R1 during the hand-hold, rather than R1 turning his head right toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 turns her head right toward R1 while they hold hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stand side-by-side while clasping their inner hands together between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand side-by-side with their inner hands clasped together in the center"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 looking directly at R2 while holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 makes direct eye contact with R2 during the hand-hold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

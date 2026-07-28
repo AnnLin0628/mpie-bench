@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T6",
+  "instruction": "Candid documentary photograph, medium shot at eye-level with shallow depth of field. In a sunny outdoor park, the boy with glasses in a yellow t-shirt (R1) stands on the left, smiling as he holds the boy with short brown hair in a light blue denim shirt (R5) from behind. The boy in the denim shirt (R5) leans playfully forward, extending his left arm out towards the camera. The scene is bathed in warm, golden hour backlight with a strong lens flare filtering through the trees.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 holds R5 from behind",
+    "R5 is the one being held by R1",
+    "R5 leans forward while R1 stays behind him",
+    "R5 extends his left arm toward the camera",
+    "sunny outdoor park setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R5 from behind, rather than R5 holding R1 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R5 from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the boy being held from behind by R1, rather than R1 being held from behind by R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the one being held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5 lean playfully forward while R1 remains behind holding him, rather than R1 leaning forward while R5 holds him from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 leans forward while R1 stays behind him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 extend his left arm outward toward the camera while being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 extends his left arm toward the camera"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

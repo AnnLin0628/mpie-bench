@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__873554e12381__T3",
+  "instruction": "Cinematic full shot of a ballet performance on an indoor stage with a dark green festive backdrop. On the left, the male dancer in a red jacket and white tights (R1) stands facing right with his arms extended. On the right, the female dancer in a pink tutu (R2) stands with her back to the camera, arms spread wide. Soft stage lighting highlights the dancers against the dark green background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces toward R2 with his arms extended in a ballet pose",
+    "R2 is shown with her back to the camera and her arms spread wide",
+    "R1 and R2 have asymmetric orientation roles, with R1 facing toward R2 while R2 faces away from the camera",
+    "R1 and R2 are posed as ballet dancers in a staged performance",
+    "the performance is on an indoor stage with a dark green festive backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer facing toward R2 with his arms extended, rather than R2 being the one facing toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces toward R2 with extended arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer shown with her back to the camera and arms spread wide, rather than R1 being shown from the back in that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera with arms spread wide"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 present an open-armed pose directed toward R2 while R2 presents an open-armed pose facing away from the camera, instead of those orientation roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain different asymmetric ballet orientation roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

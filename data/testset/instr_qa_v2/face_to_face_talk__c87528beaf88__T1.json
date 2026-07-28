@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__c87528beaf88__T1",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Indoors, against a light wood-paneled wall, the Black woman with short blonde hair in the white sleeveless top and red pants (R2) leans against a red counter on the left, holding a paper cup and smiling at her companion. On the right, the Asian woman in the black sleeveless top and brown skirt (R1) stands holding her paper cup with both hands, her eyes closed in a gentle smile. The two are positioned close together in friendly conversation. Soft, warm indoor lighting illuminates the scene, highlighting the vibrant red counter and wooden background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans against the red counter while smiling toward R1",
+    "R1 holds her paper cup with both hands while smiling gently with eyes closed",
+    "R1 and R2 stand close together in friendly conversation",
+    "paper cups held by both women",
+    "red counter that R2 leans against",
+    "indoor light wood-paneled wall setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning against the red counter and smiling toward R1, rather than R1 being the one leaning against the counter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans against the red counter while smiling toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding her paper cup with both hands with her eyes closed in a gentle smile, rather than R2 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds her paper cup with both hands while smiling gently with eyes closed"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand close to R2 in friendly conversation while R2 leans against the counter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together in friendly conversation with R2 leaning on the counter"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

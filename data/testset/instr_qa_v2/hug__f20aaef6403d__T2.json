@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__f20aaef6403d__T2",
+  "instruction": "Candid medium shot in a bright indoor room. On the left, the woman in the white sleeveless top (R3) leans forward with open arms. In the center, the man in the yellow t-shirt (R2) holds the little girl in the light long-sleeve shirt (R1) as she reaches toward the woman. Soft natural light fills the space, creating a warm, joyful atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 holds/supports R1 as R1 reaches toward R3",
+    "R1 is the little girl being held by R2, not the holder",
+    "R3 leans forward with open arms toward the approaching R1",
+    "R2 serves as the carrier/supporter while R3 is the open-armed greeter",
+    "bright indoor room setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding and supporting R1 as she reaches outward, rather than R1 holding and supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the little girl being held by R2 while reaching toward R3, rather than R2 being held by R1 while reaching toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is carried by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the woman leaning forward with open arms to receive R1, rather than R1 being the open-armed woman leaning forward to receive R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the open-armed receiver"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 acting as the carrier or holder while R1 is the child reaching toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 as R1 reaches toward R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 leaning forward with open arms as part of the interaction with R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans forward with open arms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

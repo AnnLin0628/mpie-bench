@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__1469fe1a6428__T2",
+  "instruction": "Candid action photograph, full shot. In an open grassy field, the man in the blue plaid shirt and black pants (R1) lifts and spins the woman in the white long-sleeve top and white pants (R2) in his arms. The woman (R2) wraps her arms around his neck, smiling joyfully as her legs lift off the ground. Strong golden hour sun flare from behind the trees creates a warm, hazy glow.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lifts and spins R2 in his arms",
+    "R1 supports R2's weight while R2 is off the ground",
+    "R2 wraps her arms around R1's neck while being lifted",
+    "R2's legs lift off the ground during the lift",
+    "the interaction takes place in an open grassy field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting and spinning R2 in his arms, rather than R2 lifting and spinning R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts and spins R2 in his arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's body weight from below while R2 is off the ground, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight while R2 is off the ground"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being carried in R1's arms, rather than R1 being carried in R2's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is carried by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's neck while R1 holds her up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's neck while being lifted"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2's legs lifted off the ground as R1 carries her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's legs lift off the ground during the lift"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

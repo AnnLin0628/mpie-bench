@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T2",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Inside a judo dojo with blue and yellow mats, the young man with short dark hair (R4) on the left and the middle-aged man (R3) on the right are locked in a judo match. The young man (R4), with his back partially turned showing 'LOPES' on his white judogi, leans forward to grip the middle-aged man's (R3) arm. The middle-aged man (R3), also in a white judogi, bends low in a defensive stance. The scene is captured with a shallow depth of field under bright indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 leans forward to grip R3's arm in the judo match",
+    "R3 bends low in a defensive stance while facing R4",
+    "R4 is the gripper and R3 is the defensive opponent",
+    "R3 and R4 are locked in a judo match",
+    "R3 and R4 wear white judogi uniforms",
+    "the match takes place inside a judo dojo with blue and yellow mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 leaning forward to grip R3's arm, rather than R3 leaning forward to grip R4's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the arm-gripping attacker and R3 is the gripped opponent"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one bending low in a defensive stance while R4 reaches to grip him, rather than R4 being the low defensive person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the defensive low stance while R4 performs the forward grip"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 show his back partially while engaging R3's arm, rather than R3 being the one with his back partially turned during the grip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's back is partially turned as he grips R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R4 locked together in a judo match with R4 gripping toward R3 and R3 responding defensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 have distinct grappling roles in the judo match"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4's body leaning forward toward R3 as part of the grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 leans forward toward R3 during the grapple"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the judo match taking place inside a dojo with blue and yellow mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor judo dojo with blue and yellow mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

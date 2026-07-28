@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T8",
+  "instruction": "Candid cinematic medium shot in an outdoor backyard with hanging string lights. The man in the patterned t-shirt (R3) on the left and the woman in the pink shirt (R1) on the right face each other, both smiling with their fists raised in a game of rock-paper-scissors. Warm ambient light illuminates the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is an active rock-paper-scissors player facing R3 with a raised fist",
+    "R3 is an active rock-paper-scissors player facing R1 with a raised fist",
+    "R1 and R3 face each other during the game",
+    "R1 and R3 are both smiling while playing",
+    "Hanging string lights are present in the backyard scene",
+    "The setting is an outdoor backyard with warm ambient light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 one of the two active rock-paper-scissors players raising a fist toward R3, rather than R2 taking R1's place as R3's opponent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is an active rock-paper-scissors player facing R3 with a raised fist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 one of the two active rock-paper-scissors players raising a fist toward R1, rather than R2 taking R3's place as R1's opponent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is an active rock-paper-scissors player facing R1 with a raised fist"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R3 face each other with their fists raised for a game of rock-paper-scissors?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 face each other during the game"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__bdef1d520bd6__T4",
+  "instruction": "Cinematic film still, medium shot. Indoors by a window with books and roses, an older blonde woman (R1) in a beige shirt and pants sits on the left, looking at the bearded man (R2) with a serious expression. The man, wearing a beige shirt and pants, sits in an armchair on the right, looking back at her. They hold hands gently. Soft natural light illuminates the scene, enhancing the warm, quiet atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the older blonde woman looking at R2 with a serious expression while they hold hands",
+    "R2 is the bearded man seated in an armchair looking back at R1 while they hold hands",
+    "R1 and R2 gently hold hands while seated facing each other",
+    "R2 sits in an armchair",
+    "The scene is indoors by a window with books and roses"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the older blonde woman looking at R2 with a serious expression while they hold hands, rather than R2 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the serious-looking older blonde woman role during the hand-holding interaction"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the bearded man seated in the armchair looking back at R1 while they hold hands, rather than R1 being the bearded man in the armchair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the seated armchair counterpart role during the hand-holding interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated facing one another while gently holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share a seated face-to-face hand-holding configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look toward R2 as R2 looks back at R1 during their hand-holding interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain mutual gaze while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T10",
+  "instruction": "Cinematic medium shot of an indoor sports gymnasium with wooden floors. In the center, the young girl in a pink tracksuit (R5) stands supported by three coaches. The bearded man in a dark grey t-shirt (R4) kneels on the left, holding her right hand. The man with an afro (R1) in a white t-shirt kneels on the right, holding her left hand. Behind her, the red-haired woman in a black top (R3) stands and supports her waist. Warm indoor light filters through the windows, illuminating the group and casting soft shadows.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R3 supports R5's waist from behind while R5 is the supported person",
+    "R1 kneels and holds R5's left hand to help support R5",
+    "R4 kneels and holds R5's right hand to help support R5",
+    "R5 stands in the center being supported by R1, R3, and R4",
+    "R3 stands behind R5 in a waist-support role",
+    "indoor sports gymnasium with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 supporting R5's waist from behind, rather than R5 supporting R3's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 supports R5's waist from behind while R5 is the supported person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kneeling and holding R5's left hand to help support R5, rather than R5 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels and holds R5's left hand to help support R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 kneeling and holding R5's right hand to help support R5, rather than R5 supporting R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 kneels and holds R5's right hand to help support R5"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 the person standing in the center while R1, R3, and R4 make supporting contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 stands in the center being supported by R1, R3, and R4"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand behind R5 in a waist-support role while R5 remains the supported person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands behind R5 in a waist-support role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

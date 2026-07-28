@@ -1,0 +1,74 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T40",
+  "instruction": "A candid photographic still, medium shot, on a sunny outdoor rooftop. In the center foreground, the woman with short grey hair (R9) in a denim jacket and black skirt dances with arms outstretched, smiling brightly at the camera. In the left background, the woman in the black beanie and khaki capris (R8) stands dancing and smiling. In the center background, the woman in the neon green dress (R7) dances with a smile. In the right background, the man in the brown jacket (R10) dances with arms raised, smiling. The scene is bathed in warm, direct sunlight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R9 is the center-foreground dancer smiling at the camera with arms outstretched, rather than R7 being in that foreground camera-facing role",
+    "R10 is the background dancer with arms raised, rather than R9 having the raised-arms background role",
+    "R8 dances and smiles in the background while R9 is the prominent foreground dancer",
+    "R7 dances and smiles in the center background",
+    "The scene is on a sunny outdoor rooftop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the center-foreground dancer smiling brightly at the camera with arms outstretched, rather than R7 taking that foreground camera-facing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 foreground camera-facing dance role versus R7 background dance role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R10 the background dancer with arms raised, rather than R9 being the background dancer with raised arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R10 raised-arms background dance role versus R9 foreground outstretched-arms role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R7 dancing with a smile in the center background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 center-background dancing role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

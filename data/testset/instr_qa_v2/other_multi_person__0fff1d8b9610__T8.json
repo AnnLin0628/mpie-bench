@@ -1,0 +1,72 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T8",
+  "instruction": "Studio photograph, medium shot. Three cheerleaders are featured in a close lineup against a white studio background. In the center is the short black-haired woman (R4), flanked by the purple-haired woman (R7) on her left and the dark brown-haired woman (R9) on her right. The curly-haired woman (R1) and the long dark-haired woman (R6) are partially visible on the outer edges. They wear white 'Warsaw Mets' t-shirts and hold metallic orange pom-poms at their hips, looking directly at the camera with serious expressions. Bright studio lighting with a subtle cool undertone illuminates the scene.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R4 is the central cheerleader in the close lineup, flanked by R7 and R9 rather than flanking them",
+    "R7 and R9 occupy flanking roles around R4 rather than R4 occupying a flanking role around either of them",
+    "R1 and R6 are only partially visible at the outer edges of the lineup while R4 remains central",
+    "The cheerleaders hold metallic orange pom-poms at their hips",
+    "The group is posed in a studio photograph against a white studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "main_lt_3",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__bbcff244d909__T2",
+  "instruction": "Candid documentary photograph, medium shot from a slightly high angle. In a mossy green forest, a white duvet is spread on the ground. The woman in the blue striped shirt (R1) sits on the left, facing right and looking at her companion with a gentle smile, her right hand resting near her collarbone. The man in the white t-shirt (R2) sits on the right, facing left and looking down pensively with a neutral expression. They sit close together on the white bedding, sharing a quiet, intimate moment outdoors. Soft natural daylight illuminates the scene, creating a cool palette of greens and whites.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 smiles gently while looking at R2, whereas R2 does not smile back",
+    "R2 looks down pensively with a neutral expression while R1 looks toward R2",
+    "R1 keeps her right hand near her collarbone while seated close to R2",
+    "R1 and R2 sit close together on white bedding",
+    "a white duvet or bedding is spread on the ground beneath them",
+    "the scene takes place in a mossy green forest"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person smiling gently toward R2, rather than R2 being the one smiling gently toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles gently while looking at R2, whereas R2 does not smile back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking down pensively with a neutral expression, rather than R1 being the one looking down pensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks down pensively with a neutral expression while R1 looks toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated close to R2 with her right hand resting near her collarbone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps her right hand near her collarbone while seated close to R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__d49e03b6d029__T2",
+  "instruction": "Candid family photograph, low-angle medium close-up. In a bright indoor living room, the bearded man (R2) in a white t-shirt lies face down on a woven rug. The blonde toddler girl (R1) in a striped grey onesie sits on his neck, looking down. The man's hands reach up to hold the toddler's bare feet near his head. Soft, diffused natural light fills the warm neutral space.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lies face down underneath while R1 sits on his neck",
+    "R1 is the toddler seated on R2's neck rather than R2 being seated on R1",
+    "R2 holds R1's bare feet near his head",
+    "R1 looks down while positioned on R2's neck",
+    "R2 is lying on a woven rug",
+    "the scene is a bright indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 sitting on R2's neck while R2 lies face down underneath, rather than R2 sitting on R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies face down underneath while R1 sits on his neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 provide the lower body support by lying beneath R1, rather than R1 lying beneath and supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric support duty with R2 underneath R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's hands holding R1's bare feet near his head, rather than R1 holding R2's feet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's bare feet near his head"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned as the child rider seated on R2's neck while R2 is the adult lying face down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the toddler seated on R2's neck"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

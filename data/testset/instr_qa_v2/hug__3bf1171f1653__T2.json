@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3bf1171f1653__T2",
+  "instruction": "Candid outdoor photograph, medium shot. In a sunny park with palm trees under a blue sky, the man in the black-and-white leaf-patterned shirt and sunglasses (R1) stands on the left next to the man in the black bowler hat and striped vest (R2) on the right. Both smile at the camera; the man (R1) gestures a shaka sign, while the man (R2) puts his arm around his shoulder and gestures with a gloved hand. Bright daylight fills the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 puts his arm around R1's shoulder",
+    "R1 gestures a shaka sign while R2 gestures with a gloved hand",
+    "R1 receives the shoulder contact from R2",
+    "R2 wears or uses a glove on the gesturing hand",
+    "sunny park with palm trees under a blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 put his arm around R1's shoulder, rather than R1 putting his arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the shoulder contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one making the shaka sign while R2 is the one placing an arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the shaka gesture while R2 performs the shoulder-contact role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 gesture with a gloved hand while also being the person whose arm is around R1, rather than R1 being the gloved-hand shoulder-contact person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 combines the gloved-hand gesture with the arm-around-shoulder role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing next to R2 while receiving R2's arm around his shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's shoulder contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Does R2 have a glove on the hand he gestures with?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2's gloved gesturing hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T4",
+  "instruction": "A candid full-shot photograph from a high-angle view shows an indoor martial arts studio with wooden floors and a black mat. Kneeling on the mat, the martial artist in the pink gi (R2) leans forward. Behind her, the martial artist in the black gi (R1) is kneeling and leaning over her back. The martial artist in the black gi (R1) holds the martial artist in the pink gi (R2) from behind in a tight grappling hold. The scene is illuminated by warm indoor lighting with natural tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2 from behind in a tight grappling hold",
+    "R1 kneels behind R2 and leans over R2's back",
+    "R2 kneels on the mat and leans forward while being held by R1",
+    "R2 is the person being grappled rather than the person applying the hold",
+    "black martial arts mat under the kneeling grapplers",
+    "indoor martial arts studio setting with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2 from behind in a tight grappling hold, rather than R2 holding R1 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 from behind in a tight grappling hold"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning over R2's back while kneeling behind her, rather than R2 leaning over R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels behind R2 and leans over R2's back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the martial artist being controlled in the grapple while R1 applies the hold from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being grappled rather than the person applying the hold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 kneeling on the mat and leaning forward while R1 holds her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kneels on the mat and leans forward while being held by R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are the grappling martial artists kneeling on a black mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black martial arts mat under the kneeling grapplers"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

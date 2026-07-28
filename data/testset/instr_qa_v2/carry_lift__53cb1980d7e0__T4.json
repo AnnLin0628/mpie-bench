@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__53cb1980d7e0__T4",
+  "instruction": "Cinematic medium shot of a man in a brown plaid coat (R1) and a woman in a red plaid blazer (R2) against a green wooden wall. The man (R1) on the left holds a grey rabbit and looks directly at the woman. The woman (R2) on the right holds a black rabbit and looks back at him, establishing direct eye contact. They stand close together, sharing a quiet moment. Soft, natural outdoor lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a grey rabbit while R2 holds a black rabbit",
+    "R2 holds the black rabbit rather than R1 holding it",
+    "R1 holds the grey rabbit rather than R2 holding it",
+    "R1 and R2 look directly at each other",
+    "the rabbits are the contact-relevant objects being held",
+    "the scene is set against a green wooden wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the grey rabbit while R2 holds the black rabbit, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the grey rabbit and R2 holds the black rabbit"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold the black rabbit, rather than R1 holding the black rabbit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the holder of the black rabbit"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold the grey rabbit, rather than R2 holding the grey rabbit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the holder of the grey rabbit"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 carrying a grey rabbit while R2 carries a black rabbit as they face each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct rabbit-holding roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

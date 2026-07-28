@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T15",
+  "instruction": "A candid martial arts photograph captures a full shot of two men on a black mat in a studio with a textured brown wall. On the left, the man in the white gi (R1) kneels, leaning forward. On the right, the man in the gray gi (R2) kneels opposite him, leaning in. They are locked in a close kneeling grapple, with their heads pressed tightly together and their hands gripping each other's gi jackets. Warm, soft indoor lighting illuminates the sparring partners, casting gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the white-gi kneeling grappler gripping R2's gray gi jacket",
+    "R2 is the gray-gi kneeling grappler whose jacket is being grabbed by R1 while R2 grabs R1's jacket",
+    "R1 and R2 kneel opposite each other in a close grapple with heads pressed together",
+    "R1's hands grip R2's gi jacket and R2's hands grip R1's gi jacket",
+    "gi jackets are contact-relevant objects being gripped",
+    "the grapple takes place on a black mat in a studio with a textured brown wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the grapple, is R1 the white-gi kneeling partner gripping R2's gray gi jacket, rather than R2 being the white-gi partner gripping R1's gray jacket?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the white-gi kneeling grappler gripping R2's gray gi jacket"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's gray gi jacket serve as the jacket being grabbed by R1 while R1's white gi jacket is grabbed by R2, rather than those jacket-grabbing roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the gray-gi kneeling grappler whose jacket is being grabbed by R1 while R2 grabs R1's jacket"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 kneeling opposite each other in a close martial-arts grapple with their heads pressed tightly together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 kneel opposite each other in a close grapple with heads pressed together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1's hands gripping R2's gi jacket while R2's hands grip R1's gi jacket?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hands grip R2's gi jacket and R2's hands grip R1's gi jacket"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the grapplers on a black mat in a studio with a textured brown wall?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the grapple takes place on a black mat in a studio with a textured brown wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

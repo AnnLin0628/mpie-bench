@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T146",
+  "instruction": "A candid documentary medium-wide shot of an indoor motion capture studio with a red carpeted floor, white walls, and white floor markers. On the left, the man in the black cap and blue shorts (R1) stands in profile, facing right with a neutral expression. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing him, punching his stomach with her right fist. The room is illuminated by bright overhead fluorescent lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 delivers a punch to R1's stomach",
+    "R1 receives the stomach punch from R2",
+    "R2's right fist is the contacting fist",
+    "R1 and R2 face each other during the punching interaction",
+    "indoor motion capture studio with red carpet and white floor markers"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 punching R1's stomach, rather than R1 punching R2's stomach?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers the stomach punch to R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the punch to his stomach while R2 is the person delivering it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the punch recipient and R2 is the striker"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's right fist contact R1's stomach, rather than R1's right fist contacting R2's stomach?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right fist makes contact with R1's stomach"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while R2 performs the punching action toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other with R2 as the active puncher"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

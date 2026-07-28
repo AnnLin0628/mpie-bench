@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T135",
+  "instruction": "Candid documentary photograph, wide-angle full shot from behind. Inside a motion capture studio with a red carpeted floor, the man in the black polo shirt (R1) stands center-left, facing away and slightly left. The woman in the white t-shirt (R2) walks forward on the center-right, reaching her left hand to touch his upper back. The woman (R2) approaches the man (R1) from behind to make contact. Soft overhead fluorescent lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 approaches R1 from behind to make contact",
+    "R2 reaches her left hand to touch R1's upper back",
+    "R1 receives the upper-back touch rather than initiating it",
+    "R1 stands facing away while R2 walks forward toward him",
+    "motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 approach R1 from behind to make contact, rather than R1 approaching R2 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 approaches R1 from behind to make contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one reaching her left hand toward R1's upper back, rather than R1 reaching toward R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches her left hand to touch R1's upper back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being touched on the upper back by R2, rather than R2 being touched on the upper back by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the upper-back touch rather than initiating it"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

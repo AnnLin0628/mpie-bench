@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1e374549203d__T3",
+  "instruction": "Candid office photograph, medium close-up. In a modern office with potted plants, the man in the beige polo shirt (R4) stands in the center-right foreground, leaning forward to place a yellow sticky note labeled '10%' onto a glass pane. He holds an open notebook in his left hand. Behind him on the left, the woman with glasses and a beige sweater vest (R3) smiles while holding another note. Warm, natural indoor lighting illuminates the scene with a shallow depth of field.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 leans forward to place a yellow sticky note labeled '10%' onto a glass pane rather than R3 doing it",
+    "R3 stays behind R4 holding another note while R4 performs the glass-pane note placement",
+    "R4 holds an open notebook in his left hand while placing the sticky note rather than R3 holding it",
+    "R4 is the active person applying the sticky note to the glass pane",
+    "yellow sticky note labeled '10%' on a glass pane",
+    "open notebook held by R4",
+    "modern office with potted plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 leaning forward to place a yellow sticky note labeled '10%' onto a glass pane, rather than R3 doing that placement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 places the '10%' sticky note on the glass instead of R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 behind R4 holding another note while R4 is the one placing the sticky note onto the glass pane, rather than their duties being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds another note behind R4 while R4 applies the glass note"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 hold the open notebook in his left hand while placing the sticky note, rather than R3 holding the open notebook during that placement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds the open notebook during the sticky-note placement"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 the active person leaning toward the glass pane to apply the yellow sticky note?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 actively applies the sticky note to the glass"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

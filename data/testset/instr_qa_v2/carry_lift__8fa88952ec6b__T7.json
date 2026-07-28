@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__8fa88952ec6b__T7",
+  "instruction": "Candid full shot of a couple on a white mattress in a pine forest. On the left, the woman in the light blue short-sleeved shirt and shorts (R1) stands balancing, looking down. On the right, the man in the white t-shirt and light blue pants (R2) bends forward deeply, head down. They hold hands as he loses his balance. Soft, diffused daylight illuminates the natural forest setting and the white bedding.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the person bending forward deeply with his head down as he loses balance",
+    "R1 is the standing balancing partner looking down while holding R2's hands",
+    "R1 and R2 hold hands while R2, not R1, is off balance",
+    "R1 stands while R2 bends forward during the hand-holding contact",
+    "a white mattress or bedding is present beneath the couple",
+    "the scene is set in a pine forest"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the person bending forward deeply with his head down as he loses his balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the off-balance bent-forward person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the standing balancing partner looking down while holding hands with the off-balance partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the upright balancing hand-holding partner"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold hands with R2 while R2 is the one losing balance, rather than R1 being the one losing balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 loses balance during the hand-holding contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands while R1 stands and R2 bends forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands while R2 bends forward during hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

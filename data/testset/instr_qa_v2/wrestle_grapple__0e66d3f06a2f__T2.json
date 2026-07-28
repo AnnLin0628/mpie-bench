@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T2",
+  "instruction": "Candid athletic photograph, full shot. In a dojo with a dark wooden wall and a potted plant on the right, the man in the white gi (R1) on the left grapples with the man in the grey gi (R2) on the right. R1 is bent forward with his back to the camera, legs spread wide, while R2 leans forward, gripping R1's shoulders. Warm indoor lighting illuminates the scene, casting soft shadows on the black mat.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 grips R1's shoulders during the grapple",
+    "R1 is the bent-forward person under R2's shoulder grip",
+    "R2 leans forward into R1 while controlling R1's shoulders",
+    "R1 and R2 are grappling with distinct contact roles",
+    "the grapple takes place on a black mat",
+    "the scene is a dojo with a dark wooden wall and a potted plant"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gripping R1's shoulders during the grapple, rather than R1 gripping R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips R1's shoulders during the grapple"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person bent forward under R2's shoulder grip, rather than R2 being bent forward under R1's shoulder grip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bent-forward person under R2's shoulder grip"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward while controlling R1 by the shoulders, rather than R1 leaning forward while controlling R2 by the shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward into R1 while controlling R1's shoulders"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 grappling with R2's hands placed on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are grappling with distinct contact roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a black mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the grapple takes place on a black mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

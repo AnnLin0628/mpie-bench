@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T29",
+  "instruction": "A candid full-shot photograph captures a contemporary dance rehearsal in a studio with dark walls and a polished wooden floor. In the foreground left, the man in the rust-colored shirt (R1) stands barefoot with his back to the camera, holding the woman in the yellow shirt (R2) in a close embrace, her yellow-sleeved arms wrapped around his back. In the background right, the man in the rust-colored shirt (R3) stands barefoot in profile, embracing the woman in the yellow shirt (R4). Both couples are captured mid-movement, creating a sense of intimate, synchronized flow. The scene is illuminated by soft overhead light, highlighting the warm tones of the wooden floor and the dancers' rust and yellow attire.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 holds R2 in a close dance embrace",
+    "R2 wraps her arms around R1's back while R1 holds her",
+    "R3 embraces R4 as a separate dance pair",
+    "R1-R2 and R3-R4 form two separate close-embrace dance couples",
+    "the scene is a contemporary dance rehearsal in a studio with dark walls and a polished wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding R2 in a close dance embrace, rather than R2 being described as the one holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 in a close dance embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's arms wrapped around R1's back while R1 holds her, rather than R1's arms being the ones specifically wrapped around R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's back while R1 holds her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person embracing R4 in the background pair, rather than R4 being described as the one embracing R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 embraces R4 as a separate dance pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 form one close-embrace dance pair while R3 and R4 form a separate close-embrace dance pair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1-R2 and R3-R4 form two separate close-embrace dance couples"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned with his back to the camera while maintaining close dance contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 in a close dance embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

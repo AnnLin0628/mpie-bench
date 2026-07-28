@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T2",
+  "instruction": "A candid black and white photograph in a medium shot. On an outdoor city embankment, the woman in the black cap and dark coat (R2) is on the left, embracing the man in the dark coat (R1) who stands on the right. The woman wraps her arms tightly around the man's neck with her eyes closed and a happy smile. The man, seen from the back and side, holds her close with his hands resting on her back. The background is a soft, out-of-focus riverbank under a bright, overcast sky with diffuse lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms tightly around R1's neck while R1 does not wrap his arms around R2's neck",
+    "R1 holds R2 close with his hands resting on R2's back rather than R2 placing hands on R1's back",
+    "R2 is the neck-embracing partner with eyes closed and a happy smile",
+    "R1 is seen from the back and side while holding R2 close",
+    "the interaction takes place on an outdoor city embankment"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms tightly around R1's neck, rather than R1 wrapping his arms tightly around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms-around-neck contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2 close with his hands resting on R2's back, rather than R2 being the one with hands resting on R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hands-on-back holding duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown from the back and side while returning the contact by holding R2 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's back-and-side holding role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__cfb7654f2e46__T2",
+  "instruction": "Candid full-shot outdoor photograph of a sunny grassy lawn. The young girl in a white cardigan (R1) leans back dynamically, laughing as she pulls a thick rope with both hands. Behind her, the man in a brown sweater (R2) stands upright and laughs heartily, holding the rope behind her to assist. The background shows a soft-focus grassy field with trees. Bright natural daylight fills the scene, casting soft shadows on the grass and creating a warm, cheerful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans back dynamically while pulling the rope with both hands",
+    "R2 stands behind R1 and holds the rope to assist her",
+    "R1 is the primary rope puller while R2 provides help from behind",
+    "a thick rope is held by both R1 and R2 during the interaction",
+    "the scene takes place on a sunny grassy outdoor lawn"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning back dynamically while pulling the rope with both hands, rather than R2 being the one leaning back in front?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the main leaning rope puller"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 stand behind R1 and hold the rope to assist her, rather than R1 standing behind R2 to assist him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 assists R1 from behind on the rope"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being helped in the rope-pulling action, while R2 is the helper holding the rope behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives assistance while R2 provides it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 pulling the rope with both hands while laughing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pulls the rope with both hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 upright behind R1 while participating in the same rope-pulling activity?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands upright behind R1 during the rope interaction"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a thick rope the shared object being held during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "thick rope"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

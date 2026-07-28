@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T205",
+  "instruction": "A candid wide shot photograph captures an indoor motion capture studio with a dark red carpet and white walls. On the right side of the frame, the man in the black cap and blue shorts (R1) stands facing left, bracing himself. In the center, the woman in the white patterned t-shirt and blue jeans (R2) balances on her right leg, executing a powerful side kick with her left foot striking the man's thigh. The interaction is captured from a wide angle under bright, neutral overhead studio lighting, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 delivers a side kick with her left foot into R1's thigh",
+    "R1 braces himself as the receiver of R2's kick",
+    "R2 balances on her right leg while kicking R1 with her left foot",
+    "R1 is the standing target facing R2 during the kick",
+    "The scene is an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 delivering a side kick with her left foot into R1's thigh, rather than R1 kicking R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers the kick and R1 receives it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 bracing himself as the person being struck by R2's kick, rather than R2 bracing while being struck by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bracing receiver of R2's kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing on her right leg while using her left foot to contact R1's thigh, rather than R1 balancing on one leg to contact R2's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances and kicks while R1 is contacted"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 serve as the standing target receiving contact on his thigh from R2's side kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the target receiving the thigh strike"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

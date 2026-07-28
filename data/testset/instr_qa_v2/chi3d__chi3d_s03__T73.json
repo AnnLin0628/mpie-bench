@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T73",
+  "instruction": "A candid full shot photograph of a spacious indoor studio with a dark red carpeted floor and white walls. On the left, the woman in the white patterned t-shirt and blue jeans (R2) stands facing right. On the right, the man in the dark polo shirt and blue shorts (R1) stands facing left. They are shaking hands, holding their right hands clasped together in the center. Both look at each other with neutral expressions. The scene is illuminated by bright overhead fluorescent lights, creating a neutral color palette with a prominent red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the right-side man in a dark polo shirt and blue shorts who faces R2 and clasps R2's right hand",
+    "R2 is the left-side woman in a white patterned t-shirt and blue jeans who faces R1 and clasps R1's right hand",
+    "R1 and R2 hold their right hands clasped together in the center between them",
+    "R1 and R2 look at each other while maintaining the hand contact",
+    "The setting is a spacious indoor studio with a dark red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant on the right who faces R2 and clasps R2's right hand, rather than R2 being that right-side participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 right-side facing-and-clasping role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant on the left who faces R1 and clasps R1's right hand, rather than R1 being that left-side participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 left-side facing-and-clasping role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the dark polo shirt and blue shorts whose right hand is clasped with R2's right hand, rather than R2 being the man in that contact role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 as the male dark-polo participant in the right-hand clasp"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

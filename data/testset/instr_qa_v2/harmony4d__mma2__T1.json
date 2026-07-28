@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma2__T1",
+  "instruction": "Candid action photograph, full shot at eye-level. In an indoor martial arts gym with gray padded walls, the bearded man in the maroon t-shirt (R2) stands on the left in a wide stance, facing right. The man in the blue tank top (R1) stands on the right, facing left. R1 grips R2's right wrist with his right hand as they practice grappling. Neutral overhead lighting illuminates the scene, casting soft shadows on the gray mat floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 grips R2's right wrist with his right hand during grappling practice",
+    "R2 is the person whose right wrist is being controlled by R1",
+    "R1 and R2 face each other while practicing grappling",
+    "R2 stands in a wide stance during the wrist-grip interaction",
+    "The scene is set in an indoor martial arts gym with gray padded walls and a gray mat floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 grip R2's right wrist with his right hand, rather than R2 gripping R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's right wrist with his right hand during grappling practice"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person controlling R2's wrist in the grappling practice, rather than R2 controlling R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the wrist-control role while R2's right wrist is being held"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose right wrist is being held by R1, rather than R1 being the one whose wrist is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose right wrist is being controlled by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while R1 holds R2's wrist during grappling practice?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other while practicing grappling, with R1 holding R2's wrist"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 maintain a wide stance while R1 grips R2's right wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in a wide stance during the wrist-grip interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

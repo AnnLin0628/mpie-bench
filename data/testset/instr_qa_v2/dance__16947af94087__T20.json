@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T20",
+  "instruction": "Candid medium shot in an indoor hall. The man in the brown shirt and beanie (R1) stands on the right, looking closely at his partner. The woman in the black dress (R2) stands on the left with her back to the camera, facing him. The man (R1) holds her waist gently with both hands. Soft indoor lighting illuminates their faces in a warm, neutral palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's waist gently with both hands",
+    "R1 is the person making waist contact rather than R2",
+    "R2 faces R1 with her back to the camera",
+    "R1 looks closely at R2 during the dance-like interaction",
+    "The interaction takes place in an indoor hall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's waist gently with both hands, rather than R2 holding R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's waist gently with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner applying the waist contact while R2 is the partner receiving that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person making waist contact rather than R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use both hands on R2's waist, rather than R2 using both hands on R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses both hands to hold R2's waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

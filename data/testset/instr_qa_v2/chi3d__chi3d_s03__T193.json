@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T193",
+  "instruction": "Candid documentary photograph, full shot. Inside an indoor motion capture studio with a red carpeted floor, white walls, and wall-mounted radiators, the woman in the white patterned t-shirt (R2) stands on the right side of the frame, facing left, and kicks her left leg forward. The man in the black polo shirt (R1) stands on the left, facing right, watching her movement. Bright overhead lighting illuminates the entire room, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active person kicking her left leg forward while R1 watches",
+    "R1 is observing R2's movement rather than performing the kick himself",
+    "R2 demonstrates the forward leg kick while R1 remains a watcher",
+    "R2 has one leg extended forward in a kicking motion while R1 stands nearby watching",
+    "The scene is inside an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person kicking her left leg forward while R1 watches her movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active kicker while R1 is the observer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 observing R2's kick rather than R2 observing R1 kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 watches while R2 performs the kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 demonstrate the forward leg movement rather than R1 being the one demonstrating it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the demonstrated leg movement"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have her left leg kicked forward while R1 remains standing and watching?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body is in a kicking pose while R1's role is watching"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T30",
+  "instruction": "A cinematic film still, medium-full shot of an indoor boxing gym filled with hazy smoke. On the left, the shirtless man in black shorts (R1) stands in profile, holding up black boxing gloves in a defensive stance. On the right, the bearded shirtless man with shoulder tattoos (R3) faces him, wearing green boxing gloves and patterned tights. The background features a red wall with a white knight graphic. The scene is lit by cool overhead lights, creating a dramatic, atmospheric mood with soft shadows on the floor.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 holds up black boxing gloves in a defensive stance",
+    "R3 faces R1 as the opposing boxer with green boxing gloves",
+    "R1 stands in profile while R3 faces him",
+    "boxing gloves are the combat-relevant contact props",
+    "the setting is an indoor boxing gym with hazy smoke"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer holding up black boxing gloves in a defensive stance, rather than R3 being the one described in that defensive stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds up black boxing gloves in a defensive stance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the boxer facing R1 while wearing green boxing gloves, rather than R1 being the green-gloved boxer facing R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 faces R1 as the opposing boxer with green boxing gloves"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in profile with his gloves raised while R3 faces him as the opposing fighter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile while R3 faces him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

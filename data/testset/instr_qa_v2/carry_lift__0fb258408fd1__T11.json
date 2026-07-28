@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0fb258408fd1__T11",
+  "instruction": "Candid photographic medium close-up of two women embracing in an indoor studio with a gray background and elegant floral arrangements. On the left, the woman with curly hair (R1) in a white ruffled dress leans forward, laughing joyfully. On the right, the woman with straight dark hair (R2) in a white satin blazer hugs her from the side, smiling warmly. They are locked in a happy embrace, celebrating together under soft studio lighting that highlights their joyful expressions and creates a warm, celebratory mood.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 hugs R1 from the side rather than R1 hugging R2 from the side",
+    "R1 leans forward while R2 provides the side embrace",
+    "R1 is the recipient of R2's side hug during the happy embrace",
+    "R1 and R2 are locked together in a celebratory embrace",
+    "The interaction occurs in an indoor studio with a gray background and floral arrangements"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward while R2 is the person embracing her from the side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward as R2 side-embraces her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the recipient of R2's side embrace, rather than R2 being the recipient of R1's side embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the side hug from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": true
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T71",
+  "instruction": "Candid documentary wide shot of an indoor motion capture studio with a red carpet. The man in the black polo shirt and blue shorts (R1) stands on the left, facing right, shaking right hands with the woman in the white t-shirt and blue jeans (R2) who stands on the right facing left. Even overhead lighting illuminates the scene, highlighting the neutral tones and the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the male participant whose right hand is clasped with R2's right hand",
+    "R2 is the female participant receiving the right-hand clasp from R1",
+    "R1 faces toward R2 while R2 faces back toward R1 during the hand contact",
+    "R1 and R2 make contact specifically with their right hands",
+    "the interaction occurs in an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the male participant whose right hand is clasped with R2's right hand, rather than R2 being the male participant in that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the male participant in the right-hand contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the female participant whose right hand is clasped by R1's right hand, rather than R1 being the female participant in that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the female participant in the right-hand contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the hand contact, does R1 face toward R2 from one side while R2 faces back toward R1 from the opposite side, rather than their labels being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have opposite facing orientations toward each other"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his right hand to make the contact with R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand contacts R2's right hand"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use her right hand as the counterpart to R1's right-hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right hand is the counterpart in the contact with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

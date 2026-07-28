@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__3eb601b0f7a9__T1",
+  "instruction": "A clean, minimalist lifestyle photograph in a medium shot captures two women in a bright, beige-walled office. On the left, the woman with a brown bob (R1) stands in profile wearing a beige blazer and grey skirt. On the right, the woman with a blonde ponytail (R2) stands facing her, wearing a light blue tied shirt and beige skirt. They stand on opposite sides of a long white desk, clasping right hands in a professional handshake. The desk holds a laptop, papers, and a white spherical lamp. The scene is illuminated by soft, diffused indoor light, creating a warm, neutral color palette with clean lines and a calm, professional atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is in profile while shaking R2's right hand, rather than R2 being the one shown in profile",
+    "R2 faces R1 during the handshake while R1 is shown in profile",
+    "R1 and R2 clasp right hands in a professional handshake across the desk",
+    "R1 and R2 stand on opposite sides of a long white desk while making hand contact",
+    "a long white desk is between the two women during the handshake",
+    "the scene is a bright beige-walled office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 shown in profile while clasping R2's right hand, rather than R2 being the one shown in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in profile during the handshake, not R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 maintain hand contact while standing on opposite sides of the desk?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 shake hands across the desk"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T22",
+  "instruction": "Cinematic action still, full shot. Inside a gym, the man in the gorilla-print t-shirt (R4) on the left is seen from a three-quarter back view, leaning forward to spar. On the right, the man in the black t-shirt (R2) faces him, knees bent with hands raised in a defensive guard. The two are actively sparring on a white mat. Moody gym lighting with a bright spotlight from the top right creates a lens flare.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 leans forward toward R2 to spar",
+    "R2 faces R4 with hands raised in a defensive guard",
+    "R2 has knees bent while guarding against R4",
+    "R4 is seen from a three-quarter back view during the sparring",
+    "R2 and R4 spar on a white mat",
+    "the sparring takes place inside a gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one leaning forward toward R2 to spar, rather than R2 being the one leaning forward toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 leans forward toward R2 to spar"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one facing R4 with hands raised in a defensive guard, rather than R4 being the one in that guarded defensive posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R4 with hands raised in a defensive guard"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep his knees bent while guarding against R4 during the sparring?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has knees bent while guarding against R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 shown from a three-quarter back view while leaning forward toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is seen from a three-quarter back view during the sparring"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R2 and R4 sparring on a white mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 and R4 spar on a white mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

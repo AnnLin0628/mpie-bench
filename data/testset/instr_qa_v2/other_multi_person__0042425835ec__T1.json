@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T1",
+  "instruction": "A candid documentary medium shot captures a lively backyard party. On the left, the man in the patterned shirt (R3) is blindfolded with a peach bandana, swinging a yellow bat upward with both hands. On the right, the woman in the pink shirt (R1) stands slightly behind him, smiling and watching his swing. The background features lush green foliage under soft, natural daylight. The interaction is playful, with the woman cheering the blindfolded man as he attempts to hit a piñata.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the blindfolded participant attempting to hit the piñata",
+    "R3 swings the yellow bat upward with both hands rather than R1 doing so",
+    "R1 watches and cheers R3's swing rather than being the blindfolded batter",
+    "R1 stands slightly behind R3 as an observer while R3 takes the swing",
+    "R3 wears a peach bandana as a blindfold",
+    "R3 holds a yellow bat used for the piñata attempt",
+    "The scene is a lively backyard party with green foliage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the blindfolded person attempting to hit the piñata, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the blindfolded participant attempting to hit the piñata"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 swinging the yellow bat upward with both hands, rather than R1 swinging it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 swings the yellow bat upward with both hands rather than R1 doing so"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 watching and cheering R3's swing, rather than being the blindfolded batter herself?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 watches and cheers R3's swing rather than being the blindfolded batter"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R3 holding a yellow bat for the piñata attempt?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R3 holds a yellow bat used for the piñata attempt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

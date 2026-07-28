@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5f3c3f4c5080__T3",
+  "instruction": "A cinematic film still in a medium full shot captures a cozy indoor living room during the day. The elderly man in a striped shirt and khaki trousers (R1) stands on the left, facing right and looking at his partner with a gentle smile. The elderly woman in a white shirt and beige trousers (R2) stands on the right, facing left as she reaches out to him. She places her hands on his shoulders as they begin to slow dance. Warm, soft indoor lighting and natural light from the side illuminate the room, creating a tender and intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches out toward R1 as they begin to slow dance",
+    "R2 places her hands on R1's shoulders",
+    "R1 receives R2's shoulder contact while facing and looking at her",
+    "R1 and R2 begin a slow dance together",
+    "the scene is a cozy indoor living room during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one reaching out toward R1 as they begin to slow dance, rather than R1 being the one reaching out toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the reaching contact toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place her hands on R1's shoulders, rather than R1 placing his hands on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hands are on R1's shoulders"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving R2's hands on his shoulders, rather than R2 receiving R1's hands on her shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the shoulder contact from R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

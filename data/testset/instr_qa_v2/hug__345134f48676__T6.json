@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T6",
+  "instruction": "Candid black-and-white medium-full shot of a couple on a city embankment. On the right, the bearded man in a dark coat (R1) leans against a stone ledge, looking down. On the left, the woman in a black cap and long scarf (R2) hugs him closely, looking up with a joyful smile. The shot captures their full-body embrace against a soft-focus urban background in monochrome.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 hugs R1 closely rather than R1 being described as the one hugging R2",
+    "R1 leans against a stone ledge while R2 is the person embracing him",
+    "R2 looks up joyfully toward R1 while R1 looks down",
+    "R1 is supported by or leaning on the stone ledge during the contact",
+    "The couple is on a city embankment"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning against the stone ledge while R2 embraces him, rather than R2 leaning on the ledge while R1 embraces her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans against the stone ledge while R2 hugs him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 look up toward R1 with a joyful smile while R1 looks down, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks up joyfully while R1 looks down"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned close against R1 in the embrace while R1 remains the person being leaned into?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the close-embracing partner and R1 is the partner receiving the embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

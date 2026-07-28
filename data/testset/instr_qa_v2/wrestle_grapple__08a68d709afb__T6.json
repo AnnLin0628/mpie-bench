@@ -1,0 +1,72 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T6",
+  "instruction": "An action sports full shot captures a dynamic scene inside a martial arts studio featuring a brick wall on the left and a large window on the right. On the left, the young girl with braided hair (R4) wearing a white gi and a red belt performs a high side kick directed towards the right. On the right, the bearded instructor with a headband (R6) wearing a black gi mirrors her movement, performing a high side kick directed towards the left. The two are positioned facing each other in mid-kick, demonstrating synchronized technique. Natural light streams in from the large window, brightly illuminating the wooden floor.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R4 is the young girl/student performing a high side kick whose movement is mirrored by R6",
+    "R6 is the bearded instructor mirroring R4's high side kick",
+    "R4 and R6 face each other while executing high side kicks toward one another",
+    "R4 wears a martial arts gi with a red belt during the kick",
+    "the action takes place inside a martial arts studio with a large window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the young girl performing a high side kick that R6 mirrors, rather than R6 being the young girl whose movement R4 mirrors?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the young girl/student performing the kick that R6 mirrors"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the bearded instructor mirroring R4's high side kick, rather than R4 being the instructor mirroring R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the instructor mirroring R4's technique"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 kick toward R6 while R6 kicks back toward R4, rather than R4 kicking away from R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's side kick is directed toward R6"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

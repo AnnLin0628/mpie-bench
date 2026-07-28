@@ -1,0 +1,90 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T18",
+  "instruction": "Cinematic wide shot of a dance studio with a dark wall and wooden floor. In the foreground right, a bearded man in a brown shirt (R1) on hands and knees supports a woman with a hair bun in a yellow shirt (R2) balancing horizontally on his back with arms spread. In the background left, a short-haired man in a brown shirt (R3) on hands and knees supports a woman with a ponytail in a yellow shirt (R4) balancing on his back. Warm spotlight from the top right casts soft shadows on the floor.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 supports R2's weight from below while R2 balances horizontally on R1's back",
+    "R3 supports R4's weight from below while R4 balances on R3's back",
+    "R2 is the person balancing with arms spread on R1 rather than supporting R1",
+    "R4 is the person balancing on R3 rather than supporting R3",
+    "R1 and R3 are on hands and knees as the base supporters",
+    "wooden floor beneath the performers",
+    "dance studio setting with a dark wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 on hands and knees supporting R2's weight from below, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight from below while R2 balances horizontally on R1's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 on hands and knees supporting R4's weight from below, rather than R4 supporting R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 supports R4's weight from below while R4 balances on R3's back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing horizontally on R1's back with arms spread, rather than R1 balancing on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person balancing with arms spread on R1 rather than supporting R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 the woman balancing on R3's back while R3 serves as the hands-and-knees base?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the person balancing on R3 rather than supporting R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 both acting as base supporters on hands and knees for R2 and R4 respectively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 are on hands and knees as the base supporters"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

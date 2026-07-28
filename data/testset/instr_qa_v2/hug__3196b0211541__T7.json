@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3196b0211541__T7",
+  "instruction": "Studio portrait photograph, medium shot. Against a solid light blue background, three women pose together. On the left, the Asian woman in a beige tank top (R1) smiles at the camera, holding the arm of the curly-haired woman in a beige tank top (R2) in the center. The curly-haired woman also smiles forward. On the right, the afro-haired woman in a beige tank top (R3) hugs the curly-haired woman from behind, smiling widely at the camera. Soft studio lighting illuminates the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds R2's arm",
+    "R3 hugs R2 from behind",
+    "R2 is the contacted central person between R1 and R3",
+    "R1 and R2 smile forward while R3 smiles widely at the camera",
+    "solid light blue studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's arm rather than R2 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being embraced from behind by R3, rather than R3 being embraced from behind by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R3's behind-hug"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the central person being contacted by both R1 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the contacted central person"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

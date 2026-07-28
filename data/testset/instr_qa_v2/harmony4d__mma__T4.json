@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T4",
+  "instruction": "Candid full shot in an indoor gym with grey mats. On the right, the man in the white t-shirt and blue shorts (R1) is seen from behind, facing left. On the left, the man in the grey t-shirt and black shorts (R2) faces R1, leaning back to execute a high right kick aimed at R1's upper body. In the background, a bystander in black clothing stands near the wall watching. The lighting is even and neutral from overhead fixtures.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 executes a high right kick aimed at R1's upper body",
+    "R1 is the target/receiver of R2's kick rather than the kicker",
+    "R2 leans back while kicking toward R1",
+    "R1 and R2 face each other during the kick action",
+    "grey mats cover the indoor gym floor",
+    "the interaction takes place in an indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 executing a high right kick aimed at R1's upper body, rather than R1 kicking toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the kicker and R1 is the target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 receiving or facing the incoming kick from R2, rather than R2 receiving a kick from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the target/receiver of R2's kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean back while extending the high kick toward R1, rather than R1 leaning back to kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans back as the active kicker"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other during the kicking action, with R2 performing the kick toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other with R2 in the kicking role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

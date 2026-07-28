@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__3573a2a604e7__T1",
+  "instruction": "Candid documentary photograph, medium shot. On a sunny city street with historic buildings, the woman in a striped t-shirt and blue jeans (R1) stands on the left wearing yellow sunglasses, smiling as she places her hand on the shoulder of the man in a patterned white shirt (R2). The man (R2) stands on the right wearing round sunglasses. Both look toward the right in profile. Bright natural sunlight casts soft shadows, creating a warm, cheerful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places her hand on R2's shoulder",
+    "R2 is the person receiving the shoulder touch from R1",
+    "R1 initiates the shoulder contact rather than R2",
+    "R1 and R2 stand together while R1 rests her hand on R2's shoulder",
+    "R2 remains standing as the recipient of R1's shoulder contact",
+    "sunny city street with historic buildings"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing her hand on R2's shoulder, rather than R2 placing his hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates shoulder contact with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is being touched by R1, rather than R1 being the one whose shoulder is touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's shoulder touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 make the shoulder-contact gesture toward R2 while R2 simply receives that contact, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric shoulder-touch duty"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing beside R2 with her hand resting on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role is hand-on-shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing as the recipient of R1's hand-on-shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is shoulder-touch recipient"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

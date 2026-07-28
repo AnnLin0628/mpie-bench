@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T10",
+  "instruction": "Candid documentary photograph, medium shot. Inside a boxing gym, the man with a braided mohawk and beard in a black t-shirt (R2) stands on the left in profile, facing right. He holds the forearm of the woman with braided hair in a black strapless top (R1) on the right with his tattooed right hand, guiding her boxing stance. She wears black boxing gloves and smiles slightly as she practices. In the blurred background, a single bystander in dark clothing is visible near a punching bag. Bright overhead lighting illuminates the training session, creating a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's forearm with his hand while guiding her boxing stance",
+    "R1 is the trainee practicing boxing while R2 coaches her stance",
+    "R1 wears boxing gloves during the practice",
+    "R2 makes contact with R1's forearm rather than being contacted by R1",
+    "The interaction takes place inside a boxing gym",
+    "A punching bag is visible in the blurred background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's forearm to guide her boxing stance, rather than R1 holding R2's forearm to guide him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's forearm and guides her stance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being coached in her boxing stance by R2, rather than R2 being coached by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is guided by R2 during boxing practice"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 use his hand to control or adjust R1's forearm position, rather than R1 using her hand to adjust R2's forearm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 adjusts R1's forearm position"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 practicing boxing while R2 takes the coaching or stance-guiding role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 practices while R2 coaches"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1's boxing-gloved hands part of the practice stance that R2 is helping guide?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's gloved boxing stance is being guided by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

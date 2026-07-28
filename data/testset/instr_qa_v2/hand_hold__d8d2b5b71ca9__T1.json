@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d8d2b5b71ca9__T1",
+  "instruction": "A candid, documentary-style full-length photograph captures a couple walking down outdoor marble steps. The man in the white button-up shirt (R2) is on the left, wearing beige trousers and light sneakers, smiling as he steps down. Beside him on the right, the woman in the white one-shoulder dress (R1) walks down in beige strappy heels, holding a small bouquet in her outer hand. They walk hand-in-hand, their inner hands clasped together. The scene is illuminated by soft, natural daylight, creating a warm, bright atmosphere with gentle shadows on the stone steps.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the bouquet-carrying partner while walking hand-in-hand with R2",
+    "R2 is the partner whose inner hand is clasped with R1's inner hand while R1 carries the bouquet",
+    "R1 and R2 walk down outdoor steps with their inner hands clasped",
+    "R1 holds a small bouquet in her outer hand",
+    "the couple is on outdoor marble or stone steps in natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner holding the small bouquet in her outer hand while clasping R2's hand with her inner hand, rather than R2 holding the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bouquet-carrying partner while walking hand-in-hand with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner walking hand-in-hand with the bouquet-holding R1, rather than R2 being the one carrying the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the non-bouquet-holding partner clasping R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking down the steps with their inner hands clasped together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk down steps hand-in-hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep one hand clasped with R2 while using her other hand to carry the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has a hand-holding role with R2 while carrying the bouquet separately"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a small bouquet being carried by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "small bouquet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

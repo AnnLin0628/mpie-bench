@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T25",
+  "instruction": "Candid action photograph of a dance studio with dark walls and a wooden floor. In the center, the man in the rust-colored shirt (R1) balances dynamically on one leg, body tilted, holding the hand of the woman in the mustard yellow shirt (R2) who is mostly out of frame on the right. In the background, three bystander dancers in matching rust and yellow shirts perform coordinated movements. Soft overhead lighting illuminates the warm wood floor.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the central dancer balancing on one leg while holding R2's hand",
+    "R2 is mostly out of frame and serves as the hand-held dance partner, not the central balancing dancer",
+    "R3 and R4 are background bystander dancers performing coordinated movements rather than the main hand-contact pair",
+    "R1 has a tilted dynamic body pose during the dance",
+    "the wooden floor is the surface under the dancing action",
+    "the scene is a dance studio with dark walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person balancing dynamically on one leg while holding R2's hand, rather than R2 being the one shown balancing on one leg while holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the central balancing dancer holding R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the mostly out-of-frame dance partner whose hand is held by R1, rather than R1 being mostly out of frame while R2 is centered?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the mostly out-of-frame hand-held partner"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R3 and R4 background bystander dancers performing coordinated movements, rather than either of them being the main hand-holding partner connected to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 are background dancers, not the central contact partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected through hand contact during the dance action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands as dance partners"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown with a tilted body pose while balancing on one leg during the dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the dynamic one-leg balancing pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

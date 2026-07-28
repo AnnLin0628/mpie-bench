@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T17",
+  "instruction": "Cinematic film still, full shot. Inside a hazy boxing gym with squat racks in the background, two men are sparring. On the left, the shirtless bearded man with a shoulder tattoo (R3) stands in a boxing stance, throwing a right-hand punch with a green boxing glove. On the right, the shirtless young man with short dark hair (R1) ducks, blocking the punch with his black boxing gloves. The bearded man (R3) extends his right arm fully toward the young man (R1), who bends forward defensively. The lighting is soft and diffused, creating a smoky, atmospheric mood with desaturated tones.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is the attacker throwing a right-hand punch toward R1",
+    "R1 is the defender ducking and blocking R3's punch",
+    "R3's right arm is fully extended toward R1 while R1 bends forward defensively",
+    "R3 uses a green boxing glove for the punch",
+    "R1 uses black boxing gloves to block",
+    "The scene is a hazy boxing gym with squat racks in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 throwing a right-hand punch toward R1, rather than R1 throwing the punch toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the attacker throwing a right-hand punch toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 ducking and blocking R3's punch, rather than R3 ducking and blocking R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the defender ducking and blocking R3's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 extend his right arm fully toward R1 while R1 bends forward defensively, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's right arm is fully extended toward R1 while R1 bends forward defensively"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R1 sparring with R3 in the offensive punching role and R1 in the defensive blocking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is punching while R1 blocks defensively"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R3's punching hand wearing a green boxing glove?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R3 uses a green boxing glove for the punch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

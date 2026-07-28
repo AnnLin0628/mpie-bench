@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__6415d2322022__T2",
+  "instruction": "Cinematic medium shot of an elderly couple dancing in a cozy living room. The elderly woman with short gray hair (R1) in a beige vest stands on the left, looking up and smiling warmly. The elderly man with glasses (R2) in a peach sweater is on the right, positioned back-three-quarters to the camera. They hold hands while dancing. Warm, soft indoor lighting illuminates the scene, creating a gentle, intimate mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks up and smiles warmly while dancing with R2",
+    "R2 is positioned back-three-quarters to the camera while dancing with R1",
+    "R1 and R2 hold hands during the dance",
+    "R1 is the elderly woman with short gray hair in the dancing pair",
+    "R2 is the elderly man with glasses in the dancing pair",
+    "the dance takes place in a cozy living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking up and smiling warmly while dancing with R2, rather than R2 being the one looking up and smiling warmly?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up and smiles warmly while dancing with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one positioned back-three-quarters to the camera while dancing with R1, rather than R1 being the one in that back-three-quarters position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned back-three-quarters to the camera while dancing with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands as they dance together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands during the dance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T9",
+  "instruction": "Candid photographic medium close-up in a bright ballet studio with wooden barres. In the foreground, the red-haired girl in a pink leotard (R3) smiles with her head turned right and left arm extended. Behind her, the light-brown-haired girl in a pink leotard (R1) stands with her arm extended backward. In the background, a female instructor in a black shirt and grey trousers guides the dancers. Soft, even indoor lighting illuminates the scene, highlighting the pink outfits against the neutral white walls.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R3 is the foreground dancer smiling with her head turned right and her left arm extended",
+    "R1 is behind R3 with her arm extended backward",
+    "R3 is in front of R1 rather than R1 being the foreground dancer",
+    "a female instructor guides the dancers in the background",
+    "wooden ballet barres are visible in the studio",
+    "the setting is a bright ballet studio with soft indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the foreground dancer smiling with her head turned right and left arm extended, rather than R1 being the foreground dancer with that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the foreground dancer with head turned right and left arm extended"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned behind R3 with her arm extended backward, rather than R3 being behind R1 with that backward arm extension?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is behind R3 with her arm extended backward"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 hold the prominent front dance pose while R1 takes a rear dance position behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the front dance pose while R1 is behind her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 extending her left arm while R1 extends an arm backward behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R1 have different dance arm positions"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

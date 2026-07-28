@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__0d74e9de6ddb__T1",
+  "instruction": "Candid documentary photograph, medium shot. On an outdoor wooden bridge with green trees in the background, a group of friends stack their hands in a central huddle. On the left, the woman in the gray hijab and pink jacket (R1) is in profile, smiling. In the center background, the man in the orange t-shirt (R2) smiles. On the right-center, the woman in the beige hoodie (R4) smiles, while the man in the gray t-shirt (R3) is in the right foreground, seen from a side-back angle. They all extend their hands to stack them together in the center under warm, natural sunlight.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is the foreground participant seen from a side-back angle while joining the central hand stack",
+    "R2 is the center-background participant smiling while joining the central hand stack",
+    "R1 is in profile while extending her hand into the central stack",
+    "R4 smiles while extending her hand into the central stack",
+    "all four labeled friends extend their hands together into one central huddle",
+    "the interaction takes place on an outdoor wooden bridge with green trees behind them"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the participant seen from a side-back foreground angle while extending a hand into the central stack, rather than R2 being the side-back foreground participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the foreground participant seen from a side-back angle while joining the central hand stack"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant in the center background smiling while joining the hand stack, rather than R3 being the center-background participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the center-background participant smiling while joining the central hand stack"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the profile-view participant extending her hand into the central huddle, rather than R4 being the profile-view participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in profile while extending her hand into the central stack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 smile while extending her hand into the same central hand stack as the others?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 smiles while extending her hand into the central stack"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, R3, and R4 all participating by extending their hands into one shared central huddle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "all four labeled friends extend their hands together into one central huddle"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the hand-stack huddle happening on an outdoor wooden bridge with green trees in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction takes place on an outdoor wooden bridge with green trees behind them"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

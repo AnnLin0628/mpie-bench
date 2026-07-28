@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T164",
+  "instruction": "Candid documentary full shot from a behind-left angle of a man in a black polo and blue shorts (R1) and a woman in a white t-shirt and blue jeans (R2) in a motion capture studio. The man (R1) stands on the left, facing right, and touches the left shoulder of the woman (R2) with his right hand. The woman (R2) stands on the right with her back to the camera. The studio has a red carpeted floor, white walls, and overhead fluorescent lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 touches R2's left shoulder with his right hand",
+    "R2 is the person receiving the shoulder touch from R1",
+    "R1 faces toward R2 while making contact",
+    "R2 has her back to the camera while being touched",
+    "the interaction occurs in a motion capture studio",
+    "the studio has a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 touching R2's shoulder rather than R2 touching R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active shoulder toucher and R2 is the recipient"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 place his right hand on R2's left shoulder, rather than R2 placing her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses his right hand to contact R2's left shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is being touched by R1, rather than the person initiating the shoulder touch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder contact from R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing with her back to the camera while receiving the touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body orientation while being touched"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T94",
+  "instruction": "Candid outdoor medium shot of a group in a grassy park. In the foreground, a large Black man in a dark blue t-shirt (R1) stands on the left, pointing forward. On the right, a woman in a dark blue t-shirt and light blue jeans (R4) leans forward, looking at him. In the background, an Asian man in a red polo shirt (R3) and a woman in a black beanie and red t-shirt (R5) stand watching. The lighting is soft natural daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 is the foreground person pointing forward while R4 leans forward and looks at him",
+    "R4 is the person leaning forward toward R1, not the person pointing",
+    "R3 and R5 are background watchers rather than the foreground interacting pair",
+    "R1's role is to stand and point forward as R4 attends to him",
+    "The scene is set outdoors in a grassy park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person pointing forward while R4 leans forward looking at him, rather than R4 being the one pointing forward at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points forward while R4 leans forward and looks at him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person leaning forward and looking at R1, rather than R1 leaning forward and looking at R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 leans forward toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R3 and R5 the background watchers, rather than the foreground pair where R1 points and R4 leans toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R5 watch from the background"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in the foreground pointing forward as R4 pays attention to him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's role is the forward-pointing foreground person"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand watching in the background with R3 instead of taking the foreground pointing role of R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is a background watcher alongside R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

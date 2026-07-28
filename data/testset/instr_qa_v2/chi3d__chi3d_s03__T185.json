@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T185",
+  "instruction": "A candid full shot from a slightly high angle shows an indoor studio with a red carpet. The bearded man in a black polo shirt and blue shorts (R1) stands behind the woman in a white patterned t-shirt and blue jeans (R2), wrapping his arms around her chest in a warm back hug. She stands in front of him, smiling gently. The scene is illuminated by even indoor overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands behind R2 and wraps his arms around her chest",
+    "R2 stands in front of R1 and receives the back hug",
+    "R1 is the person giving the back hug rather than R2",
+    "R2 is the person being embraced from behind rather than R1",
+    "The scene is an indoor studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping his arms around R2's chest from behind, rather than R2 wrapping her arms around R1 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gives the back hug to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing in front of R1 while being embraced from behind, rather than R1 standing in front and being embraced by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the back hug from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand behind R2 with his arms positioned around her upper torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body position and arm placement in the contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 remain in front of R1 while smiling as R1 holds her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's front position while being held"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

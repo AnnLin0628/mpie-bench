@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__6415d2322022__T6",
+  "instruction": "Candid photographic medium shot of a cozy living room at night. On the left, the woman with short gray hair (R1) in a yellow shirt and beige vest slow-dances, looking up with a bright smile at the man with glasses (R2) on the right. The man (R2) in a brown jacket holds her hands and smiles down at her. In the blurry foreground, two glasses of white wine sit on a table under warm, soft indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's hands during the slow dance",
+    "R1 looks up at R2 while R2 smiles down at her",
+    "R1 and R2 are slow-dancing together with joined hands",
+    "two glasses of white wine sit on a table in the blurry foreground",
+    "the scene is a cozy living room at night"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's hands during the slow dance, rather than R1 being the one described as holding R2's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hands during the slow dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking up at R2 while R2 smiles down at R1, rather than R2 looking up at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up at R2 while R2 smiles down at her"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 slow-dancing together with R2 holding R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are slow-dancing together with joined hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T33",
+  "instruction": "A candid action photograph captures a medium shot from a low angle inside a covered outdoor pavilion with a concrete floor. In the foreground, the man in the blue tank top (R2) stands with his back to the camera, holding his black boxing gloves up in a defensive guard. Facing him in the midground, the man in the beige t-shirt (R1) wears black boxing gloves and actively throws a punch toward his partner. The background shows the open-air structure of the training facility. Bright, natural daylight illuminates the scene, creating a neutral color palette with soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the active puncher throwing a boxing punch toward R2",
+    "R2 is the defender with his boxing gloves raised in guard against R1",
+    "R1 faces R2 during the boxing exchange",
+    "R2 stands with his back to the camera while guarding",
+    "R1 and R2 both wear black boxing gloves",
+    "the scene is inside a covered outdoor pavilion with a concrete floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 actively throwing a punch toward R2, rather than R2 throwing a punch toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active puncher throwing a boxing punch toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding his boxing gloves up in a defensive guard against R1, rather than R1 being the guarded defender against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender with his boxing gloves raised in guard against R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the attacking role while R2 takes the defensive guard role in their boxing exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks while R2 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing R2 while throwing the punch toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 during the boxing exchange"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing with his back to the camera while keeping his gloves raised in guard toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with his back to the camera while guarding"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

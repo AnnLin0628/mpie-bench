@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1676ae2f7b94__T4",
+  "instruction": "A candid, clean studio photograph in a medium shot showing two women playing a hand-clapping game against a plain beige backdrop. On the left, the woman with short brown hair (R2) in a striped shirt and beige pants sits facing right, smiling. On the right, the woman with dark curly afro hair (R1) in a purple long-sleeve shirt sits facing left, smiling. They look at each other as the woman with short brown hair's left hand touches the woman with dark curly afro hair's right hand, while the woman with dark curly afro hair's left hand is held near her chest. The scene is illuminated by soft, even studio lighting with a warm, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's left hand touches R1's right hand during the hand-clapping game",
+    "R1 keeps her left hand near her chest rather than using it for the touch",
+    "R1 and R2 sit facing each other while playing a hand-clapping game",
+    "R2 is the participant whose left hand makes contact with R1's hand",
+    "plain beige studio backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's left hand touch R1's right hand, rather than R1's left hand touching R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's left hand touches R1's right hand during the hand-clapping game"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's left hand held near her chest while R2's left hand is the hand making contact, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps her left hand near her chest rather than using it for the touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the hand-clapping game, is R1 receiving the touch on her right hand from R2's left hand, rather than R2 receiving a touch from R1's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the participant whose left hand makes contact with R1's hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep one hand near her chest while R2 engages her through the hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps her left hand near her chest rather than using it for the touch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

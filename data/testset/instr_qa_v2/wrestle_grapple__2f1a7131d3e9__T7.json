@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2f1a7131d3e9__T7",
+  "instruction": "Action sports wide shot from a high angle showing two judo practitioners sparring on a yellow tatami mat. On the left, the dark-haired man (R2) in a white gi and black belt grips the collar and sleeve of the blonde-haired man (R1) on the right. R1, also wearing a white gi and black belt, counters by gripping R2's gi as they face each other in active combat stances. Both athletes are barefoot, captured mid-motion under bright overhead gym lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 grips R1's collar and sleeve during the judo sparring exchange",
+    "R1 counters by gripping R2's gi while R2 maintains the collar-and-sleeve grip",
+    "R1 and R2 face each other in active combat stances while gripping each other's gis",
+    "The practitioners' gis, including collar and sleeve areas, are contact-relevant objects being held",
+    "The sparring takes place on a yellow tatami mat"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gripping R1's collar and sleeve, rather than R1 being the one specifically gripping R2's collar and sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the specified collar-and-sleeve gripping duty on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 countering by gripping R2's gi while R2 is the practitioner described as holding R1's collar and sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 counter-grips R2's gi against R2's collar-and-sleeve hold"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other in active judo combat stances while gripping each other's gis?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are engaged face-to-face in mutual gi-gripping combat stances"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the dark-haired judo practitioner applying the collar-and-sleeve grip to R1, the blonde-haired practitioner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dark-haired grappler gripping blonde R1's gi"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 sparring on a yellow tatami mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow tatami mat setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

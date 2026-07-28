@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__043852ee1028__T4",
+  "instruction": "A candid street photograph captured in a medium full shot at eye-level, following two women walking down a city sidewalk lined with green trees and brick buildings. On the left, the woman with blonde-highlighted hair (R3) walks forward in a maroon sports bra and matching leggings, looking towards her companion and speaking. On the right, the woman with curly brown hair (R5) walks alongside her in an olive green sports bra and matching leggings, holding a pink water bottle in her right hand and smiling slightly. The scene is illuminated by natural daylight filtered through overhead trees, creating soft, dappled light and a cool, green-toned color palette.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R3 is the companion who looks toward R5 and speaks while walking",
+    "R5 is the companion who holds the pink water bottle while walking with R3",
+    "R3 and R5 walk alongside each other down a city sidewalk",
+    "R5 carries a pink water bottle in her right hand",
+    "the street scene includes green trees and brick buildings"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the woman looking toward R5 and speaking while they walk, rather than R5 being described as the one speaking toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the asymmetric speaking role toward R5"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the woman holding the pink water bottle while walking with R3, rather than R3 holding that bottle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the asymmetric object-holding role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R5 walking alongside each other as companions on the sidewalk?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R5 walk together as companions"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a pink water bottle carried by R5?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "pink water bottle"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R3 and R5 walking down a city sidewalk lined with green trees and brick buildings?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "city sidewalk with green trees and brick buildings"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

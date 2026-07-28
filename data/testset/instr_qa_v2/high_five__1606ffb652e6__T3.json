@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1606ffb652e6__T3",
+  "instruction": "Candid outdoor photograph, medium shot at eye-level. On a sandy beach, the shirtless man with sunglasses (R2) on the left and the shirtless blonde man (R1) on the right celebrate. R2 faces slightly forward smiling broadly, while R1 looks at him in profile. They clasp hands in a firm, friendly handshake between them. A yellow volleyball net is blurred in the foreground under bright, warm daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks at R2 in profile during the hand clasp",
+    "R2 faces slightly forward and smiles broadly during the hand clasp",
+    "R1 and R2 clasp hands between them in a firm, friendly contact",
+    "a yellow volleyball net is blurred in the foreground",
+    "the interaction takes place on a sandy beach"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking at R2 in profile during the hand clasp, rather than R2 looking at R1 in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks at R2 in profile during the hand clasp"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person facing slightly forward and smiling broadly during the hand clasp, rather than R1 being described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces slightly forward and smiles broadly during the hand clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 have their hands clasped between them in a firm, friendly contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp hands between them in a firm, friendly contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

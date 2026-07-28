@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T1",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Inside a judo dojo with blue and yellow mats, the young man with short dark hair and a black undershirt (R4) on the left and the middle-aged man (R3) on the right engage in a grapple. The young man (R4) wears a white judogi with black shoulder stripes and grips the middle-aged man's (R3) lapel. The middle-aged man (R3), wearing a white judogi, grips the young man's (R4) collar in return. Both look at each other with focused expressions under bright, even indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 grips R3's lapel during the grapple",
+    "R3 grips R4's collar in return during the grapple",
+    "R3 and R4 engage each other in a judo grapple",
+    "R3 and R4 wear judogi that provide the lapel and collar being gripped",
+    "The grapple takes place inside a judo dojo with blue and yellow mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 gripping R3's lapel rather than R3 gripping R4's lapel?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 grips R3's lapel during the grapple"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gripping R4's collar rather than R4 gripping R3's collar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 grips R4's collar in return during the grapple"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R4 engaged with each other in a judo grapple with their hands on each other's judogi?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 engage each other in a judo grapple"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the grapple take place inside a judo dojo with blue and yellow mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The grapple takes place inside a judo dojo with blue and yellow mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

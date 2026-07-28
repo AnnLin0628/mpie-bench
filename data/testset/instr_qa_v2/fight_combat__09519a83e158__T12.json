@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T12",
+  "instruction": "Candid documentary photograph, medium close-up. In a boxing gym in front of a chain-link cage, the woman with braided hair in a black strapless top (R1) stands in the foreground, punching a speed bag with her left hand wrapped in black tape. The man with a braided mohawk and beard in a black t-shirt (R2) stands behind her to the right, holding her right wrist wrapped in black tape to guide her form. Both focus on the training exercise. Bright overhead gym lighting casts soft shadows across the scene, highlighting the neutral tones of the gym.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 punches the speed bag while R2 guides her form, not the reverse",
+    "R2 holds R1's right wrist to guide her, rather than R1 holding R2's wrist",
+    "R1 is the trainee striking the bag and R2 is the trainer/guide behind her",
+    "R2 stands behind R1 while maintaining guiding contact with R1's wrist",
+    "a speed bag is the training target being punched",
+    "black tape wraps R1's hand/wrist during the boxing exercise",
+    "the scene is set in a boxing gym in front of a chain-link cage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 punching the speed bag while R2 guides her form, rather than R2 punching the bag while R1 guides him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 punches the speed bag while R2 guides her form, not the reverse"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's right wrist to guide her boxing form, rather than R1 holding R2's wrist to guide him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's right wrist to guide her, rather than R1 holding R2's wrist"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person actively striking with her left hand while R2 is the person assisting from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the trainee striking the bag and R2 is the trainer/guide behind her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned behind R1 while keeping guiding contact with R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 while maintaining guiding contact with R1's wrist"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a speed bag the training object being punched in the exercise?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a speed bag is the training target being punched"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

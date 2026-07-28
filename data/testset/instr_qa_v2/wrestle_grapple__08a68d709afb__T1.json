@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T1",
+  "instruction": "Candid medium shot of four martial artists posing together in front of a red brick wall. On the far left, a young girl in a red gi (R3) looks up smiling at the girl with braided hair (R4) next to her. Beside them, a boy with light brown hair (R2) and a blonde woman (R1) stand side-by-side, smiling at the camera. They stand in a line with arms draped over each other's shoulders in a friendly group embrace. The scene is captured with soft, even indoor lighting and natural colors.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R3 looks up smiling at R4 rather than R4 looking up at R3",
+    "R1 and R2 stand side-by-side smiling at the camera rather than R3 being the one beside R1",
+    "R3 and R4 are adjacent in the group line with R3 attending to R4",
+    "the group has arms draped over each other's shoulders in a friendly contact pose",
+    "the martial artists are posed in front of a red brick wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the young girl looking up smiling at R4, rather than R4 looking up smiling at R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 looks up smiling at R4 rather than R4 looking up at R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R2 the pair standing side-by-side and smiling at the camera, rather than R3 being the person standing beside R1 in that camera-facing pair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand side-by-side smiling at the camera rather than R3 being the one beside R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned next to R4 while directing her smile upward toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 are adjacent in the group line with R3 attending to R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, R3, and R4 pose together with arms draped over each other's shoulders in a friendly group contact pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the group has arms draped over each other's shoulders in a friendly contact pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__5486b6076564__T1",
+  "instruction": "Candid corporate medium shot of a modern office meeting room. In the center, the woman with light brown hair (R1) in a black blazer and white shirt sits smiling, looking to her left. To her right, the man with a buzz cut (R2) in a dark pinstripe suit sits smiling, gesturing with his hand. On the left, a Black man in a dark suit is seen from behind, gesturing during the conversation. Soft, natural indoor lighting illuminates the warm wooden table and neutral background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the person gesturing with his hand during the conversation, while R1 is not described as gesturing",
+    "R1 is the person sitting smiling and looking to her left, while R2 is the one gesturing",
+    "R1 and R2 have distinct meeting behaviors: R1 listens/looks aside and R2 gestures while seated",
+    "a warm wooden table is visible in the meeting room",
+    "the scene is a modern office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person gesturing with his hand during the conversation, rather than R1 being the one described as gesturing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures while R1 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person sitting smiling and looking to her left while R2 is the one gesturing, rather than those roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks left while R2 gestures"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the handshake, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

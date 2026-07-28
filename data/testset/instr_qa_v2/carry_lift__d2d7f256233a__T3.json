@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__d2d7f256233a__T3",
+  "instruction": "A candid family photograph in a medium full shot captures an energetic pillow fight in a bright bedroom with a yellow headboard. The young girl in the yellow dress (R1) jumps high on the bed on the right, swinging a pillow playfully with a joyful expression. On the left, the man in the yellow sweater (R2) stands by the bed, holding a large white pillow directly in front of his face to shield himself from the impact. The room is bathed in soft, warm indoor light, highlighting the cheerful yellow and white tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 actively swings a pillow toward R2 while R2 defends",
+    "R2 holds a large white pillow in front of his face to shield from R1",
+    "R1 jumps high on the bed during the pillow fight",
+    "R2 stands by the bed in a defensive role",
+    "pillows are the contact-relevant objects in the fight",
+    "the scene is a bright bedroom with a yellow headboard"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one swinging a pillow playfully toward R2, rather than R2 swinging a pillow toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively swings a pillow toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding a large white pillow in front of his face to shield himself from R1's impact, rather than R1 shielding from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 shields his face from R1's pillow swing"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active jumping attacker on the bed while R2 is the defending person by the bed, rather than R2 attacking from the bed while R1 defends?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks from the bed while R2 defends beside it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 jumping high on the bed as she swings a pillow during the pillow fight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 jumps on the bed while swinging a pillow"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing by the bed with his pillow raised defensively in front of his face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands by the bed in a defensive posture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

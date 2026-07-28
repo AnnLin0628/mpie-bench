@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__23a7153ad226__T2",
+  "instruction": "A clean lifestyle photograph captured in a medium shot at eye-level. In a minimalist indoor room with gray concrete walls and light wood flooring, the man in the black tank top (R2) stands on the left in profile facing right with his eyes open, placing his hands on the shoulders of the woman in the black crop top (R1). The woman (R1) stands on the right in profile, hands on her hips, looking forward with a neutral expression. Soft, diffused side lighting illuminates the scene, creating a calm atmosphere with a neutral gray and black color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places his hands on R1's shoulders",
+    "R1 keeps her hands on her own hips while R2 touches her shoulders",
+    "R2 is the active shoulder-contact person and R1 is the person being touched",
+    "R2 stands in profile facing toward R1",
+    "R1 stands in profile with a neutral expression",
+    "The scene is a minimalist indoor room with gray concrete walls and light wood flooring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 placing his hands on R1's shoulders, rather than R1 placing her hands on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places his hands on R1's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving shoulder contact from R2, rather than R2 receiving shoulder contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose shoulders are being touched by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's hands on R1's shoulders while R1 keeps her own hands on her hips, rather than R1's hands being on R2's shoulders while R2 keeps his hands on his hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the shoulder-touching role while R1 keeps hands on hips"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand with her hands on her hips as R2 makes contact with her shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body role is hands-on-hips while being touched on the shoulders by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

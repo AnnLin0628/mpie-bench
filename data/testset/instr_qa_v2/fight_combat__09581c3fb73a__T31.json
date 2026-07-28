@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T31",
+  "instruction": "Candid full shot of two men sparring in an outdoor covered training area. On the left, the man in the beige t-shirt (R1) throws a left jab. On the right, the man in the blue tank top (R2) ducks slightly, blocking the incoming punch with his black boxing gloves. Bright daylight illuminates the concrete ground and background structures.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 throws a jab toward R2",
+    "R2 ducks slightly to defend against R1's incoming punch",
+    "R2 blocks R1's punch with black boxing gloves",
+    "R1 has the offensive sparring role while R2 has the defensive blocking role",
+    "black boxing gloves are used as contact-relevant sparring gear",
+    "the sparring happens in an outdoor covered training area"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a jab toward R2, rather than R2 throwing a jab toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the puncher aiming the jab at R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 ducking and blocking R1's incoming punch, rather than R1 ducking and blocking a punch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender reacting to R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R2's black boxing gloves block the punch coming from R1, rather than R1's gloves blocking a punch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's gloves absorb or stop R1's jab"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in the offensive sparring role while R2 is in the defensive blocking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks and R2 defends"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

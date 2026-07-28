@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__6cd4539c27c8__T3",
+  "instruction": "Candid corporate photograph, medium close-up. In a modern office, a woman in a houndstooth blazer (R4) is seated on the left, pointing at a document on a white table. Seated on the right, a clean-shaven man in a black suit (R2) holds a pen and prepares to sign the paper. Standing behind them, a bearded man with glasses and a striped tie (R1) leans forward to observe the signing. Soft indoor lighting illuminates the table, creating a focused and professional atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 points at the document to guide the signing while R2 is the signer",
+    "R2 holds the pen and prepares to sign the paper rather than R4",
+    "R1 leans forward behind the seated participants to observe the signing",
+    "R4 is seated at the table indicating the paper for R2",
+    "the pen and document are the contact-relevant signing objects",
+    "the scene is set in a modern office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 pointing at the document to guide the signing, rather than R2 pointing while R4 signs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 points at the document while R2 is the intended signer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the pen and preparing to sign the paper, rather than R4 holding the pen to sign it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the pen holder and signer"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward to observe R2's signing, rather than R1 being the person signing or pointing at the document?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the observer of the signing"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 seated at the table while indicating a specific place on the document for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the guiding-pointing role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated at the table in the signing role with the paper in front of him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the document-signing role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

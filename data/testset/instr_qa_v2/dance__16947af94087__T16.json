@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T16",
+  "instruction": "Action dance photograph, full shot. In a large hall with wooden floors, the woman in the black dress (R2) performs a dramatic backbend, arching her body toward the floor while extending one leg vertically. The man in the brown beanie (R1) stands beside her, supporting her weight during the pose. The scene is captured under even, diffused indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2's weight during the dance pose",
+    "R2 performs the dramatic backbend rather than R1",
+    "R2 arches toward the floor while R1 remains standing as support",
+    "R2 extends one leg vertically during the supported pose",
+    "the interaction occurs in a large hall with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight during the pose, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight during the dance pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person performing the dramatic backbend, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the dramatic backbend rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 arching her body toward the floor while R1 stands beside her as support, rather than R1 arching toward the floor while R2 supports him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 arches toward the floor while R1 remains standing as support"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 extending one leg vertically during the supported dance pose while R1 helps stabilize her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends one leg vertically during the supported pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

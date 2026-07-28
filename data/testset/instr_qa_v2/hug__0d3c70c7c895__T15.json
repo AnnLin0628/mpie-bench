@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T15",
+  "instruction": "A candid outdoor photograph in a medium shot captures a sunny park with green grass. Five children stand in a row with their arms around each other's shoulders. From left to right: the boy in the blue denim shirt (R5) smiles with his right arm raised; the boy in the yellow t-shirt (R1) wears glasses and smiles; the girl in the light blue dress (R6) wears a pink headband and smiles gently; the girl in the brown jumpsuit (R3) has curly hair and smiles; and the girl in the dark blue cardigan (R4) smiles warmly. They stand close together in a friendly group embrace. Warm, bright sunlight creates a soft backlit glow behind them.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R5 is the child in the shoulder-linked group who raises his right arm",
+    "R1 is between R5 and R6 in the shoulder-to-shoulder embrace",
+    "R6 is between R1 and R3 in the shoulder-linked row",
+    "R3 stands shoulder-linked next to R6 and R4",
+    "R4 participates at one end of the shoulder-linked group next to R3",
+    "R1 wears glasses",
+    "The group is outdoors in a sunny park with green grass"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5, rather than R1, the child in the shoulder-linked group who raises his right arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the child in the shoulder-linked group who raises his right arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned in the shoulder-to-shoulder embrace between R5 and R6, rather than R5 being between R1 and R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is between R5 and R6 in the shoulder-to-shoulder embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 positioned in the shoulder-linked row between R1 and R3, rather than R3 being between R1 and R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is between R1 and R3 in the shoulder-linked row"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand in the shoulder-linked group next to both R6 and R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands shoulder-linked next to R6 and R4"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 participate at one end of the shoulder-linked group next to R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 participates at one end of the shoulder-linked group next to R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

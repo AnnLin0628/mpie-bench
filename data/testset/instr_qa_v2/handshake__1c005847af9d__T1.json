@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__1c005847af9d__T1",
+  "instruction": "Cinematic film still, medium eye-level shot. Inside a modern high-rise office during the day, the woman in the black blazer (R1) stands on the left in profile, smiling as she shakes hands. Opposite her, the man in the dark suit jacket and pink shirt (R2) stands on the right, also in profile, engaging in the handshake. They clasp right hands over a desk in front of a large window with horizontal blinds. The scene is illuminated by bright, natural daylight, creating a clean, professional atmosphere with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the smiling woman participant clasping R2's right hand",
+    "R2 is the man opposite R1 engaging in the right-hand clasp",
+    "R1 and R2 face one another in profile while maintaining the hand contact",
+    "their clasped right hands are positioned over a desk",
+    "large window with horizontal blinds in a modern high-rise office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant who is smiling while clasping R2's right hand, rather than R2 being the one singled out as the smiling participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the smiling participant in the hand clasp with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man opposite R1 who engages in the right-hand clasp with the smiling R1, rather than R1 being the man opposite R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the opposite participant engaging R1 in the right-hand clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 clasp each other's right hands as the two contact participants?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are the two people in direct right-hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

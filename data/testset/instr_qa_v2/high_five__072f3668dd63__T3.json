@@ -1,0 +1,90 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__072f3668dd63__T3",
+  "instruction": "Candid corporate photograph, high-angle medium full shot. In an office meeting room, five colleagues stand around a wooden table covered with a laptop, notebooks, and papers, stacking their hands in the center. From left to right: the blonde woman in a white shirt (R4) in profile, the woman in a plaid blazer (R2) facing right, the dark-haired woman in a beige sweater (R3) facing forward, the wavy-haired blonde woman in a white cable-knit sweater (R1) facing left, and the young man in a white shirt (R5) in profile. They smile as they extend their arms over the table to join hands. Bright indoor lighting highlights the scene.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R4 reaches in from profile at one end of the group to join the central hand stack, rather than standing out of the contact",
+    "R3 faces forward as she extends her arm into the shared hand stack, while R1 faces left as she joins the same stack",
+    "R2 faces right and participates in the central hand stack rather than acting as an onlooker",
+    "R1, R2, R3, R4, and R5 all extend their arms over the wooden table to stack hands in the center",
+    "The wooden table is covered with a laptop, notebooks, and papers",
+    "The interaction takes place in an office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 reaching in from profile to join the central hand stack, rather than R4 standing apart while the others make contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 actively joins the hand-stack contact instead of being an onlooker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 face forward while extending her arm into the shared hand stack, rather than R1 being the forward-facing participant in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the forward-facing contact role while R1 faces left"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 face right as she reaches toward the central hand stack, rather than R2 being the left-facing participant described for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the right-facing reaching role while R1 is the left-facing participant"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, R3, R4, and R5 all extending their arms over the table to join hands in the center?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "all five labeled colleagues participate in the central hand stack"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 in profile while participating in the same central hand-stack contact with R1, R2, R3, and R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is a profile participant in the group hand stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

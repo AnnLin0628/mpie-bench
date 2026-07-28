@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__6415d2322022__T4",
+  "instruction": "Cinematic medium shot of an elderly couple dancing. On the left, the elderly man with glasses (R2) in a peach sweater is seen from a back-three-quarters angle. On the right, the elderly woman with short gray hair (R1) in a beige vest faces him, smiling happily. Her left hand, wearing a gold watch, rests on his shoulder. The background features a warm lamp and a framed picture, under soft, cozy indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests her left hand on R2's shoulder during the dance",
+    "R1 faces R2 and smiles while R2 is seen from a back-three-quarters angle",
+    "R1 is the shoulder-touching partner rather than R2 taking that same visible shoulder-touching role",
+    "R1 and R2 are dancing as partners facing each other",
+    "R1 wears a gold watch on the hand touching R2's shoulder",
+    "The dance occurs in a cozy indoor setting with a warm lamp"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one whose left hand rests on R2's shoulder, rather than R2's left hand resting on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her left hand on R2's shoulder during the dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face R2 while smiling, rather than R2 being the smiling front-facing partner toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 and smiles while R2 is seen from a back-three-quarters angle"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner seen from a back-three-quarters angle while R1 faces him, rather than R1 being shown from that back-three-quarters angle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is viewed from a back-three-quarters angle while R1 faces him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 dancing as partners with R1 touching R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are dancing as partners facing each other"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

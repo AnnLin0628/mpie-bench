@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__33ebed8ae4fb__T2",
+  "instruction": "A candid outdoor photograph, captured in a medium close-up shot at eye level with a shallow depth of field. In a garden with lush green bushes in the background, a man with dreadlocks in a light blue t-shirt (R1) holds a toddler in a yellow collared jumpsuit (R2). The man (R1) is on the left, looking right at the toddler with a smile while raising his right fist playfully in front of her. The toddler (R2) is held on the right, facing forward and smiling happily. The interaction is captured under soft, natural daylight, emphasizing warm skin tones and the bright green background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports and holds R2, rather than R2 supporting R1",
+    "R2 is the toddler being carried or held by R1",
+    "R1 raises his right fist playfully in front of R2",
+    "R1 looks at R2 with a smile during the interaction",
+    "the interaction takes place outdoors in a garden with lush green bushes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and supporting R2, rather than R2 holding and supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports and holds R2, rather than R2 supporting R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the toddler being carried by R1, rather than R1 being carried by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the toddler being carried or held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising his right fist playfully in front of R2, rather than R2 raising a fist in front of R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises his right fist playfully in front of R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 smiling while looking toward R2 as he holds her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks at R2 with a smile during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

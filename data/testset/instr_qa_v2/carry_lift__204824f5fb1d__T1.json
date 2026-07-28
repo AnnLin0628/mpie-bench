@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__204824f5fb1d__T1",
+  "instruction": "Candid close-up photograph in a sunny outdoor park with a blurred grassy background. The man in the white hoodie (R1) is positioned on the left, looking down lovingly with a warm smile. He cradles the baby in the pink shirt (R3) closely against his chest, his head leaning near the baby's head. The baby is held snugly in his arms, looking forward with a gentle, happy smile. The woman (R2) is absent from this shot. Soft natural daylight illuminates the scene, creating a warm, intimate atmosphere with a shallow depth of field.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 cradles R3 closely against his chest",
+    "R3 is the baby being held snugly in R1's arms",
+    "R1, not R2, is the person holding R3",
+    "R1 leans his head near R3's head while holding the baby",
+    "sunny outdoor park with blurred grassy background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 cradling R3 closely against his chest, rather than R3 cradling or supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 cradles R3 closely against his chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the baby being held snugly in R1's arms, rather than R1 being held snugly in R3's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the baby being held snugly in R1's arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, not R2, the person cradling and holding R3 in this shot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, not R2, is the person holding R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold R3 close in his arms with R3 positioned against R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3 close in his arms against his chest"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning his head near R3's head while R3 remains the baby being carried?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans his head near R3's head while holding the baby"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

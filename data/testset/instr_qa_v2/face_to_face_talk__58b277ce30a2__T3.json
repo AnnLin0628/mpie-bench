@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__58b277ce30a2__T3",
+  "instruction": "A candid medium close-up photograph in a bright indoor room with a green potted plant in the background. On the left, the man in the red sweater (R2) sits facing right, looking down at a tablet. On the right, the woman in the gray turtleneck (R1) also looks down at the tablet with a soft, pleasant expression. Soft, natural light illuminates the scene, creating a warm, collaborative atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the seated man facing toward R1 while looking down at the tablet",
+    "R1 is the woman looking down at the tablet with a soft, pleasant expression",
+    "R1 and R2 are jointly attending to the same tablet",
+    "a tablet is the shared object of attention",
+    "a green potted plant is visible in the bright indoor room background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the seated person facing toward R1 while looking down at the tablet, rather than R1 being the seated person facing toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the seated man facing toward R1 while looking down at the tablet"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking down at the tablet with a soft, pleasant expression, rather than R2 being described with that expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman looking down at the tablet with a soft, pleasant expression"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": true
+  }
+}

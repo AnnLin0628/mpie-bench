@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__3a1ade1661a0__T5",
+  "instruction": "Candid action photograph, full shot at eye-level. Inside an indoor boxing gym, two men spar within a ring with black ropes. On the left, the dark-skinned boxer in red shorts (R2) is hunched forward with his back mostly to the camera, clinching. On the right, the light-skinned boxer in black shorts (R1) stands facing left with his head tucked down. The dark-skinned boxer (R2) presses his head and shoulder closely against the light-skinned boxer (R1) in a tight clinch. Bright overhead gym lighting illuminates the scene, casting soft shadows on the canvas.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 presses his head and shoulder closely against R1 in a tight clinch",
+    "R1 receives R2's head-and-shoulder pressure while keeping his head tucked down",
+    "R2 is hunched forward with his back mostly to the camera while clinching R1",
+    "R1 and R2 are sparring in close contact within a clinch",
+    "boxing ring with black ropes",
+    "indoor boxing gym with bright overhead lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pressing his head and shoulder closely against R1 in the tight clinch, rather than R1 pressing his head and shoulder closely against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 presses his head and shoulder closely against R1 in a tight clinch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer receiving R2's head-and-shoulder pressure while keeping his head tucked down, rather than R2 receiving that same pressure from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's head-and-shoulder pressure while keeping his head tucked down"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 hunched forward with his back mostly to the camera while clinching R1, rather than R1 being the hunched boxer with his back mostly to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is hunched forward with his back mostly to the camera while clinching R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sparring in close body contact within a tight boxing clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are sparring in close contact within a clinch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

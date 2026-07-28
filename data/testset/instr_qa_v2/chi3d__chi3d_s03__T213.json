@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T213",
+  "instruction": "Candid documentary photograph, full shot from a slightly high angle. In an indoor motion capture studio with a red carpeted floor and white walls, the woman in the white t-shirt and blue jeans (R2) stands on the left, facing right, and kicks her right leg forward. The man in the black polo shirt and blue shorts (R1) stands on the right with his back to the camera. The woman (R2) kicks her right foot forward, making contact with the back of the man's (R1) left leg. Bright overhead indoor lighting illuminates the scene with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 kicks forward toward R1 rather than R1 kicking toward R2",
+    "R2's right foot makes contact with the back of R1's left leg",
+    "R1 receives the contact on his leg while R2 delivers the kick",
+    "R1 has his back to the camera during the contact",
+    "The scene is an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person kicking forward toward R1, rather than R1 kicking forward toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers the kick toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's right foot make contact with the back of R1's left leg, rather than R1's foot contacting R2's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's foot contacts R1's leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the leg contact from R2's kick, rather than R2 receiving a kick from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives contact from R2's kick"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 extending her right leg forward so that her foot reaches R1's left leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends right leg to contact R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing with his back to the camera while R2's kick contacts his leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces away while receiving contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

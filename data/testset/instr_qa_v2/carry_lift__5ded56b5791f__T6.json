@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__5ded56b5791f__T6",
+  "instruction": "Candid lifestyle photograph, full shot. In a cozy bedroom with floral wallpaper and a woven rug, a family exercises together. The bearded man in a white t-shirt and striped pajama pants (R1) planks on the rug, facing right. Sitting on his back is the woman in a white button-down shirt and white pajama pants (R3), smiling as she holds the hands of the blonde toddler in striped pajamas (R2). The toddler sits behind the woman on the planking man's lower back. Soft, natural indoor light illuminates the scene, creating a warm and gentle atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 planks while supporting R3 on his back",
+    "R1 supports R2 on his lower back",
+    "R3 sits ahead of R2 on R1's back and holds R2's hands",
+    "R2 sits behind R3 on the planking R1's lower back",
+    "woven rug under R1 as he planks",
+    "cozy bedroom with floral wallpaper"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 planking and supporting R3 on his back, rather than R3 supporting R1 on her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 planks while supporting R3 on his back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 on his lower back, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 on his lower back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one sitting on R1's back and holding R2's hands, rather than R2 being the one in that role holding R3's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sits ahead of R2 on R1's back and holds R2's hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 sit behind R3 on R1's lower back while R1 remains in a plank position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits behind R3 on the planking R1's lower back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

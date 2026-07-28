@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T16",
+  "instruction": "Cinematic realistic photograph, medium close-up. In a bright ballet studio, the dark-haired ballerina (R1) in a white leotard stands in the foreground on the left, arm extended to the right, looking up and right with focus. Behind her in the midground, the blonde ballerina (R2) in a white leotard and sheer skirt stands with her arm extended, looking forward. In the background, a blurred third ballerina in white stands at the barre. Soft, bright daylight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the foreground ballerina with an arm extended to the right and gaze directed up and right",
+    "R2 is behind R1 in the midground with an arm extended and gaze directed forward",
+    "R1 and R2 have different gaze directions during the ballet pose",
+    "R1 and R2 are both posed with extended arms in a ballet studio",
+    "a ballet barre is visible in the background",
+    "the scene is a bright ballet studio lit by soft daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground ballerina extending her arm to the right and looking up and right, rather than R2 having that foreground focused-upward role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground extended-arm focused-upward role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 behind R1 in the midground looking forward, rather than R1 being the ballerina behind R2 looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 behind-R1 midground forward-looking role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a ballet pose with her arm extended to the right while looking up and right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 arm-extended upward-looking ballet pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold a ballet pose behind R1 with her arm extended while looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 arm-extended behind-R1 ballet pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

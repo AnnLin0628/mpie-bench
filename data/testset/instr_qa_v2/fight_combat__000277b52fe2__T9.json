@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T9",
+  "instruction": "Cinematic still, medium-full shot. In a dimly lit indoor gym, the shirtless man with short dark hair (R1) sits on the left of a gray mat, wearing black shorts and a boxing glove. He clasps hands with the shirtless bearded man with a chest tattoo (R3), who is kneeling on the right in black pants. They look at each other with friendly expressions. Strong cool backlighting creates a soft haze and lens flare in the background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the seated participant on the gray mat during the hand clasp while R3 is kneeling",
+    "R3 is the kneeling participant clasping hands with seated R1",
+    "R1 is the participant wearing a boxing glove, not R3",
+    "R1 and R3 clasp hands while facing each other",
+    "a boxing glove is present on R1's hand",
+    "the scene is set in a dimly lit indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated participant on the mat during the hand clasp while R3 is kneeling, rather than R3 being seated while R1 kneels?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 seated and R3 kneeling during the clasp"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 kneeling as he clasps hands with seated R1, rather than R1 kneeling to clasp hands with seated R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 kneeling contact role with seated R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant wearing the boxing glove during the interaction, rather than R3 being the gloved participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the gloved role instead of R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a boxing glove visible on R1 during the contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing glove on R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

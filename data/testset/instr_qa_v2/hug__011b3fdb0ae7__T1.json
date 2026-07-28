@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__011b3fdb0ae7__T1",
+  "instruction": "A candid family photograph in a bright indoor room with pampas grass. In a medium shot, the woman with curly black hair (R1) in a red shirt stands on the left, smiling at the camera, while the woman with straight dark hair (R3) in a pink fuzzy sweater stands on the right, looking at the young boy (R2). The young boy (R2), wearing a grey sweater, is held between them, looking down. Soft natural light illuminates the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 helps hold or support R2 between the adults, rather than R2 holding or supporting R1",
+    "R3 helps hold or support R2 between the adults, rather than R2 holding or supporting R3",
+    "R2 is the young boy being held between R1 and R3, not the person holding the two women",
+    "R3 looks toward R2 while R2 is being held between R1 and R3",
+    "The scene is a bright indoor room with pampas grass"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 helping hold or support R2 between the adults, rather than R2 holding or supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports or holds R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 helping hold or support R2 between the adults, rather than R2 holding or supporting R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 supports or holds R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the young boy being held between R1 and R3, rather than the person holding the two women between himself and someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the held child between R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned between R1 and R3 while being held by them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's held position between R1 and R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 look toward R2 while R2 is being held between R1 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 attends to R2 during the held pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

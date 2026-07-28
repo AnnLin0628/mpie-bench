@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T27",
+  "instruction": "A candid full-body photograph captures two dancers in a dance studio with a dark background and wooden floor. On the right, the bearded man in the rust-brown shirt (R1) stands facing left, eyes closed in a serious expression as he tightly embraces his partner. On the left, the woman with light brown hair (R2) stands facing right with her back to the camera, wrapping her arms around his torso. Both wear black sweatpants and are barefoot, their bodies pressed closely together in a warm, intimate embrace. Soft studio lighting highlights their forms against the dark backdrop, casting gentle shadows on the polished wooden floor.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the visible bearded man facing R2 with eyes closed while tightly embracing her",
+    "R2 has her back to the camera while wrapping her arms around R1's torso",
+    "R1 and R2 are pressed closely together in an intimate dance embrace",
+    "both dancers are barefoot on the polished wooden studio floor",
+    "the interaction takes place in a dance studio with a dark backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner facing R2 with eyes closed while tightly embracing her, rather than R2 being the eyes-closed visible-face partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the visible bearded man facing R2 with eyes closed while tightly embracing her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner with her back to the camera while wrapping her arms around R1's torso, rather than R1 having his back to the camera in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera while wrapping her arms around R1's torso"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing chest-to-chest with their bodies pressed closely together in a dance embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are pressed closely together in an intimate dance embrace"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 encircle R1's torso with her arms while R1 holds her close during the dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's torso while R1 embraces her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

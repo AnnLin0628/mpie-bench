@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__9f53ea7d8992__T2",
+  "instruction": "Candid black and white documentary photograph, medium shot at eye-level. On an outdoor paved walkway under an overcast sky, the woman in the black coat and cap (R2) and the bearded man in the grey overcoat (R1) walk closely side-by-side. The woman (R2) is on the left, smiling warmly as she looks ahead. The bearded man (R1) is on the right, shown in profile as he walks forward. They are holding hands gently at waist height. The shot features a monochrome palette with soft, diffused daylight and a clean, uncluttered background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 smiles warmly and looks ahead while walking hand-in-hand with R1",
+    "R1 is shown in profile as he walks forward while holding R2's hand",
+    "R1 and R2 hold hands gently at waist height",
+    "R1 and R2 walk closely side-by-side",
+    "outdoor paved walkway under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one smiling warmly and looking ahead while holding hands with R1, rather than R1 being the one described as smiling warmly and looking ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles warmly and looks ahead while walking hand-in-hand with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one shown in profile as he walks forward while holding R2's hand, rather than R2 being the one shown in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is shown in profile as he walks forward while holding R2's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking closely side-by-side while holding hands with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk closely side-by-side"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding their joined hands gently at waist height as they walk?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands gently at waist height"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

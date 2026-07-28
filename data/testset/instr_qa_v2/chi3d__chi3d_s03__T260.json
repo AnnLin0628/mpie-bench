@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T260",
+  "instruction": "A candid documentary wide shot at eye-level captures an indoor motion capture studio with a red carpeted floor and dark red dividers. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing left, extending her right arm forward. On the left, the man in the black polo shirt and blue shorts (R1) stands facing right and slightly away, holding the woman (R2)'s extended arm with his hand. The scene is illuminated by overhead fluorescent lighting, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's extended arm with his hand",
+    "R2 extends her right arm forward toward R1",
+    "R1 faces R2 while holding R2's arm",
+    "R2 stands facing R1 with her arm extended",
+    "indoor motion capture studio with red carpeted floor and dark red dividers"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's extended arm with his hand, rather than R2 holding R1's extended arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's extended arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending her right arm forward for R1 to hold, rather than R1 extending his right arm forward for R2 to hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm while R1 holds it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have the hand-contact role of grasping or holding R2's arm, rather than R2 being the one grasping or holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the holding contact on R2's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

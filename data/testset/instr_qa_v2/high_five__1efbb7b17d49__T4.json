@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1efbb7b17d49__T4",
+  "instruction": "A candid outdoor photograph captures a sunny beach scene with a volleyball net. In a full shot, the man in the light blue t-shirt (R3) on the left and the woman in the black bikini (R2) on the right walk forward on the sand. The man (R3) holds a volleyball under his arm and smiles down at the woman (R2) as they fist-bump with their inner hands. The woman (R2), carrying an orange tote bag and a white bottle, smiles warmly. Bright, warm daylight illuminates the scene, casting soft shadows on the sand.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 holds a volleyball under his arm while fist-bumping R2",
+    "R2 carries an orange tote bag and a white bottle while fist-bumping R3",
+    "R3 smiles down at R2 during the interaction",
+    "R2 and R3 fist-bump with their inner hands",
+    "a volleyball net is present in the beach scene",
+    "the scene takes place on sunny sand at a beach"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one holding a volleyball under his arm while fist-bumping R2, rather than R2 holding the volleyball under her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the volleyball during the contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one carrying an orange tote bag and a white bottle while fist-bumping R3, rather than R3 carrying those items?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the tote bag and bottle during the contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 smile down at R2 during their fist-bump, rather than R2 being the one who smiles down at R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 smiles down toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R3 walking forward on the sand while making fist-bump contact with their inner hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 walk while fist-bumping with inner hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 carrying both an orange tote bag and a white bottle?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "orange tote bag and white bottle carried by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

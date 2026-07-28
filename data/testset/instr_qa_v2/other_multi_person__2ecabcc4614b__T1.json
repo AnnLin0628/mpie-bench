@@ -1,0 +1,62 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__2ecabcc4614b__T1",
+  "instruction": "Cinematic medium-full shot of an indoor dance studio with a checkered floor. On the left, the curly-haired cheerleader (R1) stands in a three-quarter back view, looking over her shoulder with a smile. On the right, the purple-haired cheerleader (R4) stands in a similar pose, looking back. Both wear matching white crop tops with red sleeves, white pleated skirts, and white thigh-high socks while holding metallic orange pom-poms. Bright indoor lighting casts warm reflections across the scene.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the curly-haired cheerleader while R4 is the purple-haired cheerleader",
+    "R1 looks over her shoulder with a smile while R4 is also looking back in a similar pose",
+    "R1 and R4 hold metallic orange pom-poms",
+    "R1 and R4 wear matching cheerleader outfits",
+    "the scene is an indoor dance studio with a checkered floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "main_lt_3",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

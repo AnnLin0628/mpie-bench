@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T2",
+  "instruction": "Candid full shot in profile of an indoor gym with grey mats. On the left, the man in the grey t-shirt and black shorts (R2) stands on one leg, executing a powerful right roundhouse kick. On the right, the man in the white t-shirt and blue shorts (R1) stands defensively, blocking the incoming kick with his forearms. The background is simple with grey wall padding and tripods. Even overhead lighting illuminates the scene with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 executes a right roundhouse kick toward R1",
+    "R1 blocks R2's incoming kick with his forearms",
+    "R2 is the attacker while R1 is the defensive blocker",
+    "R2 stands on one leg during the kick while R1 remains in a defensive stance",
+    "The interaction occurs in an indoor gym with grey mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 delivering a right roundhouse kick toward R1, rather than R1 delivering the kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the kicker and R1 is the target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 blocking R2's incoming kick with his forearms, rather than R2 blocking a kick from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the defensive blocking duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the attacking person on one leg while R1 is the defensive person receiving the attack, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attacks while R1 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his forearms as the blocking surface against R2's kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 blocks with forearms"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing on one leg while performing the roundhouse kick aimed at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on one leg while kicking"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

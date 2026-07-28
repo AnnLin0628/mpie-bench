@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T289",
+  "instruction": "A candid documentary photograph with a wide, eye-level shot captures an indoor motion capture studio with a dark red carpeted floor, white walls, and wall-mounted cameras. The man in the black cap and blue shorts (R1) stands on the left, leaning back with a slight smile. The woman in the white patterned t-shirt and blue jeans (R2) stands on the right, leaning forward and pushing him with both hands on his chest, her right leg extended backward. There are no bystanders in the room. Bright overhead lighting illuminates the scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is pushing R1 with both hands on R1's chest",
+    "R1 is receiving the push from R2 and leaning back",
+    "R2 leans forward into R1 while extending her right leg backward",
+    "R1 stands with a slight smile while being pushed by R2",
+    "The scene is an indoor motion capture studio with wall-mounted cameras and a dark red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pushing R1 on the chest with both hands, rather than R1 pushing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active pusher and R1 is the person being pushed"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning back as he receives the push from R2, rather than R2 leaning back from a push by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the force of R2's push"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward into R1 while applying pressure to his chest, rather than R1 leaning forward into R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward while pushing R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2's hands placed on R1's chest as part of the pushing action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hands contact R1's chest"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's right leg extended backward while she pushes R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration during the push"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

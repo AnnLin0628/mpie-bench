@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__07ab0f9247c2__T4",
+  "instruction": "Candid full-length photograph of an outdoor wooden boardwalk pier with a metal railing. In the center of the frame, the man in a white t-shirt, blue jeans, white sneakers, and sunglasses (R1) walks forward. He carries the young girl in a white graphic t-shirt and blue pants (R3) in his arms, who looks slightly squinted against the light. The scene is captured in bright daylight, casting strong diagonal shadows across the wooden planks of the deck.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 carries R3 in his arms",
+    "R1 supports R3 while walking forward",
+    "R3 is the carried young girl, not the carrier",
+    "R3 is positioned in R1's arms",
+    "outdoor wooden boardwalk pier with a metal railing"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R3 in his arms, rather than R3 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R3 in his arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 walking forward while supporting R3's body, rather than R3 walking forward while supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R3 while walking forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the young girl being carried in R1's arms, rather than R1 being carried in R3's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the carried young girl, not the carrier"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have R3 in his arms as he walks forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R3 while walking"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned in R1's arms while R1 supports her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is positioned in R1's arms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

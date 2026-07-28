@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__08d2596bbf41__T1",
+  "instruction": "A clean studio portrait photograph of two female friends posing together. On the left, the woman in the blue-and-white striped off-the-shoulder top (R2) stands in profile facing right, smiling warmly at the camera with her right hand resting on her friend's shoulder. On the right, the woman in the distressed denim jacket (R1) stands facing slightly left, leaning her head gently against her friend's head and smiling brightly with her teeth showing. The shot is a medium shot at eye level, captured against a solid, vibrant red background. The scene is illuminated by bright, even studio lighting that highlights the blue and denim tones of their clothing, creating a cheerful and friendly mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests her right hand on R1's shoulder",
+    "R1 leans her head gently against R2's head",
+    "R2 is in profile while making shoulder contact with R1",
+    "R1 smiles brightly with teeth showing while leaning toward R2",
+    "The portrait is set against a solid vibrant red studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her right hand on R1's shoulder, rather than R1 resting her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand-on-shoulder contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning her head gently against R2's head, rather than R2 being described as the one leaning her head against R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's head-leaning contact role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 make the shoulder-touching gesture toward R1 while R1 makes the head-leaning gesture toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "different asymmetric contact actions by R2 and R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 posed in profile while keeping her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body orientation with hand contact on R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__68b9f2f529ba__T1",
+  "instruction": "Studio photograph, full-body shot. In a minimalist indoor studio with a plain gray background, a shirtless man in black sweatpants (R1) stands on the left, facing right. He holds the foot of a woman in a beige sports bra and black shorts (R2) near his face with both hands. The woman (R2) is on the right, performing an inverted handstand with her back arched and head near the floor. The lighting is soft and diffused, creating a cool gray color palette with gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's foot with both hands",
+    "R2, not R1, is performing an inverted handstand",
+    "R1 stands upright while contacting R2's foot",
+    "R2's head is near the floor with her back arched",
+    "R2's foot is held near R1's face",
+    "The setting is a minimalist indoor studio with a plain gray background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's foot with both hands, rather than R2 holding R1's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's foot with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person performing the inverted handstand while R1 remains standing, rather than R1 being inverted while R2 stands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2, not R1, is performing an inverted handstand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's foot near his face, rather than R2 holding R1's foot near her face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's foot is held near R1's face"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing upright and using both hands to contact R2's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands upright while contacting R2's foot"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 inverted with her back arched and her head near the floor while R1 holds her foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's head is near the floor with her back arched"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

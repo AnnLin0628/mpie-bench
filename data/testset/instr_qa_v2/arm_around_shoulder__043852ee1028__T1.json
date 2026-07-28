@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__043852ee1028__T1",
+  "instruction": "A candid studio portrait photograph with a warm and inclusive atmosphere, captured in a medium close-up shot at eye-level against a plain, neutral beige backdrop. On the left, the older woman with short gray hair (R4) stands in profile facing right in a dark brown bra, smiling warmly at the camera. In the center, the woman with brown hair and bangs (R2) stands in profile in a light beige bra and black shapewear, smiling broadly. On the right, the woman with voluminous curly dark hair (R1) stands facing left in a white tank top, laughing joyfully. The three women are pressed closely front-to-back in a tight group hug; the woman with curly hair (R1) wraps her arms around the center woman's (R2) waist, who in turn wraps her arms around the left woman's (R4) waist. The scene is illuminated by soft, even studio lighting, showcasing natural skin tones.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2's waist, not the other way around",
+    "R2 wraps her arms around R4's waist, not the other way around",
+    "R2 functions as the middle link, receiving R1's hold while holding R4",
+    "R4 is held around the waist by R2 in the front-to-back contact chain",
+    "plain neutral beige studio backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2's waist, rather than R2 wrapping her arms around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2's waist, not the other way around"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R4's waist, rather than R4 wrapping her arms around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R4's waist, not the other way around"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the middle participant who is held by R1 while also holding R4, rather than R4 being the middle participant in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 functions as the middle link, receiving R1's hold while holding R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing toward R2 while holding R2 around the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 around the waist while facing her"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 at the front end of the close contact chain, being held around the waist by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is held around the waist by R2 in the front-to-back contact chain"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

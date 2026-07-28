@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__95b5f8debf94__T1",
+  "instruction": "Candid lifestyle photograph, medium shot. In a bright, modern kitchen with white tiled walls, the young girl in the light blue long-sleeve shirt (R2) sits on the white countertop on the left. She extends her right arm upward to high-five the man in the beige t-shirt (R1), who stands on the right facing her in profile. The man smiles warmly as their right hands meet in the air. The scene is illuminated by soft, natural light, highlighting the clean white kitchen decor and a colorful cereal box on the counter.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is seated on the white countertop while reaching upward for the high-five with R1",
+    "R1 stands facing R2 and meets R2's raised right hand in the air",
+    "R2 is the upward-reaching high-five initiator rather than R1 being seated and reaching upward",
+    "R1 and R2 make contact with their right hands in a high-five",
+    "The white countertop supports R2 during the interaction",
+    "The interaction occurs in a bright modern kitchen with white tiled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing and meeting R2's raised right hand in the air, rather than R2 standing and meeting R1's raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the standing participant who meets the seated R2's raised hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a high-five with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the high-five, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

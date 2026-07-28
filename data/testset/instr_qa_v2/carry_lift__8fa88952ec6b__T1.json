@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__8fa88952ec6b__T1",
+  "instruction": "Candid medium full shot of a woman in a light blue pajama set (R1) and a man in a white t-shirt and blue pants (R2) jumping on a white bed in a pine forest. The woman (R1) stands on the left, facing right, mid-jump with her arm extended. The man (R2) stands on the right, facing left, reaching forward to hold her hand. They are playfully bouncing on a white mattress outdoors. Soft natural daylight filters through the trees, illuminating the scene with a muted green and white color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches forward to hold R1's hand",
+    "R1 is mid-jump with her arm extended toward R2",
+    "R1 and R2 face each other while bouncing together",
+    "R1 and R2 are jumping on a white bed or mattress",
+    "The white mattress is outdoors in a pine forest",
+    "Soft natural daylight filters through the trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching forward to hold R1's hand, rather than R1 being the one described as reaching forward to hold R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches forward to hold R1's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person shown mid-jump with an arm extended toward R2, rather than R2 being the one described as mid-jump with an extended arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is mid-jump with her arm extended toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 extending her arm toward R2 while R2 reaches to meet or hold that hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends her arm as R2 reaches to hold her hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the white mattress set outdoors in a pine forest?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor pine forest setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

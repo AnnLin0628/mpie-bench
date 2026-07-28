@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T119",
+  "instruction": "A candid documentary photograph in a wide full-body shot captures an indoor motion capture studio featuring a red carpeted floor, white walls, and partition screens in the background. On the right, the man in the black cap, black polo, and blue shorts (R1) stands facing left, extending his right arm forward. On the left, the woman in the white t-shirt and blue jeans (R2) stands still in profile facing right. The man (R1) touches the cheek of the woman (R2) with his right hand as they stand close together. The scene is illuminated by bright overhead lighting, casting soft shadows on the warm red carpet and neutral background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 touches R2's cheek with his right hand",
+    "R1 extends his right arm forward toward R2 rather than R2 extending toward R1",
+    "R2 is the recipient of the cheek touch while standing still",
+    "R1 and R2 stand close together during the cheek-touch interaction",
+    "indoor motion capture studio with red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 touching R2's cheek with his right hand, rather than R2 touching R1's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's cheek with his right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending his arm forward to make facial contact, rather than R2 extending an arm to make facial contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends his right arm forward toward R2 rather than R2 extending toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose cheek is being touched by R1, rather than R1 being the cheek-touch recipient?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of the cheek touch while standing still"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his right hand to touch R2's face while R2 remains still?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's cheek with his right hand while R2 stands still"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together during the cheek-touch interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together during the cheek-touch interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

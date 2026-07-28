@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T7",
+  "instruction": "Candid outdoor photograph of three friends sitting on a green grassy lawn in a park. On the left, the Asian man in the red 'T' shirt (R3) sits gesturing with his left arm toward the center; the woman in the dark blue 'E' shirt (R4) sits in the middle laughing heartily; and the Black woman with an afro in the red 'A' shirt (R6) sits on the right smiling and gesturing with her hands. The bald man (R2) is absent from this shot. The scene is brightly lit by natural daylight with a soft-focus green background.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 gestures with his left arm toward the center where R4 is sitting, rather than R4 making that gesture toward R3",
+    "R4 is the central friend laughing heartily, rather than R3 or R6 taking that laughing-center role",
+    "R6 smiles and gestures with her hands, rather than R4 taking R6's hand-gesturing role",
+    "R3 is seated and actively gesturing toward R4",
+    "R6 is seated as the smiling friend making hand gestures",
+    "the friends are sitting on a green grassy lawn in a park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gesturing with his left arm toward the center where R4 is sitting, rather than R4 gesturing toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 gestures toward R4 from his seated position"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the friend sitting in the middle and laughing heartily, rather than R3 or R6 being the central laughing friend?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds the central laughing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 smiling and gesturing with her hands, rather than R4 taking R6's smiling hand-gesturing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 performs the smiling hand-gesture role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 seated while actively gesturing toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is seated and gesturing toward R4"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the friends sitting on a green grassy lawn in a park?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "green grassy park lawn setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T204",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio. On the left, the woman in the white t-shirt and blue jeans (R2) stands on her left leg, extending her right leg in a high side kick towards the right. On the right, the man in the dark polo shirt and blue shorts (R1) stands still, facing her. The scene is brightly lit under overhead lights on a red carpeted floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 performs a high side kick toward R1 rather than R1 kicking toward R2",
+    "R1 stands still facing R2 while R2 is the active kicker",
+    "R2 balances on her left leg while extending her right leg toward R1",
+    "R1 remains the stationary facing partner rather than taking the kicking role",
+    "the interaction occurs in an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person extending her right leg in a high side kick toward R1, rather than R1 kicking toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs a high side kick toward R1 rather than R1 kicking toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing still and facing R2 while R2 performs the kick, rather than R2 standing still while R1 performs the kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands still facing R2 while R2 is the active kicker"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active kicking participant and R1 the stationary facing participant, rather than those roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains the stationary facing partner rather than taking the kicking role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 balance on her left leg while extending her right leg toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on her left leg while extending her right leg toward R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while remaining still during R2's high side kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains the stationary facing partner rather than taking the kicking role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

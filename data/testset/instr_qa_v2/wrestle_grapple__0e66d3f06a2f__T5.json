@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T5",
+  "instruction": "Candid action photograph, full shot. In an indoor martial arts studio with wooden walls and dark floor mats, the man in the gray gi (R2) stands leaning over the man in the white gi (R1). The man in the white gi (R1) is bent deeply forward with his head tucked down. The man in the gray gi (R2) grips the upper collar of R1's white gi from behind, executing a grappling throw. Warm, natural indoor lighting illuminates the scene, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans over R1 during a grappling throw",
+    "R1 is bent deeply forward with his head tucked down",
+    "R2 grips the upper collar of R1's white gi from behind",
+    "R2 executes the throw while R1 is the person being thrown or controlled",
+    "R1's gi collar is the contact point used by R2",
+    "The scene is an indoor martial arts studio with wooden walls and dark floor mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gripping R1's upper gi collar from behind to execute the throw, rather than R1 gripping R2's collar from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips R1's collar from behind as the active thrower"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 bent deeply forward with his head tucked down while R2 leans over him, rather than R2 being the one bent forward under R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is bent forward beneath R2's control"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person executing the grappling throw on R1, rather than R1 executing the throw on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the thrower and R1 is the thrown or controlled person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand leaning over R1 while maintaining contact with R1's gi collar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans over R1 in a controlling grappling position"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned bent forward under R2's control during the grappling action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the controlled participant in the grappling throw"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T10",
+  "instruction": "A clean lifestyle photograph in a medium shot captures a bright, minimalist white dance studio. In the right foreground, the young woman in a beige sports bra (R4) stands facing left with both arms raised straight up, her gaze focused. In the left background, the young blonde girl in a beige long-sleeve crop top (R5) stands facing left with her arms also raised straight up in unison. They perform synchronized vertical arm stretches. Soft natural light from a background window illuminates the scene, maintaining a clean white palette and shallow depth of field.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 is the foreground young woman facing left with both arms raised straight up",
+    "R5 is the background young blonde girl facing left with both arms raised straight up in unison with R4",
+    "R4 and R5 perform synchronized vertical arm stretches",
+    "R4 has a focused gaze while stretching",
+    "the scene is a bright minimalist white dance studio",
+    "soft natural light comes from a background window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground participant facing left with both arms raised straight up, rather than R5 being the foreground participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 foreground stretching role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the background blonde girl raising both arms straight up in unison with R4, rather than R4 being the background blonde girl?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 background synchronized stretching role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R4 and R5 both performing vertical arm stretches with their arms raised straight up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "synchronized vertical arm stretch body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 face left with a focused gaze while holding the raised-arm stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 focused raised-arm stretching pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__68ac84a10dd4__T4",
+  "instruction": "Candid office photograph, medium close-up. In an office meeting room, the woman in a light blue shirt (R1) on the left and the woman in a black blazer (R2) on the right celebrate with a high five. The laughing woman (R1) raises her left hand to clasp the raised right hand of the smiling woman (R2) in the center of the frame. A whiteboard with colorful sticky notes is visible in the background under soft, bright indoor lighting that creates a warm and collaborative mood.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 raises her left hand to clasp R2's raised right hand",
+    "R2 offers her raised right hand as the hand R1 clasps",
+    "R1 is laughing while making the high-five contact with R2",
+    "R2 is smiling while making the high-five contact with R1",
+    "a whiteboard with colorful sticky notes is visible in the background",
+    "the interaction takes place in an office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 raise her left hand to clasp R2's raised right hand, rather than R2 raising her left hand to clasp R1's raised right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises her left hand to clasp R2's raised right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose raised right hand is being clasped by R1's raised left hand, rather than R1 being the one whose raised right hand is clasped by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 offers her raised right hand as the hand R1 clasps"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

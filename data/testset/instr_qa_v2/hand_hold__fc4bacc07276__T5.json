@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc4bacc07276__T5",
+  "instruction": "Candid full-body photograph of a couple by a white wall and black fence. The woman in the white long-sleeved dress (R1) stands on the left, leaning against the wall and looking up with a smile. The man in the patterned short-sleeved shirt (R2) stands on the right, wrapping his arms around her upper body from the side. Bright daylight casts soft shadows on the wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps his arms around R1's upper body from the side",
+    "R1 is the person being held or encircled by R2",
+    "R1 leans against the wall while R2 contacts her upper body",
+    "R2 stands beside R1 in the side-embrace role",
+    "white wall that R1 leans against",
+    "black fence near the couple"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap his arms around R1's upper body from the side, rather than R1 wrapping her arms around R2's upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the side-embrace holder around R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being encircled and held by R2, rather than R2 being encircled and held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the held person and R2 is the holder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's arms the ones placed around R1's upper body, rather than R1's arms being placed around R2's upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms contact R1's upper body"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning against the wall while R2 stands beside her with his arms around her upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans against the wall as R2 holds her from the side"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is a black fence visible near the white wall in the scene?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black fence by the white wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

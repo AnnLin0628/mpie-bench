@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T23",
+  "instruction": "A medium shot of two friends standing close together in a sunny grassy park. On the left, the East Asian man in a red t-shirt with a yellow letter T (R3) leans in toward the right, pointing his finger at the chest of the woman in a dark blue t-shirt with a red letter E (R4). On the right, the woman (R4) stands facing him, smiling warmly. The background features soft-focus green grass and trees under bright, natural daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 points his finger at R4's chest rather than R4 pointing at R3's chest",
+    "R4 is the person being pointed at by R3 rather than R3 being pointed at by R4",
+    "R3 leans in toward R4 while pointing rather than R4 leaning in and pointing toward R3",
+    "R4 faces R3 and smiles warmly while R3 points at her chest",
+    "R3 and R4 stand close together during the pointing interaction",
+    "the scene is a sunny grassy park with trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 pointing his finger at R4's chest, rather than R4 pointing at R3's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 points his finger at R4's chest rather than R4 pointing at R3's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person receiving the pointed finger from R3, rather than R3 receiving a pointed finger from R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the person being pointed at by R3 rather than R3 being pointed at by R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 lean in toward R4 while pointing, rather than R4 leaning in and pointing toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans in toward R4 while pointing rather than R4 leaning in and pointing toward R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 face R3 and smile warmly while R3 points at her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 faces R3 and smiles warmly while R3 points at her chest"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R4 standing close together during R3's pointing gesture toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 stand close together during the pointing interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

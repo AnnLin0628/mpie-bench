@@ -1,0 +1,75 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T10",
+  "instruction": "Candid outdoor full shot of a park lawn. Four friends stand in a line cheering. From left to right: the woman with the afro in the red t-shirt (R6) stands smiling with arms slightly raised; the heavy-set man in the dark blue t-shirt (R1) stands with both arms raised high, smiling; the woman in the dark blue t-shirt (R4) stands smiling; and the East Asian man in the red t-shirt (R3) stands with his right arm raised, smiling. Natural daylight illuminates the scene.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 raises both arms high while R4 stands smiling without a raised-arm gesture specified",
+    "R3 raises his right arm while R4 stands smiling without a raised-arm gesture specified",
+    "R6 raises her arms only slightly while R1 raises both arms high",
+    "R1 cheers with both arms raised high among the group",
+    "R4 stands smiling as part of the cheering lineup",
+    "The scene is on an outdoor park lawn in natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with both arms raised high while R4 is standing and smiling without a raised-arm gesture specified?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises both arms high while R4 does not have raised arms specified"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 raising his right arm while R4 is simply standing and smiling rather than raising an arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 raises his right arm while R4 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand cheering with both arms raised high among the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 cheers with both arms raised high"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b4631bd07d92__T1",
+  "instruction": "Candid documentary photograph, full shot at eye-level. Outdoors on a city sidewalk next to a stone wall and a green tree, the smiling red-haired White man (R2) on the left and the smiling Black man (R1) on the right walk side-by-side with their left legs forward. The red-haired White man (R2) wears a light pink open shirt over a teal t-shirt, dark blue jeans, and white sneakers, holding a clear cup in his right hand and laughing with his mouth open. The Black man (R1) wears a light blue open shirt over a light grey t-shirt, blue jeans, and beige sneakers. They hold hands, looking warmly at each other. Soft, natural daylight illuminates the scene with a cool-toned color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds a clear cup in his right hand while walking hand-in-hand with R1",
+    "R1 is the Black man walking hand-in-hand with R2 without holding the clear cup",
+    "R1 and R2 hold hands while walking side-by-side and looking warmly at each other",
+    "R2 laughs with his mouth open while holding hands with R1",
+    "The pair is outdoors on a city sidewalk next to a stone wall and a green tree"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding a clear cup in his right hand while walking hand-in-hand with R1, rather than R1 holding the clear cup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the clear cup during the hand-holding interaction"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 walking hand-in-hand with R2 while R2 carries the clear cup, rather than R1 being the cup carrier?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the hand-holding partner who is not carrying the cup"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 laughing with his mouth open while holding hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 laughs during the hand-holding interaction with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

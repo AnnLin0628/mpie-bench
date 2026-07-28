@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T6",
+  "instruction": "Candid action photograph, medium full shot, eye-level. Inside a karate dojo with yellow walls and red and blue floor mats, two martial artists practice close-range defense. On the left, the man in the black t-shirt with white-striped pants (R1) is seen from behind, facing right in a sparring stance. On the right, the woman in the black t-shirt and red belt (R2) faces left, holding her hands up defensively with her forearms raised to block. Bright overhead lighting casts soft shadows on the colorful mats.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the defender with hands up and forearms raised to block R1",
+    "R1 is the sparring partner seen from behind in a stance while R2 blocks",
+    "R1 and R2 face each other during close-range martial arts defense practice",
+    "red and blue floor mats are the practice surface",
+    "the setting is a karate dojo with yellow walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding her hands up defensively with forearms raised to block R1, rather than R1 being the one blocking R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender with raised forearms blocking R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the sparring partner seen from behind in a stance while R2 takes the defensive blocking role, rather than R2 being seen from behind while R1 blocks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the sparring stance while R2 performs the defensive block"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the close-range defense practice, is R2 the martial artist reacting defensively to R1 with raised forearms, rather than R1 reacting defensively to R2 with raised forearms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reacts defensively to R1 in the drill"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 in a sparring stance while R2 faces R1 with her guard raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other with distinct sparring and guarding roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 using her forearms as a defensive guard during the martial arts practice with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's forearms are raised for defense against R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

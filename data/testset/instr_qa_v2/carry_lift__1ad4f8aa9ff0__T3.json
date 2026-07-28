@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T3",
+  "instruction": "A candid outdoor photograph, eye-level full shot. On a wooden pier with a large suspension bridge under a cloudy sky, the bearded man in a white t-shirt and black leggings (R2) and the woman with a shaved head in a white crop top and gray shorts (R1) stand side-by-side. The bearded man (R2) balances on his right leg on a pink mat, holding his raised left foot with his left hand while raising his right arm straight up. The woman (R1) balances on her left leg on a beige mat, holding her raised right foot with her right hand while raising her left arm straight up. Both look forward calmly. Diffused daylight creates a soft, muted atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 balances on her left leg while holding her raised right foot with her right hand and raising her left arm",
+    "R2 balances on his right leg while holding his raised left foot with his left hand and raising his right arm",
+    "R1 performs her one-legged pose on a beige mat",
+    "R2 performs his one-legged pose on a pink mat",
+    "The people are on a wooden pier with a large suspension bridge in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on her left leg while holding her raised right foot with her right hand and raising her left arm, rather than R2 doing that same pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's asymmetric one-legged pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing on his right leg while holding his raised left foot with his left hand and raising his right arm, rather than R1 doing that same pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's asymmetric one-legged pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold her raised right foot with her right hand while balancing on one leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration in the pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold his raised left foot with his left hand while balancing on one leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration in the pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 balancing on a pink mat while R1 is balancing on a beige mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "person-specific yoga mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

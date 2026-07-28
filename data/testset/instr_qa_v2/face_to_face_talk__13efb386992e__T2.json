@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__13efb386992e__T2",
+  "instruction": "Cinematic film still, medium close-up. In a dimly lit indoor cafe, the man with short brown hair (R1) in a white shirt with a dark sweater draped over his shoulders sits on the left, looking off-camera. Beside him, the woman with long brown hair (R2) in a dark blue blouse and hoop earrings sits on the right, speaking with her mouth slightly open. They sit side-by-side. In the bottom right foreground, the dark shoulder of an unseen person is partially visible. Warm, soft indoor lighting illuminates them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the person speaking with her mouth slightly open while R1 is not shown speaking",
+    "R1 looks off-camera while R2 speaks beside him",
+    "R1 and R2 sit side-by-side with distinct conversational roles",
+    "R1 is the non-speaking seated person looking off-camera beside R2",
+    "dimly lit indoor cafe setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one speaking with her mouth slightly open, rather than R1 speaking?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the speaking participant while R1 is not shown speaking"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking off-camera while R2 speaks beside him, rather than R2 looking off-camera while R1 speaks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks off-camera while R2 holds the speaking role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 sit side-by-side with R2 in the active conversational speaker role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "side-by-side seating with R2 as speaker"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

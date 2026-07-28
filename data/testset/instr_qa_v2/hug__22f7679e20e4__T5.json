@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__22f7679e20e4__T5",
+  "instruction": "A candid documentary photograph in a medium shot captures a cozy indoor setting near a window. The woman in the white shirt (R2) stands behind the seated man in the brown knit sweater (R1), wrapping her arms around his shoulders in a warm embrace. She leans forward, resting her head gently against his, with a serene expression. The man (R1) sits at a table covered with a white tablecloth, smiling softly with his eyes closed as he holds her hands. On the table in the foreground, a yellow pill organizer and a pair of glasses are visible. Soft, natural light streams from the window on the right, illuminating the couple with warm tones and creating a tender, intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands behind the seated R1 and wraps her arms around his shoulders",
+    "R2 leans forward and rests her head gently against R1's head",
+    "R1 holds R2's hands while she embraces him from behind",
+    "R1 is seated at a table while R2 remains standing behind him",
+    "A yellow pill organizer is visible on the table",
+    "A pair of glasses is visible on the table",
+    "The scene is a cozy indoor setting near a window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing behind the seated R1 and wrapping her arms around R1's shoulders, rather than R1 standing behind R2 and wrapping his arms around her shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 from behind around his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward to rest her head gently against R1's head, rather than R1 leaning forward from behind to rest his head against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head against R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's hands while R2's arms are around his shoulders, rather than R2 holding R1's hands while he wraps his arms around her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hands during R2's rear embrace"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated at the table while R2 stands behind him in close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 seated and R2 standing behind him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

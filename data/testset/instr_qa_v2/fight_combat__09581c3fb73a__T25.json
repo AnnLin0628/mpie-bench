@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T25",
+  "instruction": "A candid action photograph, eye-level medium shot, capturing two boxers sparring in an open-air training pavilion with a white metal roof. On the left, the boxer in the blue tank top (R2) stands in profile with black boxing gloves raised in a high guard. On the right, the boxer in the beige t-shirt (R1) faces him in profile, holding his gloves up in a boxing stance. The two face each other closely in defensive postures. Bright daylight fills the pavilion, casting soft shadows under the roof.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 raises black boxing gloves in a high guard while facing R1",
+    "R1 faces R2 in profile with gloves held up in a boxing stance",
+    "R1 and R2 face each other closely in defensive sparring postures",
+    "boxing gloves are used as the contact-relevant sparring objects",
+    "the sparring takes place in an open-air training pavilion with a white metal roof"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer with black boxing gloves raised in a high guard while R1 faces him in a boxing stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 maintains the high guard against R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer facing R2 with his gloves held up in a boxing stance, rather than R2 being the one described in that specific stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the boxing-stance role facing R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned close to each other in defensive sparring postures with their gloves up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face off defensively while sparring"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand in profile toward R1 while keeping his guard raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 profiles toward R1 with a raised guard"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

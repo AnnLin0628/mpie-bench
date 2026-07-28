@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__62b1c8fca6b6__T1",
+  "instruction": "Candid office photograph, medium shot. In a modern office, the young Black man in a white dress shirt and maroon trousers (R1) stands on the left, facing right and looking at his colleague. The older bearded man in a dark gray suit (R2) stands on the right, facing left in profile. They stand on opposite sides of a wooden desk and clasp right hands in a firm handshake. The background features office shelves with plants, and a green snake plant sits in the foreground. Soft, natural indoor lighting illuminates the scene, creating a professional and welcoming atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the young Black man who looks toward his colleague during the handshake",
+    "R2 is the older bearded man in profile across from R1 during the handshake",
+    "R1 and R2 clasp right hands in a firm handshake",
+    "R1 and R2 stand on opposite sides of a wooden desk while making hand contact",
+    "wooden desk between the two people",
+    "modern office setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking toward his colleague R2 during the hand clasp, rather than R2 being the one specifically described as looking at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the colleague looking toward R2 during the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face toward R2 while R2 is shown in profile facing back toward R1 as they clasp right hands, rather than those labeled facing roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have label-specific facing roles during the right-hand clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 clasp each other's right hands in a firm hand-to-hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 use their right hands for the firm hand clasp"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned across the wooden desk from one another while maintaining the right-hand clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand across a desk while their right hands are clasped"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T8",
+  "instruction": "Candid action photograph, full shot. In an indoor martial arts studio with wooden walls and dark floor mats, the man in the white gi (R1) on the left and the man in the gray gi (R2) on the right face each other in a bent-over grappling stance. The man in the gray gi (R2) grips the back of R1's neck, while R1 reaches his hand downward. Warm, natural indoor lighting illuminates the scene, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 grips the back of R1's neck rather than R1 gripping the back of R2's neck",
+    "R1 reaches his hand downward while R2 maintains the neck grip",
+    "R1 and R2 face each other in a bent-over grappling stance",
+    "dark floor mats in the martial arts studio",
+    "indoor martial arts studio with wooden walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 grip the back of R1's neck, rather than R1 gripping the back of R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips the back of R1's neck rather than R1 gripping R2's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one reaching his hand downward while R2 is the one applying the neck grip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches downward while R2 grips R1's neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 controlling R1 by holding the back of R1's neck during the grappling exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 controls R1 with a neck grip"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

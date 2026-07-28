@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T96",
+  "instruction": "Candid outdoor medium shot of a group in a grassy park. In the foreground, a bald light-skinned man with a beard in a dark blue t-shirt and black pants (R2) stands on the right, looking left. In front of him, a woman in a dark blue t-shirt and light blue jeans (R4) leans forward with hands outstretched to catch. In the background, a Black woman with an afro in a red t-shirt (R6), an Asian man in a red polo shirt (R3), and a woman in a black beanie and red t-shirt (R5) watch. The lighting is soft natural daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 is the person leaning forward with hands outstretched in a catching posture",
+    "R2 is standing nearby looking left rather than taking the catching posture",
+    "R3, R5, and R6 are background watchers rather than the foreground catcher",
+    "R4 is positioned in front of R2 while preparing to catch",
+    "the group is outdoors in a grassy park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person leaning forward with hands outstretched to catch, rather than R2 taking that catching posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the asymmetric catching duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing and looking left while R4 is the one leaning forward to catch, rather than R2 being the catcher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands while R4 performs the catching action"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R3, R5, and R6 watching from the background rather than being the foreground person with outstretched hands like R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3, R5, and R6 are watchers while R4 is the catcher"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have her hands outstretched in front of R2 as if preparing to catch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's catching body configuration relative to R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 upright near R4 while R4 leans forward into the catching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is upright while R4 assumes the catching posture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

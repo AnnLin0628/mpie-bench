@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__873554e12381__T1",
+  "instruction": "Cinematic full shot of a ballet performance on an indoor stage with a dark green festive backdrop. On the left, the female dancer in a pink tutu (R2) stands on pointe with her back to the camera. On the right, the male dancer in a red jacket and white tights (R1) stands facing her, supporting her by holding her waist. Soft stage lighting illuminates the couple, casting a warm glow against the cool, dark green background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 by holding her waist during the ballet performance",
+    "R2 is the dancer being supported by R1 rather than supporting him",
+    "R1 faces R2 while providing waist support",
+    "R2 stands on pointe with her back to the camera",
+    "The ballet performance takes place on an indoor stage with a dark green festive backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 by holding her waist, rather than R2 supporting R1 by holding his waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 by holding her waist during the ballet performance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer receiving support from R1, rather than R1 receiving support from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer being supported by R1 rather than supporting him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2 at the waist to stabilize her ballet pose, rather than R2 holding R1 at the waist to stabilize him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 by holding her waist during the ballet performance"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while holding her waist in the dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while providing waist support"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing on pointe while R1 supports her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on pointe with her back to the camera while being supported by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

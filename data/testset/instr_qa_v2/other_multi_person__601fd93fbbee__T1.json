@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__601fd93fbbee__T1",
+  "instruction": "Candid documentary photograph, medium shot. In a sunny outdoor park with a suspension bridge in the background, a group of friends are laughing together. The man in the red sweater (R1) stands in the center foreground with his back-three-quarters to the camera, head turned right as he laughs. To his right, the man with long hair (R3) in an olive shirt and sunglasses smiles widely. On the left in the background, the man in the striped shirt (R4) smiles towards them. On the far right, a cropped arm of an unseen bystander is partially visible. Bright natural daylight illuminates the scene with warm tones.",
+  "n_person": 6,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R1 is the center-foreground laughing participant with his back three-quarters to the camera and head turned right, rather than R3 having that posture",
+    "R3 is the long-haired participant in sunglasses smiling widely near R1, rather than R1 being the sunglasses-wearing participant",
+    "R4 is a background participant smiling toward R1 and R3, rather than being the central foreground laugher",
+    "R1, R3, and R4 are visually engaged in the same laughing group moment",
+    "R3 wears sunglasses while smiling",
+    "The scene is a sunny outdoor park with a suspension bridge in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the center-foreground man laughing with his back three-quarters to the camera and his head turned right, rather than R3 having that center-foreground back-turned posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 center-foreground laughing posture rather than R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the long-haired man in sunglasses smiling widely near R1, rather than R1 being the long-haired sunglasses wearer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sunglasses smiling role rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the background participant smiling toward R1 and R3, rather than R1 being the background participant smiling toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 background observer role toward R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 laughing while turning his head toward the group instead of facing straight away without engaging them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 engaged laughing body orientation"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

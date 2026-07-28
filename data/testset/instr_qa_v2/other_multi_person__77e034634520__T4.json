@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__77e034634520__T4",
+  "instruction": "Candid outdoor photograph, medium shot. On a sunny park lawn, the woman in the brown beanie (R4) in a red t-shirt is in the foreground right, turned away and looking down. In the background left, the bald man with a beard (R1) in a dark blue t-shirt claps and smiles warmly. Bright natural sunlight filters through the trees.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 claps and smiles warmly while R4 is turned away looking down",
+    "R4 is the foreground person turned away and looking down while R1 is in the background clapping",
+    "R1 is the clapping participant rather than R4",
+    "R4 is looking down rather than clapping",
+    "sunny park lawn setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 clapping and smiling warmly while R4 is turned away and looking down, rather than R4 clapping and smiling while R1 looks down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 claps and smiles while R4 looks down"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground person turned away and looking down, rather than R1 being the foreground person turned away and looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the turned-away looking-down role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the background participant who is clapping, rather than R4 being the background participant who is clapping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the clapping role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile warmly while clapping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles warmly and claps"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

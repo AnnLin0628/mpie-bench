@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T2",
+  "instruction": "Candid medium shot of four martial artists posing in front of a red brick wall. From left to right, a young girl in a red gi (R3) tilts her head and smiles, a girl with braided hair (R4), a boy with light brown hair (R2), and a blonde woman (R1) all stand side-by-side, looking at the camera with bright smiles. Their arms are wrapped around each other's shoulders in a warm group pose. The lighting is soft and even, highlighting the natural indoor setting.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R2 is in the shoulder-linked group pose between R4 and R1",
+    "R4 is in the shoulder-linked group pose between R3 and R2",
+    "R3 is an end participant in the shoulder-linked pose next to R4",
+    "R1 stands in the shoulder-linked group pose adjacent to R2",
+    "R3 tilts her head and smiles while in the group pose",
+    "The martial artists pose in front of a red brick wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the shoulder-linked group pose, is R2 positioned between R4 and R1 as their neighboring contact, rather than R1 being positioned between R4 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in the shoulder-linked group pose between R4 and R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the shoulder-linked group pose, is R4 positioned between R3 and R2 as their neighboring contact, rather than R3 being positioned between R4 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is in the shoulder-linked group pose between R3 and R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 an end participant in the shoulder-linked line next to R4, rather than R4 being the end participant next to R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is an end participant in the shoulder-linked pose next to R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in the shoulder-linked group pose with R2 as her adjacent neighbor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in the shoulder-linked group pose adjacent to R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

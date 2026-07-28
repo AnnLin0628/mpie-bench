@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__771e3c77ab03__T2",
+  "instruction": "Candid office photograph, medium close-up. In a bright office meeting room, two colleagues celebrate enthusiastically. The curly-haired man in a black blazer (R3) sits on the left, laughing joyfully with his fist raised in victory. Beside him on the right, the gray-haired man in a gray suit (R2) pumps his fist in the air, captured mid-motion in the foreground. A white conference table with papers sits in front of them, and office shelves are visible in the background. The lighting is bright and clean, emphasizing their energetic expressions.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the gray-haired man pumping his fist in the air mid-motion, rather than R3 doing that action",
+    "R3 is the curly-haired man sitting and laughing joyfully with his fist raised, rather than R2 being the seated laughing man",
+    "R2 and R3 are the celebrating colleagues with raised fists, with R2 pumping his fist and R3 laughing with his fist raised",
+    "a white conference table with papers is in front of the colleagues",
+    "the scene is a bright office meeting room with shelves in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the gray-haired man pumping his fist in the air mid-motion, rather than R3 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the active fist-pumping celebration role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the curly-haired man sitting and laughing joyfully with his fist raised, rather than R2 being the seated laughing man?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the seated laughing-with-raised-fist role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R3 both celebrating enthusiastically with raised fists, with R2 pumping his fist and R3 laughing with his fist raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 have distinct celebration actions"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T206",
+  "instruction": "A candid wide shot photograph captures an indoor motion capture studio featuring a dark red carpet and white walls. On the left side of the frame, the man in the black cap and blue shorts (R1) stands facing right, receiving a blow. On the right, the woman in the white patterned t-shirt and blue jeans (R2) balances on her left leg, delivering a high side kick with her right foot directly to the man's thigh. The scene is illuminated by bright, neutral overhead lights, creating a clear and evenly lit environment.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 delivers a high side kick to R1's thigh",
+    "R1 receives the blow from R2 rather than striking R2",
+    "R2 balances on her left leg while kicking with her right foot",
+    "R1 stands facing R2 as the person being kicked",
+    "Indoor motion capture studio with dark red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 delivering a high side kick directly to R1's thigh, rather than R1 delivering the kick to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers a high side kick to R1's thigh"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 receiving the blow from R2's foot, rather than R2 receiving a blow from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the blow from R2 rather than striking R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 balance on her left leg while striking R1 with her right foot, rather than R1 balancing and striking R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on her left leg while kicking with her right foot"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing as the person being kicked in the thigh by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands facing R2 as the person being kicked"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the active kicker whose right foot makes contact with R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers a high side kick to R1's thigh"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

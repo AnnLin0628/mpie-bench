@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03423d7e45eb__T5",
+  "instruction": "A full-shot cinematic still of a bright dance studio with large windows. On the left, the male dancer in the black top (R3) is in a wide squat with arms extended, holding hands with the female dancer in the purple top (R1) on the right, who stands on pointe. They look at each other. Natural daylight fills the room, casting soft shadows on the grey floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is in a wide squat with arms extended while holding hands with R1",
+    "R1 stands on pointe while holding hands with R3",
+    "R1 and R3 look at each other during the partnered dance contact",
+    "the setting is a bright dance studio with large windows",
+    "natural daylight casts soft shadows on the grey floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer in a wide squat with arms extended while holding hands with R1, rather than R1 being the one in the wide squat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the squatting, arms-extended dance role while contacting R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer standing on pointe while holding hands with R3, rather than R3 being the one on pointe?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the pointe-standing dance role while contacting R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 extend his arms from a wide squat to hold R1's hands, rather than R1 extending from a wide squat to hold R3's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the low extended-arm partnering position toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 holding hands as dance partners while R3 squats and R1 stands on pointe?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 have distinct partnered dance body configurations during hand contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R3 look at each other while maintaining their hand-hold dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 maintain mutual gaze during the partnered pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

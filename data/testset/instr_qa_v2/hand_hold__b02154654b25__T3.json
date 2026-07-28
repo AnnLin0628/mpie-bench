@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b02154654b25__T3",
+  "instruction": "Candid documentary full shot of a forest trail. On the left, the older man with a white beard (R1) in a rust shirt stands in profile. On the right, the curly-haired youth (R2) in a yellow plaid shirt bends forward, stumbling. The older man (R1) places his right hand on the shoulder of the youth (R2) to steady him. Sun-dappled light filters through the trees.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 steadies R2 rather than R2 steadying R1",
+    "R1 places his right hand on R2's shoulder",
+    "R2 bends forward and stumbles while R1 supports him",
+    "R1 is the standing supporter and R2 is the unsteady youth being steadied",
+    "The scene is a forest trail with sun-dappled light through trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 steadying R2 by placing a hand on R2's shoulder, rather than R2 steadying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 steadies R2 rather than R2 steadying R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one stumbling and needing support while R1 provides the stabilizing contact, rather than R1 stumbling while R2 supports him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 bends forward and stumbles while R1 supports him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use his right hand as the supporting hand on R2's shoulder, rather than R2 placing a hand on R1's shoulder to steady him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his right hand on R2's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the standing older man acting as the supporter while R2 is the curly-haired youth being steadied?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the standing supporter and R2 is the unsteady youth being steadied"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

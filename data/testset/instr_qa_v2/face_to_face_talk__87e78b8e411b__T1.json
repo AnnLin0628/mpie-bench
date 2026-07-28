@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__87e78b8e411b__T1",
+  "instruction": "Candid documentary medium shot of a cozy indoor living room. On a yellow couch, the person with short curly hair and glasses (R1) sits cross-legged on the right, holding a pen and looking at their companion. On the left, the person with short dark hair in the green sweatshirt (R2) gestures with one hand while holding a document and looking at R1. They sit side-by-side, discussing the paper over a wooden coffee table in the foreground holding a laptop and a cup of black coffee. Warm, soft indoor lighting illuminates the scene with natural tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the seated participant holding a pen and looking at R2",
+    "R2 is the seated participant gesturing with one hand while holding a document and looking at R1",
+    "R1 holds the pen while R2 holds the document, not the other way around",
+    "R2 leads the visible explanation by gesturing with the document while R1 attends with the pen",
+    "a document is being discussed between R1 and R2",
+    "a laptop and a cup of black coffee sit on the wooden coffee table",
+    "the scene is a cozy indoor living room with a yellow couch"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the pen while R2 holds the document, rather than R2 holding the pen and R1 holding the document?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the pen while R2 holds the document"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one gesturing with one hand while holding the document, rather than R1 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures while holding the document"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting cross-legged and looking at R2 while holding a pen?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's seated body configuration and pen-holding role"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 seated on a yellow couch in a cozy indoor living room?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "cozy living room setting with yellow couch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

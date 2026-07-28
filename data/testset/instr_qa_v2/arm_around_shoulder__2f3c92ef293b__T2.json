@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__2f3c92ef293b__T2",
+  "instruction": "A candid outdoor photograph with a full shot captures two women walking along a dirt path through a green field. On the left, the red-haired woman (R2) in a white shirt and light blue jeans walks forward, looking down with her hair blowing across her face while carrying a wooden easel. On the right, the dark-haired woman (R1) in a white shirt and blue jeans walks forward, smiling and holding a floral canvas painting. They walk side-by-side, holding hands in the center. The lighting is soft and diffused under an overcast sky, highlighting the natural green landscape and their white outfits.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the floral canvas painting",
+    "R2 carries the wooden easel",
+    "R1 is the painting-holder while R2 is the easel-carrier",
+    "R1 and R2 walk side-by-side while holding hands",
+    "wooden easel",
+    "floral canvas painting",
+    "outdoor dirt path through a green field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the floral canvas painting rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the floral canvas painting"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 carrying the wooden easel rather than R1 carrying it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the wooden easel"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "As they walk together, is R1 the person with the floral canvas painting while R2 is the person with the wooden easel, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the painting-holder while R2 is the easel-carrier"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side while holding hands with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

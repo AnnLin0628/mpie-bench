@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__804dbe9bfa6d__T2",
+  "instruction": "Candid family photograph, low-angle medium shot. In an indoor setting with a plain beige wall, the bearded man in the white t-shirt (R2) is positioned at the bottom, holding the baby in the white bodysuit (R1) high in the air. The bearded man's arms are outstretched, lifting the baby, who looks forward with an excited, wide-open mouth expression. Soft, natural light fills the space, highlighting the joyful interaction in a warm, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is positioned below R1 and supports R1's weight by holding the baby up in the air",
+    "R1 is the baby being lifted, rather than the person doing the lifting",
+    "R2's outstretched arms lift R1 high above him",
+    "R1 is held high in the air while looking forward with an excited open-mouth expression",
+    "The interaction takes place indoors against a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight from below, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 from below"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the baby being lifted high in the air by R2, rather than R2 being lifted by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is carried while R2 lifts"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's outstretched arms doing the lifting of R1, rather than R1's arms lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms lift R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned high above R2 while R2 remains at the bottom holding R1 up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is held above R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

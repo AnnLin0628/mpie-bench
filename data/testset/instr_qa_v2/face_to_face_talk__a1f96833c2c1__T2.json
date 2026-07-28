@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__a1f96833c2c1__T2",
+  "instruction": "Candid documentary medium shot of a bright indoor study room. On the left, the woman with dark hair and glasses (R2) sits looking down at an open book, holding a pen near her face. On the right, the man with short curly blonde hair (R1) sits looking down at papers on the wooden desk. They work side-by-side at the table, which is scattered with documents, a laptop, and a glass of water. Soft natural light from a window behind them fills the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds a pen near her face while looking down at an open book",
+    "R1 looks down at papers on the wooden desk rather than holding the pen",
+    "R1 and R2 sit side-by-side working at the same table with different study materials",
+    "an open book and pen are associated with R2's study activity",
+    "papers, a laptop, and a glass of water are scattered on the wooden desk",
+    "the scene is a bright indoor study room with natural light from a window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding a pen near her face while looking down at an open book, rather than R1 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a pen near her face while looking down at an open book"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down at papers on the wooden desk while R2 is the one with the open book and pen, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at papers on the wooden desk rather than holding the pen"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated side-by-side at the same table, with R1 working from papers and R2 working from an open book?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit side-by-side working at the same table with different study materials"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person using the pen near her face while studying, while R1 is focused on desk papers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's study role involves the pen and open book while R1's involves papers"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

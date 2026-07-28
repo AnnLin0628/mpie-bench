@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__43516a2a1164__T2",
+  "instruction": "Candid wedding photograph, full-length shot. In an outdoor paved courtyard, the groom in a beige suit (R2) and the bride in a white wedding dress (R1) stand back-to-back. The groom on the left faces left, while the smiling bride on the right faces right. They hold hands behind their backs. Soft natural daylight illuminates the scene, casting gentle shadows on the stone pavement.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the bride in a white wedding dress facing right while R2 is the groom in a beige suit facing left",
+    "R1 and R2 stand back-to-back rather than face-to-face",
+    "R1 and R2 hold hands behind their backs",
+    "R1 is positioned as the bride and R2 as the groom in the hand-holding pose",
+    "the scene is an outdoor paved courtyard"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the bride facing right while R2 is the groom facing left, rather than R2 being the bride facing right and R1 being the groom facing left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1/R2 asymmetric bride-groom orientation"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wear the white wedding dress as the bride while R2 wears the beige suit as the groom in their back-to-back hand-holding pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct bride/groom roles in the contact pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing back-to-back while maintaining contact by holding hands behind their backs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "back-to-back hand-holding body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 turned away from R2's front while still connected to R2 by their hands behind them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body orientation during the hand contact with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

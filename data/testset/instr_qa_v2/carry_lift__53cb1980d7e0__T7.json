@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__53cb1980d7e0__T7",
+  "instruction": "Cinematic film still, medium shot. Outdoors, a long-haired man in a brown plaid coat (R1) on the left and a woman in a red plaid blazer (R2) on the right stand shoulder-to-shoulder against a green wooden wall. Each holds a rabbit—his brown, hers black. The man looks directly forward, while the woman looks slightly to the left with a neutral expression. Soft natural daylight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the brown rabbit rather than the black rabbit",
+    "R2 holds the black rabbit rather than the brown rabbit",
+    "R1 looks directly forward while R2 looks slightly to the left",
+    "R1 and R2 stand shoulder-to-shoulder",
+    "brown rabbit held by R1",
+    "black rabbit held by R2",
+    "green wooden wall outdoors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the brown rabbit rather than the black rabbit held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the brown rabbit rather than R2's black rabbit"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the black rabbit rather than the brown rabbit held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the black rabbit rather than R1's brown rabbit"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing shoulder-to-shoulder while each holds a rabbit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand shoulder-to-shoulder with rabbits in hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

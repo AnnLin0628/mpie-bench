@@ -1,0 +1,92 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1efbb7b17d49__T3",
+  "instruction": "A candid outdoor photograph shows a sunny beach with a volleyball net. In a full shot, the woman in the black bikini (R2) on the left and the man in the blue tank top (R1) on the right walk forward on the sand. The woman (R2) smiles up at the man (R1) as they high-five with their raised inner hands. The man (R1), wearing sunglasses, smiles back. She carries an orange tote bag and a white bottle, while he holds a blue water bottle. Bright, warm daylight casts soft shadows on the sand, creating a cheerful, relaxed atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 smiles up at R1 while their raised inner hands meet in a high-five",
+    "R1 smiles back at R2 during the high-five",
+    "R1 and R2 walk forward together on the sand while high-fiving",
+    "R2 carries an orange tote bag and a white bottle",
+    "R1 holds a blue water bottle",
+    "sunny beach with a volleyball net"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward together on the sand while high-fiving with their raised inner hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk forward while high-fiving"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 carrying an orange tote bag and a white bottle?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 carries an orange tote bag and a white bottle"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a blue water bottle?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds a blue water bottle"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

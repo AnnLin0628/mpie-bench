@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1fb80cb80877__T3",
+  "instruction": "A professional black and white studio portrait captured in a medium shot at eye-level. In a minimalist indoor studio with a plain light gray background, the redhead woman (R1) stands on the left with her arms crossed, wearing a dark pinstriped blazer over a dark top and a pearl necklace, looking slightly away from the camera with a confident, neutral expression. Standing close beside her on the right, the dark-haired woman (R2) wears a light wrap blouse with her hands clasped in front of her waist, looking directly at the camera with a calm, serious expression. The monochromatic image features soft, balanced studio lighting that highlights their professional poses.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has her arms crossed while R2 has her hands clasped in front of her waist",
+    "R1 looks slightly away from the camera while R2 looks directly at the camera",
+    "R1 is the redhead woman in the portrait and R2 is the dark-haired woman",
+    "R2 stands close beside R1 with clasped hands while R1 maintains a crossed-arms pose",
+    "R1 wears a pearl necklace",
+    "The portrait is set in a minimalist indoor studio with a plain light gray background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have her arms crossed while R2 has her hands clasped in front of her waist, rather than R2 having crossed arms and R1 having clasped hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric arm and hand pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking slightly away from the camera while R2 looks directly at the camera, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric gaze direction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person with her hands clasped in front of her waist while R1 is the person keeping her arms crossed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "labeled body configuration roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the redhead woman with the confident crossed-arms pose, while R2 is the dark-haired woman with a calm clasped-hands pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "labeled person roles and poses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

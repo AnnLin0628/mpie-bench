@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T22",
+  "instruction": "Clean studio photograph, full shot. In a minimalist indoor studio with a beige wall and white floor, three young gymnasts pose. On the left, the dark-haired girl (R1) in a beige long-sleeve top and shorts holds her leg in a vertical split. On the right, the dark-haired girl (R6) in a matching beige outfit holds her leg in a vertical split. In the center foreground, the blonde girl (R5) in a beige long-sleeve top and shorts holds a backbend bridge pose, tilting her head to look at the camera. Soft, diffused natural light illuminates the warm, neutral-toned scene.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R5 performs a backbend bridge pose in the center foreground while R1 performs a vertical split",
+    "R5 performs a backbend bridge pose while R6 performs a vertical split",
+    "R1 and R6 perform vertical split poses while R5 performs a backbend bridge",
+    "R5 tilts her head to look at the camera during the bridge pose",
+    "the gymnasts are in a minimalist indoor studio with a beige wall and white floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the gymnast holding a backbend bridge pose rather than R1 holding that bridge pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 performs the backbend bridge role instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding a vertical split pose rather than R5 holding that vertical split pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs a vertical split while R5 performs a different pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 holding a vertical split pose rather than R5 holding that vertical split pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 performs a vertical split while R5 performs the backbend bridge"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R6 both holding vertical split poses while R5 holds a backbend bridge pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R6 share the vertical split role while R5 has the bridge role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

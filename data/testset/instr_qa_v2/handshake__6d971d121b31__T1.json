@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__6d971d121b31__T1",
+  "instruction": "A candid sports photograph with a medium full shot captures two squash players on an indoor court with wooden flooring and white walls. On the left, the blonde woman in the black skirt (R2) stands in profile facing right, smiling as she raises her left hand. On the right, the man with the white headband (R1) stands facing her, raising his right hand to meet hers in a high-five. Both players hold wooden squash rackets in their opposite hands. The scene is illuminated by bright, even indoor lighting, highlighting the clean athletic attire and the red boundary lines on the background wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 raises his right hand to meet R2's raised left hand for the high-five",
+    "R2 is the player raising her left hand while R1 raises his right hand toward it",
+    "R1 and R2 face each other while making the high-five gesture",
+    "R1 and R2 each hold a wooden squash racket in the hand opposite their raised high-five hand",
+    "The interaction takes place on an indoor squash court with wooden flooring and white walls",
+    "Red boundary lines are visible on the background wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the player raising her left hand while R1 raises his right hand toward it, rather than R1 being the left-hand-raising player?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the player raising her left hand while R1 raises his right hand toward it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a high-five with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the high-five, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

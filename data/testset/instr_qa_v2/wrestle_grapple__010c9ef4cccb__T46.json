@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T46",
+  "instruction": "Candid documentary photograph, medium shot from behind. Inside a judo dojo with training equipment on the left, the young man in the white gi (R2) is seen from behind in the foreground, wearing a black belt. He is grappling with the woman in the blue gi (R1) on the left, who has her hair in a bun. R1's right arm is hooked over R2's shoulder as they practice a throw. Soft indoor lighting illuminates the scene, highlighting the contrast between the white and blue uniforms against the warm beige wall.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 hooks her right arm over R2's shoulder during the grapple",
+    "R2 is the person whose shoulder is hooked by R1 while they practice a throw",
+    "R1 and R2 are grappling as judo partners in a throw-practice configuration",
+    "R2 is seen from behind in the foreground while engaged with R1",
+    "judo training equipment is visible in the dojo",
+    "the scene takes place inside a judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one hooking her right arm over R2's shoulder, rather than R2 hooking his right arm over R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 applies the over-shoulder hook to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is being hooked by R1 during the throw practice, rather than R1 being the one whose shoulder is hooked by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's shoulder hook"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 grappling as judo partners while practicing a throw, with R1's arm positioned over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in a judo throw-practice grapple"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seen from behind in the foreground while engaged in the grapple with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground grappler seen from behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

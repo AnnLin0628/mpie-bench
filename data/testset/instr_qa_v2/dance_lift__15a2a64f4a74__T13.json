@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T13",
+  "instruction": "A clean studio photograph, full shot at eye-level, captures a bright indoor ballet studio with a wooden barre against a white wall. On the left, the dark-haired girl in a pink leotard (R2) stands with her body angled left, looking down with hands clasped. Next to her on the right, the blonde girl in a pink leotard (R1) stands facing forward, smiling slightly while touching her left hand to her ear. They stand close together in front of the barre under soft, bright studio lighting that creates a clean, neutral-toned atmosphere.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 touches her left hand to her own ear while R2 does not",
+    "R2 looks down with hands clasped while R1 does not",
+    "R1 faces forward and smiles slightly while R2 angles her body and gaze downward",
+    "R1 and R2 stand close together in front of a wooden ballet barre",
+    "the setting is a bright indoor ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the girl touching her left hand to her own ear, rather than R2 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the self-touch action at her ear"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the girl looking down with her hands clasped, rather than R1 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the downward-looking, hands-clasped pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her hands clasped while R1 uses one hand to touch her own ear?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct hand poses for R2 and R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

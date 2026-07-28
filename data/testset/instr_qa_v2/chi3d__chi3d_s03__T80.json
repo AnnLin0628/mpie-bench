@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T80",
+  "instruction": "Candid documentary photograph, wide shot, high angle. Inside a motion capture studio with a red carpet, the woman in the white t-shirt and blue jeans (R2) stands on the left, facing right. She shakes right hands with the man in the dark polo shirt and blue shorts (R1), who stands on the right facing left. Bright overhead fluorescent lighting illuminates the scene, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 performs the right-hand shake with R1",
+    "R1 is the counterpart in the right-hand shake with R2",
+    "R2 faces toward R1 while R1 faces back toward R2 during the contact",
+    "Both labeled participants use their right hands in the handshake",
+    "The interaction occurs inside a motion capture studio with a red carpet floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the counterpart whom R2 shakes right hands with, rather than R2 occupying R1's counterpart role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the counterpart in the right-hand shake with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face toward R1 while R1 faces back toward R2 during their hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces toward R1 while R1 faces back toward R2 during the contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 joined specifically by their right hands during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "Both labeled participants use their right hands in the handshake"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

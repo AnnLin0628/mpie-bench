@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T24",
+  "instruction": "Candid action photograph, medium shot at eye-level. Under a covered outdoor pavilion with white metal trusses and blue pillars, two young men are sparring. On the left, the boxer in the blue tank top (R2) faces right, tightly blocking with his gloves covering his face. On the right, the boxer in the beige t-shirt (R1) stands with his back to the camera, throwing a right-hand punch. The boxer in the beige t-shirt (R1) strikes with a right punch while the boxer in the blue tank top (R2) maintains a tight defensive block. The scene is illuminated by bright, natural daylight with soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the attacking boxer throwing a right-hand punch while R2 is the defending boxer blocking",
+    "R2 maintains a tight defensive block with gloves covering his face rather than punching R1",
+    "R1's punch is directed at R2 while R2 protects himself from that punch",
+    "R2's boxing gloves are raised to cover his face for defense",
+    "The sparring takes place under a covered outdoor pavilion with white metal trusses and blue pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a right-hand punch at R2 while R2 maintains a defensive block, rather than R2 punching while R1 blocks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the attacking boxer and R2 is the defending blocker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 cover his face with gloves to defend against R1's punch, rather than R1 covering his face to defend against R2's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses gloves defensively against R1's strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer delivering the right-hand strike while R2 is the boxer receiving it behind a tight guard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 delivers the strike and R2 guards against it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned with his back to the camera as he throws the punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration while punching"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 tightly blocking with his gloves up over his face during the sparring exchange with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's defensive body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

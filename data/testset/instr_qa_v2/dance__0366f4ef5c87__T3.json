@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__0366f4ef5c87__T3",
+  "instruction": "Candid party photograph, medium shot from behind. Indoors at a party with purple ambient light and a reel-to-reel player on the wall. The short-haired blonde woman (R1) in a pink polo shirt and blue jeans is seen from the back. Beside her, the ginger man with a beard (R2) in a striped shirt is also facing away, wrapping his right arm around her lower back as they stand together. The scene is illuminated by soft purple and pink party lights that cast gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps his right arm around R1's lower back",
+    "R1 is the person receiving the lower-back arm contact from R2",
+    "R2 is the visible arm-around-contact maker while standing beside R1",
+    "R1 and R2 are both facing away while standing together in contact",
+    "reel-to-reel player on the wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his right arm around R1's lower back, rather than R1 wrapping her arm around R2's lower back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his right arm around R1's lower back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose lower back is being held by R2's arm, rather than R2 being held at the lower back by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the lower-back arm contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one making the visible side-contact with his arm around R1, rather than R1 being the one making that arm-around contact around R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the visible arm-around-contact maker"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

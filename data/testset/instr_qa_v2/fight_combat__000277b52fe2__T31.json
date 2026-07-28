@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T31",
+  "instruction": "Cinematic action still, full shot. Inside a misty MMA gym with metal rigs, a sparring session is underway. On the left, the shirtless man in black shorts (R1) stands with his back partially turned, raising his black gloves to block. On the right, the bearded shirtless man in patterned leggings (R3) balances on one leg, executing a high roundhouse kick with his right leg aimed at the opponent's head. The bearded shirtless man looks intently at his target. Cool overhead spotlights illuminate the scene, casting dramatic shadows through the thick white smoke in the background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 executes a high roundhouse kick aimed at R1's head",
+    "R1 raises black gloves to block R3's attack",
+    "R3 balances on one leg while kicking toward R1",
+    "R3 looks intently at R1 as the target",
+    "R1 has black gloves used for blocking",
+    "the sparring scene is inside a misty MMA gym with metal rigs"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 executing a high roundhouse kick aimed at R1's head, rather than R1 kicking toward R3's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 attacks R1 with a high roundhouse kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising his black gloves to block R3's incoming kick, rather than R3 using gloves to block an attack from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends against R3's kick with raised gloves"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 balancing on one leg while delivering the kick at R1, rather than R1 balancing on one leg to kick R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the one-legged kicker targeting R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 play the defensive blocking role with his gloves raised while R3 plays the attacking kicking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 blocks and R3 attacks"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 look intently at R1 as his target while executing the kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 focuses on R1 as the target"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

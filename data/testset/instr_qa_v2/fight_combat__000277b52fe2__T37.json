@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T37",
+  "instruction": "Cinematic film still, full shot. Inside a martial arts gym with a white training mat, pull-up racks, and a red wall mural, two men are sparring. On the left, the barefoot man in the black t-shirt and black leggings (R1) stands in a defensive boxing stance with his hands raised. On the right, the man in the black t-shirt, black shorts, and dark athletic shoes (R2) lunges forward in an active stance, closing the distance. In the background, a blurred bystander in a patterned shirt stands near a mirror. Moody gym lighting casts soft shadows on the mat, highlighting the dynamic action against the warm red background.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 lunges forward and closes distance while R1 remains defensive",
+    "R1 keeps a defensive boxing stance with hands raised while R2 attacks forward",
+    "R1 and R2 are sparring as opponents with distinct defensive versus advancing roles",
+    "white training mat beneath the sparring action",
+    "pull-up racks in the martial arts gym",
+    "red wall mural in the gym background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward and closing the distance on R1, rather than R1 lunging forward at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the advancing sparring partner while R1 is not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding a defensive boxing stance with his hands raised while R2 is the one in the active forward stance, rather than the roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends with raised hands while R2 advances"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sparring as opponents, with R1 positioned as the defender and R2 positioned as the attacker closing in?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct sparring roles for R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a white training mat visible under the sparring action?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "white training mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

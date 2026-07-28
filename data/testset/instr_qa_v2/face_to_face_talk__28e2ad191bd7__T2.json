@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__28e2ad191bd7__T2",
+  "instruction": "Candid documentary photograph, medium close-up at eye-level. In a bright indoor dining room, the bald man in the reddish-brown shirt (R2) sits on the left, looking closely towards the right. Beside him, the woman with curly hair (R1), wearing a black sleeveless top and a pearl necklace, holds a piece of sushi with chopsticks in her right hand, bringing it near her mouth. The bald man (R2) watches her action intently. Soft natural light fills the space, highlighting their expressions with a warm color palette and a softly blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a piece of sushi with chopsticks and brings it near her mouth rather than R2 doing so",
+    "R2 watches R1's sushi-eating action intently rather than R1 watching R2 eat",
+    "R1 is the active eater while R2 is the observer of her action",
+    "a piece of sushi and chopsticks are used in the interaction",
+    "the scene is a bright indoor dining room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding a piece of sushi with chopsticks and bringing it near her mouth, rather than R2 doing so?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a piece of sushi with chopsticks and brings it near her mouth rather than R2 doing so"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 watching R1's sushi-eating action intently, rather than R1 watching R2 eat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 watches R1's sushi-eating action intently rather than R1 watching R2 eat"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the active person eating with chopsticks while R2 serves as the close observer of her action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active eater while R2 is the observer of her action"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

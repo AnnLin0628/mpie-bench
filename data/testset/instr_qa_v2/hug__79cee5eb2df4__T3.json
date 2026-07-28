@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__79cee5eb2df4__T3",
+  "instruction": "Candid cinematic film still, medium shot. In a concrete underground parking garage, the woman in the black bucket hat (R2) stands in the center, smiling as she holds up the leg of the laughing woman in the black beanie (R1) on the left. On the right, the woman in the olive vest (R3) stands with her arm wrapped around the shoulder of the woman in the black bucket hat (R2), laughing joyfully. The group is captured in a playful, dynamic pose. Cool overhead fluorescent lighting casts a soft glow on them against the dark garage interior.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 supports and holds up R1's leg",
+    "R1 is the person whose leg is being held up by R2",
+    "R3 wraps an arm around R2's shoulder",
+    "R2 is the central contact point between R1's lifted leg and R3's arm-around-shoulder contact",
+    "the interaction takes place in an underground parking garage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding up R1's leg, rather than R1 holding up R2's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports and holds up R1's leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose leg is being held by R2, rather than R2 being the person whose leg is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose leg is being held up by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 wrap her arm around R2's shoulder, rather than R2 wrapping her arm around R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps an arm around R2's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person simultaneously involved with R1's lifted leg and R3's arm-around-shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central contact point between R1's lifted leg and R3's arm-around-shoulder contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

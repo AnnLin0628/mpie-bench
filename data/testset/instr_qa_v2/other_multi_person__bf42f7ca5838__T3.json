@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__bf42f7ca5838__T3",
+  "instruction": "Candid street photograph, medium wide shot. On an outdoor city sidewalk, three men laugh while reenacting a pointing meme. The man with glasses and curly hair in a tan jacket (R3) stands on the left in profile, pointing right with a smile. The man with dark curly hair in a light brown jacket (R1) stands in the center background, pointing to both sides. The man with glasses and a dark brown jacket (R2) stands on the right in profile, pointing left. Natural overcast daylight illuminates the warm-toned scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 points to both sides as the central participant in the pointing meme",
+    "R3 points one way toward the other participants rather than doing R1's two-sided pointing role",
+    "R2 points back toward the group with a single pointing gesture rather than taking R1's two-sided role",
+    "R2 and R3 act as profile participants pointing inward while R1 points both ways",
+    "outdoor city sidewalk under natural overcast daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant pointing to both sides, rather than R2 being the one who points to both sides?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric two-sided pointing role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 making a single pointing gesture toward the other participants, rather than R3 taking R1's two-sided pointing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has a one-direction pointing role instead of R1's two-sided role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pointing back toward the group with one pointing gesture, rather than R1 being limited to that single pointing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has a one-direction pointing role while R1 points both ways"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 participate as the center-background man who points to both sides during the meme reenactment?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration and action in the pointing meme"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R2 and R3 serve as the profile participants who point inward toward the meme exchange while R1 points both ways?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 have inward-facing single-pointing roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

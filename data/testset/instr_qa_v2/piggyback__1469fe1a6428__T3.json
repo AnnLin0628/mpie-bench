@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__1469fe1a6428__T3",
+  "instruction": "Candid action photograph, full shot. In a grassy field, the man in the blue plaid shirt and black pants (R1) holds the woman in the white long-sleeve top and white pants (R2) in a spinning embrace. The woman (R2) is held horizontally with her back to the camera and legs kicked up. In the far background, two tiny, blurred figures stand on the grass. Warm golden hour light with a bright sunburst illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports and holds R2 during the spinning embrace",
+    "R2 is the person being carried horizontally rather than supporting R1",
+    "R1 is the holder while R2's legs are kicked up",
+    "R2 has her back to the camera while held by R1",
+    "The interaction takes place in a grassy field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and supporting R2 in the spinning embrace, rather than R2 holding and supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports and holds R2 during the spinning embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person carried horizontally by R1, rather than R1 being carried horizontally by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being carried horizontally rather than supporting R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 keep the holding role while R2's legs are kicked up, rather than R2 keeping the holding role while R1's legs are kicked up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the holder while R2's legs are kicked up"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 held with her back to the camera while R1 supports her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera while held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

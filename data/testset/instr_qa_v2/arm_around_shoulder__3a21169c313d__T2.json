@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__3a21169c313d__T2",
+  "instruction": "Candid outdoor photograph, medium shot. Next to a textured white wall in bright daylight, the man in the beige polo shirt (R1) stands on the left, looking directly at the camera with a relaxed expression. The woman in the black strapless top and white jacket (R2) stands on the right, leaning her arm on the wall behind him and looking at him with a warm smile. Strong sunlight from the left casts sharp shadows on the wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans her arm on the wall behind R1 rather than R1 leaning his arm behind R2",
+    "R1 looks directly at the camera while R2 looks at R1",
+    "R2 is the person using the wall for arm support behind R1",
+    "R1 stands relaxed in front of/near R2 while R2 angles attention toward him",
+    "a textured white wall is used as the nearby contact surface",
+    "the scene is outdoors in bright daylight with sharp wall shadows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning her arm on the wall behind R1, rather than R1 leaning his arm on the wall behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her arm on the wall behind R1 rather than R1 leaning his arm behind R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking directly at the camera while R2 looks at R1, rather than R2 looking directly at the camera while R1 looks at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks directly at the camera while R2 looks at R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 using the wall behind R1 as the support surface for her arm while R1 stands relaxed near her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person using the wall for arm support behind R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 directing a warm smile toward R1 while R1 keeps his attention on the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands relaxed in front of/near R2 while R2 angles attention toward him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

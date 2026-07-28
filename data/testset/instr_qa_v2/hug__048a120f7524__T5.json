@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T5",
+  "instruction": "Candid, intimate close-up photograph in a minimalist indoor studio. The long-haired person in a green shirt (R2) is in the foreground with eyes closed and a peaceful expression, head tilted back. The blonde-haired man in a gray shirt (R1) is in the background, eyes closed, resting his face against the long-haired person's temple. They are in a gentle embrace with soft, diffused lighting and a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests his face against R2's temple",
+    "R2 is the foreground person with head tilted back while R1 is behind him",
+    "R2 receives the temple contact from R1 rather than giving that contact to R1",
+    "R1 and R2 are in a gentle close embrace",
+    "minimalist indoor studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting his face against R2's temple, rather than R2 resting his face against R1's temple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests his face against R2's temple"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the foreground person with head tilted back while R1 is behind him making face-to-temple contact, rather than R1 being the foreground head-tilted person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 foreground head-tilted role while R1 contacts from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 receive the gentle temple contact from R1, rather than R1 receiving temple contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's temple contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in the background leaning close against R2 while R2 remains in the foreground with eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 background contact role with R2 foreground"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T264",
+  "instruction": "Candid wide-angle photograph from a high angle of an indoor studio with a red carpet. On the left, the woman in the white patterned t-shirt and blue jeans (R2) stands facing forward with her left hand on her hip. On the right, the man in the black cap and dark polo shirt (R1) stands facing left, extending his right arm to touch her shoulder. Overhead fluorescent lights illuminate the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his right arm to touch R2's shoulder",
+    "R2 is the person whose shoulder is touched by R1",
+    "R2 keeps her left hand on her hip while R1 makes shoulder contact",
+    "R1 faces toward R2 while making the shoulder touch",
+    "the scene is an indoor studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one extending his right arm to touch R2's shoulder, rather than R2 extending her arm to touch R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the shoulder-touch contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the shoulder touch from R1, rather than R1 receiving a shoulder touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's shoulder touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face toward R2 while reaching out to touch her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 and reaches toward her shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her left hand on her hip while R1 touches her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 poses with hand on hip while being touched by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

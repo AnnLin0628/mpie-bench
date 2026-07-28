@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T16",
+  "instruction": "A candid outdoor full shot of a sunny park with lush green grass and leafy trees. In the center foreground, the large Black man (R1) in a dark blue t-shirt and dark pants runs forward excitedly with his arms raised and his tongue sticking out. In the left background, the bald man (R2) in a dark blue t-shirt and black pants cheers with raised arms. In the right background, the Black woman with an afro (R6) in a red t-shirt and ripped jeans stands smiling. On the far right, a partially cropped bystander in green is visible. Bright natural sunlight illuminates the scene.",
+  "n_person": 10,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 runs forward excitedly with his arms raised and tongue sticking out rather than R2 doing that action",
+    "R2 cheers with raised arms in the background rather than being the forward runner like R1",
+    "R6 stands smiling as an observer while R1 is the active runner",
+    "R1 is positioned as the central foreground runner",
+    "R6 is smiling while standing in the background",
+    "The scene is a sunny outdoor park with green grass and leafy trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person running forward excitedly with his arms raised and tongue sticking out, rather than R2 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the active forward-running role instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person cheering with raised arms in the background, rather than R1 being the background cheerer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the cheering background role instead of R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 standing and smiling as an observer, rather than being the excited forward runner like R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is an observing smiler while R1 is the active runner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 run forward in the center foreground with his arms raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body action is running forward with raised arms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

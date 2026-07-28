@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__bc4d79bbe58d__T5",
+  "instruction": "A candid outdoor photograph with a medium shot captures a sunny beach scene with a clear blue sky and ocean waves. On the right, the blonde woman in a yellow pineapple-print top (R1) stands in profile facing left, smiling warmly. She holds the toddler girl in a blue swimsuit (R2) aloft on the left. The toddler girl (R2) is held high in the air by the blonde woman (R1) and looks down at her. The bright, direct sunlight illuminates the scene, highlighting the vibrant blue of the water and sky.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lifts and supports R2 high in the air",
+    "R2 is the toddler being held aloft by R1",
+    "R1 stands below while R2 is elevated above her",
+    "R2 looks down toward R1 while being held",
+    "sunny beach setting with ocean waves and clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's body high in the air, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts and supports R2 high in the air"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being held aloft by R1, rather than R1 being held aloft by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the toddler being held aloft by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned as the lower supporter while R2 is elevated above her, rather than R2 being the lower supporter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands below while R2 is elevated above her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand while holding R2 up in the air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands and holds R2 aloft"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look down toward R1 while R1 holds her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks down toward R1 while being held"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__77e034634520__T2",
+  "instruction": "Candid outdoor photograph, medium shot. On a sunny park lawn, the woman in the brown beanie (R4) in a red t-shirt dances playfully in the foreground, sticking her tongue out. In the background, the bald man with a beard (R1) in a dark blue t-shirt claps on the left, and the woman with an afro (R3) in a red t-shirt dances on the right. Warm sunlight filters through the trees.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R4 is the playful foreground dancer sticking her tongue out",
+    "R1 is the background participant clapping rather than dancing in the foreground",
+    "R3 is the background dancer rather than the clapping participant",
+    "R1 claps while R4 dances playfully",
+    "sunny park lawn with trees and warm sunlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person dancing playfully in the foreground and sticking her tongue out, rather than R1 doing that foreground tongue-out dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the playful foreground dancer sticking her tongue out"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person clapping in the background while R4 dances in the foreground, rather than R4 being the background clapper?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the background participant clapping rather than dancing in the foreground"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 dancing in the background while R1 is the one clapping, rather than R3 being the clapping participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the background dancer rather than the clapping participant"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have the clapping role while R4 has the playful dancing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 claps while R4 dances playfully"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 positioned as the main foreground dancer, with R1 and R3 performing their actions in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the foreground performer while R1 and R3 are background participants"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

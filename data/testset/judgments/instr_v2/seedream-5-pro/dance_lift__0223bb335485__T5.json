@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T5",
+  "model_id": "seedream-5-pro",
+  "S_instr": 0.8529411764705882,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.75,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina holding the barre while extending her left leg back in an arabesque, rather than R2 being the one holding the barre?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "foreground dancer holds barre and extends a leg back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina in the background performing the synchronized arabesque, rather than R1 being the background synchronized dancer?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "background dancer mirrors the arabesque"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 performing an arabesque that is synchronized with R1's pose?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "both dancers hold matching arabesque poses"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance_lift__0223bb335485__T5",
+    "model_id": "seedream-5-pro",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 11.11,
+    "written_at": "2026-07-17T16:27:13",
+    "gen_relpath": "outputs/seedream-5-pro/dance_lift__0223bb335485__T5.png",
+    "qa_relpath": "instr_qa_v2/dance_lift__0223bb335485__T5.json",
+    "n_questions": 3
+  }
+}

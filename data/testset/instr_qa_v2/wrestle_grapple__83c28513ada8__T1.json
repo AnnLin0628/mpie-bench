@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__83c28513ada8__T1",
+  "instruction": "Candid fitness photograph, full shot, high-angle diagonal view of an indoor gym with wooden floor panels and black rubber mats. In the background, the woman in the black crop top (R1) performs a push-up with her hands on a green medicine ball, looking down. In the foreground, the woman in the blue tank top (R2) performs a push-up with her hands on a red medicine ball, looking forward. The two women are positioned diagonally from each other, executing synchronized exercises under bright overhead gym lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 does a push-up with her hands on a green medicine ball",
+    "R2 does a push-up with her hands on a red medicine ball",
+    "R1 looks down during her push-up while R2 looks forward",
+    "R1 and R2 perform synchronized push-up exercises",
+    "green and red medicine balls are used as hand-support props",
+    "the setting is an indoor gym with wooden floor panels and black rubber mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman performing a push-up with her hands on a green medicine ball, while R2 performs a push-up with her hands on a red medicine ball?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses the green medicine ball and R2 uses the red medicine ball"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking forward during her push-up, rather than R1, who is looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks forward while R1 looks down"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both performing push-ups with their hands supported on medicine balls?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both use medicine balls for push-up support"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 doing her push-up in the background while R2 does her push-up in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in the background and R2 is in the foreground during synchronized push-ups"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

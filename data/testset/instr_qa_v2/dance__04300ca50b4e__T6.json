@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T6",
+  "instruction": "A candid studio photograph shows a medium full shot of two women dancing against a plain beige wall. On the left, the woman with an afro in a brown button-up dress (R1) is turned to the right, looking at her companion with her left hand raised near her head. On the right, the woman with short brown hair in a striped shirt and white trousers (R2) leans back playfully, touching her neck with her right hand while looking directly at the camera. Soft, warm studio lighting illuminates the pair, emphasizing their joyful, synchronized movement.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is turned toward R2 and looking at R2 while dancing",
+    "R2 leans back playfully while looking directly at the camera",
+    "R1 raises her left hand near her head",
+    "R2 touches her own neck with her right hand",
+    "the two women dance together in synchronized movement",
+    "the scene is a studio photograph against a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 turned toward R2 and looking at R2, rather than R2 being turned toward and looking back at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is oriented toward and looking at R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning back playfully while looking directly at the camera, rather than R1 taking that leaning-back camera-facing pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans back and looks at the camera"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have her left hand raised near her head, rather than R2 having that raised-left-hand-near-head gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises her left hand near her head"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 touch her own neck with her right hand while R1 instead keeps a hand raised near her head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 touches her neck while R1 uses a different dance gesture"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 dancing together with different poses, R1 turned toward her companion and R2 leaning back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the pair dance together in asymmetric poses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

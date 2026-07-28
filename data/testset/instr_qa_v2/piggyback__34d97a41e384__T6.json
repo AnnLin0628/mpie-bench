@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__34d97a41e384__T6",
+  "instruction": "A candid outdoor photograph with a low-angle medium full shot shows a couple embracing on a mossy rock at a forest edge. The man in the beige fleece jacket (R1) stands on the left, looking up and to the right with a soft smile. The woman in the red puffer vest (R2) stands on the right, hugging him closely and looking in the same direction. The man has his arm around her back while she leans into his chest. Dense green trees fill the background. The scene is illuminated by natural forest light, highlighting earthy tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans into R1's chest rather than R1 leaning into R2's chest",
+    "R1 has his arm around R2's back while R2 is the one leaning into him",
+    "R2 hugs R1 closely while R1 supports the embrace with an arm around her back",
+    "R1 and R2 stand together on a mossy rock",
+    "dense green trees fill the forest-edge background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning into R1's chest, rather than R1 leaning into R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans into R1's chest rather than the reverse"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have his arm around R2's back while R2 leans into him, rather than R2 being the one whose chest R1 leans into?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's arm-around-back support with R2 leaning into him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding R2 around her back during the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 around her back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

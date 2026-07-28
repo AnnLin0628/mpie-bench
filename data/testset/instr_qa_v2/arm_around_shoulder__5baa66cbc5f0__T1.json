@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__5baa66cbc5f0__T1",
+  "instruction": "Candid photographic full shot from behind of two young women running down an empty city street. On the left, the blonde woman in a black puffer vest and green pants (R2) runs forward while looking back over her shoulder. On the right, the red-haired woman in a light blue knit vest and brown pleated skirt (R1) runs alongside her. They hold hands as they jog away from the camera down the asphalt road. Soft, natural daylight illuminates the scene, casting gentle shadows on the street.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 runs forward while looking back over her shoulder, rather than R1 being the one looking back",
+    "R1 runs alongside R2 while R2 is the woman looking back over her shoulder",
+    "R1 and R2 hold hands as they jog away from the camera",
+    "R2 is the hand-holding partner who looks back while running, while R1 continues alongside her",
+    "the two women run down an empty city street in natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one running forward while looking back over her shoulder, rather than R1 being the one looking back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks back over her shoulder while running"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 running alongside the woman who looks back, rather than R1 being the woman who looks back over her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 runs alongside R2 while R2 looks back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While R1 and R2 hold hands, is R2 the hand-holding partner who looks back over her shoulder rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds hands with R1 while looking back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands as they jog away from the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 jog away while holding hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep running alongside R2 while their hands remain joined?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 runs alongside R2 in hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

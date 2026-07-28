@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T3",
+  "instruction": "Studio photograph, full shot, high angle. In a minimalist white studio, the dancer in the white outfit (R2) on the left crouches in a low stance with arms extended forward, while the dancer in the black outfit (R1) on the right stands close behind, leaning back with arms extended outward. They pose in a synchronized, defensive-looking contemporary dance stance. Bright, clean studio lighting casts soft, distinct shadows on the white floor, emphasizing the high-contrast black and white palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 crouches in a low stance with arms extended forward while R1 does not",
+    "R1 stands close behind R2 while leaning back with arms extended outward",
+    "R2 holds the lower forward-reaching role and R1 holds the upright backward-leaning role",
+    "R1 and R2 pose close together in a synchronized defensive-looking contemporary dance stance",
+    "minimalist white studio with bright clean lighting and soft shadows on the floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer crouching in a low stance with arms extended forward, rather than R1 being the crouching forward-reaching dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 crouches in a low stance with arms extended forward while R1 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer standing close behind and leaning back with arms extended outward, rather than R2 standing behind R1 in that backward-leaning pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands close behind R2 while leaning back with arms extended outward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 take the lower forward-reaching role while R1 takes the upright backward-leaning role, rather than those roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the lower forward-reaching role and R1 holds the upright backward-leaning role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

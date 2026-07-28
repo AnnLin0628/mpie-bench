@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b8719b45fe05__T1",
+  "instruction": "Candid outdoor full-shot photograph of a couple walking down a rocky path next to a blue-grey marble cliff. On the left, the woman in the white sweater and tan hat (R1) walks downward, touching the marble wall with her right hand while looking down. On the right, the bearded man in the rust-orange sweater and dark fedora (R2) walks alongside her, his gaze cast downward. The woman and the bearded man hold hands, her left hand clasped in his right. Soft natural daylight illuminates the scene, highlighting the cool tones of the stone and the warm colors of their knitwear.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person touching the blue-grey marble wall with her right hand while R2 walks without touching it",
+    "R1's left hand is clasped with R2's right hand, not the reverse hand pairing",
+    "R2 walks alongside R1 while holding R1's left hand with his right hand",
+    "A blue-grey marble cliff or wall is beside the couple and is touched by R1",
+    "The couple is walking down a rocky outdoor path"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 touching the blue-grey marble wall with her right hand while R2 is not the one touching the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person touching the marble wall"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's right hand with her left hand, rather than R2 holding R1's right hand with his left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1-left-hand to R2-right-hand clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk alongside R1 while his right hand is clasped with R1's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand-holding role with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

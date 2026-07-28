@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__08bdcee7081f__T4",
+  "instruction": "A candid outdoor photograph captures an advanced partner balance. On beige concrete blocks under a cloudy sky, the woman in the black crop top and denim shorts (R1) balances on the thigh of the man in the black t-shirt and blue jeans (R2). She leans her torso dramatically to the left, extending her right leg horizontally to rest her foot on his chest. Both extend their arms wide for balance. The eye-level full shot captures their dynamic pose in bright, warm natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 balances on R2's thigh in an advanced partner balance",
+    "R2 serves as the base supporting R1's elevated balance",
+    "R1 extends her right leg so her foot rests on R2's chest",
+    "R1 leans her torso dramatically while R2 remains the supporting partner",
+    "Both R1 and R2 extend their arms wide for balance",
+    "The pair is positioned on beige concrete blocks",
+    "The scene is outdoors under a cloudy sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on R2's thigh, rather than R2 balancing on R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances on R2's thigh in an advanced partner balance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 serve as the supporting base for R1's balance, rather than R1 serving as the supporting base for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 serves as the base supporting R1's elevated balance"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest her right foot on R2's chest, rather than R2 resting his foot on R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends her right leg so her foot rests on R2's chest"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the partner leaning her torso dramatically and extending a leg horizontally while R2 remains the base partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans her torso dramatically while R2 remains the supporting partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T209",
+  "instruction": "A candid documentary photograph, wide shot from a high angle, showing an indoor studio with a red carpeted floor and white walls. In the center of the frame, the man in the black polo shirt and blue shorts (R1) is seen from behind, balancing on his left leg while lifting his right leg backward. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing left, watching his movement. The room is brightly lit by overhead lights, highlighting the red carpet, white walls, and a printer in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person balancing on his left leg while lifting his right leg backward",
+    "R2 is the person standing and watching R1's movement",
+    "R1 performs the movement while R2 observes rather than performing it",
+    "R1 is seen from behind during the balance while R2 faces toward him",
+    "a printer is visible in the background",
+    "the setting is an indoor studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one balancing on his left leg while lifting his right leg backward, rather than R2 doing that movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the one-legged balancing action"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one watching R1's movement, rather than R1 watching R2 perform the movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 observes while R1 performs"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 perform a backward leg lift while R2 stands facing toward him as an observer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the mover and R2 is the watcher"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seen from behind during his balance while R2 faces toward R1 to watch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's back-facing movement contrasts with R2's observing stance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

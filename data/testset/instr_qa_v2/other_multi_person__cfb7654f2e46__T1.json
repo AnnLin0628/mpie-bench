@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__cfb7654f2e46__T1",
+  "instruction": "Candid full-shot outdoor photograph of a sunny grassy lawn. In the foreground, the young girl in a white cardigan (R1) leans back, smiling happily as she pulls a thick rope with both hands. Directly behind her, the man in a brown sweater (R2) leans forward with a joyful smile, holding her waist to support her weight during the game. The background shows a soft-focus grassy field with trees. Natural daylight illuminates the scene, casting soft shadows on the grass and creating a warm, cheerful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's waist to support R1's weight",
+    "R1 pulls the thick rope while R2 supports her from behind",
+    "R1 leans back in front of R2 during the rope-pulling game",
+    "R2 leans forward behind R1 while holding her waist",
+    "a thick rope is the contact-relevant game object",
+    "the scene is a sunny grassy outdoor lawn"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight by holding R1's waist, rather than R1 supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's waist to support R1's weight"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person pulling the thick rope with both hands while R2 stabilizes her from behind, rather than R2 pulling the rope while R1 stabilizes him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pulls the thick rope while R2 supports her from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold onto R1's waist as the helper during the game, rather than R1 holding onto R2's waist as the helper?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the waist-holding support helper for R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean back while R2 is positioned behind her and supporting her waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back in front of R2 during the rope-pulling game"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning forward behind R1 while holding R1 at the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward behind R1 while holding her waist"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a thick rope present as the game object being pulled?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a thick rope is the contact-relevant game object"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

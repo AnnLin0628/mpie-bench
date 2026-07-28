@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__1b73bfb5f939__T2",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 1.0,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person described as speaking while raising her hand to gesture, rather than R2 being described as the speaker?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "left person has raised hand and open mouth"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person described as facing R1 while gesturing with a raised hand in motion, rather than R1 being described in that facing-gesture role?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "right person faces left while gesturing"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 gesture with a raised hand as she talks to R2?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "left person gestures toward right person"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "face_to_face_talk__1b73bfb5f939__T2",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 7.66,
+    "written_at": "2026-07-17T15:09:59",
+    "gen_relpath": "outputs/gemini-3-pro-image/face_to_face_talk__1b73bfb5f939__T2.png",
+    "qa_relpath": "instr_qa_v2/face_to_face_talk__1b73bfb5f939__T2.json",
+    "n_questions": 3
+  }
+}

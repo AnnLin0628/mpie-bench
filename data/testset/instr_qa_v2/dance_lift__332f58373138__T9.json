@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__332f58373138__T9",
+  "instruction": "A candid documentary medium shot captures a ballet class inside a softly lit studio. On the left, the female ballet instructor in a black bodysuit (R1) stands in profile, leaning forward to guide the young ballet student in a black tutu (R2) on the right. The instructor (R1) gently supports the student's (R2) leg with one hand while guiding her arm with the other to adjust her posture. The student (R2) faces left, smiling warmly at her teacher. In the background, a grey wall, a wooden ballet barre, and warm overhead string lights create a soft, focused atmosphere with gentle shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 supports R2's leg while R2 is the student being assisted",
+    "R1 guides R2's arm and posture rather than R2 guiding R1",
+    "R1 is the ballet instructor adjusting R2, the young ballet student",
+    "R2 smiles toward R1 while receiving instruction",
+    "a wooden ballet barre is visible in the studio background",
+    "the ballet class takes place in a softly lit studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's leg with one hand, rather than R2 supporting R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's leg while R2 is the student being assisted"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 guiding R2's arm to adjust R2's posture, rather than R2 guiding R1's arm to adjust R1's posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides R2's arm and posture rather than R2 guiding R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 acting as the instructor who corrects R2's ballet position, rather than R2 acting as the instructor who corrects R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the ballet instructor adjusting R2, the young ballet student"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young ballet student receiving posture guidance from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the student being guided by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

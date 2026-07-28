@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__020ba7faa67f__T2",
+  "instruction": "A candid outdoor medium shot on a sunny terrace. On the left, the blonde woman in the black sleeveless top (R1) stands in profile, smiling as she extends her hand. On the right, the short-haired woman in the pink blazer (R2) smiles warmly while shaking her hand. Standing between them in the center background, the man in the dark blue shirt (R3) looks down with a pleased expression. A white perforated metal railing runs horizontally behind the group. The scene is bathed in bright, direct daylight, casting soft shadows and highlighting the natural outdoor setting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 extends her hand toward R2 as the initiator of the hand contact",
+    "R2 clasps or shakes R1's extended hand as the receiving partner",
+    "R3 stands in the center background as a pleased onlooker rather than joining the hand contact",
+    "R1 and R2 form the active hand-contact pair while R3 observes",
+    "A white perforated metal railing is behind the group on the sunny terrace"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending her hand toward R2, rather than R2 being the one described as extending her hand toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the hand contact by extending her hand toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person clasping or shaking R1's extended hand, rather than R1 clasping an extended hand from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 responds to and holds R1's extended hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 a pleased background onlooker between R1 and R2, rather than one of the two people making the hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 observes while R1 and R2 are the contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the active hand-contact pair while R3 stands behind them observing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 perform the contact while R3 remains an observer"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

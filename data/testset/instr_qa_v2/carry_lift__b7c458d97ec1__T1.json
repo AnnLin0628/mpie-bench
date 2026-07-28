@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__b7c458d97ec1__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures an outdoor scene next to a light-brown tiled wall in bright daylight. On the left, the man with dreadlocks in a yellow jersey (R2) stands facing the wall, leaning forward with both hands pressed flat against it. Behind him on the right, the bald security guard in a dark uniform (R1) leans forward, placing his right hand firmly on the shoulder of the man (R2). The guard's gaze is directed downward toward the man's back. The scene is illuminated by warm, natural daylight, casting soft shadows against the wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his right hand firmly on R2's shoulder while R2 faces the wall",
+    "R2 presses both hands flat against the wall while R1 stands behind him",
+    "R1 looks downward toward R2's back rather than R2 monitoring R1",
+    "R2 leans forward facing the wall with R1 leaning forward behind him",
+    "light-brown tiled wall used as the surface R2 presses against",
+    "outdoor bright daylight setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing his right hand firmly on R2's shoulder, rather than R2 placing his hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his right hand firmly on R2's shoulder while R2 faces the wall"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one facing the wall with both hands pressed flat against it while R1 is behind him making shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 presses both hands flat against the wall while R1 stands behind him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned behind R2 and looking downward toward R2's back, rather than R2 being behind R1 and looking at R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks downward toward R2's back rather than R2 monitoring R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean forward facing the wall with both hands on it while R1 leans forward behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward facing the wall with R1 leaning forward behind him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

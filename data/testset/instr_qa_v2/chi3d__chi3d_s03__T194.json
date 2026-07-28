@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T194",
+  "instruction": "Candid documentary photograph, full shot. Inside an indoor motion capture studio with a red carpeted floor, white walls, and electronic equipment, the woman in the white patterned t-shirt (R2) stands on the left side of the frame, facing right, and kicks her left leg forward. The man in the black polo shirt (R1) stands on the right, facing left, watching her movement. Bright overhead lighting illuminates the entire room, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 kicks her left leg forward while R1 watches her movement",
+    "R1 is the observer of R2's kick rather than the person performing the kick",
+    "R2 faces toward R1 during the kicking motion while R1 faces toward R2",
+    "R1 remains standing and watching as R2 performs the active movement",
+    "electronic equipment is present in the motion capture studio",
+    "the scene is inside an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person kicking her left leg forward while R1 watches her movement, rather than R1 kicking while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the kick while R1 observes"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person observing R2's movement, rather than R2 observing R1 performing the kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the observer role while R2 has the active kicking role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand facing R2 and watch her kick instead of performing the kicking motion himself?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's watching role during R2's movement"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set inside an indoor motion capture studio with a red carpeted floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor motion capture studio with red carpeted floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T2",
+  "instruction": "Cinematic film still, low-angle full shot. In a classical dance studio with wooden floors, the brunette ballerina (R1) in a white leotard and sheer skirt stands in the foreground left, performing an arabesque en pointe while holding the wooden barre. Behind her in the background right, the blonde ballerina (R2) in a white leotard and sheer skirt performs a matching arabesque en pointe. Both dancers look upward, their bodies aligned along the barre. Bright backlight from a large window creates a soft, hazy glow across the neutral-toned room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the ballerina explicitly holding the wooden barre while performing an arabesque en pointe, rather than R2 being the explicitly barre-holding dancer",
+    "R2 performs a matching arabesque behind R1 in the background, rather than R1 being behind R2",
+    "R1 and R2 both perform arabesques en pointe aligned along the barre",
+    "wooden barre used as a dance support object",
+    "classical dance studio with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina explicitly holding the wooden barre while performing an arabesque en pointe, rather than R2 being the explicitly barre-holding dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the explicitly barre-holding arabesque dancer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 performing a matching arabesque behind R1 in the background, rather than R1 being positioned behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R1 performing the matching arabesque"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 performing an arabesque en pointe while using the barre for support?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's barre-supported arabesque body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 performing a matching arabesque en pointe aligned along the same barre as R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's matching arabesque body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

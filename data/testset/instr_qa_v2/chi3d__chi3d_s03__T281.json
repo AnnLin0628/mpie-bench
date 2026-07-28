@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T281",
+  "instruction": "A candid documentary wide shot captures an indoor motion capture studio with a red carpeted floor and white walls. The man in the black polo shirt and blue shorts (R1) stands on the left, facing right in profile. The woman in the white patterned t-shirt and blue jeans (R2) stands on the right, facing left towards him. She places her left hand on the man's chest in a guiding gesture. The scene is illuminated by bright overhead fluorescent lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her left hand on R1's chest in a guiding gesture",
+    "R1 receives the chest contact from R2 rather than initiating it",
+    "R2 is the active guiding toucher while R1 is the person being guided",
+    "R1 and R2 face each other during the hand-to-chest contact",
+    "The interaction takes place in an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place her hand on R1's chest rather than R1 placing his hand on R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her left hand on R1's chest in a guiding gesture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person making the guiding hand contact on R1, rather than R1 guiding R2 with his hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active guiding toucher while R1 is the person being guided"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being touched by R2, rather than R2 being touched on the chest by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest contact from R2 rather than initiating it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use her left hand as the contacting hand on R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her left hand on R1's chest in a guiding gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

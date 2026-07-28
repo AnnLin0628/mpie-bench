@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T286",
+  "instruction": "A candid wide-angle photograph captures an indoor motion capture studio with a red carpet. On the right, the man in the black polo and blue shorts (R1) stands facing away from the camera. On the left, the woman in the white t-shirt and blue jeans (R2) leans forward, pushing his back with her right hand while her left leg is extended backward. The background shows white walls and studio equipment. The scene is brightly lit by overhead lights, creating a neutral atmosphere with soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 pushes against R1's back rather than R1 pushing R2",
+    "R1 is the person being pushed on the back by R2",
+    "R2 makes the pushing contact with her right hand on R1's back",
+    "R2 leans forward while extending her left leg backward during the push",
+    "the scene is an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pushing R1's back rather than R1 pushing R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 pushes against R1's back rather than R1 pushing R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the push on his back from R2, rather than R2 receiving a push from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being pushed on the back by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 use her right hand to make contact with R1's back, rather than R1 using his hand to push R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 makes the pushing contact with her right hand on R1's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning forward while pushing R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward during the push"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

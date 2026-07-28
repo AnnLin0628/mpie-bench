@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T9",
+  "instruction": "Candid studio photograph, medium shot at eye-level with a shallow depth of field. In a minimalist indoor studio with a plain white background and blurred purple wildflowers in the left foreground, three friends sit close together on the floor. On the left, the woman with wavy light-brown hair (R3) sits barefoot in a black crop top, open white shirt, and blue jeans, smiling. In the center, the woman with straight dark hair (R2) sits in a white top and denim jacket, laughing warmly. On the right, the curly-haired woman (R1) in a white shirt and blue jeans leans her head against the center woman with a soft smile. They share a tight group hug, with the curly-haired woman and the woman with wavy hair wrapping their arms around the center woman. The scene is illuminated by bright, soft studio lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 leans her head against R2",
+    "R1 wraps her arms around R2",
+    "R3 wraps her arms around R2",
+    "R2 is the center person being embraced by both R1 and R3",
+    "minimalist indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning her head against R2, rather than R2 leaning her head against R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans her head against R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2, rather than R2 being described as wrapping her arms around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 wrap her arms around R2, rather than R2 being described as wrapping her arms around R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arms around R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the center friend who is being embraced by both R1 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the center person being embraced by both R1 and R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

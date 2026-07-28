@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__ballroom__T4",
+  "instruction": "A candid full shot of an indoor dance studio with a wooden floor. On the right, the woman in the red dress (R1) stands with her back to the camera, holding her partner. On the left, the man in the striped polo (R2) faces right, lifting his left foot slightly as they step together in a dance routine. They are in a close dance hold. The background shows a tripod and plain walls. Warm indoor lighting illuminates the dancers, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands with her back to the camera while holding R2 in a dance hold",
+    "R2 faces right and lifts his left foot slightly as they step together",
+    "R1 and R2 are in a close dance hold",
+    "R1 and R2 are dancing together in an indoor dance studio",
+    "the studio has a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer with her back to the camera holding R2, rather than R2 being the one with his back to the camera holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-to-camera holding role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer lifting his left foot slightly while stepping with R1, rather than R1 being the dancer described as lifting a foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the foot-lift step"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 face right during the dance while R1 is described as having her back to the camera, rather than those orientations being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right while R1 faces away from the camera"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 in a close dance hold while stepping together in the routine?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share a close dance hold"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding R2 as her dance partner during the routine?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 as partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

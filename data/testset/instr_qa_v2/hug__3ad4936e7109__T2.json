@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T2",
+  "instruction": "Candid studio portrait, medium close-up. Against a solid dusty rose background, the woman with curly brown hair (R1) in a white button-down shirt stands in the foreground, smiling directly at the camera. Behind her, the woman with long straight dark hair (R2) in a denim jacket hugs her from behind, leaning her head against R1's shoulder with a bright smile. Soft, even studio lighting highlights their expressions in a warm color palette.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 hugs R1 from behind rather than R1 hugging R2 from behind",
+    "R2 leans her head against R1's shoulder rather than R1 leaning on R2's shoulder",
+    "R1 is the foreground person being held while R2 is positioned behind her",
+    "R1 smiles directly at the camera while R2 smiles from behind her",
+    "solid dusty rose studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean her head against R1's shoulder, rather than R1 leaning her head against R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head against R1's shoulder rather than R1 leaning on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the foreground woman being embraced while R2 is positioned behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground person being held while R2 is positioned behind her"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 smiling directly at the camera while R2 smiles from behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles directly at the camera while R2 smiles from behind her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

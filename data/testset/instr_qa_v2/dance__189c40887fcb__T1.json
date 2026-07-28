@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T1",
+  "instruction": "Cinematic still of a medium full shot capturing three men dancing in a spacious indoor hall with a wooden floor. In the center foreground, the blonde man in the leather jacket (R1) poses with his head tilted back and left arm extended. To his left, the man in the white t-shirt and harness (R3) strikes a dance pose with arms bent overhead, looking forward. To the right, the man in the black mesh crop top (R2) stands slightly behind, arms raised in a stylized pose. The three perform a synchronized, non-contact dance routine in a staggered formation. The scene is illuminated by cool blue ambient light with purple highlights, casting soft shadows on the wooden floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 poses in the center foreground with his head tilted back and left arm extended, rather than R2 doing that pose",
+    "R3 performs the arms-bent-overhead dance pose while looking forward, rather than R1 doing that pose",
+    "R2 stands slightly behind the others with arms raised in a stylized dance pose, rather than R1 being the one slightly behind",
+    "R1, R2, and R3 perform a synchronized non-contact dance routine in a staggered formation",
+    "R1 has the head-tilted-back, arm-extended body configuration while R3 has the overhead-bent-arms configuration",
+    "The dance takes place in a spacious indoor hall with a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer posing with his head tilted back and left arm extended, rather than R2 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 poses in the center foreground with his head tilted back and left arm extended, rather than R2 doing that pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer striking the pose with arms bent overhead while looking forward, rather than R1 doing that overhead-bent-arms pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the arms-bent-overhead dance pose while looking forward, rather than R1 doing that pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer standing slightly behind with arms raised in a stylized pose, rather than R1 being the one slightly behind with raised arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands slightly behind the others with arms raised in a stylized dance pose, rather than R1 being the one slightly be"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 perform a synchronized non-contact dance routine in a staggered formation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 perform a synchronized non-contact dance routine in a staggered formation"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have the head-tilted-back, arm-extended body configuration while R3 has the overhead-bent-arms configuration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the head-tilted-back, arm-extended body configuration while R3 has the overhead-bent-arms configuration"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the synchronized dance happening in a spacious indoor hall with a wooden floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The dance takes place in a spacious indoor hall with a wooden floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T15",
+  "instruction": "Romantic candid photograph, close-up, eye-level. Against a waterfront background with a distant suspension bridge, the bearded man (R2) in a white t-shirt and the woman with buzzed hair (R1) are kissing. The man (R2) has his arm wrapped around the neck of the woman (R1), who has a leaf tattoo on her neck and wears a hoop earring. The couple is captured in a close embrace, sharing an intimate moment. The lighting is soft and diffused under a bright overcast sky, creating a gentle and natural atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 has his arm wrapped around R1's neck",
+    "R1 is the person whose neck is encircled by R2's arm",
+    "R1 and R2 are kissing in close contact",
+    "R1 wears a hoop earring",
+    "the couple is against a waterfront background with a distant suspension bridge"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have his arm wrapped around R1's neck, rather than R1 having her arm wrapped around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps an arm around R1's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose neck is being held by R2's wrapped arm, rather than R2's neck being held by R1's wrapped arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the neck-wrapping contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 holding R1 close while the two are kissing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 close during the kiss"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

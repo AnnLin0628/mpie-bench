@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__4782591e6a40__T3",
+  "instruction": "Candid street photograph, medium close-up shot. On a city street during the day, the woman in the white halter maxi dress (R2) on the left and the person in the light blue denim jacket (R1) on the right run side-by-side. Both smile happily and look forward, showing off colorful pride makeup on their faces. They hold hands, which are partially visible at the bottom of the frame. The background is a softly blurred city street with buildings and traffic lights. Warm, natural daylight illuminates their joyful faces.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the light-blue-denim-jacketed runner holding hands with R2",
+    "R2 is the white-halter-maxi-dress runner whose hand is held by R1",
+    "R1 and R2 run side-by-side while holding hands",
+    "R1 and R2 both smile and look forward",
+    "R1 and R2 both show colorful pride makeup on their faces",
+    "The scene is a daytime city street with a softly blurred urban background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the light-blue-denim-jacketed runner holding hands with R2, rather than R2 being the denim-jacketed hand-holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the light-blue-denim-jacketed runner holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the white-halter-maxi-dress runner whose hand is held by R1, rather than R1 being the runner in the white halter maxi dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the white-halter-maxi-dress runner whose hand is held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 physically connected by their clasped hands while they run forward together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 run side-by-side while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T104",
+  "instruction": "Candid documentary full shot at eye-level in a motion capture studio with a red carpet and white walls. On the right, the bearded man in the black polo shirt and blue shorts (R1) stands facing away. On the left, the woman in the white t-shirt and blue jeans (R2) stands facing right, extending her right arm to touch his upper back from behind. The scene is lit by overhead lights, with an office printer and white walls visible in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's upper back from behind",
+    "R1 is the person receiving the upper-back touch while facing away",
+    "R2 is the active toucher and R1 is the passive contacted person",
+    "R1 stands facing away as R2 stands facing toward him",
+    "motion capture studio setting with red carpet and white walls",
+    "office printer visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's upper back from behind, rather than R1 extending his arm to touch R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively touches R1's upper back from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the touch on his upper back while facing away, rather than R2 receiving an upper-back touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the passive person being touched on the upper back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active contact-maker and R1 the person being contacted, rather than R1 being the active contact-maker toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric contact duty between R2 and R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__185c4e46d822__T3",
+  "instruction": "Playful studio full shot photograph against a plain white background. On the left, the dark-skinned woman with curly black hair (R1) in a white t-shirt and blue jeans sits barefoot on a red armchair, laughing with her arms outstretched. On the right, the young girl with long straight dark hair (R2) stands wearing an oversized plaid coat, blue jeans, and oversized black high heels, stepping towards the woman. Bright, even studio lighting illuminates the cheerful scene, highlighting the vibrant red chair.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is seated on a red armchair with her arms outstretched toward R2",
+    "R2 is standing and stepping toward the seated R1",
+    "R1 remains seated while R2 approaches her",
+    "A red armchair supports R1 as part of the interaction",
+    "The scene is a bright studio photograph against a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person with arms outstretched toward R2, rather than R2 being the seated person with arms outstretched toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated on a red armchair with her arms outstretched toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 stepping toward the seated R1, rather than R1 stepping toward a seated R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is standing and stepping toward the seated R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 remain on the red armchair while R2 approaches on foot, rather than R2 remaining on the chair while R1 approaches on foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains seated while R2 approaches her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting barefoot with her arms open as if ready to receive R2's approach?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated on a red armchair with her arms outstretched toward R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in oversized high heels while moving toward R1's outstretched arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is standing and stepping toward the seated R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

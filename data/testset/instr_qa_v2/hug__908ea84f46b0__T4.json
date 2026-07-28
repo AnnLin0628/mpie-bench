@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__908ea84f46b0__T4",
+  "instruction": "A clean studio portrait photograph captured in a medium shot at eye-level against a plain white background. On the left, the blonde woman in the beige long-sleeve top (R1) stands facing forward, looking at the camera with a gentle expression. On the right, the brunette woman in the grey-brown long-sleeve top (R2) leans in close, resting her head against the blonde woman's shoulder with her eyes closed in a peaceful smile. The brunette woman (R2) wraps her arm around the blonde woman (R1), who holds her arms crossed in front. The scene is illuminated by bright, even studio lighting, creating a warm, clean aesthetic.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests her head against R1's shoulder",
+    "R2 wraps an arm around R1 while R1 keeps her arms crossed",
+    "R2 leans into R1 while R1 remains upright facing forward",
+    "R1 serves as the shoulder contact point for R2's head",
+    "plain white studio portrait background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her head against R1's shoulder, rather than R1 resting her head against R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her head against R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one wrapping an arm around R1 while R1 keeps her arms crossed, rather than R1 wrapping an arm around R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps an arm around R1 while R1 keeps her arms crossed"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning in close toward R1 while R1 stays facing forward, rather than R1 leaning in close toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans into R1 while R1 remains upright facing forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold her arms crossed in front during the contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps her arms crossed"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 close her eyes with a peaceful smile while resting against R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has eyes closed while resting against R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

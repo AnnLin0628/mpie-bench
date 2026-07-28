@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0e21d858f215__T1",
+  "instruction": "Clean fashion studio photograph, extreme low-angle close-up looking directly up. In a bright indoor studio with a white ceiling, three women look down. The woman in the blue blazer (R1) is on the left, looking down with a neutral expression. On the right, the woman in the purple shirt (R2) looks down calmly. In the center, the woman in the green blazer (R3) looks down while extending both of her palms flat towards the camera lens, creating a dramatic sense of depth. Bright, even studio lighting illuminates their pastel outfits against the clean white background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 extends both palms flat toward the camera lens",
+    "R3 performs the palm-forward action rather than R1",
+    "R3 performs the palm-forward action rather than R2",
+    "R1 and R2 look down while R3 creates the dramatic depth gesture",
+    "the camera lens is the target of R3's extended palms",
+    "the scene is a bright indoor studio with a white ceiling"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the woman extending both palms flat toward the camera lens, rather than R1 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the palm-forward action rather than R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 extending both of her palms toward the camera lens, rather than R2 extending both palms toward the lens?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the palm-forward action rather than R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R2 looking down while R3 is the one reaching her palms forward toward the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 look down while R3 creates the dramatic depth gesture"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 take the central action role by holding both palms flat toward the camera as the others look down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 extends both palms flat toward the camera lens"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

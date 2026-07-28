@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T49",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and a ceiling projector. On the left, the man in the dark polo shirt and blue shorts (R1) stands facing away, leaning forward to hold the hand of the woman in the patterned white t-shirt and blue jeans (R2), who stands on the right facing him. Bright overhead lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward to hold R2's hand",
+    "R2 stands facing R1 while R1 holds her hand",
+    "R1 is the active holder of the hand contact rather than R2 being described as leaning forward",
+    "R1 and R2 face each other during the hand contact",
+    "indoor motion capture studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one leaning forward to hold R2's hand, rather than R2 leaning forward to hold R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward to hold R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 described as the active person holding the hand contact with R2, rather than R2 being described as the active holder leaning in?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active holder of the hand contact rather than R2 being described as leaning forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 receive the hand contact from R1 while standing facing him, rather than R1 being the one simply standing as R2 leans forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands facing R1 while R1 holds her hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face away from the viewer while leaning forward toward R2 during the hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration during the hand contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand facing R1 as he holds her hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 during the hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

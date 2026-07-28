@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__023dd099bcb9__T2",
+  "instruction": "Candid documentary medium close-up of an indoor wedding venue with floral decorations. On the right, the older woman in a floral dress (R1), with her back partially turned, reaches up to place a gold necklace around the neck of the young bride in a red dress (R2) on the left. The young bride looks down slightly while holding her rose bouquet. Warm indoor lighting illuminates the scene, casting soft shadows and highlighting the rich red and floral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches up to place a gold necklace around R2's neck",
+    "R2 is the necklace recipient while R1 performs the placing action",
+    "R2 looks down slightly while receiving the necklace from R1",
+    "R2 holds a rose bouquet during the interaction",
+    "a gold necklace is being placed around R2's neck",
+    "the scene is an indoor wedding venue with floral decorations"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching up to place a gold necklace around R2's neck, rather than R2 placing a necklace around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the necklace-placing duty on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the necklace around her neck from R1, rather than R1 receiving it from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the necklace recipient and R1 is the giver"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have her back partially turned while reaching toward R2's neck to put on the necklace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration while placing the necklace on R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a rose bouquet during the necklace placement?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "rose bouquet held by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

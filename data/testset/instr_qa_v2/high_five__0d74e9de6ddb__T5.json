@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__0d74e9de6ddb__T5",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Outdoors on a wooden deck with a metal railing, backed by a river and lush green trees under bright sunlight. On the left, the woman in the pink cardigan and grey hijab (R1) stands in profile facing right, smiling as she raises her hands. In the center-right background, the man in the orange t-shirt (R2) stands in profile facing left, smiling and raising his hands. In the right foreground, the woman in the beige hoodie (R4) faces left with a smile, her hands raised in motion. The woman in the pink cardigan (R1) and the man in the orange t-shirt (R2) connect their raised hands in a high-five, while the woman in the beige hoodie (R4) prepares to join. Warm, natural sunlight illuminates the scene, casting a soft glow.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 and R2 are the current high-five contact pair with their raised hands connected",
+    "R4 has raised hands and is preparing to join rather than already making the high-five contact",
+    "R1 is high-fiving R2 rather than R4",
+    "R2 is R1's current high-five partner with their hands touching",
+    "R4 is an approaching participant with hands raised in motion",
+    "The scene is outdoors on a wooden deck with a metal railing, river, and green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 high-fiving R2 with raised hands, rather than R1 high-fiving R4 while R2 waits outside the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's current high-five partner is R2, not R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

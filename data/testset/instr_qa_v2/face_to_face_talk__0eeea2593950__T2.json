@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__0eeea2593950__T2",
+  "instruction": "A candid cinematic still, medium shot at eye-level with a shallow depth of field, set on an outdoor city street. The woman with an afro in a black leather jacket (R1) stands on the left in profile, smiling warmly. She faces the woman with curly brown hair in a green coat (R2), who stands on the right in profile, smiling back. They are holding hands affectionately in the center of the frame. The background features a blurred white building and a green tree. The scene is lit by soft, natural daylight with a balanced color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the one smiling back at R1 after R1 smiles warmly",
+    "R1 faces R2 in profile as the person she is directly engaging",
+    "R1 and R2 hold hands affectionately with each other",
+    "R1 and R2 stand face-to-face in profile while interacting",
+    "the scene is on an outdoor city street",
+    "the background includes a blurred white building and a green tree"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person smiling back at R1, rather than R1 being described as the one smiling back at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one smiling back at R1 after R1 smiles warmly"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 facing R2 as the person she is warmly engaging, rather than R2 facing away from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 in profile as the person she is directly engaging"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands affectionately with each other in the center of the frame?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands affectionately with each other"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing face-to-face in profile while interacting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand face-to-face in profile while interacting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

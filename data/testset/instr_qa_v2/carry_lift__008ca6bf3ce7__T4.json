@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__008ca6bf3ce7__T4",
+  "instruction": "Cinematic still, medium-full low angle shot. Outdoors on a suburban street. The woman in the pink turtleneck (R1) and the man in the teal henley (R2) stand side-by-side, holding hands and looking up toward the sky. Natural daylight with a soft blue sky background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman in the pink turtleneck holding hands with R2",
+    "R2 is the man in the teal henley holding hands with R1",
+    "R1 and R2 stand side-by-side while holding hands",
+    "R1 and R2 both look upward toward the sky",
+    "The interaction takes place outdoors on a suburban street"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in the pink turtleneck holding hands with R2, rather than R2 being the woman in the pink turtleneck holding hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman in the pink turtleneck holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man in the teal henley holding hands with R1, rather than R1 being the man in the teal henley holding hands with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man in the teal henley holding hands with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing side-by-side while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand side-by-side while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__f8416f139ced__T1",
+  "instruction": "Candid outdoor photograph, full shot. On a sunny autumn path in a wooded park, the woman in the black puffer jacket and mint beanie (R1) walks forward in the center foreground, looking ahead. Walking closely behind her left side is the toddler girl in the pink turban beanie and skull-print jumpsuit (R2), looking forward. Warm sunlight filters through the trees, casting long shadows on the paved path scattered with fallen leaves, creating a bright, natural atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is walking forward ahead of R2",
+    "R2 is walking closely behind R1",
+    "R1 leads the forward movement while R2 trails behind",
+    "R2 is positioned near R1 as they walk along the path",
+    "sunny autumn wooded park path with fallen leaves"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 walking ahead of R2, rather than R2 walking ahead of R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the forward walker ahead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 following closely behind R1, rather than R1 following closely behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 follows closely behind R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leading the forward movement in the foreground while R2 trails behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leads while R2 trails"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking close behind R1 as they move along the path?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's walking position relative to R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

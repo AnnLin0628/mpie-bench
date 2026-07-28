@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T72",
+  "instruction": "Candid outdoor medium wide shot in a park. On the left, the large Black man in a dark blue t-shirt (R1) points to the right while holding a blue frisbee. On the right, the woman in a dark blue t-shirt and light blue jeans (R4) gestures back at him. In the background, the East Asian man in a red polo (R3) claps, and the woman in a black beanie and red t-shirt (R5) holds a red frisbee over her face. Bright daylight illuminates the scene.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 points toward R4 while holding a blue frisbee",
+    "R4 gestures back at R1 rather than holding the blue frisbee and pointing",
+    "R3 claps in the background",
+    "R5 holds a red frisbee over her face",
+    "blue frisbee held by R1",
+    "red frisbee held over R5's face",
+    "outdoor park setting in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person pointing toward R4 while holding a blue frisbee, rather than R4 doing that role toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points toward R4 while holding a blue frisbee"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person gesturing back at R1, rather than R1 being the one gesturing back at R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 gestures back at R1 rather than holding the blue frisbee and pointing"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 clapping in the background while R1 and R4 gesture toward each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 claps in the background"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 holding a red frisbee over her face rather than clapping like R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 holds a red frisbee over her face"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

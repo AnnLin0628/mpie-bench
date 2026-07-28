@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T278",
+  "instruction": "A candid documentary photograph with a full shot of an indoor studio with a red carpeted floor. The woman in the white t-shirt and blue jeans (R2) stands in the center-left, facing away from the camera. The man in the black t-shirt and blue shorts (R1) stands on the right, facing left, leaning forward to place his hands on the woman's (R2) back and arm. The background features dark room dividers and white walls. The lighting is bright and even from overhead.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward and places his hands on R2's back and arm",
+    "R2 receives the contact from R1 on her back and arm",
+    "R1 is the active toucher while R2 stands facing away from the camera",
+    "R1 faces toward R2 during the contact",
+    "The scene is an indoor studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward to place his hands on R2's back and arm, rather than R2 placing her hands on R1's back and arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward and places his hands on R2's back and arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose back and arm are being touched by R1, rather than R1 being the person whose back and arm are touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the contact from R1 on her back and arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active contacter using his hands while R2 stands facing away and receives the contact, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active toucher while R2 stands facing away from the camera"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 make physical contact with R2 by putting his hands on R2's back and arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 makes hand contact with R2's back and arm"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face toward R2 while leaning in to touch her back and arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces toward R2 during the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

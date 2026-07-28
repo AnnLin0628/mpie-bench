@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__76a898e6cf80__T3",
+  "instruction": "Cinematic medium close-up profile shot in an indoor room with pink background lighting. The woman in the plaid shirt (R2) on the left wraps her arms around the neck of the man in the plaid shirt and red bandana (R1) on the right in a warm hug. They look closely at each other. Warm indoor lighting with a soft pink background glow creates an intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1's neck",
+    "R1 is the person whose neck is encircled by R2's arms",
+    "R2 initiates the neck embrace while R1 receives it",
+    "R1 and R2 look closely at each other face to face",
+    "indoor room with soft pink background lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's neck, rather than R1 wrapping his arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose neck is encircled by R2's arms, rather than R2 being the one with R1's arms around her neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose neck is encircled by R2's arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the woman initiating the neck embrace on R1 while R1 receives it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the neck embrace while R1 receives it"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

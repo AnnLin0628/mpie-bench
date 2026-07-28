@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T57",
+  "instruction": "A candid wide-shot documentary photograph captures an indoor motion capture studio featuring a red carpeted floor, white walls, and wall-mounted cameras. On the left side of the frame, the man in the black polo shirt and blue shorts (R1) stands upright, facing toward the right. On the right, the woman in the white t-shirt and blue jeans (R2) steps forward dynamically, facing left, and extends her left arm to touch the man's (R1) right upper arm. The background shows white walls with radiators and partition panels. The entire scene is evenly illuminated by bright, neutral overhead lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 actively extends her left arm to touch R1's right upper arm",
+    "R1 receives the arm touch rather than initiating it",
+    "R2 steps forward dynamically toward R1 during the contact",
+    "R1 stands upright while being touched by R2",
+    "indoor motion capture studio with wall-mounted cameras"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend her left arm to touch R1's right upper arm, rather than R1 extending an arm to touch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively touches R1's upper arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose right upper arm is being touched by R2, rather than R1 being the active toucher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 stepping forward dynamically toward R1 while making contact with him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 steps forward during the contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing upright as R2 reaches to touch his upper arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands upright while receiving the touch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

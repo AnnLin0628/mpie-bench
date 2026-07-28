@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T14",
+  "instruction": "Candid realistic photograph, medium shot. In a bright white ballet studio, the blonde ballerina (R2) in a white leotard and sheer skirt stands on the left, holding the barre and smiling towards the right. On the right, the dark-haired ballerina (R1) in a white leotard and sheer skirt stands poised, looking forward with a calm expression. Soft, diffused daylight fills the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds the ballet barre while R1 does not",
+    "R1 stands poised and looks forward while R2 smiles toward the right",
+    "R2 is the barre-contact dancer and R1 is the separate poised dancer",
+    "ballet barre",
+    "bright white ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina holding the ballet barre, rather than R1 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the ballet barre while R1 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina standing poised and looking forward, rather than R2 taking that poised-forward role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands poised and looks forward while R2 smiles toward the right"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use the barre as her contact point while R1 stands separately in a poised ballet stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the barre-contact dancer and R1 is the separate poised dancer"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

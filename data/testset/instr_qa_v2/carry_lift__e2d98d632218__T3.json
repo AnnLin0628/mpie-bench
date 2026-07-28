@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__e2d98d632218__T3",
+  "instruction": "Candid outdoor photograph, full shot. Facing away from the camera on a rocky ledge overlooking the ocean, the blonde woman in the pink floral dress (R2) stands on the left, her dress fluttering in the wind. To her right, the man in the light blue shirt (R1) stands looking out at the water. They are positioned close together, observing the sea under a dim, overcast sky. The lighting is soft and cool, casting gentle shadows on the rocks and water.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man standing close to R2 while looking out at the water",
+    "R2 is the blonde woman standing close to R1 with her dress fluttering in the wind",
+    "R1 and R2 are both facing away from the camera",
+    "R1 and R2 are positioned together on a rocky ledge overlooking the ocean",
+    "the scene has a dim, overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person described as looking out at the water beside R2, rather than R2 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person looking out at the water beside R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose dress is fluttering in the wind beside R1, rather than R1 being described with the fluttering dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person with the fluttering dress beside R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing close to R2 while they observe the sea together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands close to R2 as they observe the sea"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 on a rocky ledge overlooking the ocean?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "rocky ledge overlooking the ocean"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__b06393830cc5__T1",
+  "instruction": "Candid athletic photograph, full shot, low angle. In an indoor gym with a red floor, the dark-haired woman with a white headband (R2) in a purple t-shirt sits on the left, holding her knee and smiling. Beside her, the blonde woman in a white t-shirt (R1) and red shorts sits in a similar pose, smiling back. They sit side-by-side, sharing a friendly conversation under bright, even indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 sits holding her own knee while R1 sits beside her smiling back",
+    "R1 is the person smiling back at R2 during their friendly conversation",
+    "R1 and R2 sit side-by-side in similar seated poses",
+    "R2 holds her knee while seated",
+    "indoor gym with a red floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the seated woman holding her own knee while R1 sits beside her smiling back, rather than R1 being the one described as holding R2's knee?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds her own knee while R1 sits beside her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman smiling back at R2 in the conversation, rather than R2 being described as the one smiling back at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles back at R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both seated side-by-side in similar relaxed poses during their conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit side-by-side in similar seated poses"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated while holding her knee as R1 remains seated beside her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds her knee while seated"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

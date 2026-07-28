@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T11",
+  "model_id": "seedream-5-pro",
+  "S_instr": 1.0,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": 1.0,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": 1.0,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 seated on the floor while clasping gloved hands with kneeling R3, rather than R3 being the seated person and R1 the kneeling person?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "left person is seated, right person kneels"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 kneeling on the gym mat while clasping gloved hands with seated R1, rather than R1 kneeling on the mat while R3 sits?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "right person kneels on the mat"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting on the floor in the contact pose while R3 kneels opposite him in the contact pose?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "seated and kneeling contact pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R3 positioned on a gym mat during their hand-clasp interaction?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "both are on a gym mat"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "fight_combat__000277b52fe2__T11",
+    "model_id": "seedream-5-pro",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 5.66,
+    "written_at": "2026-07-17T23:34:37",
+    "gen_relpath": "outputs/seedream-5-pro/fight_combat__000277b52fe2__T11.png",
+    "qa_relpath": "instr_qa_v2/fight_combat__000277b52fe2__T11.json",
+    "n_questions": 4
+  }
+}

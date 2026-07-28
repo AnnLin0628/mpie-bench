@@ -1,0 +1,73 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__601fd93fbbee__T2",
+  "instruction": "Candid documentary photograph, medium shot. In a sunny outdoor park with trees in the background, two friends stand close together on the grass. The man in the red sweater (R1) is positioned on the left in side profile, looking to the right and smiling. Facing him on the right, the man with long hair (R3) wearing an olive shirt and sunglasses smiles warmly. A cropped hand of an unseen bystander is visible on the far left edge of the frame. Bright natural daylight casts soft shadows across the scene, creating a warm and relaxed atmosphere.",
+  "n_person": 6,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R1 is the red-sweater man shown in side profile looking toward R3",
+    "R3 is the long-haired man in an olive shirt and sunglasses facing R1",
+    "R1 and R3 stand close together on the grass while smiling at each other",
+    "R3 wears sunglasses",
+    "a cropped hand of an unseen bystander appears at the far left edge",
+    "the scene is a sunny outdoor park with trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the red sweater shown in side profile looking toward R3, rather than R3 being the red-sweater side-profile man?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the red-sweater man shown in side profile looking toward R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the long-haired man wearing sunglasses who faces R1, rather than R1 being the long-haired man in sunglasses facing him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the long-haired man in sunglasses facing R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

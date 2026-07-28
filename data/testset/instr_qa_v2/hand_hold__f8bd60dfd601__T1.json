@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__f8bd60dfd601__T1",
+  "instruction": "A candid street photograph, full-body shot of two friends walking side-by-side down a narrow outdoor alleyway with textured pink and blue walls. On the left, the woman with a dark ponytail and headband (R1) wears a white striped pullover, denim shorts, and striped knee-high socks, smiling as she looks at her companion. On the right, the woman with curly brown hair in a denim jacket (R2) wears a white t-shirt, rolled-up jeans, and teal sneakers, smiling back. Both women walk forward while holding glass bottles in their hands. The scene is illuminated by soft, natural daylight, creating a warm and cheerful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the dark-ponytailed woman with a headband who smiles while looking at R2",
+    "R2 is the curly-brown-haired woman in a denim jacket who smiles back at R1",
+    "R1 and R2 walk forward side-by-side as companions",
+    "Both R1 and R2 hold glass bottles in their hands",
+    "The pair are in a narrow outdoor alleyway with textured pink and blue walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman with a dark ponytail and headband smiling as she looks at R2, rather than R2 being the ponytailed woman looking at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the ponytailed/headband woman looking toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the curly-brown-haired woman in a denim jacket smiling back at R1, rather than R1 being the curly-haired woman in the denim jacket?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the curly-haired denim-jacket companion smiling back at R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look toward R2 while R2 returns the smile back toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks at R2 and R2 smiles back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

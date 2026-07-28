@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__13ca6a563768__T6",
+  "instruction": "Candid photographic medium shot in a boxing gym. On the left, the man in the orange beanie (R1) holds a black punching bag steady with both hands, smiling. On the right, the blonde woman in the purple cropped hoodie (R2) throws a punch with her brown boxing glove at the bag. The background features a gray concrete wall with a dark graphic. Soft overhead lighting casts gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the punching bag steady while R2 punches it",
+    "R2 is the boxer throwing the punch, rather than R1",
+    "R1 uses both hands to stabilize the bag for R2's strike",
+    "black punching bag used as the contact target",
+    "brown boxing glove on R2 used to hit the bag",
+    "boxing gym setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the punching bag steady while R2 punches it, rather than R2 holding the bag for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the punching bag steady while R2 punches it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person throwing a punch at the bag, rather than R1 being the one who punches it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the boxer throwing the punch, rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 absorb and steady the bag's movement with both hands while R2's gloved fist strikes toward it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses both hands to stabilize the bag for R2's strike"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 using both hands on the punching bag as the stabilizer for R2's boxing action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses both hands to stabilize the bag for R2's strike"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black punching bag being used as the target of the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black punching bag used as the contact target"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 punching with a brown boxing glove?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "brown boxing glove on R2 used to hit the bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

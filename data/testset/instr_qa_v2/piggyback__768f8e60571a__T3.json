@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__768f8e60571a__T3",
+  "instruction": "A minimalist studio portrait photograph, captured in a medium close-up shot at eye-level against a solid beige background. The man in the white t-shirt (R1) stands on the left in profile facing left. The man in the pink t-shirt (R2) stands behind him, resting his head flat on R1's shoulder and looking directly at the camera with a soft, contemplative gaze. R2 embraces R1 from behind, resting his right hand on R1's shoulder and wrapping his other arm around R1's waist. The lighting is soft and diffused, casting gentle shadows and highlighting the warm, pastel color palette of their clothing against the neutral backdrop.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests his head flat on R1's shoulder",
+    "R2 embraces R1 from behind",
+    "R2's right hand rests on R1's shoulder",
+    "R2 wraps his other arm around R1's waist",
+    "R1 is the front person receiving R2's shoulder and waist contact",
+    "solid beige studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting his head flat on R1's shoulder, rather than R1 resting his head on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his head flat on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 embracing R1 from behind, rather than R1 embracing R2 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest his right hand on R1's shoulder, rather than R1 resting his right hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right hand rests on R1's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person in front whose shoulder and waist are being contacted by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the front person receiving R2's shoulder and waist contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned behind R1 while wrapping one arm around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his other arm around R1's waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

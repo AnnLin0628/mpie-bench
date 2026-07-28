@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__28861bf5cea0__T4",
+  "instruction": "Candid intimate photograph, vertical medium shot. In a minimalist indoor space with a marble wall, a shirtless tattooed man (R1) sits behind a woman in a black dress (R2) whose leg features a prominent fish tattoo. The man (R1) rests his head gently on top of hers, looking down. The woman (R2) leans back against him with closed eyes and a peaceful smile. He holds her arms from behind. Soft, warm lighting highlights their relaxed pose.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 sits behind R2 and holds her arms from behind",
+    "R1 rests his head gently on top of R2's head",
+    "R2 leans back against R1 with closed eyes and a peaceful smile",
+    "R1 is shirtless and tattooed while positioned behind R2",
+    "R2 has a prominent fish tattoo on her leg",
+    "The scene is a minimalist indoor space with a marble wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 sitting behind R2 and holding R2's arms from behind, rather than R2 holding R1's arms from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's arms from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest his head gently on top of R2's head, rather than R2 resting her head on top of R1's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests his head on R2's head"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning back against R1 while R1 supports the intimate pose from behind, rather than R1 leaning back against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans back against R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned behind R2 in the seated pose with his arms around her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is behind R2 with arms around her"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her eyes closed with a peaceful smile while leaning back into R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans back into R1 with closed eyes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

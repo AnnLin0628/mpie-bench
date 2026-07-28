@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3196b0211541__T2",
+  "instruction": "Candid studio portrait, medium close-up. In a minimalist studio with a light grey background, three women share a joyful embrace. The straight-haired woman (R1) on the left, wearing a white strap top, smiles happily at the camera. In the center, the freckled woman with an afro (R3) in a light blue top laughs warmly, her hand resting on R1's shoulder. On the right, the curly-haired woman (R2) in a dark strap top leans in close with a bright, cheerful smile. Soft, even studio lighting highlights their expressions, creating a warm, positive mood.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3's hand rests on R1's shoulder",
+    "R1 receives the shoulder contact from R3",
+    "R2 leans in close toward R1 and R3",
+    "R3 is between R1 and R2 while laughing and touching R1's shoulder",
+    "minimalist studio with a light grey background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3's hand resting on R1's shoulder, rather than R1's hand resting on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's hand rests on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder touch from R3, rather than R3 receiving that shoulder touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the shoulder contact from R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning in close toward R1 and R3, rather than R1 being the one singled out as leaning in toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans in close toward R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 making contact by keeping her hand on R1's shoulder during the group pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 touches R1's shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 between R1 and R2 while laughing and maintaining contact with R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is between R1 and R2 while touching R1's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__c9496c140dea__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures an indoor home setting with neutral beige walls. On the left, the person with curly dark hair and glasses (R1) stands in profile wearing a striped shirt, looking forward with a soft expression. On the right, the person in the mint waffle-knit sweater (R2) stands facing them. R2 extends their right arm, showcasing a detailed forearm tattoo, to feed a single dark cherry to R1. The two share a close, playful moment. Soft, natural indoor lighting fills the space, casting gentle shadows and highlighting the warm, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 feeds a single dark cherry to R1",
+    "R1 is the recipient of the cherry being offered by R2",
+    "R2 extends their right arm toward R1 while feeding them",
+    "a single dark cherry is the contact-relevant object",
+    "R2's forearm tattoo is visible on the extended arm",
+    "the scene is an indoor home setting with neutral beige walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 feeding a single dark cherry to R1, rather than R1 feeding a cherry to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the feeder and R1 is the recipient"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend their right arm toward R1 to offer the cherry, rather than R1 extending an arm to offer it to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends the offering arm toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile as the person being fed by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving the food from R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

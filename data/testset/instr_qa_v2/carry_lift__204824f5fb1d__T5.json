@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__204824f5fb1d__T5",
+  "instruction": "A candid family photograph in a medium shot captures a family moment in an outdoor park with a grassy field and blurred trees. The man in the white zip-up hoodie (R1) stands in the center, facing forward with his eyes closed in a gentle expression. He cradles the toddler in denim overalls (R3) securely against his chest. The toddler (R3) sits in his arms, looking off-camera to the right with a curious, neutral expression. The scene is illuminated by soft, diffused daylight, creating a gentle atmosphere with a muted, natural color palette and a shallow depth of field.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 cradles and supports R3 securely against his chest",
+    "R3 is the toddler being carried in R1's arms",
+    "R3 sits in R1's arms rather than carrying R1",
+    "R1 faces forward with eyes closed",
+    "R3 looks off-camera to the right",
+    "the setting is an outdoor park with grass and blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 cradling and supporting R3 against his chest, rather than R3 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports and cradles R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the toddler being carried in R1's arms, rather than R1 being carried in R3's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is carried by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 sit in R1's arms while R1 holds R3 securely?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sits in R1's arms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing forward while holding R3 close to his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3 close while facing forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

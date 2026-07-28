@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__68b9f2f529ba__T4",
+  "instruction": "Studio photograph, medium close-up shot. In an indoor studio with a neutral beige curtain background, a shirtless man (R1) lifts a woman in a beige sports bra and black shorts (R2) from below. The man (R1) is positioned lower in the frame, supporting her weight, while the woman (R2) is suspended in the air, looking forward with a focused expression. The lighting is warm and soft, creating a gentle atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lifts R2 from below",
+    "R1 supports R2's weight rather than R2 supporting R1",
+    "R2 is suspended in the air while R1 remains lower in the frame",
+    "R2 is the person being carried in the lift",
+    "The scene is an indoor studio with a neutral beige curtain background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight rather than R2 supporting R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person suspended in the air while R1 is the person lifting from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is suspended in the air while R1 lifts her from below"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 act as the base of the lift while R2 is the elevated person being carried?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the lifting base and R2 is the elevated carried person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned lower in the frame as the person holding up R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is lower in the frame while holding up R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

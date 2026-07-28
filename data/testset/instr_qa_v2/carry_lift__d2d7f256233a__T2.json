@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__d2d7f256233a__T2",
+  "instruction": "A candid family photograph in a medium full shot captures a playful pillow fight in a bright bedroom with a yellow headboard. The young girl in the yellow dress (R1) stands on the bed on the right, smiling as she swings an orange pillow forward. On the left, the man in the yellow sweater (R2) stands by the bed, holding up a white pillow to block her playful strike. The scene is filled with soft, warm indoor light, emphasizing the bright yellow and white tones of the bedding and clothing.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the playful attacker swinging an orange pillow forward",
+    "R2 is the defender holding up a white pillow to block R1's strike",
+    "R1 stands on the bed during the pillow fight",
+    "R2 stands by the bed while blocking with the pillow",
+    "An orange pillow is used as R1's striking object",
+    "A white pillow is used as R2's blocking object",
+    "The pillow fight takes place in a bright bedroom with a yellow headboard"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one swinging an orange pillow forward toward R2, rather than R2 swinging it toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the playful attacker swinging an orange pillow forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding up a white pillow to block R1's playful strike, rather than R1 blocking a strike from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender holding up a white pillow to block R1's strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the pillow fight, is R1 acting as the striker while R2 acts as the blocker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 strikes with a pillow while R2 blocks with another pillow"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand on the bed while swinging the pillow, with R2 positioned by the bed to block?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands on the bed during the pillow fight while R2 stands by the bed"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

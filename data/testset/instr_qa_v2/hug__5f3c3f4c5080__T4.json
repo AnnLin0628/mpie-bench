@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5f3c3f4c5080__T4",
+  "instruction": "A cinematic film still in a medium full shot captures a cozy indoor living room during the day. The elderly man in a striped shirt and khaki trousers (R1) stands on the left, facing right as he holds his partner. The elderly woman in a white shirt and beige trousers (R2) stands on the right, her back partially to the camera. The couple is slow dancing together; R1 holds R2's waist with his hand, while R2 rests her hands on his shoulders in a gentle embrace. Warm, soft indoor lighting and natural light from the side illuminate the room, creating a loving and peaceful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2 at the waist during the slow dance",
+    "R2 rests her hands on R1's shoulders during the slow dance",
+    "R1 and R2 have distinct dance-contact roles: R1 at R2's waist and R2 at R1's shoulders",
+    "R1 and R2 are slow dancing together in close contact",
+    "The scene is a cozy indoor living room during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding R2's waist during the dance, rather than R2 holding R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 at the waist during the slow dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one resting her hands on R1's shoulders, rather than R1 resting his hands on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her hands on R1's shoulders during the slow dance"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R1 and R2 keep distinct dance-contact roles, with R1's hand at R2's waist and R2's hands on R1's shoulders rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct dance-contact roles: R1 at R2's waist and R2 at R1's shoulders"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 slow dancing together in close contact, with their bodies oriented toward each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are slow dancing together in close contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

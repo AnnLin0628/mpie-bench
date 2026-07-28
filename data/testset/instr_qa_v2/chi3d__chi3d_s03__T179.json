@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T179",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and white pillars. The bearded man in a dark shirt and blue shorts (R1) and the woman in a white t-shirt and blue jeans (R2) are locked in a warm embrace. The man stands in profile facing left, while the woman stands on her toes facing right, wrapping her arms around his neck. The background features white pillars, wooden floor borders, and studio equipment. Even indoor overhead lighting illuminates the scene, creating a neutral atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1's neck during the embrace",
+    "R2 stands on her toes to reach R1 while R1 remains standing",
+    "R1 is the person whose neck is encircled by R2's arms",
+    "R1 and R2 are in close bodily contact in a warm embrace",
+    "The setting is an indoor motion capture studio with a red carpet and white pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping her arms around R1's neck, rather than R1 wrapping his arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's neck during the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on her toes to reach R1, rather than R1 standing on his toes to reach R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on her toes to reach R1 while R1 remains standing"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose neck is encircled by R2's arms, rather than R2 being the person whose neck is encircled by R1's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose neck is encircled by R2's arms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in close contact with R1 by placing her arms around his neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the neck-wrapping participant in the close contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain standing while R2 rises onto her toes during their close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands while R2 is on her toes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

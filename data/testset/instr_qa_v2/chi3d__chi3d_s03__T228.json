@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T228",
+  "instruction": "Candid documentary photograph, wide shot, slightly high angle. In a motion capture studio with a red carpet and white walls, the man in the black polo and blue shorts (R1) stands on the left, kicking his left leg forward. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing him as his foot extends toward her thigh. R1 balances on his right leg while executing the kick. Overhead lights illuminate the space, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person executing the kick toward R2",
+    "R2 is the person facing R1 as his foot extends toward her thigh",
+    "R1 balances on his right leg while kicking his left leg forward",
+    "R2's thigh is the target area of R1's extended foot",
+    "The interaction occurs in a motion capture studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one kicking his leg forward toward R2, rather than R2 kicking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kicker and R2 is the recipient/target of the kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's foot extend toward R2's thigh, rather than R2's foot extending toward R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's extended foot is directed at R2's thigh"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on his right leg while executing the kick, rather than R2 balancing on one leg to kick him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the one-legged kicking action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 configured with his left leg kicked forward toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body is posed in a forward kick toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

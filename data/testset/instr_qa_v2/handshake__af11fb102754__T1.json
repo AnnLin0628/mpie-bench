@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__af11fb102754__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures two men in profile inside a brightly lit office with a bookshelf. On the left, the man in the grey suit (R2) stands facing right, smiling warmly as he shakes hands with the man in the red sweater (R1). Standing on the right, the man in the red sweater (R1) faces left, clasping R2's hand while placing his right hand affectionately on R2's shoulder. Soft, warm indoor light illuminates the scene, casting gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his right hand on R2's shoulder during the handshake",
+    "R2 receives the affectionate shoulder touch from R1 while clasping hands",
+    "R1 both clasps R2's hand and adds the shoulder contact, rather than R2 doing both",
+    "R2 is the handshake partner facing R1 while R1 touches his shoulder",
+    "The interaction occurs inside a brightly lit office with a bookshelf"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one placing his right hand affectionately on R2's shoulder during the hand clasp, rather than R2 placing his hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his right hand on R2's shoulder during the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one whose shoulder is being touched by R1 while their hands are clasped, rather than R1 being the one whose shoulder is touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the affectionate shoulder touch from R1 while clasping hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 combine clasping R2's hand with an added affectionate shoulder touch, rather than R2 being the person who does both actions to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 both clasps R2's hand and adds the shoulder contact, rather than R2 doing both"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

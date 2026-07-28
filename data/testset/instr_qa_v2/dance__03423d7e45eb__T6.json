@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03423d7e45eb__T6",
+  "instruction": "A full-shot cinematic still of a bright dance studio. The male dancer in the black top (R3) stands on the left, placing his hands on the shoulder and waist of the female dancer in the purple top (R1) on the right. She stands on pointe, resting her left arm on his shoulder. Soft daylight illuminates the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 places his hands on R1's shoulder and waist",
+    "R1 stands on pointe while partnered with R3",
+    "R1 rests her left arm on R3's shoulder",
+    "R3 is the male dancer guiding/contacting R1 in the dance pose",
+    "The scene is a bright dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 place his hands on R1's shoulder and waist, rather than R1 placing her hands on R3's shoulder and waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the asymmetric hand-placement duty on R1's shoulder and waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer standing on pointe while R3 contacts her shoulder and waist, rather than R3 standing on pointe while R1 contacts his shoulder and waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is on pointe while R3 provides partner contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest her left arm on R3's shoulder while R3 uses both hands on R1's shoulder and waist, rather than the reverse arrangement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's arm rests on R3's shoulder while R3's hands guide R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 in the partner-dance guiding role with his hands placed on R1's shoulder and waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 guides or frames R1 through shoulder-and-waist contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 balancing on pointe with her left arm resting on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's dance pose includes pointe balance and arm contact on R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

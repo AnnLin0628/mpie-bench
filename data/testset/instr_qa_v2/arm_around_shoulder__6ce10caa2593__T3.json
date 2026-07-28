@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__6ce10caa2593__T3",
+  "instruction": "A candid lifestyle photograph with soft focus and natural lighting captures a medium, eye-level shot of three young women on a sunlit dirt path in a wooded park. On the left, the young woman with a white patterned headband (R2) wears a white t-shirt and points forward with a wooden stick. In the center, the young woman in a black t-shirt (R3) holds an open paper map with a plaid shirt tied around her waist, smiling towards the left. On the right, the young woman in a white t-shirt and blue jeans (R1) stands laughing with a beige jacket tied around her waist, holding a rolled-up purple blanket. Warm, golden hour sunlight backlights the scene, creating a soft glow on their hair and a warm, inviting atmosphere as they stand close together.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 points forward with a wooden stick rather than R1 or R3 doing so",
+    "R3 holds the open paper map rather than R1 holding the map",
+    "R1 holds the rolled-up purple blanket rather than R2 holding it",
+    "R2 directs the group forward with the stick while R3 consults the map",
+    "wooden stick used for pointing",
+    "open paper map",
+    "sunlit dirt path in a wooded park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one pointing forward with the wooden stick, rather than R1 or R3 pointing with it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points forward with a wooden stick rather than R1 or R3 doing so"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 holding the open paper map, rather than R1 holding the map?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the open paper map rather than R1 holding the map"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the rolled-up purple blanket, rather than R2 holding that blanket?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the rolled-up purple blanket rather than R2 holding it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 appear to direct attention forward with the stick while R3 handles the map?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs the group forward with the stick while R3 consults the map"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

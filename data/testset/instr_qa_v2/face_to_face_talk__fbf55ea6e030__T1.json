@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__fbf55ea6e030__T1",
+  "instruction": "Candid documentary photograph, medium full shot. In an open grassy field on an overcast day, the man in the black-and-white checkered shirt (R2) stands on the left, smiling warmly at the camera. Beside him, the man in the gray tie-dye jacket (R1) stands on the right, smiling while holding a blue-handled walking stick. They stand side-by-side, shoulder-to-shoulder on the muddy ground. The lighting is soft and diffused, casting gentle shadows across the natural green and gray landscape.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person holding the blue-handled walking stick rather than R2",
+    "R2 stands beside R1 without being the walking-stick holder",
+    "R1 and R2 stand side-by-side shoulder-to-shoulder on muddy ground",
+    "blue-handled walking stick",
+    "open grassy field on an overcast day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the blue-handled walking stick rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the walking-stick holder instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing beside the walking-stick holder R1, rather than R2 being the one who holds the walking stick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the companion beside R1, not the walking-stick holder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing side-by-side shoulder-to-shoulder, with R1 carrying the walking stick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "side-by-side shoulder-to-shoulder stance with R1 as stick carrier"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T7",
+  "instruction": "A candid full shot from a low angle captures an instructional moment in a martial arts studio with a brick wall background and a white pillar on the left. In the foreground, the young girl in a red gi (R3) sits cross-legged on the left, and the young girl in a white gi (R4) sits cross-legged on the right, both with their backs to the camera as they watch attentively. In the background, the bearded instructor with a headband (R6) wearing a black gi stands facing them, gesturing with his hand near his face as he speaks. Soft daylight illuminates the warm-toned room.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 is the standing instructor speaking to the seated students, rather than R3 instructing R6",
+    "R6 is the standing instructor speaking to the seated students, rather than R4 instructing R6",
+    "R3 sits cross-legged in the foreground with her back to the camera while watching R6",
+    "R4 sits cross-legged in the foreground with her back to the camera while watching R6",
+    "R6 gestures with his hand near his face while speaking",
+    "The scene is in a martial arts studio with a brick wall background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the standing instructor speaking to R3 while R3 sits cross-legged watching him, rather than R3 standing and instructing R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 instructs R3 while R3 watches from a seated student position"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the standing instructor speaking to R4 while R4 sits cross-legged watching him, rather than R4 standing and instructing R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 instructs R4 while R4 watches from a seated student position"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 seated cross-legged in the foreground with her back to the camera as she watches R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's seated student role while watching R6"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 seated cross-legged in the foreground with her back to the camera as she watches R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's seated student role while watching R6"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

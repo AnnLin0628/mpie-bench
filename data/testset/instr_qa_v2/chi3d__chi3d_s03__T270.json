@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T270",
+  "instruction": "Candid wide-angle documentary photograph in an indoor studio with a red carpet and white pillars. The man in the black polo and blue shorts (R1) walks towards the left in profile. Behind him, the woman in the white t-shirt and blue jeans (R2) walks in the same direction, reaching out to touch the man's (R1) upper back with her left hand. The room is lit by overhead fluorescent lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches out with her left hand to touch R1's upper back",
+    "R1 is the person receiving the upper-back touch from R2",
+    "R2 walks behind R1 in the same direction while making contact",
+    "R1 walks in profile while R2 performs the back-touching action",
+    "the scene is an indoor studio with a red carpet and white pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 reach out with her left hand to touch R1's upper back, rather than R1 reaching out to touch R2's upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates upper-back contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the upper-back touch from R2, rather than R2 receiving an upper-back touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's back-touching gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking behind R1 while extending a hand toward R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 follows behind R1 and reaches toward him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep walking in profile while R2 performs the contact gesture toward his upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks while R2 makes the upper-back contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__c06970fb69ec__T3",
+  "instruction": "Candid documentary photograph, medium shot. In a sunny outdoor park with green grass and blurred trees, the bald man in the dark blue t-shirt (R1) on the left and the woman with a ponytail in the dark blue t-shirt (R2) on the right crouch in a line, pulling a thick yellow rope. The bald man (R1) pulls while shouting joyfully with a wide-open mouth, while the woman (R2) stands behind him, pulling with a happy smile. Bright natural daylight illuminates the scene with warm tones, soft shadows, and a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the front puller on the rope with R2 behind him",
+    "R2 pulls the same rope from behind R1 rather than leading in front",
+    "R1 shouts joyfully with a wide-open mouth while pulling as R2 smiles behind him",
+    "R1 and R2 crouch in a line while pulling the rope",
+    "a thick yellow rope is being pulled",
+    "sunny outdoor park with green grass and blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the front puller on the thick rope with R2 behind him, rather than R2 being the front puller with R1 behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the front puller on the rope with R2 behind him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 pull the rope from behind R1, rather than R1 pulling from behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 pulls the same rope from behind R1 rather than leading in front"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one shouting joyfully with a wide-open mouth while pulling, while R2 is behind him pulling with a happy smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 shouts joyfully with a wide-open mouth while pulling as R2 smiles behind him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 crouched in a line as they pull the same rope?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 crouch in a line while pulling the rope"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a thick yellow rope being pulled?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a thick yellow rope is being pulled"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

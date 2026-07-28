@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T5",
+  "instruction": "Candid group photograph, medium shot. On an outdoor rooftop under an overcast sky, a group of six friends stands in a tight line. From left to right: the man in the gray hoodie (R2) stands neutrally; the woman in the white jacket (R5) stands beside him; the man in the dark blue jacket (R6) smiles with his arm around her shoulder; the woman in the plaid shirt (R3) smiles gently; the man in the green jacket (R4) stands with his arm around her; and the woman in the light gray sweatshirt (R1) stands on the far right. They all look towards the camera. Soft, diffused daylight illuminates the scene with a cool color palette.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 has his arm around R5's shoulder",
+    "R4 has his arm around R3",
+    "R5 is the person whose shoulder is being held by R6",
+    "R3 is the person being held by R4",
+    "The group is on an outdoor rooftop under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R6 have his arm around R5's shoulder, rather than R5 having her arm around R6's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 has his arm around R5's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 have his arm around R3, rather than R3 having her arm around R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has his arm around R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 the person receiving R6's arm around her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the person whose shoulder is being held by R6"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the person being held by R4's arm while they stand in the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the person being held by R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__0e515a665e40__T2",
+  "instruction": "Candid documentary photograph, medium close-up shot. Indoors in a bright office during the day, the bearded man in the striped shirt (R1) sits on the left side of the frame, looking downwards with a neutral expression. On the right, the woman in the beige collared shirt (R2) sits looking slightly upward and to the left with a gentle, subtle smile. A blurry, out-of-focus hand holding a thin wooden stick is visible in the lower foreground, drawing their attention. Soft, natural light streams from a window in the background, creating a bright and natural atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person looking downward with a neutral expression",
+    "R2 is the person looking slightly upward and to the left with a gentle subtle smile",
+    "R1 and R2 are seated and have their attention drawn by the foreground hand with the stick",
+    "a blurry out-of-focus hand holds a thin wooden stick in the lower foreground",
+    "the scene is indoors in a bright office during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking downward with a neutral expression, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the downward-looking neutral person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking slightly upward and to the left with a gentle subtle smile, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the upward-looking subtly smiling person"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 have their attention drawn toward the blurry foreground hand holding the stick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "both main people attend to the foreground hand and stick"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a blurry out-of-focus hand holding a thin wooden stick in the lower foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "foreground hand holding a thin wooden stick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

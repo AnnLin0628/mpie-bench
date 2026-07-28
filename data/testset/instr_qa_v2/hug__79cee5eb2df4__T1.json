@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__79cee5eb2df4__T1",
+  "instruction": "Candid cinematic film still, medium shot. In an underground parking garage, the woman in the black bucket hat (R2) stands in the center laughing as she lifts the woman in the black beanie (R1) on the left. On the right, the woman in the olive vest (R3) stands close, laughing with her arm draped over the shoulder of the woman in the black bucket hat (R2). The three women are huddled in a joyful embrace. Cool overhead fluorescent lights illuminate the scene, casting soft shadows in the dark concrete garage.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 lifts and supports R1, rather than R1 lifting R2",
+    "R1 is being carried by R2 while R2 bears the lifting role",
+    "R3 drapes her arm over R2's shoulder, rather than R2 draping her arm over R3's shoulder",
+    "R3 stands close to R2 while making shoulder contact with her",
+    "the interaction takes place in an underground parking garage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lifting and supporting R1, rather than R1 lifting and supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lifts and supports R1, rather than R1 lifting R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being lifted by R2, rather than R2 being lifted by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is being carried by R2 while R2 bears the lifting role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 have her arm draped over R2's shoulder, rather than R2 having her arm draped over R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 drapes her arm over R2's shoulder, rather than R2 draping her arm over R3's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the central person laughing while lifting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central lifter supporting R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 standing close to R2 while making shoulder contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands close to R2 while making shoulder contact with her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

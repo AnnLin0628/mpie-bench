@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T114",
+  "instruction": "A candid wide-angle photograph from a high angle captures an indoor studio with a red carpet. The man in the black polo shirt and blue shorts (R1) stands facing forward-right. The woman in the white t-shirt and blue jeans (R2) stands with her back to the camera, reaching out to touch his stomach. The background features white walls and ceiling fixtures. The scene is evenly lit.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches out to touch R1's stomach",
+    "R1 is the recipient of R2's hand-to-stomach contact",
+    "R2 initiates contact toward R1 rather than R1 initiating contact toward R2",
+    "R1 stands facing forward-right while R2 stands with her back to the camera",
+    "The setting is an indoor studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching out to touch R1's stomach, rather than R1 reaching out to touch R2's stomach?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates hand-to-stomach contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose stomach is being touched by R2, rather than R2 being the person whose stomach is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's stomach touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend her arm toward R1's torso while R1 remains the contact target, rather than R1 extending his arm toward R2's torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches toward R1's torso as the active toucher"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing with her back to the camera while reaching toward R1's stomach?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body orientation and reaching role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

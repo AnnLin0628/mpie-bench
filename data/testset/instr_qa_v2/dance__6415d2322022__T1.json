@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__6415d2322022__T1",
+  "instruction": "Cinematic medium shot of an elderly couple slow dancing in a warmly lit living room. On the left, the smiling elderly woman with short gray hair (R1) in a beige vest faces right. On the right, the elderly man with glasses (R2) in a peach sweater stands in profile facing her. They hold hands at chest height, sharing an intimate moment. Soft, warm indoor lighting creates a cozy atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the elderly woman facing R2 during the hand-held slow dance",
+    "R2 is the elderly man in profile facing R1 during the hand-held slow dance",
+    "R1 and R2 hold hands at chest height while slow dancing",
+    "R1 and R2 face each other during the intimate dance",
+    "the scene is a warmly lit living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the hand-held slow dance, is R1 the elderly woman facing toward R2, rather than R2 being the elderly woman facing toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the elderly woman facing R2 during the hand-held slow dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the hand-held slow dance, is R2 the elderly man in profile facing R1, rather than R1 being the elderly man in profile facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the elderly man in profile facing R1 during the hand-held slow dance"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 slow dancing together while holding hands at chest height?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands at chest height while slow dancing"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 during the dance while their hands are joined at chest height?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while they hold hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

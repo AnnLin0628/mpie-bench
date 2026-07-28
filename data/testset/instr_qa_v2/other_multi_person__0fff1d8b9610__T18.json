@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T18",
+  "instruction": "An action photograph with a high-angle full shot captures a bright white indoor studio. In the foreground center, the cheerleader with long dark hair (R14), wearing a white t-shirt and white skirt, dynamically swings her orange pom-poms forward, creating visible motion blur. Behind her and to the right, the cheerleader with curly brown hair (R11) in a matching outfit holds her orange pom-poms near her chest in a synchronized dance pose. The background features vertical light tubes on a clean white backdrop. The scene is lit with bright, even studio lighting, casting soft shadows on the floor.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R14 dynamically swings orange pom-poms forward, producing visible motion blur, while R11 does not",
+    "R11 holds orange pom-poms near her chest in a synchronized dance pose rather than swinging them forward",
+    "R14 is the foreground center performer, with R11 positioned behind her in the dance formation",
+    "Both R14 and R11 use orange pom-poms as dance props",
+    "The scene is set in a bright white indoor studio with vertical light tubes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R14 dynamically swinging her orange pom-poms forward with visible motion blur, rather than R11 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 performs the forward pom-pom swing"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R11 hold her orange pom-poms near her chest in a synchronized dance pose, rather than R14 being the one holding them near her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R11 holds pom-poms near chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R14 the dancer creating motion blur with her pom-poms while R11 keeps her pom-poms closer to her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "different pom-pom actions by R14 and R11"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R14 the foreground center cheerleader performing the forward pom-pom swing while R11 is posed behind her in the dance formation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 foreground swinging role and R11 background posed role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

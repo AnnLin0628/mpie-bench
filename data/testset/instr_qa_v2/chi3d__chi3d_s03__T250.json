@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T250",
+  "instruction": "A candid documentary photograph in a medium-full, eye-level shot captures an indoor motion capture studio with a red carpeted floor and white walls. The woman in the white patterned t-shirt (R2) stands on the left in blue jeans, leaning playfully and extending her right arm horizontally while smiling. Next to her, the man in the black cap (R1) stands on the right in a dark polo shirt and blue shorts, smiling as he raises his right hand behind her head to make a playful bunny ears gesture. The scene is brightly lit by overhead lights, highlighting the white walls, a radiator, and the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 raises his right hand behind R2's head to make a playful bunny ears gesture",
+    "R2 is the person being given bunny ears by R1, rather than giving bunny ears to R1",
+    "R2 leans playfully and extends her right arm horizontally while R1 performs the gesture",
+    "R1 smiles beside R2 while using his hand for the behind-head gesture",
+    "The scene is an indoor motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising his right hand behind R2's head to make playful bunny ears, rather than R2 raising her hand behind R1's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 makes the bunny ears gesture behind R2's head"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being playfully framed with bunny ears by R1, rather than R1 being framed with bunny ears by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the playful bunny ears gesture from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 perform the behind-head hand gesture while R2 leans and extends her right arm, rather than R2 performing the behind-head gesture while R1 leans and extends his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the gesture-maker and R2 is the leaning arm-extending participant"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning playfully and extending her right arm horizontally while R1 stands next to her making the gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans and extends her arm while R1 makes the playful gesture"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his raised right hand for the playful bunny ears pose behind R2's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's raised hand creates the bunny ears role behind R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

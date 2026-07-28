@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__0ca366dfd121__T1",
+  "instruction": "A clean studio photograph captured in a medium shot at eye-level. In a minimalist indoor studio with a plain off-white background, two women celebrate. On the center-left, the Black woman in a white button-up shirt and black skirt (R1) stands facing slightly right, raising both hands high in celebration with a joyful smile. On the right, the East Asian woman in a white collarless shirt and black pants (R2) stands facing left, smiling warmly at the Black woman (R1) while gesturing with her left hand. The scene is illuminated by bright, soft, even studio lighting, creating a clean and professional atmosphere with a neutral color palette.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 raises both hands high in celebration rather than R2 doing so",
+    "R2 gestures with her left hand toward R1 rather than R1 making that one-handed gesture toward R2",
+    "R1 is the active celebrant with both hands raised while R2 smiles warmly at R1",
+    "R2 faces and reacts to R1 with a warm smile and hand gesture",
+    "The interaction takes place in a minimalist indoor studio with a plain off-white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman raising both hands high in celebration, rather than R2 raising both hands high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises both hands high in celebration rather than R2 doing so"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman gesturing with her left hand toward R1, rather than R1 making that one-handed gesture toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with her left hand toward R1 rather than R1 making that one-handed gesture toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active celebrant with both hands raised while R2 responds by smiling warmly at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active celebrant with both hands raised while R2 smiles warmly at R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face and smile warmly at R1 while making a hand gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces and reacts to R1 with a warm smile and hand gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

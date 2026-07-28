@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__47c4dac39572__T1",
+  "instruction": "Cinematic medium shot of a lakeside park. On the left, the woman in the beige hijab and black polka-dot dress (R2) stands facing right, smiling warmly as she places her hand on the arm of the man in the beige corduroy shirt (R1). The man (R1) stands on the right in profile, looking back at her. The background shows soft-focus trees under warm daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her hand on R1's arm",
+    "R1 is the person whose arm is being touched by R2",
+    "R2 faces R1 while smiling warmly during the arm touch",
+    "R1 looks back at R2 in profile while she touches his arm",
+    "lakeside park setting with soft-focus trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one placing her hand on R1's arm, rather than R1 placing his hand on R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her hand on R1's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the arm touch from R2, rather than R2 receiving an arm touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose arm is being touched by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look back at R2 while R2 has her hand on his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks back at R2 in profile while she touches his arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

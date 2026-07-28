@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T5",
+  "instruction": "Cinematic low-angle wide shot of a classical ballet studio with white columns. In the foreground, the dark-haired ballerina (R1) in a white leotard and sheer skirt holds the barre, extending her left leg back in an arabesque while looking up. In the background, the blonde ballerina (R2) in a white leotard and sheer skirt performs a synchronized arabesque. Bright, hazy backlight streams from the window, casting a soft white glow over the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the foreground ballerina who holds the barre while extending her left leg back in an arabesque",
+    "R2 is the background ballerina performing a synchronized arabesque",
+    "R1 looks up during her arabesque pose",
+    "the barre is the contact object held by R1",
+    "the scene is a classical ballet studio with white columns"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina holding the barre while extending her left leg back in an arabesque, rather than R2 being the one holding the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the barre during her arabesque instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina in the background performing the synchronized arabesque, rather than R1 being the background synchronized dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the background synchronized arabesque role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 performing an arabesque that is synchronized with R1's pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's synchronized dance role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

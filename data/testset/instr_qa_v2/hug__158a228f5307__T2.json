@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__158a228f5307__T2",
+  "instruction": "Candid lifestyle medium shot of an indoor birthday party. The grey-haired woman (R1) in a light grey dress stands in the center, laughing joyfully with her head tilted back. The blonde woman (R3) in an orange patterned dress on the left and the short-haired woman (R2) in a white blouse on the right both embrace R1 from either side. A wooden table in the foreground features a white birthday cake with \"60\" candles and cupcakes. Warm indoor lighting illuminates the festive scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the central woman being embraced by both R2 and R3",
+    "R2 embraces R1 from one side rather than being the central person embraced by R1",
+    "R3 embraces R1 from one side rather than being the central person embraced by R1",
+    "R1 laughs with her head tilted back while receiving the embrace",
+    "A wooden foreground table holds a white birthday cake with 60 candles",
+    "Cupcakes are on the birthday table",
+    "The scene is an indoor birthday party"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the central person being embraced by both R2 and R3, rather than R1 being one of the side embracers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the central woman being embraced by both R2 and R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 embrace R1 from one side, rather than R1 being the one who embraces R2 as the central recipient?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 from one side rather than being the central person embraced by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 embrace R1 from one side, rather than R1 being the side person embracing R3 as the central recipient?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 embraces R1 from one side rather than being the central person embraced by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 laughing with her head tilted back while R2 and R3 hold her in the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs with her head tilted back while receiving the embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

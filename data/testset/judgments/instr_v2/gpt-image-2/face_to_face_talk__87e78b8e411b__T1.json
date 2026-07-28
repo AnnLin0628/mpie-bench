@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__87e78b8e411b__T1",
+  "model_id": "gpt-image-2",
+  "S_instr": 1.0,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": null,
+  "S_instr_scene": 1.0,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the pen while R2 holds the document, rather than R2 holding the pen and R1 holding the document?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "right person holds pen, left holds document"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one gesturing with one hand while holding the document, rather than R1 doing that action?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "left person gestures while holding paper"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting cross-legged and looking at R2 while holding a pen?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "right person sits cross-legged with pen"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 seated on a yellow couch in a cozy indoor living room?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "both sit on a yellow couch indoors"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "face_to_face_talk__87e78b8e411b__T1",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 6.7,
+    "written_at": "2026-07-17T16:15:58",
+    "gen_relpath": "outputs/gpt-image-2/face_to_face_talk__87e78b8e411b__T1.png",
+    "qa_relpath": "instr_qa_v2/face_to_face_talk__87e78b8e411b__T1.json",
+    "n_questions": 4
+  }
+}

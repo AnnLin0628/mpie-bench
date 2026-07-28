@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T15",
+  "instruction": "Candid action photograph, wide-angle side shot. In an indoor judo dojo with yellow tatami mats and a white paneled wall, the young woman in the blue judo gi (R1) on the left and the young man in the white judo gi (R2) on the right perform one-handed pushups. Facing each other, the young woman smiles as she reaches out her right hand to clasp the left hand of the young man, who looks back at her. The scene is brightly lit with even indoor light, highlighting the warm yellow mats and their athletic interaction.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 reaches out her right hand to clasp R2's left hand",
+    "R2 is the partner whose left hand is clasped by R1's right hand",
+    "R1 smiles while initiating the hand clasp toward R2",
+    "R1 and R2 face each other while performing one-handed pushups",
+    "yellow tatami mats support the pushup interaction",
+    "indoor judo dojo setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching out her right hand to clasp R2's left hand, rather than R2 reaching out his right hand to clasp R1's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses her right hand to clasp R2's left hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one whose left hand is being clasped by R1's right hand, rather than R1's left hand being clasped by R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the clasp with his left hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the smiling participant who reaches toward R2 during the one-handed pushups, rather than R2 being described as the smiling reacher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles while initiating the reach toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

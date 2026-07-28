@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T3",
+  "instruction": "Cinematic film still, medium over-the-shoulder shot in a dim indoor gym. In the foreground left, the man in the gorilla-print compression shirt (R4) stands with his back to the camera, facing his sparring partner. In the background right, the man in the black t-shirt (R2) faces forward in a boxing stance, holding his left hand up defensively while looking ahead. The two men are engaged in a sparring session. Cool, moody lighting illuminates the scene, with a soft blue smoke haze visible in the lower left corner.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the sparring partner facing forward in a boxing stance with his left hand raised defensively, rather than R4",
+    "R4 stands with his back to the camera facing R2, rather than R2 standing with his back to the camera facing R4",
+    "R2 is the defensive boxer looking ahead while R4 faces him from the foreground",
+    "R4 and R2 are engaged with each other as sparring partners",
+    "R2 holds his left hand up defensively in the sparring session",
+    "The scene takes place in a dim indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the sparring partner facing forward in a boxing stance with his left hand raised defensively, rather than R4 being described in that defensive stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the sparring partner facing forward in a boxing stance with his left hand raised defensively, rather than R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the man standing with his back to the camera facing R2, rather than R2 standing with his back to the camera facing R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 stands with his back to the camera facing R2, rather than R2 standing with his back to the camera facing R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking ahead defensively while R4 faces him from the foreground, rather than R4 being the forward-facing defensive boxer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defensive boxer looking ahead while R4 faces him from the foreground"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold his left hand up defensively during the sparring session?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds his left hand up defensively in the sparring session"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

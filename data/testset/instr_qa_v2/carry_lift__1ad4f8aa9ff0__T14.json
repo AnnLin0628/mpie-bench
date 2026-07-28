@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T14",
+  "instruction": "Candid outdoor portrait, full shot, eye-level. On a wooden boardwalk with a suspension bridge in the background, the woman with buzzed hair (R1) in a white crop top and gray shorts stands next to the bearded man (R2) in a white t-shirt and black leggings. The woman (R1) holds a pink yoga mat and smiles at the camera, while the man (R2) holds a brown yoga mat, wraps his arm around her waist, and smiles at her. The scene is lit by soft overcast daylight with natural colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps his arm around R1's waist rather than R1 wrapping her arm around R2's waist",
+    "R1 smiles at the camera while R2 smiles at R1",
+    "R1 holds a pink yoga mat",
+    "R2 holds a brown yoga mat",
+    "R1 and R2 stand together on a wooden boardwalk",
+    "a suspension bridge is visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one wrapping his arm around R1's waist, rather than R1 wrapping her arm around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arm around R1's waist rather than R1 wrapping her arm around R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 smiling at the camera while R2 smiles at R1, rather than R1 being the one who smiles at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles at the camera while R2 smiles at R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand close to R1 with his arm placed around her waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the waist-wrapping contact role with R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a pink yoga mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a pink yoga mat"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a brown yoga mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a brown yoga mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T14",
+  "instruction": "A clean studio portrait of two women against a solid dusty rose wall. On the left, the straight-haired woman in a denim jacket (R2) looks directly at the camera. Behind her, the curly-haired woman in a black tank top (R3) stands close, resting her hand on the other's shoulder while looking slightly down. Soft, diffused studio lighting creates a warm, minimalist aesthetic.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 rests her hand on R2's shoulder",
+    "R2 is the person receiving the shoulder touch from R3",
+    "R3 stands close behind R2 while making shoulder contact",
+    "R2 looks directly at the camera while R3 looks slightly down",
+    "solid dusty rose studio wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 resting her hand on R2's shoulder, rather than R2 resting her hand on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the shoulder-touch initiator and R2 is the receiver"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman being touched on the shoulder by R3, rather than R3 being touched on the shoulder by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder contact from R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand close behind R2 while making shoulder contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's close-behind contact role relative to R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T4",
+  "instruction": "Action photograph capturing a sparring moment in a bright room with white walls. In the foreground, a bearded man with a headband (R6) in a black gi is seen from behind as he extends his arm to deliver a strike. In the background, a teenager with dark hair (R5) in a black gi and brown belt reacts to the incoming movement. Bright natural light from a side window illuminates the scene, casting soft shadows on the concrete floor.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 extends his arm to deliver a strike toward R5",
+    "R5 reacts to the incoming movement from R6",
+    "R6 is the striking participant while R5 is the reacting participant",
+    "R6 is seen from behind in the foreground during the sparring action",
+    "the sparring scene takes place in a bright room with white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 extending his arm to deliver a strike toward R5, rather than R5 delivering the strike toward R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the striker and R5 is the target of the incoming movement"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 reacting to an incoming movement from R6, rather than R6 reacting to an incoming movement from R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the reacting role while R6 initiates the strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R6 initiate the sparring action by extending his arm, while R5 responds to that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 initiates the action and R5 responds"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 the foreground sparring participant seen from behind as he makes the striking motion?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the foreground striker seen from behind"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 the background sparring participant who reacts to R6's incoming strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the background reactor to R6's strike"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

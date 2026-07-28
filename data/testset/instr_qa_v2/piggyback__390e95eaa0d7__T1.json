@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__390e95eaa0d7__T1",
+  "instruction": "Candid cinematic medium shot of a cozy indoor room with teal curtains. On a red couch, a woman with long twist braids (R2) in a black top sits on the lap of a shirtless man (R1). The woman (R2) rests her left hand on the shoulder of the shirtless man (R1), who sits on the right looking up and smiling warmly at her. They share an intimate gaze. Warm orange side-lighting illuminates their skin, contrasting with the cool teal background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 sits on R1's lap rather than R1 sitting on R2's lap",
+    "R1 supports R2 from below while seated rather than R2 supporting R1",
+    "R2 rests her left hand on R1's shoulder rather than R1 resting his hand on R2's shoulder",
+    "R1 is seated on the couch with R2 positioned on his lap",
+    "a red couch is used as the seat supporting the pair",
+    "the scene is a cozy indoor room with teal curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 sitting on R1's lap, rather than R1 sitting on R2's lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits on R1's lap rather than R1 sitting on R2's lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 from below while seated, rather than R2 supporting R1 from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from below while seated rather than R2 supporting R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest her left hand on R1's shoulder, rather than R1 resting his left hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her left hand on R1's shoulder rather than R1 resting his hand on R2's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated on the couch with R2 positioned on his lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated on the couch with R2 positioned on his lap"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

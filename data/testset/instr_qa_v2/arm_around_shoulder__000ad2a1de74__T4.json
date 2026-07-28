@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__000ad2a1de74__T4",
+  "instruction": "An intimate and candid portrait photograph with a warm, tender mood. In a close-up shot at eye-level against a plain white wall, the woman with dark curly hair and a nose ring (R2) stands on the left, wearing a dark brown sleeveless top and a gold necklace with an Africa-shaped pendant, looking thoughtfully off-camera to the right. To her right, the woman with light brown curly hair (R5) wears a beige ribbed sleeveless top and leans her head affectionately on the other woman's left shoulder, looking directly into the camera with a soft, gentle expression. She holds the other woman's left arm, which features a butterfly tattoo on the bicep. The scene is illuminated by soft, natural window light from the front-left, creating a warm, earthy color palette with gentle shadows.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R5 leans her head affectionately on R2's left shoulder",
+    "R5 holds R2's left arm",
+    "R2 is the person whose shoulder and arm receive R5's contact",
+    "R2's held left arm has a butterfly tattoo on the bicep",
+    "R2 wears a gold necklace with an Africa-shaped pendant",
+    "the portrait is set against a plain white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 leaning her head on R2's left shoulder, rather than R2 leaning her head on R5's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 leans her head affectionately on R2's left shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 holding R2's left arm, rather than R2 holding R5's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 holds R2's left arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder and arm receive R5's affectionate contact, rather than R5 being the one whose shoulder and arm are used?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose shoulder and arm receive R5's contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand while R5 rests her head on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands as R5 rests her head on R2's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T19",
+  "instruction": "A cinematic full shot of two friends interacting playfully in a grassy park. On the left, the Black woman with a large afro (R6) wears a red t-shirt and ripped blue jeans, standing with a bright smile. On the right, the East Asian man in the red polo shirt (R3) leans his body forward and points playfully towards her while laughing. They are positioned on the vibrant green grass with large, leafy trees in the background under bright, natural daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 is the one pointing playfully toward R6, rather than R6 pointing toward R3",
+    "R3 leans forward toward R6 while laughing, rather than R6 leaning forward toward R3",
+    "R6 is the recipient of R3's playful pointing gesture while standing and smiling",
+    "R3 is the active playful gesturer in the interaction with R6",
+    "the interaction takes place in a grassy park with leafy trees in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 pointing playfully toward R6, rather than R6 pointing playfully toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the active pointer and R6 is the target of the playful pointing"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 lean his body forward toward R6 while laughing, rather than R6 leaning forward toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the one leaning forward toward R6 in the playful exchange"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 the friend being playfully pointed at by R3 while she stands and smiles?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the recipient of R3's playful gesture"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the laughing friend who directs the playful pointing gesture toward R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the playful pointing action toward R6"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

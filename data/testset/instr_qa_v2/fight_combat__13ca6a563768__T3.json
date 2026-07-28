@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__13ca6a563768__T3",
+  "instruction": "A crisp athletic photograph captures a medium shot in a boxing gym. On the left, the blonde woman in the purple cropped hoodie (R2) stands in a boxing stance, throwing a straight punch with her brown boxing glove. On the right, the black man in the orange beanie (R1) stands defensively, raising his hands to block the punch near his face. The background consists of a gray concrete wall with a painted boxer silhouette and a black punching bag hanging on the left. The scene is lit with bright, neutral gym lighting, emphasizing their dynamic poses and athletic training session.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 throws a straight punch toward R1 while R1 blocks defensively",
+    "R1 raises his hands near his face to block R2's punch",
+    "R2 is in a boxing stance as the attacking puncher",
+    "R2 uses a brown boxing glove on the punching hand",
+    "a black punching bag hangs in the boxing gym",
+    "the scene takes place in a boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing a straight punch toward R1, rather than R1 throwing a straight punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the puncher and R1 is the target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising his hands defensively to block R2's punch near his face, rather than R2 blocking a punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the blocker while R2 attacks"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's gloved fist serve as the attacking hand while R1's raised hands serve as the defense?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attacks with a glove and R1 defends with raised hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in a boxing stance while throwing the punch at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body role is the active boxing puncher"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 wearing a brown boxing glove on the hand used to throw the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "brown boxing glove used for the punch"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black punching bag hanging in the gym background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black hanging punching bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

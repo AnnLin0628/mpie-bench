@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T3",
+  "instruction": "A candid black and white photograph in a medium-full shot. On an outdoor stone embankment, the woman in the black cap and dark coat (R2) on the left stands close to the man in the dark coat (R1) on the right. The woman leans back slightly, resting her hands on the man's shoulders while looking up at his face. The man stands in profile, holding her waist protectively as they lean against a stone barrier. The overcast sky provides soft, even lighting across the scene, creating a romantic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's waist protectively rather than R2 holding R1's waist",
+    "R2 rests her hands on R1's shoulders rather than R1 resting his hands on R2's shoulders",
+    "R2 leans back slightly while looking up at R1's face",
+    "R1 stands close to R2 in profile while maintaining waist contact",
+    "R1 and R2 lean against a stone barrier",
+    "The interaction occurs on an outdoor stone embankment"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's waist protectively, rather than R2 holding R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's waist protectively rather than R2 holding R1's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her hands on R1's shoulders, rather than R1 resting his hands on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her hands on R1's shoulders rather than R1 resting his hands on R2's shoulders"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning back slightly and looking up toward R1's face, rather than R1 leaning back and looking up toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans back slightly while looking up at R1's face"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand close to R2 while keeping his hands at R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands close to R2 in profile while maintaining waist contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the interaction take place on an outdoor stone embankment?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The interaction occurs on an outdoor stone embankment"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

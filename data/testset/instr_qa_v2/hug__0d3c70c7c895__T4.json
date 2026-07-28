@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T4",
+  "instruction": "Candid outdoor photograph, medium shot. In a sunny park, a group of children pose together during a warm group hug. A girl in a light pink sweater (R6) wearing a white headband stands in the center holding purple wrapped gifts, smiling directly towards the camera. She is embraced from the left by a smiling girl in a dark blue top (R4) and from the right by a boy in a yellow t-shirt (R1) wearing glasses and a striped party hat. Behind them, a boy with short brown hair (R5) wearing a blue denim shirt and a party hat smiles. Bright, warm sunlight illuminates the green trees in the background, casting a soft glow over the happy scene.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 embraces R6 from one side while R6 holds the gifts",
+    "R4 embraces R6 from the other side while R6 holds the gifts",
+    "R6 is the central child being embraced by R1 and R4 while holding purple wrapped gifts",
+    "R5 stands behind the central embraced group and smiles",
+    "R6 holds purple wrapped gifts",
+    "The scene is a sunny park with green trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 one of the children embracing R6 while R6 holds the gifts, rather than R6 being the child embracing R1 in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 embraces R6 while R6 holds the gifts"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 one of the children embracing R6 while R6 remains the central gift-holder, rather than R6 being the child embracing R4 in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 embraces R6 while R6 holds the gifts"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the central child receiving embraces from both R1 and R4 while holding purple wrapped gifts, rather than R1 or R4 being the central gift-holding child receiving those embraces?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the central embraced gift-holder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

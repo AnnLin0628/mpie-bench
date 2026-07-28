@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__e2d98d632218__T2",
+  "instruction": "Candid outdoor photograph, full shot. On a rocky shore next to the sea, the man in the light blue shirt (R1) stands on the left in profile, looking out to the right. Next to him, the blonde woman in the pink floral dress (R2) also stands in profile looking right, her long dress billowing forward in the strong wind. The couple is positioned close together on the rocky ground. The scene is illuminated by soft, overcast daylight, creating a cool-toned, natural atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the blonde woman whose long dress billows forward in the strong wind, rather than R1",
+    "R1 is the man in profile looking right next to R2, rather than R2 being the man",
+    "R1 and R2 stand close together on rocky ground while both face right in profile",
+    "R2's wind-blown long dress is visually emphasized as moving forward",
+    "the scene is on a rocky shore next to the sea",
+    "the lighting is soft and overcast"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose long dress is billowing forward in the strong wind, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the wind-billowed long dress"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man standing in profile next to R2, rather than R2 being the man in profile next to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man standing beside R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned beside R1 with her long dress being pushed forward by the wind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands beside R1 with wind-blown dress movement"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

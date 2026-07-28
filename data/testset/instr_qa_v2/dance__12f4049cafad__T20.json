@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T20",
+  "instruction": "A cinematic video still captures a medium shot of two women dancing in an indoor studio against a seamless pink and purple backdrop. In the foreground, the dancing Black woman in the red fringed halter dress (R1) smiles and looks to the left while moving her hands. Behind her on the left, the blonde woman in the black dress (R3) dances with her arms raised, looking forward with an open-mouthed smile. Soft, colorful studio lighting illuminates the dancers with warm pink and purple tones, creating a shallow depth of field.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the foreground dancer moving her hands",
+    "R3 dances behind R1 with her arms raised",
+    "R1 smiles and looks left while dancing",
+    "R3 looks forward with an open-mouthed smile while dancing",
+    "the dancers are in an indoor studio with a seamless pink and purple backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground dancer moving her hands, rather than R3 being the foreground dancer moving her hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the foreground dancing role with hand movement"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer behind R1 with her arms raised, rather than R1 being behind R3 with raised arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the rear raised-arms dancing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile and look to the left while dancing in front of R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's dancing pose and gaze role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

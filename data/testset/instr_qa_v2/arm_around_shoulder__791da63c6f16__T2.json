@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__791da63c6f16__T2",
+  "instruction": "A candid studio portrait captured in a medium close-up shot at eye-level against a plain white wall. On the left, the dark-haired woman in the rust-orange hoodie (R1) stands facing forward, gazing directly into the camera with a serious, neutral expression and dark red lipstick. Standing slightly behind her on the right, the light-brown-haired woman in the mint-green hoodie (R2) also faces forward, looking directly at the camera with a solemn, neutral expression. The light-brown-haired woman (R2) rests her right hand gently on the left shoulder of the dark-haired woman (R1). The scene is illuminated by soft, even daylight from the front, casting minimal shadows and highlighting natural skin tones with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests her right hand on R1's left shoulder",
+    "R1 is the person receiving the shoulder touch from R2",
+    "R2 is the person initiating the shoulder contact with her hand",
+    "R2 stands slightly behind R1 while making shoulder contact",
+    "plain white wall studio portrait setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her right hand on R1's left shoulder, rather than R1 resting her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her right hand on R1's left shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder touch from R2, rather than R2 receiving a shoulder touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving the shoulder touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person initiating contact with her hand on R1's shoulder, rather than R1 initiating contact with her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person initiating the shoulder contact with her hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

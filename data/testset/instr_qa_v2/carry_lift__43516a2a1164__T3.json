@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__43516a2a1164__T3",
+  "instruction": "Candid wedding photograph, full-length shot. In an outdoor paved courtyard, the groom in a beige suit (R2) and the bride in a white wedding dress (R1) stand back-to-back. The groom on the left faces left, while the bride on the right faces away, looking down. They hold hands behind their backs. Soft natural daylight illuminates the scene, casting gentle shadows on the stone pavement.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 faces left while R1 faces away and looks down",
+    "R1 is the bride and R2 is the groom",
+    "R1 and R2 stand back-to-back",
+    "R1 and R2 hold hands behind their backs",
+    "the scene is an outdoor paved courtyard with stone pavement"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person facing left while R1 faces away and looks down, rather than R1 facing left while R2 faces away and looks down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces left while R1 faces away and looks down"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the bride and R2 the groom as they hold hands behind their backs, rather than R2 being the bride and R1 being the groom?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bride and R2 is the groom"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing back-to-back while maintaining contact with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand back-to-back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold hands behind their backs rather than in front of their bodies?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands behind their backs"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

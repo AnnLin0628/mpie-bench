@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__aa76fedcce75__T1",
+  "instruction": "A clean studio photograph with a full-length profile shot captures two martial artists sparring against a plain white wall in a minimalist indoor setting. On the left, the girl with a ponytail and a blue belt (R2) lunges forward in a deep stance, extending her right fist in a straight punch. On the right, the girl with braided hair and a red belt (R1) stands in a defensive posture, leaning back slightly to block the incoming strike. Both girls wear white karate uniforms and are barefoot on the light floor, focused entirely on their partner. The scene is illuminated by bright, even, diffused studio lighting that eliminates harsh shadows, creating a clean and bright aesthetic with sharp focus on both subjects.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward in a deep stance to throw a straight punch at R1",
+    "R1 is the defender blocking R2's incoming strike rather than attacking",
+    "R1 leans back defensively while R2 advances with the punch",
+    "R2 extends her right fist toward R1 while R1 focuses on blocking",
+    "minimalist indoor studio with a plain white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward to deliver a straight punch at R1, rather than R1 lunging forward to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges forward in a deep stance to throw a straight punch at R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 blocking R2's incoming strike, rather than R2 blocking an incoming strike from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the defender blocking R2's incoming strike rather than attacking"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning back in a defensive posture while R2 advances with the punch, rather than R2 leaning back defensively while R1 advances?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back defensively while R2 advances with the punch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend her right fist in a straight punch while R1 focuses on blocking that punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right fist toward R1 while R1 focuses on blocking"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

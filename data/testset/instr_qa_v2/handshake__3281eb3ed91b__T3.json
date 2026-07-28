@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__3281eb3ed91b__T3",
+  "instruction": "A candid medium shot of a residential outdoor scene during the day. On the right side of the frame, the woman in the black patterned blouse (R1) stands facing left, smiling warmly. On the left, the man in the dark gray puffer jacket (R2) stands in a back-three-quarters view, holding the newly acquired keys in his hand. The man and the woman shake hands in front of a white-sided house with a pink \"SOLD\" sign visible in the background. Natural daylight softly illuminates the scene, creating gentle shadows and a bright atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the key-holder during the handshake, not R1",
+    "R1 is the smiling woman facing R2 while R2 is the man holding the keys",
+    "R1 and R2 have their hands joined in the greeting/contact gesture",
+    "R2 holds newly acquired keys",
+    "a pink SOLD sign is visible near the white-sided house"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the newly acquired keys during the hand contact with R1, rather than R1 holding the keys?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the key-holder during the interaction"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the smiling woman facing R2 while R2 is the man with the newly acquired keys, rather than R1 being the key-holding person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces and greets R2 while R2 carries the keys"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 shown in a back-three-quarters stance while participating in the hand contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body orientation during the contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is a pink \"SOLD\" sign visible in the background near a white-sided house?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "pink SOLD sign and white-sided house background"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

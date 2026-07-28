@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__5719d4ed8d1a__T3",
+  "instruction": "A candid lifestyle photograph capturing a full-body, eye-level shot of a young couple walking hand-in-hand down a stone city sidewalk next to a brick building with a blue storefront. On the right, the man in the pink sweater and brown beanie (R1) walks forward, holding his partner's hand with a small black camera bag slung across his chest, his gaze directed slightly downward. On the left, the woman in the white jacket and yellow-lined vest (R2) walks in step with him, holding his hand and looking toward him with a gentle, happy smile. The scene is illuminated by soft, natural daylight, creating a warm and intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks forward hand-in-hand with R2 while his gaze is directed slightly downward",
+    "R2 walks in step with R1 while holding his hand and looking toward him with a gentle smile",
+    "R1 carries a small black camera bag slung across his chest",
+    "R1 and R2 are walking hand-in-hand together",
+    "They are on a stone city sidewalk next to a brick building with a blue storefront"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one walking forward with his gaze directed slightly downward while holding R2's hand, rather than R2 being the one looking downward in that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 downward-gaze role while hand-in-hand with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking toward R1 with a gentle, happy smile while holding his hand, rather than R1 being the one looking toward R2 with that smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks toward R1 while holding his hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person carrying the small black camera bag across his chest while walking hand-in-hand with R2, rather than R2 carrying the bag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the camera bag during the hand-holding interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking in step together while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk hand-in-hand together"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a small black camera bag slung across R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "small black camera bag on R1"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking on a stone city sidewalk next to a brick building with a blue storefront?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "stone sidewalk beside brick building and blue storefront"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

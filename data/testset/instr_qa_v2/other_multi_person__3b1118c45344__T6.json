@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__3b1118c45344__T6",
+  "instruction": "Candid outdoor full shot of two women dancing on a grassy lawn. On the left, the smiling woman in the maroon patchwork dress (R2) stands barefoot, facing right with her arms outstretched. On the right, the woman in the peach and blue dress (R1) faces left, also barefoot with her arms extended as she dances. The two women face each other, performing synchronized dance movements. The background shows lush green bushes and trees under warm, natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces left toward R2 while dancing with arms extended",
+    "R2 faces right toward R1 while dancing with arms outstretched",
+    "R1 is the dancer in the peach and blue dress",
+    "R2 is the dancer in the maroon patchwork dress",
+    "both labeled women are barefoot and performing synchronized dance movements",
+    "the scene is outdoors on a grassy lawn with green bushes and trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer facing left toward R2 with her arms extended, rather than R2 being the one facing left toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's assigned facing direction and dance posture toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer facing right toward R1 with her arms outstretched, rather than R1 being the one facing right toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's assigned facing direction and dance posture toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the woman in the peach and blue dress dancing opposite R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled role as the peach-and-blue dressed dancer opposite R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

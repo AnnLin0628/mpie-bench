@@ -1,0 +1,90 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__043852ee1028__T8",
+  "instruction": "An intimate studio portrait photograph with a soft and peaceful mood, captured in a close-up shot at eye-level against a plain, neutral beige backdrop. On the left, the woman with brown hair and bangs (R2) stands in profile facing right in a light beige bra, smiling with her eyes closed. On the right, the woman with voluminous curly dark hair (R1) stands facing left in a light gray tank top, also smiling with her eyes closed. The woman with curly hair (R1) wraps her arms around the other woman's (R2) waist from behind, and they gently lean their heads together. The scene is illuminated by soft, warm studio lighting, highlighting their serene expressions and natural skin tones.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2's waist from behind",
+    "R2 is the person being encircled at the waist by R1",
+    "R1 stands behind R2 while holding around R2's waist",
+    "R1 and R2 gently lean their heads together",
+    "R1 and R2 face toward each other in a close studio portrait",
+    "plain neutral beige studio backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her arms around R2's waist from behind, rather than R2 wrapping her arms around R1's waist from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2's waist from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being encircled at the waist by R1, rather than R1 being encircled at the waist by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being encircled at the waist by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2 from behind at the waist, rather than R2 holding R1 from behind at the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 while holding around R2's waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 gently leaning their heads together while R1's arms are around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 gently lean their heads together"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face toward R1 while R1 faces toward R2 during the close waist-hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face toward each other in a close studio portrait"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

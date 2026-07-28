@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__08bdcee7081f__T2",
+  "instruction": "A candid outdoor photograph shows a partner acroyoga pose. On large beige concrete blocks under a bright, cloudy sky, the man in the black t-shirt and blue jeans (R2) squats to support the woman in the black crop top and denim shorts (R1). The woman balances on his thigh with her left foot while extending her right leg horizontally. They hold hands with one arm each to maintain balance, looking at one another. The eye-level full shot captures the athletic feat in warm, natural daylight with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 squats as the base supporting R1's weight from below",
+    "R1 balances on R2's thigh with her left foot",
+    "R1 extends her right leg horizontally while R2 supports her",
+    "R1 and R2 hold hands with one arm each to maintain balance",
+    "large beige concrete blocks serve as the performance surface",
+    "outdoor setting under a bright cloudy sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 squatting to support R1's weight from below, rather than R1 squatting to support R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the supporting base for R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on R2's thigh with her left foot, rather than R2 balancing on R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances on R2's thigh"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending a leg horizontally while being supported by R2, rather than R2 extending a leg while being supported by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends her right leg while R2 supports her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold hands with one arm each to help maintain balance during the pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 use a one-arm handhold for balance"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in a low squat base position while R1 is elevated and balanced against him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 acts as the low base while R1 is elevated"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

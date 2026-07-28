@@ -1,0 +1,72 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__353c7df1a117__T3",
+  "instruction": "Candid medium shot of a wedding ceremony indoors. Seated on the right, the bride in the light green saree (R1) smiles joyfully while wearing a pink lotus garland. Leaning from the left, the groom in the silver shirt (R2), also wearing a lotus garland, kisses her cheek. In the background, the older woman in the blue saree (R3) smiles on the left, and the man in the black shirt (R4) stands looking on. Two blurred bystanders stand in the background. Warm stage lighting illuminates the scene decorated with purple drapes.",
+  "n_person": 5,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R2 leans in and kisses R1's cheek",
+    "R1 is the seated cheek-kiss recipient while R2 is the active kisser",
+    "R3 and R4 remain background onlookers rather than participating in the kiss",
+    "R1 wears a pink lotus garland",
+    "R2 also wears a lotus garland",
+    "the scene is an indoor wedding ceremony with purple drapes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person kissing R1's cheek, rather than R1 kissing R2's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively kisses R1's cheek"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated recipient of the cheek kiss while R2 leans in toward her, rather than R2 being seated and receiving a kiss from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the kiss while seated; R2 leans in"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R3 and R4 background onlookers while R1 and R2 are the interacting kiss pair, rather than R3 or R4 being the person kissing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 observe while R1 and R2 form the kiss interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

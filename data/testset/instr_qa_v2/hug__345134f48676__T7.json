@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T7",
+  "instruction": "Candid black-and-white medium-full shot of a couple embracing by a stone ledge. The bearded man in a dark coat (R1) stands on the right, leaning back and looking at his partner. The woman in a black cap and long scarf (R2) stands on the left, leaning back playfully while holding his shoulders and smiling up at him. The scene is rendered in soft monochrome with a blurred city background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's shoulders during the embrace",
+    "R1 is the partner being held by the shoulders while looking at R2",
+    "R2 smiles up at R1 while maintaining the shoulder hold",
+    "the couple is positioned by a stone ledge",
+    "the scene has a blurred city background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's shoulders, rather than R1 holding R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the shoulder-holder and R1 is the one whose shoulders are held"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held at the shoulders by R2 while looking at her, rather than R2 being held at the shoulders by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's shoulder hold while looking at R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean back playfully while keeping her hands on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body role is playful leaning while holding R1's shoulders"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean back while facing and looking at R2 during their close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back and visually engages R2 during the embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

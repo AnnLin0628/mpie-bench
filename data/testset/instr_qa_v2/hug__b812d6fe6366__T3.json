@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__b812d6fe6366__T3",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Indoors near a bright window, the person in the striped shirt and glasses (R2) stands on the left, facing right. The person in the light green waffle-knit shirt (R1) stands on the right, facing left in profile. R2 reaches up with their right hand, gently touching R1's neck and chin. They stand close together, sharing a tender look. Soft natural light from the side window illuminates them, creating a soft, warm atmosphere with a muted, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches up with their right hand to gently touch R1's neck and chin",
+    "R1 is the person receiving the gentle neck/chin touch from R2",
+    "R2 is the active initiator of the hand-to-neck/chin contact while R1 remains the touched partner",
+    "R1 and R2 stand close together facing one another, with R1 in profile toward R2",
+    "R2's raised hand is positioned at R1's neck and chin",
+    "The interaction occurs indoors near a bright window with soft natural side light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 reach up with their right hand to gently touch R1's neck and chin, rather than R1 reaching up to touch R2's neck and chin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches up with their right hand to gently touch R1's neck and chin"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the gentle neck and chin touch from R2, rather than R2 receiving that touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving the gentle neck/chin touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active initiator of the hand-to-neck/chin contact while R1 remains the touched partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active initiator of the hand-to-neck/chin contact while R1 remains the touched partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's raised hand positioned at R1's neck and chin while R1 faces toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's raised hand is positioned at R1's neck and chin"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__1175fbbf26ed__T4",
+  "instruction": "Candid full-body photograph of a couple walking down a bright white clinic hallway. The woman in the black and white plaid shirt (R2) walks on the left, looking ahead. The man in the white t-shirt (R1) walks on the right, gesturing forward with his right hand lowered while holding her hand. Both wear blue shoe covers. Bright, even overhead indoor lighting illuminates the clean corridor, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's hand while gesturing forward with his lowered right hand",
+    "R2 is the hand-holding partner who looks ahead while walking with R1",
+    "R1, not R2, performs the forward gesturing action during the hand-hold",
+    "R1 and R2 walk together hand-in-hand",
+    "Both R1 and R2 wear blue shoe covers",
+    "The pair is in a bright white clinic hallway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gesturing forward with his lowered right hand while holding R2's hand, rather than R2 being the one gesturing forward while holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hand while gesturing forward with his lowered right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner whose hand is being held as she looks ahead, rather than R1 being the partner whose hand is being held while R2 gestures?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the hand-holding partner who looks ahead while walking with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together while holding hands, with R1 also making the forward gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together hand-in-hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep the active gesturing role during the couple's hand-hold while R2 continues walking and looking ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, not R2, performs the forward gesturing action during the hand-hold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

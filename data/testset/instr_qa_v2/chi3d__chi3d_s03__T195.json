@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T195",
+  "instruction": "Candid documentary photograph, full shot. Inside an indoor motion capture studio with a red carpeted floor, white walls, and wall-mounted radiators, the man in the black polo shirt (R1) stands on the left side of the frame, facing right, and kicks his left leg sideways. The woman in the white patterned t-shirt (R2) stands on the right, facing left, watching his movement. Bright overhead lighting illuminates the entire room, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 performs the sideways left-leg kick while R2 watches",
+    "R2 observes R1's movement rather than performing the kick",
+    "R1 faces R2 while kicking sideways",
+    "R2 faces R1 as the observer of the movement",
+    "The scene is an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person kicking his left leg sideways while R2 watches, rather than R2 kicking while R1 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the sideways left-leg kick while R2 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 observing R1's movement rather than being the person doing the sideways leg kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 observes R1's movement rather than performing the kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while executing the sideways kick with his left leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while kicking sideways"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 as the watcher of R1's movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 as the observer of the movement"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

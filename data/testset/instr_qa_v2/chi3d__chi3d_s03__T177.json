@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T177",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and white walls. In the center, the woman in a white t-shirt and blue jeans (R2) stands behind the bearded man in a dark polo shirt and blue shorts (R1), hugging him tightly from behind with her arms wrapped around his chest and her head resting against his back. The man stands in profile facing right, calmly receiving the embrace. The background features white walls, mounted cameras, and office equipment. Bright, even overhead lighting illuminates the scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 hugs R1 from behind rather than R1 hugging R2 from behind",
+    "R2 wraps her arms around R1's chest rather than R1 wrapping his arms around R2's chest",
+    "R1 calmly receives the embrace while R2 performs the behind-the-back embrace",
+    "R2 rests her head against R1's back",
+    "R1 stands in profile facing right while being embraced by R2",
+    "indoor motion capture studio with red carpet, white walls, and mounted cameras"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's arms wrapped around R1's chest, rather than R1's arms being wrapped around R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 calmly receiving the embrace while R2 is the one actively holding him from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the embrace and R2 holds him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand behind R1 with her head resting against R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R1 with her head against his back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile while being embraced by R2 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands while R2 embraces him from behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

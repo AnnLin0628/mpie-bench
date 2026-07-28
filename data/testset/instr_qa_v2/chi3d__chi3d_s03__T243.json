@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T243",
+  "instruction": "Candid documentary photograph, wide full shot, eye-level angle. Inside a spacious motion capture studio with a dark red carpeted floor and white walls, the woman in the white patterned t-shirt and blue jeans (R2) stands on the left, posing with one leg bent, beside the man in the black cap and blue shorts (R1) on the right. The man (R1) has his arm around her shoulder, and both look toward the left side of the room, smiling happily. The room is brightly lit by overhead fluorescent lights, with a tripod stand visible in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has his arm around R2's shoulder",
+    "R2 is the person receiving R1's arm around her shoulder",
+    "R2 poses beside R1 with one leg bent",
+    "R1 and R2 smile while looking toward the left side of the room",
+    "spacious motion capture studio with dark red carpeted floor and white walls",
+    "tripod stand visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one placing his arm around R2's shoulder, rather than R2 placing her arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has his arm around R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being held around the shoulder by R1, rather than R1 being held around the shoulder by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's arm around her shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand beside R2 while keeping an arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role is arm-around-shoulder beside R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 posing beside R1 with one leg bent while R1 has his arm around her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 poses with one leg bent beside R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

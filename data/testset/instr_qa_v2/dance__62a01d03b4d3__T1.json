@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T1",
+  "instruction": "Candid cinematic photograph, medium close-up. Indoors near a bright window with sheer white curtains, a couple dances tango. The woman in the black halter dress (R2) is in the foreground with her back to the camera, showing a blue flower bun accessory. The man in the grey suit (R1) stands opposite her, looking down with a soft expression. They hold hands raised to the side in a classic dance frame. Soft backlighting from the window creates a warm, slightly silhouetted atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the foreground dancer with her back to the camera while R1 stands opposite her",
+    "R1 is the partner looking down at R2 with a soft expression rather than R2 looking down at R1",
+    "R1 and R2 hold their hands raised to the side in a classic tango dance frame",
+    "R2 has a blue flower bun accessory visible from behind",
+    "The couple is indoors near a bright window with sheer white curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer in the foreground with her back to the camera while R1 stands opposite her, rather than R1 having his back to the camera in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 foreground back-to-camera role versus R1 opposite-facing role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner looking down at R2 with a soft expression, rather than R2 being the one looking down at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looking-down partner role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected in a tango dance frame with their hands held raised to the side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "raised handhold dance-frame contact between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand opposite R2 as her tango partner while R2 faces away from the camera toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "opposite-facing tango partner configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

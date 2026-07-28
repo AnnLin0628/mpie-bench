@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T31",
+  "instruction": "A candid action photograph, full shot at eye-level, captures a judo practice session inside a dojo with a blue wall and yellow tatami mat. The woman in the blue judo gi (R1) is seen from behind in a defensive stance, knees slightly bent. Facing her, the young man in the white judo gi (R2) stands on the right, gripping her shoulder with his right hand as they engage in a sparring match. The lighting is bright and natural, casting soft shadows on the floor, highlighting the blue and yellow contrast of the training area.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 grips R1's shoulder with his right hand",
+    "R1 is in a defensive stance while R2 applies the shoulder grip",
+    "R1 is seen from behind while R2 faces her during the sparring",
+    "R1 and R2 are engaged in judo sparring",
+    "a yellow tatami mat is used in the training area",
+    "the practice takes place inside a dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 grip R1's shoulder with his right hand, rather than R1 gripping R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips R1's shoulder with his right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person in a defensive stance while R2 applies the shoulder grip, rather than R2 being defensive while R1 applies the grip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in a defensive stance while R2 applies the shoulder grip"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 seen from behind while R2 faces her during the sparring, rather than R2 being seen from behind while R1 faces him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seen from behind while R2 faces her during the sparring"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 engaged with each other in a judo sparring match?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are engaged in judo sparring"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a yellow tatami mat in the judo training area?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a yellow tatami mat is used in the training area"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

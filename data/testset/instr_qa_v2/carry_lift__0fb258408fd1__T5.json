@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0fb258408fd1__T5",
+  "instruction": "A cinematic close-up profile photograph captures an intimate moment against a neutral gray background. On the left, the curly-haired woman (R1) in a white dress looks up with a soft, emotional gaze. On the right, the woman in the white blazer (R2) faces her, looking down. Their foreheads are gently pressed together in a tender embrace, creating a powerful sense of connection. The scene is illuminated by soft, diffused side lighting that highlights their profiles and creates a serene, minimalist mood with cool undertones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 looks upward toward R2 while R2 looks downward toward R1",
+    "R2 faces R1 from above rather than R1 facing R2 from above",
+    "R1 and R2 have their foreheads gently pressed together",
+    "R1 and R2 are shown in close profile during an intimate contact moment",
+    "The background is neutral gray"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking up toward R2, rather than R2 looking up toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks upward toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking down toward R1, rather than R1 looking down toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks downward toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned with her face tilted upward as her forehead presses against R2's forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's upward-facing forehead contact with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 facing R1 in close profile while gently pressing her forehead to R1's forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's close forehead contact with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

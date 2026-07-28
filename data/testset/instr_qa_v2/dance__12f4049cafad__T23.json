@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T23",
+  "instruction": "A cinematic video still, medium shot, showing three people dancing in an indoor studio with a plain backdrop. On the left, the blonde woman in the black halter dress (R3) laughs with her head tilted back, dancing dynamically. In the center background, the Black woman in the red fringed dress (R1) smiles and looks to her right. On the right, the man in the denim jacket (R4) smiles and looks down-left while dancing. The three dance together in a loose group, with the blonde woman (R3) and the man (R4) facing slightly toward each other. Soft pink and purple studio lighting casts a warm, vibrant glow over the scene.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 laughs with her head tilted back while dancing dynamically",
+    "R1 smiles and looks to her right",
+    "R4 smiles and looks down-left while dancing",
+    "R3 and R4 face slightly toward each other while dancing",
+    "the group dances in an indoor studio with a plain backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person laughing with her head tilted back while dancing dynamically, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the head-tilted laughing dance action instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person smiling and looking to her right, rather than R4 being the one with that gaze?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the rightward-looking smiling role instead of R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person smiling and looking down-left while dancing, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the down-left-looking dance role instead of R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 dancing from the center background while R3 and R4 dance as part of the same loose group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's dance role is in the center background of the group"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

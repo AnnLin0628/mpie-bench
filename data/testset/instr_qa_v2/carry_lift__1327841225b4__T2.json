@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1327841225b4__T2",
+  "instruction": "Candid athletic photograph, eye-level medium shot. On an outdoor reddish track with green grass behind, the man in the black t-shirt (R1) on the left and the woman in the black and gray long-sleeve top (R2) on the right perform forearm planks facing each other. The man (R1) extends his right arm forward while the woman (R2) extends her left arm, their hands reaching toward each other without touching. Both look at each other attentively. Bright direct sunlight casts sharp shadows on the track.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his right arm forward toward R2",
+    "R2 extends her left arm forward toward R1",
+    "R1 and R2 perform forearm planks facing each other",
+    "R1 and R2 reach their hands toward each other without touching",
+    "R1 and R2 look at each other attentively",
+    "outdoor reddish track with green grass behind"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his right arm forward toward R2, rather than R2 being the one extending a right arm toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends his right arm forward toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her left arm forward toward R1, rather than R1 being the one extending a left arm toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her left arm forward toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's right hand and R2's left hand the hands reaching toward each other without touching, rather than the opposite hands being used?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 right hand and R2 left hand reach toward each other without touching"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold plank positions while reaching one arm forward toward one another without hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 reach toward each other without touching during planks"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

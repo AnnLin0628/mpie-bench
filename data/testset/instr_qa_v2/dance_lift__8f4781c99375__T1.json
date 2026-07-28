@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__8f4781c99375__T1",
+  "instruction": "Candid outdoor full shot of a shirtless man with a man-bun and beard (R1) and a woman in a black one-piece swimsuit (R2) practicing acro-yoga on a sandy beach. The shirtless man (R1) is on the left, leaning back in a deep squat to support the woman (R2) who stands on his thighs. They hold hands tightly, leaning away from each other to maintain balance. The woman (R2) smiles as she balances. The ocean waves roll in the background under an overcast sky, illuminated by natural, diffused daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 acts as the base supporting R2's weight from below",
+    "R2 stands on R1's thighs as the flyer rather than supporting R1",
+    "R1 leans back in a deep squat to stabilize R2",
+    "R1 and R2 hold hands tightly while leaning away to maintain balance",
+    "The acro-yoga interaction occurs on a sandy beach with ocean waves in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 acts as the base supporting R2's weight from below"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on R1's thighs, rather than R1 standing on R2's thighs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on R1's thighs as the flyer rather than supporting R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning back in a deep squat to stabilize R2, rather than R2 squatting to stabilize R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back in a deep squat to stabilize R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands tightly while leaning away from each other to maintain their acro-yoga balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands tightly while leaning away to maintain balance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

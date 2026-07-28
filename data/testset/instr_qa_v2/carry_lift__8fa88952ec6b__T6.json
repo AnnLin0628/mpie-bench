@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__8fa88952ec6b__T6",
+  "instruction": "Candid full shot of a couple jumping on a white mattress in a pine forest. On the left, the woman in the light blue short-sleeved shirt and shorts (R1) is captured mid-air, smiling. On the right, the man in the white t-shirt and light blue pants (R2) jumps with bent knees, facing her. They hold hands dynamically, balancing together. Soft, diffused daylight fills the forest, casting gentle shadows on the white bedding.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is captured mid-air smiling while holding hands with R2",
+    "R2 jumps with bent knees while facing R1 and holding hands with her",
+    "R1 and R2 hold hands dynamically to balance together while jumping",
+    "R1 and R2 are jumping on a white mattress or white bedding",
+    "the scene is set in a pine forest"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person captured mid-air and smiling while holding hands with R2, rather than R2 being the mid-air smiling person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is captured mid-air smiling while holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person jumping with bent knees while facing R1 and holding her hands, rather than R1 having the bent-knee jumping role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 jumps with bent knees while facing R1 and holding hands with her"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands dynamically as they jump and balance together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands dynamically to balance together while jumping"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

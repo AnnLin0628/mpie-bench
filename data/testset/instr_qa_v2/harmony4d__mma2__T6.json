@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma2__T6",
+  "instruction": "Candid full shot from a low angle in an indoor martial arts gym. On the right, the man in the blue sleeveless shirt (R1) leans back, striking with his right knee. On the left, the bearded man in the maroon t-shirt (R2) has his back partially turned while clinching the opponent. In the background, blurred gym members are visible. Bright overhead lighting casts soft shadows on the gray mats.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the knee striker, leaning back and striking with his right knee",
+    "R2 is the clinching opponent, with his back partially turned",
+    "R2 clinches R1 while R1 delivers the knee strike",
+    "R1 and R2 are interacting in a martial arts sparring/fighting configuration",
+    "gray gym mats under the fighters",
+    "indoor martial arts gym setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one leaning back and striking with his right knee, rather than R2 doing the knee strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the knee striker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one clinching the opponent while R1 delivers the knee strike, rather than R1 being the clincher and R2 being the knee striker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 clinches while R1 strikes"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with his back partially turned during the clinch, rather than R1 being described with his back partially turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his back partially turned"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posed as martial arts opponents, with R1 attacking by knee strike and R2 engaged in a clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct fighting roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

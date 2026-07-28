@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__b8cbccff756c__T1",
+  "instruction": "Candid outdoor full shot of a bearded man in a white t-shirt (R1) and a woman in a black hijab and white hoodie (R2) sitting on skateboards on a paved ground outside a modern building. The man (R1) sits on the left, looking away to the left, while the woman (R2) sits on the right, leaning her head on his shoulder and smiling at the camera. A wooden skateboard stands vertically between them, held by the man. Natural daylight casts soft shadows across the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans her head on R1's shoulder",
+    "R1 provides the shoulder contact point for R2",
+    "R1 holds the vertical wooden skateboard between them",
+    "R1 and R2 are seated on skateboards",
+    "wooden skateboard standing vertically between the two people",
+    "outdoor paved area outside a modern building"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning her head on R1's shoulder, rather than R1 leaning his head on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 serve as the shoulder contact point that R2 rests against, rather than R2 serving as the shoulder contact point for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides the shoulder contact point for R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the vertical wooden skateboard between R1 and R2, rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the vertical wooden skateboard between them"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both seated on skateboards while R2 makes shoulder contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated on skateboards with R2 leaning on R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

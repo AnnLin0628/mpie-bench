@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T93",
+  "instruction": "Candid outdoor medium shot of a group playing frisbee in a grassy park. In the foreground, a large Black man in a dark blue t-shirt (R1) stands on the left, holding a blue frisbee. On the right, a woman in a dark blue t-shirt and light blue jeans (R4) faces him with hands raised defensively. In the background, an Asian man in a red polo shirt (R3), a woman in a black beanie and red t-shirt (R5) holding an orange disc, and a Black woman with an afro in a red t-shirt (R6) watch. The scene is lit by soft natural daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 holds the blue frisbee while R4 faces him with hands raised defensively",
+    "R4 raises her hands defensively toward R1 rather than holding the blue frisbee",
+    "R5 holds an orange disc while R3, R6, and others watch",
+    "R3, R5, and R6 are background watchers while R1 and R4 are the foreground interaction pair",
+    "blue frisbee held by R1",
+    "orange disc held by R5",
+    "outdoor grassy park setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the blue frisbee while R4 faces him with hands raised defensively, rather than R4 holding the blue frisbee while R1 raises his hands defensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the blue frisbee while R4 is the defensive-facing participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 face R1 with her hands raised defensively, rather than R1 being the one described as facing R4 with hands raised defensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the defensive raised-hands role toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 holding the orange disc in the background while R3 is described as watching, rather than R3 holding the orange disc while R5 only watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 holds the orange disc while R3 watches"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R4 the foreground frisbee interaction pair, with R1 holding the disc and R4 reacting defensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 foreground interaction roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3, R5, and R6 positioned as background watchers while R1 and R4 are the active foreground participants?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3, R5, and R6 watch from the background"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

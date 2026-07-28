@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T153",
+  "instruction": "A candid wide shot from a high angle shows an indoor studio with a red carpeted floor, white walls, and a ceiling-mounted projector. On the left, the woman in the white t-shirt and blue jeans (R2) stands facing right, extending her right arm to punch the man in the black polo shirt and blue shorts (R1) in the face. The man (R1) stands on the right, facing left, with his head tilted back from the impact of the punch. The scene is illuminated by bright overhead fluorescent lighting, creating a neutral color palette with soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 delivers a punch to R1's face",
+    "R1 is the person being struck by R2",
+    "R1's head is tilted back from the impact of R2's punch",
+    "R2 extends her right arm toward R1 while punching",
+    "the interaction takes place in an indoor studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 punching R1 in the face, rather than R1 punching R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers a punch to R1's face"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the punch impact from R2, rather than R2 receiving a punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being struck by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's head tilted back from R2's punch, rather than R2's head being tilted back from R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's head is tilted back from the impact of R2's punch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend her right arm toward R1 while acting as the puncher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm toward R1 while punching"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

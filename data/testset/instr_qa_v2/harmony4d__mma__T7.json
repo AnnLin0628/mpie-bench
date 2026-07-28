@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T7",
+  "instruction": "Candid full shot at eye-level inside an indoor martial arts gym with gray padded walls. On the right, the young man in the white t-shirt (R1) is seen from behind in a defensive stance with his arms raised. On the left, the man in the gray t-shirt (R2) lunges forward dynamically, throwing a punch toward his partner. Both wear protective gear and are fully engaged in the fast-paced sparring exchange. In the background, three bystanders stand against the walls watching the sparring. Overhead fluorescent lighting illuminates the gray mats, casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward and throws a punch toward R1",
+    "R1 holds a defensive stance with arms raised against R2's attack",
+    "R2 is the attacking sparring partner while R1 is the defending partner",
+    "R1 and R2 are engaged in a fast-paced sparring exchange",
+    "both R1 and R2 wear protective gear",
+    "the scene is inside an indoor martial arts gym with gray padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one lunging forward and throwing a punch toward R1, rather than R1 lunging forward to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attacks by lunging and punching toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one in a defensive stance with arms raised against R2's incoming punch, rather than R2 defending against an incoming punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends with raised arms against R2's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 play the active attacking role in the sparring exchange while R1 plays the guarding role, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is attacker and R1 is defender"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 engaged as sparring partners, with R1 guarding and R2 punching toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct sparring roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the sparring taking place inside an indoor martial arts gym with gray padded walls?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor martial arts gym with gray padded walls"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__87e78b8e411b__T2",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 1.0,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": null,
+  "S_instr_scene": 1.0,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding a pen near the document while R2 holds and looks down at the document, rather than R2 holding the pen while R1 holds the document?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "right person holds pen while left reads paper"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one speaking while looking down at the document as R1 looks attentively at R2, rather than R1 speaking while R2 listens?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "left person speaks while right listens"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated side-by-side reviewing the same paper, with R1 attending to R2's explanation?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "seated together reviewing papers"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set in a cozy indoor living room with a yellow couch?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "cozy room with yellow couch"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "face_to_face_talk__87e78b8e411b__T2",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 10.12,
+    "written_at": "2026-07-17T15:09:14",
+    "gen_relpath": "outputs/gemini-3-pro-image/face_to_face_talk__87e78b8e411b__T2.png",
+    "qa_relpath": "instr_qa_v2/face_to_face_talk__87e78b8e411b__T2.json",
+    "n_questions": 4
+  }
+}

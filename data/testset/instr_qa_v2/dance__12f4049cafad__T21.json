@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T21",
+  "instruction": "Cinematic video still, medium shot. In an indoor studio with soft pink and purple lighting, three friends dance side-by-side. On the left, the man in the black vest (R2) dances facing right. In the center, the blonde woman in the black halter dress (R3) smiles as she dances. On the right, the black woman in the red fringed dress (R1) dances happily, looking forward.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 dances facing right while the others are not described as facing right",
+    "R1 dances happily while looking forward",
+    "R3 smiles as she dances in the center of the group",
+    "R1, R2, and R3 dance side-by-side as friends",
+    "The scene is an indoor studio with soft pink and purple lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person dancing while facing right, rather than R1 being the one described as facing right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances facing right while the others are not described as facing right"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person dancing happily while looking forward, rather than R2 being the one looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances happily while looking forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person smiling while dancing in the center, rather than R1 being the smiling center dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 smiles as she dances in the center of the group"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, and R3 all dancing side-by-side as friends?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 dance side-by-side as friends"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

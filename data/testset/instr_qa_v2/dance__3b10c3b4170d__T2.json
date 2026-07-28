@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__3b10c3b4170d__T2",
+  "instruction": "Cinematic still, medium shot. In a dimly lit dance studio with wooden pillars, the woman in the pink sports bra (R1) stands on the left in profile, holding the long dark twists of the woman in the teal t-shirt (R2). The woman in the teal t-shirt (R2) stands on the right, looking back over her shoulder with a warm smile. The lighting highlights their figures against the dark background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds R2's long dark twists",
+    "R2 is the one whose long dark twists are being held by R1",
+    "R2 looks back over her shoulder while R1 holds her twists",
+    "R1 stands in profile during the hair-holding contact",
+    "the scene is a dimly lit dance studio with wooden pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's long dark twists, rather than R2 holding R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active holder of R2's hair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose long dark twists are being held by R1, rather than R1 being the person whose hair is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's hair-holding contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 make contact by grasping R2's twists while R2 looks back over her shoulder, rather than R2 grasping R1's hair while R1 looks back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grasps R2's twists as R2 looks back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in profile while holding R2's twists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role and body orientation"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__c06970fb69ec__T1",
+  "instruction": "Candid documentary photograph, medium shot. In a sunny outdoor park with green grass and blurred trees, the bald man in the dark blue t-shirt (R1) on the left and the woman with a ponytail in the dark blue t-shirt (R2) on the right crouch in a line, pulling a thick yellow rope. The bald man (R1) pulls with a focused, open-mouthed expression, while the woman (R2) stands behind him, pulling with a straining grimace. Bright natural daylight illuminates the scene with warm tones, soft shadows, and a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the front person in the rope-pulling line while R2 is behind him",
+    "R2 pulls the rope from behind R1 rather than leading the line",
+    "R1 and R2 both pull the same thick yellow rope",
+    "R1 pulls with a focused open-mouthed expression while R2 pulls with a straining grimace",
+    "the scene is a sunny outdoor park with green grass and blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the front puller in the line, with R2 positioned behind him, rather than R2 being the front puller?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leads the rope-pulling line while R2 pulls behind him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 pull the rope from behind R1, rather than R1 pulling from behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the rear puller behind R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both engaged in pulling the same rope in a line?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share the rope-pulling action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 pulling with a focused open-mouthed expression while R2 pulls with a straining grimace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct pulling expressions"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a thick yellow rope the object being pulled by the people?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "thick yellow rope"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

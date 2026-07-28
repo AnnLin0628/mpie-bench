@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__afa13a922dae__T1",
+  "instruction": "Candid full-body documentary photograph of a subway station interior with metal turnstiles in the background. On the left, the blonde woman in a striped crop top and jeans (R1) walks forward with a bright smile, her right arm raised high. On the right, the bearded man in a blue long-sleeve shirt and khaki shorts (R2) walks beside her, looking at her warmly. They hold hands high above her head in a playful, spinning dance pose. The scene is illuminated by warm overhead fluorescent lights, casting soft shadows on the tiled floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has her right arm raised high while holding R2's hand above R1's head",
+    "R2 is the partner guiding the playful spinning dance pose around R1",
+    "R1 is the person positioned under the raised joined hands, rather than R2",
+    "R1 and R2 walk beside each other while maintaining the high hand-hold",
+    "metal turnstiles are visible in the subway station background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with her right arm raised high as the joined hands are held above R1's head, rather than R2 being the person under raised hands above his head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has her right arm raised high while holding R2's hand above R1's head"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner holding R1's raised hand to form the playful spinning dance pose over R1, rather than R1 holding R2's hand over R2's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partner guiding the playful spinning dance pose around R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one being framed by the raised hand-hold above her head, rather than R2 being framed by the raised hand-hold above his head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person positioned under the raised joined hands, rather than R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking beside each other while keeping their hands joined high overhead in a spinning dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk beside each other while maintaining the high hand-hold"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look warmly at R1 while they maintain the raised hand-hold dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks at R1 during the hand-held dance pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

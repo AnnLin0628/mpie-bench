@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T22",
+  "instruction": "Cinematic video still, medium shot. In an indoor studio with pink, purple, and blue lighting, a group dances. On the left, the man in the denim jacket (R4) dances looking down. In the center, the blonde woman in the black halter dress (R3) strikes a pose with her arms raised, looking at the camera. Behind her, the man in the white t-shirt (R2) is partially visible. On the right, the black woman in the red fringed dress (R1) dances, looking forward.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 strikes the central arms-raised pose while R2 is only partially visible behind her",
+    "R1 dances looking forward while R4 dances looking down",
+    "R2 is behind R3 rather than being the central poser",
+    "R4 is a separate dancer looking downward",
+    "indoor studio with pink, purple, and blue lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer striking a pose with her arms raised and looking at the camera, rather than R2 doing that central arms-raised pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 strikes the central arms-raised pose while R2 is behind her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 dancing while looking forward, whereas R4 is dancing while looking down, rather than those gaze directions being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks forward while dancing and R4 looks down while dancing"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 partially visible behind R3 while R3 is the central dancer posing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R3 and partially visible"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

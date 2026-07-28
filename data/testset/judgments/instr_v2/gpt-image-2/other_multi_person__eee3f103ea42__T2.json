@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__eee3f103ea42__T2",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.5,
+  "S_instr_role": 0.5,
+  "S_instr_asymm": 0.5,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.5,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person running in the foreground while R3 stands behind her watching, rather than R3 running while R2 watches?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R2 runs foreground but R3 also runs"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the smiling observer focused on R2, rather than R2 standing still and watching R3?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R3 smiles but is not stationary"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have the active motion-blurred runner role while R3 has the stationary standing role?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R2 is active while R3 is moving"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "other_multi_person__eee3f103ea42__T2",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 10.03,
+    "written_at": "2026-07-17T23:54:09",
+    "gen_relpath": "outputs/gpt-image-2/other_multi_person__eee3f103ea42__T2.png",
+    "qa_relpath": "instr_qa_v2/other_multi_person__eee3f103ea42__T2.json",
+    "n_questions": 3
+  }
+}

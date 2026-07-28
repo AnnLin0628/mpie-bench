@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T3",
+  "instruction": "A clean, realistic photographic medium full shot of a bright ballet studio with wooden barres. Five children stand in a diagonal line along the barre. From left to right: the girl with light brown hair (R2), the red-haired girl in a bun (R3), the boy with short brown hair (R4), the blonde girl in a bun (R1), and the red-haired boy (R5). The girls wear pink leotards with skirts and white tights, and the boys wear dark blue t-shirts with black shorts. The girl with light brown hair, the red-haired girl, and the boy with short brown hair extend their left legs forward in unison. The blonde girl stands straight, and the red-haired boy stands straight while looking down. Bright, even, soft indoor lighting illuminates the scene.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R2, R3, and R4 extend their left legs forward in unison",
+    "R1 stands straight instead of doing the left-leg extension",
+    "R5 stands straight while looking down instead of doing the left-leg extension",
+    "five children are arranged along a wooden ballet barre",
+    "the setting is a bright ballet studio with wooden barres"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 one of the children extending her left leg forward in unison, rather than standing straight like R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the forward left-leg extension while R1 stands straight"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 standing straight while looking down, rather than extending his left leg forward with R2, R3, and R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the straight looking-down role while R2/R3/R4 extend their legs"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2, R3, and R4 the dancers performing the synchronized forward left-leg extension?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2, R3, and R4 share the synchronized leg-extension role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a straight standing pose while the nearby dancers R2, R3, and R4 extend their left legs forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands straight while R2/R3/R4 perform the leg extension"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

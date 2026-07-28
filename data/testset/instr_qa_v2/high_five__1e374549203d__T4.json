@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1e374549203d__T4",
+  "instruction": "Candid office photograph, medium shot. In a modern office workspace, the man in the light gray blazer (R1) on the left and the man in the beige polo shirt (R4) on the right celebrate with a high-five, their right hands meeting in the air. The man (R4) holds an open notebook in his left hand. In the background between them, the woman with glasses and a beige sweater vest (R3) smiles. Warm, bright indoor lighting fills the room.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 and R4 are the high-five contact pair with their right hands meeting",
+    "R3 is a smiling background onlooker rather than part of the high-five",
+    "R4 holds an open notebook in his left hand while high-fiving",
+    "R1 and R4 celebrate together in an office workspace",
+    "warm bright indoor office lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 keep an open notebook in his left hand while his right hand high-fives R1, rather than R1 being the one holding the notebook?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds the notebook during the high-five"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R4 celebrate by raising their right hands to meet each other in the air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 perform the right-hand high-five"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

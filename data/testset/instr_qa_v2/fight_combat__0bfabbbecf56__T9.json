@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T9",
+  "instruction": "Cinematic medium shot of an indoor gym's boxing ring. On the left, the woman in the black and orange jumpsuit (R1) stands facing right, holding up a red focus mitt to block an incoming strike. On the right, the woman in the white sports bra (R2) faces left, extending her left arm to land a punch with her black boxing glove directly onto the mitt of the woman in the black and orange jumpsuit. The background features dark hanging punching bags under cool, dim overhead gym lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up a red focus mitt to block an incoming punch from R2",
+    "R2 is the puncher, extending her left arm to strike R1's mitt with a black boxing glove",
+    "R1's mitt absorbs the contact while R2's glove delivers the strike",
+    "red focus mitt",
+    "black boxing glove",
+    "indoor gym boxing ring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the red focus mitt to block R2's incoming punch, rather than R2 holding the mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the mitt holder and blocker while R2 is the incoming striker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her left arm to land a punch onto R1's mitt, rather than R1 punching a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers the punch and R1 receives it with the mitt"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's focus mitt absorb the impact from R2's black boxing glove, rather than R2's glove absorbing a strike from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's mitt is the target and R2's glove is the striking object"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other in a boxing drill with R1 acting as the mitt holder and R2 acting as the puncher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct mitt-holder and puncher roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a red focus mitt being used as the target for the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red focus mitt"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black boxing glove making contact with the focus mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black boxing glove contacting the mitt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

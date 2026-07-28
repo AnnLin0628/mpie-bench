@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0e21d858f215__T6",
+  "instruction": "A clean studio photograph with a full-length shot at eye-level. In a minimalist white studio, three women stand in a playful diagonal line. On the left, the woman in the lavender shirt (R2) stands in profile, leaning back slightly with a serene expression. In the center, the woman in the green blazer (R3) stands behind her, wrapping her arms around the waist of the woman in the lavender shirt (R2). On the right, the woman in the blue blazer (R1) stands behind the woman in the green blazer (R3), wrapping her arms around her chest and smiling at the camera. Bright, even studio lighting casts soft shadows on the white floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 stands behind R2 and wraps her arms around R2's waist",
+    "R1 stands behind R3 and wraps her arms around R3's chest",
+    "R3 is the middle person in the contact chain, being held by R1 while holding R2",
+    "R2 is the front person being held around the waist by R3",
+    "R1 is the rear person holding R3 around the chest",
+    "The scene is a minimalist white studio with bright, even lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 stand behind R2 and wrap her arms around R2's waist, rather than R2 standing behind R3 and wrapping her arms around R3's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds R2 around the waist from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 stand behind R3 and wrap her arms around R3's chest, rather than R3 standing behind R1 and wrapping her arms around R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3 around the chest from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the middle contact partner who is held by R1 while also holding R2, rather than R1 being the middle person held by R3 while holding R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the middle person in the three-person contact chain"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the front person in the chain, being held around the waist by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is held around the waist by R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the rear person in the chain, reaching around R3's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches around R3's chest from behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

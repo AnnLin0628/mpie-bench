@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__c36a50e43902__T1",
+  "instruction": "Candid photographic still, medium shot. Inside a gym with hanging straps and yellow walls, the man in the white t-shirt and orange beanie (R1) stands on the left, profile facing right, smiling warmly. Opposite him, the blonde woman in the lavender hoodie (R2) stands on the right, profile facing left, smiling back. The man and the blonde woman are holding their raised hands together in a firm clasp between them at chest height. The background is softly blurred with bright overhead fluorescent lights and warm yellow tones, creating a friendly and energetic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 raises his hand to meet and clasp R2's raised hand, rather than keeping his hand down while only R2 raises hers",
+    "R2 raises her hand to meet and clasp R1's raised hand, rather than keeping her hand down while only R1 raises his",
+    "R1 and R2 hold their raised hands together in a firm clasp at chest height",
+    "R1 and R2 face each other in profile while smiling during the hand clasp",
+    "hanging straps are visible in the gym setting",
+    "the scene is inside a gym with yellow walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 raise his hand to meet and clasp R2's raised hand, rather than R1 keeping his hand down while only R2 raises hers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises his hand to meet and clasp R2's raised hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 raise her hand to meet and clasp R1's raised hand, rather than R2 keeping her hand down while only R1 raises his?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises her hand to meet and clasp R1's raised hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding their raised hands together in a firm clasp between them at chest height?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp raised hands at chest height"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

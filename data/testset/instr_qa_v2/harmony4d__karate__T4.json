@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T4",
+  "instruction": "A candid action photograph shows a sparring match inside a karate dojo with yellow walls, weapon racks, and red-and-blue floor mats. In the right foreground, the older man in a black karate uniform with white stripes (R1) is positioned with his back partially to the camera, facing left with his hands raised in a guard. On the left, the woman in a black karate uniform with a red belt (R2) stands facing him, also with her hands up in a defensive guard. The bright overhead lighting creates a clear, well-lit view of their sparring stance.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the sparring participant with his back partially to the camera and his hands raised in guard",
+    "R2 is the sparring participant facing R1 with her hands up in a defensive guard",
+    "R1 and R2 are squared off against each other in karate sparring stances",
+    "Both R1 and R2 keep their hands raised defensively during the sparring match",
+    "The sparring takes place on red-and-blue floor mats",
+    "The setting is a karate dojo with yellow walls and weapon racks"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the sparring participant with his back partially to the camera and his hands raised in guard, rather than R2 being the one with his back partially to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partially back-turned guarded sparring participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the sparring participant facing R1 with her hands up in a defensive guard, while R1 is the one turned partly away from the camera, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 defensively while R1 is partially back-turned"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep his hands raised in a guard toward R2 while R2 also keeps her hands up defensively toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both maintain defensive hand guards toward each other"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T14",
+  "instruction": "Cinematic full shot from a low angle of two men in a smoky indoor gym. On the left, a shirtless man in black shorts (R1) stands in profile wearing black boxing gloves, facing right in a defensive stance. On the right, a shirtless bearded man in colorful leggings (R3) stands facing him with green boxing gloves raised in a fighting stance. The background is a hazy gym with a bright spotlight casting a strong glow and long shadows across the white mat.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the shirtless man in black shorts wearing black boxing gloves and taking a defensive stance toward R3",
+    "R3 is the shirtless bearded man in colorful leggings with green boxing gloves raised in a fighting stance toward R1",
+    "R1 and R3 face each other as opposing boxers in the gym",
+    "R1's black boxing gloves are contact-relevant fight props",
+    "R3's green boxing gloves are contact-relevant fight props",
+    "the scene is a smoky indoor gym with a bright spotlight over a white mat"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in a defensive boxing stance facing R3, rather than R3 being described as the defensive boxer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the defensive fighting duty toward R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the bearded opponent with green boxing gloves raised in a fighting stance toward R1, rather than R1 being the one with raised green gloves?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the raised-glove attacking/fighting stance role toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown in profile facing R3 while holding his black boxing gloves in a defensive posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is profile-facing with defensive gloves toward R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the confrontation set in a smoky indoor gym with a bright spotlight over a white mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "smoky indoor gym with bright spotlight and white mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

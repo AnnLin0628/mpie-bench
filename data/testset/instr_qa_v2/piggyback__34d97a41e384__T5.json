@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__34d97a41e384__T5",
+  "instruction": "A candid outdoor photograph with a medium full shot captures a couple on a rocky coastal shore under an overcast sky. The man in the blue puffer vest (R1) walks forward in the center foreground, smiling slightly. The woman in the striped sweater (R2) piggybacks on his back, her arms wrapped around his neck as she smiles towards the right. The man supports her legs as they move together. The background shows calm sea water under a grey sky. The lighting is soft and diffused, creating a cool-toned, natural atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 on his back in a piggyback position",
+    "R1 supports R2's legs while they move together",
+    "R2 rides on R1's back with her arms wrapped around R1's neck",
+    "R1 walks forward while carrying R2",
+    "The couple is on a rocky coastal shore with calm sea water under a grey sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his back in a piggyback position, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's legs as they move together, rather than R2 supporting R1's legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's legs"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have her arms wrapped around R1's neck while riding on his back, rather than R1 wrapping his arms around R2's neck while riding on her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's neck during the piggyback"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 on R1's back while R1 walks forward carrying her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rides on R1 while R1 walks"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person walking and bearing the piggyback load while R2 is the person being carried?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bearer and R2 is the rider"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

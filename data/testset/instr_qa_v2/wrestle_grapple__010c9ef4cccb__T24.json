@@ -1,0 +1,90 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T24",
+  "instruction": "Action sports photograph, medium close-up. In a judo dojo with a blue wall, the young woman in a blue judo gi (R1) with her hair in a ponytail executes a throw from behind the middle-aged man in a white judo gi (R3). She pulls his arm over her shoulder while he bends forward under her control. Soft side lighting highlights their forms.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 executes a judo throw on R3 from behind",
+    "R1 pulls R3's arm over her shoulder",
+    "R3 bends forward under R1's control",
+    "R1 is positioned behind R3 during the throw",
+    "R3 is the person being thrown by R1",
+    "R1 and R3 wear judo gi uniforms",
+    "the action takes place in a judo dojo with a blue wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 executing a judo throw on R3 from behind, rather than R3 throwing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the thrower and R3 is the person being thrown"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 pull R3's arm over her shoulder, rather than R3 pulling R1's arm over his shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls R3's arm during the throw"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 bending forward under R1's control, rather than R1 bending forward under R3's control?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is controlled by R1 in the grappling action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned behind R3 while performing the throw?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's behind-the-opponent throwing position"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the person being thrown with his arm drawn over R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's receiving role in the throw"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

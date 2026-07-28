@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T137",
+  "instruction": "Candid documentary photograph, wide shot, slightly high angle. In an indoor motion capture studio with a red carpet and white walls, the man in the black polo shirt and blue shorts (R1) stands on the left, facing right. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing left, extending her right arm to touch the man's neck. In the background, motion capture equipment and a printer are visible. Bright indoor lighting illuminates the scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's neck",
+    "R1 is the recipient whose neck is touched by R2",
+    "R1 faces R2 while receiving the neck touch",
+    "R2 faces R1 while reaching toward his neck",
+    "motion capture equipment and a printer are visible in the background",
+    "indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's neck, rather than R1 extending his right arm to touch R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the neck touch on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose neck is being touched by R2, rather than R2 being the person whose neck is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's neck touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 while reaching toward R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while performing the touch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while receiving R2's touch to his neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while being touched"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

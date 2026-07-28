@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__580364ca8a42__T1",
+  "instruction": "Cinematic film still, full shot, eye-level profile view. In an indoor yoga studio with wooden flooring and draped cream curtains, two people perform partner yoga on a black mat. On the left, the shirtless bald man with a black bandana (R2) wears black track pants with white stripes, facing right. On the right, the woman with pink braided hair (R1) wears a black sports bra and black leggings, facing left. They are both balanced in a V-shaped seated pose, their feet pressed sole-to-sole high in the air. They hold each other's wrists with arms extended straight between their legs, maintaining a focused, neutral expression. The scene is illuminated by warm, soft side lighting, creating a calm, earthy atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces left toward R2 while gripping wrists in the partner-yoga pose",
+    "R2 faces right toward R1 while gripping wrists in the partner-yoga pose",
+    "R1 and R2 balance opposite each other in a V-shaped seated partner-yoga pose",
+    "R1 and R2 press their raised feet sole-to-sole while holding each other's wrists",
+    "black yoga mat beneath the partners",
+    "indoor yoga studio with wooden flooring and cream curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner facing left toward R2 while gripping wrists in the partner-yoga pose, rather than R2 being the partner facing left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces left toward R2 while gripping wrists in the partner-yoga pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner facing right toward R1 while gripping wrists in the partner-yoga pose, rather than R1 being the partner facing right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right toward R1 while gripping wrists in the partner-yoga pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 balanced opposite each other in a V-shaped seated partner-yoga pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 balance opposite each other in a V-shaped seated partner-yoga pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold each other's wrists with their arms extended straight between their legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold each other's wrists with arms extended between their legs"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black yoga mat under R1 and R2 as they perform the partner-yoga pose?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black yoga mat beneath the partners"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

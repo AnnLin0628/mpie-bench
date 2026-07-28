@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T93",
+  "instruction": "Candid documentary photograph, full shot, eye-level. Inside a spacious motion capture studio with a red carpeted floor and white walls, two people are interacting. On the left, the woman in the white t-shirt and blue jeans (R2) lunges forward, extending her right arm to punch the left shoulder of the bearded man in the black polo shirt and blue shorts (R1). The man (R1) stands on the right, facing away from the camera, absorbing the strike. The background shows dark partitions and studio equipment under bright, even overhead fluorescent lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward and extends her right arm to punch R1's left shoulder",
+    "R1 absorbs the strike from R2 rather than striking R2",
+    "R2 is the active puncher while R1 is the receiving target",
+    "R1 faces away from the camera while receiving contact from R2",
+    "The contact point is R1's left shoulder",
+    "The scene is inside a spacious motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward to punch R1's left shoulder, rather than R1 lunging forward to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges forward and extends her right arm to punch R1's left shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 absorbing the strike from R2, rather than R2 absorbing a strike from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 absorbs the strike from R2 rather than striking R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active puncher and R1 the receiving target, rather than R1 being the active puncher and R2 the target?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active puncher while R1 is the receiving target"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend her right arm toward R1's left shoulder during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "The contact point is R1's left shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

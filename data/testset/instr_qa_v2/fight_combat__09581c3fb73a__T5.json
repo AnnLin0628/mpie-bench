@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T5",
+  "instruction": "Candid action photograph, full shot. Under an outdoor covered shelter, the boxer in the beige t-shirt and black sweatpants (R1) stands on the left, facing right with his back partially to the camera. He extends his left arm to punch a black focus mitt. On the right, the trainer in the green long-sleeve shirt and red shorts (R3) stands facing him, holding up the mitts to catch the blow. No bystanders are present in the background. Bright natural daylight illuminates the concrete floor and pillars, casting soft shadows.",
+  "n_person": 3,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 throws a punch toward a black focus mitt held by R3",
+    "R3 holds up the mitts to catch R1's blow",
+    "R1 is the active boxer extending his arm while R3 is the trainer receiving the strike",
+    "black focus mitts are used as the contact target",
+    "the scene is under an outdoor covered shelter with concrete floor and pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 punching the black focus mitt held by R3, rather than R3 punching a mitt held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the striker and R3 is the mitt holder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold up the mitts to catch R1's blow, rather than R1 holding mitts to catch a blow from R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 receives the punch with mitts while R1 delivers it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his left arm as the attacking boxer while R3 faces him as the trainer presenting the target?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively punches while R3 presents the mitt target"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 facing R1 with the mitts raised to receive the incoming punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's contact role is trainer and mitt receiver"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black focus mitt the object being struck by R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black focus mitt used as punch target"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

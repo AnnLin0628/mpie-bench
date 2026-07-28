@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__185c4e46d822__T6",
+  "instruction": "A candid, intimate close-up photograph set indoors against a plain light grey wall. The curly-haired woman in a white ribbed top (R1) stands on the left, eyes closed, cradling the girl with straight dark hair (R2). The girl in a beige ribbed top (R2) rests her head against the woman's chest. The woman's hand is placed flat on the girl's upper back and shoulder, holding her securely in a tender, comforting embrace. Soft, diffused side lighting illuminates the scene, creating a gentle, calm mood with a neutral color palette of white, beige, and grey.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 cradles R2 securely in a comforting close contact",
+    "R2 rests her head against R1's chest",
+    "R1 places her hand flat on R2's upper back and shoulder",
+    "R2 is the person being held and comforted by R1",
+    "The close-up interaction is indoors against a plain light grey wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 cradling R2 securely, rather than R2 cradling R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 cradles R2 securely in a comforting close contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her head against R1's chest, rather than R1 resting her head against R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her head against R1's chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's hand placed flat on R2's upper back and shoulder, rather than R2's hand being placed flat on R1's upper back and shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places her hand flat on R2's upper back and shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person being held and comforted while R1 provides the secure close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being held and comforted by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

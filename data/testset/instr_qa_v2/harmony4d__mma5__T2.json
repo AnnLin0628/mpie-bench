@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma5__T2",
+  "instruction": "Candid full shot of an indoor martial arts gym. On the left, the man in the black athletic shirt (R1) stands in a defensive stance with hands raised. On the right, the man in the gray t-shirt (R2) delivers a low kick with his right leg toward R1's thigh. The background features camera tripods against gray padded walls under even overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 delivers a low kick toward R1's thigh",
+    "R1 is the defender receiving the kick with hands raised",
+    "R2 uses his right leg as the kicking leg while R1 stays defensive",
+    "R1 stands in a defensive stance with hands raised",
+    "camera tripods are visible in the gym background",
+    "indoor martial arts gym with gray padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 delivering a low kick toward R1's thigh, rather than R1 delivering a low kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers a low kick toward R1's thigh"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person defending against the incoming kick with hands raised, rather than R2 defending against a kick from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the defender receiving the kick with hands raised"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending his right leg as the attacking leg toward R1 while R1 remains in a defensive stance, rather than R1 extending his right leg toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses his right leg as the kicking leg while R1 stays defensive"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in a defensive stance with his hands raised while R2 performs the low kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in a defensive stance with hands raised"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

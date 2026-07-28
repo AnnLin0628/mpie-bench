@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1a57fc26f9e5__T14",
+  "instruction": "A cinematic medium shot depicts a couple dancing in a rustic indoor room with posters on the wall. The smiling woman in the blue plaid shirt (R1) is on the left background, facing forward with a joyful expression. The man in the red striped shirt and beige pants (R2) is in the right foreground, his back to the camera as he guides her. They hold hands while dancing together. The scene is lit with warm indoor light and a blue accent light in the background, creating a cozy atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 guides R1 while they dance",
+    "R2 has his back to the camera while guiding R1",
+    "R1 faces forward with a joyful expression while dancing with R2",
+    "R1 and R2 hold hands during the dance",
+    "The dance takes place in a rustic indoor room with posters on the wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 guiding R1 while they dance, rather than R1 guiding R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 guides R1 while they dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have his back to the camera as he guides R1, rather than R1 having her back to the camera while guiding R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his back to the camera while guiding R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands while dancing together, with R2 in the guiding role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands during the dance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

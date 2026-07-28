@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T35",
+  "instruction": "Cinematic video still, medium shot from a low angle. Inside a dark boxing gym, the woman in the orange and black athletic top (R1) stands on the left in profile, holding up red boxing mitts. The Asian woman in the white sports bra (R2) stands on the right, facing left, throwing a straight left punch. Her black-gloved hand is fully extended, striking the raised red mitt of the woman in the orange and black top. The background shows red ring ropes and a circular gym logo. Dim overhead lighting creates a cool-toned, athletic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up red boxing mitts as the target for the punch",
+    "R2 throws a straight left punch toward R1's raised mitt",
+    "R2's black-gloved hand strikes the mitt held by R1",
+    "R1 is the mitt holder while R2 is the puncher",
+    "Red boxing mitts are used in the contact",
+    "A black boxing glove is on R2's punching hand",
+    "The interaction takes place inside a dark boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the raised red boxing mitt that absorbs R2's punch, rather than R2 holding the mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the mitt holder and R2 is the puncher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing a straight left punch at the mitt held by R1, rather than R1 throwing a punch at a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 punches toward R1's mitt"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's black-gloved hand fully extended to strike R1's raised mitt, rather than R1's gloved hand striking R2's mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's glove makes contact with the mitt held by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain in the trainer-style mitt-holding role while R2 performs the punching action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds mitts while R2 punches"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are red boxing mitts used as the contact target in the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red boxing mitts"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2's punching hand wearing a black boxing glove?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black boxing glove on R2's punching hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

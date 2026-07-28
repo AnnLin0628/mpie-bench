@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__02f239fbda7b__T4",
+  "instruction": "A candid studio photograph, medium shot at eye-level. Set indoors against a minimalist, light gray background, the older man with a gray beard (R1) sits holding the young blonde girl (R2) on his lap. The girl, wearing pink plaid pajama pants, looks towards the older woman with a white bob and glasses (R3) on the right. The older woman stands close, gently touching the girl's hair with her hand while wrapping her other arm around the man's back. The scene is bathed in soft, bright light, emphasizing the gentle pastel tones of their clothing.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 holds and supports R2 on his lap",
+    "R2 is the young girl seated on R1's lap",
+    "R3 gently touches R2's hair with one hand",
+    "R3 wraps her other arm around R1's back",
+    "R3 wears glasses while standing close to R1 and R2",
+    "the scene is indoors against a minimalist light gray background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and supporting R2 on his lap, rather than R2 holding and supporting R1 on her lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 on his lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gently touching R2's hair with her hand, rather than R2 touching R3's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 touches R2's hair"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 wrapping her other arm around R1's back, rather than R1 wrapping his arm around R3's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps an arm around R1's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young girl sitting on R1's lap while R1 holds her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits on R1's lap"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 standing close to R1 and R2 while contacting both of them, touching R2's hair and wrapping an arm around R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 contacts both R2 and R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

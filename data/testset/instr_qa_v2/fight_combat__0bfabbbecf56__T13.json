@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T13",
+  "instruction": "Cinematic medium shot of a boxing training session inside a dimly lit gym with a boxing ring. On the left, the woman in the black and orange sports top (R1) stands facing right, holding up a red focus mitt with her right hand to block a punch. On the right, the Asian woman in the white sports bra (R2) stands facing left, throwing a straight left punch with her black boxing glove directly into the raised mitt. The trainer (R1) maintains a focused expression, absorbing the impact, while the boxer (R2) concentrates intensely on her target. The background features black punching bags and red ring ropes under cool overhead lights, creating a moody, athletic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up a red focus mitt to block and absorb R2's punch",
+    "R2 throws a straight left punch into the mitt held by R1",
+    "R1 is the trainer using the mitt as the target while R2 is the boxer striking it",
+    "A red focus mitt is used as the contact target",
+    "R2 wears a black boxing glove while punching",
+    "The session takes place in a dimly lit gym with a boxing ring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding up the focus mitt to absorb R2's punch, rather than R2 holding the mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the mitt that absorbs R2's punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing the punch into R1's raised mitt, rather than R1 punching into a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 punches into the target held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 acting as the trainer who blocks the strike, while R2 acts as the boxer delivering the strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the blocking trainer and R2 is the punching boxer"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep the red focus mitt raised as the target for R2's straight left punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 presents the mitt target for R2's punch"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a red focus mitt used as the object that receives the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red focus mitt used as contact target"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2's punch delivered with a black boxing glove?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's black boxing glove makes the punch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

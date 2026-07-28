@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1606ffb652e6__T2",
+  "instruction": "Candid outdoor photograph, medium close-up at eye-level. On a sandy beach, the shirtless man with sunglasses (R2) on the left and the shirtless blonde man (R1) on the right face each other, smiling warmly. They clasp hands in a friendly grip while R1 wraps his arm around R2's shoulder. A yellow volleyball net is blurred in the foreground, and a blurred figure walks in the background under warm natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps his arm around R2's shoulder",
+    "R2's shoulder is encircled by R1's arm",
+    "R1 combines a hand clasp with an arm-over-shoulder gesture toward R2",
+    "R1 and R2 face each other while clasping hands",
+    "yellow volleyball net blurred in the foreground",
+    "sandy beach setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one wrapping his arm around R2's shoulder, rather than R2 wrapping his arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps his arm around R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one whose shoulder is being encircled by R1's arm, rather than R1's shoulder being encircled by R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's arm around his shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While they clasp hands, does R1 add the arm-over-shoulder gesture toward R2, rather than R2 adding that gesture toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 combines the hand clasp with an arm around R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while clasping hands in a friendly grip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other and clasp hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

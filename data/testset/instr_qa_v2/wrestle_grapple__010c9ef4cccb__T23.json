@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T23",
+  "instruction": "Candid action photograph, full shot. In a judo dojo with yellow mats, the standing middle-aged man in a white judo gi (R3) bends over to control the young man in a white judo gi (R2) who is lying on his back. The standing man (R3) grips his partner's sleeve, while the fallen man (R2) looks up defensively. Bright, even indoor lighting illuminates the scene against a blue background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 stands and bends over to control R2, rather than R2 controlling R3",
+    "R3 grips R2's sleeve as the controller, while R2 is the fallen partner",
+    "R2 lies on his back and looks up defensively while R3 stands over him",
+    "R3 is the standing middle-aged man in a judo gi and R2 is the young man in a judo gi",
+    "R2's sleeve is the contact point gripped by R3",
+    "The grappling scene is set in a judo dojo with yellow mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 standing and bending over to control R2, rather than R2 standing and controlling R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands and bends over to control R2, rather than R2 controlling R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 grip R2's sleeve as the controlling partner, rather than R2 gripping R3's sleeve as the controller?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 grips R2's sleeve as the controller, while R2 is the fallen partner"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying on his back and looking up defensively while R3 remains standing over him, rather than R3 lying on his back under R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on his back and looks up defensively while R3 stands over him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the standing man in the judo interaction while R2 is the young man lying on his back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the standing middle-aged man in a judo gi and R2 is the young man in a judo gi"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the judo interaction taking place in a dojo with yellow mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The grappling scene is set in a judo dojo with yellow mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T180",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and white walls. In the center, the bearded man in a dark shirt and blue shorts (R1) and the woman in a white t-shirt and blue jeans (R2) are embracing face-to-face. The woman has her back to the camera, wrapping her arms around the man's neck, while the man faces forward, holding her close with his arms around her shoulders. The background shows white walls with radiators and mounted cameras. Bright overhead studio lighting illuminates the scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 has her back to the camera while wrapping her arms around R1's neck",
+    "R1 faces forward while holding R2 close with his arms around her shoulders",
+    "R1's contact is around R2's shoulders while R2's contact is around R1's neck",
+    "R1 and R2 are positioned face-to-face in close body contact",
+    "the scene is an indoor motion capture studio with red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person with her back to the camera wrapping her arms around R1's neck, rather than R1 wrapping his arms around R2's neck with his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera while wrapping her arms around R1's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person facing forward while holding R2 close with his arms around her shoulders, rather than R2 facing forward and holding R1 around the shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces forward while holding R2 close with his arms around her shoulders"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's arms around R2's shoulders while R2's arms are around R1's neck, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact is around R2's shoulders while R2's contact is around R1's neck"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned face-to-face with R1 while turned away from the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is face-to-face with R1 and has her back to the camera"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding R2 close at shoulder level while R2's arms reach up around his neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have different upper-body contact roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

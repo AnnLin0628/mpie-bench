@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__9b5841204eda__T1",
+  "instruction": "A candid lifestyle photograph, full shot at eye-level, captures a modern indoor living room with a dark grey sofa and potted plants. On the left, the woman in the cream and black dress (R2) sits on the sofa with crossed legs, smiling warmly. On the right, the woman in the light blue t-shirt and beige pants (R1) sits on the floor, leaning against the sofa and smiling back. They extend their arms to clink their glass bottles together in a friendly toast. Bright, natural light streams from the large window behind them, casting soft shadows across the neutral-toned room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is seated on the floor leaning against the sofa while R2 is seated on the sofa",
+    "R2 is the crossed-leg sofa sitter while R1 is the lower floor sitter",
+    "R1 smiles back toward R2 from the floor position",
+    "R2 smiles warmly toward R1 from the sofa position",
+    "glass bottles are used for the friendly toast",
+    "the scene is a modern indoor living room with a dark grey sofa and potted plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 seated on the floor leaning against the sofa while R2 sits on the sofa, rather than R2 being the one on the floor leaning against the sofa?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 floor-leaning role and R2 sofa-seated role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting with crossed legs on the sofa while R1 remains seated lower on the floor, rather than R1 being the crossed-leg sofa sitter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 crossed-leg sofa position versus R1 floor position"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit on the floor and lean against the sofa while smiling back toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 floor-seated leaning role toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set in a modern indoor living room with a dark grey sofa and potted plants?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "modern living room setting with sofa and plants"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

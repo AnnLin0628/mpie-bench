@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__27919ce920e9__T3",
+  "instruction": "A candid wedding photograph in a medium shot captures a romantic moment indoors. Against a white wall with floral arrangements, the groom in the dark suit (R1) stands on the left in profile, extending his arms forward with his hands hovering near the shoulders of the bride in the strapless white gown (R2). The bride stands on the right, holding a pastel bouquet and looking up at him with a soft smile. Her sheer veil drapes elegantly behind her. Soft, bright natural light illuminates the scene, creating a clean, romantic atmosphere with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his arms forward with his hands near R2's shoulders",
+    "R2 is the bride being approached by R1's outstretched hands",
+    "R2 holds a pastel bouquet",
+    "R2 looks up at R1 with a soft smile",
+    "the scene is indoors against a white wall with floral arrangements"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending his arms forward with his hands hovering near R2's shoulders, rather than R2 extending her arms toward R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches toward R2's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the pastel bouquet while R1 reaches toward her, rather than R1 holding the bouquet while R2 reaches toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the bouquet as R1 reaches toward her"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 in profile with his hands near her shoulders while R2 looks up at him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces and reaches toward R2 while R2 looks up"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the bride standing as the focus of R1's forward-reaching gesture near her shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's reaching gesture"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a pastel bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "pastel bouquet held by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

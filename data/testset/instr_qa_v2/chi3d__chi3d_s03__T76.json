@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T76",
+  "instruction": "A candid full shot photograph of a spacious indoor studio with a dark red carpeted floor and white walls. On the left, the woman in the white patterned t-shirt and blue jeans (R2) stands angled away from the camera, facing right. On the right, the man in the dark polo shirt and blue shorts (R1) stands facing left. They are shaking hands, holding their right hands clasped together in the center. Both look at each other. The scene is illuminated by bright overhead fluorescent lights, creating a neutral color palette with a prominent red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 and R2 have their right hands clasped together in a handshake",
+    "R1 faces R2 while participating in the handshake",
+    "R2 faces R1 while participating in the handshake",
+    "both R1 and R2 look at each other during the hand contact",
+    "the scene is in a spacious indoor studio with a dark red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 clasping R2's right hand with his own right hand, rather than clasping R2's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right-hand contact with R2's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 clasping R1's right hand with her own right hand, rather than clasping R1's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right-hand contact with R1's right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding their right hands clasped together in the center between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "shared right-hand clasp between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do both R1 and R2 look at each other while their hands are clasped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "mutual gaze during clasped-hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

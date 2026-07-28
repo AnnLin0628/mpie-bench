@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T231",
+  "instruction": "A candid documentary wide shot of an indoor motion capture studio with a red carpet. In the center, the woman in the white t-shirt and blue jeans (R2) stands facing away from the camera. On the right, the man in the black polo and blue shorts (R1) kicks his right leg forward towards her hip. The studio is brightly lit by overhead lights, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 initiates the leg kick toward R2 rather than R2 kicking toward R1",
+    "R1's right leg is extended forward toward R2's hip",
+    "R2 is the recipient/target of R1's kick while standing facing away from the camera",
+    "R2 stands in the center as R1 performs the kicking action toward her",
+    "The interaction takes place in an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person kicking his leg forward toward R2, rather than R2 kicking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the leg kick toward R2 rather than R2 kicking toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's right leg directed toward R2's hip, rather than R2's leg being directed toward R1's hip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right leg is extended forward toward R2's hip"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the target or recipient of R1's forward kick, rather than R1 being the target of a kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient/target of R1's kick while standing facing away from the camera"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 take the active kicking role while R2 remains standing in the center as the person being approached by the kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in the center as R1 performs the kicking action toward her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

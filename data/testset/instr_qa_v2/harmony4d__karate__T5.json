@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T5",
+  "instruction": "Candid action photograph, full shot, eye-level. Inside a karate dojo with yellow walls, red and blue floor mats, and wall-mounted swords, two martial artists spar. On the left, the man in the black uniform with white stripes (R1) stands in a defensive stance, facing right, and uses his left hand to deflect an incoming strike. On the right, the woman in the black uniform with a red belt (R2) faces left, lunging forward to throw a right-handed punch toward him. Bright overhead lighting illuminates the scene, casting soft shadows on the vibrant mats.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward to throw a right-handed punch toward R1",
+    "R1 uses his left hand to deflect R2's incoming strike",
+    "R1 has the defensive receiving role while R2 has the attacking punching role",
+    "R1 and R2 face each other while sparring",
+    "the sparring occurs inside a karate dojo with mats and wall-mounted swords"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward to throw a right-handed punch toward R1, rather than R1 lunging forward to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacking puncher and R1 is the target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 using his left hand to deflect R2's incoming strike, rather than R2 using her hand to deflect a strike from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the defensive deflection against R2's strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 in the defensive receiving role while R2 is in the attacking punching role, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric defender versus attacker roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 in a defensive stance while R2 faces R1 and punches toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct sparring body configurations"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

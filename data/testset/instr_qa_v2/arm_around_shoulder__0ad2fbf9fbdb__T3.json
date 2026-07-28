@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0ad2fbf9fbdb__T3",
+  "instruction": "Cinematic film still, full-body shot. On a shaded dirt path in a lush green forest, the dark-haired woman in a cream ruffled dress (R1) walks on the left, looking toward the right. Beside her, the short-haired woman in a white ruffled blouse and tan trousers (R2) walks on the right, pointing forward with her raised left hand. R2's left arm is linked through R1's right arm as they walk together. Soft, diffused daylight filters through the dense green canopy, illuminating the scene with natural, earthy tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 links her left arm through R1's right arm as they walk",
+    "R1 is the companion whose right arm is linked by R2's left arm",
+    "R2 points forward with her raised left hand while walking beside R1",
+    "R1 and R2 walk together with their arms linked",
+    "shaded dirt path in a lush green forest"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 linking her left arm through R1's right arm, rather than R1 linking her left arm through R2's right arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 links her left arm through R1's right arm as they walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose right arm is being linked by R2's left arm, rather than R2 being the person whose right arm is being linked by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the companion whose right arm is linked by R2's left arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2, not R1, point forward with a raised left hand while the two women walk with linked arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points forward with her raised left hand while walking beside R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together with R2's left arm threaded through R1's right arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together with their arms linked"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

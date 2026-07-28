@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__affad137eabf__T2",
+  "instruction": "A candid documentary photograph in a medium shot captures a bright office interior next to large windows. On the left, the woman in the striped blazer (R1) sits on a gold wire chair, profile facing right, holding a white coffee cup with both hands. On the right, the man in the floral short-sleeve shirt (R2) sits facing her, gesturing with his right hand while holding a coffee cup in his left hand. They sit opposite each other across a small round marble table, actively conversing. Bright, natural light fills the space, maintaining a clean, neutral color palette with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a white coffee cup with both hands while seated during the conversation",
+    "R2 gestures with his right hand while holding a coffee cup in his left hand",
+    "R1 and R2 sit opposite each other across a small round marble table",
+    "Both R1 and R2 have coffee cups during the conversation",
+    "A small round marble table is positioned between R1 and R2",
+    "The scene is a bright office interior next to large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding a white coffee cup with both hands, rather than R2 being the two-handed cup holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the coffee cup with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person gesturing with his right hand during the conversation, rather than R1 being the right-hand gesturer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with his right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding a coffee cup in his left hand while gesturing, rather than R1 holding a cup one-handed while gesturing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a cup in his left hand while gesturing"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated opposite each other across the table while actively conversing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit opposite each other in conversation"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

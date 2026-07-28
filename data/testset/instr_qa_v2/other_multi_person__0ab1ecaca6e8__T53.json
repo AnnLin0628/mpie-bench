@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T53",
+  "instruction": "Candid outdoor photograph, full shot. In a grassy park with trees, the Asian man in the red polo (R3) stands center-right, leaning forward excitedly with arms bent and shouting. Behind him to the left, the woman with the afro (R6) in a red t-shirt watches the action. In the background on the right, the woman in the dark t-shirt (R4) smiles. Bright daylight illuminates the scene, highlighting the vibrant red shirts against the green grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 is the excited forward-leaning shouter, not R6",
+    "R6 watches the action as an onlooker behind R3, rather than R3 watching from behind R6",
+    "R4 smiles in the background while R3 is the central shouting participant",
+    "R3 stands with arms bent and leans forward excitedly",
+    "the scene is a grassy park with trees in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the man leaning forward excitedly and shouting, rather than R6 being the one leaning forward and shouting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the excited forward-leaning shouter, not R6"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 watching the action from behind R3, rather than R3 watching from behind R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 watches the action as an onlooker behind R3, rather than R3 watching from behind R6"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 smiling in the background while R3 is the central shouting participant, rather than R3 smiling in the background while R4 shouts?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 smiles in the background while R3 is the central shouting participant"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand with arms bent and lean forward excitedly, rather than R6 taking that active shouting posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands with arms bent and leans forward excitedly"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

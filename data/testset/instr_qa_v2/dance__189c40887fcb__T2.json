@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T2",
+  "instruction": "Cinematic still of a medium shot showing three men in a stylized dance pose inside a large hall. In the center, the blonde man in the leather jacket (R1) tilts his head back dynamically, chest bare. On the left, the man in the white t-shirt and harness (R3) holds his arms framed around his head, looking forward. On the right, the man in the black mesh crop top (R2) poses with hands framing his face, gazing intensely at the camera. They stand close together in a staggered dance formation, performing a synchronized routine. Cool blue and purple stage lighting bathes the dancers, creating a moody atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the central dancer tilting his head back dynamically",
+    "R2 is the dancer framing his face with his hands and gazing intensely at the camera",
+    "R3 is the dancer holding his arms framed around his head while looking forward",
+    "R1, R2, and R3 stand close together in a staggered synchronized dance formation",
+    "the scene is inside a large hall with cool blue and purple stage lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer tilting his head back dynamically in the center, rather than R2 or R3 taking that head-tilt pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the central dancer tilting his head back dynamically"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer posing with his hands framing his face and gazing intensely at the camera, rather than R1 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer framing his face with his hands and gazing intensely at the camera"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer holding his arms framed around his head while looking forward, rather than R2 doing that arm-framing pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the dancer holding his arms framed around his head while looking forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 each perform distinct dance poses as part of the same synchronized routine?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 perform distinct poses in a synchronized routine"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

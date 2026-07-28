@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T1",
+  "instruction": "Candid studio close-up photograph of two women posing playfully in front of a plain white wall. On the left, the woman with voluminous afro hair (R1) in a mauve shirt touches her cheeks with both hands, smiling at the camera. On the right, the woman with short brown hair (R2) in a striped shirt blows a kiss with both hands. They stand close together side-by-side under bright, soft frontal lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 touches her own cheeks with both hands while smiling",
+    "R2 blows a kiss with both hands",
+    "R1 and R2 pose playfully close together side-by-side",
+    "The portrait is a candid studio close-up",
+    "The background is a plain white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman touching her cheeks with both hands, rather than R2 doing that gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the cheek-touching gesture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman blowing a kiss with both hands, rather than R1 blowing the kiss?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the two-handed kiss-blowing gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 pose with both hands placed on her own cheeks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is hands on cheeks"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 pose with both hands raised to blow a kiss?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration is hands used for a blown kiss"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T78",
+  "instruction": "Candid documentary photograph, wide shot, high angle. Inside a motion capture studio with a red carpet, the man in the dark polo shirt and blue shorts (R1) stands on the left with his back partially to the camera, facing right. He shakes right hands with the woman in the white t-shirt and blue jeans (R2), who stands on the right facing left. Bright overhead lighting illuminates the room, showing a white wall and a printer in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the participant with his back partially to the camera while engaging R2's right hand",
+    "R2 is the participant facing R1 from the opposite side while meeting R1's right hand",
+    "R1 and R2 make contact through their right hands",
+    "R1 and R2 face each other during the right-hand contact",
+    "a printer is visible in the background",
+    "the interaction occurs inside a motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant with his back partially to the camera while his right hand contacts R2's right hand, rather than R2 being the one with her back partially to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-partially-to-camera contact role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant facing R1 from the opposite side while meeting R1's right hand, rather than R1 taking R2's counterpart role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the counterpart meeting R1's right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1's right hand make contact with R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 contact through their right hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__58b277ce30a2__T1",
+  "instruction": "A candid medium close-up photograph of a bright indoor room with a green potted plant in the background. On the left, the man in the red sweater (R2) sits facing right, looking attentively at the woman in the gray turtleneck (R1) on the right. The woman (R1) looks down and gestures with her hand near a tablet they are holding. Soft, natural light illuminates the scene, creating a warm, focused atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gestures with her hand near the tablet while R2 looks attentively at her",
+    "R2 is the seated attentive listener facing R1",
+    "R1 looks down toward the tablet during the interaction",
+    "the two people are holding a tablet",
+    "the scene is a bright indoor room with a green potted plant in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gesturing with her hand near the tablet while R2 looks attentively at her, rather than R2 gesturing near the tablet while R1 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gestures near the tablet while R2 watches attentively"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the seated attentive listener facing R1, rather than R1 being the seated attentive listener facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seated and attentively oriented toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look down while gesturing near the tablet during the interaction with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down and gestures near the tablet"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look attentively at R1 during their face-to-face conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attends to R1 in the conversation"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

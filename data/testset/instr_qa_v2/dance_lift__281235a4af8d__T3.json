@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__281235a4af8d__T3",
+  "instruction": "A candid outdoor photograph shot from a low angle. Under a clear blue sky, the man in the black t-shirt (R1) stands upright on a stone block. The woman in the black crop top (R2) stands on his shoulders. He holds her left hand high with his left hand, while her right arm is extended outward for balance. No bystanders are in the frame. Bright natural sunlight illuminates the acrobats, casting light shadows on the stone.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 from below while standing upright",
+    "R2 stands on R1's shoulders rather than carrying R1",
+    "R1 holds R2's left hand high to help stabilize the lift",
+    "R2 extends her right arm outward for balance while above R1",
+    "R1 stands on a stone block during the acrobatic pose",
+    "The scene is outdoors under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 from below while R2 stands on his shoulders, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from below while standing upright"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on R1's shoulders, rather than R1 standing on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on R1's shoulders rather than carrying R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's left hand high to help stabilize her, rather than R2 holding R1's hand high to stabilize him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's left hand high to help stabilize the lift"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing above R1 with her right arm extended outward while R1 remains upright beneath her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm outward for balance while above R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

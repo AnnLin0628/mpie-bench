@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__c23e0d586fbc__T4",
+  "instruction": "A candid documentary photograph, medium shot at eye-level. On a sandy beach with a rocky breakwater and hazy sea under an overcast sky, the woman in the peach crop top (R1) walks to the right in the left foreground, smiling in profile. Beside her, the man in the blue t-shirt and headband (R2) walks to the right in the right background, smiling in profile. They walk closely side-by-side, holding hands. The scene is illuminated by soft, diffused daylight with a warm, muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the foreground woman walking closely beside R2 while their hands are joined",
+    "R2 is the background man walking closely beside R1 while their hands are joined",
+    "R1 and R2 are walking side-by-side while holding hands",
+    "Both R1 and R2 are moving in the same direction together",
+    "The interaction takes place on a sandy beach with a rocky breakwater and hazy sea"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground woman in the hand-holding pair, rather than R2 being the foreground woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground woman walking closely beside R2 while their hands are joined"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the background man in the hand-holding pair, rather than R1 being the background man?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the background man walking closely beside R1 while their hands are joined"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking closely side-by-side while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are walking side-by-side while holding hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking beside R2 rather than being carried or supported by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks beside R2 without being carried or supported"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

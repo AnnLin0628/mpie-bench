@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__792590b05965__T3",
+  "instruction": "A candid lifestyle photograph in a medium full shot captures a couple in a bright indoor room with plants. In the foreground, the woman in the yellow shirt (R1) stands looking up and to the left with a happy, reflective smile. Directly behind her, the man in the blue t-shirt (R2) wraps his arms around her waist, looking down at her with a gentle smile. The woman (R1) holds her arms crossed over his hands in a cozy embrace. Soft, natural side lighting illuminates the scene, highlighting the warm yellow and cool blue tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps his arms around R1's waist from directly behind her",
+    "R1 crosses her arms over R2's hands during the embrace",
+    "R1 is the person being held at the waist while R2 is the person holding her",
+    "R1 stands in the foreground with R2 positioned directly behind her",
+    "The scene is a bright indoor room with plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap his arms around R1's waist from behind, rather than R1 wrapping her arms around R2's waist from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms around R1's waist from directly behind her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 cross her arms over R2's hands at her waist, rather than R2 crossing his arms over R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 crosses her arms over R2's hands during the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person being held around the waist while R2 is the person holding her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being held at the waist while R2 is the person holding her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in the foreground with R2 directly behind her in the contact pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in the foreground with R2 positioned directly behind her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

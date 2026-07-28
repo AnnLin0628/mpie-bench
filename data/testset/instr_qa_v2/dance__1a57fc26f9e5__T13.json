@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1a57fc26f9e5__T13",
+  "instruction": "A candid outdoor medium full shot captures a couple dancing joyfully on a grassy hilltop with distant mountains under an overcast sky. The woman in the yellow cardigan and blue jeans (R1) is positioned on the left, leaning back and spinning with a happy smile. The man in the red striped shirt and brown pants (R2) stands on the right, facing forward and smiling warmly. They hold hands tightly, spinning together in a dynamic motion. The lighting is soft, natural daylight, creating a cool, scenic color palette across the landscape.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the dancer leaning back during the hand-held spin",
+    "R2 is the more upright, forward-facing partner while holding R1's hands",
+    "R1 and R2 hold hands tightly while dancing together",
+    "R1 and R2 are spinning together in a dynamic dance motion",
+    "the dance takes place outdoors on a grassy hilltop with distant mountains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer leaning back during the hand-held spin, rather than R2 being the one leaning back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dancer leaning back during the hand-held spin"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 stay more upright and forward-facing while holding R1's hands, rather than R1 being the upright partner and R2 leaning back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the more upright, forward-facing partner while R1 leans back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 spinning back from R2 as R2 serves as the steady forward-facing dance partner, rather than those roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 spins back while R2 remains the forward-facing partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands tightly while dancing together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands tightly while dancing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

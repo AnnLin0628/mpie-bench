@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T242",
+  "instruction": "Candid documentary photograph, wide full shot, eye-level angle. Inside a spacious motion capture studio with a dark red carpeted floor and white walls, the woman in the white patterned t-shirt and blue jeans (R2) stands on the left, next to the man in the black cap and blue shorts (R1) on the right. They both face forward toward the camera, smiling warmly, with the man (R1) wrapping his right arm around the woman's (R2) shoulder in a friendly pose. Bright overhead lighting casts soft shadows on the red floor, and a printer is visible in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps his right arm around R2's shoulder",
+    "R2 receives the arm-around-shoulder contact from R1",
+    "R1 and R2 face forward toward the camera while posing together",
+    "R1 stands next to R2 in a friendly pose with his arm on her shoulder",
+    "a printer is visible in the background",
+    "the scene is inside a spacious motion capture studio with a dark red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping his right arm around R2's shoulder, rather than R2 wrapping her arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps his right arm around R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the arm-around-shoulder contact from R1, rather than R1 receiving that contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the arm-around-shoulder contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand next to R2 in a friendly pose with his arm placed around her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands next to R2 in a friendly pose with his arm on her shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

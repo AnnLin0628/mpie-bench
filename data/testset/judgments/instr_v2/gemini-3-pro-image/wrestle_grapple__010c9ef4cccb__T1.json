@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T1",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.7058823529411765,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.5,
+  "S_instr_prop": null,
+  "S_instr_scene": 1.0,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 gripping R3's lapel rather than R3 gripping R4's lapel?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "right judoka grips left judoka's lapel"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gripping R4's collar rather than R4 gripping R3's collar?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "left judoka is not clearly gripping right judoka's collar"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R4 engaged with each other in a judo grapple with their hands on each other's judogi?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "both judoka are grappling with judogi contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the grapple take place inside a judo dojo with blue and yellow mats?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "indoors on blue and yellow judo mats"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "wrestle_grapple__010c9ef4cccb__T1",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 12.91,
+    "written_at": "2026-07-17T16:19:23",
+    "gen_relpath": "outputs/gemini-3-pro-image/wrestle_grapple__010c9ef4cccb__T1.png",
+    "qa_relpath": "instr_qa_v2/wrestle_grapple__010c9ef4cccb__T1.json",
+    "n_questions": 4
+  }
+}

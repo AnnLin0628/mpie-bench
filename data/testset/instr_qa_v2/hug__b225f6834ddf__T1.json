@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__b225f6834ddf__T1",
+  "instruction": "Candid lifestyle medium shot of a bright indoor living room. On the left, the older woman in a maroon cardigan (R2) sits facing right, smiling warmly as she hands a red envelope to the young woman in a red long-sleeve dress (R1). The young woman (R1) stands on the right, facing left with a joyful expression, receiving the envelope. A wooden table with a red floral pouch is in the foreground. Soft natural light illuminates the scene, highlighting the warm red tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 hands a red envelope to R1",
+    "R1 receives the red envelope from R2",
+    "R2 is seated while giving the envelope to standing R1",
+    "red envelope being passed between R2 and R1",
+    "bright indoor living room setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 handing the red envelope to R1, rather than R1 handing it to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the giver of the envelope and R1 is the receiver"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 receiving the red envelope from R2, rather than R2 receiving it from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of the envelope from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated while giving the envelope to the standing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seated giver and R1 is standing receiver"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

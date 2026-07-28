@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__43516a2a1164__T5",
+  "instruction": "A cinematic wedding photograph with a warm, romantic tone, captured in a full-length, eye-level shot. In an outdoor grassy field with trees and a rustic building in the background, the bride in a white wedding dress (R1) and the groom in a beige suit (R2) embrace closely in front of a white vintage car. The bride (R1), positioned on the left, wraps her arm around the groom's neck while holding a bouquet of white flowers. The groom (R2), standing on the right, wraps his arms around her waist as they share an intimate kiss. Soft, warm natural daylight illuminates the scene, casting gentle shadows on the grass.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps an arm around R2's neck",
+    "R2 wraps his arms around R1's waist",
+    "R1 holds the bouquet during the embrace and kiss",
+    "R1 and R2 share an intimate kiss while in close contact",
+    "bouquet of white flowers",
+    "outdoor grassy field with trees and a rustic building"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping an arm around R2's neck, rather than R2 wrapping an arm around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's arm-around-neck contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his arms around R1's waist, rather than R1 wrapping her arms around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's waist-holding contact duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the bouquet while embracing R2, rather than R2 holding the bouquet while embracing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 as the bouquet holder during the contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have her arm around R2's neck while R2 holds R1 around the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "paired neck-and-waist contact configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet of white flowers being held during the close interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bouquet of white flowers"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

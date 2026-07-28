@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T8",
+  "instruction": "A cinematic video still captures a medium shot of two people dancing in a studio with a soft gradient background. On the left, the man in the black vest (R2) stands in profile facing right, looking toward his partner with a soft smile. On the right, the blonde woman in the black halter dress (R3) faces slightly left, smiling and looking down. She extends her right arm straight out to the left, resting her hand near the man's shoulder. The scene is illuminated by dual-tone studio lighting, featuring a cool cyan glow from the left and a warm pink hue from the right, creating a soft, vibrant atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 extends her right arm toward R2 and rests her hand near R2's shoulder",
+    "R2 is the partner receiving R3's outstretched hand near his shoulder",
+    "R3 is the active arm-extending dance partner while R2 faces her in profile",
+    "R2 looks toward R3 while R3 smiles and looks downward",
+    "the dance takes place in a studio with a soft gradient background and dual-tone cyan and pink lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 extend her right arm toward R2 and rest her hand near R2's shoulder, rather than R2 extending his arm toward R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the active arm-extending partner contacting near R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner whose shoulder area is approached by R3's outstretched hand, rather than R3 being the one whose shoulder is approached by R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R3's hand near his shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the dance pose, is R3 the one making the straight outstretched-arm gesture toward R2, rather than R2 making that gesture toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the asymmetric outstretched-arm dance gesture"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned as R2's dance partner with her right arm extended toward him while R2 faces her in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's dance role involves extending her arm toward R2 as he faces her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

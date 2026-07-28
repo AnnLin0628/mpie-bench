@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T24",
+  "instruction": "A candid action photograph captures a dance rehearsal in an indoor studio with a dark background and wooden floor. In the center-left, the bearded man in the rust-brown shirt (R1) stands in a wide stance, holding hands with the woman with a ponytail in the yellow shirt (R4), who is kneeling on the right. In the background, the woman with pulled-back hair in the yellow shirt (R2) is kneeling on the left facing away, while the clean-shaven man in the rust-brown shirt (R3) stands on the right facing away. The scene is illuminated by soft overhead lighting, highlighting the warm earth tones of the dancers' clothing against the dark backdrop.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 stands in a wide stance while holding hands with kneeling R4",
+    "R4 is the kneeling dance partner connected by hand contact to standing R1",
+    "R1 and R4 are the contact pair in the dance rehearsal",
+    "R2 kneels facing away in the background while R3 stands facing away in the background",
+    "indoor dance studio with a dark background and wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the standing dancer holding hands with kneeling R4, rather than R4 standing while R1 kneels?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in a wide stance while holding hands with kneeling R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 maintain the wide standing stance during the hand contact with R4, rather than R4 being the one in the wide standing stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in a wide stance while holding hands with kneeling R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the kneeling partner whose hands are held by standing R1, rather than R1 being the kneeling partner held by R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the kneeling dance partner connected by hand contact to standing R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R4 the dancers making hand contact with each other in the rehearsal?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 are the contact pair in the dance rehearsal"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

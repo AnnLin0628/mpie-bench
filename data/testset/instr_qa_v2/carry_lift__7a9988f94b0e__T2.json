@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__7a9988f94b0e__T2",
+  "instruction": "Candid sports photograph, low-angle medium shot. Inside an indoor volleyball gym with a paneled ceiling, the man in the blue shirt and black sleeves (R1) on the left and the man in the black shirt and grey sleeves (R2) on the right face each other in profile, both smiling warmly. They raise their right hands to perform a high-five in the center of the frame, while their left arms are held lower. A volleyball net stretches across the background. The scene is brightly lit by overhead gym lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 raises his right hand toward R2 for the high-five while keeping his left arm lower",
+    "R2 raises his right hand toward R1 for the high-five while keeping his left arm lower",
+    "R1 and R2 face each other in profile as their raised right hands meet in the center",
+    "a volleyball net stretches across the background",
+    "the interaction occurs inside an indoor volleyball gym",
+    "the scene is brightly lit by overhead gym lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a high-five with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five initiator/active hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the high-five, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": true
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0fb258408fd1__T3",
+  "instruction": "A candid wedding photograph, medium shot at eye-level with a shallow depth of field. In an elegant indoor hotel lobby with potted plants and grey sofas in the background, the woman with curly hair in a white one-shoulder dress (R1) stands on the left, facing right and looking down. The woman in a white pantsuit (R2) stands on the right, facing left and holding a bouquet of pink peonies in her left hand. They smile warmly as they extend their hands to clasp each other's fingers in the center of the frame. Soft, natural light fills the space, creating a warm and serene atmosphere with neutral tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 actively extends her hand to clasp R2's fingers",
+    "R2 actively extends her hand to clasp R1's fingers",
+    "R2 holds the bouquet while interacting with R1",
+    "R1 looks down while joining hands with R2",
+    "R2 faces R1 while holding the bouquet",
+    "bouquet of pink peonies",
+    "indoor hotel lobby with potted plants and grey sofas"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 actively extend her hand to clasp R2's fingers, rather than only R2 reaching while R1 keeps her hand out of the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively extends her hand to clasp R2's fingers"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 actively extend her hand to clasp R1's fingers, rather than only R1 reaching while R2 keeps her hand out of the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively extends her hand to clasp R1's fingers"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2, rather than R1, hold the bouquet while the two women clasp fingers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the bouquet while interacting with R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 facing R1 while holding the bouquet and joining fingers with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while holding the bouquet"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet of pink peonies held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "bouquet of pink peonies"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__04d814642f7c__T11",
+  "instruction": "Action sports medium shot in a boxing gym. In the foreground, the woman in the blue jacket (R2) wears pink boxing gloves and punches a red heavy bag on the left, captured with slight motion blur. Behind her, the man in the grey t-shirt (R1) stands watching and coaching with an encouraging expression. Bright overhead lights illuminate the dynamic training session.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active boxer punching the red heavy bag rather than R1",
+    "R1 watches and coaches R2 rather than punching the bag himself",
+    "R2 wears pink boxing gloves while striking the heavy bag",
+    "R1 stands behind R2 in a coaching/observer role",
+    "red heavy bag",
+    "boxing gym setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person punching the red heavy bag, rather than R1 punching it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active boxer punching the heavy bag"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 watching and coaching R2 while R2 punches, rather than R2 coaching R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 coaches while R2 performs the punching action"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have the punching contact role with the bag while R1 has the non-contact observer role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 contacts the heavy bag and R1 does not"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 training as the boxer on the heavy bag while R1 stands behind her as a coach or observer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 boxes while R1 observes/coaches"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red heavy bag that R2 is punching?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red heavy bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

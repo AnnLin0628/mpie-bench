@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b8719b45fe05__T4",
+  "instruction": "Candid outdoor full-shot photograph of a couple walking down a rocky path next to a blue-grey marble cliff. On the left, the woman in the white sweater and tan hat (R1) walks downward, touching the marble wall with her right hand while looking toward her partner. On the right, the bearded man in the rust-orange sweater and dark fedora (R2) walks beside her, looking forward and down. The woman and the bearded man hold hands, her left hand clasped in his right. Soft natural daylight illuminates the scene, highlighting the cool tones of the stone and the warm colors of their knitwear.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 touches the blue-grey marble wall with her right hand while walking beside R2",
+    "R1 and R2 hold hands with R1's left hand clasped in R2's right hand",
+    "R1 looks toward R2 while R2 looks forward and down",
+    "R1 and R2 walk together down a rocky path",
+    "blue-grey marble cliff or wall beside the couple",
+    "outdoor rocky path setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one touching the marble wall with her right hand while walking beside R2, rather than R2 being the one touching the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches the marble wall while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R1 and R2 hold hands with R1's left hand clasped in R2's right hand, rather than R1's right hand being clasped in R2's left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "specific asymmetric hand-hold configuration"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking toward R2 while R2 looks forward and down, rather than R2 looking toward R1 while R1 looks forward and down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric gaze direction between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking beside each other while maintaining a hand-hold between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walking together while holding hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 outdoors on a rocky path next to a marble cliff?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor rocky path beside a marble cliff"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma2__T2",
+  "instruction": "Candid action photograph, full shot at eye-level. Inside an indoor gym with gray padded walls, the man in the blue tank top (R1) stands on the left, facing right. The bearded man in the maroon t-shirt (R2) stands on the right, facing left. They engage in sparring, with R1 extending his arms to grip R2's forearms while R2 holds his hands up defensively. Bright overhead lighting casts soft shadows on the gray floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his arms to grip R2's forearms",
+    "R2 keeps his hands raised defensively while R1 grips his forearms",
+    "R1 is the active forearm-grabber rather than R2",
+    "R2 is the defensive sparring partner receiving R1's forearm grip",
+    "The sparring takes place inside an indoor gym with gray padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his arms to grip R2's forearms, rather than R2 extending to grip R1's forearms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active forearm-grabber"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold his hands up defensively while R1 grips his forearms, rather than R1 being the one defensively held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 takes the defensive role while R1 grips"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the sparring contact, is R1 initiating the forearm grip and R2 responding defensively, rather than R2 initiating the grip on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric sparring initiation by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other in a sparring stance while R1 grips R2's forearms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 spar face-to-face with R1 gripping R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's body role defensive, with his hands held up as R1 makes forearm contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 maintains a defensive hand position"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

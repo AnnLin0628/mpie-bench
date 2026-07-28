@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T22",
+  "instruction": "Candid action photograph, medium shot at eye-level. Under a covered outdoor pavilion with white metal trusses and blue pillars, two young men are sparring. On the left, the boxer in the blue tank top (R2) faces right, holding his black gloves up in a guard. On the right, the boxer in the beige t-shirt (R1) stands with his back to the camera, facing left with his gloves raised. The two boxers square off closely, maintaining their defensive guards. The scene is illuminated by bright, natural daylight with soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the boxer with his back to the camera, facing R2 with gloves raised",
+    "R2 faces R1 with black gloves held up in a defensive guard",
+    "R1 and R2 square off closely while maintaining defensive boxing guards",
+    "black boxing gloves are used as the sparring contact-relevant gear",
+    "the sparring takes place under a covered outdoor pavilion with metal trusses and blue pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer standing with his back to the camera and gloves raised, rather than R2 being the boxer with his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-to-camera sparring position"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer facing toward R1 with black gloves held up in a guard, rather than R1 being described as the boxer in that guarded front-facing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the guarded front-facing sparring role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 squared off closely with their boxing gloves raised in defensive guards?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain defensive sparring guards"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

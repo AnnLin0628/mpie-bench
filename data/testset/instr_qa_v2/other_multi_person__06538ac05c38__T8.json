@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T8",
+  "instruction": "Low-angle cinematic wide shot. On a rooftop under a bright sky, five friends stand in a line looking upwards. From left to right: the woman in the white t-shirt (R1) looks up; the woman in the black crop top (R5) touches her hair while looking up; the woman in the denim vest (R3) holds sunglasses up, looking towards the sky; the man in the gray t-shirt (R2) looks up and to the right; and the man in the green jacket and black hat (R4) stands on the far right looking down. Bright sunlight creates a subtle lens flare.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R3 holds sunglasses up while looking toward the sky",
+    "R5 touches her hair while looking up",
+    "R4 looks down while the others look upward",
+    "R2 looks up and to the right",
+    "sunglasses are present and held up",
+    "the group is on a rooftop under a bright sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3, rather than R5, hold sunglasses up while looking toward the sky?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds sunglasses up while looking toward the sky"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5, rather than R3, touch her hair while looking up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 touches her hair while looking up"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look up and to the right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks up and to the right"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the group standing on a rooftop under a bright sky?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the group is on a rooftop under a bright sky"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03333c9668cf__T7",
+  "instruction": "Cinematic full-shot film still of a bright indoor dance studio with wooden floors and large windows. On the left, the man in the blue 'VENICE' t-shirt and pink shorts (R2) is jogging in place with one leg raised, smiling down at his partner. Beside him on the right, the woman in the pink crop top and silver suspender unitard (R3) jogs in place with arms bent, looking down. They are exercising side-by-side in sync. Natural daylight streams from the background windows, creating a bright, cool-toned atmosphere with soft shadows.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 jogs in place with one leg raised while smiling down at his partner",
+    "R3 jogs in place with arms bent while looking down",
+    "R2 and R3 exercise side-by-side in sync as partners",
+    "R2's distinguishing exercise pose is the raised-leg jog, while R3's distinguishing pose is the bent-arm jog",
+    "bright indoor dance studio with wooden floors and large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant jogging in place with one leg raised and smiling down at his partner, rather than R3 being described in that raised-leg role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the raised-leg jogging role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the participant jogging in place with arms bent and looking down, rather than R2 being described in that bent-arm jogging role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the bent-arm jogging role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R2 and R3 have different described exercise poses, with R2 raising one leg while jogging and R3 keeping her arms bent while jogging?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 have distinct asymmetric exercise poses"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 exercising side-by-side with R3 as his partner while jogging in place?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 jogs beside R3 as his exercise partner"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 jogging in sync beside R2 during the dance-studio exercise?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 jogs in sync beside R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

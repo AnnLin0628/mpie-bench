@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__d7315cbb95c7__T1",
+  "instruction": "A candid lifestyle photograph, captured in a medium shot at eye-level. In a bright indoor living room, the young boy in a blue checkered shirt (R2) on the left and the woman with blonde box braids (R1) on the right sit facing each other on a grey sofa with green and yellow cushions. They are playing a hand-clapping game, with their palms aligned and touching mid-air between them. Both subjects are shown in profile, smiling warmly as they interact. The scene is illuminated by soft, natural indoor light, creating a cozy, gentle atmosphere with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman with blonde box braids participating in the palm-to-palm hand-clapping game with R2",
+    "R2 is the young boy participating in the palm-to-palm hand-clapping game with R1",
+    "R1 actively holds her palms up to meet R2's palms mid-air",
+    "R2 actively holds his palms up to meet R1's palms mid-air",
+    "R1 and R2 sit facing each other on a grey sofa while playing",
+    "a grey sofa supports both R1 and R2 during the interaction",
+    "the scene is set in a bright indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the blonde-braided woman who actively meets R2's palms in the hand-clapping game, rather than being a bystander while R2 plays alone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman with blonde box braids participating in the palm-to-palm hand-clapping game with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the young boy who actively meets R1's palms in the hand-clapping game, rather than being a bystander while R1 plays alone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young boy participating in the palm-to-palm hand-clapping game with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the hand-clapping game, does R1 hold her palms up to touch R2's palms mid-air, rather than R2 being the only one with raised palms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively holds her palms up to meet R2's palms mid-air"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold his palms up so that they align with and touch R1's palms mid-air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively holds his palms up to meet R1's palms mid-air"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

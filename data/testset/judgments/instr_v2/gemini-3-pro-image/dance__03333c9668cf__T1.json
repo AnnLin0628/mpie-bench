@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03333c9668cf__T1",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 1.0,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the dancer in a low squat with one leg raised, rather than R2 being the one in that low squat?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "foreground dancer is low squatting"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer standing in profile and performing the synchronized high-knee kick, rather than R4 doing that high-knee kick?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "background dancer stands in profile with knee raised"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground dancer seen from behind while R2 is the background dancer in profile, rather than those roles being reversed?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "foreground dancer is seen from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 perform the aerobics routine from a low squatting body position while R2 performs it from a standing high-knee kicking position?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "low squat contrasts with standing high-knee"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance__03333c9668cf__T1",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 12.31,
+    "written_at": "2026-07-17T14:59:01",
+    "gen_relpath": "outputs/gemini-3-pro-image/dance__03333c9668cf__T1.png",
+    "qa_relpath": "instr_qa_v2/dance__03333c9668cf__T1.json",
+    "n_questions": 4
+  }
+}

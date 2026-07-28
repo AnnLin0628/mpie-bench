@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T39",
+  "instruction": "Cinematic medium shot in a boxing ring. On the left, the East Asian woman in a white ribbed sports bra (R2) stands in profile, extending her left arm. On the right, the Caucasian woman in a black and orange sports top (R1) stands facing her, wrapping a black hand wrap around the East Asian woman's (R2) wrist. The background features red and black ring ropes and hanging punching bags under cool overhead gym lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 applies a black hand wrap to R2's wrist",
+    "R2 is the recipient whose wrist is being wrapped by R1",
+    "R1 controls the hand wrap while R2 extends her arm",
+    "R2 extends her left arm toward R1 for wrapping",
+    "black hand wrap used on R2's wrist",
+    "boxing ring gym setting with ropes and punching bags"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping a black hand wrap around R2's wrist, rather than R2 wrapping R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 applies a black hand wrap to R2's wrist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose wrist is being wrapped by R1, rather than R1 being the one whose wrist is wrapped by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient whose wrist is being wrapped by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 control and apply the hand wrap while R2 holds out her arm, rather than R2 controlling the wrap for R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls the hand wrap while R2 extends her arm"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 extending her left arm toward R1 so that R1 can wrap her wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her left arm toward R1 for wrapping"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction taking place in a boxing ring with gym equipment such as ropes and punching bags visible?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing ring gym setting with ropes and punching bags"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

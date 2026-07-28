@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T5",
+  "instruction": "Candid action photograph, medium full shot. In an indoor boxing gym with black wall mats and a blue floor, the woman in the blue zip-up jacket (R2) stands in the foreground right, wearing pink boxing gloves and facing left toward a red hanging punching bag. Behind her, the man in the gray t-shirt (R1) stands center-left, smiling and watching her form. The scene is brightly lit by overhead lights, capturing their training session.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active boxer facing the punching bag while R1 observes her form",
+    "R1 is the observer or trainer watching R2 rather than boxing himself",
+    "R2 wears boxing gloves for the training action",
+    "A red hanging punching bag is the target of R2's boxing practice",
+    "The training takes place in an indoor boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person actively facing the punching bag to train, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active boxer facing the punching bag while R1 is not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 watching R2's boxing form, rather than R2 watching R1's form?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 observes R2's training form"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand behind R2 as an observer during her boxing practice?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's role is observing from behind while R2 trains"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 wear boxing gloves while facing the punching bag for the training action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is the gloved trainee facing the bag"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red hanging punching bag used as the target of the boxing training?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red hanging punching bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

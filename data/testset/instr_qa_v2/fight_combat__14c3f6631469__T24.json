@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T24",
+  "instruction": "Candid action photograph, full shot, eye-level. In an indoor boxing gym with a whiteboard and red pads in the background, the male trainer in a gray t-shirt (R1) stands on the left, back to the camera, holding a focus mitt. The barefoot woman in a blue hoodie (R2) stands on the right on black mats in a boxing stance, looking forward with an open mouth as she recovers from a punch. The woman (R2) faces the trainer (R1) in a ready position. Even overhead gym lighting provides clear visibility and natural tones across the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the focus mitt that receives R2's boxing punch",
+    "R2 is the boxer recovering from a punch toward R1, not the mitt holder",
+    "R2 faces R1 in a ready boxing stance while R1 acts as the trainer",
+    "focus mitt held by R1",
+    "indoor boxing gym setting with whiteboard and red pads"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold the focus mitt meant to absorb R2's punch, rather than R2 holding a mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the focus mitt that receives R2's boxing punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer recovering from a punch toward R1, rather than R1 recovering from a punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the boxer recovering from a punch toward R1, not the mitt holder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 in a ready boxing stance while R1 serves as the trainer holding the mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 in a ready boxing stance while R1 acts as the trainer"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a focus mitt being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "focus mitt held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

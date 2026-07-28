@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T106",
+  "instruction": "Candid medium shot of a sunny outdoor park with a banner in the background. On the left, the woman in the black beanie and red t-shirt (R5) holds a giant white inflatable bowling pin over her shoulder. In the center, the man in the red polo shirt (R3) swings his inflatable pin downward, while the woman with the large afro in a red t-shirt (R6) stands behind him. On the right, the large man in the dark blue t-shirt (R1) stands with his back to the camera, holding a large black ball. Bright daylight illuminates the scene.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 swings an inflatable bowling pin downward while R6 stands behind him",
+    "R5 holds a giant white inflatable bowling pin over her shoulder",
+    "R1 holds a large black ball",
+    "R6 is behind R3 rather than being the active swinger",
+    "giant white inflatable bowling pin",
+    "large black ball",
+    "sunny outdoor park with a banner in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one swinging an inflatable bowling pin downward, rather than R6 swinging it while R3 stands behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the active pin swinger while R6 is behind him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 carrying a giant white inflatable bowling pin over her shoulder, rather than R1 carrying that pin while R5 holds the ball?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 carries the inflatable pin while R1 holds the ball"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the large black ball, rather than R3 holding the ball while R1 swings a pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the ball and R3 swings the pin"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R6 stand behind R3 while R3 is the person in front performing the downward pin swing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is positioned behind R3 during R3's swing"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a large black ball?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "large black ball held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

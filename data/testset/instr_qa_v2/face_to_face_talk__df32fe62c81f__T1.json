@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__df32fe62c81f__T1",
+  "instruction": "A candid documentary photograph in a medium shot at eye-level with a shallow depth of field, set inside a cozy cafe next to a window. On the left, the blonde woman in the burgundy tank top (R1) sits in profile, facing right with her hands near a paper bag on a small round wooden table. Opposite her on the right, the curly-haired woman in the olive green athletic set (R2) sits facing left, holding a pastry and smiling as they converse. A blurry plant sits in the foreground. Warm, natural light streams through the window, casting soft shadows across the scene with an earthy color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds a pastry while conversing with R1",
+    "R1 has her hands near a paper bag on the table while R2 holds the pastry",
+    "R1 and R2 sit opposite each other in a face-to-face conversation",
+    "paper bag on the small round wooden table near R1",
+    "pastry held by R2",
+    "cozy cafe next to a window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the pastry while conversing with R1, rather than R1 holding the pastry?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a pastry while conversing with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's hands near the paper bag on the table while R2 is the one holding the pastry, rather than those object roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has her hands near a paper bag on the table while R2 holds the pastry"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated opposite each other in a face-to-face conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit opposite each other in a face-to-face conversation"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a paper bag on the small round wooden table near R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "paper bag on the small round wooden table near R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a pastry during the cafe conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "pastry held by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

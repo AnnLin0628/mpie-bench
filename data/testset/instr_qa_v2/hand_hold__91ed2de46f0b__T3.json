@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__91ed2de46f0b__T3",
+  "instruction": "A candid outdoor photograph with a full shot of a family walking on a park path. On the left, the woman in the white off-the-shoulder crop top and white jeans (R1) walks forward, looking towards the girl. In the middle, the young girl in the green t-shirt and shorts (R2) walks forward, looking up with a joyful smile. On the right, the man in the plaid shirt and dark jeans (R3) walks forward, looking down at the girl. They walk side-by-side holding hands: the woman (R1) holds the girl's (R2) right hand, and the girl (R2) holds the man's (R3) right hand. In the background, a few distant, blurred people are visible. The scene is illuminated by soft, warm daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the central child whose hands connect to both adults",
+    "R1 holds R2's right hand as one hand-holding partner",
+    "R2 holds R3's right hand as the other hand-holding partner",
+    "R1 and R3 are not the direct hand-holding pair; both connect through R2",
+    "R1 and R3 both look toward R2 while walking with her",
+    "The family is walking on a park path outdoors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person in the middle whose hands connect to both R1 and R3, rather than R1 or R3 being the one connected to both others?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central child whose hands connect to both adults"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's right hand, rather than R1 holding R3's hand as the direct contact partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's right hand as one hand-holding partner"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R3's right hand while also being linked to R1, rather than R3 being directly linked to R1 instead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R3's right hand as the other hand-holding partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young girl walking between R1 and R3 as the shared hand-holding child?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central child whose hands connect to both adults"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 both walking with R2 while directing their attention toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 both look toward R2 while walking with her"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the three main people walking outdoors on a park path?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The family is walking on a park path outdoors"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

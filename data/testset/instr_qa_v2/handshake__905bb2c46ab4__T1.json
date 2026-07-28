@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__905bb2c46ab4__T1",
+  "instruction": "A professional office photograph in a medium shot captures a bright office setting with a whiteboard on the left and a large window in the background. On the left, the man in the beige t-shirt (R2) wearing glasses stands and leans forward across a wooden desk. On the right, the man in the blue patterned blazer (R1) stands and leans forward to meet him. The two men shake hands firmly with their right hands over the desk, which holds a laptop and documents. Both maintain neutral, professional expressions. The scene is illuminated by bright, natural daylight streaming from the window, creating a clean and airy atmosphere with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward across the wooden desk toward R1 for the handshake",
+    "R1 leans forward to meet R2 over the desk",
+    "R1 and R2 shake hands firmly with their right hands over the desk",
+    "wooden desk with laptop and documents beneath the handshake",
+    "bright office setting with a whiteboard and large window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man leaning forward to meet R2 over the desk, rather than R2 being described as the one who meets R1's forward lean?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward to meet R2 over the desk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both standing and leaning toward each other while clasping right hands over the desk?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 shake hands firmly with their right hands over the desk"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

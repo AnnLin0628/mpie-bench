@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__75261906cd11__T2",
+  "instruction": "Candid street photograph, full shot at eye-level. On an outdoor paved path lined with green trees, the man in the blue sweatshirt and black shorts (R1) walks forward on the left, smiling warmly at his partner. Beside him on the right, the blonde woman in the dark jacket and jeans (R2) walks forward, holding a coffee cup in one hand and carrying a beige tote bag on her shoulder while smiling. They walk side-by-side, holding hands. In the distant background, a few blurred pedestrians walk along the path under soft, natural daylight with cool tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 carries a coffee cup while walking hand-in-hand with R1",
+    "R2 carries a beige tote bag on her shoulder while walking hand-in-hand with R1",
+    "R1 and R2 walk side-by-side while holding hands",
+    "R2 holds a coffee cup",
+    "R2 carries a beige tote bag",
+    "They are on an outdoor paved path lined with green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person carrying a coffee cup while walking hand-in-hand with R1, rather than R1 being the coffee-carrying partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries a coffee cup while walking hand-in-hand with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner carrying a beige tote bag on her shoulder during the hand-hold with R1, rather than R1 carrying the tote bag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries a beige tote bag on her shoulder while walking hand-in-hand with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward side-by-side while holding hands with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side while holding hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a coffee cup?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 holds a coffee cup"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 carrying a beige tote bag on her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 carries a beige tote bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

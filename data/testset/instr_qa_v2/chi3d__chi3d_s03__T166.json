@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T166",
+  "instruction": "A candid wide-angle photograph from behind shows a motion capture studio with a red carpet. The man in the black polo and blue shorts (R1) on the left and the woman in the white t-shirt and blue jeans (R2) on the right walk away from the camera. They are holding hands as they walk side-by-side. The room features white walls, a radiator, and technical equipment in the background under even indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in the hand-holding pair, and R2 is the woman whose hand he holds",
+    "R2 is the woman in the hand-holding pair, and R1 is the man whose hand she holds",
+    "R1 and R2 walk away from the camera side-by-side while holding hands",
+    "the setting is a motion capture studio",
+    "the studio has a red carpet",
+    "technical equipment is visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man holding hands with R2, the woman, rather than R2 being the man holding hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the male partner in the hand-holding contact with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman whose hand is held by R1 as they walk together, rather than R1 being the woman whose hand is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the female partner in the hand-holding contact with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking away from the camera side-by-side while holding hands with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share the contact role of walking hand-in-hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain paired directly with R2 in the hand-holding contact while both walk away together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are the two linked participants in the walking interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

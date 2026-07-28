@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__377ec7edaebd__T4",
+  "instruction": "Candid outdoor photograph, full shot at eye-level. On a dirt path in a wooded park, the man in the blue short-sleeved shirt (R1) and the woman in the grey blazer (R2) walk side-by-side. The man (R1) on the left looks down at their linked arms with a gentle smile, while the woman (R2) on the right looks forward. Her right arm is linked through his left arm, their hands clasped together. Soft natural daylight illuminates the green foliage and path.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's right arm is linked through R1's left arm",
+    "R2 is the person threading/linking her arm through R1's arm while they clasp hands",
+    "R1 looks down at their linked arms while R2 looks forward",
+    "R1 and R2 walk side-by-side with linked arms and clasped hands",
+    "R1 and R2 are on a dirt path in a wooded park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's right arm linked through R1's left arm, rather than R1's right arm linked through R2's left arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right arm is linked through R1's left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one whose arm is threaded through R1's arm while their hands are clasped, rather than R1 being the one threaded through R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person threading/linking her arm through R1's arm while they clasp hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down at their linked arms while R2 looks forward, rather than R2 looking down while R1 looks forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at their linked arms while R2 looks forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk side-by-side with R2 while his left arm is linked with R2's right arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side with linked arms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

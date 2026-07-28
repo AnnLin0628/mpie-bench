@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__185c4e46d822__T2",
+  "instruction": "Candid studio close-up photograph against a plain light gray background. On the left, the dark-skinned woman with curly black hair (R1) in a white turtleneck looks down with eyes closed, smiling softly. On the right, the young girl with long straight dark hair (R2) in a beige ribbed top leans her head against the woman's chest, looking at the camera. The woman's hand gently cradles the girl's head. Soft, diffused side lighting creates a warm, tender atmosphere with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently cradles R2's head with her hand",
+    "R2 leans her head against R1's chest",
+    "R1 provides the chest/upper-body surface that R2 rests against",
+    "R2 is nestled close to R1 while R1 maintains the caring head hold",
+    "plain light gray studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently cradling R2's head with her hand, rather than R2 cradling R1's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently cradles R2's head with her hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning her head against R1's chest, rather than R1 leaning her head against R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head against R1's chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 serving as the chest-level resting surface for R2's head, rather than R2 serving as the resting surface for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides the chest/upper-body surface that R2 rests against"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 nestled close against R1 with her head at R1's chest while R1 keeps a gentle hand on R2's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is nestled close to R1 while R1 maintains the caring head hold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

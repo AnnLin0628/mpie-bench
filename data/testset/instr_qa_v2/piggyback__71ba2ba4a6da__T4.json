@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__71ba2ba4a6da__T4",
+  "instruction": "Candid outdoor photograph, full shot at eye-level. In a dry grassy field under a clear blue sky, the man in the denim jacket (R2) stands in the center, carrying the woman in the shearling-lined denim jacket (R1) bridal-style in his arms. She smiles joyfully with her brown hair tossing in the air, while he smiles back at her. Bright natural sunlight fills the scene, casting soft shadows on the dry grass and creating a lively, romantic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 carries R1 bridal-style in his arms",
+    "R2 supports R1's weight while R1 is the person being carried",
+    "R1 is held across R2's arms rather than holding R2",
+    "R2 stands while carrying R1 in the dry grassy field",
+    "outdoor dry grassy field under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 carrying R1 bridal-style in his arms, rather than R1 carrying R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries R1 bridal-style in his arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight from below with his arms, rather than R1 supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's weight while R1 is the person being carried"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held across R2's arms, rather than R2 being held across R1's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is held across R2's arms rather than holding R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing while holding R1 in a bridal-style carry?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands while carrying R1 in the dry grassy field"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

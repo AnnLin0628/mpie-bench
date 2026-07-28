@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0e21d858f215__T3",
+  "instruction": "Minimalist fashion studio portrait, eye-level medium full shot. Against a solid white background, two women pose playfully. The woman in the purple shirt (R2) stands on the left in profile, smiling with her left arm extended horizontally to the side. Behind her, the woman in the green blazer (R3) stands close, hugging her from behind and resting a hand on her shoulder with a warm, happy smile. Bright, soft studio lighting evenly illuminates the scene, highlighting the pastel purple and green outfits against the clean backdrop.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the person hugging R2 from behind, not the other way around",
+    "R3 rests a hand on R2's shoulder, making R2 the recipient of that shoulder contact",
+    "R2 stands in profile with an arm extended while R3 stands close behind her",
+    "R2 is the front person being embraced from behind by R3",
+    "The portrait is set against a solid white studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 resting a hand on R2's shoulder, rather than R2 resting a hand on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 rests a hand on R2's shoulder, making R2 the recipient of that shoulder contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the front person being embraced from behind by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the front person being embraced from behind by R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand in profile with an arm extended while R3 stands close behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in profile with an arm extended while R3 stands close behind her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

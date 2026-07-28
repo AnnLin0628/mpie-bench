@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__bc4d79bbe58d__T1",
+  "instruction": "Candid outdoor full shot of a sunny beach with ocean waves. On the right, the blonde woman in a yellow pineapple-print top and denim shorts (R1) bends forward, smiling warmly. She holds the toddler girl in a floral swimsuit (R2) around the waist from behind. The toddler stands on the left, facing away. Bright direct sunlight illuminates the scene with warm tones and a blue ocean background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2 around the waist from behind",
+    "R2 is the toddler being held by R1, not the person holding R1",
+    "R1 bends forward while maintaining waist contact with R2",
+    "R2 stands facing away while R1 holds her",
+    "The interaction takes place on a sunny beach with ocean waves in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2 around the waist from behind, rather than R2 holding R1 around the waist from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 around the waist from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the toddler being held at the waist by R1, rather than R1 being the one held at the waist by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the toddler being held by R1, not the person holding R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 bend forward while keeping her hands around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 bends forward while maintaining waist contact with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing and facing away while R1 holds her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands facing away while R1 holds her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

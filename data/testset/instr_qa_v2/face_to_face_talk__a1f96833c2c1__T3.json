@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__a1f96833c2c1__T3",
+  "instruction": "Candid documentary medium shot of a bright indoor study room. On the left, the woman with dark hair and glasses (R2) sits looking down at an open book, holding a pen vertically in her hand. On the right, the man with short curly blonde hair (R1) sits looking down at papers on the wooden desk. They are seated together at the table with documents, a laptop, and a glass of water. Soft natural light from the background window illuminates the quiet study session.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the one holding a pen vertically while looking down at an open book",
+    "R1 is the one looking down at papers on the wooden desk",
+    "R2 studies from an open book while R1 studies from papers",
+    "an open book is in front of R2",
+    "papers are in front of R1 on the wooden desk",
+    "the desk also has a laptop and a glass of water",
+    "the scene is a bright indoor study room with natural light from a background window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding a pen vertically while looking down at an open book, rather than R1 being the one holding the pen?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the pen and focuses on the open book"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking down at papers on the wooden desk, rather than R2 being the one focused on those papers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 focuses on papers on the desk"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated at the table studying an open book while R1 is seated studying papers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 studies a book and R1 studies papers"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

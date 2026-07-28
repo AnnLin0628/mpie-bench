@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__45a09cbb22be__T2",
+  "instruction": "A candid documentary photograph, medium shot at eye-level. In the indoor art studio, the man in the pink t-shirt (R1) and the woman in the beige shirt (R2) share a warm embrace over the table. The woman is on the left with her back to the camera, while the man is on the right, facing forward with a joyful, smiling expression as he holds her close. Soft, warm indoor lighting illuminates the scene, casting gentle shadows in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2 close during the embrace",
+    "R1 faces forward while R2 has her back to the camera",
+    "R1 and R2 share the embrace over a table",
+    "the interaction takes place in an indoor art studio",
+    "R1 has a joyful smiling expression while holding R2 close"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding R2 close during the embrace, rather than R2 being described as holding R1 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 close"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face forward with a joyful expression while holding R2, rather than R2 facing forward and holding R1 in that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the forward-facing smiling holder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the participant whose back is to the camera while R1 holds her close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera while being held by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned in a close embrace over the table, with R1 actively holding R2 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 embrace over the table with R1 holding R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

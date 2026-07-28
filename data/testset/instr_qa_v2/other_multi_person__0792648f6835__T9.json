@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T9",
+  "instruction": "Cinematic medium full shot of an indoor sports gymnasium with a polished wooden floor. In the center of the frame, the man with an afro (R1) in a white t-shirt and grey sweatpants stands behind the young girl in a pink tracksuit (R5). The young girl (R5) performs a handstand on the floor, her legs extended straight up into the air. The man (R1) holds her ankles firmly with both hands to stabilize her balance. Soft natural light illuminates the scene from the side, casting gentle shadows on the warm wooden floor, with a blurred background.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 holds R5's ankles firmly with both hands to stabilize her balance",
+    "R5 is the person doing a handstand while R1 remains standing and supporting her",
+    "R1 stands behind R5 in the supporting role during the handstand",
+    "R5's hands are on the polished wooden floor during the handstand",
+    "R5's legs are extended straight upward into the air",
+    "The scene is an indoor sports gymnasium"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R5's ankles to stabilize her handstand, rather than R5 holding R1's ankles?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the stabilizer holding R5's ankles"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person inverted in a handstand while R1 remains upright supporting her, rather than R1 being the one in the handstand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 performs the handstand while R1 supports"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 provide balance support from R5's ankles while R5's hands bear her weight on the floor, rather than R5 providing that support for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stabilizes R5's balance during her handstand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing behind R5 while gripping both of R5's ankles?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R5 and holds her ankles"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R5's legs extended straight upward while R1 steadies her by the ankles?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has legs up in a handstand while R1 steadies her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

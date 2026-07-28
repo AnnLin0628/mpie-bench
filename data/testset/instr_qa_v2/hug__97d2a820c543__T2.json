@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__97d2a820c543__T2",
+  "instruction": "A candid street photograph with a full-body shot of two women interacting on a city sidewalk next to a green subway railing. On the left, the woman in the beige coat and white pants (R1) stands with her back partially to the camera, gesturing with her arms slightly extended. On the right, the woman with curly hair and a brown coat (R2) stands facing her, smiling warmly with a black handbag in her hand. The scene is captured in natural daylight with soft shadows and a muted urban color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the one gesturing with her arms slightly extended toward R2",
+    "R2 is the one facing R1 and smiling warmly while holding a handbag",
+    "R1 has her back partially to the camera while interacting with R2",
+    "R2 holds a black handbag in her hand",
+    "The interaction takes place on a city sidewalk next to a green subway railing"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman gesturing with her arms slightly extended toward R2, rather than R2 being the one making that gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active gesturer toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman facing R1 and smiling warmly while holding the handbag, rather than R1 doing so?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 and holds the handbag"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 interact with R2 while standing with her back partially to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body is partially turned away from the camera during the interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a black handbag in her hand?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black handbag held by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T16",
+  "instruction": "A candid studio photograph of three women sitting closely on a white floor, framed by blurry wildflowers in the foreground. On the left, the curly-haired woman in a white shirt (R1) sits leaning back. In the center, the straight-haired woman in a white sleeveless top (R2) sits upright. On the right, the curly-haired woman in a black tank top (R3) leans in from behind with her eyes closed. Bright, soft lighting illuminates the clean, warm scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 leans in from behind with her eyes closed while R1 and R2 are seated in front of her",
+    "R1 sits leaning back while R2 sits upright",
+    "R2 is the upright seated woman in the center while R3 takes the behind-leaning role",
+    "R1, R2, and R3 are sitting closely on a white floor",
+    "Blurry wildflowers appear in the foreground of the studio photograph"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the woman leaning in from behind with her eyes closed, rather than R1 or R2 taking that behind-leaning closed-eye role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans in from behind with her eyes closed while R1 and R2 are seated in front of her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 sitting in a leaning-back posture while R2 sits upright, rather than R2 leaning back while R1 sits upright?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits leaning back while R2 sits upright"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have the upright seated role in the close group while R3 has the role of leaning in from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the upright seated woman in the center while R3 takes the behind-leaning role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

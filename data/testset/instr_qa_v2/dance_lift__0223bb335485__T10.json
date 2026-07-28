@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T10",
+  "instruction": "Cinematic film still, medium shot. In a bright, white classical ballet studio with large windows and elegant wall moldings, the blonde ballerina (R2) is positioned on the left in profile, wearing a white leotard and looking towards her partner. The brunette ballerina (R1) stands in the center wearing a white leotard and a sheer white wrap skirt, looking forward with a neutral expression. Soft, diffused natural light illuminates the scene, casting gentle shadows and creating a muted, pastel color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is shown in profile looking toward R1, rather than R1 being the profile-view ballerina looking toward R2",
+    "R1 is the centered brunette ballerina looking forward with a neutral expression, rather than R2 having that centered forward-facing role",
+    "R2 is the blonde ballerina oriented toward her partner R1",
+    "R1 wears a sheer wrap skirt over her leotard while standing as the central ballerina",
+    "The scene is a bright white classical ballet studio with large windows and elegant wall moldings"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina shown in profile looking toward R1, rather than R1 being the profile-view dancer looking toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in profile looking toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the centered brunette ballerina looking forward with a neutral expression, rather than R2 taking that centered forward-facing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is centered and forward-facing"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 visually oriented toward her partner R1 while R1 faces forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks toward R1 while R1 looks forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

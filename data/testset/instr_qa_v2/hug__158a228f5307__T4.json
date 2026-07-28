@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__158a228f5307__T4",
+  "instruction": "Candid lifestyle medium shot of an indoor birthday party. The grey-haired woman (R1) in a light grey dress and the short-haired woman (R2) in a white blouse are locked in a warm embrace on the right. The blonde woman (R3) in an orange patterned dress stands on the left, smiling and watching them with her hand raised. In the foreground, a wooden table is set with a white birthday cake with \"60\" candles, cupcakes, and champagne glasses under warm indoor lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the watching onlooker with a raised hand while R1 and R2 are the embracing contact pair",
+    "R1 and R2 remain the two people in direct warm body contact rather than R3 replacing either of them in the embrace",
+    "R3 stands apart from the contact between R1 and R2 and smiles while observing them",
+    "R1 and R2 are locked together in a warm embrace",
+    "a wooden table holds a white birthday cake with 60 candles",
+    "the scene is an indoor birthday party"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the smiling observer with a raised hand while R1 and R2 are the two people in direct embrace, rather than R1 being the observer while R3 embraces R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the watching onlooker with a raised hand while R1 and R2 are the embracing contact pair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R2 the contact pair locked together, rather than R2 standing apart as the watcher while R1 and R3 make the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 remain the two people in direct warm body contact rather than R3 replacing either of them in the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 outside the physical contact between R1 and R2, watching them with her hand raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands apart from the contact between R1 and R2 and smiles while observing them"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two women locked together in a warm embrace while R3 is not part of that embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are locked together in a warm embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

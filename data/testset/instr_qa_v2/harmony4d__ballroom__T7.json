@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__ballroom__T7",
+  "instruction": "Candid full shot of a dance studio setting. The man in the striped polo shirt (R2) on the left and the woman in the red dress (R1) on the right stand close, facing each other in a dance frame. They hold hands and shoulders, dancing on a wooden floor with white walls in the background under even indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman in the red dress dancing in frame with R2",
+    "R2 is the man in the striped polo shirt dancing in frame with R1",
+    "R1 and R2 face each other closely in a dance frame",
+    "R1 and R2 hold hands and shoulders while dancing",
+    "the dance takes place in a dance studio on a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in the red dress dancing in frame with R2, rather than R2 being the woman in the red dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled dance role as the woman in the red dress opposite R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man in the striped polo shirt dancing in frame with R1, rather than R1 being the man in the striped polo shirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's labeled dance role as the man in the striped polo opposite R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 maintain dance contact by holding hands and shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "hand-and-shoulder contact between R1 and R2 while dancing"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 dancing in a studio setting on a wooden floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "dance studio with wooden floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

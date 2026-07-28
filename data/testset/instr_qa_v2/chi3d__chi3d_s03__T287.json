@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T287",
+  "instruction": "A candid wide-angle photograph captures an indoor motion capture studio with a red carpet. On the right, the man in the black polo and blue shorts (R1) stands facing left. On the left, the woman in the white t-shirt and blue jeans (R2) leans forward, pushing his chest with her hands while extending her left leg backward. The background features white walls and studio equipment. The scene is evenly lit by overhead lights, creating a neutral atmosphere with soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 pushes R1's chest with her hands",
+    "R1 receives the chest push from R2 rather than pushing her",
+    "R2 leans forward and extends her left leg backward while pushing R1",
+    "R1 stands facing R2 during the contact",
+    "indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pushing R1's chest with her hands, rather than R1 pushing R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 pushes R1's chest with her hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the chest push from R2, rather than R2 receiving a chest push from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest push from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning forward and extending her left leg backward while pushing R1, rather than R1 doing that while pushing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward and extends her left leg backward while pushing R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use her hands as the active contact point against R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hands contact R1's chest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

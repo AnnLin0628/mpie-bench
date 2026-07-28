@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T247",
+  "instruction": "Candid documentary wide full shot of an indoor motion capture studio with a red carpet. The woman in a white patterned t-shirt and blue jeans (R2) stands on the left, waving with her right hand. The bearded man in a dark polo and blue shorts (R1) stands on the right with his left arm around her shoulder. Both face forward under bright overhead lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has his left arm around R2's shoulder",
+    "R2 waves with her right hand while R1 does not perform the wave",
+    "R2 is the person being held at the shoulder by R1",
+    "Both R1 and R2 face forward during the pose",
+    "The scene is an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have his left arm around R2's shoulder, rather than R2 having her arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the one placing an arm around R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one waving with her right hand, rather than R1 being the one waving?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the wave while R1 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is encircled by R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand beside R2 while maintaining shoulder contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 maintains contact with R2 at the shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

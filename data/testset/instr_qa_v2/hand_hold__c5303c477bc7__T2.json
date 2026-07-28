@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__c5303c477bc7__T2",
+  "instruction": "Candid action photograph, low-angle medium-full shot. On a sunny paved road next to a concrete barrier, the man with blonde-tipped dreadlocks (R1) wearing a plaid shirt and blue jeans walks forward on the left, holding a pink skateboard. On the right, the woman with blonde hair (R2) wearing a black leather jacket walks alongside him. They hold hands, moving together side-by-side under a bright blue sky with harsh sunlight casting distinct shadows on the ground.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the skateboard holder while walking hand-in-hand with R2",
+    "R2 is the hand-holding walking companion who is not described as holding the skateboard",
+    "R1 and R2 move together side-by-side while holding hands",
+    "pink skateboard held by R1",
+    "sunny paved road next to a concrete barrier"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one carrying the pink skateboard while walking hand-in-hand with R2, rather than R2 carrying the skateboard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the skateboard holder during the hand-holding walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 walk alongside R1 as the hand-holding companion while R1 is the one holding the skateboard, rather than R2 being the skateboard holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the hand-holding companion while R1 carries the skateboard"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward together side-by-side while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together while holding hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 engaged with R2 through a hand hold while also managing the skateboard he is carrying?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 combines the hand-holding contact with carrying the skateboard"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

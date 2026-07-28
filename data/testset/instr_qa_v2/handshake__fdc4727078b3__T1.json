@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__fdc4727078b3__T1",
+  "instruction": "A clean, candid corporate photograph shows a full-length, eye-level side view of an office setting with whiteboards and a wooden floor. On the left, the woman in the gray pantsuit (R2) stands in profile facing right. On the right, the woman in the brown patterned blazer and black cropped pants (R1) stands in profile facing left. The woman in the gray pantsuit and the woman in the brown blazer smile as they clasp their right hands in a firm handshake. The scene is illuminated by bright, even indoor lighting with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman in the brown patterned blazer and black cropped pants facing R2",
+    "R2 is the woman in the gray pantsuit facing R1",
+    "R1 and R2 clasp each other's right hands in the handshake",
+    "R1 smiles while clasping R2's right hand",
+    "R2 smiles while clasping R1's right hand",
+    "the interaction occurs in an office setting with whiteboards and a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in the brown patterned blazer facing left toward R2, rather than the gray-pantsuit woman facing right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's assigned facing direction and identity in the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the gray pantsuit facing right toward R1, rather than the brown-blazer woman facing left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's assigned facing direction and identity in the handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 clasp R2's right hand with her own right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right-hand contact with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 clasp R1's right hand with her own right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right-hand contact with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__30eea825ff3a__T2",
+  "instruction": "Cinematic medium-full shot in a bright, modern office lobby with a patterned glass wall. On the left, the Black woman in the red blazer and cream turtleneck (R2) stands facing right, looking down slightly at her colleague. On the right, the Asian woman in the red plaid blazer (R1) stands facing left, holding a blue smartphone in her left hand and looking back. They are shaking right hands in a firm grip. The lighting is soft and even, emphasizing the clean, professional setting and casting gentle shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a blue smartphone in her left hand while shaking R2's right hand",
+    "R2 looks down slightly at R1 during the handshake while R1 looks back",
+    "R1 and R2 use their right hands in a firm handshake grip",
+    "blue smartphone held by R1",
+    "bright modern office lobby with a patterned glass wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding a blue smartphone in her left hand while her right hand grips R2's right hand, rather than R2 holding the smartphone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 phone-holding handshake role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking down slightly at R1 during the hand contact, rather than R1 looking down slightly at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 downward gaze toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while their right hands are joined in a firm grip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "right-hand firm grip between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look back at R2 while maintaining the right-hand contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gaze back during contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a blue smartphone in R1's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "blue smartphone held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

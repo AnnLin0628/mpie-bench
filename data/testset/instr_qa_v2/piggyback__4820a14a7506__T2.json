@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__4820a14a7506__T2",
+  "instruction": "Studio portrait photograph, full shot, front view. In an indoor studio with a draped beige fabric backdrop, three generations of women pose together. In the background, the older woman with short dark hair (R1) sits behind R2, smiling at the camera. In the middle ground, the younger woman with medium-length brown hair (R2) sits with legs spread wide, smiling directly at the camera. In the foreground, the little girl with light brown hair (R3) sits between R2's legs, looking forward. R2 holds R3's hands in hers as R3 leans back against her. Soft, diffused studio lighting illuminates the scene in warm, neutral tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 holds R3's hands while R3 leans back against R2",
+    "R3 leans back against R2 rather than R2 leaning against R3",
+    "R3 sits between R2's spread legs",
+    "R1 sits behind R2 in the background",
+    "indoor studio with a draped beige fabric backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R3's hands as R3 leans back against R2, rather than R3 supporting R2 in that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R3's hands while R3 leans back against R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 leaning back against R2, rather than R2 leaning back against R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans back against R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 seated between R2's legs, rather than R2 being seated between R3's legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sits between R2's spread legs"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting with her legs spread while R3 sits between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's seated body configuration frames R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__072f3668dd63__T1",
+  "instruction": "Candid corporate photograph, medium full shot. In a minimalist office with a light gray wall, a group of five colleagues stand in a semi-circle, stacking their hands in the center. From left to right: the blonde woman in a white shirt (R4) in profile, the woman in a plaid blazer (R2) facing right, the dark-haired woman in a beige sweater (R3) in the center background, the wavy-haired blonde woman in a white cable-knit sweater (R1) facing left, and the young man in a white shirt (R5) in profile. They are all smiling and extending their arms to join hands. Bright, even indoor lighting illuminates the scene.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 faces left while extending her arm into the central stacked-hands interaction toward the group, not R2 taking that facing-left role",
+    "R2 faces right while extending her arm into the central stacked-hands interaction toward the group, not R1 taking that facing-right role",
+    "R3 is the center-background participant who still joins the central hand stack",
+    "R1, R2, R3, R4, and R5 each extend an arm so their hands meet in one shared central stack",
+    "R4 and R5 participate in profile while reaching into the shared hand stack rather than acting as bystanders",
+    "The interaction takes place in a minimalist office with a light gray wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 facing left while extending her arm into the central hand stack toward the group, rather than R2 being the one with that facing-left joining role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces left while extending her arm into the central stacked-hands interaction toward the group, not R2 taking that fa"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 facing right while extending her arm into the central hand stack toward the group, rather than R1 being the one with that facing-right joining role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right while extending her arm into the central stacked-hands interaction toward the group, not R1 taking that f"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the center-background colleague who still extends an arm to join the central hand stack with the others?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the center-background participant who still joins the central hand stack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, R3, R4, and R5 each extending an arm so their hands meet in the same central stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, R3, R4, and R5 each extend an arm so their hands meet in one shared central stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

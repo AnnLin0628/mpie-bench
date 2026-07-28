@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__ab881d34d125__T2",
+  "instruction": "A clean studio portrait captured in a medium shot at eye-level against a plain white wall. On the right, the woman with short blonde hair in a pink blazer (R1) stands facing forward, looking at the camera with a serious expression. On the left, the woman with short brown hair and glasses in a light blue blazer (R2) stands close, holding the right hand of the woman in the pink blazer (R1) near her shoulder while smiling warmly at the camera. The scene is illuminated by soft, diffused front lighting that emphasizes the bright pastel colors of their blazers against the minimalist background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's right hand near her shoulder",
+    "R1 is the person whose right hand is being held by R2",
+    "R2 is the active hand-holder while R1 faces forward",
+    "R2 stands close to R1 during the hand contact",
+    "The portrait is set against a plain white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's right hand, rather than R1 holding R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose right hand is being held by R2, rather than R2 being the one whose right hand is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the hand being held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's hand near her shoulder while R1 faces forward, rather than R1 holding R2's hand near her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active holder of R1's hand near the shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand close to R1 while making hand contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands close to R1 during the hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

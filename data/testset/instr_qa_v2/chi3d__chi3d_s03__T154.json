@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T154",
+  "instruction": "A candid full shot from behind at eye-level captures an indoor studio with a red carpeted floor and white walls. The woman in the white t-shirt and blue jeans (R2) on the left and the man in the black polo shirt and blue shorts (R1) on the right walk side-by-side away from the camera. They are holding hands as they walk towards the far end of the room. The room is brightly lit by overhead lights, maintaining a neutral color palette with clear details on their clothing.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in the black polo shirt and blue shorts holding hands with R2",
+    "R2 is the woman in the white t-shirt and blue jeans whose hand is held by R1",
+    "R1 and R2 walk side-by-side away from the camera while holding hands",
+    "R1 and R2 keep their joined hands between them as they walk together",
+    "The setting is an indoor studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the black polo shirt and blue shorts who is holding hands with R2, rather than R2 being the man in the black polo shirt and blue shorts?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled hand-holding partner role and appearance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the white t-shirt and blue jeans whose hand is held by R1, rather than R1 being the woman in the white t-shirt and blue jeans?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's labeled hand-holding partner role and appearance"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side away from the camera while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walking together with joined hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain beside R2 as they walk toward the far end of the room with their hands joined?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walking beside R2 during hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

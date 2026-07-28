@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__22f7679e20e4__T4",
+  "instruction": "Candid documentary medium close-up indoors. The man with white hair and beard (R1) in a brown knit sweater sits with his eyes closed in contentment. The woman with gray hair (R2) in a white shirt leans over from behind, wrapping her arms tightly around his neck in an affectionate embrace. Soft window light illuminates their faces, highlighting their peaceful expressions in a warm, muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans over from behind R1 and wraps her arms around R1's neck",
+    "R1 is seated and receives the close neck-around embrace from R2",
+    "R2's arms are tightly around R1's neck",
+    "R1 sits with eyes closed while R2 leans over him from behind",
+    "the scene is indoors with soft window light on their faces"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean over from behind R1 with her arms around R1's neck, rather than R1 leaning over from behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans over from behind R1 and wraps her arms around R1's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person receiving the neck-around embrace while R2 is the person wrapping her arms around him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated and receives the close neck-around embrace from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2's arms tightly wrapped around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms are tightly around R1's neck"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting with his eyes closed while R2 leans over him from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits with eyes closed while R2 leans over him from behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

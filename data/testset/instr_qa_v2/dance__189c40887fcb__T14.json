@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T14",
+  "instruction": "Cinematic medium-full shot of an indoor dance hall. On the left, the dark-haired dancer in a white t-shirt and black harness (R3) raises his arms high in motion. On the right, the dancer in a black mesh top and kilt (R2) also raises his arms high, his kilt swirling. They perform in unison under dim, cool blue ambient light with red highlights.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 raises his arms high in motion while dancing",
+    "R2 also raises his arms high while his kilt swirls",
+    "R2 and R3 perform the dance in unison",
+    "R3 is the dark-haired dancer wearing a white t-shirt and black harness",
+    "R2 is the dancer wearing a black mesh top and kilt",
+    "The dance takes place in an indoor dance hall under dim cool blue light with red highlights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dark-haired dancer in the white t-shirt and black harness who raises his arms high in motion, rather than R2 being that harnessed dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the harnessed arm-raising dancer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer in the black mesh top and swirling kilt who raises his arms high, rather than R3 being the kilted dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the kilted arm-raising dancer"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R2 and R3 both raise their arms high as part of the same unison dance performance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 perform synchronized high-arm dance motions"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 shown dancing with his arms lifted high rather than standing still?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs an active raised-arm dance motion"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

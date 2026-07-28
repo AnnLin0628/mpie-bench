@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__47c4dac39572__T11",
+  "instruction": "A cinematic still, medium shot in an outdoor park near a waterfront. On the left, the man in the beige corduroy shirt (R1) stands facing right, looking at his partner with a warm, friendly smile. On the right, the woman in the beige hijab and black polka-dot dress (R2) stands with her back partially turned to the camera. They are holding hands, facing each other in an intimate moment. The background shows a soft-focus view of green trees and distant buildings under bright, natural daylight, creating a warm and peaceful mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the partner looking at R2 with a warm, friendly smile during the hand-holding moment",
+    "R2 is the partner whose back is partially turned to the camera while holding hands with R1",
+    "R1 and R2 are holding hands while facing each other",
+    "R1 is the man partner and R2 is the woman partner in the hand-holding pair",
+    "The interaction takes place in an outdoor park near a waterfront"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner looking at R2 with a warm, friendly smile during the hand-holding moment, rather than R2 being the one described in that smiling-looking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the smiling partner looking at R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner whose back is partially turned to the camera while holding hands with R1, rather than R1 being the back-turned partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back partially turned to the camera during the contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold hands with R2 while facing her as his partner in the intimate moment?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds hands with R2 while facing her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the man partner and R2 the woman partner in the hand-holding pair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man partner and R2 is the woman partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

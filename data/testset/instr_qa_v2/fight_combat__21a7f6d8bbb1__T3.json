@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__21a7f6d8bbb1__T3",
+  "instruction": "Cinematic film still, full shot through boxing ring ropes. On the right, the shirtless tattooed man (R1) with his back to the camera throws a punch at the shirtless athletic man with braids (R2) on the left, who ducks and defends. Both wear black shorts and boxing gloves. The dark gym is illuminated by cool overhead lights, creating a moody atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 throws a punch at R2",
+    "R2 ducks and defends against R1's punch",
+    "R1 is the attacker while R2 is the defender",
+    "R1 has his back to the camera while punching R2",
+    "both R1 and R2 wear boxing gloves",
+    "the scene is viewed through boxing ring ropes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a punch at R2, rather than R2 throwing a punch at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 throws a punch at R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 ducking and defending against R1's punch, rather than R1 ducking and defending against R2's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 ducks and defends against R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the attacking boxer while R2 is the defending boxer, rather than R2 attacking while R1 defends?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the attacker while R2 is the defender"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have his back to the camera while aiming a punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has his back to the camera while punching R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the boxing scene viewed through boxing ring ropes?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene is viewed through boxing ring ropes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

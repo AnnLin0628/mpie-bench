@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T11",
+  "instruction": "Candid action photograph, medium-full shot. In an indoor martial arts studio, the bearded Black man in a white gi (R1) on the left and the Asian man with braided hair in a gray gi (R2) on the right grapple closely on a dark mat. R1 leans forward with his head tucked low under R2's chest, while R2 grips R1's upper body. Warm indoor lighting casts soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward with his head tucked low under R2's chest during the grapple",
+    "R2 grips R1's upper body during the grapple",
+    "R1 is the lower, tucked-in grappler while R2 controls R1's upper body",
+    "R1 and R2 grapple closely on a dark mat",
+    "the interaction takes place in an indoor martial arts studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward with his head tucked low under R2's chest, rather than R2 being tucked low under R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward with his head tucked low under R2's chest during the grapple"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one described as gripping R1's upper body, rather than R1 being the one described as gripping R2's upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips R1's upper body during the grapple"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned lower under R2's chest while R2 controls him from above, rather than R2 being lower under R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the lower, tucked-in grappler while R2 controls R1's upper body"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 grappling closely with R1 tucked under R2's chest and R2 gripping R1's upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct grappling roles: R1 tucked low, R2 gripping R1's upper body"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a dark mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 and R2 grapple closely on a dark mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

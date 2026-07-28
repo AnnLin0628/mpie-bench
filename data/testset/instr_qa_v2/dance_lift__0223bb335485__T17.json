@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T17",
+  "instruction": "Cinematic medium close-up of a bright ballet studio. In the foreground, the dark-haired ballerina (R1) in a white leotard stands with her right arm extended horizontally, eyes downcast in a serene expression. Behind her, the blonde ballerina (R2) in a white leotard stands at the barre in a matching pose, softly blurred. In the far background, a blurred third ballerina stands at the barre. Soft, diffused natural light fills the room, creating a bright, clean atmosphere with shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the foreground ballerina with her right arm extended horizontally, rather than R2 being the foreground ballerina",
+    "R2 stands behind R1 at the barre in a matching pose and is softly blurred, rather than R1 standing behind R2 at the barre",
+    "R1 has eyes downcast in a serene expression while R2 is behind her at the barre",
+    "A ballet barre is present and used by R2 in the pose",
+    "The setting is a bright ballet studio with soft natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina in the foreground with her right arm extended horizontally, rather than R2 being the foreground ballerina?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground dancer duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned behind R1 at the barre in a matching pose, rather than R1 being the dancer behind R2 at the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 background barre role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand with her right arm extended horizontally while R2 stands at the barre in a matching pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extended-arm pose and R2 matching barre pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have her eyes downcast in a serene expression while R2 remains softly blurred behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 serene downcast focus versus R2 blurred background role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

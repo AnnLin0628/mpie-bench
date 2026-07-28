@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__4f644734ee0f__T3",
+  "instruction": "Candid outdoor medium shot of a couple on a snowy wooden bridge. On the left, the man in the black parka (R1) walks forward, looking at his partner with a smile. On the right, the woman in the brown jacket (R2) walks beside him, looking forward and smiling happily. They hold hands as they walk. Soft, diffused daylight illuminates the cool winter forest setting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks forward while looking at R2 with a smile",
+    "R2 walks beside R1 while looking forward and smiling happily",
+    "R1 and R2 hold hands as they walk together",
+    "R1 is the man in the black parka and R2 is the woman in the brown jacket",
+    "The couple is on a snowy wooden bridge in a winter forest setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner walking forward while looking at R2 with a smile, rather than R2 being the one looking at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks at R2 while walking forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner walking beside R1 while looking forward and smiling happily, rather than R1 being the one looking forward instead of at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks forward while walking beside R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands as they walk together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while walking"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the man in the black parka walking hand-in-hand with R2, the woman in the brown jacket?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 labeled as hand-holding partners"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

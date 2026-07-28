@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__37db26820939__T2",
+  "instruction": "Cinematic medium shot in front of a suburban garage. On the left, the man in the white shirt (R1) holds papers under his arm while shaking hands with the man in the striped shirt and tie (R2) on the right. A 'FOR SALE' sign with a 'SOLD' sticker stands between them. The scene is illuminated by bright, direct sunlight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the handshake participant carrying papers under his arm, rather than R2",
+    "R2 is the handshake partner clasping hands with the paper-carrying R1, rather than being the paper carrier",
+    "R1 shakes hands with R2 while keeping papers tucked under his arm",
+    "papers are tucked under R1's arm during the interaction",
+    "a FOR SALE sign with a SOLD sticker stands between R1 and R2",
+    "the interaction takes place in front of a suburban garage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 clasping hands with the paper-carrying R1, rather than R2 being the person with papers tucked under his own arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the handshake partner of paper-carrying R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the handshake, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

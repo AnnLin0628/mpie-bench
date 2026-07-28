@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T84",
+  "instruction": "A candid medium shot of friends playing frisbee in an outdoor park with green grass and trees in the background. On the left, the large Black man (R1) in a black t-shirt and black pants leans forward, holding a blue frisbee. On the right, the woman with tied-back hair (R4) in a dark blue t-shirt and light blue jeans stands facing him, reaching out playfully. In the background, the East Asian man (R3) in a red polo shirt, the woman with an afro (R6) in a red t-shirt, and the woman in a black beanie (R5) in a red t-shirt stand cheering and watching the game. Bright, natural daylight casts soft shadows on the grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 is the frisbee holder while R4 reaches toward him",
+    "R4 reaches out playfully toward R1 rather than holding the frisbee herself",
+    "R3, R5, and R6 are cheering and watching while R1 and R4 are the active frisbee players",
+    "R1 leans forward while holding the frisbee",
+    "R4 faces R1 and reaches out playfully",
+    "a blue frisbee is held by R1",
+    "the scene is an outdoor park with green grass and trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the blue frisbee while R4 reaches toward him, rather than R4 holding the frisbee for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the frisbee holder while R4 reaches toward him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 reaching out playfully toward R1 while R1 keeps hold of the frisbee, rather than R1 reaching out to take the frisbee from R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 reaches out playfully toward R1 rather than holding the frisbee herself"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R3, R5, and R6 cheering and watching while R1 and R4 are the active frisbee players, rather than R3, R5, and R6 being the ones actively handling the frisbee?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3, R5, and R6 are cheering and watching while R1 and R4 are the active frisbee players"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning forward while holding the frisbee during the game with R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward while holding the frisbee"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

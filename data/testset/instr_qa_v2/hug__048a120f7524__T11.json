@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T11",
+  "instruction": "A candid studio photograph with a close-up shot against a clean white background. The blonde-haired man (R1) in a grey long-sleeved shirt stands on the right, gently kissing the forehead of the long-haired person (R2) on the left. The long-haired person (R2), wearing a green shirt, rests their head against the blonde-haired man's chest with eyes closed in a peaceful, comforting embrace. The scene is illuminated by soft, bright studio lighting, emphasizing the tender and intimate connection between them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently kisses R2 on the forehead",
+    "R2 rests their head against R1's chest",
+    "R1 provides the chest contact while R2 leans into him with eyes closed",
+    "R1 and R2 are in a close, comforting body contact configuration",
+    "The scene is a close-up studio photograph against a clean white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently kissing R2 on the forehead, rather than R2 kissing R1 on the forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently kisses R2 on the forehead"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting their head against R1's chest, rather than R1 resting his head against R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests their head against R1's chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person providing the chest contact that R2 leans into, rather than R2 providing the chest contact for R1 to lean into?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides the chest contact while R2 leans into him with eyes closed"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned with their head against R1's chest while R1 remains upright close to them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in a close, comforting body contact configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

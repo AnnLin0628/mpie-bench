@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__77f377b9ad5b__T7",
+  "instruction": "A candid outdoor photograph, close-up shot, captures a couple hugging in a snowy winter forest. The woman in the grey beanie (R1) stands on the right in a black leather jacket, her eyes closed in a peaceful smile. She wraps her arms around the man in the black beanie (R2), who wears a brown coat and stands on the left with his back partially turned. She rests her head gently against his shoulder. The background features soft, snow-laden trees under diffused winter light, casting a cool, quiet, and intimate atmosphere over the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2",
+    "R1 rests her head against R2's shoulder",
+    "R2 has his back partially turned while R1 leans into him",
+    "R1 is the person smiling peacefully with eyes closed during the embrace",
+    "R2 is the person whose shoulder receives R1's head",
+    "the setting is a snowy winter forest with snow-laden trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2, rather than R2 being the one specifically described as wrapping his arms around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the active arm-wrapping role around R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest her head against R2's shoulder, rather than R2 resting his head against R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her head on R2's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with his back partially turned while R1 leans into him, rather than R1 being the one with her back partially turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's back is partially turned as R1 leans against him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person whose shoulder supports R1's resting head during the close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's shoulder is the resting point for R1's head"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

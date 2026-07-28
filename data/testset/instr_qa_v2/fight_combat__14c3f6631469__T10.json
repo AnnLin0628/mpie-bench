@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T10",
+  "instruction": "Candid action photograph, medium full shot. Inside a boxing gym, the woman with curly hair (R2) in a blue jacket and pink boxing gloves throws a fast punch with visible motion blur. Behind her, the man in the gray t-shirt (R1) stands in black shorts, observing her movement with a focused, slightly concerned expression. Bright overhead fluorescent lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active boxer throwing a fast punch",
+    "R1 is behind R2 observing her movement instead of punching",
+    "R2 wears pink boxing gloves while punching",
+    "R1 has a focused, slightly concerned observer role",
+    "the action takes place inside a boxing gym",
+    "the punch has visible motion blur"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person throwing the fast punch, rather than R1 throwing it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active puncher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 observing R2's boxing movement from behind, rather than R2 observing R1's movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the observer while R2 acts"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 perform the boxing action while R1 remains a focused observer, rather than R1 performing the boxing action while R2 observes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric boxer-versus-observer duty"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 behind R2 in an observer or coach-like role while R2 punches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 observes from behind as R2 punches"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 inside a boxing gym?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing gym setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

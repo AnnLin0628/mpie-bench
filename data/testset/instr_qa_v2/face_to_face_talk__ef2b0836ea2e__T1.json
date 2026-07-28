@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ef2b0836ea2e__T1",
+  "instruction": "Candid lifestyle close-up photograph from an overhead angle of a cozy indoor living room. On a gray fabric couch, the bearded man with glasses (R2) in a pink t-shirt lies on the left, smiling down at the woman in the white t-shirt (R1) who lies on the right. The woman (R1) looks up at the man (R2) with a soft, loving smile, her left hand gently resting on his neck, while his hand rests on his wavy hair. Soft, diffused natural light illuminates their faces, creating a warm, intimate atmosphere with muted colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently rests her left hand on R2's neck",
+    "R2 rests his hand on his own wavy hair while R1 touches his neck",
+    "R2 smiles down at R1 while R1 looks up at R2",
+    "R1 and R2 lie close together face-to-face on the couch",
+    "gray fabric couch",
+    "cozy indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one gently resting her left hand on R2's neck, rather than R2 resting his hand on R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently rests her left hand on R2's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one resting his hand on his own wavy hair while R1's hand is on R2's neck, rather than R1 resting a hand on her own hair while R2 touches her neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his hand on his own wavy hair while R1 touches his neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 smiling down at R1 while R1 looks up at R2, rather than R1 smiling down at R2 while R2 looks up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles down at R1 while R1 looks up at R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

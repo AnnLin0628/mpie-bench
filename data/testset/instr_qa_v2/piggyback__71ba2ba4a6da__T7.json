@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__71ba2ba4a6da__T7",
+  "instruction": "Candid romantic photograph, medium close-up. Sunny outdoor field with blurred trees. The woman with long brown hair (R1) in a sherpa-lined denim jacket is on the right, laughing happily. The man with short dark hair and a beard (R2) in a matching denim jacket is on the left, looking up at her with a smile. The woman wraps her left arm around the man's neck as they embrace closely. Warm, bright natural sunlight provides soft backlighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her left arm around R2's neck",
+    "R2 is the person whose neck is encircled by R1's arm",
+    "R1 and R2 are in close physical contact",
+    "R2 looks up at R1 with a smile while R1 laughs",
+    "sunny outdoor field with blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one wrapping her left arm around R2's neck, rather than R2 wrapping his arm around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her left arm around R2's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose neck is encircled by R1's arm, rather than R1 being encircled by R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's arm around his neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep her arm around R2's neck while they are in close physical contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role is arm-around-neck"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

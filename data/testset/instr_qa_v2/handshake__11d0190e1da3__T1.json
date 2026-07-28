@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__11d0190e1da3__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures a brightly lit office interior with a wooden door, a red desk, and a window with blinds. On the left, the woman in the black blazer (R3) stands facing right. In the center, the man in the dark suit (R2) stands facing forward. On the right, the woman in the black shirt and red skirt (R1) leans forward facing left. All three smile and look down as they stack their hands together in a central huddle gesture of teamwork over the red desk. The scene is illuminated by bright, even indoor lighting, creating a natural and collaborative atmosphere with realistic colors.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 leans forward into the shared hand-stack huddle rather than R2 doing so",
+    "R2 holds the forward-facing central standing role in the hand-stack huddle rather than R1",
+    "R3 faces toward the huddle from the opposite side while joining the hand stack with R1 and R2",
+    "R1, R2, and R3 all stack their hands together in a central teamwork gesture",
+    "the hand-stack huddle takes place over a red desk",
+    "the setting is a brightly lit office interior"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant leaning forward into the shared hand-stack huddle, rather than R2 being the one described as leaning forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward into the shared hand-stack huddle rather than R2 doing so"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant standing facing forward in the middle of the hand-stack huddle, rather than R1 filling that forward-facing central stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the forward-facing central standing role in the hand-stack huddle rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 standing and facing toward the shared hand stack from across R1, while R1 leans forward into the huddle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 faces toward the huddle from the opposite side while joining the hand stack with R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, and R3 all placing their hands together in the same central teamwork huddle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 all stack their hands together in a central teamwork gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

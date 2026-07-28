@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__a451fa938d81__T1",
+  "instruction": "An overhead aerial photograph captures a group of people lying on a green lawn. In a wide high-angle drone shot looking straight down, ten people lie on the grass in a circle, holding hands. Among them, the man in the white shirt and beige shorts (R3) lies at the top, looking slightly away. To his right, the man in the yellow shirt and pink shorts (R1) lies with arms outstretched and eyes closed. At the bottom, the woman in the floral romper (R4) lies smiling up, while on the left, the woman in the green tank top and white pants (R2) wears a straw hat and smiles. Six other young adults in casual summer attire lie in the same circle, holding hands with the group. The scene is illuminated by soft, diffused daylight, highlighting the vibrant green grass and colorful outfits.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 lies at the top of the hand-holding circle and looks slightly away",
+    "R1 lies in the circle with arms outstretched and eyes closed",
+    "R4 lies at the bottom of the circle smiling upward",
+    "R2 lies in the circle smiling while wearing a straw hat",
+    "R1, R2, R3, and R4 are participants in the same lying-down hand-holding circle",
+    "the group is on a green lawn in an overhead aerial view"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the participant lying at the top of the hand-holding circle and looking slightly away, rather than R1 having that top looking-away role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the top looking-away role in the circle"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant lying with arms outstretched and eyes closed in the hand-holding circle, rather than R3 having that arms-outstretched eyes-closed role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the arms-outstretched eyes-closed role in the circle"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the participant lying at the bottom of the hand-holding circle and smiling upward, rather than R2 having that bottom smiling-up role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the bottom smiling-up role in the circle"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 lying as a participant in the same hand-holding circle as R1, R3, and R4, rather than standing outside the circle as an onlooker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 participates in the lying-down hand-holding circle"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the hand-holding circle lying on a green lawn in an overhead aerial view?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "green lawn overhead aerial scene"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

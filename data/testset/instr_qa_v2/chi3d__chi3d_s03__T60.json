@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T60",
+  "instruction": "A candid wide-shot documentary photograph captures an indoor studio with a red carpeted floor, wooden borders, and white walls. On the left side of the frame, the man in the black polo shirt and blue shorts (R1) stands facing toward the right. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing left. The two subjects stand close together, facing each other directly and holding hands. An office printer and a tripod are visible in the background. The scene is evenly illuminated by bright overhead lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the hand-holding partner facing toward the right toward R2, rather than R2 having that orientation",
+    "R2 is the hand-holding partner facing toward the left toward R1, rather than R1 having that orientation",
+    "R1 and R2 stand close together facing each other directly while holding hands",
+    "an office printer is visible in the background",
+    "a tripod is visible in the background",
+    "the scene is an indoor studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the hand-holding partner facing toward the right toward R2, rather than R2 being the one facing toward the right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the right-facing partner in the hand-holding interaction"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the hand-holding partner facing toward the left toward R1, rather than R1 being the one facing toward the left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the left-facing partner in the hand-holding interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": true
+  }
+}

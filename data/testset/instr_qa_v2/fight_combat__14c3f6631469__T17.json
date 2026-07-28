@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T17",
+  "instruction": "A candid action photograph in a medium shot captures an indoor boxing gym setting. In the foreground, the woman in the blue jacket (R2) wears pink boxing gloves and punches a red punching bag on the left, her arm showing motion blur. Behind her, the man in the gray t-shirt (R1) stands watching with a supportive smile, wearing black shorts. The indoor gym is brightly lit by overhead fluorescent lights, creating a natural, energetic atmosphere with neutral tones and a shallow depth of field that keeps the focus on the pair's training session.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the boxer actively punching the red punching bag, not R1",
+    "R1 stands behind R2 watching supportively while R2 trains",
+    "R2 extends a gloved arm toward the punching bag while R1 observes",
+    "red punching bag used as the striking target",
+    "pink boxing gloves worn by R2 for the punch",
+    "indoor boxing gym setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person actively punching the red punching bag, rather than R1 being the one punching it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the boxer actively punching the red punching bag, not R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 watching supportively from behind while R2 performs the boxing action, rather than R2 watching while R1 punches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 watching supportively while R2 trains"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 deliver the punch with pink boxing gloves while R1 remains in the observer role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses pink boxing gloves to punch while R1 observes"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 shown with an arm extended in a punch toward the bag while R1 is positioned behind her observing the training?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends a gloved arm toward the punching bag while R1 observes"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red punching bag serving as the target being punched?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red punching bag used as the striking target"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

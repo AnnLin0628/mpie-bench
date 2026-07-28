@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T6",
+  "instruction": "Candid full shot of a man in a gray suit (R1) and a woman in a black dress (R2) dancing tango outdoors. The woman on the left lifts her leg slightly while holding hands with the man on the right against a yellow and gray wall in bright sunlight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the tango partner who lifts her leg slightly while holding hands with R1",
+    "R1 is the hand-holding partner while R2 performs the leg lift",
+    "R1 and R2 are dancing tango together",
+    "R1 and R2 are holding hands during the dance",
+    "The tango scene is outdoors against a yellow and gray wall in bright sunlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner lifting her leg slightly while holding hands with R1, rather than R1 being the one lifting a leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the leg lift during the tango"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the hand-holding partner for R2 while R2 lifts her leg, rather than R2 being the grounded partner while R1 lifts a leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains the hand-holding partner as R2 lifts her leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other as they dance tango?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands during the tango"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 posed with a slightly lifted leg as part of the tango dance with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the lifted-leg dance pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

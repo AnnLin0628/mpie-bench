@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__052f7e8820c9__T5",
+  "instruction": "Candid documentary photograph, medium full shot. In an indoor ballet studio with a wooden barre, the young girl in a black leotard and skirt (R1) sits on the floor on the left with her legs extended forward and hands on her hips, looking down-right. Beside her, the blonde ballet instructor in a black long-sleeved top and leggings (R2) sits on the floor on the right, leaning towards the girl to guide her posture with her right hand gesturing near the girl's knee. The scene is illuminated by soft, diffused indoor lighting, creating a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans toward R1 to guide R1's posture, rather than R1 guiding R2",
+    "R2 gestures near R1's knee with her right hand, rather than R1 gesturing near R2's knee",
+    "R1 is the seated student being guided while R2 is the instructor providing guidance",
+    "R1 sits with legs extended forward and hands on hips while R2 sits beside her and leans in",
+    "indoor ballet studio with a wooden barre"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning toward R1 to guide R1's posture, rather than R1 leaning toward R2 to guide R2's posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 guides R1's posture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 gesture with her right hand near R1's knee, rather than R1 gesturing near R2's knee?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures near R1's knee"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young ballet student being guided while R2 is the instructor providing guidance, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is guided by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated on the floor with her legs extended forward and her hands on her hips while R2 sits beside her and leans toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's seated posture while R2 leans in"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T13",
+  "instruction": "Candid documentary wide shot of an indoor motion capture studio with a red carpet and white walls. The man in the black cap and dark polo shirt (R1) stands on the right, facing left, placing his right hand on the shoulder of the woman in the white patterned t-shirt and blue jeans (R2). The woman (R2) stands on the left, facing right, looking back at him. Bright overhead fluorescent lighting illuminates the scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his right hand on R2's shoulder",
+    "R2 is the person receiving the shoulder touch from R1",
+    "R1 initiates the shoulder contact while R2 looks back at him",
+    "R1 and R2 face each other during the contact",
+    "R2 looks back at R1 while his hand is on her shoulder",
+    "indoor motion capture studio with red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing his right hand on R2's shoulder, rather than R2 placing her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his right hand on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is being touched by R1, rather than R1 being the person whose shoulder is touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person receiving the shoulder touch from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 initiate the shoulder contact with R2 while R2 looks back at him, rather than R2 initiating the shoulder contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the shoulder contact while R2 looks back at him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

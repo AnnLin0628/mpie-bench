@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__13ca6a563768__T19",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.9166666666666666,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.8333333333333334,
+  "S_instr_prop": 1.0,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": 1.0,
+  "n_main": 5,
+  "n_all": 5,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the heavy punching bag steady with both hands, rather than R2 holding it steady?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R1 steadies the bag, one hand visible"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person in a boxing stance with gloves raised, rather than R1 being the boxer in guard?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 has gloves raised in stance"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 focused on the bag he is steadying while R2 keeps her gloved hands up defensively, rather than their duties being reversed?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 faces bag while R2 guards"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have both gloves up in a defensive guard position while R1 remains responsible for holding the bag?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 guards as R1 holds bag"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black heavy punching bag present as the object R1 is steadying?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "black heavy bag is present"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "fight_combat__13ca6a563768__T19",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 12.5,
+    "written_at": "2026-07-17T15:16:01",
+    "gen_relpath": "outputs/gemini-3-pro-image/fight_combat__13ca6a563768__T19.png",
+    "qa_relpath": "instr_qa_v2/fight_combat__13ca6a563768__T19.json",
+    "n_questions": 5
+  }
+}

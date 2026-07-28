@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__c5303c477bc7__T1",
+  "instruction": "Candid outdoor photograph, full shot. On a sunny paved walkway next to a bridge railing, the man with blonde-tipped dreadlocks (R1) wearing a plaid shirt, white t-shirt, and blue jeans leans forward on the left, holding a pink skateboard. Beside him on the right, the woman with blonde hair (R2) wearing a black leather jacket and black dress walks forward. They hold hands, his left hand in her right hand, moving together in unison under a clear blue sky with bright, direct daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1's left hand is held in R2's right hand",
+    "R1 holds the pink skateboard while R2 does not",
+    "R2 walks forward beside R1 with her right hand holding R1's left hand",
+    "R1 and R2 move together in unison while holding hands",
+    "pink skateboard held by R1",
+    "sunny paved walkway next to a bridge railing"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's left hand held in R2's right hand, rather than R1's right hand being held in R2's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1-left-hand to R2-right-hand contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the pink skateboard while walking with R2, rather than R2 holding the skateboard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the skateboard instead of R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 use her right hand to hold R1's left hand, rather than R1 using his right hand to hold R2's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2-right-hand to R1-left-hand contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward together in unison while keeping their hands connected?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together while hand-holding"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

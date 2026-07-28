@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T13",
+  "instruction": "Candid documentary photograph, medium close-up over-the-shoulder shot. In an indoor judo dojo, the man in the white judo gi (R2) stands in the foreground with his back to the camera. Facing him, the woman in the blue judo gi (R1) stands in the midground, looking down with a focused expression. She grips the collar of the man (R2) with her hand as they engage in a grappling match. Soft indoor lighting illuminates the scene, highlighting the blue and white uniforms against the blue background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 grips the collar of R2 during the grappling match",
+    "R2 is the person whose collar is being held by R1",
+    "R1 faces R2 while engaging him in judo grappling",
+    "R2 stands with his back to the camera while R1 faces him",
+    "R2's judo gi collar is the contact point being gripped",
+    "the scene is set inside an indoor judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gripping R2's collar during the grappling match, rather than R2 gripping R1's collar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips the collar of R2 during the grappling match"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose collar is being held by R1, rather than R1 being the person whose collar is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose collar is being held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while engaging him in a judo grappling match?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while engaging him in judo grappling"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

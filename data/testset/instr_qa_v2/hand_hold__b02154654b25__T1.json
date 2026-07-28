@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b02154654b25__T1",
+  "instruction": "Candid documentary full shot of a forest trail. On the left, the older man with a white beard (R1) in a rust shirt walks forward, looking down. On the right, the curly-haired youth (R2) in a yellow plaid shirt walks slightly behind, smiling. The older man (R1) extends his left arm back to guide the youth (R2). Sun-dappled natural light filters through the trees.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his left arm back to guide R2",
+    "R1 leads the walking interaction while R2 follows slightly behind",
+    "R2 is the youth being guided by R1",
+    "R1 walks forward looking down while guiding R2",
+    "The scene is a forest trail with sun-dappled natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his arm back to guide R2, rather than R2 extending an arm back to guide R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric guiding duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leading the walking interaction while R2 follows slightly behind, rather than R2 leading while R1 follows?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leads and R2 follows"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being guided by R1's extended arm, rather than R1 being guided by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the guided person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk forward while reaching his left arm back toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's walking-and-reaching body role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__ce22137a7881__T1",
+  "instruction": "Clean studio photograph, medium full shot. In a bright, minimalist office, the woman in the black suit (R2) stands on the left, facing right, and the man in the plaid blazer (R1) stands on the right, facing left. They shake right hands while jointly holding a brown paper bag labeled 'OPEN FOR BUSINESS' between them. The woman looks at the man with a soft expression, and the man smiles gently back. Bright, even lighting illuminates the scene against a clean white background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks at R1 with a soft expression during the handshake",
+    "R1 smiles gently back at R2 during the handshake",
+    "R1 and R2 shake right hands while facing each other",
+    "R1 and R2 jointly hold a brown paper bag between them",
+    "the brown paper bag is labeled 'OPEN FOR BUSINESS'",
+    "the scene is a bright, minimalist office with a clean white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one smiling gently back at R2 as they shake hands, rather than R2 being the one smiling gently back at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles gently back at R2 during the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use her right hand to shake R1's right hand while they hold the bag between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right hand meets R1's right hand in the handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the paper bag labeled 'OPEN FOR BUSINESS'?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "paper bag label reads 'OPEN FOR BUSINESS'"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

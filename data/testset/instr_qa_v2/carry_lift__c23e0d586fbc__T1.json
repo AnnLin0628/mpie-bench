@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__c23e0d586fbc__T1",
+  "instruction": "A candid documentary photograph, medium shot at eye-level. On a sandy beach with a rocky breakwater and hazy sea under an overcast sky, the woman in the peach crop top (R1) walks to the right in the left foreground, smiling slightly in profile with her hair blowing. Beside her, the man in the blue t-shirt and headband (R2) walks to the right in the right background, turning his head to look at her with a warm smile. They walk closely side-by-side. The scene is illuminated by soft, diffused daylight with a warm, muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 turns his head to look at R1 with a warm smile",
+    "R1 is in the foreground while R2 is in the background",
+    "R1 and R2 walk closely side-by-side",
+    "R1 smiles slightly in profile with her hair blowing",
+    "sandy beach with rocky breakwater, hazy sea, and overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one turning his head to look at R1 with a warm smile, rather than R1 turning her head to look at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks toward R1 while walking beside her"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking closely side-by-side, with R2 directing his attention toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "side-by-side walking with R2 attending to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking in profile while R2 walks beside her and looks toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 profile walking role paired with R2 looking role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

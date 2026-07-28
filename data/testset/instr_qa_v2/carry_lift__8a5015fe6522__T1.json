@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__8a5015fe6522__T1",
+  "instruction": "Cinematic film still, medium close-up. Inside a vintage camper van with a wooden ceiling and blue curtains, two brides are sitting closely. On the left foreground, the blonde woman in a beaded white wedding dress (R1) leans forward, looking down with a soft expression. Behind her on the right, the brunette woman in a ruffled white wedding dress (R2) sits upright, looking off-camera to the right, her shoulder brushing against the blonde woman (R1). Warm, soft interior lighting contrasts with cool blue tones from the window.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward and looks down while seated close to R2",
+    "R2 sits upright behind R1 with her shoulder brushing R1",
+    "R1 is the forward foreground bride while R2 is the upright bride in shoulder contact behind her",
+    "R1 and R2 sit closely with R2 positioned behind R1 in a shoulder-brushing configuration",
+    "vintage camper van interior with wooden ceiling and blue curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the bride who leans forward and looks down, rather than R2 being the one leaning forward and looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward and looks down while seated close to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 seated upright behind R1 with her shoulder brushing R1, rather than R1 seated upright behind R2 with her shoulder brushing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits upright behind R1 with her shoulder brushing R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the close seated pose, is R1 the forward-leaning foreground bride while R2 is the upright bride making shoulder contact with R1, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the forward foreground bride while R2 is the upright bride in shoulder contact behind her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sitting closely with R2 behind R1 and in shoulder-brushing contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit closely with R2 positioned behind R1 in a shoulder-brushing configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

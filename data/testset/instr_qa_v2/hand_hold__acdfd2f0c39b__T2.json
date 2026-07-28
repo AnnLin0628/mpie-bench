@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__acdfd2f0c39b__T2",
+  "instruction": "A candid street photograph captures a full-length shot of two men walking on a city sidewalk under green trees during the day. On the left, the white man in the pink shirt (R2) walks forward, holding a clear cup and looking ahead with a gentle smile. On the right, the Black man in the white shirt (R1) walks beside him, also looking forward and smiling. The two men are holding hands as they stroll side-by-side. The scene is illuminated by soft, natural daylight filtering through the leaves, creating gentle shadows on the pavement with a cool color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds a clear cup while walking hand-in-hand with R1",
+    "R1 is the hand-holding walking partner of the cup-holding R2",
+    "R1 and R2 stroll side-by-side while holding hands",
+    "clear cup held by R2",
+    "city sidewalk under green trees during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the clear cup while walking hand-in-hand with R1, rather than R1 being the cup holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a clear cup while walking hand-in-hand with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the hand-holding walking partner of the cup-holding R2, rather than R2 being the hand-holding partner of a cup-holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the hand-holding walking partner of the cup-holding R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk beside R2 while both men look forward and smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together looking forward and smiling"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

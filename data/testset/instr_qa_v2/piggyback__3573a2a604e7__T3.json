@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__3573a2a604e7__T3",
+  "instruction": "Candid close-up photograph. Indoors under warm lighting, the woman in a striped shirt (R1) and the man in a patterned shirt (R2) share a tender moment. She smiles with eyes closed, leaning her face against his cheek. The man (R2) smiles warmly in profile, nuzzling close to her. The shot is tightly framed on their faces, capturing an intimate, affectionate interaction.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 smiles with eyes closed while leaning her face against R2's cheek",
+    "R2 smiles in profile while nuzzling close to R1",
+    "R1 and R2 share close face-to-face cheek contact in an affectionate moment",
+    "the shot is tightly framed on R1 and R2's faces",
+    "the scene is indoors under warm lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one smiling with eyes closed while leaning her face against R2's cheek, rather than R2 being the one with eyes closed leaning against R1's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles with eyes closed while leaning her face against R2's cheek"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one smiling warmly in profile and nuzzling close to R1, rather than R1 being the profile nuzzler toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles in profile while nuzzling close to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean her face into R2's cheek while R2 stays close and receives the cheek contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share close face-to-face cheek contact in an affectionate moment"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

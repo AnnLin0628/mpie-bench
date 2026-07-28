@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__32b55aa6035c__T3",
+  "instruction": "Candid medium shot of a bright apartment interior. On the left, the Black man in a tan coat (R2) holds a cardboard box, looking down and talking to the woman. On the right, the Asian woman in a dark green coat (R1) holds a cardboard box, looking up at him with a smile. They stand close together in the bright room, lit by soft natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks down and talks to R1",
+    "R1 looks up at R2 with a smile",
+    "R2 addresses R1 while R1 responds with an upward smile",
+    "R1 and R2 stand close together while each holding a cardboard box",
+    "cardboard boxes are held by both people",
+    "bright apartment interior with soft natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking down and talking to R1, rather than R1 looking down and talking to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks down and talks to R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking up at R2 with a smile, rather than R2 looking up smiling at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up at R2 with a smile"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During their exchange, is R2 addressing R1 while R1 smiles back up at him, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 addresses R1 while R1 responds with an upward smile"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together while each holds a cardboard box?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together while each holding a cardboard box"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are cardboard boxes being held by both R1 and R2 during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "cardboard boxes are held by both people"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

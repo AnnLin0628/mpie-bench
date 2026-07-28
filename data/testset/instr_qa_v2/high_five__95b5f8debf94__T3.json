@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__95b5f8debf94__T3",
+  "instruction": "Candid lifestyle photograph, medium shot. In a bright kitchen with white tiled walls, the young girl in the light blue long-sleeve shirt (R2) sits quietly on the white countertop on the left, looking down with a pensive expression and resting her hands on her knees. On the right, the man in the beige t-shirt (R1) stands facing left, smiling as he rubs his hands together. The kitchen is brightly lit with soft natural light, displaying white shelves, a sink, and various kitchen items in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands and rubs his hands together while R2 does not",
+    "R2 sits quietly on the white countertop with her hands on her knees while R1 does not",
+    "R1 is the standing adult and R2 is the seated child on the counter",
+    "R2 is supported by the white kitchen countertop",
+    "The scene is set in a bright kitchen with white tiled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing and rubbing his hands together, rather than R2 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands and rubs his hands together while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting quietly on the white countertop with hands on her knees, rather than R1 sitting there?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits quietly on the white countertop with her hands on her knees while R1 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain standing while R2 is seated on the countertop?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the standing adult and R2 is the seated child on the counter"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__5e2b6c99224c__T4",
+  "instruction": "Candid indoor medium full shot from a low angle showing a man in a red t-shirt (R1) lifting a toddler in a red t-shirt and red beanie (R2) high into the air. The toddler (R2), also wearing blue jeans and red socks, laughs happily while suspended above. The man (R1) looks up at the child with a joyful smile. The scene is brightly lit with soft indoor light against a clean white background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lifts R2 high into the air",
+    "R1 supports R2's body while R2 is suspended above",
+    "R2 is the toddler being carried rather than the lifter",
+    "R1 looks up at R2 with a joyful smile",
+    "R2 laughs while suspended above R1",
+    "bright indoor scene with a clean white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting R2 high into the air, rather than R2 lifting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts R2 high into the air"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below while R2 is suspended above, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's body while R2 is suspended above"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the toddler being held up in the air by R1, rather than the person doing the lifting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the toddler being carried rather than the lifter"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look up toward R2 while R2 is above him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up at R2 with a joyful smile"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 laughing happily while being held suspended above R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 laughs while suspended above R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

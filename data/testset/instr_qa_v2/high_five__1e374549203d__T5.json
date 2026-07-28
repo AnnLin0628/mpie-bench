@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1e374549203d__T5",
+  "instruction": "A candid documentary photograph in a medium shot captures a modern office interior during the day. In the center, three colleagues share a celebratory group hug. The man in the light beige blazer (R1) stands on the left with his back to the camera, yellow sticky notes reading '1000' and 'GOALS' stuck to his jacket. He hugs the woman in the beige sweater vest (R3), who is partially obscured in the middle, and the man in the beige polo shirt (R4) on the right. The man (R4) is in profile, wearing glasses and smiling warmly as he wraps his arm around the others. The background features soft, out-of-focus office plants and shelves under warm, natural indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 has his back to the camera while participating in the group hug with R3 and R4",
+    "R4 is the profile man who wraps his arm around the others",
+    "R3 is partially obscured in the middle of the group hug",
+    "R1 hugs both R3 and R4",
+    "yellow sticky notes reading '1000' and 'GOALS' are stuck to R1's jacket",
+    "the interaction takes place in a modern office interior"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the profile man who wraps his arm around the others, rather than R1 being the profile man wrapping his arm around the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the profile man who wraps his arm around the others"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the partially obscured colleague in the middle of the group hug, rather than R4 being the partially obscured middle colleague?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is partially obscured in the middle of the group hug"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hug both R3 and R4 as part of the celebratory group contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 hugs both R3 and R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

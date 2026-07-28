@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T67",
+  "instruction": "Candid documentary wide full shot of an indoor studio with a red carpet. On the left, the man in the black polo shirt and blue shorts (R1) stands facing right, shaking hands with the woman in the white t-shirt and blue jeans (R2) who stands on the right facing left. They clasp right hands under bright overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the participant facing right toward R2 while their right hands are clasped",
+    "R2 is the participant facing left toward R1 while their right hands are clasped",
+    "R1 and R2 clasp each other's right hands",
+    "R1 and R2 stand facing one another during the hand contact",
+    "the interaction takes place in an indoor studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant facing right toward R2 while their right hands are clasped, rather than R2 being the participant facing right toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces right toward R2 during the right-hand clasp"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant facing left toward R1 while their right hands are clasped, rather than R1 being the participant facing left toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces left toward R1 during the right-hand clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 clasp R2's right hand with his own right hand during the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand is clasped with R2's right hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing face-to-face while maintaining right-hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand facing one another during the hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

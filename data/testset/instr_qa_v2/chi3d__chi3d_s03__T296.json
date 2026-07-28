@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T296",
+  "instruction": "A wide-angle candid documentary photograph taken inside a white-walled motion capture studio with a red carpet and a printer in the background. The man in the black polo and blue shorts (R1) stands on the left with his back to the camera, extending his right hand. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing left in profile, as the man touches her upper chest. Both maintain neutral expressions. Bright overhead lighting illuminates the room, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person extending his right hand to touch R2's upper chest",
+    "R2 is the person receiving the upper-chest touch from R1",
+    "the upper-chest contact is on R2 rather than on R1",
+    "R1 has his back to the camera while making contact with R2",
+    "R2 faces left in profile while being touched by R1",
+    "the scene is inside a white-walled motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his right hand to touch R2's upper chest, rather than R2 extending her hand to touch R1's upper chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person extending his right hand to touch R2's upper chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose upper chest is being touched by R1, rather than R1 being touched on the upper chest by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person receiving the upper-chest touch from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is the contact located on R2's upper chest rather than on R1's upper chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the upper-chest contact is on R2 rather than on R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have his back to the camera while making the chest contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has his back to the camera while making contact with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T1",
+  "instruction": "Cinematic medium shot in an indoor sports gym. Four cheerleaders stand shoulder-to-shoulder holding silver pom-poms. From left to right: the brunette cheerleader (R9) faces slightly right with a soft smile; the blonde cheerleader with her hair in a high bun (R2) tilts her head right, looking forward; the red-haired cheerleader (R3) smiles warmly looking right; and the East Asian cheerleader (R7) looks forward with a neutral expression. Soft indoor lighting highlights their faces and uniforms against a blurred background.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R2 tilts her head right and looks forward rather than R3 doing that pose",
+    "R3 smiles warmly while looking right rather than R7 doing that expression-and-gaze role",
+    "R9 faces slightly right with a soft smile rather than R2 having that exact pose",
+    "R7 looks forward with a neutral expression while standing shoulder-to-shoulder with the others",
+    "R9, R2, R3, and R7 hold silver pom-poms",
+    "the scene is an indoor sports gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the cheerleader tilting her head right and looking forward, rather than R3 being the one with that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the head-tilted forward-looking pose rather than R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the cheerleader smiling warmly while looking right, rather than R7 having that warm-smiling rightward-looking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 smiles warmly and looks right rather than R7"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the cheerleader facing slightly right with a soft smile, rather than R2 being described with that exact soft-smiling pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 faces slightly right with a soft smile rather than R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R7 look forward with a neutral expression while standing shoulder-to-shoulder with R9, R2, and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 has the neutral forward-looking role in the shoulder-to-shoulder lineup"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

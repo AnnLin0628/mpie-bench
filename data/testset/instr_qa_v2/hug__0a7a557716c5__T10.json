@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0a7a557716c5__T10",
+  "instruction": "Candid documentary photograph, medium close-up at eye-level. In a brightly lit room decorated with Canadian flag bunting, a group of friends is gathered. On the left, the man with short brown hair (R1) in a blue-gray corduroy shirt smiles, looking towards the center. Next to him, the woman with dreadlocks (R7) in a pink shirt and olive vest laughs and gestures. In the center-right, the Black man with a red bandana (R5) in a brown shirt smiles with his arm around the man with glasses (R4), who stands on the right in a white sweatshirt looking left. On the far right, a partially visible bystander with curly hair has his arm around the man with glasses. Bright, natural indoor lighting fills the scene.",
+  "n_person": 11,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11"
+  ],
+  "elements": [
+    "R5 places his arm around R4, rather than R4 placing his arm around R5",
+    "R4 is the person being encircled by R5's arm, rather than R5 being encircled by R4's arm",
+    "R5 smiles while holding an arm around R4",
+    "R7 laughs and gestures while near R1",
+    "Canadian flag bunting decorates the brightly lit room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5 have his arm around R4, rather than R4 having his arm around R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 places his arm around R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person being held or encircled by R5's arm, rather than R5 being held or encircled by R4's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 receives the arm-around contact from R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 smile while keeping his arm around R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 smiles while maintaining arm-around contact with R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 standing as the person next to R5 who is being held by R5's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 stands as the contact recipient beside R5"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

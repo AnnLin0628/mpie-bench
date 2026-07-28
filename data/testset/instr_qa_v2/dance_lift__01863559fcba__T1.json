@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T1",
+  "instruction": "Candid documentary photograph of a bright, minimalist indoor dance studio. On the left, the blonde girl (R3) in a beige long-sleeve top, shorts, and white socks performs a deep side lunge to the right with hands on her knee. In the center, the dark-haired girl (R1) in a matching beige outfit and white socks lunges in unison, hands on her hips. Both look forward with focused expressions. On the far right, the legs of a partially visible bystander in beige shorts are cropped. Soft, diffused natural light fills the space, creating a clean, neutral color palette.",
+  "n_person": 7,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R3 performs a deep side lunge with her hands on her knee while R1 lunges with hands on her hips",
+    "R1 keeps her hands on her hips during the shared lunge rather than placing them on her knee like R3",
+    "R3 is doing a deep side lunge to the right",
+    "R1 and R3 lunge in unison while looking forward",
+    "The setting is a bright, minimalist indoor dance studio with soft natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer placing her hands on her knee during the deep side lunge, while R1 instead keeps her hands on her hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has hands on knee while R1 has hands on hips"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer lunging with her hands on her hips, rather than R3 being the one with hands on her hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the hands-on-hips pose during the lunge"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 performing a deep side lunge to the right with her hands resting on her knee?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's lunge pose and hand placement"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 lunging in unison with R3 while keeping her hands on her hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's synchronized lunge pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

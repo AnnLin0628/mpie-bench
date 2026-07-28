@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__c7b8a2f8ab2b__T1",
+  "instruction": "A cinematic film still, medium close-up shot at eye-level with a shallow depth of field. In an outdoor grassy courtyard with a historic building and red steeples in the background, the man with curly hair and sunglasses (R1) wearing an open tan blazer with no shirt stands on the left. He faces right, holding hands with the woman with long brown hair (R2) in a tan dress who stands on the right. They stand close together, holding hands and gazing at each other; he looks down while she looks up at him. The scene is illuminated by bright, warm sunlight casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the partner looking downward toward R2 while R2 looks upward toward him",
+    "R2 is the partner looking upward at R1 while holding hands with him",
+    "R1 and R2 stand close together while holding hands",
+    "R1 faces and gazes toward R2 as R2 gazes back at him",
+    "The interaction occurs in an outdoor grassy courtyard with a historic building and red steeples in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking downward toward R2 while R2 looks upward at him, rather than R2 looking downward at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at R2 while R2 looks up at R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking upward at R1 while holding hands with him, rather than R1 being the one looking upward at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks up at R1 during the hand-holding interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together in a hand-holding pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

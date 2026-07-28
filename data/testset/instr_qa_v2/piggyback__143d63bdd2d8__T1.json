@@ -1,0 +1,65 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__143d63bdd2d8__T1",
+  "instruction": "Candid medium close-up outdoor photograph of a woman in a green shirt (R1) holding a young girl in a pink tie-dye dress (R2) in her arms. The woman (R1) is on the left, holding green binoculars up to her eyes. The young girl (R2) is on the right, looking at the woman and smiling. Bright direct sunlight illuminates the scene against a clear blue sky.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the supporting / leading contact role relative to R2, rather than R2 taking that role toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a contact-relevant object (if any instructed) involved in the interaction between R1 and R2, consistent with the edit instruction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "contact-relevant object (fallback)",
+      "from_fallback": true
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback",
+    "api_bypass_fill"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "fallback_only",
+    "filter": false,
+    "cat": "piggyback",
+    "used_fallback": true,
+    "note": "filled after gateway HTTP 400 on Stage A QG"
+  }
+}

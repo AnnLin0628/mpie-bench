@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T155",
+  "instruction": "A candid full shot from the front at eye-level shows an indoor studio with a red carpeted floor and white walls. The man in the black polo shirt and blue shorts (R1) stands on the left, and the woman in the white patterned t-shirt and blue jeans (R2) stands on the right. They are facing forward, holding hands, and looking directly toward the camera as they stand together. The setting is brightly illuminated by overhead lights, casting soft shadows on the carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in the black polo shirt and blue shorts holding hands with R2",
+    "R2 is the woman in the white patterned t-shirt and blue jeans holding hands with R1",
+    "R1 and R2 face forward together while maintaining hand contact",
+    "R1 and R2 look toward the camera while standing together",
+    "indoor studio with red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the black polo shirt and blue shorts who is holding hands with R2, rather than R2 being that man holding hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the male hand-holding participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the white patterned t-shirt and blue jeans who is holding hands with R1, rather than R1 being that woman holding hands with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the female hand-holding participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 directly connected through hand contact with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are holding hands with each other"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both facing forward while they stand together holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face forward during the hand-holding pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

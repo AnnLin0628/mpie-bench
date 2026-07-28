@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__7a3519b47d94__T4",
+  "instruction": "Candid medium full shot photograph in an indoor playroom with a white wall. On the left, the boy with shaggy dark hair (R2) in a white t-shirt and brown pants pulls a green rope. In the center, the girl with braided hair (R1) in an orange t-shirt and yellow cropped pants smiles while pulling. In the right foreground, the girl with pigtails (R3) in a white floral-embroidered top and yellow floral shorts pulls the rope forward. The three children are lined up in a row, playing tug-of-war under bright, soft indoor lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 pulls the rope forward during the tug-of-war",
+    "R2 pulls the green rope as the shaggy-haired boy",
+    "R1 smiles while pulling the rope as the braided girl",
+    "all three labeled children pull the same tug-of-war rope",
+    "green rope used for tug-of-war",
+    "indoor playroom with a white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the child pulling the rope forward, rather than R1 being the one specified as pulling it forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 pulls the rope forward during the tug-of-war"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the shaggy-haired boy pulling the green rope, rather than R3 being the shaggy-haired boy pulling it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 pulls the green rope as the shaggy-haired boy"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the braided girl smiling while pulling the rope, rather than R2 being the braided girl smiling while pulling?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles while pulling the rope as the braided girl"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, and R3 all engaged in pulling the rope as part of the tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "all three labeled children pull the same tug-of-war rope"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a green rope being used for the tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "green rope used for tug-of-war"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

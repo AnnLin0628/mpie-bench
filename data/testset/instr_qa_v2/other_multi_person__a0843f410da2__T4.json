@@ -1,0 +1,93 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__a0843f410da2__T4",
+  "instruction": "A candid documentary medium shot of a group of friends laughing on a rooftop terrace. On the far left, a man with a hair bun (R5) in a black shirt looks down next to a Black man with glasses (R6) in a white t-shirt. Beside them, a blonde woman (R1) in a colorful striped dress laughs heartily. In the center, a man in a white cap (R2) leans forward. To his right, a woman in a black sleeveless top (R4) and a dark-haired woman (R3) in a striped top laugh joyfully. On the far right, a woman with a curly afro (R7) in a striped dress smiles widely. The group is bathed in bright, natural daylight.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R2 is the central person leaning forward rather than R1 or R3",
+    "R5 is the person looking down next to R6 rather than R6 looking down next to R5",
+    "R6 is the Black man with glasses next to R5 rather than R5 being the one with glasses",
+    "R1 laughs heartily among the group while R2 leans forward",
+    "R3 and R4 laugh joyfully near each other",
+    "R2 wears a white cap",
+    "the friends are on a rooftop terrace in bright natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person leaning forward in the center, rather than R1 or R3 being the one leaning forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central person leaning forward rather than R1 or R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the man looking down next to R6, rather than R6 being the one described as looking down next to R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the person looking down next to R6 rather than R6 looking down next to R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the Black man with glasses next to R5, rather than R5 being the person described with glasses?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the Black man with glasses next to R5 rather than R5 being the one with glasses"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 laughing heartily among the group while R2 leans forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs heartily among the group while R2 leans forward"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R4 both laughing joyfully near each other in the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 laugh joyfully near each other"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

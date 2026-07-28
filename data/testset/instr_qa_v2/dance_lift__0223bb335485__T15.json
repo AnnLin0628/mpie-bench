@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T15",
+  "instruction": "Cinematic realistic photograph, medium shot. In a bright ballet studio, the dark-haired ballerina (R1) in a white leotard and sheer skirt stands in the foreground on the left, arm extended to the right, looking up and right with focus. In the background on the right, the blonde ballerina (R2) in a white leotard and sheer skirt stands at the barre with arms extended, looking forward. Bright, backlit daylight streams from a window.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the foreground ballerina extending an arm and looking up with focus",
+    "R2 is the background ballerina standing at the barre with arms extended",
+    "R2 occupies the barre role rather than R1",
+    "R1 and R2 have different dance positions rather than mirroring the same role",
+    "a ballet barre is present for R2's position",
+    "the scene is a bright ballet studio with backlit daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground ballerina extending an arm and looking up with focus, rather than R2 being in that foreground focused-reaching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground ballerina extending an arm and looking up with focus"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina standing at the barre with arms extended, rather than R1 being the one at the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 occupies the barre role rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a focused dance pose with one arm extended while R2 performs a barre-position pose with arms extended?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have different dance positions rather than mirroring the same role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned at the barre while R1 is separated in the foreground performing her own extended-arm pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the background ballerina standing at the barre with arms extended"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d5515483d719__T2",
+  "instruction": "A candid outdoor photograph in a medium shot captures a park pathway. On the left, the man in the plaid shirt (R1) walks forward with a gentle smile, a bright lens flare shining near his head. On the right, the woman in the dark blue shirt (R2) walks beside him, looking down with a joyful smile. They stroll side-by-side through the sun-drenched park, surrounded by lush green trees and soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks forward with a gentle smile while R2 looks down with a joyful smile",
+    "R2 is the one looking down while walking beside R1",
+    "R1 and R2 stroll side-by-side through the park",
+    "a bright lens flare shines near R1's head",
+    "the scene is a sun-drenched park pathway with lush green trees and soft shadows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person walking forward with a gentle smile, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks forward with a gentle smile"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking down with a joyful smile, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks down with a joyful smile"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 strolling side-by-side through the park?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

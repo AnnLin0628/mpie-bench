@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T5",
+  "instruction": "Candid black-and-white close-up of a couple embracing outdoors. On the left, the bearded man in a dark coat and turtleneck (R1) is shown in profile, smiling. On the right, the woman in a black cap and dark coat (R2) smiles warmly as she wraps her arms around his neck. The background is softly blurred, and the scene is rendered in classic monochrome with soft natural lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1's neck",
+    "R1 is the person whose neck is encircled by R2's arms",
+    "R2 actively holds R1 close in the embrace while R1 smiles in profile",
+    "R1 and R2 are in close physical contact as a couple outdoors",
+    "the background is softly blurred outdoors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's neck, rather than R1 wrapping his arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose neck is being encircled by R2's arms, rather than R2 being the one whose neck is encircled by R1's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose neck is encircled by R2's arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person actively holding R1 close around the neck while R1 is shown smiling in profile, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively holds R1 close in the embrace while R1 smiles in profile"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 in close physical contact, with R2's arms positioned around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in close physical contact as a couple"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

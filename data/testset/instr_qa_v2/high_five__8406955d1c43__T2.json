@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__8406955d1c43__T2",
+  "instruction": "Candid documentary photograph, medium shot. In a modern indoor lounge with light wood paneling, a group completes a hand stack over a wooden coffee table. The man in the patterned blue polo (R2) leans far forward from the left, placing his hands in the center stack. The woman in the black top (R3) sits in the right foreground with her back to the camera, hands joined in the pile. In the center background, the man in the green t-shirt (R1) leans forward to participate, alongside the man in the red plaid shirt (R4) from the right background. Warm indoor lighting casts a soft glow over the group's collaborative gesture.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 leans far forward and places his hands into the center hand stack",
+    "R3 sits in the foreground with her back to the camera and joins her hands into the pile",
+    "R1 leans forward from the center background to participate in the hand stack",
+    "R4 joins the same center hand pile from the background alongside R1",
+    "The group's hand stack is positioned over a wooden coffee table",
+    "The setting is a modern indoor lounge with light wood paneling"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant leaning far forward to put his hands into the center hand stack, rather than R3 having that far-forward placing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans far forward and places his hands into the center hand stack"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the seated foreground participant with her back to the camera whose hands are joined in the pile, rather than R2 having that seated back-facing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sits in the foreground with her back to the camera and joins her hands into the pile"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward from the center background to participate in the hand stack, rather than R4 being the one identified in that center-background participating position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward from the center background to participate in the hand stack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 join the same center hand pile from the background alongside R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 joins the same center hand pile from the background alongside R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

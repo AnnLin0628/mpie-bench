@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T4",
+  "instruction": "A realistic wide-angle photograph in a dance studio with dark walls and a wooden floor. In the center, the man in the rust-brown shirt (R1) supports the woman in the yellow shirt (R2) as she balances horizontally on his back, extending her legs. To the left, the man in the rust-brown shirt (R3) supports the woman in the yellow shirt (R4) in a matching flying pose. On the right, a bystander pair of dancers in yellow and brown shirts replicates the choreography. The scene is captured with even, soft lighting, emphasizing the physical tension and synchronization of the performance.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 supports R2's weight while R2 balances horizontally on R1's back",
+    "R3 supports R4 in a matching flying pose",
+    "R2 extends her legs while balanced on R1's back",
+    "R4 is the supported flyer in R3's matching dance lift",
+    "the performance takes place in a dance studio with dark walls and a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below as R2 balances horizontally on R1's back, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight while R2 balances horizontally on R1's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 supporting R4 in the matching flying pose, rather than R4 supporting R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 supports R4 in a matching flying pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person balanced horizontally on R1's back with legs extended, rather than R1 being balanced on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her legs while balanced on R1's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 the supported flyer in the matching dance lift performed with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the supported flyer in R3's matching dance lift"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 arranged in a dance lift where R2 is horizontal on R1's back while R1 bears the support role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight while R2 balances horizontally on R1's back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

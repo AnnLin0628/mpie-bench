@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma5__T3",
+  "instruction": "Candid full shot of an indoor martial arts gym. On the left, the man in the black athletic shirt (R1) raises his hands in a guard. On the right, the man in the gray t-shirt (R2) engages in close-quarters sparring, throwing a punch. In the background, a few blurred bystanders sit near the gray wall under bright overhead lights.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 throws a punch while R1 raises his hands in a guard",
+    "R1 is in the defensive guard role rather than the punching role",
+    "R2 is the attacking sparring partner throwing the punch",
+    "R1 and R2 are engaged in close-quarters sparring",
+    "The scene is an indoor martial arts gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one throwing a punch toward R1, rather than R1 throwing a punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the punching action toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one raising his hands in a guard against R2's sparring attack, rather than R2 guarding against R1's attack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the defensive guard duty while R2 attacks"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding a guarded stance with his hands raised while sparring with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is hands raised in guard"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 engaged as the close-quarters sparring partner who is throwing the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is the active puncher in sparring"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

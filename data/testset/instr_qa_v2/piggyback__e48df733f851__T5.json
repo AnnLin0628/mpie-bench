@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__e48df733f851__T5",
+  "instruction": "Candid outdoor photograph, medium shot at eye-level. In a sunny park with soft-focus trees in the background, two young girls share a warm embrace. On the left, the curly-haired girl in rust-colored overalls and a white cardigan (R1) stands facing forward, smiling happily at the camera. On the right, the girl with a pink headband and a light pink cardigan (R2) stands close, wrapping her arm around the curly-haired girl's (R1) waist while smiling with her eyes cast down. The scene is backlit by warm, bright sunlight filtering through the trees, creating a soft, glowing atmosphere with natural colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps an arm around R1's waist",
+    "R1 is the girl whose waist is held by R2",
+    "R1 faces forward and smiles toward the camera while R2 looks downward",
+    "R1 and R2 stand close together in direct body contact",
+    "sunny park with soft-focus trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap an arm around R1's waist, rather than R1 wrapping an arm around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps an arm around R1's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the girl whose waist is being held by R2, rather than R2 being the girl whose waist is being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the girl whose waist is held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together in direct body contact, with R2's arm positioned around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together in direct body contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

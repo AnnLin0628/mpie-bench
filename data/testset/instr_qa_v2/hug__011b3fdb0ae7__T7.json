@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__011b3fdb0ae7__T7",
+  "instruction": "Candid lifestyle photograph, medium shot. In a bright indoor room, the curly-haired woman in a red top and patterned pajama pants (R1) on the left and the straight-haired woman in a pink fuzzy sweater and patterned pajama pants (R3) on the right hold the young boy in a gray sweater (R2) together. The straight-haired woman (R3) smiles warmly and happily at the boy, while the curly-haired woman (R1) supports him from the side. The young boy (R2) looks downwards. Soft natural light illuminates the happy family scene, creating a cozy atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 supports R2 from the side",
+    "R3 holds R2 and smiles warmly at him",
+    "R1 and R3 jointly hold R2",
+    "R2 is the young boy being held rather than a supporter",
+    "R2 looks downward while being held",
+    "bright indoor room with soft natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 from the side, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from the side"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 holding R2 and smiling warmly at him, rather than R2 holding R3 and smiling at her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds R2 and smiles warmly at him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R3 jointly holding R2, making R2 the person being held rather than one of the supporters?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 jointly hold R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young boy being held together by R1 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young boy being held rather than a supporter"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look downward while R1 and R3 hold him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks downward while being held"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T2",
+  "instruction": "A candid action photograph shows a self-defense demonstration inside a karate dojo with yellow walls and red-and-blue floor mats. On the left, the woman in a black karate uniform with a red belt (R2) extends her right arm in a high punch. On the right, the older man in a black karate uniform with white stripes (R1) stands facing her, using his left hand to intercept and deflect her punch at head height. Both wear black protective goggles. The bright indoor overhead lighting casts soft shadows on the matted floor, highlighting their focused interaction.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 intercepts and deflects R2's punch rather than R2 deflecting R1's punch",
+    "R2 throws the high punch toward R1 rather than R1 throwing the high punch toward R2",
+    "R1 uses his left hand to meet R2's right-arm punch at head height",
+    "R1 and R2 face each other in a self-defense demonstration with R2 attacking and R1 defending",
+    "both R1 and R2 wear protective goggles",
+    "the demonstration takes place inside a karate dojo with mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 intercepting and deflecting R2's punch rather than R2 intercepting and deflecting R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the defensive deflecting duty while R2 is the puncher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending a high punch toward R1 rather than R1 extending a high punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacker delivering the high punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use his left hand to stop or redirect R2's right-arm punch at head height?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's left hand deflects R2's right-arm punch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other with R2 in the punching role and R1 in the defensive blocking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "opposed self-defense roles between R1 and R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the self-defense demonstration taking place inside a karate dojo with floor mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "karate dojo setting with mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

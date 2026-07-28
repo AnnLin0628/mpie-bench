@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03423d7e45eb__T7",
+  "instruction": "A full-shot cinematic still in a bright dance studio. The male dancer in the black top (R3) stands closely behind the female dancer in the purple top (R1), holding her waist. She stands on pointe with her left arm raised in a curved ballet pose. They look at each other. Bright natural light comes from the background window.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 stands closely behind R1 and holds R1's waist",
+    "R1 is the dancer being held at the waist by R3",
+    "R1 stands on pointe with her left arm raised while R3 maintains the waist hold behind her",
+    "R3 has the waist-holding contact role during the dance pose",
+    "The interaction takes place in a bright dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 standing closely behind R1 and holding R1's waist, rather than R1 standing behind R3 and holding his waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds R1's waist from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer being held at the waist by R3, rather than R3 being held at the waist by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dancer receiving the waist hold from R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 stand on pointe with her left arm raised while R3 maintains the close waist hold behind her, rather than R3 doing that pointe pose while R1 holds his waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the ballet pose while R3 holds her waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 have the waist-holding contact role with R1 during the dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's contact role is holding R1's waist"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned in a ballet pose on pointe as R3 stands close behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 poses on pointe with R3 behind her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

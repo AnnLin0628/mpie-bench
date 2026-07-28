@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__906857f24c03__T2",
+  "instruction": "Studio photograph, medium shot. In an indoor studio with a neutral beige fabric backdrop, the woman in the beige sports bra and black shorts (R1) performs a deep backbend on the left, her head hanging down and arms extended upward. The shirtless man in black pants (R2) stands on the right, leaning forward to hold her hands and support her weight. Soft studio lighting casts gentle shadows on their athletic figures.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's hands and supports R1's weight",
+    "R1 is the dancer in a deep backbend being supported by R2",
+    "R2 stands and leans forward as the supporter while R1 arches backward",
+    "R1's head hangs down and her arms extend upward during the backbend",
+    "The scene is an indoor studio with a neutral beige fabric backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's hands and supporting R1's weight, rather than R1 holding R2's hands and supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hands and supports R1's weight"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being supported in a deep backbend, rather than R2 being supported in a deep backbend?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dancer in a deep backbend being supported by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 stand and lean forward as the supporter while R1 arches backward, rather than R1 standing and leaning forward as the supporter while R2 arches backward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands and leans forward as the supporter while R1 arches backward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 performing a deep backbend with her head hanging down and arms extended upward while R2 holds her hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's head hangs down and her arms extend upward during the backbend"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T252",
+  "instruction": "A candid documentary photograph in a medium-full, eye-level shot captures an indoor motion capture studio with a red carpeted floor and white walls. The man in the black cap (R1) in a dark polo shirt and blue shorts stands on the left, and the woman in the white patterned t-shirt (R2) in blue jeans stands on the right. They stand side-by-side, linking their inner arms while placing their outer hands on their hips and smiling directly at the camera. The room is brightly lit by overhead lights, showing the white walls, a radiator, and the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in the black cap linking an inner arm with R2 while his outer hand rests on his hip",
+    "R2 is the woman in the white patterned t-shirt linking an inner arm with R1 while her outer hand rests on her hip",
+    "R1 and R2 stand side-by-side with their inner arms linked",
+    "R1 and R2 each place their outer hand on their own hip while linked together",
+    "The setting is an indoor motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the black cap whose inner arm is linked with R2's inner arm, rather than R2 being the man in the black cap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man in the black cap linking an inner arm with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the white patterned t-shirt whose inner arm is linked with R1's inner arm, rather than R1 being the woman in the white patterned t-shirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman in the white patterned t-shirt linking an inner arm with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep his outer hand on his own hip while linked arm-in-arm with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his outer hand on his hip while linked with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her outer hand on her own hip while linked arm-in-arm with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her outer hand on her hip while linked with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

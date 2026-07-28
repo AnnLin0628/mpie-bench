@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T5",
+  "instruction": "Candid studio photograph, medium shot. In a bright indoor dance studio with white paneled walls, the instructor in a black long-sleeved top (R1) stands behind the young student in a pink tutu (R2). The young student stands in profile facing left with her arms raised high and one leg extended back, smiling happily. The instructor supports the student's waist with her right hand and holds her raised left foot with her left hand, looking down at her leg to guide her posture. Soft, bright natural light illuminates the clean white setting, creating a gentle and focused atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2's waist from behind",
+    "R1 holds R2's raised foot to guide her posture",
+    "R1 is the instructor guiding R2, while R2 is the student performing the dance pose",
+    "R2 has her arms raised and one leg extended back while being assisted by R1",
+    "The scene is a bright indoor dance studio with white paneled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's waist from behind, rather than R2 supporting R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's waist from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's raised foot to guide the pose, rather than R2 holding R1's raised foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's raised foot"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 acting as the instructor guiding R2's leg and posture, rather than R2 guiding R1's posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides R2's dance posture"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young student performing the dance pose while R1 assists her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the pose while R1 assists"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have her arms raised and one leg extended back while R1 makes guiding contact with her waist and foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 poses with raised arms and extended leg while R1 assists"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

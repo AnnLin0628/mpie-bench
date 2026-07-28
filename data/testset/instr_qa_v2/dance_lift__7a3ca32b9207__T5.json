@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__7a3ca32b9207__T5",
+  "instruction": "Candid dance photograph, full shot. Inside a bright, minimalist ballet studio with white walls and large windows, the female dancer in a black long-sleeve top and white tutu (R1) spins dynamically on one leg in the center-left. The male dancer in a black unitard (R2) stands closely behind her, supporting her movement with arms extended as they hold hands. Both dancers maintain focused expressions during the routine. Soft, natural daylight streams through the windows, illuminating the wooden floor and creating a neutral color palette with gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's dance movement from behind",
+    "R1 spins dynamically on one leg while R2 assists her",
+    "R1 and R2 hold hands as part of the partnered dance support",
+    "R2 stands closely behind R1 during the support",
+    "the scene is a bright minimalist ballet studio with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's dance movement from behind, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's dance movement from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer spinning dynamically on one leg while R2 assists her, rather than R2 spinning while R1 assists him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 spins dynamically on one leg while R2 assists her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend his arms to support R1 through their hand contact, rather than R1 extending her arms to support R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends his arms to support R1 through hand contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands as R2 stands closely behind R1 during the dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands with R2 positioned closely behind R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

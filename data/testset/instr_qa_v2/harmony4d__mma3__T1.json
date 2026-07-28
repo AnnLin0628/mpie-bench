@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T1",
+  "instruction": "Candid action photograph, full shot. Inside a martial arts gym with grey padded walls, the man in the black t-shirt and shorts (R1) stands on the left in a defensive stance. He faces right, wearing white shin guards and black gloves. The shirtless man with a mullet and gold-patterned shorts (R2) lunges forward from the right, throwing a punch with his white-gloved hand toward R1. In the background, two male bystanders stand watching near camera tripods. The scene is lit by even overhead gym lighting, casting soft shadows on the grey floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward to throw a punch toward R1, rather than R1 lunging to punch R2",
+    "R1 is in the defensive receiving role against R2's attack, rather than R2 defending against R1",
+    "R2's white-gloved hand is the striking hand aimed at R1",
+    "R1 faces R2 in a guarded martial arts stance while R2 advances",
+    "contact-relevant gloves are worn during the sparring exchange",
+    "the scene is inside a martial arts gym with grey padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward to throw a punch toward R1, rather than R1 lunging forward to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacker throwing the punch toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person in a defensive stance receiving or guarding against R2's punch, rather than R2 defending against a punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the defensive receiving role while R2 attacks"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's white-gloved hand the one aimed in a punch toward R1, rather than R1's gloved hand being the punch aimed at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's glove is the striking glove directed at R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 in a guarded martial arts posture while R2 advances toward him with a punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guards while R2 advances with a punch"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 wearing a white glove on the hand used to punch toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2's white punching glove"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

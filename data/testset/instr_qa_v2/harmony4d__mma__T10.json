@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T10",
+  "instruction": "Candid documentary photograph, full shot at eye-level. Inside a martial arts gym with grey mats, the man in the grey t-shirt (R2) on the left and the man in the white t-shirt (R1) on the right are grappling in a close clinch. The man in the grey t-shirt (R2) wears black shorts and black-and-yellow shin guards, wrapping his arms tightly around his partner's upper body. The man in the white t-shirt (R1) wears blue shorts and white shin guards, leaning forward into the hold. In the background, two bystanders stand near training equipment. Neutral indoor overhead lighting illuminates the scene, casting soft shadows on the grey floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps his arms tightly around R1's upper body in the clinch",
+    "R1 leans forward into R2's hold",
+    "R2 controls the upper-body clinch while R1 is the held partner",
+    "R1 and R2 wear shin guards during the grappling exchange",
+    "grey mats are present in the martial arts gym",
+    "the scene is inside a martial arts gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his arms tightly around R1's upper body, rather than R1 wrapping his arms tightly around R2's upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms tightly around R1's upper body in the clinch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward into R2's clinch hold, rather than R2 leaning forward into R1's hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward into R2's hold"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have the controlling upper-body wrap on R1 while R1 is the partner being held in that clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 controls the upper-body clinch while R1 is the held partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 grappling in a close clinch with direct upper-body contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are grappling in a close clinch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

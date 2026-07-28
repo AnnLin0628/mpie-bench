@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T18",
+  "instruction": "A cinematic full shot capturing two friends in a sunny park setting. In the center foreground, the large Black man in the dark t-shirt (R1) stands happily, smiling warmly with his arms slightly extended. In the left background, the bald man in the dark blue t-shirt (R2) stands relaxed and smiles towards the group. The scene is set on lush green grass with leafy trees in the background under bright daylight, featuring soft artistic motion blur on the left and right edges of the frame.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 stands in the center foreground with arms slightly extended rather than R2 doing so",
+    "R2 stands relaxed in the background and smiles toward the group rather than R1 being the background relaxed figure",
+    "R1 is the foreground friend smiling warmly while R2 remains a relaxed background friend",
+    "The scene is set in a sunny park with green grass and leafy trees",
+    "There is soft artistic motion blur at the frame edges"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the friend standing in the center foreground with his arms slightly extended, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground extended-arm role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the friend standing relaxed in the background and smiling toward the group, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 relaxed background observer role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 occupy the central foreground role while R2 occupies a background role facing toward the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric foreground-background participation"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

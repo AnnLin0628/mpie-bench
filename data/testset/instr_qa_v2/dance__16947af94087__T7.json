@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T7",
+  "instruction": "Cinematic film still, medium close-up. In a classical hall with a balcony visible in the background, the man in the brown shirt and beanie (R1) on the left and the woman in the black dress (R2) on the right stand extremely close. The man (R1) is seen from a three-quarter back view, his face in profile as he leans in. The woman (R2), with a white scarf tied in her hair, has her eyes closed as their foreheads and noses nearly touch. Soft, warm light enhances the tender, quiet mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans in toward R2 while seen from a three-quarter back view",
+    "R2 keeps her eyes closed as R1 leans close to her",
+    "R1 and R2 stand extremely close with their foreheads and noses nearly touching",
+    "R2 has a white scarf tied in her hair",
+    "classical hall with a balcony visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning in toward R2, rather than R2 being described as the one leaning in toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans in toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person with her eyes closed as their foreheads and noses nearly touch, rather than R1 being the one described with closed eyes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has eyes closed during the close face-to-face moment"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown from a three-quarter back view with his face in profile while standing extremely close to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body/viewing configuration near R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned face-to-face so closely that their foreheads and noses nearly touch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "near forehead-and-nose contact between R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

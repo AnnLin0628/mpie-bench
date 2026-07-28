@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__35f1d63b53fa__T1",
+  "instruction": "A candid documentary photograph, medium full shot, set in a sunny outdoor park with green grass and leafy trees. On the left, the bald, bearded man (R2) in a dark blue t-shirt and black pants stands in profile facing right. In the center, the woman with a ponytail (R3) in a dark blue t-shirt and light blue jeans stands facing right. On the right, the heavy-set Black man (R1) in a dark blue t-shirt and dark pants stands in profile facing left. All three smile warmly as they stand in a semi-circle, stacking their hands together in a central huddle. Natural dappled sunlight filters through the trees, casting soft shadows and highlighting the warm green and blue tones of the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 faces left into the central hand-stacking huddle while R2 faces right into it",
+    "R3 is the central participant in the semi-circle hand huddle between R2 and R1",
+    "R1, R2, and R3 stack their hands together in a shared central huddle",
+    "R1 and R2 participate from opposite sides of the huddle while R3 joins from the center",
+    "All labeled participants smile warmly during the hand-stack interaction",
+    "The scene is a sunny outdoor park with green grass and leafy trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the central hand stack, is R1 the participant facing left toward the huddle while R2 faces right toward it, rather than R1 facing right and R2 facing left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces left into the hand huddle while R2 faces right into it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the central participant in the semi-circle contributing to the hand stack between R2 and R1, rather than R1 being the central participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the central hand-huddle position between R2 and R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 participate from opposite sides of the hand-stacking huddle while R3 joins the stack from the center?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are side participants and R3 is the center participant in the shared hand stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

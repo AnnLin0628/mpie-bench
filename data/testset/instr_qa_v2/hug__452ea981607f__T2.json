@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__452ea981607f__T2",
+  "instruction": "Candid lifestyle photograph, medium shot at eye-level. In a bright, minimalist indoor room, the bald elderly man (R2) in a blue sweater and the elderly woman with short white hair (R1) in a beige sweater share an intimate hug. On the left, the bald elderly man (R2) faces right, wrapping his arms around her and resting his head deeply against her shoulder with a peaceful expression. On the right, the elderly woman (R1) is turned away from the camera, showing the back of her white hair as she holds him close. The background is softly out of focus, showing a neutral wall and a small decorative table. The lighting is soft and natural, casting a warm, gentle glow over the affectionate couple.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests his head deeply against R1's shoulder",
+    "R2 wraps his arms around R1 while facing her",
+    "R1 is turned away from the camera while holding R2 close",
+    "R1 holds R2 close as he leans into her shoulder",
+    "bright minimalist indoor room with a softly out-of-focus background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting his head deeply against R1's shoulder, rather than R1 resting her head against R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his head deeply against R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one wrapping his arms around R1 while facing her, rather than R1 being the one described as facing and wrapping around R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms around R1 while facing her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 turned away from the camera while holding R2 close, rather than R2 being turned away from the camera in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is turned away from the camera while holding R2 close"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold R2 close as R2 leans his head into her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 close as he leans into her shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

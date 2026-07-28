@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__1b151a0db276__T1",
+  "instruction": "Candid studio photograph, full shot. Indoors, a girl in a maroon t-shirt and white pants (R2) stands on a light gray sofa on the left, wrapped in a Canadian flag like a cape, smiling at a boy in a red beanie and white t-shirt (R1). The boy (R1) stands on the right side of the sofa, body angled left, reaching his hand toward her cape with a playful expression. The background is a plain beige wall. The scene is illuminated by soft, warm light, highlighting the vibrant red of the flag and beanie against neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches his hand toward R2's Canadian flag cape",
+    "R2 is the person wrapped in the Canadian flag like a cape while R1 is not",
+    "R1 is the active reacher and R2 is the caped person being approached",
+    "R2 stands on the sofa while R1 stands nearby reaching toward her cape",
+    "Canadian flag used as R2's cape",
+    "light gray sofa supporting R2",
+    "plain beige indoor studio wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching his hand toward R2's Canadian flag cape, rather than R2 reaching toward R1's clothing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches his hand toward R2's Canadian flag cape"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one wrapped in the Canadian flag like a cape while R1 is not the caped person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person wrapped in the Canadian flag like a cape while R1 is not"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active person extending a hand toward the cape while R2 is the caped person being playfully approached?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active reacher and R2 is the caped person being approached"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing on the sofa while R1 stands nearby and reaches toward her cape?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on the sofa while R1 stands nearby reaching toward her cape"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__685938e9993f__T1",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.625,
+  "S_instr_role": 0.5,
+  "S_instr_asymm": 0.75,
+  "S_instr_prop": 0.5,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.5,
+  "S_instr_prop_object": 0.5,
+  "n_main": 5,
+  "n_all": 5,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding a slice of pizza on a plate, rather than R2 being the plate-holding diner?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R1 holds a pizza slice but not on a plate"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting opposite R1 while holding her own pizza slice, rather than R1 being described as the opposite seated blonde diner?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 sits opposite holding her own slice"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile while holding his pizza on a plate as R2 smiles back with her own pizza slice?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "both smile with pizza slices, but no held plate"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there an open cardboard pizza box placed between R1 and R2 on the dining table?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "open pizza box is between them on the table"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a plate with a slice of pizza on it?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "R1 holds a slice, not a plate"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "face_to_face_talk__685938e9993f__T1",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 11.65,
+    "written_at": "2026-07-17T16:17:56",
+    "gen_relpath": "outputs/gpt-image-2/face_to_face_talk__685938e9993f__T1.png",
+    "qa_relpath": "instr_qa_v2/face_to_face_talk__685938e9993f__T1.json",
+    "n_questions": 5
+  }
+}

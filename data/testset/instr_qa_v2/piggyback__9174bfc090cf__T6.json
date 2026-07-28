@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__9174bfc090cf__T6",
+  "instruction": "A candid outdoor photograph captured in a low-angle close-up shot against a clear, bright blue sky. On the left, the man in the maroon polo shirt (R1) looks down affectionately with a gentle smile at the young girl in the pink tie-dye dress (R2). The young girl stands in the center of the frame, holding a pair of green binoculars in both hands near her chest while smiling brightly. The bright, direct sunlight illuminates their faces, highlighting their joyful expressions and creating a warm, cheerful atmosphere against the solid blue background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 looks down affectionately at R2 with a gentle smile",
+    "R2 is the young girl standing in the center and smiling brightly",
+    "R2 holds green binoculars in both hands near her chest",
+    "the scene is outdoors under bright sunlight against a clear blue sky",
+    "the photo is a low-angle close-up"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking down affectionately at R2, rather than R2 looking down affectionately at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directs affectionate downward attention toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the green binoculars in both hands near her chest, rather than R1 holding them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the object-holding duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in the center while holding the binoculars near her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body role and object-holding configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

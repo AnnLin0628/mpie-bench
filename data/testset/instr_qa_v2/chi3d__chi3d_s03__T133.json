@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T133",
+  "instruction": "Candid documentary photograph, wide-angle full shot. In an indoor motion capture studio with a red carpeted floor and white walls, the woman in the white t-shirt (R2) stands on the left-center, profile facing right, reaching her right hand to touch the man's shoulder. The man in the black polo shirt (R1) stands on the right-center, facing slightly left and looking at her. The woman (R2) extends her right arm to touch the right shoulder of the man (R1). Bright overhead fluorescent lighting casts soft shadows across the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's right shoulder",
+    "R1 is the person receiving the shoulder touch from R2",
+    "R2 initiates the contact while R1 looks toward her",
+    "R2 stands in profile facing R1 as she reaches out",
+    "R1 faces slightly toward R2 during the shoulder contact",
+    "The scene is an indoor motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's right shoulder, rather than R1 extending his arm to touch R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the shoulder-touch contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being touched by R2, rather than R2 being the person whose shoulder is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the shoulder touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 perform the reaching motion toward R1 while R1 looks at her, rather than R1 performing the reaching motion toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches while R1 attends to her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

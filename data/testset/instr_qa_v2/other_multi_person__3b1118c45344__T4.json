@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__3b1118c45344__T4",
+  "instruction": "A candid outdoor photograph, full shot at eye-level. In an outdoor grassy field with autumn trees in the background, the woman in the maroon patchwork dress (R2) on the left and the woman in the peach and blue patterned dress (R1) on the right stand facing each other. Both are barefoot and perform a synchronized dance gesture, holding their hands near their chins. Warm natural daylight illuminates the scene with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the dancer on the right facing R2 while performing the synchronized hand-near-chin gesture",
+    "R2 is the dancer on the left facing R1 while performing the synchronized hand-near-chin gesture",
+    "R1 wears the peach and blue patterned dress while dancing opposite R2",
+    "R2 wears the maroon patchwork dress while dancing opposite R1",
+    "Both R1 and R2 are barefoot and stand facing each other in a synchronized dance pose",
+    "The scene is an outdoor grassy field with autumn trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer on the right facing R2 while performing the synchronized hand-near-chin gesture, rather than R2 being the dancer on the right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's assigned position and dance role relative to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer on the left facing R1 while performing the synchronized hand-near-chin gesture, rather than R1 being the dancer on the left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's assigned position and dance role relative to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while both hold their hands near their chins in a synchronized dance gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "shared synchronized dance configuration between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the woman in the peach and blue patterned dress dancing opposite R2, while R2 is the woman in the maroon patchwork dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 dress assignments within the dance interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

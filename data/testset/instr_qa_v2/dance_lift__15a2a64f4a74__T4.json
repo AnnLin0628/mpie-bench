@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T4",
+  "instruction": "A clean, realistic photographic medium close-up of a bright ballet studio with wooden barres. In the foreground on the right, the blonde girl in a bun (R1) stands with her hands on her hips, looking forward. In the background on the left, the girl with light brown hair (R2) stands in a similar pose with her hands on her hips, looking forward. Both girls wear pink leotards with matching skirts. They stand in front of the wooden barres, posing attentively. Bright, even, soft indoor lighting illuminates the scene, creating a clean and focused atmosphere.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 is the blonde girl in a bun in the foreground, standing with hands on hips and looking forward",
+    "R2 is the light-brown-haired girl in the background, standing in a similar hands-on-hips pose and looking forward",
+    "R1 and R2 are assigned distinct foreground/background dancer roles rather than being swapped",
+    "Wooden ballet barres are visible in the studio",
+    "The setting is a bright ballet studio with soft indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the blonde girl in a bun occupying the foreground hands-on-hips dancer role, rather than R2 occupying that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground blonde-bun dancer with hands on hips"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the light-brown-haired girl in the background hands-on-hips dancer role, rather than R1 occupying that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the background light-brown-haired dancer with hands on hips"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": true
+  }
+}

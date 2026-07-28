@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__b7c458d97ec1__T2",
+  "instruction": "A candid documentary photograph in a medium shot captures an outdoor scene next to a light-brown tiled wall with a street lamp visible in the background. On the left, the man with dreadlocks in a yellow jersey (R2) stands leaning forward with both hands pressed flat against the wall. Behind him on the right, the bald security guard in a dark uniform (R1) leans in, placing his right hand on the lower back of the man (R2) during a pat-down. The guard looks down at the man's waist. The image is lit by bright, warm daylight, creating soft natural shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 conducts a pat-down on R2 by placing his right hand on R2's lower back",
+    "R2 is the searched person leaning forward with both hands pressed flat against the wall",
+    "R1 looks down toward R2's waist during the pat-down",
+    "R1 stands behind R2 while making contact with R2's lower back",
+    "R2 presses both hands against a light-brown tiled wall",
+    "outdoor daylight setting with a street lamp visible"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 conducting the pat-down by placing his right hand on R2's lower back, rather than R2 patting down R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 conducts a pat-down on R2 by placing his right hand on R2's lower back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being searched with both hands pressed flat against the wall, rather than R1 being the one searched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the searched person leaning forward with both hands pressed flat against the wall"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look down toward R2's waist during the pat-down, rather than R2 inspecting R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down toward R2's waist during the pat-down"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned behind R2 while making contact with R2's lower back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 while making contact with R2's lower back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__4f2a4568c30f__T3",
+  "instruction": "Candid wedding photograph, medium shot. Outdoors against a green mountain backdrop, a man in a black leather jacket (R1) on the left holds the raised hand of a smiling woman with long curly hair (R2). The woman, wearing a white leather jacket and lace dress, faces forward as she spins, her long hair swirling in the air. Soft, warm daylight illuminates the couple.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's raised hand to guide her spin",
+    "R2 is the person spinning while R1 maintains the handhold",
+    "R1 provides the raised hand contact for R2's turn rather than being the one spun",
+    "R1 and R2 are connected by a handhold during R2's spin",
+    "R2 faces forward with her long curly hair swirling as she spins",
+    "The couple is outdoors against a green mountain backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's raised hand to guide her spin, rather than R2 holding R1's raised hand to guide him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's raised hand to guide her spin"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person spinning while R1 maintains the handhold, rather than R1 spinning while R2 guides him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person spinning while R1 maintains the handhold"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 provide the raised hand contact for R2's turn, rather than R2 providing the raised hand contact for R1's turn?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides the raised hand contact for R2's turn rather than being the one spun"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected by a handhold while R2 spins?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are connected by a handhold during R2's spin"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face forward with her long curly hair swirling in the air as she spins while R1 remains the handholding partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces forward with her long curly hair swirling as she spins"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__95b5f8debf94__T2",
+  "instruction": "Candid lifestyle photograph, medium shot. In a bright kitchen with white tiled walls, the young girl in the light blue long-sleeve shirt (R2) sits on the white countertop on the left, looking toward the man in the beige t-shirt (R1). The man stands on the right, facing left in profile with a joyful smile. Their right hands are pressed together in a high-five in the center of the frame. Soft, natural light fills the space, showcasing the clean white shelves, a white kettle, and kitchen utensils in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 sits on the white countertop while R1 stands facing her during the high-five",
+    "R1 is the standing participant high-fiving the seated R2, rather than R2 being the standing participant",
+    "R2 is the seated child on the counter receiving the high-five from standing R1, rather than R1 being seated",
+    "R1 and R2 press their right hands together in a high-five",
+    "the white countertop supports R2 during the interaction",
+    "the interaction takes place in a bright kitchen with white tiled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the standing participant high-fiving R2, rather than R2 being the one standing while R1 sits?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is standing while high-fiving seated R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face R2 in profile while R2 sits and looks toward him, rather than R2 standing in profile while R1 sits?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces the seated R2 during the interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the high-five, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

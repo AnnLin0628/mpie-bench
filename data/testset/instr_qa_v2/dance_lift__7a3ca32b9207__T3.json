@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__7a3ca32b9207__T3",
+  "instruction": "A candid action photograph captures a full shot from a low angle in a bright, minimalist indoor dance studio. The female ballet dancer in a black long-sleeved top and white tutu (R1) is in the foreground with her back to the camera, lifting one leg in a pose. Beside her, the male ballet dancer in a black unitard (R2) stands on the left, holding her raised hand overhead. Bright, diffused light fills the white-walled space.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's raised hand overhead",
+    "R1 is the dancer whose hand is being held overhead by R2",
+    "R1 lifts one leg in a ballet pose while R2 provides the hand contact",
+    "R2 stands beside R1 as her dance partner holding her raised hand",
+    "R1 has her back to the camera during the pose",
+    "The scene is a bright minimalist indoor dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's raised hand overhead, rather than R1 holding R2's raised hand overhead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's raised hand overhead"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer whose hand is raised overhead and held by R2, rather than R2 being the dancer whose hand is held overhead by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dancer whose hand is being held overhead by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting one leg in the ballet pose while R2 maintains the hand contact, rather than R2 lifting one leg while R1 holds his hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts one leg in a ballet pose while R2 provides the hand contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 act as R1's dance partner by standing beside her and holding her raised hand overhead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands beside R1 as her dance partner holding her raised hand"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 posed with her back to the camera while connected to R2 through the raised-hand hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has her back to the camera during the pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

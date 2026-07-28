@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T28",
+  "instruction": "Candid action photograph, full shot. In an indoor gym with white mats, the man in the black t-shirt (R2) is in the foreground right with his back to the camera, lunging in a wide stance. He spars with the man in the patterned compression shirt (R4), who stands on the left facing him defensively. Cool indoor lighting shines through light smoke in the background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 lunges in a wide stance while sparring with R4",
+    "R4 faces R2 defensively during the sparring exchange",
+    "R2 has his back to the camera while engaging R4",
+    "R2 and R4 are sparring in an indoor gym",
+    "white gym mats are present under the action",
+    "cool indoor lighting and light smoke appear in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one lunging in a wide stance toward R4, rather than R4 lunging in a wide stance toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges in a wide stance while sparring with R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one facing R2 defensively while R2 lunges, rather than R2 being the defensive-facing partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 faces R2 defensively during the sparring exchange"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 shown with his back to the camera while sparring with R4, rather than R4 being the one with his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his back to the camera while engaging R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 actively sparring with R4 in the gym scene?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R4 are sparring in an indoor gym"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

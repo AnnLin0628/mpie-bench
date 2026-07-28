@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__405a8e47b7e8__T4",
+  "instruction": "A candid medium-shot documentary photograph of an indoor workshop. On the left, the young man with an afro in a grey shirt (R2) stands watching the man with short hair in a red turtleneck and green apron (R3) on the right. R3 leans over a wooden table, carefully placing a lid on a cylindrical container. Colorful glass vases and a laptop are visible on the table. Bright daylight streams in from a window behind them, creating a warm and focused atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 carefully places a lid on a cylindrical container while R2 watches",
+    "R2 is the observer rather than the person handling the container",
+    "R3 leans over a wooden table to work with the container",
+    "a cylindrical container and lid are on the wooden table",
+    "colorful glass vases are visible on the table",
+    "a laptop is visible on the table",
+    "the setting is an indoor workshop with daylight from a window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person carefully placing a lid on the cylindrical container while R2 watches, rather than R2 placing the lid while R3 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the container-lid task while R2 observes"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing back as the watcher of R3's work, rather than being the person leaning over the table to handle the container?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the observer rather than the active handler"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 lean over the wooden table in the active workshop role, with R2 watching him work?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the active table-working role while R2 observes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

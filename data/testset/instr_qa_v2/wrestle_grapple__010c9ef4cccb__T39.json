@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T39",
+  "instruction": "A candid documentary photograph, medium shot from a low angle, inside a judo dojo with yellow and blue mats. On the left, the young woman in the blue judogi (R1) kneels on the mat, looking down. Beside her in the center, the young man in the white judogi (R2) also kneels, looking forward. In the foreground right, the older man in the white judogi (R3) is positioned with his back to the camera, squatting as he faces the two students. The scene is illuminated by bright, natural indoor lighting, casting soft shadows on the beige wall behind them.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 squats with his back to the camera while facing R1 and R2",
+    "R1 kneels looking down while R2 kneels looking forward",
+    "R1 and R2 are the two kneeling students being faced by R3",
+    "yellow and blue judo mats in the dojo",
+    "judo dojo setting with a beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 squatting with his back to the camera while facing R1 and R2, rather than R1 or R2 squatting with their back to the camera facing him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the squatting figure facing the two kneeling students"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the kneeling person looking down while R2 is the kneeling person looking forward, rather than R2 looking down while R1 looks forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down and R2 looks forward while both kneel"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 positioned as the older man facing the two students R1 and R2, rather than R1 or R2 facing R3 as the older man does?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 faces R1 and R2 as the older man in the foreground"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 kneeling beside R1 while R3 faces both of them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kneels beside R1 in front of R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

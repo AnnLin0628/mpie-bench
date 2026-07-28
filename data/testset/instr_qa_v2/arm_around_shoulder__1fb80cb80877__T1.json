@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1fb80cb80877__T1",
+  "instruction": "A candid studio portrait photograph captured in a medium shot at eye-level. In a minimalist indoor studio with a plain off-white wall, the smiling redhead woman (R1) stands on the left, wearing a brown top under a light blue shirt tied at the waist and beige trousers, looking towards her friend with a wide, joyful smile. Beside her on the right, the laughing woman with dark hair (R2) wears a white wrap blouse and light trousers, leaning slightly forward with her left hand resting on her stomach as she laughs heartily with her eyes closed. The two stand side-by-side, sharing a genuine moment of laughter. The scene is illuminated by bright, soft, diffused studio lighting, creating a warm, clean color palette with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 smiles widely while looking toward R2",
+    "R2 laughs with eyes closed while leaning slightly forward",
+    "R2 rests her left hand on her stomach as she laughs",
+    "R1 and R2 stand side-by-side sharing a joyful moment",
+    "minimalist indoor studio with a plain off-white wall",
+    "bright, soft, diffused studio lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking toward R2 with a wide joyful smile, rather than R2 looking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles widely while looking toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning slightly forward with her eyes closed as she laughs, rather than R1 doing this?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 laughs with eyes closed while leaning slightly forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 rest her left hand on her stomach while laughing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her left hand on her stomach as she laughs"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

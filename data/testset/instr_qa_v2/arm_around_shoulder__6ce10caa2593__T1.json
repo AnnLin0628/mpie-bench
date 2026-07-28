@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__6ce10caa2593__T1",
+  "instruction": "A candid outdoor photograph with a natural, documentary feel captures a full-length, eye-level shot of friends walking along a dirt path in a lush green forest park during the daytime. On the far left, the young woman in a white t-shirt and blue jeans (R1) walks forward smiling, carrying a rolled-up purple blanket under her left arm. Next to her, a bystander young man in a red-and-white striped t-shirt walks along. To his right, the young woman with a white patterned headband (R2) walks forward smiling with a black camera around her neck. On the far right, the bearded man in a black t-shirt and blue jeans (R4) walks with a blue cap worn backward, smiling as he looks down. The group moves forward together under bright, diffused daylight filtering through the trees, creating soft shadows and a warm, natural color palette.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 carries a rolled-up purple blanket under her left arm while walking, rather than R2 carrying it",
+    "R2 has a black camera around her neck while walking, rather than R1 having it",
+    "R3 is a bystander young man walking along with the group",
+    "R4 walks with the group while smiling and looking down",
+    "rolled-up purple blanket under R1's arm",
+    "black camera around R2's neck",
+    "lush green forest park dirt path in daytime"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying the rolled-up purple blanket under her arm, rather than R2 carrying it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the rolled-up purple blanket instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have the black camera around her neck, rather than R1 having the camera around her neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wears the black camera instead of R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 described as a bystander young man walking along with the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the bystander walking with the group"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the friends walking along a dirt path in a lush green forest park during daytime?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "daytime dirt path in a lush green forest park"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

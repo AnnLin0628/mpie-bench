@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T11",
+  "instruction": "A candid action photograph captured from a full shot at eye-level shows a martial arts dojo with yellow walls and a red and blue mat floor. On the left, the woman in the black martial arts uniform with a red belt (R2) lunges forward to the right, extending her right arm in a strike. On the right, the man in the black martial arts uniform with white stripes (R1) stands in a defensive stance, facing left, blocking her strike with his raised left arm. In the far left background, a blurred bystander in dark clothing stands watching. The scene is illuminated by bright overhead indoor lighting, highlighting the warm yellow walls and vibrant floor mats.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward and initiates a right-arm strike toward R1",
+    "R1 blocks R2's incoming strike with his raised left arm",
+    "R2 is the offensive striker while R1 is the defensive blocker",
+    "R1 faces R2 in a defensive stance during the exchange",
+    "R2 extends her right arm as the striking limb",
+    "martial arts dojo with yellow walls and red and blue mat floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward to strike R1, rather than R1 lunging forward to strike R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the attack toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 blocking R2's incoming strike with a raised left arm, rather than R2 blocking a strike from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the defensive block against R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the offensive striker while R1 is the defensive blocker in the exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric attacker versus defender roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend her right arm as the striking limb toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right-arm strike role"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the action set in a martial arts dojo with yellow walls and red and blue floor mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "dojo setting with yellow walls and colored mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

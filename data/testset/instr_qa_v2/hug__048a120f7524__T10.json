@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T10",
+  "instruction": "A candid studio photograph with a close-up shot against a plain grey background. On the right, the blonde-haired man (R1) in a grey long-sleeved shirt looks down tenderly at the long-haired person (R2) on the left. The blonde-haired man (R1) gently brushes his hand through the hair of the long-haired person (R2), who keeps their eyes closed with a peaceful, relaxed facial expression. The scene is captured with soft, diffused studio lighting and a neutral color palette, emphasizing the quiet intimacy of the moment.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently brushes his hand through R2's hair",
+    "R2 is the person whose hair is being brushed by R1",
+    "R1 is the active hair-touching person while R2 is the relaxed recipient",
+    "R2 keeps their eyes closed with a peaceful, relaxed expression during the interaction",
+    "The scene is a close-up studio photograph against a plain grey background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently brushing his hand through R2's hair, rather than R2 brushing R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently brushes his hand through R2's hair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose hair is being touched and brushed by R1, rather than R1 being the one whose hair is brushed by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose hair is being brushed by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active hair-grooming person while R2 is the relaxed recipient of that touch, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active hair-touching person while R2 is the relaxed recipient"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep their eyes closed with a peaceful, relaxed expression while receiving R1's hair brushing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 keeps their eyes closed with a peaceful, relaxed expression during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

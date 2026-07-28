@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T1",
+  "instruction": "Cinematic film still, low-angle full shot. In a bright classical dance studio with wooden floors, the brunette ballerina (R1) in a white leotard and sheer skirt stands in the foreground left, performing an arabesque en pointe on her left leg with her right leg extended back. In the background right, the blonde ballerina (R2) in a white leotard and sheer skirt performs a matching arabesque en pointe. Both ballerinas hold the wooden barre for balance, executing synchronized movements. Strong backlight streams through a large window, creating a soft, hazy atmosphere with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the brunette ballerina performing the foreground arabesque en pointe",
+    "R2 is the blonde ballerina performing the matching arabesque en pointe in the background",
+    "R1 stands en pointe on her left leg with her right leg extended back",
+    "R1 and R2 both hold the wooden barre for balance",
+    "wooden barre used for balance during the synchronized dance movement",
+    "bright classical dance studio with wooden floors and strong window backlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the brunette ballerina performing the foreground arabesque en pointe, while R2 is the blonde ballerina performing the matching arabesque in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground arabesque role versus R2 background matching role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina executing the matching arabesque in the background, rather than R1 being the background matching dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 background matching-dancer role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 perform an arabesque en pointe on her left leg with her right leg extended back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 specific arabesque body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 execute synchronized arabesque movements while holding the barre for balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 synchronized barre-supported dance roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__22f7679e20e4__T1",
+  "instruction": "Candid cinematic medium shot of an outdoor balcony at sunset. The man with white hair and beard (R1) in a dark turtleneck stands on the left, looking aside. The woman with blonde-gray hair (R2) in a blue trench coat stands on the right, hugging him closely and resting her head on his chest. His arm wraps around her back in a warm embrace. Warm golden sunset light illuminates them from behind, casting a soft glow against the city background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests her head on R1's chest",
+    "R1 wraps his arm around R2's back",
+    "R2 hugs R1 closely while leaning into him",
+    "R1 stands as the chest-resting partner in the embrace",
+    "outdoor balcony at sunset with a city background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her head on R1's chest, rather than R1 resting his head on R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her head on R1's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping his arm around R2's back, rather than R2 being specified as wrapping an arm around R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps his arm around R2's back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is used as the resting place for R2's head, rather than R2's chest being used by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands as the chest-resting partner in the embrace"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person leaning closely into R1 with her head against him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 hugs R1 closely while leaning into him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

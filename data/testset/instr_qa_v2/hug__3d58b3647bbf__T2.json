@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3d58b3647bbf__T2",
+  "instruction": "A candid studio photograph captured in a medium close-up from a high angle. Against a plain white background, the woman with straight brown hair (R1) sits on the left, leaning her head on the shoulder of the woman with curly dark hair (R2) who sits on the right. R1 has her eyes closed, resting her hand on R2's shoulder. R2 sits upright, looking off to the right side with a calm, serene expression. Soft, diffused studio lighting illuminates the scene, creating a gentle, intimate mood with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans her head on R2's shoulder",
+    "R2 sits upright while R1 rests against her",
+    "R1 rests her hand on R2's shoulder",
+    "R1 has her eyes closed during the shoulder contact",
+    "plain white studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning her head on R2's shoulder, rather than R2 leaning her head on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses R2's shoulder as the head-resting support"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 remain upright as the shoulder support for R1, rather than R1 remaining upright as the shoulder support for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 provides the upright shoulder support while R1 leans"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting her hand on R2's shoulder, rather than R2 resting her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand contacts R2's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have her eyes closed while leaning against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's closed-eyed resting role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting calmly upright while R1 rests against her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's upright receiving/supporting role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

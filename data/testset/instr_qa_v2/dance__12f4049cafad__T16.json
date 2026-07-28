@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T16",
+  "instruction": "A cinematic medium shot of a studio setting with a soft pastel pink and blue gradient background. On the left, the blonde woman in the black halter dress (R3) stands facing forward, smiling down-left while dancing with her hands raised near her shoulders. Beside her on the right, the man in the white t-shirt and black vest (R2) stands facing forward, looking down with a neutral expression as he dances with his hands near his chest. The two dance side-by-side without physical contact. The scene is illuminated by soft, colorful studio lighting that casts a gentle glow, creating a vibrant and energetic atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 dances with her hands raised near her shoulders while R2 dances with his hands near his chest",
+    "R3 smiles down-left while R2 looks down with a neutral expression",
+    "R2 and R3 dance side-by-side without physical contact",
+    "R2 and R3 both face forward while dancing",
+    "The scene is a studio setting with a soft pastel pink and blue gradient background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 dancing with her hands raised near her shoulders while R2 dances with his hands near his chest, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has raised hands near shoulders while R2 has hands near chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 smiling down-left while R2 looks down with a neutral expression, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the smiling down-left expression and R2 has the neutral downward look"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 dance with raised hands near her shoulders while R2 dances with hands near his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct dancing hand positions for R3 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

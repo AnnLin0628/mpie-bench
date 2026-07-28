@@ -1,0 +1,65 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__185c4e46d822__T1",
+  "instruction": "Candid studio close-up photograph of a dark-skinned woman with curly black hair (R1) in a white turtleneck and a young girl with long straight dark hair (R2) in a beige ribbed top against a plain light gray background. The woman (R1) is on the left, looking down with a gentle smile, resting her hand on the girl's head. The girl (R2) is on the right, leaning her head against the woman's chest while looking directly at the camera with a soft smile. Soft, diffused side lighting illuminates the scene, creating a warm, intimate mood with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the supporting / leading contact role relative to R2, rather than R2 taking that role toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a contact-relevant object (if any instructed) involved in the interaction between R1 and R2, consistent with the edit instruction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "contact-relevant object (fallback)",
+      "from_fallback": true
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback",
+    "api_bypass_fill"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "fallback_only",
+    "filter": false,
+    "cat": "hug",
+    "used_fallback": true,
+    "note": "filled after gateway HTTP 400 on Stage A QG"
+  }
+}

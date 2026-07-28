@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__79cee5eb2df4__T2",
+  "instruction": "Candid cinematic film still, medium shot. Inside a dim underground parking garage, the woman in the black bucket hat (R2) stands in the center, carrying the smiling woman in the black beanie (R1) on her hip. On the right, the woman in the olive vest (R3) leans in from the side, wrapping her arm around the neck of the woman in the black bucket hat (R2). They are all laughing in a playful group embrace. Cool overhead fluorescent lights illuminate the trio against the dark, concrete background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 carries R1 on her hip",
+    "R1 is the person being carried by R2",
+    "R3 wraps her arm around R2's neck",
+    "R2 stands in the center while supporting R1",
+    "R3 leans in from the side toward R2",
+    "dim underground parking garage setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 carrying R1 on her hip, rather than R1 carrying R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries R1 on her hip"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being carried on R2's hip, rather than R1 supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being carried by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 wrapping her arm around R2's neck, rather than R2 wrapping her arm around R3's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arm around R2's neck"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in the center while supporting R1 on her hip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in the center while supporting R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 lean in from the side to make neck-area contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans in from the side toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

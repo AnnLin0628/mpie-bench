@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T5",
+  "instruction": "Candid outdoor photograph of four friends sitting side-by-side on a green grassy lawn in a park. From left to right, the Asian man in the red 'T' shirt (R3) sits smiling and pointing to his chest; the woman in the dark blue 'E' shirt (R4) leans back laughing and pointing to her shirt; the Black woman with an afro in the red 'A' shirt (R6) sits cross-legged gesturing to her shirt; and the bald man in the blue 'M' shirt (R2) sits on the far right pointing to his chest with both hands. Together their shirts spell 'TEAM'. The lighting is bright and natural, casting soft shadows on the grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 smiles and points to his own chest, rather than R4 doing that exact action",
+    "R2 points to his own chest with both hands, rather than R6 doing the two-handed chest-pointing",
+    "R4 leans back laughing while pointing to her shirt, rather than R3 taking that leaning-back laughing role",
+    "R6 sits cross-legged while gesturing to her shirt",
+    "the labeled shirts together spell TEAM",
+    "the group sits on a green grassy lawn in a park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one smiling and pointing to his own chest, rather than R4 doing that exact action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 smiles and points to his own chest, rather than R4 doing that exact action"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one pointing to his own chest with both hands, rather than R6 doing the two-handed chest-pointing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points to his own chest with both hands, rather than R6 doing the two-handed chest-pointing"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one leaning back laughing while pointing to her shirt, rather than R3 taking that leaning-back laughing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 leans back laughing while pointing to her shirt, rather than R3 taking that leaning-back laughing role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 sitting cross-legged while gesturing to her shirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 sits cross-legged while gesturing to her shirt"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the friends seated on a green grassy lawn in a park?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the group sits on a green grassy lawn in a park"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

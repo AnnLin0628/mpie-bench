@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T214",
+  "instruction": "Candid documentary photograph, full shot from an eye-level angle. Inside a motion capture studio with a red carpeted floor and white walls, the man in the black polo shirt and blue shorts (R1) stands on the left, facing right. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing left, and kicks her right leg forward, making contact with the man's (R1) left leg. The scene is illuminated by bright overhead indoor lighting with a neutral color palette and soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 kicks her right leg forward into R1's left leg",
+    "R1 receives the leg contact from R2 rather than initiating the kick",
+    "R2 is the active kicker while R1 is the contacted standing person",
+    "R2's right leg contacts R1's left leg",
+    "The interaction occurs inside a motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person kicking her right leg forward into R1's left leg, rather than R1 kicking R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kicks her right leg forward into R1's left leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving contact on his left leg from R2's kick, rather than R2 receiving a kick from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the leg contact from R2 rather than initiating the kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 acting as the active kicker while R1 stands as the person being contacted?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active kicker while R1 is the contacted standing person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2's right leg make contact with R1's left leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right leg contacts R1's left leg"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

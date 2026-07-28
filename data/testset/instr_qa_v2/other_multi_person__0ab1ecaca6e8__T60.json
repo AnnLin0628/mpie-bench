@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T60",
+  "instruction": "Candid outdoor over-the-shoulder medium shot of friends interacting in a sunny park with green grass and background trees. In the left foreground, the woman with dark hair tied back (R4) in a dark blue t-shirt stands with her back to the camera, raising her right hand for a high-five. In the center-right, the Black woman with an afro (R6) in a red t-shirt looks surprised with wide eyes and an open mouth, raising her hand to return the high-five. In the background on the left, the East Asian man in a red polo shirt (R3) stands smiling and watching them. Bright, natural sunlight filters through the trees, casting soft shadows on the vibrant green lawn.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 initiates the high-five by raising her right hand toward R6",
+    "R6 returns R4's high-five with her own raised hand",
+    "R3 is a background observer watching R4 and R6 rather than joining the high-five",
+    "R4 has her back to the camera while R6 faces her with a surprised expression",
+    "The interaction takes place in a sunny park with green grass and background trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have her back to the camera while raising her right hand toward R6, as R6 faces her and raises a hand back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R6 have distinct body orientations during the high-five"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 standing and smiling as a watcher of R4 and R6's interaction rather than physically taking part in it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's role is a background observer"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

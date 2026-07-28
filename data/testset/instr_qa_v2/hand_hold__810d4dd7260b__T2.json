@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__810d4dd7260b__T2",
+  "instruction": "A candid outdoor photograph with a full shot of a scenic mountain lake. On the left, the blonde woman in a grey hooded coat (R1) stands on a large rock, facing right. On the right, the bearded man in a brown fedora and denim jacket (R2) stands opposite her on the same rock. They stand close, holding both hands and smiling warmly at each other. The background shows the calm water of the lake and snowy mountain cliffs under soft, overcast daylight, maintaining a cool and natural color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces right toward R2 while holding both of R2's hands",
+    "R2 stands opposite R1 as the hand-holding partner",
+    "R1 and R2 hold both hands while standing close and smiling at each other",
+    "R1 and R2 stand together on the same large rock",
+    "the scene is an outdoor mountain lake with snowy cliffs"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person facing right toward R2 while holding both hands, rather than R2 being the one facing right toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces right toward R2 while holding both of R2's hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing opposite R1 as R1's hand-holding partner, rather than R1 standing opposite R2 in R2's described position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands opposite R1 as the hand-holding partner"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together while holding both hands with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold both hands while standing close"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile warmly at R2 while R2 smiles warmly back at R1 during the hand hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 smile warmly at each other while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

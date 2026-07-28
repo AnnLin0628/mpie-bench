@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T21",
+  "instruction": "Cinematic action still, full shot, low angle. Inside a dim gym with metal racks, the man in the gorilla-print t-shirt (R4) stands in the foreground center with his back to the camera, knees bent in a boxing stance. Facing him in the background left is the man in the dark t-shirt (R2), who stands with his hands raised defensively near his face. The two are positioned in an active sparring stance. The scene is lit with moody, cool gym lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 stands in the foreground center with his back to the camera in a boxing stance facing R2",
+    "R2 faces R4 with his hands raised defensively near his face",
+    "R4 is the boxer with knees bent while R2 is the defensive opponent",
+    "R2 and R4 are positioned in an active sparring stance",
+    "The scene is inside a dim gym with metal racks"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person in the foreground with his back to the camera confronting R2, rather than R2 being the foreground person with his back to the camera confronting R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 foreground back-to-camera sparring role versus R2 facing him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding his hands raised defensively near his face while facing R4, rather than R4 being the one described with hands raised defensively near his face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 defensive guard role against R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one with knees bent in a boxing stance facing R2, rather than R2 being described as the knees-bent boxer facing R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 knees-bent boxing stance role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R4 positioned as sparring opponents, with R4 confronting R2 and R2 guarding defensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R4 active sparring configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

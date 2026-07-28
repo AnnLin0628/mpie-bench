@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T17",
+  "instruction": "Candid outdoor wide shot of a group of friends on a sunny rooftop. On the left, the man in a black hat (R4) stands looking down, next to the standing woman in a white shirt (R5). In the center foreground, the man with grey hair (R2) sits smiling next to the sitting woman with reddish hair (R1), who looks away smiling. On the right, the man in a dark blue shirt (R6) stands looking down at them. Bright daylight under a blue sky with light clouds.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 stands looking down at the seated pair R1 and R2",
+    "R4 stands looking down next to R5, while R5 is only described as standing",
+    "R2 sits smiling next to R1 while R1 looks away smiling",
+    "R1 and R2 are seated together while R4, R5, and R6 are standing",
+    "the scene is a sunny rooftop under a blue sky with light clouds"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 standing and looking down at R1 and R2, rather than R1 or R2 standing and looking down at R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 stands looking down at the seated pair R1 and R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one described as standing and looking down next to R5, rather than R5 being the one described as looking down next to R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 stands looking down next to R5, while R5 is only described as standing"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person who looks away smiling next to R2, rather than R2 being the one described as looking away next to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits smiling next to R1 while R1 looks away smiling"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sitting together while R4, R5, and R6 are standing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated together while R4, R5, and R6 are standing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

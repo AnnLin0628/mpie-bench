@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__95499000b35a__T3",
+  "instruction": "Candid lifestyle photograph, medium shot, eye-level. In a bright indoor space with a white wall and a glass window showing blurred greenery, the man in a denim shirt (R2) stands on the right in profile, smiling as he holds a stack of three cardboard boxes. The woman with braided hair (R1) in a light blue denim shirt stands on the left, reaching up with both arms to place a fourth cardboard box on top of his stack. Soft, natural light streams from the right, creating a warm, neutral-toned atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports a stack of three cardboard boxes while R1 adds another box on top",
+    "R1 reaches up with both arms to place the fourth cardboard box onto R2's stack",
+    "R2 holds the receiving stack of boxes rather than handing boxes to R1",
+    "R1 is the box-placing person and R2 is the box-holding person",
+    "cardboard boxes are the contact-relevant objects being held and stacked",
+    "the scene is a bright indoor space with a white wall and a glass window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting the stack of three cardboard boxes while R1 adds another box on top, rather than R1 supporting the stack for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports a stack of three cardboard boxes while R1 adds another box on top"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching up with both arms to place the fourth cardboard box onto R2's stack, rather than R2 placing a box onto R1's stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches up with both arms to place the fourth cardboard box onto R2's stack"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold the stack that receives the additional box from R1, rather than handing a box over to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the receiving stack of boxes rather than handing boxes to R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person adding a box on top while R2 is the person carrying the stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the box-placing person and R2 is the box-holding person"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are cardboard boxes the objects being held and stacked during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "cardboard boxes are the contact-relevant objects being held and stacked"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a stack of three cardboard boxes with a fourth cardboard box being placed on top?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "cardboard boxes are the contact-relevant objects being held and stacked"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

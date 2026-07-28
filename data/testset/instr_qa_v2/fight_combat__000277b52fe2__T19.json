@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T19",
+  "instruction": "Cinematic low-angle wide shot of an indoor gym. On the left, the shirtless man with short dark hair (R1) sits on the floor, facing right. On the right, the shirtless bearded man with a shoulder tattoo (R3) kneels, facing left. They smile at each other while clasping right hands in a firm handshake. A strong warm backlight shines between them, casting a bright flare against a dark background with a knight mural.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 sits on the floor while R3 kneels during their hand clasp",
+    "R3 kneels facing R1 while R1 remains seated on the floor",
+    "R1 and R3 clasp each other's right hands while facing one another",
+    "R1 and R3 smile at each other during the contact",
+    "The interaction takes place in an indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 sitting on the floor while R3 kneels, rather than R3 sitting on the floor while R1 kneels?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 seated and R3 kneeling during the contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 kneel facing R1 while clasping R1's right hand, rather than R1 kneeling facing R3 in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 kneeling role opposite seated R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person seated low on the floor in the hand-clasp interaction with R3, rather than R3 being the seated person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the seated floor position while contacting R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

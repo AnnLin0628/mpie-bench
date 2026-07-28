@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__575db246ae0e__T3",
+  "instruction": "Candid medium shot in a bright office. The man in the white shirt (R5) and the man in the denim shirt (R2) stand on the left, facing right. The man in the black t-shirt and beanie (R1) stands in the center, smiling broadly. The woman in the plaid blazer (R3) stands on the right, facing left. They all stack their hands in a central huddle. Bright, even indoor lighting.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 is the central participant in the hand-stack huddle while R2, R3, and R5 face inward toward the shared contact",
+    "R2 and R5 face toward R1 and the central hand stack rather than R1 facing toward them from the side",
+    "R3 faces inward toward the central hand stack with R1 rather than standing as a non-participating onlooker",
+    "R1, R2, R3, and R5 all place their hands into one shared central huddle",
+    "The interaction takes place in a bright office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the central participant in the hand-stack huddle while R2 and R5 face inward toward the shared contact, rather than R2 being the central participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the central participant in the hand-stack huddle while R2 and R5 face inward toward the shared contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 face inward toward R1 and the central hand stack, rather than R1 facing inward toward R3 from the side position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 faces inward toward the central hand stack with R1 rather than swapping that side-facing role with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, R3, and R5 all join their hands together in a single central huddle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, R3, and R5 all place their hands into one shared central huddle"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

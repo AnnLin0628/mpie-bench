@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__2f3c92ef293b__T1",
+  "instruction": "A candid outdoor photograph with a full shot captures two women walking down a dirt path in a green agricultural field under an overcast sky. On the left, the red-haired woman (R2) wears a white button-down shirt and light blue jeans, smiling at the camera while holding a wooden easel in her outer hand. On the right, the dark-haired woman (R1) in a white shirt and blue jeans smiles forward, holding a canvas painting in her outer hand. They walk side-by-side, holding hands in the center. The scene is illuminated by soft, diffused daylight, creating a natural green and white color palette with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries the canvas painting in her outer hand while walking hand-in-hand with R2",
+    "R2 carries the wooden easel in her outer hand while walking hand-in-hand with R1",
+    "R1 and R2 walk side-by-side while holding hands in the center",
+    "canvas painting held by R1",
+    "wooden easel held by R2",
+    "outdoor dirt path in a green agricultural field under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one carrying the canvas painting in her outer hand while holding hands with R2, rather than R2 carrying the canvas painting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the canvas painting in her outer hand while walking hand-in-hand with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one carrying the wooden easel in her outer hand while holding hands with R1, rather than R1 carrying the wooden easel?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the wooden easel in her outer hand while walking hand-in-hand with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side while holding each other's hands in the center between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side while holding hands in the center"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

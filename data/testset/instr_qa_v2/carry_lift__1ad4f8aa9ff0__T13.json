@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T13",
+  "instruction": "Candid action photograph, medium shot, low angle. In a grassy park near a large suspension bridge, a couple practices acro-yoga. The shirtless bearded man (R2) in black leggings lies on his back with his legs raised, supporting the woman with buzzed hair (R1) who arches over him in a backbend. The woman (R1) wears a white sports bra and gray shorts, balancing with her hands on the ground. In the far background, two tiny, indistinct figures walk. Natural daylight illuminates the scene with soft shadows and muted green tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lies on his back with legs raised to support R1",
+    "R1 is the lifted/acrobatic partner arching over R2 in a backbend",
+    "R1 balances with her hands on the ground while R2 supports her from below",
+    "R2 acts as the base underneath R1 rather than being carried by her",
+    "the acro-yoga scene takes place in a grassy park near a large suspension bridge"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight from below with his raised legs, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 from below with raised legs"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person arching over R2 in a backbend, rather than R2 arching over R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 arches over R2 in a backbend"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying on his back as the base while R1 is elevated above him, rather than R1 lying as the base for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the base and R1 is elevated"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 balance with her hands on the ground while being supported by R2's raised legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances with hands on ground while R2 supports her"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep his back on the ground with his legs raised as part of the acro-yoga support pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on his back with raised legs"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

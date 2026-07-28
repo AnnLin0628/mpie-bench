@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1fb80cb80877__T10",
+  "instruction": "An intimate studio portrait photograph captured in a medium shot at eye-level. In a minimalist indoor studio with a plain off-white background, the redhead woman (R1) is seated on a low white block on the left, wearing a light blue shirt tied at the waist over a brown top and beige skirt, looking down with a gentle, serene expression. Standing behind her on the right, the dark-haired woman (R2) wears a beige blazer, leaning her head affectionately on her friend's shoulder and resting her right hand on her friend's arm while looking directly at the camera with a calm, gentle expression. The scene is illuminated by soft, diffused studio lighting, creating a warm, clean color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans her head affectionately on R1's shoulder",
+    "R2 rests her right hand on R1's arm",
+    "R1 is seated while R2 stands behind her and makes contact",
+    "R1 sits on a low white block",
+    "plain off-white minimalist indoor studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning her head on R1's shoulder, rather than R1 leaning her head on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head affectionately on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her right hand on R1's arm, rather than R1 resting her right hand on R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her right hand on R1's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person being touched affectionately by R2, rather than R2 being the seated person touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated while R2 stands behind her and makes affectionate contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing behind R1 while placing her head and hand in contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 and contacts R1 with her head and hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

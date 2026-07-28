@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T5",
+  "instruction": "Cinematic video still, medium shot. In an indoor studio with a plain backdrop, three friends dance under soft, colorful pink and blue lighting. In the center foreground, the blonde woman in the black halter dress (R3) dances with arms outstretched, head tilted back, singing joyfully. To her right, the woman with dreadlocks in the red fringed dress (R1) dances dynamically, looking down with a smile. In the left background, the man in the black vest and white t-shirt (R2) dances with bent arms, looking forward.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 dances in the center foreground with arms outstretched, head tilted back, and singing joyfully",
+    "R1 dances dynamically while looking down and smiling",
+    "R2 dances with bent arms while looking forward",
+    "R3 is the joyful singing dancer rather than R1 or R2",
+    "indoor studio with a plain backdrop and soft pink and blue lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer with arms outstretched and head tilted back, singing joyfully, rather than R1 or R2 doing that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the joyful singing dancer with arms outstretched"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer looking down with a smile, rather than R2 being the one looking down and smiling?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances dynamically while looking down and smiling"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer with bent arms looking forward, rather than R1 taking that bent-arm forward-looking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances with bent arms while looking forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 dance in the center foreground with arms outstretched?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 dances in the center foreground with arms outstretched"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

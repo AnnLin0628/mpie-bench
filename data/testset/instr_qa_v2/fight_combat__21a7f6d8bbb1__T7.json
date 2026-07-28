@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__21a7f6d8bbb1__T7",
+  "instruction": "Cinematic film still, medium shot inside a boxing ring. The shirtless Black man with braided hair (R2) on the left stands in a wide stance, extending a left jab toward his opponent. The shirtless tattooed white man (R1) on the right, wearing black shorts and boxing gloves, leans back to block the incoming punch. The background is a dark gym with cool blue-gray lighting and overhead spotlights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 throws or extends a left jab toward R1",
+    "R1 leans back to block R2's incoming punch",
+    "R2 is the active striker while R1 is the defender",
+    "R1 wears boxing gloves during the exchange",
+    "the scene is inside a boxing ring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending a left jab toward R1, rather than R1 extending a left jab toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active puncher aiming a jab at R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning back to block R2's incoming punch, rather than R2 leaning back to block R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the defender blocking R2's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 attacking with a punch while R1 reacts defensively, rather than R1 attacking while R2 reacts defensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric boxer roles: R2 attacks and R1 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand in a wide boxing stance while throwing the jab at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's active striking stance toward R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use a blocking posture against R2's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's defensive blocking role"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the boxing exchange taking place inside a boxing ring?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing ring setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

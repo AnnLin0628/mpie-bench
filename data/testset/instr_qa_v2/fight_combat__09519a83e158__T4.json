@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T4",
+  "instruction": "Candid medium shot in an MMA gym. A bearded man in a black t-shirt (R2) on the left punches a speed bag with his left hand. A smiling woman in a black tube top (R1) stands on the right, watching his technique. Neutral gym lighting with a chain-link fence background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active striker punching the speed bag while R1 watches",
+    "R1 observes R2's technique rather than punching the bag herself",
+    "R2 uses his left hand to strike the speed bag",
+    "R1 stands as an observer of R2's training activity",
+    "a speed bag is the contact object being punched",
+    "the scene is set in an MMA gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one punching the speed bag while R1 watches, rather than R1 punching while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active striker and R1 is the observer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 watch R2's punching technique rather than R2 watching R1's technique?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 observes R2's technique"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 using his left hand to punch the speed bag rather than R1 using her left hand to punch it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 strikes the speed bag with his left hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in the training role of actively striking the bag while R1 remains in the watching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 trains by striking while R1 observes"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a speed bag being punched in the scene?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "speed bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

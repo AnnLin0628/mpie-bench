@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__906857f24c03__T8",
+  "instruction": "Studio photograph, full shot. In an indoor studio with draped beige curtains, a shirtless man in black pants (R2) stands facing forward, supporting a woman in a beige sports bra and black shorts (R1). The woman leans forward in a dynamic pose with her left leg extended back and right leg bent. The shirtless man holds her left thigh with his right hand and her upper arm with his left hand. No bystanders are present. Soft studio lighting casts gentle shadows on the neutral fabric background.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's weight in the dance pose",
+    "R2 holds R1's left thigh with his right hand",
+    "R2 holds R1's upper arm with his left hand",
+    "R1 leans forward while R2 stands and supports her",
+    "R1 has her left leg extended back and right leg bent while supported by R2",
+    "indoor studio with draped beige curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight in the pose, rather than R1 supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's weight in the dance pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's left thigh with his right hand, rather than R1 holding R2's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's left thigh with his right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 steady R1 by holding her upper arm with his left hand, rather than R1 steadying R2 by the arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's upper arm with his left hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person leaning forward in a dynamic pose while R2 stands facing forward and supports her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward while R2 stands and supports her"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 posed with her left leg extended back and her right leg bent while being supported by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has her left leg extended back and right leg bent while supported by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__34d97a41e384__T13",
+  "instruction": "A candid cinematic still shot at eye-level captures a couple on a rocky coastal shore next to the sea under an overcast sky. In the foreground, the blonde woman in a striped sweater (R2) stands with her arms crossed and eyes closed in a peaceful smile. Behind her, the bearded man with glasses in a blue puffer vest (R1) wraps his arms around her waist in a gentle embrace from behind, his eyes also closed. The scene is illuminated by soft, diffused natural light, emphasizing the cool, muted tones of the coastal environment.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps his arms around R2's waist from behind",
+    "R2 stands in front with her arms crossed while R1 embraces her from behind",
+    "R1 is the active waist-holder and R2 is the person being held",
+    "R1 is behind R2 during the contact",
+    "R2 keeps her arms crossed and eyes closed while being held by R1",
+    "rocky coastal shore next to the sea under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap his arms around R2's waist from behind, rather than R2 wrapping her arms around R1's waist from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the waist-holder embracing R2 from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing in front with her arms crossed while R1 encircles her waist from behind, rather than R1 being the front person with crossed arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in front and being held while R1 holds from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 make the physical contact with his arms around R2, while R2 keeps her own arms crossed instead of holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively holds R2 while R2 does not hold R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned behind R2 during the waist embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is behind R2 in the contact configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her arms crossed and eyes closed while being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body posture while receiving R1's hold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

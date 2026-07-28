@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T15",
+  "instruction": "Cinematic film still, medium shot. Inside a spacious dance studio, the woman in the black dress (R2) stands with her eyes closed, leaning back. The man in the brown beanie (R1) stands close behind her, wrapping his arms around her chest in a gentle embrace. Soft, warm natural light fills the room, highlighting their serene expressions.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands close behind R2 and wraps his arms around R2's chest",
+    "R2 leans back into R1's embrace rather than embracing him from behind",
+    "R1 is the enclosing partner while R2 is the partner being held in front",
+    "R2 has her eyes closed while leaning back in R1's arms",
+    "the interaction takes place inside a spacious dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing behind R2 and wrapping his arms around R2's chest, rather than R2 standing behind R1 and wrapping her arms around him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 embraces R2 from behind around her chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning back into R1's hold, rather than R1 leaning back into R2's hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans back into R1's embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the enclosing partner behind R2 while R2 is the partner being held in front, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is behind and holding; R2 is in front and held"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand close behind R2 with his arms placed around her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's close-behind arm placement around R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her eyes closed while leaning back in front of R1's body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's leaning-back body configuration in R1's embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

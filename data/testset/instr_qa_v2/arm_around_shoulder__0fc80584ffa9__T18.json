@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T18",
+  "instruction": "A clean studio portrait photograph, shot at eye-level with a medium scale and shallow depth of field. The scene is set indoors against a plain white background. Out-of-focus purple wildflowers frame three women sitting closely on the floor. On the left, the curly-haired woman in a white shirt (R1) leans back against the straight-haired woman in a white sleeveless top (R2) in the center, who holds R1's arm. On the right, the curly-haired woman in a black tank top (R3) leans her head gently against R2's shoulder, resting her hand on R2's arm. R1 and R2 look forward with neutral expressions, while R3 looks down. Bright, soft studio lighting illuminates the scene, highlighting the neutral tones and blue denim.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 leans back against R2 while R2 is the person supporting/receiving the lean",
+    "R2 holds R1's arm rather than R1 holding R2's arm",
+    "R3 leans her head against R2's shoulder rather than R2 leaning on R3",
+    "R3 rests her hand on R2's arm",
+    "the three women sit closely on the floor",
+    "plain white indoor studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning back against R2 while R2 is the person being leaned on, rather than R2 leaning back against R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back against R2 while R2 receives the lean"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's arm, rather than R1 holding R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 leaning her head against R2's shoulder, rather than R2 leaning her head against R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans head on R2's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 rest her hand on R2's arm while R2 serves as the contact point for R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's hand rests on R2's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1e374549203d__T2",
+  "instruction": "A candid documentary photograph in a medium shot captures a creative office studio filled with wooden shelves and potted plants. In the foreground, the woman in the beige sweater vest (R3) wears glasses and carefully sticks a yellow sticky note labeled 'GOALS' onto a transparent glass pane while looking forward. Standing slightly behind her on the right, the man in the beige polo shirt (R4) wears glasses and holds an open notebook, watching her action attentively. The scene is bathed in warm, soft indoor lighting, highlighting their collaborative planning session.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 sticks the yellow 'GOALS' sticky note onto the transparent glass pane while R4 does not",
+    "R4 holds an open notebook and watches R3's action while R3 applies the note",
+    "R3 is the active planner placing the sticky note on the glass pane",
+    "yellow sticky note labeled 'GOALS'",
+    "open notebook held during the planning session",
+    "creative office studio with wooden shelves and potted plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 carefully sticking the yellow sticky note labeled 'GOALS' onto the transparent glass pane, rather than R4 doing it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sticks the yellow 'GOALS' sticky note onto the transparent glass pane while R4 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 holding the open notebook and watching R3's action, rather than R3 holding the notebook while R4 places the note?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds an open notebook and watches R3's action while R3 applies the note"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the active person making contact with the sticky note on the glass pane while R4 remains the attentive observer with the notebook?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the active planner placing the sticky note on the glass pane"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned at the glass pane in the role of applying the sticky note during the planning session?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the active planner placing the sticky note on the glass pane"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

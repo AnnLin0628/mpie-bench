@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T221",
+  "instruction": "A candid documentary full shot of an indoor motion capture studio featuring a red carpeted floor and white walls. On the left, the woman in the white t-shirt and blue jeans (R2) stands upright, looking directly towards the right. On the right, the man in the black shirt and blue shorts (R1) balances on his left leg while executing a high side kick towards the woman's midsection, leaning his upper body back for balance. Bright overhead fluorescent lighting illuminates the entire scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 executes a high side kick toward R2's midsection rather than R2 kicking R1",
+    "R1 is the active kicker while R2 is the standing target of the kick",
+    "R1 balances on his left leg and leans his upper body back while kicking toward R2",
+    "R2 stands upright looking toward R1 during the kick",
+    "R1's supporting foot is on the red carpeted studio floor",
+    "The scene is an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 executing a high side kick toward R2's midsection, rather than R2 executing a kick toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kicker and R2 is the target of the kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing upright as the person being kicked toward, rather than R1 standing upright as the person being targeted by R2's kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the upright target while R1 performs the kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on one leg and leaning his upper body back to perform the kick, rather than R2 being the one balancing and leaning back to kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the active kicking body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have his left leg as the supporting leg while sending the high side kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports himself on his left leg during the kick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

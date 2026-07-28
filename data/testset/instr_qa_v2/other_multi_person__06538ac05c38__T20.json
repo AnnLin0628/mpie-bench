@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T20",
+  "instruction": "Candid outdoor wide shot of four friends on a rooftop. On the left, the woman in a white shirt (R5) stands touching her hair. In the center foreground, the man with grey hair (R2) sits smiling at the sitting woman with reddish hair (R1), who looks to the left. On the right, the man in a dark blue shirt (R6) stands looking across. Bright daylight under a blue sky.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R2 sits in the center foreground smiling at R1",
+    "R1 sits with reddish hair and looks to the left rather than smiling back at R2",
+    "R5 stands touching her own hair",
+    "R6 stands looking across",
+    "the scene is an outdoor rooftop in bright daylight under a blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one sitting and smiling at R1, rather than R1 being the one smiling at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs a smile toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look to the left while R2 smiles at R1, rather than R2 looking left while R1 smiles at him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks left as R2 smiles at her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person touching her own hair while R6 stands looking across, rather than R6 touching his hair while R5 looks across?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 touches her hair while R6 looks across"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 a sitting woman with reddish hair who is looking to the left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits and looks left"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

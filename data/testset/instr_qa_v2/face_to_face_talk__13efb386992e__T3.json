@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__13efb386992e__T3",
+  "instruction": "Cinematic film still, medium close-up. In a dimly lit indoor cafe, the man with short brown hair (R1) in a white shirt with a dark sweater draped over his shoulders sits on the left with his eyes closed. Beside him, the woman with long brown hair (R2) in a dark blue blouse and hoop earrings sits on the right, speaking with her mouth open. They sit side-by-side. In the bottom right foreground, the dark shoulder of an unseen person is partially visible. Warm, soft indoor lighting illuminates them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active speaker with her mouth open while R1 has his eyes closed",
+    "R1 is the non-speaking seated person with eyes closed while R2 speaks beside him",
+    "R1 and R2 sit side-by-side during the conversation",
+    "R1 has a dark sweater draped over his shoulders",
+    "R2 wears hoop earrings while seated beside R1",
+    "The scene is a dimly lit indoor cafe with warm, soft lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one speaking with her mouth open while R1 has his eyes closed, rather than R1 being the one speaking with his mouth open?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active speaker while R1 has eyes closed"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person with eyes closed while R2 is the seated person speaking, rather than R2 having eyes closed while R1 speaks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has eyes closed while R2 speaks"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated side-by-side with R2 taking the speaking role in the conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 speaks while sitting beside R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting beside R2 with his eyes closed as R2 talks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits with eyes closed while R2 talks beside him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

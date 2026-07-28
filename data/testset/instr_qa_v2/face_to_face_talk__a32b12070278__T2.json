@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__a32b12070278__T2",
+  "instruction": "A candid documentary photograph in a medium shot. Indoors on a brown fabric sofa next to a window with green plants, the blonde woman in the black top and white pants (R1) sits facing right, extending her right arm forward. On the right, the woman with long curly dark hair in a checkered shirt and denim shorts (R2) sits facing left, raising her hand to point her index finger near her face while looking towards the blonde woman (R1). Soft natural daylight illuminates the scene with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends her right arm forward during the face-to-face interaction",
+    "R2 raises her hand and points her index finger near her own face",
+    "R2 looks toward R1 while gesturing",
+    "R1 and R2 sit facing each other on a brown fabric sofa",
+    "the interaction takes place indoors next to a window with green plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending her right arm forward while R2 raises a hand near her face, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends her right arm forward while R2 raises a hand near her face"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person pointing her index finger near her own face while looking toward R1, rather than R1 doing that toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points her index finger near her own face while looking toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 make the forward arm extension in the conversation while R2 makes the raised index-finger gesture, rather than R2 extending forward and R1 pointing near her face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct conversational gestures"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T8",
+  "model_id": "seedream-5-pro",
+  "S_instr": 0.7009803921568626,
+  "S_instr_role": 0.75,
+  "S_instr_asymm": 0.6666666666666666,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.75,
+  "S_instr_prop_object": null,
+  "n_main": 5,
+  "n_all": 5,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground subject in pigeon pose with both arms raised diagonally upward, rather than R5 being the foreground subject with that diagonal arm pose?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "foreground adult is in pigeon pose with raised diagonal arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 behind R4 mirroring the yoga pose with both arms raised straight up, rather than R4 being the background subject with straight-up raised arms?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "child is behind with arms up but not fully mirroring the pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 have the chest-open pigeon-pose configuration in front while R5 follows behind in a mirrored version, rather than R5 leading in front with R4 behind?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "front pose is correct but rear pose is only partly mirrored"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 performing a pigeon pose with both arms lifted diagonally upward?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "foreground adult has pigeon pose with both arms lifted"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 mirroring R4's yoga pose while raising both arms straight up?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "rear child raises arms but lower-body pose differs"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance_lift__01863559fcba__T8",
+    "model_id": "seedream-5-pro",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 8.42,
+    "written_at": "2026-07-17T23:24:42",
+    "gen_relpath": "outputs/seedream-5-pro/dance_lift__01863559fcba__T8.png",
+    "qa_relpath": "instr_qa_v2/dance_lift__01863559fcba__T8.json",
+    "n_questions": 5
+  }
+}

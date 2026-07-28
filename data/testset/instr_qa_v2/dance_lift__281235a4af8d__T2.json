@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__281235a4af8d__T2",
+  "instruction": "A candid outdoor photograph taken from a low angle. On a stone structure under a clear blue sky, the man in the black t-shirt (R1) stands upright, looking forward. The woman in the black crop top (R2) stands on his shoulders. They hold hands with arms fully extended upward, forming a vertical acrobatic stack. No bystanders are visible. Bright daylight illuminates the performers, highlighting their athletic form against the blue sky.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands upright as the base of the acrobatic stack",
+    "R2 stands on R1's shoulders as the elevated performer",
+    "R1 supports R2 from below rather than being supported by R2",
+    "R1 and R2 hold hands with their arms extended upward",
+    "the performers are on a stone structure",
+    "the scene is outdoors under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 from below as the base, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from below rather than being supported by R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on R1's shoulders, rather than R1 standing on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on R1's shoulders as the elevated performer"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the lower base in the vertical acrobatic stack while R2 is the upper performer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands upright as the base of the acrobatic stack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold each other's hands with their arms fully extended upward while maintaining the stacked pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands with their arms extended upward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

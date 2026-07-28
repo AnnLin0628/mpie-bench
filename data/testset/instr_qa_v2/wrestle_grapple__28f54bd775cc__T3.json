@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T3",
+  "instruction": "A candid full-shot photograph from an eye-level angle shows an indoor martial arts studio with wooden walls and a black mat. In the center, the martial artist in the black gi (R1) lies flat on his back, facing up. Mounted on top of him, the martial artist in the pink gi (R2) sits upright, facing left. The martial artist in the pink gi (R2) maintains a dominant mount position over the martial artist in the black gi (R1) on the mat. The scene is illuminated by warm indoor lighting with natural tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is mounted on top of R1 rather than R1 being mounted on top of R2",
+    "R2 maintains the dominant mount position over R1 on the mat",
+    "R1 lies flat on his back underneath R2 while R2 sits upright above him",
+    "R1 and R2 are grappling on a black mat",
+    "the setting is an indoor martial arts studio with wooden walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 mounted on top of R1 rather than R1 being mounted on top of R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is mounted on top of R1 rather than R1 being mounted on top of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 maintain a dominant mount position over R1 rather than R1 maintaining a dominant mount over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 maintains the dominant mount position over R1 on the mat"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lying flat on his back underneath R2 rather than R2 lying flat underneath R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lies flat on his back underneath R2 while R2 sits upright above him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting upright above R1 while R1 is on his back on the mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lies flat on his back underneath R2 while R2 sits upright above him"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a black mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 and R2 are grappling on a black mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

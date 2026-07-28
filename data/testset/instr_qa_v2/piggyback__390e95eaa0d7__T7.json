@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__390e95eaa0d7__T7",
+  "instruction": "A cinematic still, medium shot of a dimly lit indoor room with teal curtains. On the left, the woman with long twist braids (R2) sits on the lap of the shirtless man (R1) on the right, leaning her face close to his. She cradles his head with her left hand. Both have their eyes closed, sharing a quiet, intimate smile. Warm orange light highlights their skin against the cool teal background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is seated underneath and supports R2 on his lap",
+    "R2 sits on R1's lap rather than the reverse",
+    "R2 cradles R1's head with her left hand",
+    "R2 leans her face close to R1 while on his lap",
+    "R1 and R2 both have their eyes closed with intimate smiles",
+    "The scene is a dimly lit indoor room with teal curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 seated beneath R2 and supporting R2 on his lap, rather than R2 supporting R1 on her lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 seated on his lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 sitting on R1's lap, rather than R1 sitting on R2's lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lap-sitter and R1 is the seated base"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 cradling R1's head with her left hand, rather than R1 cradling R2's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 cradles R1's head"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean her face close to R1 while seated on his lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans close to R1 while on his lap"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

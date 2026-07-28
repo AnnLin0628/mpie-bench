@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__8f4781c99375__T2",
+  "instruction": "Candid outdoor full shot from a three-quarters rear angle of a shirtless man with a man-bun (R1) and a woman in a black swimsuit (R2) on a sandy beach. The shirtless man (R1) is on the left with his back partially to the camera, leaning back in a squat. The woman (R2) stands on his thighs, facing forward and leaning back while holding his hands for balance. The ocean waves roll in the background under a soft, overcast sky with natural, diffused lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 from below while squatting and leaning back",
+    "R2 stands on R1's thighs rather than R1 standing on R2",
+    "R2 uses R1's hands for balance while leaning back",
+    "R1 is shirtless with a man-bun",
+    "R2 is in a black swimsuit",
+    "the interaction takes place on a sandy beach with ocean waves in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below with his thighs while squatting, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from below while squatting and leaning back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on R1's thighs, rather than R1 standing on R2's thighs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on R1's thighs rather than R1 standing on R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning back while holding R1's hands for balance, rather than R1 leaning back while holding R2's hands for balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses R1's hands for balance while leaning back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in a leaning-back squat that provides a base for R2's elevated stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from below while squatting and leaning back"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the elevated person balancing on R1's thighs during the dance-like lift?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on R1's thighs rather than R1 standing on R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

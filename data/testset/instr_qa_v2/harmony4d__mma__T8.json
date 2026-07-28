@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T8",
+  "instruction": "Candid full shot at eye-level of an indoor gym with gray padded walls. On the right, the man in the gray t-shirt (R2) lunges forward to the left, throwing a straight punch. On the left, the young man in the white t-shirt (R1) stands defensively, raising both gloved hands to block the incoming strike. Both wear protective glasses and focus on the contact point of the punch. Neutral overhead lighting casts soft shadows on the gray mat floor, with a tripod visible in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward and throws a straight punch toward R1",
+    "R1 raises both gloved hands defensively to block R2's incoming punch",
+    "R2 is the attacking puncher while R1 is the defensive blocker",
+    "R1's gloved hands are the contact-relevant blocking objects",
+    "Both R1 and R2 focus on the punch contact point",
+    "The scene is an indoor gym with gray padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one lunging forward and throwing a straight punch toward R1, rather than R1 throwing the punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacker throwing the punch at R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one raising both gloved hands to block R2's incoming strike, rather than R2 blocking a strike from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 blocks R2's punch with raised gloved hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 play the forward-attacking puncher role while R1 plays the defensive blocker role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attacks while R1 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing defensively with both gloved hands raised as R2's punch comes in?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's defensive blocking body configuration against R2's strike"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

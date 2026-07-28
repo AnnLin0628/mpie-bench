@@ -1,0 +1,103 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1c1e962d70df__T1",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.875,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.75,
+  "S_instr_prop": 1.0,
+  "S_instr_scene": 1.0,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": 1.0,
+  "n_main": 5,
+  "n_all": 6,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with his back partially turned while holding a wine glass, rather than R2 being the one with her back partially turned?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R1 holds a wine glass but his back is not clearly turned"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 facing R1 with a joyful smile, rather than R1 being the smiling person directly facing R2?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 faces R1 and smiles"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together on the bed rather than sitting or lying down?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "both are standing close together on the bed"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a wine glass?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 is holding a wine glass"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 also holding a wine glass?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 is also holding a wine glass"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 in a minimalist white bedroom with a beige bed?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "white bedroom with beige bedding"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance__1c1e962d70df__T1",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 10.86,
+    "written_at": "2026-07-17T14:59:41",
+    "gen_relpath": "outputs/gpt-image-2/dance__1c1e962d70df__T1.png",
+    "qa_relpath": "instr_qa_v2/dance__1c1e962d70df__T1.json",
+    "n_questions": 6
+  }
+}

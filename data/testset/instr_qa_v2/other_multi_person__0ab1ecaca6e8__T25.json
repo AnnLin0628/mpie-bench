@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T25",
+  "instruction": "Candid outdoor full-shot photograph of a sunny park with green grass and tall trees. Standing in a line from left to right are the East Asian man in the red 'T' t-shirt (R3), the woman in the navy 'E' t-shirt (R4), the Black woman with an afro in the red 'A' t-shirt (R6), and the bald man in the navy 'M' t-shirt (R2). The East Asian man (R3) and the woman (R4) have their arms around each other's shoulders and waists while raising their other arms high. The Black woman (R6) and the bald man (R2) stand beside them, gesturing outwards with open hands. All four smile happily at the camera under bright, natural daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 and R4 are the contact pair with arms around each other's shoulders and waists while R6 and R2 gesture outward",
+    "R6 gestures outward with open hands instead of joining the shoulder-and-waist embrace",
+    "R2 gestures outward with open hands instead of joining the shoulder-and-waist embrace",
+    "R3 has one arm around R4 while raising his other arm high",
+    "R4 has one arm around R3 while raising her other arm high",
+    "The group is in a sunny outdoor park with green grass and tall trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R3 and R4 the pair with arms around each other's shoulders and waists, rather than R6 and R2 being the pair in that embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 are the contact pair while R6 and R2 are not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 standing beside the embracing pair and gesturing outward with open hands, rather than having an arm around R3 or R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is an outward-gesturing non-contact participant instead of part of the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing beside the embracing pair and gesturing outward with open hands, rather than wrapping an arm around R3 or R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is an outward-gesturing non-contact participant instead of part of the embrace"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 have one arm around R4 while raising his other arm high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's contact-and-raised-arm role with R4"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have one arm around R3 while raising her other arm high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's contact-and-raised-arm role with R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__13a3f6e2112e__T1",
+  "instruction": "Candid outdoor medium shot of a sunny beach. On the left, the shirtless man with sunglasses (R2) smiles widely, reaching his arm forward. On the right, the shirtless blonde man (R1) stands in profile facing left, raising his hand defensively in a playful gesture. In the background, tiny blurred bystanders dot the distant shoreline under a clear sky. Bright, direct sunlight casts soft shadows on their athletic builds, highlighting the warm sand and blue ocean.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches his arm forward toward R1",
+    "R1 raises his hand defensively in a playful gesture",
+    "R2 takes the approaching or initiating role while R1 takes the defensive response role",
+    "R1 stands in profile facing R2",
+    "R2 wears sunglasses",
+    "the scene is a sunny beach with sand and ocean"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one reaching his arm forward toward R1, rather than R1 reaching his arm forward toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches his arm forward toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one raising his hand defensively in a playful gesture, rather than R2 being the one with the defensive raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises his hand defensively in a playful gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 take the playful approaching role with an extended arm while R1 takes the defensive response role with a raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates with an extended arm while R1 responds defensively"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile facing R2 while holding up his hand in playful defense?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 in profile while raising a defensive hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

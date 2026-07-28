@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__7b9461867433__T1",
+  "instruction": "Candid outdoor photograph, medium full shot at eye-level. In a grassy park with a bridge in the background, the bearded man in the white t-shirt (R1) kneels on the grass facing right with his eyes closed in a calm expression. The woman with a shaved head (R2), wearing a pink long-sleeve shirt and grey shorts, stands behind him. She leans over his back, wrapping her arms around his chest in a supportive embrace. The scene is illuminated by bright, natural daylight with soft shadows and a muted, desaturated color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands behind R1 and leans over R1's back",
+    "R2 wraps her arms around R1's chest in a supportive embrace",
+    "R1 kneels on the grass as the recipient of R2's embrace",
+    "R1 has his eyes closed with a calm expression",
+    "The scene is in a grassy park with a bridge in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing behind R1 and leaning over R1's back, rather than R1 standing behind and leaning over R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 and leans over R1's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's chest in the supportive embrace, rather than R1 wrapping his arms around R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kneeling on the grass as the person being embraced from behind by R2, rather than R2 kneeling while being embraced from behind by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels while R2 embraces him from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 kneeling with his eyes closed while R2 stands behind him in contact with his upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kneeling recipient and R2 is the standing contact partner"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean over R1's back with her arms positioned around his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body and arms are configured over R1's back and chest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

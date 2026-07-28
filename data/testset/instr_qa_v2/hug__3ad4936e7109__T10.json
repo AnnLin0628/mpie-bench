@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T10",
+  "instruction": "Candid studio photograph, close-up shot at eye-level with a shallow depth of field. In a minimalist indoor studio with a plain white background and blurred purple flowers in the foreground, three women are huddled tightly in a joyful embrace. On the left, the woman with wavy light-brown hair (R3) in a white shirt smiles and looks down. In the center, the woman with straight dark hair (R2) in a white top and denim jacket laughs joyfully with her mouth open. On the right, the curly-haired woman (R1) in a white shirt smiles warmly. They are locked in a tight group hug, with the outer two women wrapping their arms around the laughing center woman. The lighting is bright and soft, highlighting their happy expressions.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1, as an outer participant, wraps her arms around R2 in the center",
+    "R3, as an outer participant, wraps her arms around R2 in the center",
+    "R2 is the center woman being embraced by both R1 and R3",
+    "R1 and R3 serve as the outside embracers while R2 is the central recipient of the group embrace",
+    "the three women are tightly huddled together in a close group embrace",
+    "the scene is a minimalist indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping around R2 as an outer participant, rather than R2 wrapping around R1 as the outer embracer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, as an outer participant, wraps her arms around R2 in the center"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 wrapping around R2 as an outer participant, rather than R2 wrapping around R3 as the outer embracer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3, as an outer participant, wraps her arms around R2 in the center"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the central woman being embraced by both R1 and R3, rather than R2 being one of the outer women embracing someone else in the center?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the center woman being embraced by both R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R3 act as the outside embracers around R2, while R2 remains the laughing center of the close embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 serve as the outside embracers while R2 is the central recipient of the group embrace"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, and R3 huddled tightly together in a close group embrace with R2 between the other two?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the three women are tightly huddled together in a close group embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

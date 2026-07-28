@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T7",
+  "instruction": "A candid studio photograph captures a medium full shot of two women dancing against a plain beige wall. On the left, the woman with an afro in a brown button-up dress (R1) stands facing forward, smiling confidently at the camera while dancing. To her right, the woman with short brown hair in a striped shirt and white trousers (R2) is captured mid-motion, looking down and to the left as she moves energetically. The warm, diffused studio lighting highlights their expressive poses and the minimalist, clean aesthetic of the space.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the dancer facing forward and smiling confidently at the camera",
+    "R2 is the dancer captured mid-motion while looking down and to the left",
+    "R1 and R2 are both dancing with different body attention and motion roles",
+    "R2 moves energetically while R1 maintains a confident forward-facing pose",
+    "The dancing takes place in a studio against a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer facing forward and smiling confidently at the camera, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the forward-facing confident dancer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer captured mid-motion while looking down and to the left, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the mid-motion downward-looking dancer"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both dancing, with R1 holding a forward-facing camera-oriented pose while R2 moves energetically?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct dance roles and poses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

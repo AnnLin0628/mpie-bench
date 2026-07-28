@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T1",
+  "instruction": "Candid action photograph, full shot, eye-level. Set in an outdoor covered training area with concrete flooring and white pillars under bright daylight. On the right, the man in the beige t-shirt (R1) stands in a boxing stance, throwing a left jab. On the left, the man in the blue tank top (R2) blocks the punch with his raised black boxing gloves. The left glove of the man in the beige t-shirt connects directly with the defensive guard of the man in the blue tank top. In the background, a blurred bystander sits on a chair. Bright natural daylight casts soft shadows across the scene.",
+  "n_person": 3,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 throws a left jab toward R2",
+    "R2 blocks R1's punch with raised black boxing gloves",
+    "R1's left glove connects with R2's defensive guard",
+    "R3 is a seated bystander rather than part of the boxing contact",
+    "black boxing gloves are involved in the punch-block contact",
+    "the scene is an outdoor covered training area with concrete flooring and white pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a left jab at R2, rather than R2 throwing a jab at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 throws a left jab toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 blocking R1's punch with raised boxing gloves, rather than R1 blocking a punch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 blocks R1's punch with raised black boxing gloves"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's left glove connect with R2's defensive guard, rather than R2's glove connecting with R1's guard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's left glove connects with R2's defensive guard"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in the defensive role with his gloves raised to receive or block R1's jab?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender blocking R1's jab"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

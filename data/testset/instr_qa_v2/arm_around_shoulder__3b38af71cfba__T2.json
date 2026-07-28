@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__3b38af71cfba__T2",
+  "instruction": "A clean studio portrait photograph captured in a medium shot at eye-level. Set in a minimalist indoor studio with a plain, neutral beige background, the scene features two women in athletic wear. In the foreground on the left, the blonde woman in the light blue sports bra (R1) stands in profile facing left with a calm, neutral expression. Positioned closely behind her on the right, the dark-haired woman in the pink sports bra (R2) stands facing forward, wrapping her hands gently around the blonde woman's waist. Soft, diffused studio lighting illuminates both subjects, creating a warm, soft-toned color palette with minimal shadows and a clean, serene aesthetic.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 wraps her hands gently around R1's waist",
+    "R1 is the person being held at the waist by R2",
+    "R2 is positioned closely behind R1 while making waist contact",
+    "R1 stands in profile while R2 faces forward behind her",
+    "The scene is a minimalist indoor studio with a plain neutral beige background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping her hands gently around R1's waist, rather than R1 wrapping her hands around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 at the waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held at the waist by R2, rather than R2 being held at the waist by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the waist hold from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned closely behind R1 while placing her hands around R1's waist, rather than R1 standing behind R2 to hold her waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R1 and initiates the waist contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in profile while R2 faces forward behind her with hands around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct body orientations during the waist hold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

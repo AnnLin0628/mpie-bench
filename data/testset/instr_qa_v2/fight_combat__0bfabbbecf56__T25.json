@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T25",
+  "instruction": "Cinematic full shot through red and black boxing ring ropes in an indoor gym. On the left, the East Asian woman in the white sports bra (R2) stands in a back-three-quarters view wearing black leggings and beige sneakers. On the right, the woman in the black and orange athletic outfit (R1) stands facing her in a profile view wearing white sneakers. Both women are positioned inside the ring, facing each other in active boxing stances. Cool overhead lighting illuminates the scene, casting soft shadows on the dark floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is shown in profile facing R2, while R2 is not the one shown in profile",
+    "R2 is shown in a back-three-quarters view facing R1, while R1 is not the one shown that way",
+    "R1 and R2 stand opposite each other in active boxing stances inside the ring",
+    "red and black boxing ring ropes are visible in the shot",
+    "the scene is set in an indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 shown in profile facing R2, rather than R2 being the one shown in profile facing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the profile-facing boxing position relative to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 shown in a back-three-quarters view facing R1, rather than R1 being shown in a back-three-quarters view facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the back-three-quarters facing position relative to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the boxing ring set in an indoor gym?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor gym setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": true
+  }
+}

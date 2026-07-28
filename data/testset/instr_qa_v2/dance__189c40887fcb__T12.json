@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T12",
+  "instruction": "Cinematic action still, low-angle medium shot. In a dimly lit hall with wooden floors, two dancers perform dynamic moves. In the left foreground, the young man in the white t-shirt and black harness (R3) kicks his right leg high toward the camera. In the right background, the man in the black mesh top and black kilt (R2) dances with arms raised as his kilt spins. Cool blue ambient light and red highlights illuminate the energetic scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 performs a high right-leg kick toward the camera rather than R2 doing that kick",
+    "R2 dances with arms raised while his kilt spins rather than R3 doing that raised-arm kilt-spinning move",
+    "R3 is the foreground dancer executing the high kick while R2 is the background dancer doing the raised-arm dance",
+    "R3's dance pose includes a high right-leg kick toward the camera",
+    "R2's dance pose includes raised arms and a spinning kilt",
+    "the scene is a dimly lit hall with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer kicking his right leg high toward the camera, rather than R2 doing that kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the high right-leg kick instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer with arms raised as his kilt spins, rather than R3 being the one described with that raised-arm kilt-spinning move?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the raised-arm dance with spinning kilt instead of R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 doing the high kick toward the camera while R2 performs a separate raised-arm dance move in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R2 have distinct asymmetric dance actions"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3's dance role involve kicking his right leg high toward the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's high right-leg kick dance pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2's dance role involve raising his arms while his kilt spins?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's raised-arm dance pose with spinning kilt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

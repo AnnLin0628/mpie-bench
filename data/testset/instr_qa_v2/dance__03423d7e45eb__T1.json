@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03423d7e45eb__T1",
+  "instruction": "Candid full shot of a bright, minimalist indoor ballet studio. The woman in the black long-sleeve top and white tulle skirt (R2) stands on pointe in profile facing left, arms gracefully extended. Behind her, the man in the black tank top and tights (R3) holds her waist to support her balance. Diffused daylight streams from large windows, casting soft shadows on the grey floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 holds R2's waist to support R2's balance",
+    "R2 is the dancer standing on pointe while R3 supports her",
+    "R3 is behind R2 as the waist-supporting partner",
+    "R2 extends her arms gracefully while being supported by R3",
+    "bright minimalist indoor ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold R2's waist to support R2's balance, rather than R2 holding R3's waist to support him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 supports R2 by holding her waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer standing on pointe while R3 provides balance support, rather than R3 standing on pointe while R2 supports him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is on pointe and R3 is the supporter"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 positioned behind R2 as the partner holding her waist, rather than R2 being behind R3 holding his waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is behind R2 in the supporting role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend her arms gracefully while R3 holds her waist for balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's dance pose is supported by R3's waist hold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03423d7e45eb__T4",
+  "instruction": "Candid full shot of a bright indoor ballet studio. On the right, the woman in the purple top and black skirt (R1) stands on pointe facing forward with arms extended. On the left, the man in the black long-sleeve top and shorts (R3) stands in a matching pose. They hold hands in the center, performing a synchronized ballet sequence. Even daylight from large windows illuminates the entire space.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the dancer specified as standing on pointe while holding hands with R3",
+    "R3 is the dancer described as matching R1's ballet pose while holding R1's hand",
+    "R1 and R3 are the hand-holding dance pair, rather than R1 being paired with R2",
+    "R1 faces forward with arms extended while on pointe during the hand-held ballet sequence",
+    "R3 stands in a matching ballet pose with R1 as their hands meet in the center",
+    "The interaction takes place in a bright indoor ballet studio illuminated by large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer specified as standing on pointe while holding hands with R3, rather than R3 being the dancer specifically described as standing on pointe?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dancer specified as standing on pointe while holding hands with R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer described as matching R1's ballet pose while holding R1's hand, rather than R1 being described as matching R3's pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the dancer described as matching R1's ballet pose while holding R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R3 the two dancers holding hands with each other in the center, rather than R1 holding hands with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 are the hand-holding dance pair, rather than R1 being paired with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing forward with arms extended while standing on pointe and holding hands with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces forward with arms extended while on pointe during the hand-held ballet sequence"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 standing in a matching ballet pose with R1 while their hands meet in the center?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands in a matching ballet pose with R1 as their hands meet in the center"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

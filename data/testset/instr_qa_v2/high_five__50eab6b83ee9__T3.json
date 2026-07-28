@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__50eab6b83ee9__T3",
+  "instruction": "Cinematic film still, wide shot. In a cozy, plant-filled living room, the blonde woman in a grey cardigan (R2) sits in a leather armchair on the left reading a book, while the dark-haired man in a light polo shirt (R1) sits on a brown leather sofa on the right holding a laptop. They are positioned across from each other in a relaxed atmosphere with warm, natural lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a laptop while R2 does not",
+    "R2 reads a book while R1 does not",
+    "R2 is seated in a leather armchair while R1 is seated on a brown leather sofa",
+    "R1 and R2 sit across from each other in a relaxed indoor setting",
+    "a book is associated with R2",
+    "a laptop is associated with R1",
+    "cozy plant-filled living room setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the laptop, rather than R2 being the one holding the laptop?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the laptop instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person reading the book, rather than R1 being the one reading the book?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reads the book instead of R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 seated in the leather armchair while R1 is seated on the brown leather sofa, rather than those seating assignments being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 occupies the armchair and R1 occupies the sofa"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit separately across from R2 while holding a laptop as R2 reads?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct seated activity roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

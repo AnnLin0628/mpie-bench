@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__6e3e8b7ae2fb__T2",
+  "instruction": "Candid documentary photograph, medium shot. In a bright hallway near a doorway, the man in the brown cardigan (R1) crouches on the left, holding a grey backpack. The boy in the school uniform (R2), dressed in a white collared shirt, black tie, and black trousers, stands on the right. The boy looks down as he slips his arm into the backpack strap held by the man. Cool, natural daylight enters from the side, casting soft shadows on the neutral-toned wall behind them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the backpack strap for R2 rather than R2 holding it for R1",
+    "R2 slips his arm into the backpack strap held by R1 rather than R1 slipping into a strap held by R2",
+    "R1 assists from a crouched position while R2 stands and receives help with the backpack",
+    "R1 is the person handling the backpack and R2 is the person putting it on",
+    "a grey backpack is the contact-relevant object",
+    "the interaction takes place in a bright hallway near a doorway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the backpack strap for R2, rather than R2 holding the backpack strap for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the backpack strap for R2 rather than R2 holding it for R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 slipping his arm into the backpack strap held by R1, rather than R1 slipping his arm into a strap held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 slips his arm into the backpack strap held by R1 rather than R1 slipping into a strap held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 crouching to help R2 put on the backpack, rather than R2 crouching to help R1 put it on?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 assists from a crouched position while R2 stands and receives help with the backpack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person handling the backpack while R2 is the person putting his arm into it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person handling the backpack and R2 is the person putting it on"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

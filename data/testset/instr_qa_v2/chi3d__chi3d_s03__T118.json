@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T118",
+  "instruction": "A candid documentary photograph in a wide full-body shot captures an indoor motion capture studio featuring a red carpeted floor, white walls, and technical equipment in the background. On the left, the man in the black cap, black polo, and blue shorts (R1) stands facing right, reaching his right hand forward. On the right, the woman in the white t-shirt and blue jeans (R2) stands still, seen from a three-quarter back view facing left. The man (R1) touches the cheek of the woman (R2) with his right hand as they stand close together. The scene is illuminated by bright overhead lighting, casting soft shadows on the warm red carpet and neutral background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches his right hand forward to touch R2's cheek",
+    "R2 is the person whose cheek is touched by R1",
+    "R1 initiates the cheek contact while R2 stands still",
+    "R1 and R2 stand close together during the cheek-touch interaction",
+    "The scene is an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 touching R2's cheek with his right hand, rather than R2 touching R1's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active cheek-touching person and R2 is the recipient"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching his right hand forward toward R2, rather than R2 reaching a hand forward toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the reaching motion toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing still while receiving contact from R1, rather than R1 standing still while receiving contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the still recipient of R1's cheek touch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have his right hand placed on or against R2's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand is the contacting hand on R2's cheek"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

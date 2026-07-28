@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__b225f6834ddf__T2",
+  "instruction": "Candid lifestyle medium shot in a bright indoor setting. The older woman in a maroon cardigan (R2) on the left and the young woman in a red dress (R1) on the right are locked in a warm embrace. The young woman (R1) holds a red envelope in her hand behind the older woman's back. A wooden table with a red pouch sits in the foreground under soft, natural window light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a red envelope in her hand behind R2's back",
+    "R2 is the person whose back R1 holds the envelope behind",
+    "R1 and R2 are in close body contact in a warm embrace with R1's hand behind R2",
+    "red envelope held by R1 during the embrace",
+    "bright indoor setting with a wooden table and red pouch in the foreground"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding the red envelope behind R2's back, rather than R2 holding it behind R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a red envelope in her hand behind R2's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the embrace, is R2 the person whose back the envelope is held behind by R1, rather than R1 being the person whose back R2 holds an envelope behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose back R1 holds the envelope behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 in close body contact with R1's envelope-holding hand positioned behind R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in close body contact in a warm embrace with R1's hand behind R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

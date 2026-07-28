@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__d5e2f6ecd4cf__T2",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Inside a warm creative workspace, two women sit at a wooden table in front of shelves filled with craft supplies. On the left, the woman in the yellow blazer (R2) sits angled right, looking at her companion while gesturing with her right hand. On the right, the woman in the black top (R1) sits angled left, looking at the woman in the yellow blazer (R2) and pointing at the open notebook with her right hand. The two sit side-by-side, collaborating closely over the notebook. Warm, soft indoor lighting illuminates the scene, casting gentle shadows and highlighting the natural wood tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 points at the open notebook with her right hand while collaborating with R2",
+    "R2 gestures with her right hand while looking at R1",
+    "R1 and R2 sit side-by-side angled toward each other over the notebook",
+    "open notebook on the wooden table",
+    "warm creative workspace with shelves of craft supplies"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one pointing at the open notebook with her right hand, rather than R2 being the one pointing at it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points at the open notebook with her right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one gesturing with her right hand while looking at R1, rather than R1 being the one gesturing toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with her right hand while looking at R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 direct attention down to the notebook while R2 engages R1 with a hand gesture, rather than R2 directing attention down to the notebook while R1 gestures back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directs attention to the notebook while R2 gestures"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated side-by-side at the table, angled toward each other as they collaborate over the notebook?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit side-by-side angled toward each other over the notebook"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

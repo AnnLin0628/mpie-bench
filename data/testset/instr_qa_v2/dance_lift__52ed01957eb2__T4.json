@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__52ed01957eb2__T4",
+  "instruction": "A candid full-shot photograph in a bright indoor ballet studio. The woman in the black leotard (R1) stands behind the young girl in the pink tutu (R2). Both raise their arms upward in a high ballet pose, with the instructor (R1) positioning her hands slightly apart above the student. The young girl (R2) looks up toward her raised hands in profile, while the instructor (R1) looks forward. Soft, natural light fills the room, creating a gentle and focused atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands behind R2 in an instructor role",
+    "R1 positions her hands slightly apart above R2's raised ballet pose",
+    "R2 is the young student in front looking up toward her own raised hands",
+    "Both R1 and R2 raise their arms upward in a high ballet pose",
+    "The setting is a bright indoor ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing behind R2 as the instructor, rather than R2 standing behind R1 as the instructor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 in an instructor role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 position her hands slightly apart above R2's raised ballet pose, rather than R2 positioning her hands above R1's pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 positions her hands slightly apart above R2's raised ballet pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the young student in front looking up toward her own raised hands while R1 is behind her, rather than R1 being the student in front looking up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young student in front looking up toward her own raised hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both holding their arms upward in a high ballet pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "Both R1 and R2 raise their arms upward in a high ballet pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 behind R2 while R2 faces in profile during the ballet pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is behind R2 while R2 is shown in profile"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

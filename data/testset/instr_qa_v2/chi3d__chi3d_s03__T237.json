@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T237",
+  "instruction": "A candid full-shot photograph captures an indoor motion capture studio with a red carpeted floor and white walls. On the left, the woman in the white patterned t-shirt (R2) stands facing right, watching her partner. In the center-right, the man in the black polo shirt and blue shorts (R1) stands with his back to the camera, balancing on his left leg while kicking his right leg out horizontally toward her. Overhead studio lights cast soft shadows on the red carpet. The scene is captured from a wide angle, showing the spacious studio environment.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person balancing on one leg and kicking a leg horizontally toward R2",
+    "R2 is the person standing and watching R1 rather than performing the kick",
+    "R1's raised kicking leg is directed toward R2, making R1 the active kicker and R2 the recipient/observer",
+    "R1 has his back to the camera while performing the kick toward R2",
+    "R2 faces R1 while observing his movement",
+    "The interaction takes place in an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person balancing on one leg and kicking his right leg horizontally toward R2, rather than R2 kicking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active kicker while R2 is the non-kicking partner"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing and watching R1's kick, rather than R1 standing and watching R2 kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the observer while R1 performs the kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's outstretched kicking leg directed toward R2, rather than R2's leg being outstretched toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's kicking motion is aimed toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have his back to the camera while performing the kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration while kicking"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

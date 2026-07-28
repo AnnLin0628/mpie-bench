@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T203",
+  "instruction": "Candid documentary wide full shot from a high angle in a motion capture studio. On the right, the man in the dark polo shirt and blue shorts (R1) stands on one leg, kicking his right leg forward. On the left, the woman in the white t-shirt and blue jeans (R2) stands with her back partially to the camera, watching him. The room features a red carpet, white walls, and overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 performs the one-legged forward kick while R2 watches",
+    "R2 is the observer of R1's kick rather than the kicker",
+    "R1 balances on one leg with his right leg kicked forward",
+    "R2 stands with her back partially to the camera while watching R1",
+    "the action takes place in a motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one standing on one leg and kicking his right leg forward while R2 watches, rather than R2 doing the kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the one-legged forward kick while R2 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 watching R1 perform the forward kick, rather than R1 watching R2 perform it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the observer of R1's kick rather than the kicker"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person balancing on one leg with his right leg extended forward, rather than R2 being in that balancing kick pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances on one leg with his right leg kicked forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand with her back partially to the camera while watching R1's kicking motion?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with her back partially to the camera while watching R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

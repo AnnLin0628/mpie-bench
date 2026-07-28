@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__a88de8c242c4__T2",
+  "instruction": "A candid street photograph with a full-body shot of two women posing on a city sidewalk. On the left, the woman with long brown hair and glasses in a green coat (R1) stands smiling warmly. On the right, the woman with short dark hair in an orange sweater (R2) embraces her closely, wrapping her left arm around the tall woman's shoulder and placing her right hand gently on her chest. They stand in affectionate contact under soft natural daylight against classic city buildings.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1 close rather than R1 holding R2 close",
+    "R2 wraps her left arm around R1's shoulder",
+    "R2 places her right hand on R1's chest",
+    "R1 is the woman being held close by R2",
+    "R1 and R2 pose together on a city sidewalk under natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding R1 close, rather than R1 being the one holding R2 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 close rather than R1 holding R2 close"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her left arm around R1's shoulder, rather than R1 wrapping her arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her left arm around R1's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place her right hand on R1's chest, rather than R1 placing her hand on R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her right hand on R1's chest"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the woman being held close by R2 while R2 makes contact at R1's shoulder and chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman being held close by R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 using both an arm-around-shoulder contact and a hand-on-chest contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 contacts R1 at both the shoulder and chest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

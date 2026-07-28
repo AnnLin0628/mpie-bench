@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__b812d6fe6366__T4",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Indoors near a bright window, the person in the striped shirt and glasses (R2) stands on the left, facing right and smiling. The person in the light green waffle-knit shirt (R1) stands on the right, facing left in profile. They embrace closely; R2's right hand rests gently on R1's shoulder near the neck, while R1's arm wraps around R2's waist. Soft natural light from the window illuminates the couple, creating a warm, intimate mood with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's right hand rests gently on R1's shoulder near the neck",
+    "R1's arm wraps around R2's waist",
+    "R2 makes the higher shoulder/neck contact while R1 makes the lower waist contact",
+    "R1 and R2 face each other closely in profile during the embrace",
+    "The scene is indoors near a bright window with soft natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's right hand resting on R1's shoulder near the neck, rather than R1's right hand resting on R2's shoulder near the neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right hand rests gently on R1's shoulder near the neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person wrapping an arm around R2's waist, rather than R2 being the person wrapping an arm around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's arm wraps around R2's waist"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 make the higher contact on R1's shoulder near the neck while R1 makes the lower contact around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 makes the higher shoulder/neck contact while R1 makes the lower waist contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the shoulder-touching partner and R1 the waist-wrapping partner in the close embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 touches R1's shoulder while R1 wraps R2's waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

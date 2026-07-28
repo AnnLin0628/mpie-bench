@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0a7a557716c5__T14",
+  "instruction": "Candid medium shot of a lively indoor party. In the center, the woman with dreadlocks (R7) wearing an olive green dress and the man with glasses (R4) in a white sweatshirt reach out to embrace each other with joyful smiles. On the left, the man in the gray shirt (R1) stands partially visible. In the background, the man in the brown shirt (R5) is partially obscured. The room is decorated with red and white bunting under bright, natural indoor light.",
+  "n_person": 11,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11"
+  ],
+  "elements": [
+    "R7 reaches out to embrace R4 while R1 only stands partially visible",
+    "R4 reaches out to embrace R7 while R5 remains partially obscured in the background",
+    "R7 and R4 are the central pair reaching toward each other",
+    "R1 is not part of the central embracing pair",
+    "R5 is a background figure rather than a central contact participant",
+    "The setting is a lively indoor party with red and white bunting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R7 reaching out to embrace R4, rather than R1 being the one reaching out to embrace R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 is the active central embracer toward R4 while R1 is only partially visible"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 reaching out to embrace R7, rather than R5 being the one reaching out to embrace R7?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the active central embracer toward R7 while R5 is obscured in the background"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R7 and R4 the central pair reaching toward each other to embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 and R4 form the central contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 outside the central contact role while R7 and R4 are the people reaching toward each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands apart from the central embracing action"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

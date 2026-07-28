@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T30",
+  "instruction": "Candid outdoor photograph, medium shot. In a sunny park with green trees, four children stand side-by-side in a friendly huddle. On the far left, the boy with glasses in a yellow t-shirt (R1) stands facing forward, smiling slightly. Next to him, the girl with curly hair in a brown dress and white cardigan (R3) looks forward with a neutral expression. Beside her, the boy in a blue denim shirt (R5) smiles warmly. On the far right, the girl with dark hair and bangs in a striped dress and dark cardigan (R4) smiles broadly. They have their arms wrapped around each other's shoulders. Warm, bright sunlight filters through the trees from behind, creating a soft backlighting effect.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 is an outer child in the shoulder-linked huddle, with his shoulder contact directed toward R3 rather than being between two children.",
+    "R3 is positioned between R1 and R5 in the shoulder-linked huddle, rather than R1 being positioned between R3 and R5.",
+    "R5 is positioned between R3 and R4 in the shoulder-linked huddle, rather than R4 being positioned between R3 and R5.",
+    "R4 is an outer child in the shoulder-linked huddle, with her shoulder contact directed toward R5 rather than being between two children.",
+    "The children are in a sunny park with green trees."
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 an outer child in the shoulder-linked huddle whose shoulder contact is with R3, rather than R3 being the outer child whose shoulder contact is only with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 outer-child shoulder contact with R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 link shoulders between R1 and R5, rather than R1 linking shoulders between R3 and R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 middle shoulder-link role between R1 and R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5 link shoulders between R3 and R4, rather than R4 linking shoulders between R3 and R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 middle shoulder-link role between R3 and R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 an outer child in the huddle with shoulder contact toward R5, rather than being between two other labeled children?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 outer-child shoulder-link role with R5"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

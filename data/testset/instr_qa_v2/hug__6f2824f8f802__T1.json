@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__6f2824f8f802__T1",
+  "instruction": "Candid outdoor photograph, medium close-up at eye-level. In front of a wooden house, the man in the purple hoodie (R1) stands in the center foreground with arms crossed, smiling at the camera. Behind him, the woman in the yellow sweatshirt (R2) hugs him from behind, wrapping her arms over his shoulders and chest while laughing joyfully with her eyes squinted shut. Soft natural daylight illuminates the scene with warm tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 embraces R1 from behind rather than R1 embracing R2 from behind",
+    "R2 wraps her arms over R1's shoulders and chest rather than R1 wrapping arms over R2",
+    "R1 keeps his arms crossed while R2 is the person making the behind-the-body contact",
+    "R1 stands in the center foreground while R2 is positioned behind him in contact",
+    "the scene is outdoors in front of a wooden house"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 embracing R1 from behind, rather than R1 embracing R2 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 from behind rather than R1 embracing R2 from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms over R1's shoulders and chest, rather than R1 wrapping his arms over R2's shoulders and chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms over R1's shoulders and chest rather than R1 wrapping arms over R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing with arms crossed while R2 is the person making contact from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps his arms crossed while R2 is the person making the behind-the-body contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned behind R1 while maintaining upper-body contact with him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in the center foreground while R2 is positioned behind him in contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

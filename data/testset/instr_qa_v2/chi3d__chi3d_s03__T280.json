@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T280",
+  "instruction": "A candid documentary photograph with a full shot of an indoor studio with a red carpeted floor. The woman in the white t-shirt and blue jeans (R2) stands on the left, facing right, leaning forward to push her hands against the shoulder of the man in the black t-shirt and blue shorts (R1). The man (R1) stands on the right, facing away from her. The background features dark room dividers and white walls under bright overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward and pushes her hands against R1's shoulder",
+    "R1 is the person receiving the shoulder push from R2",
+    "R1 faces away from R2 while R2 applies the push",
+    "R2's hands are in contact with R1's shoulder",
+    "The interaction takes place in an indoor studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pushing her hands against R1's shoulder, rather than R1 pushing his hands against R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active pusher contacting R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder push from R2, rather than R2 receiving a shoulder push from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's shoulder push"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward to apply pressure with her hands to R1 while R1 faces away from her, rather than R1 leaning forward to push R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 applies forward pressure while R1 faces away"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2's hands placed against R1's shoulder during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hands contact R1's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

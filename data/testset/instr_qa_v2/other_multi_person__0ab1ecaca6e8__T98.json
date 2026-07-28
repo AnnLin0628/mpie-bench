@@ -1,0 +1,104 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T98",
+  "instruction": "A candid outdoor full shot shows a group of friends cheering on a grassy park field. On the right, the bald man in a dark blue t-shirt (R2) leans forward with his hands near his chest, looking left with an intense expression. To his left, the woman in a dark blue t-shirt (R4) leans forward, shouting excitedly towards the left. In the background, the man in a red polo shirt (R3) stands on the left, and the woman in a red t-shirt and black beanie (R5) stands behind the bald man (R2). The group is closely gathered, reacting dynamically to the game. The lighting is bright, natural daylight casting soft shadows on the grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 is the woman leaning forward and shouting excitedly toward the left",
+    "R2 is the bald man leaning forward with his hands near his chest and an intense expression",
+    "R5 stands behind R2 while R2 is the foreground bald man reacting intensely",
+    "R3 stands in the background as the man in the red polo shirt",
+    "the group of friends is cheering on a grassy park field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person leaning forward and shouting excitedly toward the left, rather than R2 being described as the one shouting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the shouting cheering role while R2 has a different intense leaning role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the bald man leaning forward with his hands near his chest and an intense expression, rather than R5 taking that foreground reacting role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the intense forward-leaning reaction role while R5 is positioned behind him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the man standing in the background, rather than R4 being the background man?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is assigned the background standing role while R4 is a forward-leaning cheering woman"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 react to the game by leaning forward with his hands near his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration is leaning forward with hands near his chest"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand behind R2 as part of the closely gathered cheering group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's role is standing behind R2 within the gathered group"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the group cheering on a grassy park field in bright natural daylight?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor grassy park field with bright natural daylight"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

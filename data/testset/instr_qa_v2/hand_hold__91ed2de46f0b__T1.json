@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__91ed2de46f0b__T1",
+  "instruction": "A candid outdoor photograph with a full shot of a family walking on a park path. On the left, the woman in the white off-the-shoulder crop top and white jeans (R1) walks forward, looking towards the center. In the middle, the young girl in the green t-shirt and shorts (R2) walks forward, looking up at the man. On the right, the man in the plaid shirt and dark jeans (R3) walks forward, looking down at the girl. They walk side-by-side holding hands: the woman (R1) holds the girl's (R2) right hand, and the girl (R2) holds the man's (R3) right hand. In the background, a few distant, blurred people are visible. The scene is illuminated by soft, warm daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is an end person in the hand-holding chain, holding R2's right hand rather than holding both R2 and R3",
+    "R2 is the middle connector, with R1 holding her right hand and R2 holding R3's right hand",
+    "R3 is the other end person, connected to R2 rather than directly to R1",
+    "R2 walks forward between the two adults while holding hands with both R1 and R3",
+    "R2 looks up toward R3 while R3 looks down toward R2",
+    "The family is walking outdoors on a park path in soft warm daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 an end person in the hand-holding chain, holding R2's right hand rather than being the middle person holding both R2 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is an end person in the hand-holding chain, holding R2's right hand rather than holding both R2 and R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the middle connector who is held by R1 and also holds R3's right hand, rather than R1 being between R2 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the middle connector, with R1 holding her right hand and R2 holding R3's right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 connected to the hand-holding chain through R2, rather than directly holding hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the other end person, connected to R2 rather than directly to R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking forward between R1 and R3 while holding hands with both of them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks forward between the two adults while holding hands with both R1 and R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

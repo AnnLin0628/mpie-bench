@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__d3e473e80ca9__T3",
+  "instruction": "Cinematic close-up medium shot of a warm embrace on a riverfront. The blonde woman in the orange floral top (R1) faces the camera with a joyful smile, hugging the dark-haired woman in the white knit tank top (R2), whose back is turned to the camera. R2's arms are wrapped around R1's shoulders. The top of a bystander's head is partially visible in the bottom right. Soft, warm daylight illuminates their happy reunion.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces the camera during the embrace while R2's back is turned",
+    "R2's arms are wrapped around R1's shoulders",
+    "R1 is the joyful, front-facing participant being held around the shoulders by R2",
+    "R2 is the dark-haired participant turned away from the camera while embracing R1",
+    "the reunion takes place on a riverfront in soft, warm daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face the camera during the embrace while R2's back is turned, rather than R2 facing the camera with R1's back turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces the camera during the embrace while R2's back is turned"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one whose arms are wrapped around R1's shoulders, rather than R1 being the one described with arms wrapped around R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms are wrapped around R1's shoulders"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the joyful, front-facing participant being held by R2 around the shoulders, rather than R2 being the joyful front-facing participant held that way by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the joyful, front-facing participant being held around the shoulders by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 turned away from the camera while maintaining close shoulder-level contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dark-haired participant turned away from the camera while embracing R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

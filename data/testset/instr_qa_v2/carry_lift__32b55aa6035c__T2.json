@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__32b55aa6035c__T2",
+  "instruction": "Candid medium shot of a bright apartment interior. On the left, the Black man in a tan coat (R2) holds a cardboard box, looking forward with a cheerful smile. On the right, the Asian woman in a dark green coat (R1) holds a cardboard box, looking sideways at him. They stand side-by-side in the bright room illuminated by soft natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks sideways at R2 while holding a cardboard box",
+    "R2 looks forward with a cheerful smile while holding a cardboard box",
+    "R1 and R2 each carry a cardboard box",
+    "The interaction involves cardboard boxes as the contact-relevant objects",
+    "The scene is a bright apartment interior with soft natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking sideways at R2 while holding a cardboard box, rather than R2 looking sideways at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directs her gaze sideways toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking forward with a cheerful smile while holding a cardboard box, rather than R1 filling that forward-facing smiling role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces forward cheerfully while carrying a box"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a cardboard box while looking sideways toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries a box and attends to R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold a cardboard box while looking forward with a cheerful expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries a box and faces forward smiling"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are cardboard boxes the objects being held by both R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "cardboard boxes held by both people"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

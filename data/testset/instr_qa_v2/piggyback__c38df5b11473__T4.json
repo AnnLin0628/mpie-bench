@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__c38df5b11473__T4",
+  "instruction": "Candid outdoor photograph, low-angle close-up shot. In a mountainous landscape, a blonde woman in a blue checkered shirt (R2) on the left smiles in profile wearing sunglasses. Beside her, a bearded man in a red plaid shirt (R1) looks toward her wearing sunglasses. They stand close together. Bright daylight with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks toward R2",
+    "R2 is the person being looked toward by R1",
+    "R2 smiles in profile beside R1",
+    "R1 and R2 stand close together",
+    "R1 and R2 wear sunglasses",
+    "mountainous outdoor landscape"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking toward R2, rather than R2 being described as looking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person who is being looked toward by R1, rather than R1 being the person looked toward by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being looked toward by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": true
+  }
+}

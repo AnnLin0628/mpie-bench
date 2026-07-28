@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T10",
+  "instruction": "Cinematic still, medium-full shot. Inside a dim gym, the shirtless man with short dark hair (R1) sits on a gray mat on the left, laughing. He is clasping hands with the shirtless bearded man with a chest tattoo (R3), who kneels on the right and smiles back. Cool, hazy backlighting illuminates the scene, casting soft shadows across the gym floor.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is seated on a gray mat while clasping hands with R3",
+    "R3 is kneeling while clasping hands with the seated R1",
+    "R1 and R3 are clasping hands with each other",
+    "a gray mat supports the seated R1",
+    "the interaction takes place inside a dim gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person sitting on the gray mat while clasping R3's hand, rather than R3 being the seated person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated on a gray mat while clasping hands with R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person kneeling while clasping hands with seated R1, rather than R1 being the kneeling person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is kneeling while clasping hands with the seated R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 clasping hands with each other while R1 sits and R3 kneels?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 are clasping hands with each other"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a gray mat that R1 is sitting on during the hand-clasping interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a gray mat supports the seated R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

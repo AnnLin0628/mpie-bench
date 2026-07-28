@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T4",
+  "instruction": "Candid documentary photograph of a bright, minimalist indoor dance studio with large windows. On the left, the blonde girl (R5) in a beige long-sleeve top, shorts, and white socks stands with arms extended to the sides. On the right, the dark-haired young woman (R4) in a matching beige outfit and white socks bends her torso deeply to the left, her left arm arching over her head to hold hands with the blonde girl. Both look forward. Bright, soft, diffused natural light from the windows illuminates the clean, neutral space.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 bends her torso deeply while arching her left arm over her head to hold hands with R5",
+    "R5 remains upright with arms extended while R4 is the partner bending toward her",
+    "R4 is the dancer making the overhead arched-arm hand connection with R5",
+    "R5 is the standing partner with arms extended to the sides during the handhold",
+    "The interaction takes place in a bright minimalist indoor dance studio with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one bending her torso deeply and arching her left arm over her head to hold hands with R5, rather than R5 doing that toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 performs the deep bend and overhead arched-arm handhold with R5"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5 remain upright with arms extended to the sides while R4 is the dancer bending deeply toward her, rather than R4 remaining upright while R5 bends?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is upright while R4 performs the bending role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 holding hands with R5 using her left arm arched over her head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 uses an overhead arched left arm to hold hands with R5"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 the partner standing with arms extended outward while connected by hand to R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 stands with arms extended while holding hands with R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

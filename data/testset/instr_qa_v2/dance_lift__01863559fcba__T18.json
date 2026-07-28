@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T18",
+  "instruction": "Candid documentary photograph, full shot. In a bright, minimalist indoor dance studio, the older dancer in a beige camisole and shorts (R4) stands behind the blonde girl in a beige long-sleeve top and shorts (R5). The older dancer gently places her hands on the blonde girl's waist to guide her posture. The blonde girl stands in the foreground, holding her arms in a rounded ballet first position and looking to the side. Soft, bright daylight illuminates the scene, highlighting the clean white walls and neutral beige tones of their outfits.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 stands behind R5 and places her hands on R5's waist",
+    "R4 guides R5's posture rather than being guided by R5",
+    "R5 is the dancer being guided at the waist by R4",
+    "R5 holds her arms in a rounded ballet first position while R4 guides her",
+    "The scene is a bright minimalist indoor dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 placing her hands on R5's waist to guide R5, rather than R5 placing her hands on R4's waist to guide R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the asymmetric waist-guiding duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the older dancer standing behind and guiding R5's posture, rather than R5 standing behind and guiding R4's posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 guides R5 from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the dancer whose waist is being held for posture correction by R4, rather than R4 being the dancer whose waist is held by R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 receives the posture-guiding contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand in the foreground with rounded ballet arms while R4 remains behind her with hands at R5's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's ballet pose and R4's waist-contact guiding role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

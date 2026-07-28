@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__568e78e9d5b9__T1",
+  "instruction": "A crisp studio photograph with a full-shot, eye-level view captures an indoor ballet studio with wooden floors and grey walls. On the left, the young girl with dark hair in a bun (R1) in a white tutu stands with a serious expression, holding the grey ballet barre with her left hand. On the right, the young girl with light brown hair in a bun (R2) in a matching white tutu stands holding the same barre, her right leg bent at the knee. They stand side-by-side practicing their positions under soft indoor lighting that highlights the neutral grey and warm wood tones of the studio.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the dancer specifically holding the grey ballet barre with her left hand while R2 is distinguished by a bent right leg",
+    "R2 is the dancer with her right leg bent at the knee while R1 holds the barre with her left hand",
+    "R1 and R2 both practice ballet positions while holding the same barre",
+    "R1 and R2 are side-by-side dancers in matching ballet practice poses at the barre",
+    "the grey ballet barre is the shared contact object",
+    "the setting is an indoor ballet studio with wooden floors and grey walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer specifically holding the grey ballet barre with her left hand while R2 is the dancer distinguished by a bent right leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the barre with her left hand while R2 has the bent right leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer whose right leg is bent at the knee, rather than R1 being the one described with a bent right leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the bent right leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both practicing ballet positions while holding the same barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "both dancers practice at the same barre"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold the barre with her left hand while R2 maintains a ballet position with her right leg bent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "different labeled ballet positions for R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

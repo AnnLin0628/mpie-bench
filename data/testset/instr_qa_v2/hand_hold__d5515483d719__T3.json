@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d5515483d719__T3",
+  "instruction": "A candid outdoor photograph in a medium shot captures a park pathway. On the left, the man in the plaid shirt (R1) walks forward, smiling warmly at his companion. On the right, the woman in the dark blue shirt (R2) walks beside him, tilting her head back in a joyful laugh. They walk closely side-by-side under the bright, natural light filtering through the green forest canopy.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man walking forward while smiling warmly at R2",
+    "R2 is the woman walking beside R1 while tilting her head back in a joyful laugh",
+    "R1 and R2 are close companions walking side-by-side",
+    "R2 is the laughing companion rather than R1",
+    "the pair is on a park pathway under natural light and a green forest canopy"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one smiling warmly at R2, rather than R2 being the one smiling warmly at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles warmly at his companion"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one tilting her head back in a joyful laugh, rather than R1 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 tilts her head back while laughing joyfully"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 walking forward while smiling at R2, rather than R2 walking forward while smiling at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the warm smiling role toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking beside R1 while laughing joyfully?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks beside R1 with a joyful laughing expression"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking closely side-by-side as companions?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk closely side-by-side"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

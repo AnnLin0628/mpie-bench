@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T7",
+  "instruction": "A cinematic action still captured in a medium full shot shows an indoor gym with metal training rigs and a hazy atmosphere. On the left, the man in the patterned black t-shirt (R4) stands in a defensive stance, facing right with his knees bent. On the right, the man in the plain black t-shirt (R2) lunges forward, throwing a punch toward his partner. The man in the plain black t-shirt (R2) attacks while the man in the patterned black t-shirt (R4) raises his hands to block the incoming strike. The scene is illuminated by cool, hazy lighting with a soft background glow and desaturated tones.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the attacker who lunges forward and throws a punch toward R4",
+    "R4 is the defender who raises his hands to block R2's incoming strike",
+    "R2's punch is the incoming strike while R4's hands are used defensively",
+    "R4 stands in a defensive stance with bent knees facing R2",
+    "R2 lunges forward toward R4",
+    "the interaction takes place in an indoor gym with metal training rigs and haze"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one lunging forward to throw a punch at R4, rather than R4 lunging forward to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacker who lunges forward and throws a punch toward R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one raising his hands to block R2's incoming strike, rather than R2 blocking a strike from R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the defender who raises his hands to block R2's incoming strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 play the attacking role while R4 plays the defensive blocking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's punch is the incoming strike while R4's hands are used defensively"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 lunging forward toward R4 as part of the combat interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges forward toward R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

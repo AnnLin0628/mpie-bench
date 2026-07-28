@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T23",
+  "instruction": "Cinematic full shot of an indoor martial arts gym with a white mat and training rigs. On the left, the man in the black t-shirt and shorts (R2) leans forward in a grappling stance with a focused expression. On the right, the barefoot man in the black compression shirt and pants (R1) stands with his back partially turned, sparring. The two men are actively grappling on the mat under cool, hazy lighting with a misty background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the forward-leaning grappler rather than R1",
+    "R1 is the sparring man with his back partially turned rather than R2",
+    "R2 leans into a grappling stance toward R1 while R1 stands sparring",
+    "R1 and R2 are actively grappling on a white mat",
+    "the white mat is the contact surface for the grappling",
+    "the scene is an indoor martial arts gym with training rigs"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man leaning forward in a grappling stance, rather than R1 being the forward-leaning grappler?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the forward-leaning grappler rather than R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man sparring with his back partially turned, rather than R2 having the back-partially-turned sparring stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the sparring man with his back partially turned rather than R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean into the grappling exchange while R1 stands in the sparring position with his back partially turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans into a grappling stance toward R1 while R1 stands sparring"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 actively grappling with each other on the mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are actively grappling on a white mat"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a white mat present as the surface where the grappling takes place?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the white mat is the contact surface for the grappling"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set inside a martial arts gym with training rigs?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene is an indoor martial arts gym with training rigs"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

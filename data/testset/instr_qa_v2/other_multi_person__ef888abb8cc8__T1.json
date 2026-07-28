@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__ef888abb8cc8__T1",
+  "instruction": "Candid outdoor photograph, full shot at eye-level. On an outdoor grassy field with concrete structures in the background, two boys participate in a tug-of-war. On the left, the boy in the teal t-shirt and red headband (R2) leans low with his left leg extended, pulling a yellow rope with both hands. Behind him on the right, the boy in the striped t-shirt and patterned headband (R1) squats and pulls the same rope, smiling. They work together, pulling the rope in unison. On the far edges, cropped legs of other participants are partially visible. The scene is illuminated by bright natural daylight with vibrant green grass.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans low with his left leg extended while pulling the yellow rope with both hands",
+    "R1 squats behind R2 while pulling the same yellow rope",
+    "R1 and R2 pull the rope together in unison during a tug-of-war",
+    "The contact-relevant object is a yellow rope held by both boys",
+    "The scene is an outdoor grassy field with concrete structures in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boy leaning low with his left leg extended while pulling the yellow rope with both hands, rather than R1 having that extended-leg low-leaning pulling posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans low with his left leg extended while pulling the yellow rope with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 squatting behind R2 while pulling the same rope, rather than R2 squatting behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 squats behind R2 while pulling the same yellow rope"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 take the lower, extended-leg pulling position while R1 takes the squatting rear pulling position, rather than those roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the low extended-leg role and R1 has the squatting rear pulling role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 working together by pulling the same rope in unison during the tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 pull the same rope together in unison"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the shared contact object that R1 and R2 are pulling a yellow rope?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow rope held and pulled by both boys"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

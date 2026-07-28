@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T12",
+  "instruction": "Photographic full shot in a ballet studio with wooden barres. Three young dancers stand relaxed: on the left, the red-haired girl in a pink leotard and skirt (R3) smiles; in the center, the girl with slicked-back hair in a pink leotard and skirt (R2) looks down; on the right, the light-brown-haired girl in a pink leotard and skirt (R1) wipes her forehead with her arm. They wear white tights and ballet slippers on a reflective grey floor. Bright, cool studio lighting illuminates the clean white wall behind them.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 wipes her forehead with her arm",
+    "R2 looks down while standing relaxed",
+    "R3 smiles while standing relaxed",
+    "wooden barres are visible in the ballet studio",
+    "the dancers stand on a reflective grey floor in a bright ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer wiping her forehead with her arm, rather than R2 being the one wiping her forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric action of wiping her forehead"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer looking down, rather than R3 being the one looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric gaze role of looking down"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 smile while R1 wipes her forehead with her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's smiling role is distinct from R1's forehead-wiping action"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the dancers in a bright ballet studio with a reflective grey floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bright ballet studio with reflective grey floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

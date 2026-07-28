@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T20",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.7941176470588236,
+  "S_instr_role": 0.5,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.5,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground dancer moving her hands, rather than R3 being the foreground dancer moving her hands?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "foreground dancer has hands raised"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer behind R1 with her arms raised, rather than R1 being behind R3 with raised arms?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "rear dancer has arms raised"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile and look to the left while dancing in front of R3?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "smiling in front but looking right"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance__12f4049cafad__T20",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 10.2,
+    "written_at": "2026-07-17T14:57:13",
+    "gen_relpath": "outputs/gpt-image-2/dance__12f4049cafad__T20.png",
+    "qa_relpath": "instr_qa_v2/dance__12f4049cafad__T20.json",
+    "n_questions": 3
+  }
+}

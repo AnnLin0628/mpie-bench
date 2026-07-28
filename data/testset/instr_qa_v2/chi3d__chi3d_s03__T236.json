@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T236",
+  "instruction": "A candid documentary wide shot captures an indoor training studio with a red carpet and white walls. On the left, the man in the dark polo shirt and blue shorts (R1) stands facing right, executing a low kick with his right leg. On the right, the woman in the white patterned t-shirt and blue jeans (R2) stands with her back to the camera, observing his movement. The man's (R1) leg is extended forward and low towards her. The scene is brightly illuminated by overhead fluorescent lights, creating a neutral color palette with soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person executing the low kick, while R2 is observing",
+    "R1's right leg is extended forward and low toward R2, rather than R2 kicking toward R1",
+    "R2 stands with her back to the camera while watching R1's movement",
+    "R1 faces toward R2 during the kicking motion",
+    "The scene takes place in an indoor training studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 executing the low kick while R2 observes, rather than R2 executing the kick while R1 observes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active kicker and R2 is the observer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's right leg extended low toward R2, rather than R2's leg being extended low toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's leg is the one extended toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 watching R1's movement with her back to the camera, rather than R1 watching R2's movement with his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the back-facing observer of R1's action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while performing the kicking motion?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 during the kick"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing as the observer of R1's low kick rather than participating as the kicker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is observing R1's kick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

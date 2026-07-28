@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T11",
+  "instruction": "A full shot cinematic still of a grassy outdoor backyard surrounded by green trees. On the left, the woman in the crochet vest (R2) is blindfolded with a peach bandana, swinging a wooden bat upwards. In the background center, the woman in the pink shirt (R1) stands watching attentively. On the right, the man in the patterned tee (R3) stands in a defensive, excited stance with his hands raised forward. The blindfolded woman swings the wooden bat upwards at a red heart-shaped pinata hanging from above, while her friends stand behind her, watching and reacting to the swing. The scene is illuminated by bright daylight filtering through the trees.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the blindfolded participant swinging the wooden bat at the pinata while R1 watches",
+    "R2 takes the active batting turn while R3 reacts defensively with hands raised",
+    "R1 stands behind the action watching attentively as R2 swings",
+    "R3 stands in a defensive, excited stance with hands raised forward in response to the swing",
+    "R2 swings a wooden bat",
+    "A red heart-shaped pinata hangs from above as the target",
+    "The scene is set in a grassy outdoor backyard surrounded by green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blindfolded participant swinging the wooden bat at the hanging pinata, rather than R1 swinging it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the blindfolded batter while R1 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 taking the active batting turn while R3 stands back reacting with raised hands, rather than R3 taking the batting turn?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 swings while R3 reacts defensively"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 watch attentively from behind as R2 swings, rather than R1 being the blindfolded batter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is an attentive watcher, not the batter"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 reacting to R2's swing in a defensive, excited stance with his hands raised forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 reacts defensively to R2's swing"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the target a red heart-shaped pinata hanging from above?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red heart-shaped hanging pinata"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

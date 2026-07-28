@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__988f38d47271__T2",
+  "instruction": "Candid office photograph, medium shot. In a sunlit modern office, the woman in the dark blue dress (R1) and the Black man in the white henley shirt (R4) stand by a conference table. Facing left in profile, the woman (R1) smiles as she reaches her hands forward. The Black man (R4), also in profile, leans in from the right to stack his hands on top of hers in a collaborative team gesture. Bright daylight illuminates the office background, casting soft shadows on the table cluttered with papers and cups.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 stacks his hands on top of R1's hands",
+    "R1's hands remain underneath while R4's hands are placed above them",
+    "R1 reaches her hands forward as R4 leans in to join the hand stack",
+    "R1 and R4 perform a collaborative team hand-stack gesture",
+    "conference table with papers and cups",
+    "sunlit modern office setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 stack his hands on top of R1's hands, rather than R1 stacking her hands on top of R4's?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 stacks his hands on top of R1's hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's hands positioned underneath R4's hands in the team stack, rather than R4's hands being underneath R1's?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hands remain underneath while R4's hands are placed above them"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one reaching her hands forward while R4 leans in to place his hands on hers, rather than R4 reaching forward for R1 to place hands on his?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches her hands forward as R4 leans in to join the hand stack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R4 engaged in a collaborative team hand-stack gesture together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 perform a collaborative team hand-stack gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

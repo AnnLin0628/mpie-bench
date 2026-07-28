@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T112",
+  "instruction": "A candid medium photograph captures an interaction inside a motion capture studio with a red carpeted floor. On the left, the woman in the white t-shirt and blue jeans (R2) stands facing right, reaching her right arm forward to touch the other person. On the right, the man in the dark polo shirt and blue shorts (R1) stands in profile facing her as she touches his chest. In the background, white walls, a radiator, and studio cameras are visible. Bright overhead lighting illuminates the scene clearly.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the person actively reaching forward to touch R1, rather than R1 reaching forward to touch R2",
+    "R1 is the person whose chest is being touched by R2, rather than R2 having her chest touched by R1",
+    "R2 initiates the chest contact with her right arm while R1 receives the contact",
+    "R1 stands facing R2 as the recipient of R2's touch",
+    "the interaction takes place inside a motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching her right arm forward to touch R1, rather than R1 reaching forward to touch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person actively reaching forward to touch R1, rather than R1 reaching forward to touch R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being touched by R2, rather than R2 being the one whose chest is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose chest is being touched by R2, rather than R2 having her chest touched by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 initiate the contact with her right arm while R1 receives the chest touch, rather than R1 initiating the same touch on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the chest contact with her right arm while R1 receives the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T3",
+  "instruction": "Candid dance photograph, full shot. Indoors against a plain light wall, a couple dances tango. The man in the grey suit (R1) stands on the left, facing right. The woman in the black halter dress (R2) is on the right with her back to the camera, her hand raised to hold his. His hand rests on her back in a classic tango embrace. Soft, diffused lighting creates a clean, focused composition.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests his hand on R2's back in a classic tango embrace",
+    "R2 raises her hand to hold R1's hand",
+    "R2 has her back to the camera while dancing with R1",
+    "R1 and R2 are dancing tango as a couple",
+    "The dance takes place indoors against a plain light wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest his hand on R2's back in the tango embrace, rather than R2 resting her hand on R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests his hand on R2's back in a classic tango embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer whose hand is raised to hold R1's hand, rather than R1 being the one described as raising a hand to hold hers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises her hand to hold R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 dancing with her back to the camera while R1 faces toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera while dancing with R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posed as a tango couple in a classic embrace, with R1 making back contact on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are dancing tango as a couple"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

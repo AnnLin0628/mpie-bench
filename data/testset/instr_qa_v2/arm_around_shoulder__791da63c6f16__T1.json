@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__791da63c6f16__T1",
+  "instruction": "A clean, candid lifestyle photograph captured in a medium shot at eye-level, set against a plain, neutral white wall indoors. On the left, the dark-haired woman in the rust-orange zip-up hoodie (R1) stands facing forward with her arms crossed at her waist, gazing directly at the camera with a neutral expression and dark red lipstick. Standing slightly behind her on the right, the light-brown-haired woman in the mint-green hoodie (R2) looks toward her companion with a soft, affectionate gaze. The light-brown-haired woman (R2) places her right hand gently on the dark-haired woman's (R1) left shoulder, while her left hand rests softly on the dark-haired woman's (R1) left forearm. The scene is illuminated by soft, diffused natural light from the front-left, creating gentle shadows and a bright, clean color palette with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her right hand gently on R1's left shoulder",
+    "R2 rests her left hand softly on R1's left forearm",
+    "R1 receives R2's shoulder and forearm touch while keeping her arms crossed at her waist",
+    "R1 faces forward toward the camera while R2 looks toward R1",
+    "The scene is indoors against a plain neutral white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one placing her right hand on R1's left shoulder, rather than R1 placing her right hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her right hand gently on R1's left shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one resting her left hand on R1's left forearm, rather than R1 resting her left hand on R2's forearm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her left hand softly on R1's left forearm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving R2's gentle shoulder and forearm touch while keeping her own arms crossed, rather than R2 receiving that touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's shoulder and forearm touch while keeping her arms crossed at her waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look toward R1 while R1 gazes directly at the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces the camera while R2 looks toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

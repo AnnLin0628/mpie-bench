@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__c523346d21de__T4",
+  "instruction": "A candid cinematic photograph in a medium close-up shot captures an outdoor night scene decorated with warm hanging fairy lights. On the left, the young man with short dark hair and sunglasses on his head (R2) wears a white button-up shirt covered in red lipstick prints, looking forward with a calm expression. On the right, the young woman with long wavy brown hair (R1) wears a white striped crop top and white trousers, leaning her head on his shoulder with a gentle smile. She wraps her arm around his as he holds a bouquet of red and white roses with baby's breath in front of them. The background is softly blurred, illuminated by a warm golden glow from the fairy lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans her head on R2's shoulder rather than R2 leaning on R1",
+    "R1 wraps her arm around R2's arm rather than R2 wrapping his arm around hers",
+    "R2 holds the bouquet in front of them rather than R1 holding it",
+    "R1 rests against R2 while maintaining close arm contact",
+    "R2 is holding a bouquet of red and white roses with baby's breath",
+    "the outdoor night scene is decorated with warm hanging fairy lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning her head on R2's shoulder, rather than R2 leaning his head on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans her head on R2's shoulder rather than R2 leaning on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arm around R2's arm, rather than R2 wrapping his arm around R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arm around R2's arm rather than R2 wrapping his arm around hers"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the bouquet in front of them, rather than R1 holding the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the bouquet in front of them rather than R1 holding it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in close contact with R2 by resting her head on his shoulder and looping her arm around his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests against R2 while maintaining close arm contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet of red and white roses with baby's breath being held in front of R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 is holding a bouquet of red and white roses with baby's breath"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

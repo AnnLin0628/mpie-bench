@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__204824f5fb1d__T4",
+  "instruction": "Full-shot candid photograph of a family walking in a grassy park. On the left, the woman in the black leather jacket and blue jeans (R2) walks forward, looking towards her family. Beside her on the right, the man in the white hoodie and beige pants (R1) walks while carrying the baby in denim overalls (R3) in his arms. They stroll together across the green lawn with trees in the background. Soft, natural daylight evenly illuminates the scene, creating a relaxed and peaceful atmosphere as they walk side-by-side.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 carries R3 in his arms while walking",
+    "R3 is the baby being carried by R1, not the carrier",
+    "R1 has the carrying/support duty while R2 walks beside the family",
+    "R2 walks alongside R1 and R3 rather than carrying R3",
+    "the family is walking in a grassy park with trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R3 in his arms while walking, rather than R3 supporting or carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R3 in his arms while walking"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the baby being carried by R1, rather than R1 being carried by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the baby being carried by R1, not the carrier"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have the physical carrying duty for R3 while R2 walks beside them without carrying R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the carrying/support duty while R2 walks beside the family"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking alongside R1 and R3 rather than being the person holding R3 in her arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks alongside R1 and R3 rather than carrying R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1, R2, and R3 walking together in a grassy park with trees in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the family is walking in a grassy park with trees in the background"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

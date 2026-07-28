@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d1b594b99262__T1",
+  "instruction": "Candid medium shot of two men walking arm-in-arm on a lush green park path. On the left, the Black man in the gray polo shirt (R2) looks lovingly at his partner. On the right, the bearded man in the black t-shirt (R1) carries a white tote bag on his shoulder and smiles back. They walk closely, with the Black man (R2) holding the bearded man's (R1) arm. Soft natural daylight illuminates the scene, creating a warm, intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds onto R1's arm while they walk together",
+    "R1 is the person whose arm is being held by R2",
+    "R1 carries a white tote bag on his shoulder",
+    "R1 and R2 walk closely arm-in-arm",
+    "R2 looks lovingly at R1 while R1 smiles back",
+    "They are on a lush green park path"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding onto R1's arm while they walk, rather than R1 holding onto R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose arm is being held by R2, rather than R2 being the person whose arm is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the held-arm partner"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying the white tote bag on his shoulder, rather than R2 carrying it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the tote bag"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking closely arm-in-arm, with R2 linked to R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk arm-in-arm with R2 linked to R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a white tote bag being carried on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "white tote bag on R1's shoulder"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking on a lush green park path?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "lush green park path"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

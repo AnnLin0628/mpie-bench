@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__7c416b903157__T2",
+  "instruction": "A candid outdoor photograph with a full shot of a lakeside park in autumn. On the right, the man in the brown cardigan (R1) leans against a tree trunk, looking down at his hands. On the left, the red-haired woman in the white turtleneck (R2) stands facing him, looking down at the leaves they are sharing. They stand close together, with the man holding out yellow leaves in his hands as the woman reaches towards them. The background shows a soft-focus lake. The lighting is soft natural daylight, emphasizing a warm autumn color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds out yellow leaves in his hands for R2",
+    "R2 reaches toward the yellow leaves held by R1",
+    "R1 looks down at his hands with the leaves while R2 faces him",
+    "R1 leans against a tree trunk during the interaction with R2",
+    "yellow leaves are the shared contact-relevant object",
+    "the scene is an outdoor lakeside park in autumn"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding out the yellow leaves in his hands for R2, rather than R2 holding them out for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds out yellow leaves in his hands for R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching toward the yellow leaves held by R1, rather than R1 reaching toward leaves held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches toward the yellow leaves held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down at his own hands with the leaves while R2 faces him and reaches toward them, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at his hands with the leaves while R2 faces him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean against a tree trunk while interacting with R2, rather than R2 being the one leaning against the tree?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans against a tree trunk during the interaction with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

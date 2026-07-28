@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__b191e62449e9__T1",
+  "instruction": "Cinematic wide shot of a bright, minimalist indoor room with wooden floors and large arched windows. On the left, the man with the bandana (R2) wearing a dark jumpsuit and red sneakers lifts one end of a large green velvet sofa. On the right, the man with the afro (R1) in a dark t-shirt and dark pants lifts the opposite end. The two men carry the heavy sofa together, facing each other in profile as they lift. Bright natural daylight streams through the windows, casting soft shadows on the wooden floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the afro-haired man lifting one end of the sofa",
+    "R2 is the bandana-wearing man lifting the opposite end of the sofa",
+    "R1 and R2 carry the heavy sofa together while facing each other in profile",
+    "large green velvet sofa",
+    "bright minimalist indoor room with wooden floors and arched windows",
+    "natural daylight casting soft shadows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the afro-haired man lifting one end of the sofa, rather than R2 being the afro-haired sofa-lifter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's asymmetric labeled duty as the afro-haired sofa lifter"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the bandana-wearing man lifting the other end of the sofa, rather than R1 being the bandana-wearing sofa-lifter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's asymmetric labeled duty as the bandana-wearing sofa lifter"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 lift the sofa end opposite the end lifted by R2, with R1 assigned to the afro-haired lifter role rather than the bandana-wearing lifter role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifting the opposite sofa end from R2 with non-swapped role assignment"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 carrying the heavy sofa together while facing each other in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 joint carrying role and body orientation"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

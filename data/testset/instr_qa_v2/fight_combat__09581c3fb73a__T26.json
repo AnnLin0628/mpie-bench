@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T26",
+  "instruction": "A candid action photograph, eye-level medium full shot, showing two boxers sparring in an open-air pavilion. On the left, the boxer in the beige t-shirt (R1) lunges forward in black sweatpants, throwing a punch. On the right, the boxer in the blue tank top (R2) lunges back at him in black shorts, their black boxing gloves colliding. In the background, the young man in the green long-sleeve shirt (R3) stands watching while holding a phone. Bright daylight illuminates the scene with natural colors.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 lunges forward throwing a punch toward R2",
+    "R2 lunges back at R1 as their boxing gloves collide",
+    "R3 watches from the background rather than joining the sparring contact",
+    "black boxing gloves collide between R1 and R2",
+    "R3 holds a phone while watching",
+    "the sparring happens in an open-air pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer lunging forward and throwing a punch toward R2, rather than R2 being the one described as throwing that punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lunges forward throwing a punch toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging back at R1 as their boxing gloves collide, rather than R1 being the one lunging back at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges back at R1 as their boxing gloves collide"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the background watcher holding a phone while R1 and R2 are the sparring contact pair, rather than R3 joining the glove collision?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 watches from the background rather than joining the sparring contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sparring against each other with their boxing gloves colliding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are the sparring pair with glove-to-glove contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R3 holding a phone while watching the sparring?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R3 holds a phone while watching"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

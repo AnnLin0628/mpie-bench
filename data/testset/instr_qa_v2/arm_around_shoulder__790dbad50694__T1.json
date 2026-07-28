@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__790dbad50694__T1",
+  "instruction": "Candid street photograph, full shot at eye-level. On a city sidewalk next to a building with a red awning, the woman in the white jacket (R1) and the woman in the blue quilted sweater (R2) walk side-by-side. The woman in the white jacket (R1) walks on the left, wearing a brown scarf and carrying a black handbag, looking slightly down. The woman in the blue sweater (R2) walks on the right, holding a small checkered bag and looking warmly at her companion. The background is softly blurred under overcast daylight with cool tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks warmly at R1 while R1 looks slightly down",
+    "R1 carries a black handbag while R2 holds a small checkered bag",
+    "R1 and R2 walk side-by-side together",
+    "R1 carries a black handbag",
+    "R2 holds a small checkered bag",
+    "city sidewalk next to a building with a red awning"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking warmly at R1 while R1 looks slightly down, rather than R1 being the one looking warmly at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks warmly at R1 while R1 looks slightly down"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying the black handbag while R2 holds the small checkered bag, rather than R2 carrying the black handbag and R1 holding the checkered bag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries a black handbag while R2 holds a small checkered bag"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side together, with R2 attending to R1 as her companion?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side while R2 attends to R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a small checkered bag?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 holds a small checkered bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

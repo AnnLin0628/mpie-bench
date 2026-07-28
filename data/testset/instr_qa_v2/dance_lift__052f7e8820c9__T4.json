@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__052f7e8820c9__T4",
+  "instruction": "Candid documentary medium close-up of a ballet studio with a plain light grey wall and a wooden barre. The young girl in a black leotard (R1) stands on the left, holding the wooden barre with her right hand and looking up with a slight smile. The blonde instructor in a black long-sleeve top (R2) stands on the right, smiling as she holds the young girl's left leg high in a vertical stretch. The background is a plain light grey wall under bright, even indoor lighting that creates a clean, minimalist atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's left leg high in a vertical stretch",
+    "R1 is the dancer being assisted while R2 is the instructor assisting the stretch",
+    "R1 holds the wooden barre with her right hand while R2 supports R1's raised leg",
+    "R1 stands at the barre with one leg lifted as R2 helps position it",
+    "wooden barre used as a contact support",
+    "plain light grey ballet studio wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's left leg high in a vertical stretch, rather than R1 holding R2's leg high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's left leg high in a vertical stretch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young dancer being stretched by R2, rather than R2 being the one stretched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dancer being assisted while R2 is the instructor assisting the stretch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the wooden barre for balance while R2 supports R1's raised leg, rather than R2 holding the barre while R1 supports R2's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the wooden barre with her right hand while R2 supports R1's raised leg"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing at the barre with one leg lifted while R2 assists the leg stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands at the barre with one leg lifted as R2 helps position it"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

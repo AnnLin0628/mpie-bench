@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T2",
+  "instruction": "Candid studio photograph, medium shot. In a white studio, the man with curly blonde hair (R1) in a gray shirt stands on the left, facing right. The person with long brown hair (R2) stands on the right, wearing a green shirt pulled up to expose their midriff. The person (R2) wraps their arms around the man's (R1) neck, while the man (R1) holds their waist. They gaze affectionately at each other under soft, even lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps their arms around R1's neck while R1 holds R2's waist",
+    "R1 holds R2 at the waist rather than around the neck",
+    "R2's arms are positioned around R1's neck rather than R1's arms being around R2's neck",
+    "R2 has a shirt pulled up to expose their midriff",
+    "R1 and R2 gaze affectionately at each other",
+    "the setting is a white studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap their arms around R1's neck, rather than R1 wrapping their arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms are around R1's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's waist, rather than R2 holding R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 at the waist"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are the contact roles different, with R2 reaching around R1's neck while R1 steadies R2 by the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 neck-wrap role and R1 waist-hold role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned close to R1 so that R2's arms can encircle R1's neck while R1's hands are at R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "close contact body configuration between R1 and R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person with a shirt pulled up to expose their midriff, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's exposed midriff configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

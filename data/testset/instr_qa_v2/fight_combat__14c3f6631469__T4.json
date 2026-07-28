@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T4",
+  "instruction": "Candid action photograph, medium shot. Inside a boxing gym with black mats and red punching bags, the smiling man in the gray t-shirt and black shorts (R1) stands on the left, holding his bare fists up in a defensive guard. The woman in the blue hoodie and gray shorts (R2) stands on the right in the foreground, wearing pink boxing gloves and facing him playfully. Bright overhead lighting illuminates their smiling faces.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds bare fists up in a defensive guard",
+    "R2 wears pink boxing gloves while facing R1 playfully",
+    "R1 is the ungloved defensive partner while R2 is the gloved sparring partner",
+    "R2's pink boxing gloves",
+    "red punching bags in a boxing gym",
+    "black mats inside the boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding bare fists up in a defensive guard, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds bare fists up in a defensive guard"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person wearing pink boxing gloves while facing R1 playfully, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wears pink boxing gloves while facing R1 playfully"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ungloved defensive partner while R2 is the gloved sparring partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the ungloved defensive partner while R2 is the gloved sparring partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep his fists raised in a guard toward R2 during the boxing interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 maintains a defensive guard toward R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set inside a boxing gym with black mats and red punching bags?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing gym with black mats and red punching bags"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

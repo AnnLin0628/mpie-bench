@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T77",
+  "instruction": "Candid documentary photograph, wide shot, high angle. Inside a motion capture studio with a red carpet and white walls, the woman in the white t-shirt and blue jeans (R2) stands on the left, facing right. She shakes right hands with the man in the dark polo shirt and blue shorts (R1), who stands on the right facing left. Bright overhead fluorescent lighting illuminates the scene, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man on the right facing left toward R2 during the right-hand handshake",
+    "R2 is the woman on the left facing right toward R1 during the right-hand handshake",
+    "R1 and R2 make contact by clasping each other's right hands",
+    "R1 and R2 stand opposite one another while their right hands are joined",
+    "the interaction takes place inside a motion capture studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant on the right facing left toward R2 while their right hands meet, rather than R2 being the one on the right facing left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man on the right facing left toward R2 during the right-hand handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant on the left facing right toward R1 while their right hands meet, rather than R1 being the one on the left facing right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman on the left facing right toward R1 during the right-hand handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his right hand to clasp R2's right hand as the point of contact between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 make contact by clasping each other's right hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 while her right hand is joined with R1's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand opposite one another while their right hands are joined"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

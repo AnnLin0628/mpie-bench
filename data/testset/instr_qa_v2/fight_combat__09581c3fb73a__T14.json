@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T14",
+  "instruction": "Candid sports photograph, full shot. In a covered outdoor pavilion, the boxer in the beige t-shirt (R1) on the left and the boxer in the blue tank top (R2) on the right are locked in a close clinch, their heads pressed together as they guard with black boxing gloves. Bright daylight fills the open-air structure, casting soft shadows on the concrete floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the beige-t-shirt boxer engaged in the close clinch with R2, not vice versa",
+    "R2 is the blue-tank-top boxer clinching with R1, not vice versa",
+    "R1 and R2 have their heads pressed together during the clinch",
+    "R1 and R2 are guarding with black boxing gloves while clinched",
+    "black boxing gloves are the contact-relevant sports props",
+    "the fight occurs in a covered outdoor pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the beige-t-shirt boxer who is locked in a close clinch with R2, rather than R2 being the beige-t-shirt boxer in R1's role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the beige-t-shirt boxer engaged in the close clinch with R2, not vice versa"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blue-tank-top boxer clinching with R1, rather than R1 being the blue-tank-top boxer in R2's role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the blue-tank-top boxer clinching with R1, not vice versa"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 locked in a close boxing clinch with their heads pressed together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have their heads pressed together during the clinch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both guarding while staying in close body contact during the clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are guarding with black boxing gloves while clinched"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

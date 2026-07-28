@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T6",
+  "instruction": "Candid documentary photograph, wide shot. In an indoor motion capture studio with a red carpet and white walls, the bearded man in a black polo shirt and blue shorts (R1) stands on the left, facing right. The woman in a white t-shirt and blue jeans (R2) stands on the right, facing away and to the left. She leans forward, extending her right arm to touch the bearded man's (R1) upper arm. The scene is lit by overhead artificial lights, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's upper arm",
+    "R1 is the recipient of R2's hand contact on his upper arm",
+    "R2 leans forward toward R1 while initiating the touch",
+    "R1 stands as the contact target while R2 reaches toward him",
+    "the interaction occurs in an indoor motion capture studio with red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending her right arm to touch R1's upper arm, rather than R1 extending his arm to touch R2's upper arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm to touch R1's upper arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the touch on his upper arm from R2, rather than R2 receiving the touch on her upper arm from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's hand contact on his upper arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward while making contact with R1, rather than R1 leaning forward to make contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward toward R1 while initiating the touch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand as the contact target while R2 reaches toward and touches his upper arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands as the contact target while R2 reaches toward him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

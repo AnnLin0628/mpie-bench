@@ -1,0 +1,75 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T8",
+  "instruction": "Cinematic medium-wide shot of an indoor gym. On the left, the man with the afro (R1) in a white t-shirt and grey sweatpants stands leaning forward with hands on his knees, facing right. On the right, the young girl in the pink hoodie (R5) stands facing him with her arms raised high. Soft side lighting illuminates the warm wooden floor.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 leans forward with his hands on his knees while facing R5",
+    "R5 stands facing R1 with her arms raised high",
+    "R5, not R1, is the person holding both arms high in the interaction",
+    "R1, not R5, is the person bent forward with hands on knees",
+    "the scene is an indoor gym with a warm wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the one raising her arms high toward R1, rather than R1 raising his arms high toward R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the raised-arms role while facing R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one leaning forward with his hands on his knees, rather than R5 leaning forward with her hands on her knees?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the bent-forward hands-on-knees role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 remain in a hands-on-knees stance while R5 holds her arms high, rather than R5 being in the hands-on-knees stance while R1 holds his arms high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric body configuration between R1 and R5"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

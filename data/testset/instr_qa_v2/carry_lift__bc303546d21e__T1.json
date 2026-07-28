@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__bc303546d21e__T1",
+  "instruction": "A candid outdoor photograph captured from a wide-angle, eye-level perspective in a sunny, grassy park. On the left side of the frame, the woman in the gray t-shirt and green pants (R1) is positioned on a black yoga mat, holding a Warrior II pose while looking to the left. To her right, the bearded man in the dark green t-shirt and gray shorts (R2) stands on a separate black mat, performing the same Warrior II yoga pose and looking in the same direction. The two practice their yoga routine side-by-side in unison. Bright, natural afternoon daylight illuminates the entire scene, casting soft shadows on the green grass.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman holding a Warrior II yoga pose on her own black yoga mat while R2 is the bearded man holding the same pose on a separate mat",
+    "R1 and R2 practice Warrior II side-by-side in unison without either person carrying or supporting the other",
+    "R1 looks in the same direction as R2 while both maintain the Warrior II pose",
+    "R1 and R2 each use separate black yoga mats",
+    "The scene is an outdoor sunny grassy park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman holding a Warrior II pose on her own black yoga mat while R2 is the bearded man doing the same pose on a separate mat, rather than their R1/R2 roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 labeled yoga-pose roles"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 independently holding the Warrior II pose on her mat while R2 independently holds the same pose on a different mat, rather than R1 carrying or supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 separate non-supporting yoga roles"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both performing Warrior II side-by-side in unison on separate yoga mats?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 synchronized Warrior II body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand on his own mat performing the same Warrior II pose as R1, rather than interacting through physical contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 mirrors R1's yoga pose without contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Does R2 use a separate black yoga mat from R1's mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "separate black yoga mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

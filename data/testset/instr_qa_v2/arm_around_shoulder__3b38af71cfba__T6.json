@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__3b38af71cfba__T6",
+  "instruction": "A clean studio portrait photograph in a close-up shot captures two women against a plain white background. On the left, the dark-haired woman (R2) in a beige sleeveless top stands with her eyes closed and a serene expression. On the right, the blonde woman (R1) in a white sleeveless top also has her eyes closed with a peaceful look. They stand close with their heads gently touching. The dark-haired woman cradles the blonde woman's cheek with her hand, while the blonde woman cradles the dark-haired woman's cheek with her hand, their arms softly crossing in front of them. The scene is illuminated by soft, bright studio lighting, creating a clean, minimalist aesthetic with minimal shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the dark-haired woman cradling R1's cheek with her hand",
+    "R1 is the blonde woman cradling R2's cheek with her hand",
+    "R1 and R2 stand close with their heads gently touching",
+    "R1 and R2's arms softly cross in front of them during the cheek-cradling contact",
+    "The portrait is set against a plain white studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dark-haired woman cradling R1's cheek with her hand, rather than R1 being the dark-haired woman cradling R2's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 cradles R1's cheek"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the blonde woman whose cheek is being cradled by R2, rather than R2 being the blonde woman whose cheek is cradled by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives cheek-cradling contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 also using her own hand to cradle R2's cheek, rather than only R2 providing the cheek-cradling contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reciprocally cradles R2's cheek"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2's arms softly crossing in front of them as they cradle each other's cheeks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2's arms cross during mutual cheek cradling"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

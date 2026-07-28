@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T55",
+  "instruction": "Candid outdoor photograph, full shot. In a sunny, grassy park, the woman in the black beanie (R5) wearing a red t-shirt and blue jeans leans forward with her hands on her knees, looking left. To her right, the Asian man in the red polo (R3) stands watching. In the background, the heavy-set man in black (R1) walks on the left, and the woman in the dark t-shirt (R4) stands in the center. Bright daylight fills the scene.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R5 leans forward with her hands on her knees while R3 stands watching",
+    "R1 walks while R4 stands in the background",
+    "R3 is the watcher beside R5 rather than the person leaning forward",
+    "R5 looks left while maintaining a bent-forward posture",
+    "sunny grassy park setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person leaning forward with her hands on her knees, rather than R3 being the one leaning forward while R5 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the bent-forward hands-on-knees role while R3 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 standing and watching near R5, rather than R5 standing and watching near R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the watcher while R5 is posed forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person walking in the background while R4 is standing there, rather than R4 walking while R1 stands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks while R4 stands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 keep a forward-leaning posture with her hands resting on her knees?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's bent-forward hands-on-knees body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand watching while R5 remains in the forward-leaning pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's watching role relative to R5's posture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T226",
+  "instruction": "Candid documentary photograph, wide eye-level shot. In an indoor motion capture studio with a red carpet and white columns, the woman in the white t-shirt and blue jeans (R2) stands on the left, facing right. The man in the black polo and blue shorts (R1) stands on the right, facing her and kicking his right leg forward so his foot touches her thigh. R1 balances on his left leg during the kick. Overhead studio lights cast soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 kicks his right leg forward so that his foot touches R2's thigh",
+    "R2 receives the foot contact on her thigh from R1",
+    "R1 balances on his left leg while delivering the kick toward R2",
+    "R1 and R2 face each other during the contact",
+    "indoor motion capture studio with red carpet and white columns"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person kicking his right leg forward so his foot touches R2's thigh, rather than R2 kicking R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active kicker contacting R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose thigh is touched by R1's foot, rather than R1 being the one whose thigh is touched by R2's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's foot contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on his left leg while delivering the kick toward R2, rather than R2 balancing on one leg while kicking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances while performing the kick"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 with his right leg extended forward into contact with her thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration during the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

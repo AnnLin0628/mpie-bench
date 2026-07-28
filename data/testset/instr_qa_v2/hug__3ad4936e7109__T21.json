@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T21",
+  "instruction": "A warm lifestyle portrait photograph, close-up shot at eye-level, set against a solid dusty pink studio backdrop. In the foreground, the curly-haired woman in the white shirt (R1) faces forward, smiling broadly at the camera. Behind her, the straight-haired woman in the denim jacket (R2) leans her arm and chin affectionately on R1's shoulder, also smiling towards the camera. The scene is illuminated by soft, even studio lighting, creating a warm, friendly atmosphere with minimal shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 leans her arm and chin on R1's shoulder rather than R1 leaning on R2's shoulder",
+    "R1's shoulder is the support/contact surface for R2's arm and chin",
+    "R2 is behind R1 while making affectionate shoulder contact",
+    "R1 faces forward in the foreground while R2 rests on her shoulder",
+    "solid dusty pink studio backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean her arm and chin on R1's shoulder, rather than R1 leaning her arm and chin on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses R1's shoulder as the contact point"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder receives R2's affectionate arm-and-chin contact, rather than R2 being the shoulder-rest for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides the shoulder contact surface for R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned behind R1 while resting on R1's shoulder, rather than R1 being behind R2 and resting on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R1 and makes shoulder contact from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face forward in the foreground while R2 remains behind her with an arm and chin on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground role and R2 behind-shoulder-contact role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

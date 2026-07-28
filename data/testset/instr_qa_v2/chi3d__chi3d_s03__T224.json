@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T224",
+  "instruction": "A candid documentary full shot of an indoor motion capture studio featuring a red carpeted floor and white walls. On the left, the woman in the white t-shirt and blue jeans (R2) stands upright facing right. On the right, the man in the black shirt and blue shorts (R1) balances on his left leg, delivering a mid-level kick with his right leg to the woman's thigh while leaning back. Bright overhead fluorescent lighting illuminates the entire scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 delivers a mid-level kick to R2's thigh",
+    "R2 receives the kick while standing upright",
+    "R1 balances on his left leg while kicking with his right leg",
+    "R1 leans back during the kick",
+    "the action occurs on a red carpeted floor in an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 delivering a mid-level kick to R2's thigh, rather than R2 kicking R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kicker and R2 is the kicked person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the thigh contact from R1's kick, rather than R1 receiving a kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the kick from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on one leg while extending his right leg toward R2's thigh, rather than R2 balancing and extending a kicking leg toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the one-legged kicking action toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning back while performing the kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back during the kicking motion"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing upright as R1's kick reaches her thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 remains upright while receiving the kick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

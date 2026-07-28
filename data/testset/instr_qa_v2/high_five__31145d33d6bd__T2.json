@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__31145d33d6bd__T2",
+  "instruction": "A candid documentary photograph in a medium shot captures a rustic indoor pottery studio. On the left, the woman with curly red hair (R1), wearing a beige t-shirt and a green apron, stands in profile, smiling warmly. On the right, the man with wavy light brown hair (R2), wearing a green shirt and a beige apron, faces her with a happy expression. They extend their arms to clasp their clay-covered hands together at head height. The background shows a wooden workbench with pottery supplies under soft, warm indoor lighting against a neutral beige wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the curly red-haired woman in profile extending her clay-covered hand to clasp R2's hand",
+    "R2 is the wavy light-brown-haired man facing R1 and extending his clay-covered hand into the clasp",
+    "R1 and R2 clasp their clay-covered hands together at head height",
+    "R1 smiles warmly toward R2 while R2 faces her with a happy expression during the hand contact",
+    "clay-covered hands are the contact-relevant material in the interaction",
+    "wooden workbench with pottery supplies in a rustic indoor pottery studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the curly red-haired woman in profile extending her clay-covered hand to clasp R2's hand, rather than R2 being the curly red-haired woman in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the curly red-haired woman in profile extending her clay-covered hand to clasp R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the wavy light-brown-haired man facing R1 and extending his clay-covered hand into the clasp, rather than R1 being that wavy-haired man facing the other person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the wavy light-brown-haired man facing R1 and extending his clay-covered hand into the clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both extending their arms so their clay-covered hands meet in a clasp at head height?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp their clay-covered hands together at head height"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in profile toward R2 while R2 faces her during the raised hand clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in profile toward R2 while R2 faces her during the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

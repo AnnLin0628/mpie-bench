@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__097f6c255771__T6",
+  "instruction": "Cinematic film still, medium shot. Inside a bright dance studio with a large window, the female ballet dancer in a black long-sleeved top and white tutu (R1) stands in the center, facing slightly right with her arms crossed over her chest. Behind and to her left, the male dancer in a black top (R2) is partially visible, watching her with his hands positioned near her waist. Soft natural light from the window illuminates the scene, creating a bright and airy atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the front/center ballet dancer with arms crossed over her chest while R2 is behind her with hands near her waist",
+    "R2 positions his hands near R1's waist rather than R1 positioning her hands near R2's waist",
+    "R2 watches R1 from behind while R1 faces slightly right in the center",
+    "R1 maintains a closed, arms-crossed pose while R2 takes the observing/ready-to-assist dance partner position",
+    "The scene is inside a bright dance studio with a large window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer standing in the center with her arms crossed over her chest while R2 is behind her with hands near her waist, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 front/center crossed-arm pose and R2 behind-with-hands-near-waist duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have his hands positioned near R1's waist while R1 keeps her own arms crossed, rather than R1 placing her hands near R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hands-near-R1-waist contact-ready role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 watching R1 from behind while R1 faces slightly right in front of him, rather than R1 watching R2 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 observer/behind role toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a closed dance pose with her arms crossed over her chest while R2 stays partly visible behind her in a partner position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 crossed-arm pose with R2 behind as dance partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

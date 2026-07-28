@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T3",
+  "instruction": "A candid action photograph captures two martial artists in profile inside a karate dojo with yellow walls, sword racks, and red-and-blue floor mats. On the left, the woman in a black karate uniform with a red belt (R2) stands in a low sparring stance, facing right with her hands raised defensively. On the right, the older man in a black karate uniform with white stripes (R1) stands facing her, also in a sparring stance with his hands up. They maintain a distance of a few feet, preparing to engage. The bright overhead lighting evenly illuminates the entire training space.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the martial artist in a low defensive sparring stance facing R1",
+    "R1 stands opposite R2 in a sparring stance with his hands raised",
+    "R1 and R2 keep a few feet of distance while preparing to engage",
+    "red-and-blue floor mats are present in the training space",
+    "the scene is inside a karate dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one in the low defensive sparring stance facing R1, rather than R1 being assigned that specific low defensive stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the low defensive sparring role toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the martial artist standing opposite R2 with his hands up while R2 is described as the lower defensive fighter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the opposite sparring partner to R2's low defensive stance"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 maintain a few feet of separation instead of making physical contact during the sparring setup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are separated sparring opponents, not contacting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__31af72cb5238__T3",
+  "instruction": "Cinematic low-angle medium shot of an outdoor concrete wall against a clear blue sky. On the left, the boy in the tie-dye shirt (R2) stands on the wall, leaning forward with his hands on his knees, looking down. On the right, the boy in the pink striped shirt (R1) bends forward as he climbs down. Bright daylight illuminates the scene under a solid blue sky.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the boy bending forward as he climbs down from the wall",
+    "R2 is the boy standing on the wall, leaning forward with his hands on his knees",
+    "R2 looks down from the wall while R1 climbs down",
+    "the boys are positioned around an outdoor concrete wall",
+    "the scene is lit by bright daylight under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boy bending forward as he climbs down from the wall, rather than R2 being the one climbing down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the climber descending from the wall"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on the wall and looking down while R1 is the one climbing down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 remains on the wall looking down as R1 descends"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean forward with his hands on his knees while standing on the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's standing and leaning body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 bend forward in a climbing-down posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's descending body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

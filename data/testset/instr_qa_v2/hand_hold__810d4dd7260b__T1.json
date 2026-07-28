@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__810d4dd7260b__T1",
+  "instruction": "A candid outdoor photograph with a full shot of a scenic mountain lake during the day. On the left, the blonde woman in a grey hooded coat (R1) steps onto a large rock at the water's edge, her back partially turned. On the right, the bearded man in a brown fedora and denim jacket (R2) stands on the rock, facing her. They hold hands as he assists her step up, looking down at her with a warm smile. The background features a calm lake and snow-dusted rocky mountains under soft, overcast daylight, creating a cool, natural color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 assists R1 as she steps up onto a large rock",
+    "R1 is the person being helped upward while holding R2's hand",
+    "R2 is already standing on the rock and provides support to R1",
+    "R1 and R2 hold hands during the assisted step",
+    "a large rock at the water's edge supports the interaction",
+    "a calm mountain lake with snow-dusted rocky mountains in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 assisting R1 as she steps up onto the rock, rather than R1 assisting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 assists R1 as she steps up onto a large rock"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person stepping up while receiving hand support from R2, rather than R2 stepping up with support from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being helped upward while holding R2's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 already standing on the rock and helping R1 climb onto it, rather than R1 standing above and helping R2 climb?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is already standing on the rock and provides support to R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands while R2 faces R1 during her step up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands during the assisted step"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

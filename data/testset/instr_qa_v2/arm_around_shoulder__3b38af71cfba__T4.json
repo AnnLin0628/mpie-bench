@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__3b38af71cfba__T4",
+  "instruction": "A minimalist studio portrait photograph captured in a close-up shot against a plain beige background. On the left, the blonde woman (R1) wearing a lavender fuzzy sweater and white graphic eyeliner looks directly forward with a neutral expression, resting her chin on her hand which is placed on the shoulder of the woman next to her. On the right, the curly-haired woman (R3) in a matching lavender fuzzy sweater and white graphic eyeliner stands close, looking ahead with a calm expression. The blonde woman (R1) leans her head against the curly-haired woman (R3) in a gentle, shoulder-to-shoulder pose. Soft, diffused studio lighting illuminates their faces, highlighting the cool pastel tones of their sweaters.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 rests her chin on her own hand placed on R3's shoulder",
+    "R1 leans her head against R3",
+    "R3 receives R1's shoulder and head contact while standing close",
+    "R1 and R3 stand in a gentle shoulder-to-shoulder pose",
+    "plain beige studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting her chin on her own hand placed on R3's shoulder, rather than R3 resting her chin on a hand placed on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her chin on her own hand placed on R3's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning her head against R3, rather than R3 leaning her head against R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans her head against R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the woman whose shoulder receives R1's hand contact, rather than R1 being the one whose shoulder receives R3's hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 receives R1's shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 maintain the active contact role by placing her hand on R3's shoulder while standing close to her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places her hand on R3's shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand close and face forward while R1 leans against her in the shoulder-to-shoulder pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands close while R1 leans against her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

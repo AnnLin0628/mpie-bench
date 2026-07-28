@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T10",
+  "instruction": "Cinematic film still, medium shot. In a spacious indoor hall with large wooden doors, the woman in the black slip dress (R2) stands on the left, facing right. The man in the brown shirt and beanie (R1) stands on the right, facing left. They reach their hands toward each other in the center, about to clasp hands. The lighting is soft and natural, creating a warm, muted color palette with gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the right-side partner facing left and reaching toward R2's hand at the center",
+    "R2 is the left-side partner facing right and reaching toward R1's hand at the center",
+    "R1 and R2 are facing each other while preparing to clasp hands",
+    "R1 and R2 both extend hands toward one another rather than only one person extending",
+    "the interaction takes place in a spacious indoor hall with large wooden doors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner facing left and reaching toward R2's hand at the center, rather than R2 taking that left-facing reaching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the right-side partner facing left and reaching toward R2's hand at the center"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner facing right and reaching toward R1's hand at the center, rather than R1 taking that right-facing reaching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the left-side partner facing right and reaching toward R1's hand at the center"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 both extend their hands toward one another, rather than only one of them extending a hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both extend hands toward one another rather than only one person extending"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

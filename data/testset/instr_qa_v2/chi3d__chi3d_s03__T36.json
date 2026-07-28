@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T36",
+  "instruction": "Candid documentary photograph, full shot, eye-level. In an indoor motion capture studio with a red carpet, the woman in the white t-shirt and blue jeans (R2) stands on the right, facing left and reaching her arms up to hold the shoulders of the man in the black polo shirt and blue shorts (R1). The man stands on the left, facing her. Overhead fluorescent lighting illuminates the scene, highlighting the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches her arms up to hold R1's shoulders",
+    "R1's shoulders are the contacted body part rather than R2's",
+    "R1 faces R2 while R2 holds onto him",
+    "R2 is the active shoulder-holder and R1 is the person being held",
+    "The scene is an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching her arms up to hold R1's shoulders, rather than R1 reaching up to hold R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches her arms up to hold R1's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's shoulders the body part being held by R2, rather than R2's shoulders being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's shoulders are the contacted body part rather than R2's"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active person making shoulder contact with R1, rather than R1 being the active person making shoulder contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active shoulder-holder and R1 is the person being held"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand facing R2 while R2 holds onto his shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while R2 holds onto him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

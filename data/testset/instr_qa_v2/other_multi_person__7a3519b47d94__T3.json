@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__7a3519b47d94__T3",
+  "instruction": "Candid medium full shot photograph in an indoor playroom with a white wall and a yellow beanbag. On the left, the boy with shaggy dark hair (R2) in a white t-shirt and brown pants leans forward. In the center, the girl with braided hair (R1) in an orange t-shirt and yellow cropped pants holds a green rope. In the right foreground, the girl with pigtails (R3) in a white floral-embroidered top and yellow floral shorts pulls the rope forward. The three children are lined up playing tug-of-war under bright, soft indoor lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 pulls the green rope forward rather than R1 doing that pulling action",
+    "R1 holds the green rope in the center while R3 pulls it forward",
+    "R2 leans forward as part of the tug-of-war rather than being the forward-pulling child",
+    "R1, R2, and R3 are lined up playing tug-of-war with distinct rope-related roles",
+    "green rope used for the tug-of-war",
+    "indoor playroom with a white wall and a yellow beanbag"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the child pulling the green rope forward, rather than R1 being the one described as pulling it forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 pulls the green rope forward rather than R1 doing that pulling action"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the green rope in the center while R3 pulls the rope forward, rather than R3 holding it in the center while R1 pulls it forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the green rope in the center while R3 pulls it forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward in the tug-of-war rather than being the child specifically described as pulling the rope forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward as part of the tug-of-war rather than being the forward-pulling child"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, and R3 lined up together playing tug-of-war with the rope?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 are lined up playing tug-of-war with distinct rope-related roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold the rope as part of the tug-of-war while R2 leans forward and R3 pulls the rope?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 have distinct tug-of-war actions"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the tug-of-war object a green rope?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "green rope used for the tug-of-war"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__052f7e8820c9__T8",
+  "instruction": "Candid documentary photograph, full shot. In an indoor ballet studio with large windows and a wooden barre, the young girl in a blue and white tutu (R1) stands on the left, holding the instructor's hand overhead while extending her other arm and looking up. The blonde ballet instructor in a black leotard and skirt (R2) stands on the right on pointe shoes, holding the girl's hand and smiling as they pose together. Bright natural light streams from the background windows, illuminating the dancers.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the ballet instructor holding R1's hand overhead as R1 looks up",
+    "R1 is the young girl extending her free arm while holding R2's hand overhead",
+    "R2 stands on pointe shoes while posing with R1",
+    "R1 and R2 are connected by a raised handhold",
+    "wooden barre in the indoor ballet studio",
+    "large background windows with bright natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballet instructor holding R1's hand overhead as R1 looks up, rather than R1 being the instructor holding R2's hand overhead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the ballet instructor holding R1's hand overhead as R1 looks up"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young girl extending her free arm while holding R2's raised hand, rather than R2 being the young girl extending her free arm while holding R1's raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the young girl extending her free arm while holding R2's hand overhead"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 pose with one hand held overhead by R2 and the other arm extended?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 poses with one raised hand held by R2 and her other arm extended"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand on pointe shoes while holding R1's hand as they pose together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on pointe shoes while posing with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

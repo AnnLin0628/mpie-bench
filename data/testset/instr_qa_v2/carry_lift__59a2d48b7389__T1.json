@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__59a2d48b7389__T1",
+  "instruction": "Candid outdoor full shot of a sunlit park path with tall green trees. The curly-haired young man in a light blue shirt (R1) stands in the center, carrying his partner while smiling and looking to the side. The young woman with a large afro in a sleeveless cream dress (R2) rides on his back, wrapping her arms around his chest with a joyful smile. The young man supports her legs as they share a playful moment. Bright, natural sunlight filters through the leaves, casting a warm glow and soft shadows over the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 on his back",
+    "R1 supports R2's legs from below",
+    "R2 rides on R1's back rather than carrying him",
+    "R2 wraps her arms around R1's chest while being carried",
+    "The scene is on a sunlit park path with tall green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his back, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's legs while she rides on him, rather than R2 supporting R1's legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's legs from below"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person riding on R1's back, rather than R1 riding on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rides on R1's back rather than carrying him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's chest while R1 carries her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's chest while being carried"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing and bearing R2's weight as part of a playful piggyback-style carry?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 bears R2's weight during the carry"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

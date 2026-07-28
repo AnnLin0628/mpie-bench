@@ -1,0 +1,73 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T1",
+  "instruction": "Candid outdoor photograph, medium shot. In a sunny park filled with green trees, a group of children celebrate a birthday. On the left, a girl in a dark blue top (R4) wearing a colorful, striped party hat stands in profile, looking towards the right. Next to her, a boy with short brown hair (R5) also wearing a striped party hat stands in the background, looking in the same direction. On the right, a boy in a yellow t-shirt (R1) stands with his back completely turned to the camera, wearing a striped party hat. Warm, bright sunlight filters through the dense green foliage in the background, casting a soft glow over the scene.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 is the child with his back completely turned to the camera, rather than R4",
+    "R4 is the child standing in profile and looking toward the right, rather than R1",
+    "R5 is the background boy looking in the same direction as R4",
+    "R1, R4, and R5 wear striped party hats",
+    "The scene is a sunny park with green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boy standing with his back completely turned to the camera, rather than R4 being the one with his back completely turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-turned visual role rather than R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the girl standing in profile and looking toward the right, rather than R1 being the profile child looking right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the profile-looking-right role rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 look toward the right while R1 has his back completely turned to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R1 have distinct orientation roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

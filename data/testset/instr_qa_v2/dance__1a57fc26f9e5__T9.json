@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1a57fc26f9e5__T9",
+  "instruction": "A candid documentary photograph in a medium shot captures a couple on a grassy mountain summit under an overcast sky. On the left, the man in the red striped shirt (R2) stands in profile wearing brown trousers, leaning forward slightly. On the right, the woman in the yellow cardigan (R1) stands facing him in blue jeans, smiling warmly. They hold hands gently at waist level, connecting in the center of the frame. The background features layers of misty blue mountains under a soft, diffused daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward slightly toward R1 while they hold hands",
+    "R1 faces R2 and smiles warmly during the handhold",
+    "R1 and R2 hold hands gently at waist level",
+    "their joined hands connect in the center of the frame",
+    "the couple stands on a grassy mountain summit with misty blue mountains behind them"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning forward slightly toward R1 during the handhold, rather than R1 being the one described as leaning forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward slightly toward R1 while holding hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner facing R2 and smiling warmly during the handhold, rather than R2 being the smiling, front-facing partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 and smiles warmly while holding hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 gently holding each other's hands at waist level?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands gently at waist level"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 connect through their joined hands in the center of the frame?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "their joined hands connect in the center of the frame"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

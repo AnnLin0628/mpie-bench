@@ -1,0 +1,73 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T34",
+  "instruction": "Candid medium shot of an indoor birthday party setting. The girl with long wavy brown hair (R8), wearing a yellow-striped shirt and black overalls, stands on the left, facing right and smiling happily while holding a motion-blurred wrapped gift. The girl with curly dark hair (R2), wearing a red turtleneck and dark blue skirt, stands on the right, facing left with her arms wrapped around R8's shoulders in a warm embrace. In the background, a grey sofa is decorated with colorful balloons and a birthday banner, alongside a large green potted plant. The scene is brightly lit with soft, warm light, creating a cheerful atmosphere.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R2 wraps her arms around R8's shoulders",
+    "R8 is the person being held around the shoulders by R2",
+    "R8 holds a motion-blurred wrapped gift during the interaction",
+    "R2 faces R8 while maintaining shoulder contact",
+    "indoor birthday party setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with her arms wrapped around R8's shoulders, rather than R8 being the one with her arms wrapped around R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps arms around R8's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R8 holding the wrapped gift while R2 has arms around R8's shoulders, rather than R2 holding the gift while R8 has arms around R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R8 holds gift while R2 performs shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R8 remain the person being contacted around the shoulders by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R8 is held around the shoulders by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

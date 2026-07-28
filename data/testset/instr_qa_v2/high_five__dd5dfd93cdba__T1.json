@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__dd5dfd93cdba__T1",
+  "instruction": "A candid action photograph in a low-angle full shot captures a scene on an outdoor green soccer field under a bright daytime sky. On the right, the bald man in the dark blue t-shirt and dark sweatpants (R1) faces left with a joyful, open-mouthed smile. On the left, the Asian man in the dark blue t-shirt and black shorts (R2) is positioned with his back partially to the camera, facing right. The two men are celebrating, high-fiving with their right hands raised high above their heads. In the background, two older men in red shirts stand on the field. The scene is illuminated by bright, natural daylight with soft shadows, highlighting the vibrant green grass.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the participant with a joyful open-mouthed smile facing R2 during the high-five, while R2 is turned partly away from the camera",
+    "R2 is the participant with his back partially to the camera facing R1 during the high-five, rather than R1 being turned away",
+    "R1 and R2 raise their right hands high above their heads to make the high-five contact",
+    "R1 and R2 are celebrating together through an overhead right-hand high-five",
+    "the interaction takes place on an outdoor green soccer field in bright daytime"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant whose back is partially to the camera as he high-fives R1, rather than R1 being the one with his back partially to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the partly back-facing body orientation during the high-five"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a high-five with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the high-five, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

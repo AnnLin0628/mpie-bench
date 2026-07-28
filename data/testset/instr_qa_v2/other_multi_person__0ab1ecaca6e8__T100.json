@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T100",
+  "instruction": "A candid outdoor full shot captures three friends conversing on a grassy park field. On the left, the bald man in a dark blue t-shirt (R2) stands with his arms crossed, looking to the right. In the center, the large Black man in a dark blue t-shirt (R1) stands looking right and speaking. On the right, the woman in a dark blue t-shirt (R4) stands leaning slightly forward, resting her hand on the arm of the large Black man (R1) while looking at him. The three stand close together in a relaxed manner under bright daylight, with soft shadows on the green grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 rests her hand on R1's arm",
+    "R1 is the person whose arm is being touched by R4",
+    "R1 is speaking while R4 looks at him",
+    "R2 stands nearby with his arms crossed rather than making contact",
+    "R4 leans slightly forward toward R1",
+    "The interaction takes place on a grassy outdoor park field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 resting her hand on R1's arm, rather than R1 resting his hand on R4's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 initiates the hand-on-arm contact with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose arm is being touched by R4, rather than R4 being the person whose arm is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the hand-on-arm contact from R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 speaking while R4 looks at him with her hand on his arm, rather than R4 speaking while R1 touches her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 speaks as R4 attends to him through gaze and arm contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 leaning slightly forward toward R1 while keeping her hand on R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's forward-leaning contact role toward R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing nearby with his arms crossed rather than participating in the hand-on-arm contact between R4 and R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's non-contact arms-crossed role near R1 and R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__9174bfc090cf__T3",
+  "instruction": "Candid family photograph, medium wide shot. In a sunny park lined with tall palm trees under a clear blue sky, the man in the maroon polo shirt (R1) carries the young girl in the pink tie-dye dress (R2) on his shoulders. The man (R1) points upward with his right arm, looking up, while the young girl (R2) smiles and looks in the same direction. To the left, the woman in the blue sleeveless top (R3) stands smiling, looking up with her hand placed gently on her chest. Bright, direct sunlight fills the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 carries R2 on his shoulders",
+    "R1 supports R2's weight from below rather than being carried by R2",
+    "R2 rides on R1's shoulders as the carried person",
+    "R1 points upward while R2 looks in the same direction",
+    "R3 stands nearby smiling and looking up, not participating in the shoulder-carry",
+    "sunny park with tall palm trees under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his shoulders, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below, rather than R2 supporting R1's weight from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight from below rather than being carried by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person riding on R1's shoulders, rather than R1 riding on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rides on R1's shoulders as the carried person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 point upward with his right arm while carrying R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points upward while carrying R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 standing nearby smiling and looking up, rather than being carried on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands nearby smiling and looking up, not participating in the shoulder-carry"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

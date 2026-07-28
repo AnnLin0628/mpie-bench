@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__f8416f139ced__T3",
+  "instruction": "Candid outdoor portrait, medium close-up. In a wooded park during autumn, the woman in the black puffer jacket and mint beanie (R1) looks directly at the camera with a playful, open-mouthed expression. She carries the smiling toddler girl in the pink turban beanie (R2) piggyback on her back, who also looks toward the camera. The background features soft-focus trees and warm autumn foliage under natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 piggyback on her back",
+    "R1 supports R2's weight rather than being supported by R2",
+    "R2 is the rider/passenger in the piggyback interaction",
+    "R1 and R2 are in a close piggyback body configuration",
+    "The setting is a wooded park with autumn foliage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 piggyback on her back, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 piggyback on her back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below as the carrier, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight rather than being supported by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the child riding on R1's back, rather than R1 riding on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the rider/passenger in the piggyback interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned on R1's back while R1 acts as the piggyback carrier?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in a close piggyback body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

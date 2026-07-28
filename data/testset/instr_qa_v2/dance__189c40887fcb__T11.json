@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T11",
+  "instruction": "Cinematic still, wide low-angle shot. In a dimly lit hall with wooden floors, three dancers lie on the ground in a synchronized floor routine. In the center, the young man in the white t-shirt and black harness (R3) arches his back in a dramatic backbend. On the left, the blonde man in the black leather jacket (R1) lies on his back with one leg raised. On the right, the man in the black mesh top (R2) lies on his back with legs split. Low-key cool blue and red lighting enhances the dramatic mood.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 arches his back in a dramatic backbend rather than R1 or R2 doing that central backbend",
+    "R1 lies on his back with one leg raised rather than R2 having the single raised-leg pose",
+    "R2 lies on his back with his legs split rather than R1 having the split-leg pose",
+    "R1, R2, and R3 are all dancers on the ground in a synchronized floor routine",
+    "R3 is the center dancer while performing the backbend",
+    "the dance routine takes place in a dimly lit hall with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer arching his back in a dramatic backbend, rather than R1 or R2 doing that central backbend?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 arches his back in a dramatic backbend rather than R1 or R2 doing that central backbend"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer lying on his back with one leg raised, rather than R2 being the dancer with the single raised-leg pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lies on his back with one leg raised rather than R2 having the single raised-leg pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer lying on his back with his legs split, rather than R1 being the dancer with the split-leg pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on his back with his legs split rather than R1 having the split-leg pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 occupy the center-dancer role while performing the backbend in the floor routine?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the center dancer while performing the backbend"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the synchronized floor routine set in a dimly lit hall with wooden floors?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the dance routine takes place in a dimly lit hall with wooden floors"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

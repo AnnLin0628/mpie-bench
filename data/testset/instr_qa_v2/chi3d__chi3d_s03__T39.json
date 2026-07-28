@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T39",
+  "instruction": "Candid full shot in a motion capture studio with a red carpet and brown partition screens. A bearded man in a black polo shirt and blue shorts (R1) stands on the left, holding the arm of a woman in a white t-shirt and blue jeans (R2) who stands in the center facing away from the camera. Even overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's arm rather than R2 holding R1's arm",
+    "R2 is the person whose arm is being held by R1",
+    "R1 is the active arm-contact partner while R2 is the recipient of the hold",
+    "R2 faces away from the camera while R1 maintains arm contact with her",
+    "R1 and R2 are in direct arm-to-hand contact",
+    "motion capture studio with a red carpet and brown partition screens"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's arm, rather than R2 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's arm rather than R2 holding R1's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose arm is being held by R1, rather than R1 being the one whose arm is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose arm is being held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active contact partner gripping or holding R2's arm while R2 receives that hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active arm-contact partner while R2 is the recipient of the hold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 in direct arm-to-hand contact, with R1's hand on R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in direct arm-to-hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

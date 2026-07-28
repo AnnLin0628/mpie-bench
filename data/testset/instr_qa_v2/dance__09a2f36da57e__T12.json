@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T12",
+  "instruction": "Candid documentary photograph, medium close-up. In a dark dance studio, a group of dancers perform. On the left, the woman in the yellow shirt (R2) stands with eyes closed and arms raised. In the center foreground, the profile man in the rust shirt (R3) has his back turned, arm reaching up. Behind him, the bearded man in the rust shirt (R1) is partially visible, looking down. On the right, the woman in the yellow shirt with a ponytail (R4) looks up and to the right with raised arms. Their hands and arms overlap in a dense, expressive cluster. Soft overhead lighting highlights their forms against the dark background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 stands with eyes closed and arms raised, unlike R1 who is partially visible and looking down",
+    "R3 is in the center foreground with his back turned and an arm reaching up, while R1 is behind him",
+    "R4 looks up and to the right with raised arms, rather than taking R1's downward-looking rear position",
+    "R1 is partially visible behind R3 and looking down",
+    "The dancers' hands and arms overlap in a dense expressive cluster",
+    "The scene is set in a dark dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer standing with eyes closed and arms raised, rather than R1 being the one described with eyes closed and raised arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with eyes closed and arms raised, unlike R1 who is partially visible and looking down"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the profile man in the center foreground with his back turned and arm reaching up, rather than R1 occupying that foreground back-turned reaching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is in the center foreground with his back turned and an arm reaching up, while R1 is behind him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the dancer looking up and to the right with raised arms, rather than R1 being the dancer looking up in that raised-arm pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 looks up and to the right with raised arms, rather than taking R1's downward-looking rear position"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R2, R3, and R4 contribute raised arms to the dense expressive cluster of overlapping hands and arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "The dancers' hands and arms overlap in a dense expressive cluster"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the group performing in a dark dance studio?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The scene is set in a dark dance studio"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

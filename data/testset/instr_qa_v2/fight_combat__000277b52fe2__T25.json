@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T25",
+  "instruction": "Candid documentary wide shot from a low angle showing an indoor gym with weight racks, barbells, and framed pictures on a white wall. On the right side of the frame, the man in the black t-shirt and dark shorts (R2) is performing a deep split stretch on the floor, leaning forward on his fists with a focused expression. On the left, a smiling bystander with a beard, wearing a black t-shirt and black leggings, performs a low lunge stretch. The entire scene is captured with bright, even indoor lighting and a neutral color palette, emphasizing the training atmosphere.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 performs a deep split stretch on the floor, rather than R1 doing that stretch",
+    "R1 is the smiling bystander performing a low lunge stretch, rather than R2",
+    "R2 leans forward on his fists during the floor stretch",
+    "R1 performs a low lunge stretch as a bystander",
+    "weight racks and barbells are visible in the gym",
+    "the setting is an indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 performing the deep split stretch on the floor, rather than R1 performing that deep split stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the deep split stretch instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the smiling bystander doing a low lunge stretch, rather than R2 being the one in the low lunge?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the bystander low-lunge role instead of R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning forward on his fists while doing the floor split stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward on his fists during the stretch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 stretching in a low lunge while R2 is separately doing a deep split stretch on the floor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have different stretching roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

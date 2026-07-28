@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__4baaaf7fa1ad__T3",
+  "instruction": "A candid medium shot captures an elegant indoor room with cream walls, patterned wallpaper, and a framed painting on the left. On the left side of the frame, the man with short hair in a dark blue suit (R1) stands in profile facing right, speaking. On the right side, the bald man with glasses in a blue suit (R2) stands in profile facing left, listening. The two men clasp right hands in a handshake, looking directly at each other during their conversation. Warm indoor lighting from an unseen source casts soft shadows, highlighting the rich blue suits and the cream background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the one speaking while facing R2 during the hand-clasp interaction",
+    "R2 is the one listening while facing R1 during the hand-clasp interaction",
+    "R1 and R2 clasp each other's right hands while looking directly at each other",
+    "R1 stands in profile facing R2, and R2 stands in profile facing R1",
+    "The interaction occurs in an elegant indoor room with cream walls, patterned wallpaper, and a framed painting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 speaking to R2 while they clasp right hands, rather than R2 being the one speaking to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the speaker during the hand-clasp interaction"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 listening to R1 while they clasp right hands, rather than R1 being the one listening to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the listener during the hand-clasp interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 in profile while clasping R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while maintaining the right-hand clasp"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 in profile while clasping R1's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while maintaining the right-hand clasp"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T3",
+  "instruction": "Candid outdoor photograph, medium shot. In a sunny park, a group of children share a joyful group hug. A girl in a light pink sweater (R6) wearing a white headband stands in the center holding purple wrapped gifts, smiling warmly. She is embraced from the right by a boy in a yellow t-shirt (R1) wearing glasses and a striped party hat, and from the left by a girl in a dark blue top (R4) wearing a party hat. Behind them, a boy with short brown hair (R5) wearing a blue denim shirt and a party hat smiles happily at the group. Warm sunlight filters through the green trees, creating a soft, celebratory mood.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R6 is the central child being embraced by R1 from one side",
+    "R6 is the central child being embraced by R4 from the other side",
+    "R1 serves as a side embracer of R6 while R6 remains the central gift-holder",
+    "R4 serves as a side embracer of R6 while R6 remains the central gift-holder",
+    "R6 holds purple wrapped gifts during the group hug",
+    "R5 stands behind the embracing children and smiles at the group",
+    "The scene is outdoors in a sunny park with green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the central child being embraced by R1 from the side, rather than R1 being the central child embraced by R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the central child being embraced by R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the central child being embraced by R4 from the side, rather than R4 being the central child embraced by R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the central child being embraced by R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 act as one of the children embracing R6 while R6 stays in the center holding gifts?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is a side embracer and R6 is the central gift-holder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand behind the embracing children and smile at the group rather than serving as the central child being embraced?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is positioned behind the group as a smiling participant rather than the central embraced child"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T212",
+  "instruction": "A candid documentary photograph, wide shot at eye-level, in an indoor studio with a red carpeted floor and white walls. On the right, the man in the black polo shirt and blue shorts (R1) stands facing left, watching the woman. In the center, the woman in the white t-shirt and blue jeans (R2) is seen from behind, balancing on her left leg and lifting her right leg sideways towards him. The scene is lit by overhead lights, with dark partitions and a white column in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 balances on one leg and lifts her other leg sideways toward R1",
+    "R1 stands facing and watching R2 rather than performing the leg lift",
+    "R2 is the active mover while R1 is the observer/recipient of her movement",
+    "R2 is seen from behind in a one-leg balancing pose",
+    "The scene is in an indoor studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one balancing on one leg and lifting her other leg sideways toward R1, rather than R1 lifting a leg toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the leg-lift movement toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing and watching R2's movement, rather than R2 standing and watching R1 perform the movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the observer while R2 is the mover"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 direct her raised leg sideways toward R1 while R1 faces her as the recipient or observer, rather than R1 directing a raised leg toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's raised leg is oriented toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in a one-leg balancing pose with her lifted leg extended sideways toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration is a sideways leg lift toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

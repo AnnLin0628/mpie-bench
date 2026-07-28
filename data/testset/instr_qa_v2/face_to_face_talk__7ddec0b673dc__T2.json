@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__7ddec0b673dc__T2",
+  "instruction": "Cinematic medium shot in a bright office with brick pillars and large windows. On the left, the man in the brown turtleneck (R2) stands holding papers, listening attentively to his colleague. On the right, the Black man in the white shirt (R1) gestures with an open right hand while explaining a point, holding documents in his left hand. Warm natural light illuminates the scene from the windows behind them, creating a soft, professional atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 explains a point while gesturing with an open right hand",
+    "R2 listens attentively to R1 rather than leading the explanation",
+    "R1 holds documents in his left hand during the explanation",
+    "R2 stands holding papers while listening",
+    "papers/documents are held by the people during the office conversation",
+    "the scene is a bright office with brick pillars and large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person explaining a point with an open right-hand gesture, rather than R2 doing the explaining gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leads the explanation while gesturing"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 listening attentively to R1's explanation, rather than R1 listening attentively to R2's explanation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attentive listener while R1 explains"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 combine an explanatory open-hand gesture with holding documents in his other hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gestures while holding documents"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand in the listener role while holding papers during R1's explanation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 listens while holding papers"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

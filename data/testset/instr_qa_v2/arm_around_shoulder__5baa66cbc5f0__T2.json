@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__5baa66cbc5f0__T2",
+  "instruction": "Candid photographic full shot from behind of two young women running hand-in-hand down a city street. The blonde woman in a black puffer vest (R2) on the left and the red-haired woman in a light blue knit vest (R1) on the right are captured mid-stride, running away from the camera. Their hair blows in the wind as they jog down the center of the asphalt road. The background shows parked cars and trees under soft, natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the red-haired woman running hand-in-hand with R2",
+    "R2 is the blonde woman running hand-in-hand with R1",
+    "R1 and R2 are jointly running away from the camera while holding hands",
+    "R1 and R2 are captured mid-stride with hair blowing in the wind",
+    "They are running down the center of an asphalt city street with parked cars and trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the red-haired woman running hand-in-hand with R2, rather than R2 being the red-haired woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the red-haired participant in the hand-in-hand run"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blonde woman running hand-in-hand with R1, rather than R1 being the blonde woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the blonde participant in the hand-in-hand run"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected by holding each other's hands while running away from the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while running away from the camera"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both captured mid-stride as they run together hand-in-hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are mid-stride during the shared hand-in-hand run"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 running down the center of an asphalt city street with parked cars and trees in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "asphalt city street setting with parked cars and trees"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

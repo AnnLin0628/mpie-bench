@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__e48df733f851__T2",
+  "instruction": "Candid medium close-up of two young girls in a sunny park. On the left, the curly-haired girl in a white cardigan and reddish-brown overalls (R1) smiles widely at the camera. On the right, the girl with a pink headband in a blue shirt and pink cardigan (R2) leans her head close to R1, smiling. They stand close together with R2's arm wrapped around R1's shoulder. Warm, bright golden hour sunlight filters through the trees behind them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arm around R1's shoulder",
+    "R2 leans her head close to R1",
+    "R1 smiles widely at the camera while R2 leans in beside her",
+    "R1 and R2 stand close together in a friendly shoulder-contact pose",
+    "The scene is set in a sunny park with warm golden-hour light through trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arm around R1's shoulder, rather than R1 wrapping her arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arm around R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean her head close to R1, rather than R1 being the one described as leaning her head close to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head close to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the girl smiling widely at the camera while R2 leans in close beside her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles widely at the camera while R2 leans in beside her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together with shoulder contact made by R2's arm around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together in a friendly shoulder-contact pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

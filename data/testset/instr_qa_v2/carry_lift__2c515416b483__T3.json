@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__2c515416b483__T3",
+  "instruction": "A clean studio portrait photograph captured in a medium close-up at eye-level with a shallow depth of field. In a minimalist indoor studio with a plain white background, the brunette woman in the strapless white lace dress (R2) stands in the right foreground, blurred and out of focus, looking to the right while holding white roses. Behind her on the left, the blonde woman in the long-sleeved lace dress (R1) is in sharp focus, looking directly forward with a serious expression while holding her own bouquet of white roses. The scene is illuminated by soft, bright studio lighting, creating a clean, high-key aesthetic.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the sharply focused woman positioned behind R2, rather than R2 being sharply focused behind R1",
+    "R2 is the blurred foreground woman while R1 remains sharp in the background",
+    "R1 looks directly forward with a serious expression while R2 looks to the right",
+    "R1 holds her own bouquet of white roses",
+    "R2 holds white roses",
+    "The portrait is set in a minimalist indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the supporting / leading contact role relative to R2, rather than R2 taking that role toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold her own bouquet while remaining the sharply focused person behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a bouquet in the focused rear portrait position"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding her own bouquet of white roses?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds a bouquet of white roses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": true
+  }
+}

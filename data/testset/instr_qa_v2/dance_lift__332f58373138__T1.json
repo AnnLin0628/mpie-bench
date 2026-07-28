@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__332f58373138__T1",
+  "instruction": "Candid medium shot in a ballet studio. On the left, the female instructor in a black bodysuit (R1) stands and holds the foot of the young ballet student in a white leotard and tutu (R2). The student (R2) stands on the right with her leg extended on the barre, looking at the instructor. Soft indoor lighting illuminates the neutral gray studio.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds R2's foot during the ballet practice interaction",
+    "R2 is the student whose foot is being held by R1",
+    "R2 has a leg extended on the barre while R1 assists at the foot",
+    "R1 acts as the instructor guiding or supporting R2's extended leg position",
+    "the barre is used as a contact-relevant ballet support object",
+    "the scene is set in a ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's foot, rather than R2 holding R1's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's foot during the ballet practice interaction"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose foot is being held by R1, rather than R1 being the person whose foot is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the student whose foot is being held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 assisting R2's extended leg position at the barre, rather than R2 assisting R1's extended leg position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 acts as the instructor guiding or supporting R2's extended leg position"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing with one leg extended on the barre while R1 holds R2's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has a leg extended on the barre while R1 assists at the foot"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

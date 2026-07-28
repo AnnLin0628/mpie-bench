@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T59",
+  "instruction": "A candid wide-shot documentary photograph captures an indoor motion capture studio with a red carpeted floor and white walls. On the right side of the frame, the man in the black polo shirt and blue shorts (R1) stands facing toward the left. On the left, the woman in the white t-shirt and blue jeans (R2) stands facing right. The two subjects stand close together, facing each other directly and holding hands. The background features white walls with radiators and wall-mounted cameras. The scene is evenly illuminated by bright overhead lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the hand-holding partner on the right side facing left toward R2",
+    "R2 is the hand-holding partner on the left side facing right toward R1",
+    "R1 and R2 stand close together facing each other directly while holding hands",
+    "R1 is the man in the black polo shirt and blue shorts interacting with R2",
+    "R2 is the woman in the white t-shirt and blue jeans interacting with R1",
+    "the setting is an indoor motion capture studio with a red carpeted floor and wall-mounted cameras"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the hand-holding partner who faces left toward R2, rather than R2 being the one facing left toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces left toward R2 while holding hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the hand-holding partner who faces right toward R1, rather than R1 being the one facing right toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right toward R1 while holding hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stand close together facing each other directly while holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other directly in a close hand-holding pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the man in the black polo shirt and blue shorts who is holding hands with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled role as the man holding hands with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

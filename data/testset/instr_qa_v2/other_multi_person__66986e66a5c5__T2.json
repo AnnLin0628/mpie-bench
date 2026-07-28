@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__66986e66a5c5__T2",
+  "instruction": "A low-angle medium-full action photograph captures an outdoor concrete lot under a bright sky. On the left, the man in the beige striped shirt (R2) crouches low on his left roller skate, extending his right leg forward while raising his free hand with fingers spread. On the right, the man in the white t-shirt (R1) crouches on his right yellow skate, leaning backward. The man in the beige striped shirt and the man in the white t-shirt hold hands high between them to stay balanced. Warm, direct daylight illuminates the scene, casting soft shadows on the pavement.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 crouches low on his left roller skate with his right leg extended forward and his free hand raised",
+    "R1 crouches on his right yellow skate while leaning backward",
+    "R1 and R2 hold hands high between them to stay balanced",
+    "roller skates are used during the balancing action",
+    "the scene is an outdoor concrete lot under a bright sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one crouching low with his right leg extended forward and his free hand raised, rather than R1 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the extended-leg and raised-free-hand balancing role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning backward while crouched on a skate, rather than R2 being the one described as leaning backward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the backward-leaning balancing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While R1 and R2 hold hands high for balance, is R2 the one raising his free hand with fingers spread rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises the free hand during the hand-hold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold R2's hand high while crouching on his right yellow skate and leaning backward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand-holding and backward-leaning skate posture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

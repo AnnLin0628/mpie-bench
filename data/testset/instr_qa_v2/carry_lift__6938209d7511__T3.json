@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__6938209d7511__T3",
+  "instruction": "Cinematic wedding photograph, medium close-up. Indoors near a wooden lattice window, the bride in the sheer beaded gown (R2) stands in the left foreground, turned slightly toward the camera with a joyful, wide smile. Behind her on the right, the older woman in the sparkly beige dress (R1) laughs happily, her hands gently resting near the bride's shoulder. Warm natural light illuminates the scene, highlighting their close bond against a softly blurred background of green leaves outside.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1's hands gently rest near R2's shoulder",
+    "R1 is behind R2 while making the shoulder-area contact",
+    "R2 is the bride in the foreground receiving the shoulder-area contact from R1",
+    "R1 laughs happily behind R2 while R2 smiles toward the camera",
+    "The scene is indoors near a wooden lattice window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's hands gently resting near R2's shoulder, rather than R2's hands resting near R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 makes the shoulder-area contact with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned behind R2 while making contact near R2's shoulder, rather than R2 being behind R1 and making that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 in the contact role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the bride in the foreground receiving R1's gentle shoulder-area touch, rather than R1 receiving that touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder-area contact from R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

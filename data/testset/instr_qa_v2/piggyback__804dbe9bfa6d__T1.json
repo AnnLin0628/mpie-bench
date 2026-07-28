@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__804dbe9bfa6d__T1",
+  "instruction": "Candid family photograph, medium close-up from a low angle. Indoors against a plain beige wall, the bearded man in the white t-shirt (R2) is seen from behind, lifting the baby in the white bodysuit (R1) high up. The bearded man holds the baby securely under the arms, while the baby looks down at him with a warm smile. Soft, diffused indoor lighting illuminates the scene, creating a warm, intimate atmosphere with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lifts R1 high up",
+    "R2 supports R1 securely under the arms",
+    "R1 is the baby being held aloft by R2",
+    "R1 looks down at R2 while being held",
+    "indoors against a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lifting R1 high up, rather than R1 lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lifts R1 high up"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold and support R1 securely under the arms, rather than R1 holding R2 under the arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 securely under the arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the baby being held aloft by R2, rather than R2 being held aloft by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the baby being held aloft by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 looking down at R2 while R2 holds R1 up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at R2 while being held"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

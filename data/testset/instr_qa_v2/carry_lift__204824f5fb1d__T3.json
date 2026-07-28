@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__204824f5fb1d__T3",
+  "instruction": "Full-shot candid photograph of a family in a grassy park under a bright sky. On the left, the woman in the black leather jacket and blue jeans (R2) stands smiling as she holds the baby in denim overalls (R3) up in the air. The man in the white hoodie and beige pants (R1) stands on the right, looking towards them with a warm, happy smile. The family enjoys their time together on the green lawn, surrounded by distant trees. Bright, direct daylight casts soft shadows on the grass, capturing a joyful moment.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 holds and lifts R3 up in the air",
+    "R3 is the baby being held aloft by R2",
+    "R1 stands nearby looking toward R2 and R3 rather than lifting R3",
+    "R2 is the active caregiver supporting R3 during the lift",
+    "the family is in a grassy park under a bright sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R3 up in the air, rather than R3 holding R2 up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lifter and R3 is the lifted person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the baby being supported aloft by R2, rather than R2 being supported aloft by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is carried or lifted while R2 provides support"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 watching R2 lift R3, rather than R1 being the one who holds R3 up in the air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is an onlooker while R2 performs the lift"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand while using her arms to hold R3 up above the ground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body role is standing and lifting R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned up in the air as the baby being carried by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's body role is elevated and carried"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

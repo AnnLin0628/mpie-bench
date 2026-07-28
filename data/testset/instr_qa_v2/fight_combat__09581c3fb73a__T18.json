@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T18",
+  "instruction": "Candid action photograph, full shot at eye-level. In an outdoor covered training area, the man in the beige t-shirt and black sweatpants (R1) stands on the left in a boxing stance, facing right. The man in the blue tank top and black shorts (R2) stands on the right with his back to the camera, facing left in a boxing stance. They are sparring on the concrete floor under bright, natural daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the sparring partner in a boxing stance facing right toward R2",
+    "R2 is the sparring partner with his back to the camera facing left toward R1",
+    "R1 and R2 are opposing each other in boxing stances rather than sharing the same orientation",
+    "R1 wears the beige t-shirt and black sweatpants while sparring",
+    "R2 wears the blue tank top and black shorts while sparring",
+    "The sparring takes place in an outdoor covered training area on a concrete floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer facing right toward R2 in the sparring stance, rather than R2 being the one facing right toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the sparring partner facing right toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the sparring partner with his back to the camera while facing left toward R1, rather than R1 having his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the sparring partner with his back to the camera"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the sparring, is R1 oriented toward R2 from one side while R2 faces back toward R1 from the opposite side, rather than their labels being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold opposite facing roles in the sparring setup"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

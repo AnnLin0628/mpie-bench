@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T2",
+  "instruction": "A candid documentary medium shot captures a joyful moment in a green garden. On the left, the woman in the pink shirt (R1) laughs heartily, looking toward the right. Beside her, the woman in the crocheted vest (R2) stands with her arms outstretched, reacting excitedly to an off-camera game. The background is filled with lush green bushes. Bright, natural daylight illuminates the scene, creating a warm and cheerful atmosphere with soft shadows. The two women share a lighthearted, interactive moment of celebration.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the woman laughing heartily and looking toward the right",
+    "R2 is the woman standing beside R1 with her arms outstretched",
+    "R2 reacts excitedly to an off-camera game while R1 laughs",
+    "R1 and R2 share a lighthearted interactive moment of celebration",
+    "the scene is set in a green garden with lush bushes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman laughing heartily and looking toward the right, rather than R2 being described as the one laughing heartily?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the laughing-and-looking role while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman standing with her arms outstretched and reacting excitedly to the off-camera game, rather than R1 being described with outstretched arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the outstretched-arms reaction role while R1 laughs"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand beside R1 with her arms outstretched while R1 laughs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands beside R1 in an excited outstretched-arm pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

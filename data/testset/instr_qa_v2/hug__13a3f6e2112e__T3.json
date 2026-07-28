@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__13a3f6e2112e__T3",
+  "instruction": "Candid outdoor medium shot on a sunny beach. On the far left, the shirtless man with sunglasses (R2) walks forward, smiling. To the right, the shirtless blonde man (R1) stands with his back partially turned, looking back over his shoulder with a smile. In the background, tiny blurred bystanders dot the distant shoreline. Bright, direct sunlight illuminates the warm sand and blue ocean, casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 walks forward smiling while R1 is not the walking-forward person",
+    "R1 stands with his back partially turned and looks back over his shoulder while R2 is not doing that",
+    "R1 and R2 have different body actions: R1 looking back over his shoulder and R2 walking forward",
+    "R2 wears sunglasses",
+    "The setting is a sunny beach with warm sand and blue ocean"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person walking forward smiling, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks forward smiling while R1 is not the walking-forward person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing with his back partially turned and looking back over his shoulder, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands with his back partially turned and looks back over his shoulder while R2 is not doing that"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look back over his shoulder while R2 walks forward nearby?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have different body actions: R1 looking back over his shoulder and R2 walking forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

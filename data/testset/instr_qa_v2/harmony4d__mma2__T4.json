@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma2__T4",
+  "instruction": "Candid action photograph, full shot at eye-level. In an indoor gym with gray padded walls, the bearded man in the maroon t-shirt (R2) stands on the left, facing right. The man in the blue tank top (R1) stands on the right, facing left. R2 holds his hands up near R1's face in a defensive grappling maneuver while R1 stands close with his hands raised. Neutral overhead lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds his hands up near R1's face in a defensive grappling maneuver",
+    "R1 stands close to R2 with his hands raised",
+    "R2 is the person performing the defensive hand placement near the other man's face",
+    "R1 is the close opponent receiving R2's defensive hand position rather than performing it himself",
+    "The interaction takes place in an indoor gym with gray padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold his hands up near R1's face in the defensive grappling maneuver, rather than R1 holding his hands up near R2's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds his hands up near R1's face in a defensive grappling maneuver"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person applying the defensive hand position close to the other man's face, while R1 is the person standing close with hands raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person performing the defensive hand placement near the other man's face"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the close opponent whose face R2's raised hands are near, rather than R2 being the close opponent whose face R1's hands are near?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the close opponent receiving R2's defensive hand position rather than performing it himself"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand close to R2 with his own hands raised during the grappling interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands close to R2 with his hands raised"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

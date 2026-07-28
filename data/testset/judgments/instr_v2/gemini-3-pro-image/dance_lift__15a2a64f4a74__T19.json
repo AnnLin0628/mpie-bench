@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T19",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.5441176470588236,
+  "S_instr_role": 0.25,
+  "S_instr_asymm": 0.75,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.25,
+  "S_instr_prop_object": null,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the boy raising his left arm high while R5 keeps his hands near his waist, rather than R5 raising his left arm high while R4 keeps his hands near his waist?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "right boy raises an arm while left boy holds waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the boy posing with slightly bent knees while R5 stands straight, rather than R5 bending his knees while R4 stands straight?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "right boy bends knees while left boy stands straight"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand straight with his hands resting near his waist while R4 performs the high-left-arm, low-right-arm pose?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "left boy stands straight but raised arm appears opposite"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 keep his right arm low while raising his left arm high?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "raised arm appears to be his right arm"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance_lift__15a2a64f4a74__T19",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 52.27,
+    "written_at": "2026-07-17T15:06:09",
+    "gen_relpath": "outputs/gemini-3-pro-image/dance_lift__15a2a64f4a74__T19.png",
+    "qa_relpath": "instr_qa_v2/dance_lift__15a2a64f4a74__T19.json",
+    "n_questions": 4
+  }
+}

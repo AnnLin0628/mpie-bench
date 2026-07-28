@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__9d731b4b6726__T1",
+  "instruction": "A candid cinematic photograph, medium close-up. Indoors at a festive dining table, an older woman with white hair (R1) sits on the left, smiling warmly. She lovingly embraces a young blonde boy (R2) who sits in her lap looking forward. The older woman's hand rests gently on the boy's chest. In the foreground, a tall white candle burns brightly, while the background features a decorated Christmas tree with warm, glowing bokeh lights. Soft candlelight illuminates the foreground, creating a cozy and intimate holiday atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 by having him sit in her lap",
+    "R1 lovingly embraces R2 rather than R2 carrying or supporting R1",
+    "R1's hand rests on R2's chest",
+    "R2 is the young boy seated in R1's lap while R1 cradles him",
+    "The scene is indoors at a festive dining table with holiday candlelight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 in her lap, rather than R2 supporting R1 in his lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 by having him sit in her lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person lovingly embracing R2, rather than R2 being the one carrying or supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lovingly embraces R2 rather than R2 carrying or supporting R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's hand rest gently on R2's chest, rather than R2's hand resting on R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand rests on R2's chest"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young boy seated in R1's lap while R1 cradles him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young boy seated in R1's lap while R1 cradles him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

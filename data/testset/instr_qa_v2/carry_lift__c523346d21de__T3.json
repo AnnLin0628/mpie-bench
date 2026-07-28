@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__c523346d21de__T3",
+  "instruction": "A candid cinematic photograph in a medium close-up shot captures an outdoor night scene decorated with warm hanging fairy lights. On the left, the young man with short dark hair and sunglasses on his head (R2) wears a white button-up shirt covered in red lipstick prints, leaning in to kiss the woman's cheek. On the right, the young woman with long wavy brown hair (R1) wears a white striped crop top and white trousers, looking directly at the camera with a happy smile. She wraps her arm around his neck, placing her hand on his cheek. He holds a bouquet of red and white roses in front of them. The background is softly blurred, illuminated by a warm golden glow from the fairy lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans in to kiss R1's cheek",
+    "R1 keeps her arm around R2's neck",
+    "R1 places her hand on R2's cheek",
+    "R2 holds a bouquet of red and white roses in front of them",
+    "outdoor night scene with warm hanging fairy lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning in to kiss R1's cheek, rather than R1 leaning in to kiss R2's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the cheek-kisser and R1 is the cheek-kiss recipient"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arm around R2's neck, rather than R2 wrapping his arm around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's arm is around R2's neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing her hand on R2's cheek, rather than R2 placing his hand on R1's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's cheek with her hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 smiling toward the camera while R2 leans in close to kiss her cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces the camera happily while R2 performs the cheek kiss"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a bouquet of red and white roses in front of them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the bouquet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

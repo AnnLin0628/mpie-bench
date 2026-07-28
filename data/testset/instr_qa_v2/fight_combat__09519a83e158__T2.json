@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T2",
+  "instruction": "Candid medium shot in an MMA gym. A bearded man in a black t-shirt (R2) on the left wraps a beige bandage around the wrist of a smiling woman in a black tube top (R1) on the right, who holds her arm straight out. Soft overhead gym lighting with a chain-link fence background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps a beige bandage around R1's wrist",
+    "R1 receives the wrist wrap from R2",
+    "R1 holds her arm straight out for R2 to wrap",
+    "R2 handles R1's wrist during the wrapping",
+    "a beige bandage is used as the contact object",
+    "the interaction takes place in an MMA gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping a bandage around R1's wrist, rather than R1 wrapping a bandage around R2's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps a beige bandage around R1's wrist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the wrist bandage from R2, rather than R2 receiving a wrist bandage from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the wrist wrap from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold her arm straight out for R2 to wrap, rather than R2 holding his arm straight out for R1 to wrap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds her arm straight out for R2 to wrap"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 using his hands near R1's wrist as part of the wrapping action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 handles R1's wrist during the wrapping"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__62b1c8fca6b6__T4",
+  "instruction": "Candid office photograph, medium wide shot. In a modern office, the young Black man in a white dress shirt (R1) sits in a black office chair on the left, holding a blue folder and gesturing with his hands. The older bearded man in a dark gray suit (R2) sits on the right, facing left with his hands clasped on the wooden desk, listening attentively. A laptop and a pen holder sit on the desk between them. In the background, a blurred female office worker with glasses is visible at her desk. Soft, natural indoor lighting illuminates the professional meeting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a blue folder and gestures with his hands during the office meeting",
+    "R2 sits with his hands clasped on the wooden desk and listens attentively",
+    "R1 is the active gesturing speaker while R2 is the attentive listener",
+    "R1 sits in a black office chair during the meeting",
+    "A blue folder is held by R1",
+    "A laptop and a pen holder sit on the desk between R1 and R2",
+    "The meeting takes place in a modern office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the blue folder and gesturing with his hands, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a blue folder and gestures while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person with hands clasped on the wooden desk and listening attentively, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the attentive listening role with clasped hands on the desk"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 acting as the gesturing speaker while R2 faces him as the listener?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active gesturer and R2 is the attentive listener"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated in a black office chair while interacting with R2 across the desk?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits in a black office chair during the office interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

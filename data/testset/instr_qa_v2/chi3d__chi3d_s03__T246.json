@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T246",
+  "instruction": "Candid documentary full shot from behind in an indoor motion capture studio with a red carpet. The bearded man in a dark polo and blue shorts (R1) and the woman in a white t-shirt and blue jeans (R2) are walking away from the camera. The woman (R2) has her left arm around the man's (R1) back and raises her right hand in a wave. The room is brightly lit.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her left arm around R1's back while they walk",
+    "R2 raises her right hand in a wave rather than R1",
+    "R1 is the person whose back is being held by R2's arm",
+    "R1 and R2 are walking away from the camera together",
+    "indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place her left arm around R1's back, rather than R1 placing his arm around R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric arm-around-back contact role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person raising a right hand in a wave, rather than R1 raising a hand to wave?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the asymmetric waving action"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose back is being touched by R2's arm, rather than R2 being the one whose back is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the back contact from R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking away from the camera together while R2 keeps her left arm around R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "paired walking configuration with R2's arm around R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

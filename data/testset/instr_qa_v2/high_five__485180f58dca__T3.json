@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__485180f58dca__T3",
+  "instruction": "Cinematic full shot of a pebble beach at dusk. On the left, the short-haired man in a striped shirt (R3) is seen from a back-three-quarter view. On the right, the blonde woman in a white leather jacket (R2) faces him, smiling. They are high-fiving with both hands raised high. Pink and blue smoke drifts in the background against the calm sea under a soft, overcast evening sky.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 faces R3 and smiles during the two-handed high-five",
+    "R3 is shown from a back-three-quarter view while high-fiving R2",
+    "R2 and R3 both raise both hands high to make the high-five contact",
+    "R2 and R3 are the contact pair in the high-five interaction",
+    "The scene is a pebble beach at dusk with smoke drifting near the sea"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the participant shown from a back-three-quarter view while high-fiving R2, rather than R2 being shown from a back-three-quarter view while R3 faces forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is shown from a back-three-quarter view while high-fiving R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

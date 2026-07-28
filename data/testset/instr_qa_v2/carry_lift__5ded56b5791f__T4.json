@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__5ded56b5791f__T4",
+  "instruction": "A candid family photograph in an eye-level full shot captures a playful morning scene. In a cozy bedroom with patterned wallpaper and a white bed, the bearded man in a white t-shirt and striped pajama pants (R1) planks on a woven rug, laughing heartily. The woman in a white button-up shirt and matching pants (R3) sits on his lower back, laughing as she lifts the toddler in striped pajamas (R2) up in the air. Soft, natural indoor light fills the room, creating a warm and cheerful atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 planks on a woven rug and serves as the lower support",
+    "R3 sits on R1's lower back rather than R1 sitting on R3",
+    "R3 lifts R2 up in the air rather than R2 lifting R3",
+    "R2 is the toddler being lifted by R3",
+    "a woven rug is under R1 during the plank",
+    "the scene is in a cozy bedroom with patterned wallpaper and a white bed"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 planking underneath and supporting R3 on his lower back, rather than R3 supporting R1 from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 serves as the lower support while R3 sits on his back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 sitting on R1's lower back, rather than R1 sitting on R3's lower back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the seated person on R1's back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 lifting R2 up in the air, rather than R2 lifting R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 lifts the toddler R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the toddler being held up by R3 while R3 is seated on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lifted child in the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__f8416f139ced__T2",
+  "instruction": "Candid outdoor photograph, full shot. On a sunny autumn path in a wooded park, the woman in the black puffer jacket and mint beanie (R1) walks forward while carrying the toddler girl in the pink turban beanie (R2) piggyback on her back, both looking forward. In the background on the right, a young boy in a dark jacket and grey pants walks along the path. Bright sunlight filters through the trees, casting shadows across the leaf-strewn ground.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 piggyback on R1's back",
+    "R1 supports R2's weight while walking forward",
+    "R2 is the toddler rider being carried by R1",
+    "R1 and R2 both look forward during the piggyback carry",
+    "the scene is a sunny autumn path in a wooded park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 piggyback on R1's back, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the piggyback carrier and R2 is the rider"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from underneath while walking forward, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight during the piggyback"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned on R1's back as the carried toddler, rather than R1 being positioned on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is carried on R1's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk forward while carrying R2 on her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks forward as the carrier"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

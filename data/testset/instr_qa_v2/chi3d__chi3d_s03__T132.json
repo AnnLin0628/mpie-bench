@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T132",
+  "instruction": "A candid documentary photograph with a wide, eye-level shot capturing an indoor motion capture studio with white walls and a red carpet. On the left, the bearded man in a black polo shirt and blue shorts (R1) stands facing right. On the right, the woman in a white patterned t-shirt and blue jeans (R2) stands facing left, reaching her right hand forward to touch his left shoulder. The background features a dark red partition screen and office equipment. The overhead indoor lighting casts soft shadows on the red carpet, creating a neutral, functional atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches her right hand forward to touch R1's left shoulder",
+    "R1 receives the shoulder touch from R2 rather than touching R2",
+    "R2 is the active toucher and R1 is the touched partner",
+    "R1 and R2 stand facing each other during the shoulder contact",
+    "the interaction takes place in an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending her right hand to touch R1's left shoulder, rather than R1 extending a hand to touch R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively touches R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder touch from R2, rather than R2 receiving a shoulder touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the touched partner while R2 initiates contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does the contact occur with R2's hand on R1's left shoulder, rather than with R1's hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact point is R1's shoulder touched by R2's hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 reaching forward with her right hand while R1 stands as the partner being touched?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches forward and R1 is the recipient"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T9",
+  "instruction": "Candid black and white medium full shot of a city embankment on an overcast day. On the right, the man with curly hair and a dark coat (R1) leans against a stone barrier, facing left. On the left, the woman in the black cap and dark coat (R2) stands close, facing him. She holds his arms while he gently grasps her wrists, their eyes locked in an intimate moment. The background shows a soft-focus city street with distant buildings. Soft, diffused daylight illuminates the scene, casting gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's arms while R1 gently grasps R2's wrists",
+    "R1 gently grasps R2's wrists rather than R2 grasping R1's wrists",
+    "R1 leans against a stone barrier while R2 stands close facing him",
+    "R1 and R2 face each other with their eyes locked",
+    "a stone barrier is present and R1 is in contact with it",
+    "the scene is a city embankment on an overcast day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's arms while R1 gently grasps R2's wrists, rather than R1 holding R2's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's arms while R1 grasps R2's wrists"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning against the stone barrier while R2 stands close facing him, rather than R2 leaning against the barrier?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans on the barrier while R2 stands close"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 gently grasp R2's wrists while R2 holds his arms, rather than R2 grasping R1's wrists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grasps R2's wrists"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other closely, with R2 standing near R1 as he leans back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands close facing R1 while R1 leans"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

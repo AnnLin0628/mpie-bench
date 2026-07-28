@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__47c4dac39572__T5",
+  "instruction": "Cinematic film still, medium close-up. In an outdoor park by a lake during the day, the bearded man in the beige corduroy shirt (R1) on the right stands close to the woman in the beige hijab (R2) on the left. The man gently holds her hands in front of them while looking down at her with a soft expression, and the woman smiles gently while looking down. Soft natural daylight illuminates the scene with warm tones and a blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently holds R2's hands in front of them",
+    "R1 is the hand-holding initiator/contact holder rather than R2",
+    "R2's hands are being held by R1 while she smiles gently",
+    "R1 and R2 stand close together during the hand-holding interaction",
+    "The scene is outdoors in a park by a lake during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently holding R2's hands in front of them, rather than R2 being the one holding R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently holds R2's hands in front of them"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person taking the active hand-holding role with R2's hands, rather than R2 taking that role with R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the hand-holding initiator/contact holder rather than R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together while R1 holds R2's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together during the hand-holding interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

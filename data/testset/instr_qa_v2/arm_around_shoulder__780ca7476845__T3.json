@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__780ca7476845__T3",
+  "instruction": "A candid medium studio photograph of two friends against a solid light blue background. On the left, the fair-skinned woman with long straight blonde hair (R1), wearing a grey t-shirt and blue jeans, smiles broadly while playfully touching the hair of the woman with curly brown hair (R2) on the right. The curly-haired woman (R2), dressed in a white off-the-shoulder top and blue jeans, laughs joyfully with her eyes closed. The scene is captured with bright, even studio lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the friend who playfully touches R2's hair",
+    "R2 is the friend whose hair is being touched by R1",
+    "R1 initiates the hand-to-hair contact while R2 reacts by laughing",
+    "R2 laughs joyfully with her eyes closed during R1's hair-touching gesture",
+    "The two friends are photographed against a solid light blue studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 playfully touching R2's hair, rather than R2 touching R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the friend who playfully touches R2's hair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose hair is being touched by R1, rather than R2 being the one touching R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the friend whose hair is being touched by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 initiate the playful hand-to-hair contact while R2 reacts by laughing, instead of R2 initiating that contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the hand-to-hair contact while R2 reacts by laughing"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 laughing joyfully with her eyes closed while R1 touches her hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 laughs joyfully with her eyes closed during R1's hair-touching gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

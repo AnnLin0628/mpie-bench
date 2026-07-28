@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__07ab0f9247c2__T6",
+  "instruction": "Candid documentary photograph, medium shot, low-angle from behind. In a sunny outdoor setting with a clear blue sky, the man in the white t-shirt (R1) stands in the center with his back to the camera. He carries the girl in the white t-shirt (R3) on his right shoulder, supporting her with his arm. The girl (R3) is also seen from behind, looking forward. Bright daylight evenly illuminates the scene against the deep blue sky.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 carries R3 on his shoulder rather than R3 carrying R1",
+    "R1 supports R3 with his arm rather than R3 supporting R1",
+    "R1 bears R3's weight from below while R3 rides on him",
+    "R3 is positioned on R1's right shoulder",
+    "R1 stands with his back to the camera while carrying R3",
+    "sunny outdoor setting with a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R3 on his shoulder rather than R3 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R3 on his shoulder rather than R3 carrying R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 support R3 with his arm rather than R3 supporting R1 with her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R3 with his arm rather than R3 supporting R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 bearing R3's weight from below while R3 rides on him, rather than R3 bearing R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 bears R3's weight from below while R3 rides on him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned on R1's right shoulder during the carry?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is positioned on R1's right shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing with his back to the camera while carrying R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands with his back to the camera while carrying R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

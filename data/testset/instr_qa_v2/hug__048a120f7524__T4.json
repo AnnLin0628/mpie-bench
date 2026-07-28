@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T4",
+  "instruction": "Intimate candid photograph, close-up shot. Against a white background, the man with curly blonde hair (R1) rests his head against the neck of the person with long brown hair (R2). Both have their eyes closed in a peaceful, affectionate embrace. The focus is soft, with warm, gentle studio lighting highlighting their faces.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests his head against R2's neck",
+    "R2 is the person whose neck receives R1's head contact",
+    "R1 leans into R2 for the head-to-neck contact",
+    "R1 and R2 both have their eyes closed during the affectionate close contact",
+    "The image is a close-up against a white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one resting his head against R2's neck, rather than R2 resting their head against R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests his head against R2's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose neck receives contact from R1's head, rather than R1 being the neck-contact recipient?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's head contact at the neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning his head into R2, rather than R2 leaning their head into R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans into R2 for the head-to-neck contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1's head positioned against R2's neck during their close affectionate contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's head is placed against R2's neck"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

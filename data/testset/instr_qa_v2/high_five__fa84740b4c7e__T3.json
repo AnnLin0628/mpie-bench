@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__fa84740b4c7e__T3",
+  "instruction": "Candid documentary photograph, medium full shot. In a modern living room, the woman in the blue button-down shirt (R1) stands on the left, facing right with her hands raised, palms forward. The man in the light green t-shirt (R2) stands on the right, facing her with his hands raised in a matching defensive, palms-forward gesture. They are engaged in an expressive argument, set against a background of potted plants and blue artwork under bright, natural light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman facing R2 with hands raised and palms forward",
+    "R2 is the man facing R1 with a matching defensive palms-forward gesture",
+    "R1 and R2 are engaged in an expressive argument with raised hands",
+    "potted plants appear in the background",
+    "blue artwork appears in the background",
+    "the setting is a modern living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman facing R2 with her hands raised and palms forward, rather than R2 being the woman in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman facing R2 with hands raised and palms forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man facing R1 with a matching defensive palms-forward gesture, rather than R1 being the man in that matching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man facing R1 with a matching defensive palms-forward gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold her palms forward toward R2 while R2 mirrors her with his own palms-forward stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 use matching raised-palms defensive gestures"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T14",
+  "instruction": "Crisp studio photograph, full shot from a high angle. In a minimalist white studio with a seamless background, the woman in the white hooded outfit (R2) on the left lunges forward, pressing her hands against the chest of the woman in the black hooded outfit (R1) on the right. The woman in black (R1) recoils slightly, tilting her head back defensively while raising her hands. Both barefoot dancers perform this intense, coordinated movement under bright high-key studio lighting that casts soft shadows on the clean floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward and presses her hands against R1's chest",
+    "R1 recoils defensively from R2's chest contact",
+    "R1 raises her hands while tilting her head back in response to R2",
+    "R2 is the initiating pusher while R1 is the receiving defender",
+    "minimalist white studio with seamless background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pressing her hands against R1's chest, rather than R1 pressing her hands against R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 applies chest contact to R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 recoiling defensively from R2's forward pressure, rather than R2 recoiling defensively from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives and reacts to R2's push"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer lunging forward into contact while R1 tilts her head back in defense, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the lunge and R1 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 raise her hands defensively while R2's hands are pressed to R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defensive hand-raising during R2 chest press"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

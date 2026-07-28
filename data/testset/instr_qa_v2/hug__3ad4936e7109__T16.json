@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T16",
+  "instruction": "A candid studio photograph, taken in a full shot from a slightly high angle. In a minimalist indoor studio with a white background and floor, three friends sit huddled tightly on the floor. On the left, the woman with wavy light brown hair (R3), in a white shirt and blue jeans, leans forward laughing with her head down. In the center, the woman with straight dark hair (R2), in a white top, denim jacket, and black pants, laughs with her head tilted. On the right, the woman with curly brown hair (R1), in a white shirt and blue jeans, laughs with her eyes closed. They are locked in a joyful, tangled embrace, hugging each other tightly under bright, soft studio lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the central participant in the tight, tangled floor embrace, with R1 and R3 huddled around her",
+    "R3 leans forward into the huddle laughing with her head down",
+    "R1 laughs with her eyes closed while participating in the close embrace",
+    "R2 sits between R1 and R3 within the tight floor huddle",
+    "R1, R2, and R3 are seated together on the floor in close physical contact",
+    "minimalist indoor studio with a white background and floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the central friend in the tight, tangled embrace, with R1 and R3 huddled around her, rather than R1 being the central friend?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central participant in the tight, tangled floor embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the friend leaning forward into the huddle while laughing with her head down, rather than R2 being the one in that forward head-down posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans forward into the huddle laughing with her head down"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the friend laughing with her eyes closed in the huddled embrace, rather than R3 being the eyes-closed participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs with her eyes closed while in the close embrace"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated between R1 and R3 within the tight floor huddle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits between R1 and R3 within the tight floor huddle"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

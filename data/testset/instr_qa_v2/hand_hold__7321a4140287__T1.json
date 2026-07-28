@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__7321a4140287__T1",
+  "instruction": "Candid full-body documentary photograph of a couple walking in a bright indoor garden atrium. On the left, the woman in the white hijab and dress (R2) walks forward, looking towards her partner. On the right, the man in the white shirt and light blue jeans (R1) walks alongside her, smiling warmly. They hold hands in the center as they walk. The background features lush green plants and white floral decorations under soft, bright natural light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks toward R1 while they walk hand in hand",
+    "R1 smiles warmly while walking alongside R2 and holding her hand",
+    "R1 and R2 hold hands in the center as they walk together",
+    "R2 walks forward with R1 as her hand-holding partner",
+    "lush green plants and white floral decorations in the background",
+    "bright indoor garden atrium setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner looking toward R1 while they walk hand in hand, rather than R1 being the partner looking toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks toward R1 while they walk hand in hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner smiling warmly while walking alongside R2 and holding her hand, rather than R2 being the warmly smiling partner in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles warmly while walking alongside R2 and holding her hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other in the center as they walk together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands in the center as they walk together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking forward with her hand joined to R1's as her partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks forward with R1 as her hand-holding partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

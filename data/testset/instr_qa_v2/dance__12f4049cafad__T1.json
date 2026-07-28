@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T1",
+  "instruction": "Cinematic video still, medium shot. In a studio with a soft pink and blue gradient background, the woman in the red fringed dress (R1) dances dynamically in the foreground center, her arms bent and gaze directed forward with an open mouth. Behind her to the left, the man in the cream t-shirt and black vest (R2) dances while leaning forward and looking down. The scene is illuminated by warm, colorful studio lighting, creating a vibrant party atmosphere with a shallow depth of field.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the dynamic foreground-center dancer with arms bent, gaze forward, and open mouth",
+    "R2 is behind R1, dancing while leaning forward and looking down",
+    "R1 and R2 have different dance poses and gaze directions",
+    "R1 dances in the foreground while R2 dances behind her",
+    "studio setting with a soft pink and blue gradient background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dynamic foreground-center dancer with arms bent and gaze directed forward, rather than R2 being the foreground-center dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dynamic foreground-center dancer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 dancing behind R1 while leaning forward and looking down, rather than R1 being the dancer behind who leans forward and looks down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances behind R1 while leaning forward and looking down"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look forward with an open mouth while R2 looks down, rather than R2 looking forward with an open mouth while R1 looks down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have different gaze and mouth expressions"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 dancing dynamically with her arms bent as the foreground performer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances dynamically with bent arms"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 dancing in a forward-leaning posture while positioned behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances while leaning forward behind R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

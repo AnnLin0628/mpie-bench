@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T12",
+  "instruction": "Cinematic film still with a hazy, low-contrast aesthetic, full shot. In a bright, dreamlike white ballet studio with wooden floors, the blonde ballerina (R2) on the left wears a white leotard and pointe shoes, performing a wide plié while holding the wooden barre. On the right, the brunette ballerina (R1) wearing a white leotard, sheer wrap skirt, and pointe shoes stands near her barre, looking down. The entire scene is enveloped in an extremely soft, hazy white light, creating a low-contrast, ethereal atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 performs a wide plié while holding the wooden barre, rather than R1 doing that action",
+    "R1 stands near her barre looking down, rather than R2 being the one standing and looking down",
+    "R2 uses the wooden barre for support during her plié while R1 remains near her own barre",
+    "wooden ballet barre used as a support prop",
+    "bright white ballet studio with wooden floors and hazy low-contrast light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina performing a wide plié while holding the wooden barre, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs a wide plié while holding the wooden barre, rather than R1 doing that action"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina standing near her barre and looking down, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands near her barre looking down, rather than R2 being the one standing and looking down"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use the wooden barre for support during her wide plié while R1 remains standing near her own barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses the wooden barre for support during her plié while R1 remains near her own barre"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

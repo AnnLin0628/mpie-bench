@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T8",
+  "instruction": "Candid photographic still, medium close-up. In a bright ballet studio, the red-haired girl in a pink leotard (R3) is in the foreground, smiling with her right arm extended. In the left background, the girl with light brown hair in a bun (R1) mirrors the pose, looking towards R3. In the background, a female instructor in a black t-shirt and grey pants guides their poses. Soft, bright indoor lighting fills the space.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R3 is the foreground dancer with her right arm extended",
+    "R1 mirrors R3's extended-arm pose from the background",
+    "R1 looks toward R3 while mirroring the pose",
+    "R3 is smiling as she extends her right arm",
+    "a female instructor guides the dancers' poses",
+    "the scene is set in a bright ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 mirroring R3's extended-arm pose, rather than R3 mirroring R1's pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 mirrors R3's pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the foreground dancer whose right-arm pose is being copied by R1, rather than R1 being the foreground dancer copied by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the foreground pose focus copied by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look toward R3 while matching R3's pose, rather than R3 looking toward R1 while matching R1's pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks toward R3 while mirroring"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned in the background while copying R3's extended-arm pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 copies R3's pose from the background"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

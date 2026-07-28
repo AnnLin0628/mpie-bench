@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__ece68b23998b__T5",
+  "instruction": "Candid documentary photograph, medium shot. Set on an outdoor patio during the day. On the left, the laughing woman in the gray long-sleeve shirt (R1) tilts her head back with eyes closed in joyful laughter. On the right, the smiling young woman in the floral dress (R2) stands close, looking toward the camera with a gentle smile. The laughing woman (R1) embraces the smiling young woman (R2), resting her right hand on R2's shoulder and wrapping her other arm around her waist. The background is softly blurred with warm, natural daylight illuminating the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 embraces R2 rather than R2 embracing R1",
+    "R1 rests her right hand on R2's shoulder rather than R2 resting a hand on R1's shoulder",
+    "R1 wraps her other arm around R2's waist rather than R2 wrapping an arm around R1's waist",
+    "R2 stands close to R1 and receives R1's arm contact",
+    "The scene is set on an outdoor patio during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one embracing R2, rather than R2 being the one embracing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 embraces R2 rather than R2 embracing R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest her right hand on R2's shoulder, rather than R2 resting her right hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her right hand on R2's shoulder rather than R2 resting a hand on R1's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her other arm around R2's waist, rather than R2 wrapping her other arm around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her other arm around R2's waist rather than R2 wrapping an arm around R1's waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing close to R1 while receiving R1's shoulder-and-waist arm contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands close to R1 and receives R1's arm contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

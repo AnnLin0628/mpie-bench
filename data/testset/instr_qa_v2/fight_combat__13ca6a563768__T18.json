@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__13ca6a563768__T18",
+  "instruction": "A crisp action photograph with a full, eye-level shot captures an indoor boxing gym with concrete walls and yellow accents. On the left, the man in the orange beanie (R1), wearing a white t-shirt and blue sweatpants, stands holding a black heavy punching bag steady with both hands. On the right, the blonde woman in the purple hoodie (R2), wearing black leggings and brown boxing gloves, begins to retract her left arm after punching the bag, keeping her right glove near her face. The man watches the bag intently while the blonde woman maintains her boxing stance. Bright, even indoor lighting illuminates the scene, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the heavy punching bag steady with both hands while R2 punches it",
+    "R2 is the boxer retracting her left arm after punching the bag while R1 steadies the bag",
+    "R1 watches and stabilizes the bag rather than throwing the punch",
+    "R2 keeps her right glove near her face in a boxing stance",
+    "black heavy punching bag",
+    "brown boxing gloves",
+    "indoor boxing gym with concrete walls and yellow accents"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the heavy punching bag steady for R2, rather than R2 holding it steady for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stabilizes the bag while R2 is the striker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one retracting her left arm after punching the bag, rather than R1 being the one who punched it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the punch while R1 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 focus on watching and steadying the bag while R2 maintains the boxing stance with gloves up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bag holder and R2 is the boxer"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned as the active boxer, keeping her right glove near her face after striking the bag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 active boxing role and guarded stance"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black heavy punching bag involved in the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black heavy punching bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

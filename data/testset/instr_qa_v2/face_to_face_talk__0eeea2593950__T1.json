@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__0eeea2593950__T1",
+  "instruction": "A candid cinematic still, medium shot at eye-level with a shallow depth of field, set on an outdoor city street during the day. On the left, the woman with an afro in a black leather jacket (R1) walks and talks with a slight smile, looking down towards her companion. On the right, the woman with curly brown hair in a green coat (R2) walks beside her, looking up with an affectionate smile. In the background, a single blurred pedestrian walks away. The scene is illuminated by soft, natural daylight with a cool-toned urban color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks downward toward R2 while walking and talking",
+    "R2 looks upward toward R1 with an affectionate smile",
+    "R1 is the active talker in the walking conversation",
+    "R2 walks beside R1 as her conversational companion",
+    "the interaction takes place on an outdoor city street during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking downward toward R2 while R2 looks upward toward R1, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks downward toward R2 while R2 looks upward toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one described as walking and talking to R2, rather than R2 being the one described as walking and talking to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active talker in the walking conversation"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": true
+  }
+}

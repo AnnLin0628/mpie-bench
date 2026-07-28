@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__ballroom__T3",
+  "instruction": "A candid full shot of an indoor dance studio with a wooden floor. On the right, the woman in the red dress (R1) stands with her back to the camera, showing the low-cut back of her red dress. She has her left arm wrapped around the shoulder of the man in the striped polo (R2), who stands on the left facing right. They are locked in a close dance embrace, practicing their steps. The background features plain walls and a tripod. Warm indoor lighting illuminates the dancers, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her left arm around R2's shoulder during the dance embrace",
+    "R2 is the partner whose shoulder is held by R1's arm",
+    "R1 has her back to the camera while in close contact with R2",
+    "R1 and R2 are locked in a close dance embrace practicing steps",
+    "the setting is an indoor dance studio with a wooden floor",
+    "a tripod is visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her left arm around R2's shoulder, rather than R2 wrapping his left arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her left arm around R2's shoulder during the dance embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner whose shoulder is encircled by R1's arm, rather than R1 being the partner whose shoulder is encircled by R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partner whose shoulder is held by R1's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer with her back to the camera while embracing R2, rather than R2 being the dancer with his back to the camera while embracing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has her back to the camera while in close contact with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 locked in a close dance embrace with R1's arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are locked in a close dance embrace practicing steps"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 practicing their close dance embrace in an indoor dance studio with a wooden floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the setting is an indoor dance studio with a wooden floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

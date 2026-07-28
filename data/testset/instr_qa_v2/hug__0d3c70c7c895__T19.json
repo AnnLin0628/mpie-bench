@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T19",
+  "instruction": "Cinematic medium shot of three young girls standing close together in a sunny park. On the left, the curly-haired girl in a white cardigan (R3) smiles warmly at the camera, holding the center girl's arm. In the center, the girl with a pink headband (R6) smiles gently, looking forward. On the right, the girl with bangs in a blue cardigan (R4) smiles happily, wrapping her arm around the center girl's shoulder. Bright golden hour sunlight shines directly from behind them, creating a prominent lens flare and a soft, glowing atmosphere with a shallow depth of field.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R3 holds R6's arm",
+    "R4 wraps her arm around R6's shoulder",
+    "R6 receives close contact from both R3 and R4",
+    "R6 is the center girl in the contact grouping",
+    "sunny park with golden-hour backlight and lens flare"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 holding R6's arm, rather than R6 holding R3's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds R6's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 wrapping her arm around R6's shoulder, rather than R6 wrapping her arm around R4's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 wraps her arm around R6's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the girl receiving contact from both R3 and R4, rather than R6 being the one holding R3's arm and wrapping around R4's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 receives close contact from both R3 and R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 positioned as the center girl while R3 holds her arm and R4 wraps around her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the center girl in the contact grouping"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__1ddc90aadf2f__T2",
+  "instruction": "Clean studio photograph, medium shot. In a white photography studio with vertical light tubes, the brunette cheerleader (R2) stands in the foreground left, shown in profile facing right with her arms extended forward holding orange pom-poms. Behind her and to the right, the blonde cheerleader (R1) stands in the background, also in profile facing right with her arms extended forward holding pom-poms. Both wear matching white \"WARSAW METS\" t-shirts and white skirts, performing a synchronized cheer pose. Bright, even studio lighting illuminates the clean white scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the foreground cheerleader while R1 is behind her in the background",
+    "R1 stands behind R2 while matching R2's forward-extended cheer pose",
+    "R2 holds orange pom-poms forward in the foreground, with R1 behind also holding pom-poms",
+    "both R1 and R2 perform a synchronized cheer pose in profile facing right",
+    "orange pom-poms are held by the cheerleaders",
+    "the scene is a white photography studio with vertical light tubes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the cheerleader in the foreground while R1 is positioned behind her in the background, rather than R1 being the foreground cheerleader?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground cheerleader while R1 is behind her in the background"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the cheerleader standing behind R2 while matching the same forward-extended cheer pose, rather than R2 standing behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 while matching R2's forward-extended cheer pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold her pom-poms forward in the foreground while R1 holds pom-poms forward behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds orange pom-poms forward in the foreground, with R1 behind also holding pom-poms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

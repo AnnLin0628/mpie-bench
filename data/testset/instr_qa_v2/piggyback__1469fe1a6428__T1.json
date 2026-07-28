@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__1469fe1a6428__T1",
+  "instruction": "Candid outdoor photograph, medium close-up. In a grassy park with lush green trees, the man in the blue plaid shirt (R1) on the left carries the woman in the white long-sleeve top (R2) on his back. The woman (R2) wraps her arms around his shoulders, and they smile warmly at each other. Soft natural daylight with golden hour backlighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 on his back in a piggyback position",
+    "R1 supports R2's body weight from below rather than being carried",
+    "R2 rides on R1's back rather than carrying him",
+    "R2 wraps her arms around R1's shoulders while being carried",
+    "R1 and R2 smile warmly at each other during the piggyback carry",
+    "The scene is outdoors in a grassy park with lush green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his back rather than R2 carrying R1 on her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the carrier and R2 is the person being carried"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below while R2 rides on him, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's body weight in the piggyback pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's shoulders while being carried, rather than R1 wrapping his arms around R2's shoulders while being carried?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds onto R1's shoulders from the piggyback position"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned on R1's back in a piggyback configuration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is on R1's back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

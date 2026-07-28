@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T11",
+  "instruction": "Cinematic film still, medium shot. In a bright, white classical ballet studio with large windows, the blonde ballerina (R2) stands on the left in profile, wearing a white leotard and looking down towards her companion. The brunette ballerina (R1) stands in the center wearing a white leotard and a sheer white wrap skirt, looking down while adjusting her skirt with her hand. Soft, diffused natural light fills the elegant space, creating a muted, gentle color palette with soft shadows and a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the brunette ballerina adjusting her own sheer wrap skirt with her hand",
+    "R2 is the blonde ballerina standing in profile and looking down toward R1",
+    "R1 is looking down while adjusting her skirt, rather than R2 doing that action",
+    "R1 wears a sheer white wrap skirt that is being adjusted by hand",
+    "The scene is a bright white classical ballet studio with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina adjusting her own skirt with her hand, rather than R2 doing the skirt-adjusting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric skirt-adjusting duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina looking down toward her companion, rather than R1 being the one described as looking down toward her companion?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric companion-directed gaze"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the brunette ballerina who is looking down while adjusting her skirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body action is looking down and adjusting her skirt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

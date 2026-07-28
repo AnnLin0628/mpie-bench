@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b8719b45fe05__T7",
+  "instruction": "Candid outdoor full shot from a high angle of a couple walking down a rocky path next to a marble wall. On the left, the woman in the white sweater and beige hat (R1) walks with her right hand resting on the marble wall, looking down. On the right, the man in the brown sweater and dark hat (R2) walks slightly ahead, holding her hand. Soft natural daylight illuminates the rocky path, contrasting the cool blue-gray marble wall with the warm colors of their sweaters.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 walks slightly ahead while holding R1's hand",
+    "R1 is the person whose hand is being held by R2 as they walk",
+    "R1 rests her right hand on the marble wall while walking",
+    "R1 looks down while walking beside R2",
+    "marble wall used as a hand-resting surface",
+    "rocky outdoor path next to the marble wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 walking slightly ahead while holding R1's hand, rather than R1 walking ahead while holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leads slightly ahead while maintaining the handhold with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose hand is being held by R2 as they walk, rather than R2 being the one whose hand is held by R1 from ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the held partner while R2 holds her hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk with her right hand resting on the marble wall while R2 holds her hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 combines wall contact with the handhold from R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking on a rocky outdoor path next to the marble wall?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "rocky outdoor path beside the marble wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

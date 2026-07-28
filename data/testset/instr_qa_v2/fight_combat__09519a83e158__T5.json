@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T5",
+  "instruction": "Candid documentary photograph, medium shot. Inside a boxing gym with a chain-link cage background, the bearded man with a shaved-sides hairstyle (R2) in a black t-shirt stands on the left, facing right in a boxing stance as he throws a punch. On the right, the woman with braided hair (R1) in a black strapless top stands in profile, calmly watching him. Cool, even indoor lighting illuminates the scene, highlighting their focused expressions.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is in a boxing stance throwing a punch",
+    "R1 is calmly watching R2 rather than punching",
+    "R2 is the active fighter while R1 is the observer",
+    "R1 stands in profile facing the action",
+    "the scene is inside a boxing gym with a chain-link cage background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one in a boxing stance throwing a punch, rather than R1 throwing the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active puncher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 calmly watching R2 punch, rather than R2 calmly watching R1 punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the observer while R2 attacks"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 take the combat role as the person throwing the strike while R1 does not strike back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the combat action role and R1 does not"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain composed as an observer while R2 shows the active punching body configuration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 observes while R2 punches"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set inside a boxing gym with a chain-link cage background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing gym with chain-link cage background"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

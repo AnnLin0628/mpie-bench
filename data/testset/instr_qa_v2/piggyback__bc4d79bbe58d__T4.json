@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__bc4d79bbe58d__T4",
+  "instruction": "Candid outdoor full shot in profile on a sunny beach. On the right, the blonde woman in a yellow pineapple-print top and denim shorts (R1) stands leaning forward. She holds the hands of the toddler girl in a floral swimsuit (R2), lifting her slightly off the sand as the toddler leans back and laughs. Bright direct sunlight illuminates the scene with warm tones and blue ocean waves.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's hands and lifts R2 slightly off the sand",
+    "R1 supports R2 from the hands rather than being lifted by R2",
+    "R2 leans back while being lifted and held by R1",
+    "R1 stands leaning forward during the hand-holding lift",
+    "R2 is the toddler being lifted off the sand",
+    "The interaction takes place on a sunny beach with blue ocean waves"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's hands and lifting R2 slightly off the sand, rather than R2 lifting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts R2 by the hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight through their joined hands, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric support duty through hand contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning back and laughing while being lifted by R1, rather than R1 leaning back while being lifted by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lifted participant"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand leaning forward while holding both of R2's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's forward-leaning hand-holding role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

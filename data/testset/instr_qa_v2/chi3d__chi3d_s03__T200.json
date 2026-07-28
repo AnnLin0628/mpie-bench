@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T200",
+  "instruction": "A candid documentary wide shot of an indoor motion capture studio with a red carpet and white walls. On the left, the man in the dark polo shirt and blue shorts (R1) stands facing right, bracing himself. On the right, the woman in the white patterned t-shirt and blue jeans (R2) balances on her left leg, kicking her right leg forward towards his hip. The two interact as she executes the kick. The scene is brightly lit by overhead lights, revealing motion capture cameras and tripods in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 braces himself to receive or withstand R2's kick",
+    "R2 is the person executing the kick toward R1's hip",
+    "R2 balances on her left leg while kicking forward with her right leg",
+    "R1 stands facing R2 during the kicking interaction",
+    "indoor motion capture studio with cameras and tripods in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 bracing himself to receive or withstand R2's kick, rather than R2 bracing to receive a kick from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 braces himself to receive or withstand R2's kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one kicking her leg forward toward R1's hip, rather than R1 kicking toward R2's hip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person executing the kick toward R1's hip"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 balance on one leg while striking forward, while R1 remains the braced target of the motion?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on her left leg while kicking forward with her right leg"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing on her left leg and extending her right leg forward during the interaction with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on her left leg while kicking forward with her right leg"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

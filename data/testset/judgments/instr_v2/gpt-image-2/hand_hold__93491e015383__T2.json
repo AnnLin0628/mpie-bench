@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__93491e015383__T2",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.5588235294117647,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.25,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one walking while turning her head toward R2, rather than R2 being the one turning his head toward R1?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "R1 is not turning toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking down while holding hands with R1, rather than R1 being the one looking down?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R2 looks down, but R1 also looks down"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands as they walk together?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "their hands are connected"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking beside R2 while their hands remain connected?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "they walk side by side holding hands"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "hand_hold__93491e015383__T2",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 6.92,
+    "written_at": "2026-07-17T23:24:11",
+    "gen_relpath": "outputs/gpt-image-2/hand_hold__93491e015383__T2.png",
+    "qa_relpath": "instr_qa_v2/hand_hold__93491e015383__T2.json",
+    "n_questions": 4
+  }
+}

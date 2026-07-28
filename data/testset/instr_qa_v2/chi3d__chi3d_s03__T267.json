@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T267",
+  "instruction": "A candid eye-level wide shot of an indoor studio with a red carpet. On the left, the woman in the white t-shirt and blue jeans (R2) stands in profile facing left. Behind her on the right, the man in the black polo and blue shorts (R1) stands facing left, reaching forward to touch her back with his hand. The room has white walls and bright overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches forward to touch R2's back",
+    "R2 receives the back touch from R1",
+    "R1 is behind R2 while making hand contact with her back",
+    "R2 stands as the touched person while R1 performs the contact",
+    "indoor studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching forward to touch R2's back, rather than R2 reaching forward to touch R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the back-touch contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the hand touch on her back from R1, rather than R1 receiving a back touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the back-touch contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 behind R2 while making hand contact with her back, rather than R2 being behind R1 and making the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 contacts R2's back from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his hand to touch R2's back while R2 stands as the person being touched?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand-to-R2-back contact role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

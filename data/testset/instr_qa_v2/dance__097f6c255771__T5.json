@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__097f6c255771__T5",
+  "instruction": "Cinematic film still, full-body shot. In a bright indoor dance studio with large windows, the female ballet dancer in a black long-sleeved top and white tutu (R1) stands on pointe in the center foreground, facing forward with a neutral expression. Directly behind her, the male dancer in a black long-sleeved top and black tights (R2) supports her balance, holding her waist with both hands. The scene is illuminated by soft natural light from the background window, creating a cool color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's balance from behind while R1 is the supported dancer",
+    "R2 holds R1's waist with both hands rather than R1 holding R2's waist",
+    "R1 stands on pointe while R2 stabilizes her",
+    "R1 is in front of R2 in a ballet partnering pose",
+    "bright indoor dance studio with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 support R1's balance from behind, rather than R1 supporting R2's balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the supporter and R1 is the supported dancer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer standing on pointe while R2 steadies her, rather than R2 standing on pointe while R1 steadies him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the pointe pose while R2 provides support"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's waist with both hands, rather than R1 holding R2's waist with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's waist as the contact support"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned as the foreground ballet dancer being balanced by R2 behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in the front supported role and R2 is in the rear supporting role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

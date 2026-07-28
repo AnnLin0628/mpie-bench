@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T15",
+  "instruction": "Candid black and white medium full shot of a couple on a paved walkway. In the right foreground, the man in the long dark coat (R1) stands with his back to the camera, arms outstretched. In the left midground, the woman in the black cap and scarf (R2) smiles happily as she steps forward to embrace him under soft, overcast daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 steps forward toward R1 to embrace him while R1 receives her",
+    "R1 stands with his back to the camera and arms outstretched for R2",
+    "R2 is the smiling approaching partner rather than the waiting partner",
+    "R1 and R2 are positioned for an embrace with R1's arms open toward R2",
+    "The couple is on a paved walkway under soft overcast daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 stepping forward toward R1 to embrace him, rather than R1 stepping forward toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 steps forward toward R1 to embrace him while R1 receives her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing with his back to the camera and arms outstretched to receive R2, rather than R2 standing that way to receive R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands with his back to the camera and arms outstretched for R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the smiling approaching partner while R1 waits with open arms, rather than R1 being the smiling approaching partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the smiling approaching partner rather than the waiting partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold his arms out toward R2 in preparation for the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are positioned for an embrace with R1's arms open toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

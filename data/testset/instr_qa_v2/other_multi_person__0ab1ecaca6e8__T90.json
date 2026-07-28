@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T90",
+  "instruction": "A candid outdoor photograph capturing a moment in a sunny park. In the center foreground, a bald man in a dark blue t-shirt (R2) is seen from behind, leaning forward as if interacting with someone. To the left, a woman with dark hair in a dark blue t-shirt (R4) stands on the grass, facing right and smiling warmly at him. The background is filled with soft-focus green trees and grass, creating a pleasant park setting. The entire scene is illuminated by bright, natural daylight, emphasizing the casual and friendly atmosphere.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R2 is the person seen from behind leaning forward as if interacting with someone",
+    "R4 stands on the grass facing toward R2 and smiling warmly at him",
+    "R2 occupies the center foreground while R4 is positioned separately on the grass facing him",
+    "the interaction is set in a sunny outdoor park with green trees and grass"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person seen from behind and leaning forward as if interacting, rather than R4 being the person seen from behind and leaning forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric leaning-forward interaction role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person facing toward R2 and smiling warmly at him, rather than R2 being the one facing R4 and smiling warmly at her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the asymmetric facing-and-smiling response role toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 occupy the center foreground while leaning forward toward the interaction, rather than R4 occupying that leaning center-foreground role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is assigned the center-foreground leaning interaction position"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning forward as though engaging with someone while R4 looks toward him with a warm smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans into the interaction while R4 visually responds to him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

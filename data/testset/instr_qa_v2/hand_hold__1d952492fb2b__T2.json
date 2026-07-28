@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__1d952492fb2b__T2",
+  "instruction": "Candid cinematic medium full shot of a young girl in a light striped dress (R3) and a man in a light gray layered t-shirt (R1) walking hand-in-hand across a grassy field. The girl (R3) is on the left, looking and smiling at the man (R1) who is on the right walking forward. The girl's other hand is held by an off-screen person to the left. Warm golden hour sunlight illuminates the scene from behind, casting a soft lens flare.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the young girl whose two hands are held, one by R1 and the other by R2",
+    "R2 is the off-screen person holding R3's other hand",
+    "R1 is the visible man walking hand-in-hand with R3",
+    "R3 looks and smiles at R1 while walking with him",
+    "They are crossing a grassy field in warm golden-hour backlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the young girl whose two hands are held, one by R1 and the other by R2, rather than R1 being the person with both hands held?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the young girl whose two hands are held, one by R1 and the other by R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the visible man walking hand-in-hand with R3, rather than R2 being the visible man walking hand-in-hand with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the visible man walking hand-in-hand with R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R3 crossing a grassy field in warm golden-hour backlight?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "They are crossing a grassy field in warm golden-hour backlight"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": true
+  }
+}

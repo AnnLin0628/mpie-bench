@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__804dbe9bfa6d__T8",
+  "instruction": "Candid lifestyle photograph, medium shot. In front of a neutral beige wall, the bearded man in the white t-shirt (R2) on the left lifts the baby in the white bodysuit (R1) high in the air. The baby, wearing light pink pants, smiles down joyfully at the man, who looks up smiling. Soft, diffused light illuminates this playful moment.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lifts and supports R1 high in the air",
+    "R1 is the baby being carried above R2 rather than the lifter",
+    "R2 is below R1 and looks up while holding R1",
+    "R1 smiles down toward R2 during the lift",
+    "neutral beige wall setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lifting and supporting R1 high in the air, rather than R1 lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric lifting and support duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held aloft by R2, rather than R2 being held aloft by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the carried person in the lift"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned as the lower supporting holder while R1 is elevated above him, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports from below while R1 is raised above"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile down toward R2 while R2 looks up toward R1 during the lift?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "opposite gaze roles between lifted R1 and supporting R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 held high in the air as part of a playful lifting interaction with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration as the elevated carried person"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

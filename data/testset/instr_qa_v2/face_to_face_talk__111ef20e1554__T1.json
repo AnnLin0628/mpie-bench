@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__111ef20e1554__T1",
+  "instruction": "A candid cinematic medium shot captures an indoor office setting next to a large window. On the left, the woman in the white shirt and glasses (R1) stands facing right, holding an open notebook and gesturing with a pen as she speaks. On the right, the woman in the dark vest (R2) stands in profile facing left, holding a dark mug and listening attentively. The two women stand close together, engaged in a collaborative discussion over the notebook. Soft, natural daylight diffuses from the window, casting gentle shadows and highlighting the warm brick wall on the far left.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 speaks while gesturing with a pen, rather than R2 doing so",
+    "R2 listens attentively while holding a dark mug, rather than R1 doing so",
+    "R1 holds the open notebook that the discussion centers on",
+    "R1 and R2 face each other in a collaborative office discussion",
+    "open notebook and pen used by R1",
+    "dark mug held by R2",
+    "indoor office setting next to a large window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person speaking and gesturing with a pen, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 speaks while gesturing with a pen"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person listening attentively while holding a dark mug, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 listens attentively while holding a dark mug"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the open notebook that the discussion is focused on, rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the open notebook for the discussion"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

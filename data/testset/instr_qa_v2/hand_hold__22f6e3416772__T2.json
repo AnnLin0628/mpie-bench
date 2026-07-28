@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__22f6e3416772__T2",
+  "instruction": "Candid cinematic medium shot of two men walking on an outdoor path surrounded by dense green foliage. On the left, the man in the gray hoodie (R1) is shown from the chest up, turning his head to laugh and look at his companion. On the right, the bald man in the white shirt (R2), wearing sunglasses on his head, walks forward with a warm smile. The two walk closely side-by-side, sharing a friendly moment. Soft, natural daylight filters through the trees, creating a warm, relaxed atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 turns his head to laugh and look at R2 while they walk together",
+    "R2 walks forward with a warm smile while R1 turns toward him",
+    "R1 is the companion directing his gaze and laughter toward R2",
+    "R2 has sunglasses on his head",
+    "R1 and R2 walk closely side-by-side on an outdoor path",
+    "Dense green foliage surrounds the outdoor path"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one turning his head to laugh and look at R2, rather than R2 turning his head to laugh and look at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 turns his head to laugh and look at R2 while they walk together"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one walking forward with a warm smile while R1 turns toward him, rather than R1 walking forward while R2 turns toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks forward with a warm smile while R1 turns toward him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 continue walking forward with a warm smile while accompanying R1 closely side-by-side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks forward with a warm smile while accompanying R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

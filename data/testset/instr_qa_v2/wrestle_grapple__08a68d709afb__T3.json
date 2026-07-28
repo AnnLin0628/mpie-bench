@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T3",
+  "instruction": "Action photograph of two martial artists sparring in a bright room with white walls and a concrete floor. In the foreground, a bearded man with a headband (R6) in a black gi stands with his back partially to the camera in a fighting stance. Facing him in the background, a teenager with dark hair (R5) in a black gi and brown belt maintains a defensive pose with a slight smile. Natural light streams from a side window, casting soft shadows across the floor.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 is the foreground martial artist with his back partially to the camera while sparring R5",
+    "R5 is the background martial artist facing R6 in a defensive pose",
+    "R6 takes the forward fighting-stance role while R5 maintains the defensive role",
+    "R5 is the teenager with dark hair maintaining a defensive pose toward R6",
+    "R6 is the bearded man with a headband in the sparring exchange",
+    "The sparring takes place in a bright room with white walls and a concrete floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the martial artist in the foreground with his back partially to the camera while confronting R5, rather than R5 being the foreground person with his back partly turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the foreground sparring participant with his back partially to the camera"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the martial artist in the background maintaining a defensive pose toward R6, rather than R6 being the background defender?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the background martial artist facing R6 in a defensive pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R6 take the forward fighting-stance role while R5 holds the defensive pose, rather than those roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 takes the forward fighting-stance role while R5 maintains the defensive role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 standing in a fighting stance as he spars with R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 stands in a fighting stance with R5"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

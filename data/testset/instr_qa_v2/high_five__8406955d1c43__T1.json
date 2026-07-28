@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__8406955d1c43__T1",
+  "instruction": "Candid documentary photograph, medium shot. In a modern indoor lounge with light wood paneling, a group gathers around a wooden coffee table. The man in the patterned blue polo (R2) leans forward from the left, placing his hand onto a central hand stack. The woman in the black top (R3) sits in the right foreground with her back to the camera, extending her hand to join. In the center background, the man in the green t-shirt (R1) sits on a blue sofa watching them, while the man in the red plaid shirt (R4) leans in from the right background. Warm indoor lighting illuminates the scene, highlighting the collaborative hand stack over the table.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 leans forward and places his hand onto the central hand stack",
+    "R1 sits on the blue sofa watching rather than adding a hand to the stack",
+    "R3 sits in the foreground with her back to the camera and extends her hand to join the stack",
+    "R4 leans in from the background toward the group",
+    "the collaborative hand stack is over a wooden coffee table",
+    "the scene is a modern indoor lounge with light wood paneling"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person leaning forward and placing his hand onto the central hand stack, rather than R1 being the one who places his hand on the stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively adds his hand to the central hand stack while R1 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 sitting on the blue sofa watching the hand stack, rather than R2 sitting back and only watching?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the watcher while R2 is an active hand-stack participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person seated in the foreground with her back to the camera while extending her hand to join, rather than R4 being the seated foreground participant joining that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 extends a hand from the foreground to join the stack, unlike R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 lean in from the background toward the group while R2 and R3 are described as joining the central hand stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has a leaning-in background role while R2 and R3 participate in the hand stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

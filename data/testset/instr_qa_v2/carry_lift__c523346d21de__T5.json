@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__c523346d21de__T5",
+  "instruction": "A candid, warm-toned photographic portrait in a medium shot captures a festive nighttime setting decorated with hanging warm string lights. On the left, the man in the white shirt with pink lip prints (R2) stands facing forward, holding a bouquet of red and white roses with both hands while looking directly at the camera with a neutral expression. Beside him on the right, the woman in the striped tank top (R1) stands slightly behind, smiling warmly at the camera as she loops her arm through his. The background is softly blurred, emphasizing the couple. Warm, soft lighting from the overhead fairy lights illuminates them, casting a cozy and romantic glow over the entire scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 loops her arm through R2's arm while standing slightly behind him",
+    "R2 holds a bouquet with both hands while R1 links arms with him",
+    "R1 smiles warmly at the camera while linked to R2",
+    "R2 faces forward and looks directly at the camera with a neutral expression",
+    "R2 holds a bouquet of red and white roses",
+    "festive nighttime setting with hanging warm string lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looping her arm through R2's arm, rather than R2 looping his arm through R1's?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 loops her arm through R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the bouquet with both hands while R1 links her arm through him, rather than R1 holding the bouquet while R2 links arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds bouquet while R1 links arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face forward toward the camera while R1 remains linked to him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces camera while linked with R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet of red and white roses being held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "bouquet of red and white roses held by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

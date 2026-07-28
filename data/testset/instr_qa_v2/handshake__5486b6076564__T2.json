@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__5486b6076564__T2",
+  "instruction": "Candid corporate medium shot of a modern office meeting room. On the right, the man with a buzz cut (R2) in a dark pinstripe suit smiles as he shakes hands across the wooden table. In the center, the woman with light brown hair (R1) in a black blazer and white shirt sits smiling, holding a white mug and watching the interaction. On the left, a Black man in a dark suit is seen from behind, shaking hands with the man (R2). Soft, natural indoor lighting illuminates the scene against a neutral background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the handshake participant clasping hands with another man across the wooden table while R1 watches",
+    "R1 is the seated observer holding a white mug rather than the person engaged in the handshake",
+    "R2 smiles during the across-table handshake while R1 remains outside the hand contact",
+    "R1 sits at the meeting table watching R2's interaction",
+    "the handshake involving R2 occurs across a wooden table",
+    "R1 holds a white mug",
+    "the setting is a modern office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 smile during the across-table hand contact with the other man, while R1 remains outside that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in hand contact and R1 is not"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1's role to sit at the table and watch R2's interaction rather than directly making hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the seated observer of R2's interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a white mug while watching the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "white mug held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

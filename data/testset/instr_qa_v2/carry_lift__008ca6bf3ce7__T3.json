@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__008ca6bf3ce7__T3",
+  "instruction": "Candid outdoor photograph, full shot. In front of a white garage door. The man in the teal henley and ripped jeans (R2) stands and lifts the woman in the pink turtleneck and dark jeans (R1) completely off the ground, holding her in his arms. Bright daylight casts soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lifts R1 completely off the ground",
+    "R2 supports R1's weight in his arms",
+    "R1 is the carried person while R2 is the standing carrier",
+    "R2 remains standing during the lift",
+    "the scene is outdoors in front of a white garage door"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lifting R1 completely off the ground, rather than R1 lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lifts R1 completely off the ground"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight in his arms, rather than R1 supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's weight in his arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being carried off the ground while R2 is the person doing the carrying?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the carried person while R2 is the carrier"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand while holding R1 in his arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 remains standing during the lift"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned in R2's arms rather than standing independently on the ground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is held in R2's arms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T13",
+  "instruction": "An intimate, candid portrait photograph in a close-up shot captures a tender moment in a minimalist indoor studio with a plain light gray background. On the right, the curly blonde-haired man in a gray long-sleeved shirt (R1) leans down, wrapping his arm around the shoulder of the long-haired person in a green shirt (R2) on the left. The curly blonde-haired man (R1) gently kisses the forehead of the long-haired person (R2), who rests their head against his chest with eyes closed and a peaceful expression. The scene is illuminated by soft, diffused studio lighting, creating a warm, gentle atmosphere with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently kisses R2 on the forehead",
+    "R1 wraps his arm around R2's shoulder",
+    "R2 rests their head against R1's chest",
+    "R1 leans down toward R2 during the embrace",
+    "the scene is set in a minimalist indoor studio with a plain light gray background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently kissing R2 on the forehead, rather than R2 kissing R1 on the forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the forehead-kisser and R2 is the one being kissed"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping his arm around R2's shoulder, rather than R2 wrapping an arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the arm-around-shoulder contact role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting their head against R1's chest, rather than R1 resting his head against R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans their head against R1's chest"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean down toward R2 while making affectionate contact with them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans down toward R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep their head against R1's chest with eyes closed during the tender contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests peacefully against R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

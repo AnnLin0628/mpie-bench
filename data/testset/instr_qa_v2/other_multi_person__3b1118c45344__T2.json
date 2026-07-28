@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__3b1118c45344__T2",
+  "instruction": "A candid outdoor photograph, full shot at eye-level. In an outdoor grassy field with autumn trees in the background, the woman in the maroon patchwork dress (R2) on the left and the woman in the peach and blue patterned dress (R1) on the right face each other. Both are barefoot and dancing, extending their arms forward toward one another, almost touching hands. Warm natural daylight illuminates the scene with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman in the peach and blue patterned dress dancing toward R2",
+    "R2 is the woman in the maroon patchwork dress dancing toward R1",
+    "R1 and R2 face each other while extending their arms forward toward one another",
+    "R1 and R2 are barefoot while dancing",
+    "the scene is an outdoor grassy field with autumn trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in the peach and blue patterned dress extending her arms toward R2, rather than R2 being the woman in the peach and blue patterned dress extending toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the peach and blue patterned-dress dancer reaching toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the maroon patchwork dress extending her arms toward R1, rather than R1 being the woman in the maroon patchwork dress extending toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the maroon patchwork-dress dancer reaching toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 dancing barefoot while reaching toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is barefoot and dancing toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 dancing barefoot while reaching toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is barefoot and dancing toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

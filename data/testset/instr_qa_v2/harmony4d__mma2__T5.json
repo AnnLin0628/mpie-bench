@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma2__T5",
+  "instruction": "Candid full shot of an indoor martial arts gym with gray mats. On the right, the man in the blue sleeveless shirt (R1) leans back and delivers a right knee strike. On the left, the bearded man in the maroon t-shirt (R2) clinches the opponent's upper body. In the background, blurred gym members are visible. Bright overhead lighting illuminates the scene with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 delivers a right knee strike toward R2 rather than R2 delivering the knee strike",
+    "R2 clinches R1's upper body rather than R1 clinching R2's upper body",
+    "R1 leans back while striking as R2 maintains the clinch",
+    "R1 is the knee-striking fighter and R2 is the clinching opponent",
+    "gray martial arts mats are visible in the gym",
+    "the scene is an indoor martial arts gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 delivering a right knee strike toward R2, rather than R2 delivering the knee strike toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the knee striker while R2 is the opponent"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 clinching R1's upper body, rather than R1 clinching R2's upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the upper-body clinch on R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning back as he throws the knee strike while R2 holds the clinch, rather than R2 leaning back to throw the knee while R1 holds the clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back and strikes while R2 maintains clinching control"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the fighter with the raised right knee strike and R2 the fighter controlling the opponent's upper body in a clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the striking role and R2 has the clinching role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

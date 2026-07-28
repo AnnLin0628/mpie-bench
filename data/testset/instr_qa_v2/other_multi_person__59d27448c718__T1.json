@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__59d27448c718__T1",
+  "instruction": "Candid cinematic medium shot of an indoor party. On the left, the light-brown-haired man in a checkered shirt under a green t-shirt (R2) stands smiling, holding a red cup. On the right, the dark-haired man in a green t-shirt (R1) leans forward over a table of red cups, smiling. They stand side-by-side playing beer pong. Dim indoor lighting with blue and warm tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the participant leaning forward over the beer-pong table",
+    "R2 is the participant standing and holding a red cup",
+    "R1 and R2 are side-by-side playing beer pong with different postures",
+    "a table of red cups is used for the beer-pong game",
+    "R2 holds a red cup",
+    "the scene is an indoor party with dim blue and warm lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man leaning forward over the beer-pong table, rather than R2 being the one leaning over it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the participant leaning forward over the beer-pong table"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant holding a red cup while standing, rather than R1 being described as holding that cup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the participant standing and holding a red cup"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 play beer pong from a leaned-forward posture over the table while R2 stands nearby with a cup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are side-by-side playing beer pong with different postures"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a red cup during the party game?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 holds a red cup"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

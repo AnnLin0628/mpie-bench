@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__4fe6032f9795__T2",
+  "instruction": "A candid documentary photograph in a medium shot captures an indoor study room. On the left, the woman in the beige pantsuit (R2) stands upright in profile, smiling warmly. On the right, the man in the blue turtleneck (R1) stands nearly upright, facing her. They are engaged in a firm right-handed handshake over a wooden table in the foreground. The table holds a Scrabble board and several books. The man holds a smartphone in his left hand down by his side. Warm, soft indoor lighting casts gentle shadows, creating a cozy and professional atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 uses his right hand to clasp R2's right hand while holding a smartphone in his left hand",
+    "R2 is the smiling person standing upright in profile during the handshake contact",
+    "R1 faces R2 nearly upright during their right-handed handshake",
+    "The handshake occurs over a wooden table",
+    "R1 holds a smartphone down by his side",
+    "The table holds a Scrabble board and several books",
+    "The scene is an indoor study room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the smiling person standing upright in profile as she meets R1's right-handed clasp, rather than R1 being the smiling profile-standing participant in the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the profile-standing smiling participant in the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected by a firm right-handed clasp positioned over the wooden table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp right hands over the table"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a smartphone held in R1's left hand down by his side during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a smartphone in his left hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

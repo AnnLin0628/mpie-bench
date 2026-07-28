@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T15",
+  "instruction": "A clean studio photograph, full shot. In an indoor studio with a plain white background, four cheerleaders perform a stunt. The blonde flyer (R2) stands on top, raising her right arm high in a cheer pose while keeping her left hand on her hip, smiling forward. Supporting her are the curly-haired base on the left (R11) in profile facing right, the brown-haired base in the center (R10) facing forward, and the dark-haired base on the right (R13) in profile facing left. The bases hold the flyer's legs securely. Bright, even studio lighting illuminates the scene.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R11, R10, and R13 are bases supporting R2 from below",
+    "R2 is the flyer standing on top rather than supporting the bases",
+    "R11, R10, and R13 hold R2's legs securely",
+    "R2 raises her right arm high in a cheer pose with her left hand on her hip",
+    "R10 is a base facing forward while helping support R2",
+    "The scene is an indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the flyer standing on top while R11, R10, and R13 support her from below, rather than R2 supporting them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the flyer standing on top while the bases support her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R11, R10, and R13 hold R2's legs securely, rather than R2 holding their legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R11, R10, and R13 hold R2's legs"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R11, R10, and R13 acting as the bases who bear R2's weight, rather than R2 acting as the base for them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the bases bear the flyer's weight"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R10 one of the bases helping support R2 during the cheer stunt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R10 has a base support role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold a cheer pose by raising her right arm high while standing above R11, R10, and R13?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the elevated flyer pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

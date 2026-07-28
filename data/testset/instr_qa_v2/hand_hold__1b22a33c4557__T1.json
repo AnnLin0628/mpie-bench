@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__1b22a33c4557__T1",
+  "instruction": "A candid cinematic still, medium full shot at eye-level, capturing an elderly couple walking on an outdoor historic cobblestone street during the day. On the left, the elderly man in the beige coat (R1) walks forward with a warm smile, looking ahead. On the right, the elderly woman in the beige coat (R2) walks beside him, looking at him with a joyful smile while gesturing with her left hand. The woman (R2) has her right arm linked through the man's (R1) left arm. The background features blurred historic buildings under soft, natural daylight, creating a warm, neutral-toned atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's right arm is linked through R1's left arm",
+    "R2 gestures with her free left hand while linked to R1",
+    "R1 looks ahead while R2 looks at R1",
+    "R1 and R2 walk beside each other with linked arms",
+    "outdoor historic cobblestone street in daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's right arm linked through R1's left arm, rather than R1's right arm linked through R2's left arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right arm is linked through R1's left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one gesturing with her free left hand while her other arm is linked to R1, rather than R1 doing that while linked to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with her free left hand while linked to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look ahead as they walk while R2 looks toward R1, rather than R2 looking ahead while R1 looks toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks ahead while R2 looks at R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 serve as the arm partner whose left arm is linked by R2's right arm as they walk?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk beside each other with linked arms"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking on an outdoor historic cobblestone street during the day?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor historic cobblestone street in daylight"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

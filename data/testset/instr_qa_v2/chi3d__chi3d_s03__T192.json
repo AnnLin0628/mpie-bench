@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T192",
+  "instruction": "Candid documentary photograph from a wide, high angle in a motion capture lab with a red carpet and an office printer in the background. On the right, the man in the black t-shirt and blue shorts (R1), wearing a black skullcap, playfully lifts his right leg towards the woman in the white t-shirt with a red pattern and blue jeans (R2), who stands on the left facing him. The room is brightly lit by overhead lights, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 playfully lifts his right leg toward R2",
+    "R2 stands facing R1 as the recipient of R1's leg-lift gesture",
+    "R1 wears a black skullcap while performing the leg-lift action",
+    "an office printer is visible in the background",
+    "the scene is set in a motion capture lab with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person playfully lifting his right leg toward R2, rather than R2 lifting her leg toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the directed leg-lift action toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving or facing R1's lifted-leg gesture, rather than R1 receiving a lifted-leg gesture from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the target of R1's playful leg-lift gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 wearing a black skullcap while making the leg-lift gesture toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is identified in the action by the black skullcap"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

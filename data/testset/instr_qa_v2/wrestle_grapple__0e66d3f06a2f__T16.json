@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T16",
+  "instruction": "A candid martial arts photograph shows a full shot of two men on a black mat inside a studio with a textured brown wall. On the left, the man in the white gi (R1) is kneeling, leaning forward over his partner. On the right, the man in the gray gi (R2) kneels, tucking his head under the white gi's arm while gripping his sleeve. They are engaged in a close kneeling grapple, practicing transitions. Warm, soft indoor lighting casts gentle shadows on the wooden floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 kneels while leaning forward over R2 in the grapple",
+    "R2 tucks his head under R1's arm",
+    "R2 grips R1's sleeve during the kneeling grapple",
+    "R1 and R2 are both in a close kneeling grappling configuration",
+    "the grapple takes place on a black mat",
+    "the scene is inside a studio with a textured brown wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward over R2 in the kneeling grapple, rather than R2 leaning forward over R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is positioned over R2 while grappling"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 tuck his head under R1's arm, rather than R1 tucking his head under R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's head is tucked under R1's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gripping R1's sleeve, rather than R1 gripping R2's sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips R1's sleeve"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 engaged in a close kneeling grapple with R1 over R2 and R2 tucked under R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "close kneeling grapple with assigned R1/R2 body roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a black mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat used as the grappling surface"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

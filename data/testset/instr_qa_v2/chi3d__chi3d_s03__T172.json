@@ -1,0 +1,65 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T172",
+  "instruction": "Candid full shot from a slightly high angle in a motion capture studio with a red carpet. The man in the dark polo shirt and blue shorts (R1) stands on the left in profile, facing right. The woman in the white t-shirt and blue jeans (R2) stands on the right in profile, facing left. They stand close together, holding hands under even overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in a dark polo shirt and blue shorts holding hands with R2",
+    "R2 is the woman in a white t-shirt and blue jeans holding hands with R1",
+    "R1 and R2 face each other in profile while their hands are joined",
+    "The scene is a motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the dark polo shirt and blue shorts holding R2's hand, rather than R2 being the man in the dark polo shirt and blue shorts holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the male hand-holding participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the white t-shirt and blue jeans whose hand is held by R1, rather than R1 being the woman in the white t-shirt and blue jeans whose hand is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the female hand-holding participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together in profile while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while standing close in profile"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

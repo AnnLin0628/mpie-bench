@@ -1,0 +1,92 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T25",
+  "instruction": "Candid documentary photograph, full shot, eye-level. In a bright, minimalist indoor dance studio with white walls and a light gray floor, two girls practice stretches. In the foreground, the blonde girl in a beige long-sleeve top and matching shorts (R5) kneels on her left knee with her right leg extended forward. Behind her to the right, the light brown-haired girl in a beige crop top and shorts (R2) kneels with her right leg extended backward. Both wear white socks and look forward in profile. The scene is illuminated by bright, diffused natural light from background windows, creating a soft, neutral-toned atmosphere.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R5 is the stretcher kneeling on her left knee with her right leg extended forward",
+    "R2 is the stretcher kneeling with her right leg extended backward",
+    "R5 is in the foreground while R2 is behind her",
+    "R5 and R2 are practicing stretches",
+    "R5 and R2 look forward in profile",
+    "The setting is a bright minimalist indoor dance studio with white walls and a light gray floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the girl kneeling on her left knee with her right leg extended forward, rather than R2 being the one in that forward-leg kneeling stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the forward-leg kneeling stretch role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the girl kneeling with her right leg extended backward, rather than R5 being the one with the backward-extended right leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the backward-leg kneeling stretch role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 perform a kneeling stretch with her left knee down and her right leg extended forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 kneeling stretch body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 perform a kneeling stretch with her right leg extended backward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kneeling stretch body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R5 and R2 practicing stretches in a bright minimalist indoor dance studio with white walls and a light gray floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bright minimalist indoor dance studio setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

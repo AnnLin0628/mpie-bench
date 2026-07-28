@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T27",
+  "instruction": "Cinematic full shot of a boxing gym. On the left, the East Asian woman in the white sports bra (R2) sits on the edge of the boxing ring wearing black leggings and beige sneakers, looking away to the left with black boxing gloves on. On the right, the woman in the black and orange athletic outfit (R1) stands on the floor in white sneakers, looking down as she wraps her hands with a long black hand wrap. Cool overhead lighting casts soft shadows across the gym floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman standing on the gym floor and wrapping her hands with a long black hand wrap",
+    "R2 is the woman seated on the edge of the boxing ring wearing black boxing gloves",
+    "R1 is preparing her hands with wraps rather than already wearing boxing gloves like R2",
+    "R2 sits on the boxing ring edge while R1 stands on the floor",
+    "black boxing gloves are on R2",
+    "a long black hand wrap is used by R1",
+    "the setting is a boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the person wrapping her hands with a long black hand wrap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the one wrapping hands with the hand wrap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the person already wearing black boxing gloves while seated on the boxing ring edge?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the gloved seated boxer on the ring edge"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting on the edge of the boxing ring while R1 stands on the gym floor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 seated on ring edge and R1 standing on floor"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 looking down at her own hands as she wraps them, while R2 looks away with gloves on?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 focuses on wrapping hands while R2 looks away wearing gloves"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

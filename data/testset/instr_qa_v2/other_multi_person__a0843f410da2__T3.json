@@ -1,0 +1,82 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__a0843f410da2__T3",
+  "instruction": "A candid documentary medium shot of a group of friends on a rooftop terrace. On the far left, a man with a hair bun (R5) in a black shirt stands next to a Black man with glasses (R6) in a white t-shirt who has his arm around a blonde woman (R1) in a colorful striped dress. In the center, a man in a white cap (R2) holds a cupcake with a lit candle and reaches forward. To his right, a woman in a black sleeveless top (R4) and a dark-haired woman (R3) in a striped top laugh and cheer. On the far right, a woman with a curly afro (R7) in a striped dress smiles. The scene is lit by natural daylight.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R6 has his arm around R1",
+    "R1 is the person being held close by R6's arm",
+    "R2 holds a cupcake with a lit candle and reaches forward",
+    "R3 and R4 laugh and cheer while R2 presents the cupcake",
+    "cupcake with a lit candle",
+    "rooftop terrace setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the one with his arm around R1, rather than R1 being the one with her arm around R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 has his arm around R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held close by R6's arm, rather than R6 being held close by R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being held close by R6's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the cupcake with a lit candle and reaching forward, rather than R3 or R4 holding the cupcake for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a cupcake with a lit candle and reaches forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R4 laughing and cheering while R2 presents the cupcake?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 laugh and cheer while R2 presents the cupcake"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

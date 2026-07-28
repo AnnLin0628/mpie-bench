@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1b9bed0caf72__T2",
+  "instruction": "Candid wedding photograph, medium close-up at eye-level. Outdoors on a daytime street with a blurred white van and motorbikes in the background. The bride in the white wedding dress (R1) stands on the left, holding a bouquet of white tulips with her head tilted down, eyes closed, and a soft smile. The groom in the black suit (R2) stands on the right, leaning in to gently kiss her forehead. Her arm remains linked through his as they share this intimate moment. The lighting is soft and natural, casting a warm glow over the couple.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans in to kiss R1 on the forehead",
+    "R1 receives the forehead kiss with her head tilted down and eyes closed",
+    "R1's arm is linked through R2's arm",
+    "R1 holds a bouquet of white tulips",
+    "the couple is outdoors on a daytime street with a blurred white van and motorbikes in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning in to gently kiss R1's forehead, rather than R1 leaning in to kiss R2's forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the forehead-kisser and R1 is the one being kissed"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 receiving the forehead kiss with her head tilted down and eyes closed, rather than R2 receiving a forehead kiss from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's gentle forehead kiss"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's arm linked through R2's arm, rather than R2's arm being linked through R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 links her arm through R2's arm"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean toward R1 while R1 keeps her head lowered during their intimate contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans in toward R1 while R1 lowers her head"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a bouquet of white tulips?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds the bouquet of white tulips"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

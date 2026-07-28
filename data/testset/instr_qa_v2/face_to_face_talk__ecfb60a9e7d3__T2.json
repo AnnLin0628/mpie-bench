@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ecfb60a9e7d3__T2",
+  "instruction": "Candid documentary photograph, medium shot. In a bright indoor office with white walls, the woman in the black sweater (R1) stands on the left in profile, gesturing with her hands extended forward and fingers spread. The man in the blue suit (R2) stands on the right, facing her with a smile. The woman and the man stand facing each other, engaged in a lively conversation. Soft natural light illuminates the scene, creating a clean, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the gesturing speaker with hands extended forward and fingers spread, rather than R2",
+    "R2 faces R1 with a smile while R1 gestures during the conversation",
+    "R1 and R2 are engaged face-to-face in a lively conversation with distinct speaker/listener visual roles",
+    "R1 stands in profile while gesturing toward R2",
+    "bright indoor office with white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gesturing with hands extended forward and fingers spread, rather than R2 doing that gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the gesturing speaker with hands extended forward and fingers spread, rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person facing R1 with a smile while R1 gestures, rather than R1 being the smiling listener facing a gesturing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 with a smile while R1 gestures during the conversation"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the more visibly expressive speaking role with forward hand gestures, while R2 responds by facing her and smiling?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have asymmetric visual roles in the conversation"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown in profile while gesturing toward R2 during their conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile while gesturing toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

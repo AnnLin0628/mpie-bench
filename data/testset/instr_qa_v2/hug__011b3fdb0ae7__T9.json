@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__011b3fdb0ae7__T9",
+  "instruction": "Candid lifestyle photograph, medium shot, eye-level. In a bright, modern indoor living room, a woman in a red shirt (R1) sits in the center-left, facing left and looking down at a young boy in a gray sweater (R2). The woman in the red shirt (R1) holds the young boy (R2) gently by his waist as he stands on the left in profile. On the right, a woman in a pink fuzzy sweater (R3) stands with her back to the camera. The scene is illuminated by bright, natural light with warm tones and soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is sitting while gently holding R2 by the waist",
+    "R2 is standing in profile while being held by R1 at the waist",
+    "R1 looks down at R2 during the waist-holding interaction",
+    "R3 stands with her back to the camera, separate from the R1-R2 contact",
+    "The scene is in a bright, modern indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently holding R2 by the waist, rather than R2 holding R1 by the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 by the waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person supporting or steadying R2 at his waist, while R2 is the standing person being held?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 seated and holding standing R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down at R2 while holding him, rather than R2 looking down at and holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at R2 during contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in profile while R1 holds him gently by the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands while being held by R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 standing with her back to the camera while R1 and R2 are the pair engaged in the waist-holding contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is separate from the R1-R2 contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

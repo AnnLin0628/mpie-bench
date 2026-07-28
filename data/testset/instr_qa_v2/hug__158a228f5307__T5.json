@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__158a228f5307__T5",
+  "instruction": "Candid celebratory medium shot photograph of a cozy indoor room with wooden paneling and a round mirror. In the center, the grey-haired woman in the light grey dress (R1) laughs joyfully as she is embraced from the right by the short-haired woman in the white blouse (R2), who leans in with a warm smile. On the left, the blonde woman in the orange patterned dress (R3) stands facing right, smiling happily while gently holding the grey-haired woman's (R1) arm. In the foreground, a festive table is decorated with a birthday cake, cupcakes, and champagne glasses. The scene is illuminated by warm, soft indoor lighting, creating a golden, joyful atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 embraces R1 while R1 is the person being embraced",
+    "R3 gently holds R1's arm while R1 is the person whose arm is held",
+    "R2 leans in toward R1 with a warm smile as R1 laughs joyfully",
+    "R1 is the central celebrant receiving contact from both R2 and R3",
+    "festive table with a birthday cake, cupcakes, and champagne glasses",
+    "cozy indoor room with wooden paneling and a round mirror"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one embracing R1 while R1 is being embraced, rather than R1 embracing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 while R1 is the person being embraced"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gently holding R1's arm while R1 is the person whose arm is held, rather than R1 holding R3's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 gently holds R1's arm while R1 is the person whose arm is held"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning in toward R1 with a warm smile while R1 laughs as the recipient of R2's embrace, rather than R1 leaning in to embrace R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans in toward R1 with a warm smile as R1 laughs joyfully"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the central person receiving contact from both R2's embrace and R3's arm hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the central celebrant receiving contact from both R2 and R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

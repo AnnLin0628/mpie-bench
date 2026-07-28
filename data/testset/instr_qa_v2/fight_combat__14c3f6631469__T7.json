@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T7",
+  "instruction": "Candid action photograph, medium shot. In an indoor boxing gym with a white brick wall, the woman in the blue zip-up jacket (R2) stands on the right, striking a red hanging punching bag with her left pink glove. On the left, the man in the gray t-shirt (R1) stands with his fists raised, observing her technique. The scene is softly lit by indoor lights, highlighting their focused training.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active boxer striking the punching bag while R1 observes her technique",
+    "R1 is the observing training partner with raised fists rather than the person hitting the bag",
+    "R2's left gloved hand contacts the punching bag while R1's fists do not",
+    "R1 maintains a raised-fist guard stance as he watches R2 train",
+    "a red hanging punching bag is the object being struck",
+    "R2 uses a pink boxing glove to hit the bag",
+    "the training takes place in an indoor boxing gym with a white brick wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person striking the red hanging punching bag while R1 observes her technique, rather than R1 striking the bag while R2 observes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active boxer striking the bag while R1 observes"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the observing training partner with his fists raised while R2 is the active puncher, rather than R2 observing while R1 punches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 observes with raised fists while R2 performs the punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's left gloved hand make contact with the punching bag while R1's raised fists do not hit the bag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's glove contacts the bag and R1's fists do not"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in a raised-fist guard stance while watching R2's bag work?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a guard-like observing role during R2's training"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 using her left hand to punch the hanging bag during the training action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 punches the bag with her left hand"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red hanging punching bag being struck in the scene?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red hanging punching bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

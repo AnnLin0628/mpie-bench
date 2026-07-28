@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T18",
+  "instruction": "Cinematic medium close-up of a bright ballet studio. In the foreground, the blonde ballerina (R2) in a white leotard sits with her head tilted down, looking contemplative. In the background, the dark-haired ballerina (R1) in a white leotard stands with arms raised overhead in an expressive ballet pose, softly out of focus. Soft natural light streams from the side, illuminating the scene in clean, bright tones with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands with arms raised overhead in an expressive ballet pose rather than R2",
+    "R2 sits with head tilted down looking contemplative rather than R1",
+    "R2 is seated in the foreground while R1 stands in the background",
+    "R1 is softly out of focus behind R2",
+    "bright ballet studio with soft natural side light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina standing with arms raised overhead in an expressive ballet pose, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the raised-arm ballet pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina sitting with her head tilted down contemplatively, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the seated contemplative ballerina"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated in the foreground while R1 stands in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 foreground seated role and R1 background standing role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold the active expressive ballet pose behind R2 while R2 remains seated and contemplative?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 poses actively while R2 sits contemplatively"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

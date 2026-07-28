@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__9b786af408f8__T2",
+  "instruction": "Candid documentary photograph from a high-angle overhead view of an office meeting room. Around a wooden table, the team continues their hand-stack gesture. On the left, the man with wavy grey hair (R1) in a brown suit leans over the table. At the top-center, the bald Black man (R3) in a white shirt and black tie looks down at the hands. On the top-right, the older Black man (R4) in a dark suit and red tie smiles. On the right, the woman with curly black hair (R2) in a black top leans forward. In the foreground, a bystander with short white hair in a grey jacket sits with her back to the camera, her hand in the center. Bright, natural indoor lighting illuminates the scene.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 leans over the table into the central hand-stack gesture rather than R3 doing that leaning role",
+    "R3 looks down at the stacked hands rather than R1 being the one described as looking down",
+    "R2 leans forward toward the hand-stack rather than R4 being described as the forward-leaning participant",
+    "R4 smiles while positioned around the hand-stack, distinct from R2's forward-leaning role",
+    "the team performs a hand-stack gesture around a wooden table",
+    "the scene is an office meeting room viewed from a high overhead angle"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning over the table toward the central hand-stack, rather than R3 being described as the one leaning over the table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans over the table into the hand-stack rather than R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person looking down at the stacked hands, rather than R1 being described as the one looking down at them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 looks down at the hands rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person leaning forward toward the hand-stack, rather than R4 being described as the forward-leaning participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward rather than R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 smile while positioned around the hand-stack, while R2 has the distinct role of leaning forward toward it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 smiles around the hand-stack while R2 leans forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

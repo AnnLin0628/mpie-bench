@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T51",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and an office printer in the background. On the right, the woman in the patterned white t-shirt and blue jeans (R2) stands facing left, extending her right arm to touch the chest of the man in the dark polo shirt and blue shorts (R1), who stands on the left facing her. Bright overhead lighting illuminates the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's chest",
+    "R1 receives the chest touch from R2",
+    "R2's right arm is the active contacting limb",
+    "R1 and R2 stand facing each other during the contact",
+    "indoor motion capture studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending her arm to touch R1's chest, rather than R1 extending his arm to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively touches R1's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 receive the chest touch from R2, rather than R2 receiving a chest touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being touched on the chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's right arm the active contacting arm reaching toward R1, rather than R1's arm reaching toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right arm performs the contact action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing face-to-face while R2 touches R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other during the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

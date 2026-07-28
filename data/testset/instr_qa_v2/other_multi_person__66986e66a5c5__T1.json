@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__66986e66a5c5__T1",
+  "instruction": "A candid action photograph, full shot at eye-level, captures an outdoor concrete lot on a sunny day. On the left, the man in the beige striped shirt (R2) crouches low on one roller skate, extending his other leg forward. On the right, the man in the white t-shirt (R1) performs a matching low crouch on one yellow roller skate. The man in the beige striped shirt and the man in the white t-shirt hold hands high in the air, maintaining balance during their synchronized stunt. The background features distant green trees under a clear sky. Bright, direct daylight casts soft shadows on the ground.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 crouches low on one roller skate with his other leg extended forward while R1 performs a matching low crouch on one yellow roller skate",
+    "R1 is the skater specifically described as using one yellow roller skate during the matching low crouch",
+    "R1 and R2 hold hands high in the air to maintain balance during their synchronized stunt",
+    "R2 remains in a low crouch on one roller skate while connected by the raised handhold to R1",
+    "roller skates are used as contact-relevant stunt objects",
+    "the scene is an outdoor concrete lot in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the skater crouching low on one roller skate with his other leg extended forward while R1 performs the matching low crouch, rather than R1 being the one described with the extended leg forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extended-leg low crouch role versus R1 matching crouch role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant specifically described as performing the matching low crouch on one yellow roller skate, rather than R2 being the yellow-skate matching-crouch participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 yellow-roller-skate matching crouch duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend his free leg forward during the low roller-skating stunt while R1 is described as matching the crouch on the yellow skate, rather than those body configurations being assigned the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric crouch-and-leg-extension configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding their hands high in the air to help maintain balance during the synchronized roller-skating stunt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "raised handhold for balance between R1 and R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in a low crouch on one roller skate while staying connected to R1 through the raised handhold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 crouched skating role connected to R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

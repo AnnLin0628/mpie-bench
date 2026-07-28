@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__390e95eaa0d7__T5",
+  "instruction": "A cinematic still, medium shot of a dimly lit indoor room with teal curtains. On the left, the woman with long twist braids (R2) wearing a black top and jeans sits on the lap of the shirtless man (R1) who is on the right. She cradles his head with her left hand, looking down at him with a warm smile. The shirtless man looks up at her, smiling widely. Warm orange light illuminates their skin from the side, contrasting with the cool teal background lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 sits on R1's lap while R1 supports her from below",
+    "R2 cradles R1's head with her left hand",
+    "R2 looks down at R1 while R1 looks up at her",
+    "R1 is seated beneath R2 in the lap-sitting contact",
+    "dimly lit indoor room with teal curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 sitting on R1's lap rather than R1 sitting on R2's lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits on R1's lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 from below with his lap rather than R2 supporting R1 on her lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's seated weight from below"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 cradling R1's head with her hand rather than R1 cradling R2's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 cradles R1's head"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated beneath R2 while R2 is positioned on his lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 beneath R2 in lap-sitting configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look down at R1 while R1 looks up at R2 during their close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric gaze direction between R2 and R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

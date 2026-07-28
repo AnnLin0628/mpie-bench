@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T12",
+  "instruction": "Candid medium shot of a couple posing on an outdoor pier. The woman with buzzed hair (R1) in a beige sports bra stands on the left, and the bearded man (R2) in a white t-shirt stands on the right with his arm around her shoulder. Both look directly at the camera with gentle smiles. A large bridge is visible in the soft-focus background under an overcast sky.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places his arm around R1's shoulder",
+    "R1 is the person whose shoulder is encircled by R2's arm",
+    "R2 maintains shoulder contact with R1 while they pose together",
+    "R1 stands as the partner being held at the shoulder by R2",
+    "the couple is posing on an outdoor pier"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one placing an arm around R1's shoulder, rather than R1 placing an arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places his arm around R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is encircled by R2's arm, rather than R2 being encircled by R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose shoulder is encircled by R2's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 maintain physical contact with R1 by resting his arm around her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 maintains shoulder contact with R1 while they pose together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 posed as the partner being held at the shoulder by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands as the partner being held at the shoulder by R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the couple posing on an outdoor pier?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the couple is posing on an outdoor pier"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

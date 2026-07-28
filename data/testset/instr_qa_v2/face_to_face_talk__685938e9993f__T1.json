@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__685938e9993f__T1",
+  "instruction": "A candid lifestyle photograph in a medium full shot captures a bright indoor dining room with wooden floors and a large potted plant. The man in the white t-shirt (R1) sits on a white chair on the left, facing right and smiling while holding a slice of pizza on a plate. Opposite him, the blonde woman in the olive green t-shirt (R2) sits on the right, facing left and smiling as she holds her pizza slice. They sit facing each other at a light wood dining table, sharing a pizza from an open cardboard box placed between them. The scene is illuminated by bright, natural side lighting, creating a warm, casual atmosphere with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the diner holding a slice of pizza on a plate",
+    "R2 is the diner opposite R1 holding her own pizza slice",
+    "R1 and R2 sit facing each other at a dining table",
+    "an open cardboard pizza box is placed between R1 and R2",
+    "both diners are sharing pizza at the table",
+    "the setting is a bright indoor dining room with wooden floors and a large potted plant"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding a slice of pizza on a plate, rather than R2 being the plate-holding diner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the plate-holding pizza role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting opposite R1 while holding her own pizza slice, rather than R1 being described as the opposite seated blonde diner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the opposite seated diner holding her pizza slice"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile while holding his pizza on a plate as R2 smiles back with her own pizza slice?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct pizza-holding roles while smiling at each other"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there an open cardboard pizza box placed between R1 and R2 on the dining table?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "open cardboard pizza box between the diners"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a plate with a slice of pizza on it?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "plate with pizza slice held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

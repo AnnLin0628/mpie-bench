@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__111ef20e1554__T2",
+  "instruction": "A candid cinematic medium shot captures an indoor office setting next to a large window. On the left, the woman in the white shirt and glasses (R1) stands facing right, looking down intently at an open notebook held in both hands. On the right, the woman in the dark vest (R2) stands in profile facing left, holding a dark mug and listening. The two women stand close together, sharing a quiet moment of focus over the notebook. Soft, natural daylight diffuses from the window, casting gentle shadows and highlighting the warm brick wall on the far left.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds an open notebook in both hands and looks down at it",
+    "R2 holds a dark mug while listening to R1",
+    "R1 is the notebook-focused participant rather than R2",
+    "R2 is the mug-holding listener rather than R1",
+    "the open notebook is a visible shared-focus object",
+    "the dark mug is visible in R2's hand",
+    "the setting is an indoor office next to a large window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the open notebook in both hands and looking down at it, rather than R2 holding and reading the notebook?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the notebook-focused participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the dark mug and listening while R1 focuses on the notebook, rather than R1 being the mug-holding listener?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the mug-holding listener"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand in profile facing R1 and appear to listen rather than read from the notebook herself?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 as the listener"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

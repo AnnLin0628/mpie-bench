@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__601fd93fbbee__T9",
+  "instruction": "A candid action photograph with a low-angle medium full shot captures a sunny outdoor concrete pier with hills in the background. In the foreground right, the woman with light brown hair in a half-up bun (R6), wearing a striped mesh crop top and ripped jeans, is in a low squatting dance pose with her arm extended, smiling at the camera. In the background left, the woman with curly dark hair (R5), wearing a black mesh top and tan leggings, squats playfully with a puckered expression and a raised hand. The two women perform a coordinated, energetic dance routine together. Bright, direct sunlight illuminates the scene, casting soft shadows and highlighting the warm, natural colors.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 is in a low squatting dance pose with an arm extended and smiling at the camera",
+    "R5 squats playfully with a puckered expression and a raised hand",
+    "R5 and R6 perform a coordinated energetic dance routine together",
+    "the scene is a sunny outdoor concrete pier with hills in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the dancer in a low squatting pose with an arm extended and a smile toward the camera, rather than R5 being the one in that specific pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 has the low squatting extended-arm smiling dance pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the dancer squatting playfully with a puckered expression and a raised hand, rather than R6 being the one doing that specific gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the playful squat, puckered expression, and raised-hand gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R6 participate in the coordinated dance routine while holding a low squatting pose with one arm extended?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6's dance role and body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 participate in the coordinated dance routine while squatting playfully with a raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's dance role and body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

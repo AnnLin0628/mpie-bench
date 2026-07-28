@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T21",
+  "instruction": "A cinematic wide shot of a minimalist dance studio with a dark wall and wooden floor. In the foreground center-left, the bearded man in the brown shirt (R1) kneels on all fours with his head bowed. In the center, the woman in the yellow shirt (R2) performs a headstand, her legs split wide in the air. On the far left, the clean-shaven man in the brown shirt (R3) is also kneeling on all fours, while on the far right, the woman in the yellow shirt with a ponytail (R4) holds a back-bending headstand. In the background, two other dancers in matching attire kneel in similar poses. A warm spotlight from the right casts a bright flare across the moody, low-key scene.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 kneels on all fours with his head bowed while R2 performs a split-leg headstand",
+    "R3 kneels on all fours while R4 holds a back-bending headstand",
+    "R2 is the split-leg headstand dancer, not R1",
+    "R1's role is an all-fours kneeling pose with head bowed",
+    "R4's role is a back-bending headstand",
+    "the dancers are on a wooden dance studio floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kneeling on all fours with his head bowed while R2 performs a headstand with her legs split wide, rather than R2 kneeling on all fours and R1 doing the split-leg headstand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels on all fours while R2 performs the split-leg headstand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 holding a back-bending headstand while R3 is kneeling on all fours, rather than R3 holding the back-bending headstand and R4 kneeling on all fours?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 performs the back-bending headstand while R3 kneels on all fours"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer balancing upside down in the wide split-leg headstand, rather than R1 being the one in that inverted split-leg pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2, not R1, is in the split-leg headstand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have the role of kneeling on all fours with his head bowed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's all-fours kneeling pose with head bowed"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have the role of holding a back-bending headstand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's back-bending headstand pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

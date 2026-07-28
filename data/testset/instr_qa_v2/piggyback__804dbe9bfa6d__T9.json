@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__804dbe9bfa6d__T9",
+  "instruction": "A candid family photograph in a medium eye-level shot. In an indoor room with a plain beige wall, the bearded man in a white t-shirt (R2) stands on the left in profile, smiling warmly. He holds the baby in a white bodysuit and pink pants (R1) aloft in the air on the right. The baby (R1) looks down towards the man. The man (R2) supports the baby's torso securely with both hands. Soft, natural indoor light fills the space, creating a warm, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1 aloft in the air",
+    "R2 supports R1's torso securely with both hands",
+    "R1 is the baby being carried while R2 is the adult doing the lifting",
+    "R1 looks down toward R2 while being held",
+    "the interaction occurs indoors against a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1 aloft in the air, rather than R1 holding R2 aloft?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lifts R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 support R1's torso securely with both hands, rather than R1 supporting R2's torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's torso"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the baby being carried above by R2, rather than R2 being the one carried above by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is carried while R2 carries"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the bearded man standing and smiling while holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's standing holder role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

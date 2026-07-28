@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__0e515a665e40__T3",
+  "instruction": "Candid documentary photograph, medium close-up shot. Indoors in a bright office during the day, the bearded man in the striped shirt (R1) sits on the left side of the frame, looking down thoughtfully with a neutral expression. To his right, the woman in the beige collared shirt (R2) sits looking down and to the left towards the foreground. An out-of-focus hand holding a thin wooden stick is visible in the lower center foreground, capturing their gaze. Soft, natural light streams from a window in the background, illuminating the scene with neutral colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the bearded man looking down thoughtfully, rather than R2",
+    "R2 is the woman looking down and to the left toward the foreground, rather than R1",
+    "R1 and R2 are both seated and directing attention downward toward the foreground",
+    "an out-of-focus foreground hand holds a thin wooden stick",
+    "soft natural light comes from a background window in a bright office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the bearded man looking down thoughtfully, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bearded man looking down thoughtfully"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman looking down and to the left toward the foreground, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks down and to the left toward the foreground"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both seated while directing their attention downward toward the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated and looking downward toward the foreground"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there an out-of-focus hand holding a thin wooden stick in the lower foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "foreground hand holds a thin wooden stick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

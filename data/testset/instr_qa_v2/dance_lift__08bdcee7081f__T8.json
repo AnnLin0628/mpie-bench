@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__08bdcee7081f__T8",
+  "instruction": "Candid action photograph, medium shot from a low angle. Outdoors on a concrete ledge under a blue sky with fluffy clouds, the man in a black t-shirt and blue jeans (R2) lies on his back, legs extended upward. He supports the woman in a black crop top and denim shorts (R1) on his feet at her hips. The woman (R1) balances horizontally in the air, wearing black socks, with her arms swept back. The man's (R2) arms rest flat on the ledge. Bright natural sunlight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's weight from below using his feet at her hips",
+    "R1 balances horizontally in the air above R2 rather than supporting him",
+    "R2 lies on his back with legs extended upward as the base of the lift",
+    "R1 is the lifted flyer with arms swept back while supported by R2",
+    "the interaction occurs on an outdoor concrete ledge under a blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight from below with his feet at her hips, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's weight from below using his feet at her hips"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing horizontally in the air above R2, rather than R2 balancing horizontally above R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances horizontally in the air above R2 rather than supporting him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's feet the contact point lifting R1 at her hips, rather than R1's feet lifting R2 at his hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's feet contact R1's hips to perform the lift"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lie on his back with his legs extended upward as the base for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on his back with legs extended upward as the base of the lift"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the lifted person with her arms swept back while being supported in the air by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the lifted flyer with arms swept back while supported by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T15",
+  "instruction": "Action-oriented candid photograph, medium shot with motion blur. In an indoor boxing gym, the woman in the blue jacket and dark shorts (R2) stands in the foreground, wearing pink boxing gloves and punching a red heavy bag with determination. Behind her, the man in the gray t-shirt and black shorts (R1) stands in the background, watching her train attentively. The camera captures the dynamic movement of her punch. Bright indoor lighting highlights the action, casting soft shadows with natural colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active boxer punching the red heavy bag while R1 watches",
+    "R1 is the attentive observer behind R2 rather than the striker",
+    "R2 wears boxing gloves to deliver the punch, not R1",
+    "R2 trains in the foreground while R1 watches from the background",
+    "a red heavy bag is being struck",
+    "pink boxing gloves are worn by R2",
+    "the scene is an indoor boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person punching the red heavy bag while R1 watches, rather than R1 punching while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active boxer punching the red heavy bag while R1 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 serve as the attentive observer behind R2 as R2 trains, rather than R2 observing R1 train?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the attentive observer behind R2 rather than the striker"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wearing boxing gloves to deliver the strike to the bag, rather than R1 being the gloved striker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wears boxing gloves to deliver the punch, not R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 actively training in the foreground while R1 remains in the background watching her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 trains in the foreground while R1 watches from the background"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red heavy bag being punched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a red heavy bag is being struck"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

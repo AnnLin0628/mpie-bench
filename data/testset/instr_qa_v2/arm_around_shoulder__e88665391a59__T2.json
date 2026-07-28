@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__e88665391a59__T2",
+  "instruction": "Candid outdoor photograph, medium full shot. On an outdoor sports court next to a green metal fence, two girls pose together in soft daylight. The girl in the patterned bandana and plaid shirt (R2) stands on the left, leaning against a green post and looking up and to the left. The girl in the pink bucket hat and pink hoodie (R1) stands on the right, leaning her right arm on the shoulder of the girl in the bandana (R2) while looking directly at the camera. The background is softly blurred with natural green tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests her right arm on R2's shoulder",
+    "R2 is the person whose shoulder receives R1's arm contact",
+    "R1 stands beside R2 while using R2's shoulder as an armrest",
+    "R1 looks directly at the camera while R2 looks up and to the left",
+    "R2 leans against a green post",
+    "outdoor sports court next to a green metal fence"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting her right arm on R2's shoulder, rather than R2 resting her arm on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her right arm on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the girl whose shoulder is being used by R1 as an armrest, rather than R1's shoulder being used by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose shoulder receives R1's arm contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand beside R2 while placing her right arm onto R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands beside R2 while using R2's shoulder as an armrest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

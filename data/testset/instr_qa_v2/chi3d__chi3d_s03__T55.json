@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T55",
+  "instruction": "Candid documentary wide shot of an indoor motion capture studio featuring a red carpet, white walls, and a printer in the background. On the right, the man in the dark polo shirt and blue shorts (R1) stands facing left, reaching his left hand to touch the right arm of the woman in the white t-shirt and blue jeans (R2). The woman (R2) stands on the left side of the frame, facing right and looking at him. The room is brightly lit by overhead lights, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches his left hand to touch R2's right arm",
+    "R2 is the person receiving the arm touch from R1",
+    "R1 stands facing R2 while making the contact",
+    "R2 stands facing and looking at R1 during the contact",
+    "indoor motion capture studio with red carpet, white walls, and a printer in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person reaching his hand to touch R2's arm, rather than R2 reaching to touch R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the arm-touch contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose right arm is being touched by R1, rather than R1 being the one whose arm is touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the arm touch from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his left hand to make contact with R2's right arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's left hand contacts R2's right arm"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face and look toward R1 while R1 touches her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attends to R1 during the arm-touch interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

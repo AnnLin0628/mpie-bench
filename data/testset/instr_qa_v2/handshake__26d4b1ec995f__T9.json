@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__26d4b1ec995f__T9",
+  "instruction": "Cinematic film still, medium shot, eye-level side profile view. Inside a modern office next to a large window overlooking a city street, the man in the grey patterned blazer (R2) stands on the left, facing right, shaking hands with the man in the light blue sweater (R1), who stands on the right facing left. They clasp right hands in a firm handshake. The man in the light blue sweater (R1) keeps his left hand in his pants pocket. Soft, cool daylight from the window illuminates the scene with an overcast, professional mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the handshake participant whose free left hand remains in his pants pocket",
+    "R2 clasps R1's right hand while R1's other hand stays pocketed",
+    "R1 and R2 clasp right hand to right hand",
+    "R1's pants pocket contains his free left hand during the contact",
+    "The interaction takes place inside a modern office next to a large window overlooking a city street"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the participant whose free left hand remains in his pants pocket while the right hands are clasped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the handshake participant whose free left hand remains in his pants pocket"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 clasping R1's right hand while R1 is the one with his other hand pocketed, rather than R2 being the one with the pocketed free hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 clasps R1's right hand while R1's other hand stays pocketed"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his right hand to clasp R2's right hand during their contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp right hand to right hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1's left hand kept out of the hand-to-hand contact while R1's right hand is the one clasping R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's non-contact left hand stays separate from the clasp"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

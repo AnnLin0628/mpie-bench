@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T30",
+  "instruction": "Cinematic action still, medium shot from a low angle in a boxing ring. On the left, the trainer in the black and orange sports top (R1) stands in profile, holding up a red focus mitt. On the right, the boxer in the white sports bra (R2) faces left, landing a punch with her black boxing glove directly onto the mitt. The background is a dim gym with red ring ropes. Cool, low-key lighting with red accents.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a red focus mitt as the target for R2",
+    "R2 lands a punch with a black boxing glove onto R1's mitt",
+    "R1 has the trainer/target-holder duty while R2 has the boxer/striker duty",
+    "red focus mitt",
+    "black boxing glove",
+    "boxing ring with red ring ropes in a dim gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the red focus mitt that absorbs R2's punch, rather than R2 holding a mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the punch-absorbing mitt for R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one landing a punch onto the mitt held by R1, rather than R1 punching a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 strikes R1's mitt"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 serve as the trainer target-holder while R2 serves as the boxer striker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 trainer/target-holder role and R2 boxer/striker role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile with a mitt raised for R2's incoming punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 presents the raised mitt target to R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 facing R1's mitt and making contact with it using her gloved fist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 punches into R1's mitt"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red focus mitt being used as the punch target?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red focus mitt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

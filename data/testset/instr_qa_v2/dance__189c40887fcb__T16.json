@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T16",
+  "instruction": "Cinematic low-angle full shot of an indoor dance hall. In the left foreground, the dark-haired dancer in a white t-shirt and black harness (R3) performs a dramatic high kick toward the camera. In the right background, the dancer in a black mesh top and kilt (R2) dances with his back turned and arms outstretched. The scene is lit by dim, cool blue ambient light.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 performs a dramatic high kick toward the camera, rather than R2 doing that action.",
+    "R2 dances with his back turned and arms outstretched, rather than R3 doing that action.",
+    "R3 is the foreground dancer doing the high kick while R2 is the background dancer dancing with his back turned.",
+    "The scene takes place in an indoor dance hall.",
+    "The scene is lit by dim, cool blue ambient light."
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 performing the dramatic high kick toward the camera, rather than R2 performing that high kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the asymmetric action role of doing the high kick toward the camera."
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer with his back turned and arms outstretched, rather than R3 having that back-turned arms-outstretched dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric dance pose role of facing away with arms outstretched."
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the foreground dancer doing the dramatic high kick while R2 dances in the background with his back turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R2 have distinct dance roles: high-kicking foreground dancer versus back-turned background dancer."
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep his arms outstretched as part of his dance pose while R3 performs the high kick toward the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms-outstretched pose is distinct from R3's high-kick action."
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

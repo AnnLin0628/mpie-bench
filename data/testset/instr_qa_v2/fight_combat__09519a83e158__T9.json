@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T9",
+  "instruction": "Candid documentary photograph, medium shot. In an indoor boxing gym, the man with a braided mohawk and beard in a black t-shirt (R2) stands on the left in profile, facing right. He guides the woman with braided hair in a black strapless top (R1), who stands on the right wearing black boxing gloves. The man (R2) holds the top of her glove with his right hand to adjust her stance, while she looks forward with a calm expression. In the blurred background, a single bystander in dark clothing stands near a black punching bag. Bright overhead gym lighting illuminates the scene, casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 guides R1's boxing stance rather than R1 guiding R2",
+    "R2 holds the top of R1's boxing glove to adjust her stance",
+    "R1 is the glove-wearing trainee receiving stance adjustment from R2",
+    "R2 uses his hand to contact and adjust R1's glove",
+    "R1 wears black boxing gloves involved in the interaction",
+    "A black punching bag is visible near a bystander in the background",
+    "The scene is an indoor boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 guiding R1's boxing stance, rather than R1 guiding R2's stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 guides R1's boxing stance rather than R1 guiding R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold the top of R1's boxing glove to adjust her stance, rather than R1 holding R2's glove to adjust him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the top of R1's boxing glove to adjust her stance"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person wearing boxing gloves being adjusted by R2, rather than R2 being the gloved person adjusted by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the glove-wearing trainee receiving stance adjustment from R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use his hand to make contact with and adjust R1's glove?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses his hand to contact and adjust R1's glove"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black punching bag visible near a bystander in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "A black punching bag is visible near a bystander in the background"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

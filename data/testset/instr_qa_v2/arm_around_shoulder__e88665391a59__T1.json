@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__e88665391a59__T1",
+  "instruction": "Candid outdoor photograph, medium full shot. On an outdoor sports court next to a green metal fence, two girls pose together in soft daylight. The girl in the patterned bandana and plaid shirt (R2) stands on the left, leaning against a green post and looking forward. The girl in the pink bucket hat and pink hoodie (R1) stands on the right, leaning her right arm on the shoulder of the girl in the bandana (R2) while looking off to the right. The background is softly blurred with natural green tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans her right arm on R2's shoulder",
+    "R2 is the shoulder contact point for R1's arm",
+    "R2 leans against a green post",
+    "green metal fence on an outdoor sports court",
+    "softly blurred natural green background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting her right arm on R2's shoulder, rather than R2 resting her arm on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 arm-on-shoulder contact over R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 serve as the shoulder contact point for R1's leaning arm, rather than R1 serving as the shoulder contact point for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's arm-on-shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning against a green post while R1 makes contact by leaning an arm on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans on post while R1 leans on R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

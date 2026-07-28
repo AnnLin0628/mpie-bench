@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0bad6254113c__T1",
+  "instruction": "A candid wedding photograph, medium shot. At an outdoor wedding venue at night, the groom in the white embroidered sherwani (R1) stands on the left, facing slightly right with a gentle smile. Beside him, the bride in the red bridal lehenga (R2) stands on the right, looking forward with a happy expression. She rests her left hand on his shoulder and holds his arm with her right hand. The background is softly out of focus, showing warm decorative lights and structures. The lighting is warm and festive, casting a soft glow on the couple.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests her left hand on R1's shoulder",
+    "R2 holds R1's arm with her right hand",
+    "R1 is the groom standing beside R2 as the person whose shoulder and arm are being held",
+    "R2 is the bride standing beside R1 while maintaining contact with him",
+    "The couple is at an outdoor wedding venue at night with warm decorative lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her left hand on R1's shoulder, rather than R1 resting his left hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her left hand on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's arm with her right hand, rather than R1 holding R2's arm with his right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's arm with her right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder and arm are being touched by R2, rather than R2 being the person whose shoulder and arm are being touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's shoulder-and-arm contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 maintain contact with R1 using both hands, with one hand on his shoulder and the other holding his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses both hands to contact R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing beside R2 as the groom being held by the bride, while R2 is the bride holding onto him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the groom being held by R2, the bride"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

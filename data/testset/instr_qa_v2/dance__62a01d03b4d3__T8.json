@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T8",
+  "instruction": "Candid medium shot of a man in a gray suit (R1) with his back to the camera and a woman in a black dress (R2) facing him. They embrace while dancing tango against a plain white background under soft, diffused indoor light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the tango partner with his back to the camera while facing R2",
+    "R2 is the tango partner facing R1 rather than having her back to the camera",
+    "R1 and R2 are in a close tango dance contact with each other",
+    "R2 faces toward R1 during the dance pose",
+    "the dancers are against a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the tango dancer with his back to the camera while R2 faces him, rather than R2 being the dancer with his or her back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the back-to-camera partner and R2 is the facing partner"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 face R1 during the tango embrace, rather than R1 being the partner shown facing the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partner facing R1 in the dance"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the dance contact, is R1 oriented away from the viewer while engaging R2, rather than R2 being oriented away from the viewer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric camera-facing orientation during contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

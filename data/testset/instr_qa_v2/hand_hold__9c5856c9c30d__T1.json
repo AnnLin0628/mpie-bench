@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__9c5856c9c30d__T1",
+  "instruction": "A candid full-body photograph captures a woman in a blue tied shirt and patched jeans (R1) and a young girl in a light green hoodie and cap (R2) walking hand-in-hand along a sandy beach at dusk. The woman (R1) is on the right, walking forward barefoot and looking straight ahead. The young girl (R2) walks barefoot on the left, looking down at the sand. In the far background, a single blurry bystander in dark clothing is visible. The scene is illuminated by soft golden hour light, casting gentle shadows on the sand.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the adult woman walking hand-in-hand with the young girl R2",
+    "R1 looks straight ahead while R2 looks down at the sand during the hand-holding walk",
+    "R2 is the child companion holding hands with R1 rather than the adult woman role",
+    "R1 and R2 are connected by a hand hold while walking together",
+    "The pair is walking barefoot along a sandy beach at dusk"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the adult woman walking hand-in-hand with the young girl R2, rather than R2 being the adult woman holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the adult woman walking hand-in-hand with the young girl R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While they hold hands, is R1 looking straight ahead while R2 looks down at the sand, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks straight ahead while R2 looks down at the sand during the hand-holding walk"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the young girl companion holding R1's hand, rather than R1 being the young girl holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the child companion holding hands with R1 rather than the adult woman role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected by a hand hold as they walk together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are connected by a hand hold while walking together"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

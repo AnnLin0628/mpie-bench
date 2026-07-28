@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__8104374518b6__T2",
+  "instruction": "Professional corporate photograph, medium shot. In a modern office meeting room, the woman with long brown hair (R1) on the left, standing in profile in a beige blazer, shakes hands with the woman with short blonde hair (R2) on the right, wearing a light blue blazer. The blonde woman looks down at their clasped right hands with a gentle smile. They stand over a wooden conference table with a laptop. Soft indoor lighting and cool grey tones define the clean office setting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks down at the clasped right hands during the handshake, rather than R1 doing so",
+    "R1 is the participant standing in profile while clasping hands with R2, rather than R2 being described in profile",
+    "R1 and R2 have their right hands clasped together",
+    "A wooden conference table is present beneath or in front of the handshake",
+    "A laptop is on the conference table",
+    "The interaction takes place in a modern office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the person looking down at their clasped right hands during the hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks down at the clasped right hands during the handshake, rather than R1 doing so"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the participant described as standing in profile while the two women clasp hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the participant standing in profile while clasping hands with R2, rather than R2 being described in profile"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1's and R2's right hands clasped together between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have their right hands clasped together"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

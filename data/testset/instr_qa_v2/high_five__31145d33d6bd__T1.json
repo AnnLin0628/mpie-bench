@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__31145d33d6bd__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures a rustic indoor pottery studio. On the left, the woman with curly red hair (R1), wearing a beige t-shirt and a green apron, stands with her back partially to the camera, looking up and smiling. On the right, the man with wavy light brown hair (R2), wearing a green shirt and a beige apron, faces her with a warm smile. They raise their clay-covered hands, clasping them high in the air in a celebratory high-five. The background features a wooden workbench with pottery tools under soft, warm indoor lighting against a plain beige wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the curly red-haired woman partially turned with her back to the camera while looking up toward R2",
+    "R2 is the wavy light brown-haired man facing R1 during the high-five",
+    "R1 and R2 both raise their clay-covered hands high to clasp each other in a celebratory high-five",
+    "R1's raised hand meets R2's raised hand rather than either person being passive or lowered",
+    "their hands are covered with clay",
+    "the scene is a rustic indoor pottery studio with a wooden workbench and pottery tools"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with her back partially to the camera looking up toward R2, rather than R2 being the one partially turned away in that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the partially back-turned, looking-up posture toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 raise her clay-covered hand to meet R2's raised clay-covered hand high in the air, rather than R1 keeping her hand lowered while only R2 raises a hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively raises her hand into the high-five with R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the high-five, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

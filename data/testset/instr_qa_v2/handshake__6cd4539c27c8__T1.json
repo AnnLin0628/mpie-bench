@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__6cd4539c27c8__T1",
+  "instruction": "Candid corporate photograph, medium shot. In a bright attic office with a skylight, a bearded man in a black suit (R3) stands on the left and shakes hands with a clean-shaven man in a black suit (R2) standing on the right over a white conference table. Seated between them, a woman in a houndstooth blazer (R4) smiles and looks down, while a bearded man with glasses and a striped tie (R1) stands in the background, smiling and clapping. Soft natural light illuminates the scene, casting gentle shadows.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the person in hand contact with R3, not R1",
+    "R1 is a background clapping observer rather than a handshake participant",
+    "R4 is seated between the handshake participants and looking down rather than standing to shake hands",
+    "R3 participates in the handshake with R2 while R1 claps",
+    "A white conference table sits under the handshake",
+    "The scene is a bright attic office with a skylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man engaged in hand contact with R3 over the table, rather than R1 being the one in that contact with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person in hand contact with R3, not R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 clapping as a background observer rather than being the person whose hand R3 is clasping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is a background clapping observer rather than a handshake participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

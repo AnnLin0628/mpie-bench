@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__68ac84a10dd4__T3",
+  "instruction": "Candid office photograph, medium shot. In an office meeting room, the man with glasses in a white shirt (R3) on the left and the woman in a black blazer (R2) on the right high-five. The woman (R2) laughs joyfully with her mouth open as her right hand meets the man's (R3) raised hand in the foreground. In the background between them, the woman in a light blue shirt (R1) stands smiling and watching the interaction. Bright, natural indoor light fills the room, highlighting the clean white walls.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2's right hand meets R3's raised hand in a high-five",
+    "R3 is the high-five partner whose raised hand contacts R2's right hand",
+    "R1 stands in the background watching while R2 and R3 high-five",
+    "R2 laughs joyfully with her mouth open during the high-five",
+    "the interaction takes place in an office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person whose raised hand contacts R2's right hand, rather than R1 being the person whose raised hand contacts R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the high-five partner whose raised hand contacts R2's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 laugh with her mouth open as she high-fives R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 laughs joyfully with her mouth open during the high-five"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

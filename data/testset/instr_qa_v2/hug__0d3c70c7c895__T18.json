@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T18",
+  "instruction": "Cinematic medium shot of three young girls standing close together in a sunny park. On the left, the curly-haired girl in a white cardigan (R3) smiles brightly at the camera, holding the center girl's arm. In the center, the girl with a pink headband (R6) laughs happily, looking forward. On the right, the girl with bangs in a blue cardigan (R4) grins warmly, leaning in close to the group. The warm golden hour sunlight backlights the girls, creating a soft, glowing atmosphere with a shallow depth of field.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R3 holds R6's arm",
+    "R6 is the center girl whose arm is held by R3",
+    "R4 leans in close to the group",
+    "R3 smiles at the camera while maintaining arm contact with R6",
+    "R6 laughs while looking forward",
+    "sunny park with warm golden-hour backlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one holding R6's arm, rather than R6 holding R3's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds R6's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the girl whose arm is being held by R3, rather than R6 being the one holding R3's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the held-arm participant in R3's contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one leaning in close toward the group, rather than R3 or R6 being described as leaning in toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 leans in close to the group"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 in the center while R3 maintains contact by holding R6's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the center girl whose arm is held by R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand close to R6 while smiling at the camera and holding R6's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 smiles while holding R6's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

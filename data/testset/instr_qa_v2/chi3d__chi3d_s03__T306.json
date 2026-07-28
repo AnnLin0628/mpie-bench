@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T306",
+  "instruction": "A candid documentary medium-full shot captures an indoor studio with a red carpeted floor, white walls, and dark red partitions in the background. On the left, the woman in the white t-shirt and blue jeans (R2) stands upright, facing slightly right. On the right, the man in the black polo shirt and blue shorts (R1) stands facing left, leaning forward to touch the woman's (R2) right arm with his right hand. The scene is illuminated by bright overhead indoor lighting that casts soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward and uses his right hand to touch R2's right arm",
+    "R2 is the person receiving the arm touch from R1",
+    "R1 initiates the hand-to-arm contact rather than R2 initiating it",
+    "R2 stands upright while R1 reaches toward her arm",
+    "R1 and R2 face toward each other during the contact",
+    "indoor studio setting with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 using his right hand to touch R2's right arm, rather than R2 using her hand to touch R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward and uses his right hand to touch R2's right arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose arm is being touched by R1, rather than R1 being the person whose arm is touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person receiving the arm touch from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward to initiate the contact with R2's arm, rather than R2 leaning forward to initiate contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the hand-to-arm contact rather than R2 initiating it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand upright while R1 reaches toward and touches her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands upright while R1 reaches toward her arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

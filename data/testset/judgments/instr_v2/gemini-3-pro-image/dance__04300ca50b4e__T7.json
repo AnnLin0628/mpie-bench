@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T7",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.7941176470588236,
+  "S_instr_role": 0.5,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.5,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer facing forward and smiling confidently at the camera, rather than R2?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 faces camera smiling"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer captured mid-motion while looking down and to the left, rather than R1?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 looks down left mid-gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both dancing, with R1 holding a forward-facing camera-oriented pose while R2 moves energetically?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "dancing implied but low energy"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance__04300ca50b4e__T7",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 6.13,
+    "written_at": "2026-07-17T15:00:10",
+    "gen_relpath": "outputs/gemini-3-pro-image/dance__04300ca50b4e__T7.png",
+    "qa_relpath": "instr_qa_v2/dance__04300ca50b4e__T7.json",
+    "n_questions": 3
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__dc3ebe8abff6__T5",
+  "instruction": "A candid outdoor photograph in a medium full shot captures a couple on a sunny sandy beach with ocean waves and a clear blue sky in the background. On the left, the man in the grey t-shirt and khaki pants (R2) walks forward, looking towards his partner with a warm smile. On the right, the woman in the lavender crop top and denim shorts (R1) walks alongside him, smiling back at him. They walk side-by-side, holding hands with his left hand clasped in her right hand. The scene is illuminated by bright, direct sunlight, casting soft shadows on the sand and highlighting the warm, natural tones of the beach.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's left hand is clasped with R1's right hand",
+    "R1's right hand is clasped with R2's left hand",
+    "R1 and R2 walk side-by-side while holding hands",
+    "R2 looks toward R1 with a warm smile as they walk",
+    "R1 smiles back at R2 while walking alongside him",
+    "sunny sandy beach with ocean waves in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 using his left hand to clasp R1's right hand, rather than R2 using his right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's left hand is clasped with R1's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 using her right hand to clasp R2's left hand, rather than R1 using her left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand is clasped with R2's left hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side while maintaining a handhold with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

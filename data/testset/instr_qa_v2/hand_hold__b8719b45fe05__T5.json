@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b8719b45fe05__T5",
+  "instruction": "Candid outdoor full shot from a high angle showing a couple walking down a rocky path next to a marble wall. On the left, the woman in the white sweater and beige hat (R1) walks down, touching the marble wall with her right hand. On the right, the man in the brown sweater and dark hat (R2) walks alongside her, holding her hand while his left hand is in his pocket. Both look downward as they navigate the slope. Soft natural daylight illuminates the scene, highlighting the cool blue-gray marble and the warm tones of their clothing.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks down the slope while touching the marble wall with her right hand",
+    "R2 walks alongside R1 and holds R1's hand",
+    "R2 keeps his left hand in his pocket while holding R1's hand",
+    "R1 and R2 navigate the rocky path together while looking downward",
+    "A marble wall is beside the rocky path and is contacted by R1"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person touching the marble wall with her right hand while walking down, rather than R2 touching the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 contacts the marble wall with her right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding R1's hand while walking alongside her, rather than R1 being the one described as holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 keep his left hand in his pocket while maintaining hand contact with R1, rather than R1 being described with a pocketed hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's free left hand is in his pocket during the hand-hold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking down the sloped path together while R2 maintains hand contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R1 walk together with R2 holding R1's hand"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking down a rocky outdoor path?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "rocky outdoor path setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

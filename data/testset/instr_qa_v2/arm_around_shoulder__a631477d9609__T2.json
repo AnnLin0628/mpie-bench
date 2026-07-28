@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__a631477d9609__T2",
+  "instruction": "A candid documentary photograph in a full-length shot at eye-level captures an outdoor park with a dirt path surrounded by green trees. On the left, the blind man in a light green denim jacket (R1) walks forward wearing sunglasses, a black turtleneck, black pants, and white sneakers, holding a white cane in his right hand with a neutral expression. On the right, the woman in a tan coat (R2) walks alongside him wearing a black beanie, a green scarf, a white t-shirt, blue jeans, and black boots, looking forward with a joyful smile. Her right arm is linked through his left arm as they walk side-by-side, and his white cane is extended diagonally across the path. The scene is illuminated by soft, diffused daylight with natural, muted colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 links her right arm through R1's left arm while they walk together",
+    "R1 holds and uses a white cane while R2 is the arm-linked walking companion",
+    "R1's white cane is extended diagonally across the path as R2 walks alongside him",
+    "R1 and R2 walk side-by-side in an arm-linked configuration",
+    "a white cane is the contact-relevant object held by R1",
+    "the pair are on an outdoor park dirt path surrounded by green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's right arm linked through R1's left arm as they walk, rather than R1's right arm being linked through R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 links her right arm through R1's left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the white cane while R2 walks arm-in-arm beside him, rather than R2 holding the cane?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the white cane while R2 is the linked companion"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's white cane extended diagonally across the path while R2 is linked to his arm, rather than R2 extending a cane while R1 links to her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends the cane as R2 remains arm-linked to him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 walk side-by-side with R2 attached to R1 by an arm link?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side in an arm-linked configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T79",
+  "instruction": "A candid outdoor photograph with a wide shot of a group of friends sitting in a row on the grass. On the left, the woman with a large afro (R6) leans on a large black inflatable bowling ball. Next to her, the man in a red polo shirt (R3) and the woman in a black beanie (R5) sit holding white inflatable bowling pins. Further right, the woman in a dark blue t-shirt (R4) and the bald man in a dark blue t-shirt (R2) hold their pins, while the large man in a dark blue t-shirt (R1) sits on the far right laughing with his pin raised. Bright natural daylight illuminates the scene.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R6 leans on the large black inflatable bowling ball rather than holding a bowling pin",
+    "R1 has his inflatable bowling pin raised while R2 is only described as holding his pin",
+    "R3 and R5 sit holding white inflatable bowling pins",
+    "R4 and R2 hold their inflatable bowling pins",
+    "large black inflatable bowling ball",
+    "white inflatable bowling pins",
+    "group seated outdoors on grass in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the person leaning on the large black inflatable bowling ball, rather than R3 being the one leaning on that ball?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 leans on the large black inflatable bowling ball rather than R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with his inflatable bowling pin raised, rather than R2 being described as the one raising his pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises his pin while R2 only holds his pin"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R6 lean on the bowling ball while R5 holds a white inflatable bowling pin, rather than R5 leaning on the ball and R6 holding the pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 has the ball-leaning role while R5 has the pin-holding role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R3 and R5 sit holding white inflatable bowling pins?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R5 hold white inflatable bowling pins"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R4 and R2 hold inflatable bowling pins as they sit with the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R2 hold their pins"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

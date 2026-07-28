@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T49",
+  "instruction": "Candid action close-up photograph from a low angle in an indoor judo dojo with yellow mats. The man with short dark hair and stubble (R4) in a white judo gi lies on his back, looking forward with a focused expression. He grips the blue-clad leg of the woman with curly brown hair in a bun (R1) in a blue judo gi, who lies in the foreground. The scene is captured under bright, even indoor lighting with warm tones.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 grips R1's blue-clad leg",
+    "R1 is the person whose leg is being held by R4",
+    "R4 lies on his back while grappling",
+    "R1 lies in the foreground during the grapple",
+    "yellow judo mats in the dojo",
+    "low-angle indoor judo dojo setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 grip R1's blue-clad leg, rather than R1 gripping R4's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 grips R1's leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the grappler whose leg is being held by R4, rather than R4 being the one whose leg is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's leg is held by R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 lying on his back while maintaining contact with R1 by gripping her leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 lies on his back and grips R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 lying in the foreground with her leg caught in R4's grip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lies in foreground with leg gripped"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

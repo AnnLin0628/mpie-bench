@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T16",
+  "instruction": "Action sports photograph, medium-full shot. In a covered outdoor pavilion, the boxer in the beige t-shirt (R1) in the center lunges forward in a wide stance, throwing a powerful right punch. The boxer in the blue tank top (R2) on the right quickly moves away, captured from a three-quarters back view. Bright daylight fills the space, creating a high-key, active atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 lunges forward in a wide stance while throwing a powerful right punch",
+    "R2 moves away from R1's punch",
+    "R1 is the attacking boxer and R2 is the retreating boxer",
+    "R2 is shown from a three-quarters back view while moving away",
+    "The scene is in a covered outdoor pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a powerful right punch toward R2, rather than R2 throwing the punch toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the boxer delivering the punch toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 moving away from R1's punch, rather than R1 moving away from a punch by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the boxer retreating from R1's attack"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the forward-lunging attacker while R2 is the boxer evading, rather than R2 being the forward-lunging attacker and R1 evading?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the attacking role and R2 has the evasive role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 lunging forward in a wide stance while throwing the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is a forward lunge with a wide stance during the punch"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 shown moving away from R1 while captured from a three-quarters back view?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role and pose are retreating from R1 with a three-quarters back view"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

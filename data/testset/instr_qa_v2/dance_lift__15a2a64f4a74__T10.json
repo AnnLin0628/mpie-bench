@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T10",
+  "instruction": "Candid photographic medium close-up with shallow depth of field in a ballet studio. In the blurred foreground, the red-haired girl in a pink leotard (R3) smiles with her arm raised. In the background, the light-brown-haired girl in a pink leotard (R1) stands with her arm raised. A female instructor in a black shirt stands between them, holding the hand of the light-brown-haired girl (R1). Bright, diffused indoor lighting fills the clean, minimalist space.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R2 is the female instructor who holds/guides R1's hand",
+    "R1 is the light-brown-haired girl whose raised hand is held by R2",
+    "R3 is separate in the blurred foreground with her arm raised, not the student whose hand R2 holds",
+    "R2 stands between R1 and R3 while maintaining hand contact with R1",
+    "the scene is a ballet studio with bright, diffused indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the female instructor holding R1's hand, rather than R1 acting as the instructor holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds/guides R1's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the light-brown-haired girl whose raised hand is being held by R2, rather than R2 being the student whose hand R1 guides?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the student receiving the instructor's hand contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the girl smiling separately in the blurred foreground while R2 holds R1's hand, rather than R3 being the person whose hand R2 is holding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is separate from the R2-to-R1 hand-holding contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand between R1 and R3 while maintaining hand contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role and placement between the two girls"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in the background with her arm raised while R3 is in the blurred foreground with her arm raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 have distinct raised-arm foreground/background roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d80557bd5202__T3",
+  "instruction": "Cinematic film still, medium eye-level tracking shot. Outdoors next to a brick building with large windows, the man in the maroon zip-up hoodie (R2) with a yellow backpack walks on the left, listening attentively with a slight smile. On the right, the woman in the maroon puffer jacket (R1) with a white backpack walks beside him, gesturing with her left hand raised as she speaks animatedly. They walk side-by-side in soft natural daylight against the warm brick wall background, casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 speaks animatedly while walking beside R2",
+    "R1 raises her left hand in a gesture as she speaks",
+    "R2 listens attentively with a slight smile while walking beside R1",
+    "R1 wears a white backpack",
+    "R2 wears a yellow backpack",
+    "They are outdoors next to a brick building with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one speaking animatedly with her left hand raised, rather than R2 being the one doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the animated speaker and raised-hand gesturer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one listening attentively with a slight smile while R1 speaks, rather than R1 being the attentive listener?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attentive listener while R1 speaks"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 lead the conversation with an animated hand gesture while R2 listens, rather than R2 leading it with the gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leads the conversational gesture while R2 listens"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side by side with R1 gesturing as the speaker and R2 acting as the listener?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together with distinct speaker-listener roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

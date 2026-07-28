@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ae2edd812350__T4",
+  "instruction": "Candid outdoor full shot of a man in a striped t-shirt (R2) and a woman in a green cap (R1) talking on a sidewalk. The man (R2) stands on the left, holding his bicycle with a large black bag, looking at the woman with a gentle smile. The woman (R1) stands on the right, holding her bicycle with orange handlebars, looking back at him. Natural daylight illuminates the scene, with a black metal fence and green trees in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds the bicycle with a large black bag",
+    "R1 holds the bicycle with orange handlebars",
+    "R2 looks at R1 with a gentle smile while R1 looks back at him",
+    "R1 and R2 are talking face-to-face while each holds a bicycle",
+    "large black bag on R2's bicycle",
+    "outdoor sidewalk setting with a black metal fence and green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the bicycle with a large black bag, rather than R1 holding that bag-equipped bicycle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the bicycle with a large black bag"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding the bicycle with orange handlebars, rather than R2 holding the orange-handlebar bicycle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the bicycle with orange handlebars"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant described as looking at R1 with a gentle smile while R1 looks back at him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks at R1 with a gentle smile while R1 looks back at him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 talking face-to-face while each person holds a bicycle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are talking face-to-face while each holds a bicycle"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a large black bag associated with R2's bicycle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "large black bag on R2's bicycle"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

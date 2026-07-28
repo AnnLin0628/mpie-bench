@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__26d4b1ec995f__T7",
+  "instruction": "Cinematic film still, medium shot. In a modern office, the man in the grey patterned blazer (R2) on the left and the man in the light blue sweater (R1) on the right stand in profile facing each other. They shake right hands in front of a large window overlooking a city street. Cool, overcast daylight fills the room, casting soft shadows with a muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the light-blue-sweater man whose right hand clasps R2's right hand",
+    "R2 is the grey-patterned-blazer man whose right hand clasps R1's right hand",
+    "R1 and R2 stand in profile facing each other during the right-hand clasp",
+    "the contact is specifically between R1's right hand and R2's right hand",
+    "the interaction takes place in a modern office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the light-blue-sweater participant whose right hand clasps R2's right hand, rather than R2 being the light-blue-sweater participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the light-blue-sweater man whose right hand clasps R2's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the grey-patterned-blazer participant whose right hand meets R1's right hand, rather than R1 being the grey-patterned-blazer participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the grey-patterned-blazer man whose right hand clasps R1's right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is the contact between R1 and R2 made specifically with R1's right hand touching R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the contact is specifically between R1's right hand and R2's right hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

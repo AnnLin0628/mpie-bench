@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T6",
+  "instruction": "Candid studio photograph, medium close-up. Against a plain beige background, the curly-haired woman in a white shirt (R1) sits on the left, laughing with her eyes closed and head tilted. Beside her, the wavy-haired woman in a black tank top (R3) sits on the right, looking down and smiling warmly with her eyes closed. They sit shoulder-to-shoulder under soft, warm studio lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the curly-haired seated woman who is laughing with eyes closed and head tilted",
+    "R3 is the wavy-haired seated woman who is looking down and smiling warmly with eyes closed",
+    "R1 and R3 sit shoulder-to-shoulder in close seated contact",
+    "R1 and R3 have distinct seated reactions: R1 laughs while R3 smiles downward",
+    "plain beige studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated woman laughing with her eyes closed and head tilted, rather than R3 being described with that laughing head-tilted pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the laughing, head-tilted seated role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the seated woman looking down and smiling warmly with her eyes closed, rather than R1 being described as the one looking down and smiling warmly?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the downward-looking smiling seated role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R1 and R3 have different reactions, with R1 laughing and R3 smiling down, rather than those reactions being assigned the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric facial-expression roles between R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated beside R3 while R1 laughs and R3 smiles downward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 maintain distinct seated contact roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

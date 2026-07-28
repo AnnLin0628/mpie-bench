@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__22f7679e20e4__T2",
+  "instruction": "Candid cinematic medium shot on a balcony at sunset. The man with white hair and beard (R1) in a dark turtleneck stands on the left. The woman with blonde-gray hair (R2) in a blue trench coat stands on the right, leaning against his chest. Her hand, wearing a ring, rests gently on his collar, while his hand holds her shoulder. Warm golden light from behind highlights their profile against a soft-focus city backdrop.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans against R1's chest",
+    "R2's hand rests on R1's collar",
+    "R1's hand holds R2's shoulder",
+    "R2 wears a ring on the hand touching R1's collar",
+    "the pair is on a balcony at sunset"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning against R1's chest, rather than R1 leaning against R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans against R1's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's shoulder, rather than R2 holding R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand holds R2's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest her hand on R1's collar, rather than R1 resting his hand on R2's collar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand rests on R1's collar"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person receiving R2's lean against his chest while also holding R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports the close contact as R2 leans into him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

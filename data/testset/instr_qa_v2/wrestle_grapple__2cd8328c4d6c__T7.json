@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T7",
+  "instruction": "Crisp studio photograph, full shot from a high angle in a minimalist white studio. On the left, the dancer in the black hooded outfit (R1) is bent forward with their head tucked down. On the right, the dancer in the white hooded outfit (R2) leans over R1 with both arms raised high. The two dancers are closely positioned, with R2 leaning dynamically over the hunched R1 as they perform a coordinated movement. Bright, even studio lighting casts soft shadows on the clean white floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans dynamically over the hunched R1",
+    "R1 is bent forward with head tucked down while R2 is not",
+    "R2 raises both arms high while positioned over R1",
+    "R1 serves as the low, hunched partner beneath R2's movement",
+    "minimalist white studio setting with bright even lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning dynamically over the hunched R1, rather than R1 leaning over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans dynamically over the hunched R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer bent forward with their head tucked down, rather than R2 taking that tucked hunched position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is bent forward with head tucked down while R2 is not"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have both arms raised high while positioned over R1, rather than R1 raising both arms high over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises both arms high while positioned over R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned as the low, hunched partner beneath R2's movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 serves as the low, hunched partner beneath R2's movement"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the upright, overhanging dancer with raised arms while R1 remains bent forward below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the overhanging raised-arm dancer while R1 is bent below"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

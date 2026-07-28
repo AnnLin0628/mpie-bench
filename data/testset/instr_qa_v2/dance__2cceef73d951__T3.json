@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__2cceef73d951__T3",
+  "instruction": "A cinematic medium close-up of a festive outdoor patio. In the foreground, the woman in the floral dress (R2) with a pink flower in her hair smiles brightly at the camera while dancing and shaking colorful maracas. In the background, a blurred mariachi guitarist wearing a sombrero plays his acoustic guitar. Soft natural daylight illuminates the scene, highlighting her joyful expression and creating a warm, lively party atmosphere with gentle shadows and a shallow depth of field.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the foreground woman dancing and shaking colorful maracas rather than R1 doing that foreground maraca-dancing role",
+    "R2 smiles brightly at the camera while performing, rather than R1 being the foreground smiling performer",
+    "R2 holds and shakes colorful maracas as part of her dance",
+    "a blurred mariachi guitarist in the background plays an acoustic guitar",
+    "the scene is a festive outdoor patio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the foreground woman dancing and shaking colorful maracas, rather than R1 doing that foreground maraca-dancing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground maraca-shaking dancer rather than R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person smiling brightly at the camera while dancing, rather than R1 being the foreground smiling dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground smiling dancer rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 dancing while shaking maracas in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the dancing maraca-shaking role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

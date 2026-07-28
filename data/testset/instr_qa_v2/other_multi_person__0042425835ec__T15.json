@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T15",
+  "instruction": "Candid documentary photograph, medium close-up. In an outdoor backyard with trees and wooden chairs, two friends share a laugh. On the left, the man in the patterned beige t-shirt and pink bandana (R3) is shown in profile, holding a small grey disc and laughing heartily with his mouth open. Behind him on the right, the woman in the white crochet vest and colorful headband (R2) bends forward, laughing along. The lighting is soft and natural, creating a warm, joyful atmosphere with a shallow depth of field blurring the green background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the man shown in profile laughing with his mouth open",
+    "R3 holds a small grey disc while laughing",
+    "R2 is behind R3 and bends forward while laughing along",
+    "R2 and R3 share a joyful laughing moment in an outdoor backyard",
+    "The setting includes trees and wooden chairs"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person holding the small grey disc while laughing, rather than R2 holding the disc?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the small grey disc instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned behind R3 and bending forward laughing, rather than R3 being behind R2 and bending forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one behind R3 bending forward while laughing"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 shown in profile with his mouth open laughing while R2 laughs along behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the profile foreground laugher and R2 laughs along behind him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the woman bending forward as she laughs along with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 bends forward while laughing along with R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

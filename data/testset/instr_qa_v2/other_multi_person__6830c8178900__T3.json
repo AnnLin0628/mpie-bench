@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__6830c8178900__T3",
+  "instruction": "Candid family photograph, full shot. In a yard, a man in a dark striped polo shirt and black pants (R2) on the right holds hands with a young girl in a pink dress (R1) on the left. The man (R2) bends slightly, gently spinning the smiling young girl (R1) on the dry ground. A vibrant red bougainvillea bush and a wooden fence are visible in the background under soft daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 gently spins R1 by holding her hands",
+    "R1 is the young girl being spun by R2",
+    "R2 bends slightly while leading the hand-held spin",
+    "R1 and R2 are connected through hand-holding during the spin",
+    "yard setting with bougainvillea bush and wooden fence in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gently spinning R1 by holding her hands, rather than R1 spinning R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leads the spinning action while R1 is spun"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young girl being spun by R2, rather than R2 being spun by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the spinning motion from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 bend slightly while guiding R1 through the spin, rather than R1 bending to guide R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 bends and guides the interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands while R2 leads R1 in a gentle spin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "hand-holding contact with R2 leading R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

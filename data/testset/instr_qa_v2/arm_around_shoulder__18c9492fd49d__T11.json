@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__18c9492fd49d__T11",
+  "instruction": "A candid documentary photograph with a shallow depth of field, captured in a medium close-up shot at eye-level. On an outdoor wooden boardwalk with a metal railing, backed by a dense forest of green trees, two women are embracing. On the right, the woman in the beige hoodie (R1) stands facing left, hugging the woman in the grey hijab (R3) on the left, who wears a pink jacket. The woman in the beige hoodie (R1) is laughing joyfully with her eyes closed, while the woman in the grey hijab (R3) smiles warmly. The affectionate embrace is captured in soft, natural daylight filtering through the trees, creating a sun-drenched and happy atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the active embracer of R3",
+    "R3 is the recipient of R1's embrace",
+    "R1 is the laughing, eyes-closed participant during the embrace with R3",
+    "R1 stands facing toward R3 while in contact",
+    "R3 is the grey-hijab, pink-jacket woman in the embrace with R1",
+    "outdoor wooden boardwalk with metal railing and forest backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person described as actively embracing R3, rather than R3 being described as the active embracer of R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active embracer of R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the woman receiving R1's affectionate embrace, rather than R1 being described as receiving an embrace from R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the recipient of R1's embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant laughing with her eyes closed during the embrace with R3, rather than R3 being the laughing, eyes-closed participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the laughing, eyes-closed participant during the embrace with R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing turned toward R3 while maintaining embracing contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands facing toward R3 while in contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the grey-hijab, pink-jacket woman who is in the embrace with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the grey-hijab, pink-jacket woman in the embrace with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

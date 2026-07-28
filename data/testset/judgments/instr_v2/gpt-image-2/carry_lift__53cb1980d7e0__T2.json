@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__53cb1980d7e0__T2",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.7941176470588236,
+  "S_instr_role": 0.5,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": null,
+  "S_instr_scene": 0.5,
+  "S_instr_role_duty": 0.5,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the grey rabbit while R2 holds the black rabbit, rather than R1 holding the black rabbit and R2 holding the grey rabbit?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "left person holds grey rabbit"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the black rabbit, with R1 instead holding the grey rabbit, rather than those rabbit-holding roles being reversed?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "right person holds black rabbit"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing shoulder-to-shoulder while each holds a separate rabbit?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "side-by-side holding separate rabbits"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the people standing against a green wooden wall?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "against a green wooden wall"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "carry_lift__53cb1980d7e0__T2",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 10.09,
+    "written_at": "2026-07-17T14:39:10",
+    "gen_relpath": "outputs/gpt-image-2/carry_lift__53cb1980d7e0__T2.png",
+    "qa_relpath": "instr_qa_v2/carry_lift__53cb1980d7e0__T2.json",
+    "n_questions": 4
+  }
+}

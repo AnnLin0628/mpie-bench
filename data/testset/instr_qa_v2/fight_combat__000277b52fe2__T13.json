@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T13",
+  "instruction": "Cinematic full shot from a low angle of two men sparring in a smoky indoor gym. On the left, a shirtless man in black shorts (R1) stands with his back partially to the camera, wearing black boxing gloves. On the right, a shirtless bearded man in colorful leggings (R3) wearing green boxing gloves executes a high right kick to the midsection of the shirtless man (R1). The background features a hazy gym setting with a bright spotlight creating a strong lens flare and dramatic shadows on the white mat.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 delivers a high right kick toward R1's midsection",
+    "R1 is the person receiving or being targeted by R3's kick",
+    "R1 stands sparring with his back partially to the camera while R3 attacks",
+    "R1 wears black boxing gloves during the sparring exchange",
+    "R3 wears green boxing gloves during the sparring exchange",
+    "the sparring happens in a smoky indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 executing a high right kick into R1's midsection, rather than R1 kicking R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the kicker and R1 is the target of the kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man whose midsection is being struck or targeted by R3's raised right leg, rather than R3 being the one targeted by R1's kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the kick while R3 delivers it"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 in the attacking kicking posture while sparring with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the active kicking role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

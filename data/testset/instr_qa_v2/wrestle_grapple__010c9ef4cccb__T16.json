@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T16",
+  "instruction": "Candid sports photograph, medium close-up eye-level shot. Inside an indoor judo dojo with a neutral wall, the middle-aged man in the white judo gi (R3) on the left and the young man with a light beard (R4) on the right practice judo grips. The middle-aged man stands in profile, focused as he holds the arm of the young man with a beard, who faces him and grips his sleeve in return. The lighting is soft and natural, casting gentle shadows on their white uniforms.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 holds R4's arm during judo grip practice",
+    "R4 grips R3's sleeve in return",
+    "R3 is the profile-standing holder while R4 faces him",
+    "R3 and R4 face each other while practicing judo grips",
+    "judo gi sleeve/uniform is the contact-relevant garment",
+    "indoor judo dojo setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 holding R4's arm during the judo grip practice, rather than R4 being described as holding R3's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds R4's arm during judo grip practice"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 gripping R3's sleeve in return, rather than R3 being described as gripping R4's sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 grips R3's sleeve in return"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person standing in profile while holding R4's arm, rather than R4 standing in profile while holding R3's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the profile-standing holder while R4 faces him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R3 and R4 face each other while practicing judo grips, with R3 holding R4's arm and R4 gripping R3's sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 face each other while practicing judo grips"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

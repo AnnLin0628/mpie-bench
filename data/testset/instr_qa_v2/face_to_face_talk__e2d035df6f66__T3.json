@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__e2d035df6f66__T3",
+  "instruction": "A cinematic still medium shot depicts an indoor scene by a large window overlooking a hazy winter cityscape. On the left, the bearded man in the white dress shirt (R2) stands in profile, holding a red cup. On the right, the woman in the white button-down shirt (R1) stands in profile, holding a brown paper cup in her left hand while raising her right hand in a stop gesture, her expression skeptical. They stand opposite each other as she pauses the conversation. Soft, cool daylight from the window casts a muted tone over the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 raises her right hand in a stop gesture toward R2",
+    "R1 skeptically pauses the conversation rather than R2 doing so",
+    "R2 holds a red cup while facing R1",
+    "R1 holds a brown paper cup in her left hand",
+    "R1 and R2 stand opposite each other in profile",
+    "large window overlooking a hazy winter cityscape"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising her right hand in a stop gesture toward R2, rather than R2 raising a stop hand toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 makes the stop gesture toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one skeptically pausing the conversation, rather than R2 being the one to pause it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pauses the conversation with a skeptical stop gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 remain the person holding a red cup while R1 is the person signaling stop, rather than those roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the red cup while R1 gives the stop signal"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing opposite each other in profile during the paused conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other in profile"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a red cup?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red cup held by R2"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a brown paper cup in her left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "brown paper cup held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

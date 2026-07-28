@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__ballroom__T1",
+  "instruction": "A candid full shot of an indoor dance studio with a wooden floor. On the left, the man in the striped polo (R2) stands with his back to the camera, wearing olive pants and dark glasses. He is holding the woman in the red dress (R1), who stands on the right facing left. She wears a red latin dance dress and dark sunglasses, with her hair in a ponytail. They are in a close dance embrace, with his right hand on her back and her left hand on his shoulder. In the background, a bystander in dark clothing is partially visible near some chairs. Warm indoor lighting illuminates the scene, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1 in a close dance embrace",
+    "R2's right hand is on R1's back",
+    "R1's left hand is on R2's shoulder",
+    "R2 has his back to the camera while R1 faces toward him",
+    "indoor dance studio with a wooden floor",
+    "bystander near chairs in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1 in the close dance embrace, rather than R1 being the one holding R2 in that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 in a close dance embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place his right hand on R1's back, rather than R1 placing her right hand on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right hand is on R1's back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 place her left hand on R2's shoulder, rather than R2 placing his left hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's left hand is on R2's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the partner facing toward R2 while R2 has his back to the camera during their dance hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his back to the camera while R1 faces toward him"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 configured as close dance partners with R2's hand on R1's back and R1's hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "close partner dance configuration with labeled hand placements"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

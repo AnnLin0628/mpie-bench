@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__5788b5f329f5__T4",
+  "instruction": "A candid outdoor full-body photograph shows a couple walking and talking on a sunny day. On the left, the blonde woman in the checkered dress (R2) walks forward, holding red roses and looking down with a smile. On the right, the man in the peach t-shirt (R1) walks beside her, gesturing with his left arm extended outward as he speaks. They walk hand-in-hand along a paved path. The scene is lit by bright, direct sunlight casting shadows on the ground, with green trees in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gestures outward with his left arm while speaking as he walks hand-in-hand with R2",
+    "R2 carries red roses while walking hand-in-hand with R1",
+    "R1 and R2 walk hand-in-hand along a paved path",
+    "R2 looks down with a smile while walking beside R1",
+    "red roses held by R2",
+    "bright sunny outdoor paved path with green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While they walk hand-in-hand, is R1 the one gesturing outward with his left arm as he speaks, rather than R2 doing that gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gestures outward and speaks during the hand-hold"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While walking with R1, is R2 the one holding the red roses, rather than R1 holding them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the red roses"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk forward while holding R1's hand and looking down with a smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks holding R1's hand while smiling downward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

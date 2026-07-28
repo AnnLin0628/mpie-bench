@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T23",
+  "instruction": "Cinematic video still, full shot. Viewed through the red padded ropes of a boxing ring, the woman in the black and orange jumpsuit (R1) stands on the left, facing right and holding up red focus mitts. The woman in the white sports bra and black leggings (R2) stands on the right in a wide, low stance with her back to the camera, throwing a punch with her black boxing glove. The background features dark hanging punching bags under cool overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up the focus mitts as the target for R2's punch",
+    "R2 is the boxer throwing a punch toward R1's focus mitts",
+    "R2 uses a wide, low fighting stance while punching toward R1",
+    "red focus mitts are held by R1",
+    "a black boxing glove is used by R2 for the punch",
+    "the scene is viewed through red padded ropes of a boxing ring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding up the focus mitts for R2 to punch, rather than R2 holding mitts for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds up the focus mitts as the target for R2's punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing the punch with a boxing glove toward R1's mitts, rather than R1 throwing the punch toward mitts held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the boxer throwing a punch toward R1's focus mitts"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in a wide, low fighting stance while punching toward the mitts that R1 is holding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses a wide, low fighting stance while punching toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are red focus mitts visible as the contact target being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "red focus mitts are held by R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 using a black boxing glove to throw the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "a black boxing glove is used by R2 for the punch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

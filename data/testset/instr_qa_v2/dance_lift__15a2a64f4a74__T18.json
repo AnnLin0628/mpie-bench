@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T18",
+  "instruction": "Candid documentary photograph, full shot at eye-level. Inside a bright ballet studio with a white wall and double wooden ballet barres, two young boys practice. On the left, the red-haired boy in a blue t-shirt and black shorts (R5) stands in the foreground, extending his left arm out to the side while looking forward. On the right, the brown-haired boy in a blue t-shirt and black shorts (R4) stands slightly behind him, holding the top wooden barre with both hands and looking forward. The scene is illuminated by bright, even studio lighting, highlighting the natural wood of the barres and the deep blue of their shirts.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R4 makes two-handed contact with the top wooden ballet barre rather than R5",
+    "R5 extends his left arm out to the side while R4 holds the barre",
+    "R4 stands slightly behind R5 while holding the barre",
+    "R5 stands in the foreground extending his left arm",
+    "wooden double ballet barres are present as contact objects",
+    "the scene is inside a bright ballet studio with a white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4, rather than R5, the person holding the top wooden ballet barre with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 makes two-handed contact with the top wooden ballet barre rather than R5"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 extending his left arm out to the side while R4 keeps both hands on the barre, rather than R4 extending the arm and R5 holding the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 extends his left arm out to the side while R4 holds the barre"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 stand slightly behind R5 while holding the top wooden barre with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 stands slightly behind R5 while holding the barre"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 in the foreground extending his left arm out to the side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 stands in the foreground extending his left arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

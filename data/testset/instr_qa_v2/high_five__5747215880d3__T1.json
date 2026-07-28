@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__5747215880d3__T1",
+  "instruction": "Action sports photograph, medium-wide low-angle shot of an indoor badminton court with red flooring. In the foreground left, the blonde woman in a white t-shirt and red shorts (R1) lunges forward, swinging her racket with motion blur while looking up. In the background right, the brunette woman with a white headband and purple t-shirt (R2) stands in a ready stance, watching the play. Bright overhead fluorescent lights illuminate the court, creating a dynamic athletic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lunges forward and swings a badminton racket as the active player",
+    "R2 stands in a ready stance watching the play rather than taking the shot",
+    "R1 is the foreground attacking player while R2 remains ready in the background",
+    "R1 holds and swings a badminton racket",
+    "the scene is an indoor badminton court with red flooring",
+    "bright overhead fluorescent lights illuminate the court"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the player lunging forward and swinging the racket, rather than R2 being the one lunging and swinging?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lunges forward and swings a badminton racket as the active player"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing in a ready stance and watching the play while R1 takes the active shot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in a ready stance watching the play rather than taking the shot"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground player actively swinging, rather than R2 being the foreground swinging player?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground attacking player while R2 remains ready in the background"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 watch the play from a ready stance while R1 lunges into the shot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in a ready stance watching the play rather than taking the shot"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the action set on an indoor badminton court with red flooring?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene is an indoor badminton court with red flooring"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

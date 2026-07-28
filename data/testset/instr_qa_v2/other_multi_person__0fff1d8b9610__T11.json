@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T11",
+  "instruction": "An action studio photograph of two cheerleaders dancing. In a bright white studio, the short-haired cheerleader (R4) on the left and the wavy-haired cheerleader (R10) on the right perform a synchronized routine. Both wear white t-shirts and white skirts with red and yellow waistbands. The short-haired cheerleader (R4) is captured mid-motion with her arms outstretched, while the wavy-haired cheerleader (R10) kicks her left leg forward. They hold vibrant orange metallic pom-poms. The scene is brightly lit with clean white studio lighting.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R4 is the cheerleader captured mid-motion with arms outstretched rather than R10",
+    "R10 is the cheerleader kicking her left leg forward rather than R4",
+    "R4 and R10 perform a synchronized cheerleading dance routine with distinct body actions",
+    "R4 and R10 hold vibrant orange metallic pom-poms",
+    "the routine takes place in a bright white studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the cheerleader captured mid-motion with arms outstretched, rather than R10?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the cheerleader captured mid-motion with arms outstretched rather than R10"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R10 the cheerleader kicking her left leg forward, rather than R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R10 is the cheerleader kicking her left leg forward rather than R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R4 and R10 perform the cheerleading routine together while R4 outstretches her arms and R10 kicks her left leg forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R10 perform a synchronized cheerleading dance routine with distinct body actions"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T2",
+  "instruction": "A clean, realistic photographic medium full shot of a bright ballet studio with wooden barres. Five children stand in a diagonal line along the barre. From left to right: the girl with light brown hair (R2), the red-haired girl in a bun (R3), the boy with short brown hair (R4), the blonde girl in a bun (R1), and the red-haired boy (R5). The girls wear pink leotards with skirts and white tights, and the boys wear dark blue t-shirts with black shorts. The blonde girl looks down at her feet, while the other four children look forward. They stand close together, leaning against the wooden barre. Bright, even, soft indoor lighting illuminates the scene, casting soft shadows on the dark floor.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 is the blonde girl who looks down at her feet while the other children look forward",
+    "R2 looks forward rather than being the child looking down",
+    "R3 looks forward rather than being the child looking down",
+    "R1, R2, R3, R4, and R5 stand close together leaning against a wooden barre",
+    "wooden barres in a bright ballet studio",
+    "bright ballet studio with a dark floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the child looking down at her feet while R2 looks forward, rather than R2 looking down and R1 looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the distinct looking-down role compared with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down at her feet while R3 looks forward, rather than R3 being the one looking down and R1 looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the distinct looking-down role compared with R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, R3, R4, and R5 standing close together while leaning against the wooden barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "all five labeled children stand close together leaning against the barre"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 standing along the same barre with R1, R2, R3, and R5 rather than being separate from the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 participates in the shared barre lineup with the other labeled children"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the group in a bright ballet studio with wooden barres?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bright ballet studio setting with wooden barres"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

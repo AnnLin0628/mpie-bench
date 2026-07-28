@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T6",
+  "instruction": "Cinematic film still, medium shot. Inside a large, empty hall with a stage in the background, the man in the brown shirt and beanie (R1) on the left and the woman in the black dress (R2) on the right stand facing each other. They hold each other's forearms with tension, leaning slightly back and looking directly into each other's eyes with serious expressions. The man's arm tattoos are visible as they grip each other. Diffused daylight fills the room, highlighting their profiles against the soft-focus background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 uses his visible tattooed arms to grip R2's forearms",
+    "R2 holds onto R1's tattooed forearms during the tense contact",
+    "R1 and R2 face each other while holding each other's forearms",
+    "R1 and R2 lean slightly back while maintaining the forearm grip",
+    "R1 and R2 look directly into each other's eyes with serious expressions",
+    "The interaction takes place inside a large empty hall with a stage in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person using visible tattooed arms to grip R2's forearms, rather than R2 being the tattooed-armed person gripping R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses his visible tattooed arms to grip R2's forearms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding onto R1's tattooed forearms, rather than R1 holding tattooed forearms belonging to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds onto R1's tattooed forearms during the tense contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while holding each other's forearms with tension?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other while holding each other's forearms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 lean slightly back while maintaining their forearm grip on each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 lean slightly back while maintaining the forearm grip"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

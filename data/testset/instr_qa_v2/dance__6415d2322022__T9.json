@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__6415d2322022__T9",
+  "instruction": "A candid documentary medium shot captures a cozy, warmly lit indoor living room. On the left, the woman with short grey hair (R1) wearing a yellow collared shirt and a beige knit vest stands smiling up at her partner. On the right, the man with glasses (R2) in a brown fleece jacket stands facing her. They are positioned close together, holding two glasses of white wine as if sharing a toast. The background is softly blurred with warm, dim indoor lighting, creating an intimate and comfortable atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 smiles up toward R2 during the toast rather than R2 smiling up toward R1",
+    "R2 is the partner being looked up at by R1 while facing her",
+    "R1 and R2 stand close together facing each other as toast partners",
+    "R1 and R2 hold two glasses of white wine for the toast",
+    "the interaction takes place in a cozy, warmly lit indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one smiling up at R2, rather than R2 smiling up at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles up toward R2 during the toast"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner whom R1 looks up toward while R2 faces her, rather than R1 being the partner R2 looks up toward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partner being looked up at by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the toast happening in a cozy, warmly lit indoor living room?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "cozy, warmly lit indoor living room"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": true
+  }
+}

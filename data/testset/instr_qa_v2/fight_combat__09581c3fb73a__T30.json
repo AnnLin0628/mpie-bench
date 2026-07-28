@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T30",
+  "instruction": "Candid full shot from behind the man in the beige t-shirt (R1) in an outdoor covered training area. In the foreground, the man in the beige t-shirt (R1) stands with his back to the camera and legs spread wide. In the background, the man in the blue tank top (R2) faces him, holding a high defensive guard with black boxing gloves. Bright daylight fills the open-air structure.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 holds a high defensive guard with black boxing gloves while facing R1",
+    "R1 stands with his back to the camera and legs spread wide while R2 faces him",
+    "R1 and R2 have distinct combat-training roles, with R2 guarded and gloved and R1 unguarded from the rear view",
+    "black boxing gloves on R2",
+    "outdoor covered training area"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding a high defensive guard with black boxing gloves while facing R1, rather than R1 holding that defensive guard toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the guarded boxing role toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing with his back to the camera and legs spread wide in front of R2, rather than R2 being the back-to-camera wide-stance person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the rear-view wide-stance role while R2 faces him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 in a boxing defensive posture with his guard raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 with raised defensive guard"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand with his back to the camera while oriented toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is back-facing toward the camera while engaged with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

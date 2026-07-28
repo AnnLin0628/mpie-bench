@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0e21d858f215__T9",
+  "instruction": "A clean studio portrait photograph captures three women against a plain white background. On the left, the smiling woman in the purple shirt (R2) stands in profile, looking left. Hugging her closely from behind is the laughing woman in the green blazer (R3), who has her arms wrapped around the purple-shirted woman's chest with hands clasped. Mostly obscured in the background on the right, the woman in the blue blazer (R1) is partially visible behind the others. Soft, bright studio lighting evenly illuminates the scene, highlighting the vibrant pastel palette of their clothing and creating a cheerful, warm atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 wraps her arms around R2's chest from behind",
+    "R2 is the person being held closely by R3 from behind",
+    "R1 is mostly obscured behind the R2-R3 contact pair rather than taking the active hugging role",
+    "R3's hands are clasped while holding R2",
+    "the portrait is set against a plain white studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 wrap her arms around R2's chest from behind, rather than R2 wrapping her arms around R3's chest from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arms around R2's chest from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman being held closely from behind by R3, rather than R3 being the one held from behind by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being held closely by R3 from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the active rear holder with clasped hands around R2, while R1 remains mostly obscured behind the others rather than taking that holding role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is mostly obscured behind the R2-R3 contact pair rather than taking the active hugging role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3's hands clasped together while her arms are around R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's hands are clasped while holding R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 partially visible behind R2 and R3, rather than being one of the two people in the close front contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is mostly obscured behind the R2-R3 contact pair rather than taking the active hugging role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

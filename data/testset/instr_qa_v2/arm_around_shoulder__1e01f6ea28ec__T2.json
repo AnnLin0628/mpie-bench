@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1e01f6ea28ec__T2",
+  "instruction": "A candid studio portrait photograph, captured in a three-quarter medium shot at eye level. In a minimalist indoor photo studio with a seamless white background, the red-haired woman in the blue shirt (R2) stands on the left holding a wire basket of vegetables in her right hand, looking towards her friend with a warm, joyful smile. Beside her on the right, the curly-haired woman in the green crop top (R1) stands holding a silver water bottle with both hands in front of her chest, looking back at her friend with a pleasant smile. The red-haired woman (R2) rests her left arm over the curly-haired woman's (R1) right shoulder as they stand close together. The scene is illuminated by bright, even studio lighting with soft shadows, creating a clean white and pastel color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests her left arm over R1's right shoulder",
+    "R1 is the person receiving R2's arm across her shoulder",
+    "R2 stands close to R1 while making shoulder contact with her",
+    "R1 holds a silver water bottle with both hands",
+    "R2 holds a wire basket of vegetables in her right hand",
+    "minimalist indoor studio with a seamless white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest her left arm over R1's right shoulder, rather than R1 resting an arm over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her left arm over R1's right shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being draped over by R2's arm, rather than R2 being the one under R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving R2's arm across her shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stand close together with R2 making shoulder contact by placing her arm over R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands close to R1 while making shoulder contact with her"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a silver water bottle with both hands in front of her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a silver water bottle with both hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a wire basket of vegetables in her right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a wire basket of vegetables in her right hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

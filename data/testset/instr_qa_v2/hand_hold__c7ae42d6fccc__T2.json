@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__c7ae42d6fccc__T2",
+  "instruction": "A candid documentary photograph with a wide, eye-level shot capturing a group walking in a park. The scene is set in an outdoor grassy park under bright daylight with lush green trees in the background. The woman in the red dress (R1) walks in the background on the left, holding hands with the smiling girl in the pink shirt and red bucket hat (R2). The girl in the pink shirt (R2) also holds hands with the smiling woman in the mustard cardigan (R3) walking in the center. On the right, the blonde girl in denim overalls and a red bucket hat (R4) walks holding hands with the woman in the mustard cardigan (R3). Three other children in red hats walk interspersed in the line holding hands. Bright natural daylight casts soft shadows, highlighting the warm tones of the park.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the hand-holding link between R1 and R3",
+    "R3 is the hand-holding link between R2 and R4",
+    "R4 holds hands with R3 rather than with R2",
+    "R1 holds hands with R2",
+    "R3 walks in the center while connected by hand-holding to R2 and R4",
+    "the group is walking in an outdoor grassy park under bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold hands with both R1 and R3, rather than R1 being the person holding hands with both R2 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the hand-holding link between R1 and R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold hands with both R2 and R4, rather than R4 being the person holding hands with both R2 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the hand-holding link between R2 and R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 connected to the named group by holding R3's hand, rather than by holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds hands with R3 rather than with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking while holding hands with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds hands with R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 walking in the line while hand-in-hand with R2 and also hand-in-hand with R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 walks in the center while connected by hand-holding to R2 and R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

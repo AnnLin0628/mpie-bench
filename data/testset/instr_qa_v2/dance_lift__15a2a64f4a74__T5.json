@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T5",
+  "instruction": "Candid photographic still, medium close-up. In a bright ballet studio with wooden barres, the girl with light brown hair in a bun (R1) is in the right foreground wearing a pink leotard, looking off-camera left. Behind her, the girl in the pink ballet skirt (R2) stands with hands on hips, looking down-left. A cropped hand of an instructor is visible on the far left. Soft, even indoor lighting creates a clean, pastel color palette.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 is the foreground girl looking off-camera left while R2 is positioned behind her",
+    "R2 stands behind R1 with hands on hips and looks down-left",
+    "R1 has light brown hair in a bun and is the closer ballet student",
+    "R2 is the ballet student in a pink ballet skirt standing with hands on hips",
+    "wooden ballet barres are present in the studio",
+    "bright ballet studio with soft indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the girl in the foreground looking off-camera left, rather than R2 being the foreground girl?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground role versus R2 background role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the girl standing behind R1 with hands on hips and looking down-left, rather than R1 taking that behind-with-hands-on-hips role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 background hands-on-hips duty relative to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look off-camera left while R2 looks down-left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "different gaze roles for R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand with her hands on her hips behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 hands-on-hips body configuration behind R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

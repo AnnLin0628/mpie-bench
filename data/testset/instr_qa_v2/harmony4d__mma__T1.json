@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T1",
+  "instruction": "Candid full shot of an indoor martial arts gym with grey mats. On the left, the man in the grey t-shirt and black shorts (R2) leans forward, clinching with the man in the white t-shirt and blue shorts (R1) on the right. R2 wraps his gloved arms around R1's neck, while R1 defends the hold. In the background, two bystanders watch, one holding a camera. The scene is lit by even overhead lights, casting soft shadows on the grey floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 applies a neck clinch on R1",
+    "R1 defends against R2's clinch",
+    "R2 wraps gloved arms around R1's neck",
+    "R2 leans forward into the clinch with R1",
+    "R2 is wearing gloves during the clinch",
+    "indoor martial arts gym with grey mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his gloved arms around R1's neck, rather than R1 wrapping his arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 applies a neck clinch on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 defending against R2's neck clinch, rather than R2 defending against a neck clinch by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends against R2's clinch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one controlling R1's neck in the clinch while R1 is the one being controlled and defending?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 controls R1's neck while R1 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning forward into a martial arts clinch with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward into the clinch with R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set in an indoor martial arts gym with grey mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor martial arts gym with grey mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

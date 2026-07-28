@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T9",
+  "instruction": "A clean studio photograph with a full-body shot captures two women dancing in a minimalist indoor studio with a plain, light gray background. On the left, the woman with curly afro hair in a mauve button-up dress (R1) leans back with her eyes closed and a serene expression. On the right, the woman with short brown hair in a striped shirt and white trousers (R2) leans back against her. The curly-haired woman and the brown-haired woman are positioned back-to-back, supporting each other's weight as they stretch their arms outward and upward in a joyful dance pose. Soft, diffused studio lighting illuminates the scene, casting gentle shadows and highlighting the neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 explicitly leans back against R1 in the dance pose",
+    "R1 is the dancer being leaned against by R2",
+    "R1 and R2 are positioned back-to-back",
+    "R1 and R2 support each other's weight while dancing",
+    "R1 and R2 stretch their arms outward and upward",
+    "the scene is a minimalist indoor studio with a plain light gray background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 explicitly leaning back against R1, rather than R1 being described as leaning back against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 explicitly leans back against R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer receiving R2's backward lean in the back-to-back pose, rather than R2 being the one explicitly receiving R1's lean?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is leaned against by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned back-to-back while supporting each other's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share back-to-back support"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stretch their arms outward and upward while maintaining the shared dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 extend their arms in the dance pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

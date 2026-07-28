@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__27919ce920e9__T4",
+  "instruction": "A candid wedding photograph in a medium shot captures a tender moment indoors. Against a white wall with floral arrangements, the groom in the dark suit (R1) stands on the left in profile, resting his left hand on the right shoulder of the bride in the strapless white gown (R2). The bride stands on the right, holding a pastel bouquet and looking up at him with a gentle smile. Her sheer veil drapes behind her. Soft, bright natural light illuminates the scene, creating a clean, romantic atmosphere with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his left hand on R2's right shoulder rather than R2 placing a hand on R1's shoulder",
+    "R2 receives R1's hand on her shoulder while looking up at him rather than R1 receiving R2's hand",
+    "R1 stands in profile facing R2 with his hand resting on her shoulder",
+    "R2 holds a pastel bouquet during the interaction",
+    "R2's sheer veil drapes behind her",
+    "The scene is indoors against a white wall with floral arrangements"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one resting his left hand on R2's right shoulder, rather than R2 resting a hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his left hand on R2's right shoulder rather than R2 placing a hand on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one receiving R1's hand on her shoulder while looking up at him, rather than R1 receiving R2's hand on his shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's hand on her shoulder while looking up at him rather than R1 receiving R2's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in profile facing R2 with his hand resting on her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile facing R2 with his hand resting on her shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a pastel bouquet during the scene?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a pastel bouquet during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

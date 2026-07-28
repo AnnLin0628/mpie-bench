@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T32",
+  "instruction": "A candid action photograph, medium close-up at eye-level, shows a judo grappling demonstration inside a brightly lit dojo. In the foreground, the middle-aged man in the white judo gi (R3) faces left with a focused expression. Positioned behind him, the young woman in the blue judo gi (R1) wraps her arm around his shoulder, executing a control hold. The background is softly blurred with bright natural light streaming in, creating a shallow depth of field and a clean, high-key lighting effect on the subjects.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 applies a control hold from behind R3",
+    "R1 wraps her arm around R3's shoulder rather than R3 doing so to R1",
+    "R3 is the person being controlled while R1 is the grappler behind him",
+    "R1 and R3 wear judo gi uniforms during the grappling demonstration",
+    "The interaction takes place inside a brightly lit dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned behind R3 and applying a control hold, rather than R3 applying a hold from behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 applies a control hold from behind R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arm around R3's shoulder to control him, rather than R3 wrapping his arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arm around R3's shoulder rather than R3 doing so to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person being controlled in the grappling demonstration while R1 is the grappler behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the person being controlled while R1 is the grappler behind him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 behind R3 with her arm around his shoulder during the judo demonstration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is behind R3 with arm around R3's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

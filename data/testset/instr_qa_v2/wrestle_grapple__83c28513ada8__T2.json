@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__83c28513ada8__T2",
+  "instruction": "Candid fitness photograph, full shot, high-angle diagonal view of an indoor gym with wooden stairs in the background. In the background, the woman in the black crop top (R1) is in a pike position with her hands on the floor, looking down. In the foreground, the woman in the blue tank top (R2) is in a plank position with her right hand on a red medicine ball, looking down. The two women are positioned diagonally on the wooden and rubber floor mats under bright overhead gym lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is in a pike position with her hands on the floor while R2 is not",
+    "R2 is in a plank position with her right hand on a red medicine ball while R1 is not",
+    "R1 looks down from a pike pose and R2 looks down from a plank pose",
+    "red medicine ball under R2's right hand",
+    "indoor gym with wooden stairs in the background",
+    "wooden and rubber floor mats under bright overhead gym lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in a pike position with her hands on the floor, rather than R2 being the one in that pike position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the pike exercise role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in a plank position with her right hand on a red medicine ball, rather than R1 being the one using the medicine ball in plank?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the plank-on-medicine-ball exercise role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep both hands on the floor while holding a pike body position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 hands-on-floor pike configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her right hand on the red medicine ball while holding a plank body position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 right-hand-on-ball plank configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__906857f24c03__T6",
+  "instruction": "Studio photograph, full shot. In an indoor studio with draped beige curtains, a shirtless man in black pants (R2) stands facing forward, supporting a woman in a beige sports bra and black shorts (R1). The woman balances in a side-lying split pose, her left leg extended horizontally and her right leg bent. The shirtless man holds her left thigh with his right hand and her raised left hand with his left hand. No bystanders are present. Soft studio lighting highlights their muscles against the neutral background.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's body weight while R1 balances in a side-lying split pose",
+    "R2 holds R1's left thigh with his right hand",
+    "R2 holds R1's raised left hand with his left hand",
+    "R1 is the woman performing the side-lying split pose while R2 stands facing forward as the support partner",
+    "The interaction takes place in an indoor studio with draped beige curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's body weight while R1 balances in the pose, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the support partner and R1 is the supported dancer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's left thigh with his right hand, rather than R1 holding R2's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's left thigh"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's raised left hand with his left hand, rather than R1 holding up R2's raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's raised left hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 balancing in a side-lying split pose while R2 stands facing forward as her support?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the split pose and R2 stands as the supporter"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

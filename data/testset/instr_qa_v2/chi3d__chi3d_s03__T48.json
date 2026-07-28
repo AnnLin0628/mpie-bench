@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T48",
+  "instruction": "Candid documentary photograph, full shot, eye-level. The setting is an indoor motion capture studio with a dark red carpet, white walls, and red partition screens. The man in the black polo shirt and blue shorts (R1) stands on the right, leaning forward slightly. The woman in the white t-shirt and blue jeans (R2) stands on the left, facing him. The man (R1) reaches out with his right hand to hold the woman's (R2) right wrist. Overhead indoor lighting illuminates the room, casting soft shadows on the carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches out with his right hand to hold R2's right wrist",
+    "R2 is the person whose right wrist is being held by R1",
+    "R1 is the active holder while R2 is the person being held at the wrist",
+    "R1 leans forward slightly toward R2 during the wrist contact",
+    "R1 and R2 face each other during the wrist-holding interaction",
+    "The setting is an indoor motion capture studio with a dark red carpet, white walls, and red partition screens"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching out with his right hand to hold R2's right wrist, rather than R2 reaching out to hold R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively holds R2's right wrist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose right wrist is being held by R1, rather than R1 being the person whose right wrist is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the wrist hold from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use his own right hand as the grasping hand on R2's wrist, rather than R2 using her right hand to grasp R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand is the grasping hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the active holder while R2 is the person being held at the wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct holder-versus-held contact roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean forward slightly toward R2 while making the wrist-holding contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward during contact with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

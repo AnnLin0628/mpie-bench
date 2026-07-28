@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__18c9492fd49d__T7",
+  "instruction": "A candid documentary photograph with a shallow depth of field, captured in a full shot at eye-level. On an outdoor wooden boardwalk with a metal railing, three friends are playfully dancing. On the left, the man in the orange t-shirt (R2) steps forward in black shorts and grey sneakers, looking down at the feet of the woman in the beige hoodie (R1) in the center. The woman in the beige hoodie (R1) steps forward in grey leggings and pink sneakers, looking down with a focused smile. On the right, the woman in the grey hijab (R3) steps forward in a pink jacket, white pants, and pink sneakers, also looking down at her feet. Soft, natural daylight with a warm tone highlights their expressions, while the right edge of the frame is softly blurred.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 looks down at R1's feet while stepping forward, rather than R1 looking at R2's feet",
+    "R3 looks down at her own feet while stepping forward, rather than directing attention to R1 or R2's feet",
+    "R1 is the centered dancer stepping forward with a focused smile while R2 attends to her footwork",
+    "R1, R2, and R3 are all stepping forward in a coordinated playful dance",
+    "the friends are on an outdoor wooden boardwalk with a metal railing",
+    "the photograph has shallow depth of field with the right edge softly blurred"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking down at R1's feet while stepping forward, rather than R1 being the one looking at R2's feet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attends to R1's footwork"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 looking down at her own feet while stepping forward, rather than R3 watching R1's or R2's feet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 monitors her own footwork"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the centered dancer stepping forward with a focused smile while R2 looks toward her feet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the central dancer whose footwork draws R2's attention"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, and R3 all stepping forward as part of the same playful dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 perform coordinated forward dance steps"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the friends dancing on an outdoor wooden boardwalk with a metal railing?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor wooden boardwalk with metal railing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__c523346d21de__T2",
+  "instruction": "A candid cinematic photograph in a medium close-up shot captures an outdoor night scene decorated with warm hanging fairy lights. On the left, the young man with short dark hair and sunglasses on his head (R2) wears a white button-up shirt covered in red lipstick prints, smiling warmly. On the right, the young woman with long wavy brown hair (R1) wears a white striped crop top and white trousers, looking at him with a playful smile. She reaches her hand up to gently touch his chin. He holds a bouquet of red and white roses in front of them. The background is softly blurred, illuminated by a warm golden glow from the fairy lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches up to gently touch R2's chin",
+    "R2 is the person whose chin is being touched by R1",
+    "R2 holds a bouquet in front of them",
+    "the bouquet contains red and white roses",
+    "R1 looks at R2 with a playful smile during the chin-touch interaction",
+    "the outdoor night scene has warm hanging fairy lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching her hand up to gently touch R2's chin, rather than R2 reaching up to touch R1's chin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the chin-touch contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one receiving the gentle chin touch from R1, rather than R1 receiving a chin touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's chin-touch gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the bouquet in front of them, rather than R1 holding the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the bouquet"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look at R2 with a playful smile while making the chin-touch gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's role is the playful toucher looking at R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet of roses being held in front of R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bouquet held in front of the pair"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Does the bouquet include red and white roses?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red and white roses in the bouquet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

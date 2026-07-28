@@ -1,0 +1,91 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T14",
+  "instruction": "A clean, bright lifestyle photograph with a medium shot of a minimalist white dance studio. On the right foreground, the young woman in the beige sports bra (R4) stands with her arms raised straight overhead, looking forward. In the background on the left, the blonde girl in the beige long-sleeve crop top (R5) stands with her arms raised forward and up, looking forward-left. They perform synchronized arm movements. Soft natural light from large windows illuminates the scene, creating a neutral beige and white palette.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 raises her arms straight overhead while R5 raises her arms forward and up",
+    "R4 looks forward while R5 looks forward-left during the synchronized movement",
+    "R4 and R5 perform synchronized arm movements",
+    "R4 stands in the foreground while R5 stands in the background",
+    "The scene is a clean, bright minimalist white dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the dancer with her arms raised straight overhead, rather than R5 being the one in that exact overhead pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the straight-overhead arm pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the dancer raising her arms forward and up, rather than R4 taking that forward-and-up arm position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the forward-and-up arm pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 look forward while R5 looks forward-left, rather than their gaze directions being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R5 have different gaze directions"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R4 and R5 both performing synchronized arm movements with their arms raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R5 perform synchronized raised-arm dance movements"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 positioned in the foreground while R5 is positioned farther back in the background during the dance movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is foreground dancer and R5 is background dancer"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

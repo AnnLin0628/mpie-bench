@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T8",
+  "instruction": "Candid documentary photograph, medium shot at eye-level with shallow depth of field. In a sunny outdoor park, the boy with glasses in a yellow t-shirt (R1) stands on the left with his arm around the shoulder of the boy with short brown hair in a light blue denim shirt (R5). Both boys face forward and smile happily at the camera. In the far background on the left, two blurred bystanders sit on the grass. The image is illuminated by warm, golden hour backlight with a soft lens flare.",
+  "n_person": 9,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 places his arm around R5's shoulder",
+    "R5 is the boy whose shoulder is encircled by R1's arm",
+    "R1 is the boy with glasses making the shoulder contact with R5",
+    "R5 faces forward and smiles while receiving R1's arm-around-shoulder contact",
+    "sunny outdoor park setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have his arm around R5's shoulder, rather than R5 having his arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the arm-around-shoulder contact on R5"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person whose shoulder is being held by R1's arm, rather than R1 being the one whose shoulder is held by R5's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 receives R1's arm-around-shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the boy with glasses who is making shoulder contact with R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled contact role as the arm-around-shoulder person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 facing forward and smiling while R1's arm rests around his shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's labeled role as the person receiving R1's shoulder contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

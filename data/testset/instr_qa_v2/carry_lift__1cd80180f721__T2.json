@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1cd80180f721__T2",
+  "instruction": "A candid outdoor photograph capturing a full-length shot of a couple on stone steps. On the left, the man in the white puffer jacket (R2) stands facing right, holding the woman in an embrace. On the right, the woman in the pink puffer jacket (R1) stands facing left, holding a bouquet of red roses up to her face, obscuring her features. They stand close together against a grey stone wall. The lighting is soft and natural, casting gentle shadows and emphasizing the bright red roses.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1 in an embrace",
+    "R1 holds a bouquet of red roses up to her own face",
+    "R2 embraces R1 while R1's hands are occupied with the bouquet",
+    "R1 and R2 stand close together facing one another",
+    "bouquet of red roses",
+    "outdoor stone steps against a grey stone wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding R1 in an embrace, rather than R1 being the one described as holding R2 in an embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 in an embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the bouquet of red roses up to her own face, rather than R2 holding the bouquet up to his face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a bouquet of red roses up to her own face"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's contact role involve embracing R1 while R1's hands are occupied with the bouquet at her face, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 while R1's hands are occupied with the bouquet"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together and facing one another while R2 holds R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together facing one another"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet of red roses being held up near a person's face?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bouquet of red roses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

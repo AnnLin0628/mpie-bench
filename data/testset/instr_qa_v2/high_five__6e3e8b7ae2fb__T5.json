@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__6e3e8b7ae2fb__T5",
+  "instruction": "Cinematic film still, medium shot. In a bright indoor hallway, the man in the brown cardigan (R1) kneels on the left, facing right. He places both hands gently on the shoulders of the boy in the white school shirt (R2), who stands on the right wearing a grey backpack. The man has a calm, supportive expression with closed eyes, while the boy looks down quietly. The background features a closed white door with a framed picture. Soft, cool daylight illuminates the scene from the side, casting gentle shadows and creating a tender, quiet atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places both hands on R2's shoulders rather than R2 placing hands on R1",
+    "R1 is kneeling while giving supportive shoulder contact to standing R2",
+    "R2 receives the shoulder touch from R1 while looking down quietly",
+    "R2 wears a grey backpack during the interaction",
+    "the scene is set in a bright indoor hallway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing both hands gently on R2's shoulders, rather than R2 placing both hands on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the shoulder contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the kneeling adult giving supportive contact to R2, rather than R2 kneeling to supportively touch R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels while supporting R2 with shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing and receiving R1's hands on his shoulders, rather than R1 standing and receiving R2's hands on his shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the standing recipient of the shoulder touch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have both hands on R2's shoulders while R2 looks down quietly?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's shoulders as R2 quietly receives the gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

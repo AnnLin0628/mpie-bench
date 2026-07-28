@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__d5d4c9392bea__T1",
+  "instruction": "Candid outdoor photograph, medium shot, low angle. In an autumn park, the bearded man in the tan hoodie (R2) kneels on the left, looking towards the young girl in the beige puffer coat (R1) who kneels on the right. Both are gathering fallen yellow leaves from the ground near a tree trunk. Warm natural sunlight illuminates the scene, creating a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is looking toward R1 while they kneel near the leaves",
+    "R1 is the young girl receiving R2's gaze during the leaf-gathering moment",
+    "R1 and R2 are both kneeling as they gather fallen leaves",
+    "fallen yellow leaves are being gathered from the ground",
+    "the scene is set in an autumn park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking toward R1 during the leaf-gathering moment, rather than R1 being described as looking toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is looking toward R1 while they kneel near the leaves"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young girl whom R2 is looking toward, rather than R2 being the person receiving R1's described gaze?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the young girl receiving R2's gaze during the leaf-gathering moment"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both kneeling and gathering fallen leaves from the ground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are both kneeling as they gather fallen leaves"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T4",
+  "instruction": "Cinematic wide shot of an indoor sports gym with a wooden floor. On the left, the man with the afro and goatee (R1), wearing a white t-shirt and grey sweatpants, stands leaning forward with his hands on his knees. On the right, the young girl in the pink tracksuit (R5) performs a split on the floor, her right arm raised straight up as she looks up at him. Natural light from side windows illuminates the gym, casting soft shadows on the polished floor.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R5 performs a split on the floor while R1 remains standing and leaning forward",
+    "R1 leans forward with his hands on his knees while R5 is the one in the floor split",
+    "R5 raises her right arm straight up during the split as she looks up at R1",
+    "R1 is the standing observer posture and R5 is the floor performer posture",
+    "R5 performs the split on a polished wooden gym floor",
+    "The scene is an indoor sports gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person performing a split on the floor while R1 remains standing and leaning forward, rather than R1 doing the split while R5 stands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 performs a split on the floor while R1 remains standing and leaning forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward with his hands on his knees while R5 is the one posed in a floor split, rather than R5 leaning on her knees while R1 is in the split?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward with his hands on his knees while R5 is the one in the floor split"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 raise her right arm straight up during her split as she looks up at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 raises her right arm straight up during the split as she looks up at R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in a standing, forward-leaning posture with his hands on his knees while R5 is in the floor-performance posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the standing observer posture and R5 is the floor performer posture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

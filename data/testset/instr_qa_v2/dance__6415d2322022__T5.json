@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__6415d2322022__T5",
+  "instruction": "Candid photographic medium shot of a cozy living room at night. On the left, the woman with short gray hair (R1) in a yellow shirt and beige vest slow-dances, smiling up at the man with glasses (R2) on the right, who wears a brown jacket and smiles back. They face each other, holding hands intimately. In the blurry foreground, two glasses of white wine sit on a table. Warm, soft indoor lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 smiles up at R2 while they slow-dance and hold hands",
+    "R2 smiles back at R1 as the partner she is looking up at",
+    "R1 and R2 face each other while holding hands intimately during the dance",
+    "R1 is the woman with short gray hair dancing opposite R2, the man with glasses",
+    "Two glasses of white wine sit on a table in the blurry foreground",
+    "The scene is a cozy living room at night with warm, soft indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner who smiles up at R2 during the hand-held slow dance, rather than R2 smiling up at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles up at R2 while they slow-dance and hold hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 smile back at R1 as she looks up at him, rather than R1 being the one smiling back at R2 looking up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles back at R1 as the partner she is looking up at"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while holding hands intimately during the slow dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other while holding hands intimately during the dance"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the woman with short gray hair dancing opposite R2, the man with glasses?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman with short gray hair dancing opposite R2, the man with glasses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

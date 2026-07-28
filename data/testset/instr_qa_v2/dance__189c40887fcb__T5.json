@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T5",
+  "instruction": "Cinematic film still, medium shot of a dimly lit hall with a stage background and a wall clock. On the left, the blonde man in a leather jacket (R1) poses with one hand on his hip and the other raised above his head, looking right. In the center, the dark-haired man in a white t-shirt and harness (R3) leans back with arms raised in a dance pose. On the right, the long-haired man in a mesh shirt (R2) stands with hand on hip, looking forward. The three dancers stand close together in a stylized group pose under cool blue ambient light with purple highlights.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 poses with one hand on his hip and the other raised above his head",
+    "R3 leans back with arms raised in a dance pose",
+    "R2 stands with a hand on his hip and looks forward",
+    "R1, R2, and R3 stand close together in a stylized group dance pose",
+    "The scene is a dimly lit hall with a stage background and a wall clock"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer posing with one hand on his hip and the other raised above his head, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises one hand above his head while posing with the other hand on his hip"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer leaning back with arms raised in a dance pose, rather than R1 or R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans back with arms raised in a dance pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer standing with a hand on his hip and looking forward, rather than R1 or R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with hand on hip and looks forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 hold the leaned-back, arms-raised dance pose while R1 and R2 pose close nearby as part of the same stylized group formation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the leaned-back arms-raised role within the close group dance pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

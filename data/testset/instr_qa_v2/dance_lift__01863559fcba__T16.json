@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T16",
+  "instruction": "A clean, bright lifestyle photograph with a medium shot of a minimalist white dance studio. On the right foreground, the young woman in the beige sports bra (R4) stands with her arms extended straight out to the sides, looking forward. In the background on the left, the blonde girl in the beige long-sleeve crop top (R5) stands with her arms raised straight overhead, looking forward. They perform synchronized arm stretches. Soft natural light from large windows illuminates the scene, creating a neutral beige and white palette.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 has her arms extended straight out to the sides while R5 has her arms raised straight overhead",
+    "R5 has her arms raised straight overhead rather than R4",
+    "R4 performs the side-arm stretch and R5 performs the overhead-arm stretch",
+    "R4 and R5 are performing synchronized arm stretches",
+    "the scene is a minimalist white dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person extending her arms straight out to the sides, rather than R5 doing that same side-arm pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the side-arm stretch role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person raising her arms straight overhead, rather than R4 being the one with arms overhead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the overhead-arm stretch role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 hold a stretch with both arms extended horizontally out to her sides while looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 body configuration during the stretch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 hold a stretch with both arms raised straight above her head while looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 body configuration during the stretch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

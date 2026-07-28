@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T6",
+  "instruction": "Candid studio medium shot in a minimalist indoor setting with a plain gray background. On the left, the long-haired person in a green shirt (R2) stands in profile, looking up. On the right, the blonde-haired man in a gray shirt (R1) stands facing slightly left, looking down at the long-haired person with a gentle smile. Soft, bright studio lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks down toward R2",
+    "R2 looks up toward R1",
+    "R1 faces slightly toward R2 with a gentle smile",
+    "R2 stands in profile while looking up",
+    "plain gray studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking down toward R2, rather than R2 looking down toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking up toward R1, rather than R1 looking up toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks up toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": true
+  }
+}

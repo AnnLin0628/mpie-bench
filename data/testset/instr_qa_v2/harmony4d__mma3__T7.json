@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T7",
+  "instruction": "Candid action photograph, full shot. Inside a martial arts gym with grey padded walls, the man in the black t-shirt (R1) on the left and the shirtless man with a mullet (R2) on the right spar with their backs partially turned. The man in the black t-shirt (R1) delivers a low kick that connects with the thigh of the shirtless man (R2), who tenses to absorb the impact. Both wear white shin guards. In the background, blurred figures stand near large windows. Bright, natural light from the background mixes with overhead gym lighting on the grey floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 delivers a low kick that connects with R2's thigh",
+    "R2 tenses to absorb the impact from R1's kick",
+    "R1 is the active kicker while R2 is the kick recipient during sparring",
+    "Both R1 and R2 wear white shin guards",
+    "The sparring takes place inside a martial arts gym with grey padded walls",
+    "Blurred background figures stand near large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 delivering a low kick to R2's thigh, rather than R2 delivering a low kick to R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active kicker and R2 is the person being kicked"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 tensing to absorb the impact from R1's kick, rather than R1 tensing to absorb a kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 absorbs the impact caused by R1's low kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's low kick make contact with R2's thigh, rather than R2's low kick making contact with R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's kicking leg contacts R2's thigh"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sparring with R1 in the kicking role and R2 in the impact-receiving role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct sparring contact roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma5__T7",
+  "instruction": "A candid action photograph with an eye-level full shot of an indoor gym with gray mats. On the left, the man in the gray t-shirt (R2) stands in a defensive stance, facing right. On the right, the man in the black and yellow athletic wear (R1) lunges forward dynamically, throwing a punch. The lunging man (R1) extends his right arm to punch while the standing man (R2) raises his gloved hands to block the strike. The background features several camera tripods against a gray wall with no bystanders visible. The scene is lit by neutral overhead gym lights, maintaining a cool gray color scheme.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lunges forward and throws a punch toward R2",
+    "R2 raises his gloved hands to block R1's punch",
+    "R1 is the attacker extending his right arm while R2 is the defender",
+    "R2 uses gloves as the contact-relevant blocking objects",
+    "The interaction takes place in an indoor gym with gray mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lunging forward to throw a punch at R2, rather than R2 lunging forward to punch R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the puncher and R2 is the target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 raise his gloved hands to block R1's strike, rather than R1 blocking a strike from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the defensive blocking duty against R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his right arm as the attacker while R2 stays in a defensive stance, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks with an extended right arm while R2 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned as the defender with his hands raised toward the incoming punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is blocking R1's punch"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown in a dynamic lunging posture aimed toward R2 during the striking action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is a forward lunge toward R2"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the action take place in an indoor gym with gray mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor gym setting with gray mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T33",
+  "instruction": "A candid documentary photograph in a medium shot captures a grassy outdoor park with trees in the background. The bald man in the dark blue t-shirt (R2) stands on the left, holding a framed certificate and looking down at it with a smile. Facing him on the right is the woman with the large afro (R6), wearing a red t-shirt and blue jeans, shown from behind as she presents the award. They are interacting closely over the certificate in a warm, natural daylight setting with soft shadows and a shallow depth of field.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R6 presents the award/certificate to R2 rather than R2 presenting it to R6",
+    "R2 is the recipient holding and looking down at the framed certificate while R6 presents it",
+    "R6 faces R2 from behind in the presenter role during the award interaction",
+    "R2 holds the framed certificate during the close interaction with R6",
+    "a framed certificate or award is the contact-relevant object",
+    "the interaction takes place in a grassy outdoor park with trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 presenting the award or framed certificate to R2, rather than R2 presenting it to R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 presents the award/certificate to R2 rather than R2 presenting it to R6"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding and looking down at the framed certificate as the recipient, rather than R6 being the recipient holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient holding and looking down at the framed certificate while R6 presents it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R6 have the presenter role toward R2 in the award interaction, rather than R2 having the presenter role toward R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 faces R2 from behind in the presenter role during the award interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold the framed certificate while interacting closely with R6 over it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the framed certificate during the close interaction with R6"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

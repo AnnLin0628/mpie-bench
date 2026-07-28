@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__13ca6a563768__T5",
+  "instruction": "Candid photographic medium shot of a boxing gym with a gray concrete wall. On the left, the blonde woman in the purple cropped hoodie (R2) stands in a defensive boxing stance with brown gloves raised. On the right, the man in the orange beanie (R1) stands facing her, smiling warmly. They are positioned opposite each other, preparing for training. Soft overhead lighting illuminates the scene, highlighting the neutral tones and the colorful athletic wear.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds the defensive boxing role with brown gloves raised, rather than R1",
+    "R1 faces R2 as the smiling training partner while R2 is in the boxing stance",
+    "R2 stands opposite R1 preparing for boxing training",
+    "brown boxing gloves are worn by R2",
+    "the scene is set in a boxing gym with a gray concrete wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person in a defensive boxing stance with brown gloves raised, rather than R1 being the one in that guarded stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the defensive boxing role with brown gloves raised, rather than R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the smiling training partner facing R2 while R2 keeps her boxing guard raised, rather than R2 being the smiling partner while R1 keeps the guard raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 as the smiling training partner while R2 is in the boxing stance"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned opposite each other preparing for boxing training, with R2 taking the guarded boxing stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands opposite R1 preparing for boxing training"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

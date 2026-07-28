@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__e48df733f851__T3",
+  "instruction": "Candid medium close-up of two young girls in a sunny park. On the left, the curly-haired girl in a white cardigan and reddish-brown overalls (R1), wearing a dark blue hair bow, leans her head affectionately on R2's shoulder while smiling. On the right, the girl with a pink headband in a blue shirt and pink cardigan (R2) stands smiling warmly at the camera, wrapping her arm around R1's back. Warm, bright backlighting glows through the background trees.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans her head affectionately on R2's shoulder",
+    "R2 provides the shoulder contact for R1's head lean",
+    "R2 wraps her arm around R1's back",
+    "R1 smiles while leaning against R2",
+    "R2 smiles warmly at the camera",
+    "the scene is a sunny park with warm backlighting through trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning her head on R2's shoulder, rather than R2 leaning her head on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the affectionate head lean onto R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 provide the shoulder that R1 rests her head on, rather than R1 providing the shoulder for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the shoulder-contact recipient for R1's head lean"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping her arm around R1's back, rather than R1 being the one described as wrapping an arm around R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places an arm around R1's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the girl whose head is resting affectionately against R2 while smiling?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role is the leaning girl"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing warmly at the camera while keeping her arm around R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is the arm-around-back girl"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

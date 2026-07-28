@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__07ab0f9247c2__T5",
+  "instruction": "Candid documentary photograph, medium close-up, low-angle shot. In a sunny outdoor setting with a clear blue sky, the man in the white t-shirt (R1) stands on the left in profile, smiling as he looks up. He holds the girl in the white t-shirt (R3) closely in his arms. The girl (R3) is positioned on the right with her back to the camera, her arms wrapped around his neck. Bright direct sunlight illuminates them against the vibrant blue sky.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 supports R3 closely in his arms",
+    "R3 is the one being held by R1 rather than supporting him",
+    "R3 wraps her arms around R1's neck while R1 holds her",
+    "R1 is smiling and looking upward while holding R3",
+    "The scene is outdoors under bright sunlight with a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R3 closely in his arms, rather than R3 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R3 closely in his arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person being held by R1, rather than R1 being held by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the one being held by R1 rather than supporting him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R3's arms wrapped around R1's neck while R1 holds her, rather than R1 wrapping his arms around R3's neck while she holds him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arms around R1's neck while R1 holds her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding R3 close to his body as part of their contact pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3 close to his body"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned with her back to the camera while in R1's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is held in R1's arms with her back to the camera"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

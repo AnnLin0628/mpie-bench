@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T19",
+  "instruction": "Candid action photograph, medium full shot, eye-level. In an indoor studio, the man in the white gi (R1) is in the foreground with his back to the camera, kneeling on the mat. The man in the gray gi (R2) sits in the background, looking down and wrapping his arm around the neck of the man in the white gi (R1). Bright natural light streams from a window behind them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps his arm around R1's neck rather than R1 wrapping his arm around R2's neck",
+    "R1 is the kneeling person with his back to the camera while R2 sits behind him in the background",
+    "R1 is the person being neck-wrapped by R2",
+    "R2 sits while maintaining arm contact around R1's neck",
+    "R1 kneels on a mat during the grappling interaction",
+    "The scene is set in an indoor studio with light from a window behind them"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his arm around R1's neck, rather than R1 wrapping his arm around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the neck-wrap contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the kneeling person with his back to the camera while R2 sits behind him, rather than R2 kneeling with his back to the camera while R1 sits behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels in front while R2 sits behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 kneel on the mat as the person whose neck is being wrapped by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's kneeling recipient role in the grappling contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 sit in the background while maintaining arm contact around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's seated neck-control role"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 kneeling on a mat during the grappling interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "mat used as the contact surface"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

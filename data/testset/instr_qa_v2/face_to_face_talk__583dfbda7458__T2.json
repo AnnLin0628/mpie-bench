@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__583dfbda7458__T2",
+  "instruction": "Candid medium shot of a bright indoor living room. On a dark couch, the woman in the blue t-shirt and beige pants (R2) sits on the left, facing right and gesturing with her hands held close together. Opposite her, the woman in the white dress with black sleeves (R1) sits on the right, facing left and gesturing with raised hands. They are actively conversing. The background has large windows and potted plants. Bright natural light fills the room, highlighting the neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gestures with raised hands while conversing with R2",
+    "R2 gestures with hands held close together while conversing with R1",
+    "R1 and R2 sit opposite each other in a face-to-face conversation",
+    "R1 and R2 are seated on a dark couch",
+    "The setting is a bright indoor living room with large windows and potted plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one gesturing with raised hands while R2 gestures with hands held close together, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the raised-hand gesturing role while R2 has the close-hands gesturing role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one gesturing with her hands held close together while facing R1, rather than R1 being the one with hands held close together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with hands held close together in the conversation"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face R2 while using raised-hand gestures, rather than R2 being the participant using raised-hand gestures?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 and uses raised-hand gestures"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated opposite each other while actively conversing face to face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have a face-to-face seated conversation configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated while gesturing toward R1 with her hands close together during the conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's seated conversational gesture role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

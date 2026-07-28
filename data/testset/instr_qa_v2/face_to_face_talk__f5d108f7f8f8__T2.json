@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__f5d108f7f8f8__T2",
+  "instruction": "Candid medium shot of a man in an orange beanie (R2) and a woman in a purple cropped hoodie (R1) laughing together in a gym. The man (R2) stands on the left in a white t-shirt, looking right with a wide smile. The woman (R1) stands on the right, laughing heartily with her head tilted down and her hand on her hip. They are positioned in a brightly lit fitness studio with yellow walls and hanging straps. The shot features a shallow depth of field, emphasizing their joyful moment.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks toward R1 with a wide smile",
+    "R1 laughs with her head tilted down and her hand on her hip",
+    "R1 and R2 are sharing a joyful face-to-face moment without a support/carrying role",
+    "hanging straps are visible in the gym",
+    "the interaction takes place in a brightly lit fitness studio with yellow walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking toward R1 with a wide smile, rather than R1 doing that toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks toward R1 with a wide smile"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one laughing heartily with her head tilted down and her hand on her hip, rather than R2 having that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs with her head tilted down and hand on hip"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": true
+  }
+}

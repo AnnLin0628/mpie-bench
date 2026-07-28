@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ebc6d42f8851__T1",
+  "instruction": "Candid documentary photograph, medium full shot from a low angle looking up an indoor marble staircase. A man with dark curly hair (R2) in a gray blazer and black pants stands on a lower step, wearing a tan backpack and pointing at a notebook. A woman with ginger hair (R1) wearing glasses, a dark blazer, and tan pants stands on a higher step, holding the open black notebook and looking down at him. They interact closely on the stairs. The background is brightly lit from above, creating a high-contrast, overexposed upper frame with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the open black notebook while R2 points at it",
+    "R2 is the pointer toward the notebook and R1 is the notebook holder",
+    "R1 stands on a higher stair looking down toward R2 while R2 stands on a lower stair",
+    "R1 and R2 interact closely face-to-face on the stairs",
+    "an open black notebook is central to the interaction",
+    "the setting is an indoor marble staircase"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the open black notebook while R2 points at it, rather than R2 holding the notebook while R1 points?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the open black notebook while R2 points at it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person making the pointing gesture toward the notebook that R1 holds open?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the pointer toward the notebook and R1 is the notebook holder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing on a higher stair and looking down toward R2, rather than R2 standing higher and looking down toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands on a higher stair looking down toward R2 while R2 stands on a lower stair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand on a lower step engaging with R1 while pointing at the notebook she is holding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on a lower step and points at the notebook held by R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 interacting on an indoor marble staircase?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the setting is an indoor marble staircase"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

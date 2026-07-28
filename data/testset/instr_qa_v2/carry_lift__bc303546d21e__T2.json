@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__bc303546d21e__T2",
+  "instruction": "A wide-angle candid outdoor photograph of a yoga session in a sunny, grassy park. On the left, the woman in the gray t-shirt and green pants (R1) stands on a black mat, holding a steady Warrior II yoga pose and looking to the left. On the right, the bearded man in the dark green t-shirt and gray shorts (R2) mirrors her on his own black mat, maintaining the same Warrior II pose while looking left. The pair practice their outdoor yoga routine side-by-side under bright, natural daylight that casts soft shadows across the green lawn.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 mirrors R1's Warrior II yoga pose",
+    "R1 is the pose model being mirrored by R2",
+    "R1 stands in a steady Warrior II pose while R2 maintains the same pose",
+    "R1 and R2 practice yoga side-by-side on separate black mats",
+    "black yoga mats under each person",
+    "sunny grassy park setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 mirroring R1's Warrior II yoga pose, rather than R1 mirroring R2's pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 mirrors R1's yoga pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose steady Warrior II pose is being matched by R2, rather than R2 being the pose source matched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the pose model being mirrored by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a steady Warrior II pose while R2 maintains the same Warrior II pose beside her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both maintain Warrior II yoga poses"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 each practicing yoga on their own separate mat rather than sharing one mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 practice on separate mats"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black yoga mat under R1 as she holds her pose?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black yoga mat under R1"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black yoga mat under R2 as he mirrors the pose?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black yoga mat under R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

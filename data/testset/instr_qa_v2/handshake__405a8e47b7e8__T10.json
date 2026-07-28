@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__405a8e47b7e8__T10",
+  "instruction": "Candid documentary photograph, medium shot. In a bright indoor workshop, the man with the afro (R2) in a gray button-down shirt stands on the left, looking down as he lifts a cardboard tube container off a wooden table. On the right, the man in the rust-red turtleneck and green apron (R3) stands opposite him, leaning forward slightly with his left hand on the table, watching with a smile. A laptop and colorful glass vases are visible on the left side of the table. Natural light from a window illuminates the scene, casting soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 lifts a cardboard tube container off a wooden table",
+    "R3 watches R2 with a smile rather than lifting the container himself",
+    "R3 leans forward with his left hand on the table while observing",
+    "the cardboard tube container is the handled object",
+    "a wooden table supports the objects in the interaction",
+    "the scene is a bright indoor workshop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person lifting the cardboard tube container off the wooden table, rather than R3 doing the lifting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lifts the container instead of R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 watching with a smile while R2 handles the cardboard tube container, rather than R2 merely watching R3 handle it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 observes while R2 performs the object-handling action"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 lean forward with his left hand on the table as he observes R2's action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's observing posture at the table"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look down toward the cardboard tube container while lifting it from the table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's active lifting posture and gaze"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

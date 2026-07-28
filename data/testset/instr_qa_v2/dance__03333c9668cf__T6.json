@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03333c9668cf__T6",
+  "instruction": "A cinematic medium shot still of a bright indoor dance studio with large arched windows. On the left, the man in the blue t-shirt and pink shorts (R2) is shown in profile facing right, holding his arms bent in an active aerobics pose. On the right, the woman in the light blue leotard and white tights (R1) stands in profile facing right, extending her arms forward to clap. The man and the woman perform synchronized dance moves back-to-back. Soft, natural daylight illuminates the scene with a clean, balanced color palette.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 extends her arms forward to clap during the dance, while R2 does not take that clapping role",
+    "R2 holds his arms bent in an active aerobics pose, while R1 takes the forward-clapping role",
+    "R1 and R2 perform different but synchronized dance actions rather than swapping those actions",
+    "R1 and R2 are positioned back-to-back while dancing",
+    "The scene is a bright indoor dance studio with large arched windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending her arms forward to clap, rather than R2 being the one doing the forward clap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the forward-clapping dance duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding his arms bent in an active aerobics pose, rather than R1 holding that bent-arm aerobics pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the bent-arm aerobics pose duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the synchronized dance, does R1 clap forward while R2 keeps a bent-arm aerobics pose, rather than their dance actions being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 keep distinct unswapped dance actions"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face right in profile with bent arms while R1 faces right in profile and reaches forward to clap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R1 have specified profile dance configurations"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

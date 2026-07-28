@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T7",
+  "instruction": "Candid medium shot of a man in a gray suit (R1) and a woman in a black dress (R2) dancing tango indoors. Against a plain white background, they stand close, holding hands near their chests with soft, neutral lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the male tango partner in a gray suit dancing with R2",
+    "R2 is the female tango partner in a black dress dancing with R1",
+    "R1 and R2 stand close together while dancing tango",
+    "R1 and R2 hold each other's hands near their chests",
+    "the dance occurs indoors against a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the gray suit dancing tango with R2, rather than R2 being the man in the gray suit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the male tango partner in a gray suit"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the black dress dancing tango with R1, rather than R1 being the woman in the black dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the female tango partner in a black dress"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together as tango partners while holding hands near their chests?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close and hold hands during the tango"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold hands with R2 near chest height as part of their tango dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds hands with R2 near their chests"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

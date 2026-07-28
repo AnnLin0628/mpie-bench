@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__b225f6834ddf__T3",
+  "instruction": "Candid lifestyle medium shot in a bright room. The older woman in a maroon cardigan (R2) sits on the left, looking right and smiling at the young woman in a red dress (R1), who stands on the right. The young woman (R1) holds the older woman's arm affectionately as they share a warm look. A wooden table with a red pouch is in the foreground, lit by soft window light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is standing while holding R2's arm affectionately",
+    "R2 is seated and has her arm held by R1",
+    "R2 smiles toward R1 as they share a warm look",
+    "a wooden table with a red pouch is in the foreground",
+    "the scene is in a bright room with soft window light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding R2's arm affectionately, rather than R2 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the seated person whose arm is being held by standing R1, rather than R1 being seated with R2 holding her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seated while R1 stands and holds R2's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand beside R2 while making affectionate contact with R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's standing contact role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

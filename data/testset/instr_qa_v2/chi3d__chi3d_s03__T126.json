@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T126",
+  "instruction": "Candid wide-angle photograph in a motion capture studio with a red carpet and white pillars. The man in the dark polo shirt and blue shorts (R1) stands on the left facing forward. The woman in the white t-shirt and blue jeans (R2) stands on the right facing away, reaching out to touch his shoulder. Bright overhead lights illuminate the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches out to touch R1's shoulder rather than R1 reaching to touch R2's shoulder",
+    "R1 is the shoulder-touch recipient while R2 is the person initiating the touch",
+    "R2 extends an arm toward R1's shoulder as R1 remains the contact target",
+    "R1 faces forward while R2 faces away during the shoulder-touch interaction",
+    "motion capture studio setting with a red carpet and white pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching out to touch R1's shoulder, rather than R1 reaching out to touch R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches out to touch R1's shoulder rather than R1 reaching to touch R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being touched by R2, rather than R2 being the shoulder-touch recipient?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the shoulder-touch recipient while R2 is the person initiating the touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend an arm toward R1's shoulder while R1 remains the contact target?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends an arm toward R1's shoulder as R1 remains the contact target"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face forward while R2 faces away during their shoulder-touch interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces forward while R2 faces away during the shoulder-touch interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

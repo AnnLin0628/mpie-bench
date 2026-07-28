@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__71ba2ba4a6da__T6",
+  "instruction": "Candid romantic photograph, medium close-up. Sunny outdoor field with blurred trees. The woman with long brown hair (R1) in a sherpa-lined denim jacket is on the right, looking down with a joyful, open-mouthed smile. The man with short dark hair and a beard (R2) in a matching denim jacket is on the left, looking up at her. The woman cradles the man's head with her left hand as they share a close, happy embrace. Warm, bright natural sunlight provides soft backlighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 cradles R2's head with her left hand",
+    "R2 is the person whose head is being cradled by R1",
+    "R1 looks down toward R2 while R2 looks up toward R1",
+    "R1 and R2 share a close happy embrace with R1's hand on R2's head",
+    "sunny outdoor field with blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one cradling R2's head with her left hand, rather than R2 cradling R1's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 cradles R2's head with her left hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the head-cradling touch from R1, rather than R1 receiving that touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose head is being cradled by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down toward R2 while R2 looks up toward R1, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down toward R2 while R2 looks up toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 in a close happy embrace with R1's hand placed on R2's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share a close happy embrace with R1's hand on R2's head"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

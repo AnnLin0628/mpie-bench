@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T82",
+  "instruction": "A candid medium shot of three friends sitting on a grassy park lawn during the day. On the left, the woman in a black beanie (R5) in a red t-shirt and blue jeans sits on the grass, smiling as she cradles a large white inflatable bowling pin. Behind her, the woman with tied-back hair (R4) in a dark blue t-shirt smiles warmly. On the right, the bald man (R2) in a dark blue t-shirt and black pants sits on the grass, raising another white inflatable bowling pin with a playful expression. Bright, natural daylight casts soft shadows across the green lawn.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R5 cradles a large white inflatable bowling pin while sitting on the grass",
+    "R2 raises another white inflatable bowling pin playfully while sitting on the grass",
+    "R4 is positioned behind R5 and smiles warmly",
+    "large white inflatable bowling pins are the contact-relevant props",
+    "the friends are on a grassy park lawn in daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 cradling a large white inflatable bowling pin, rather than R2 cradling that pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the person cradling the inflatable bowling pin"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 raising a white inflatable bowling pin playfully, rather than R5 raising that same pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person raising an inflatable bowling pin"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5 hold her inflatable bowling pin close in a cradling pose while R2 holds his inflatable bowling pin up, rather than their prop-handling roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 cradles a pin while R2 raises a different pin"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 positioned behind R5 while R5 sits with the inflatable bowling pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is behind R5 as R5 sits with the prop"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__8104374518b6__T3",
+  "instruction": "Corporate office photograph, medium shot. In a modern office meeting room, the woman with long brown hair (R1) is seated on the left in a beige blazer, looking towards her colleague with her hand resting near an open laptop. The woman with short blonde hair (R2) is seated on the right in a light blue blazer, her hands clasped on the wooden table as she listens. Soft indoor lighting illuminates the cool-toned room with grey curtains in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman looking toward R2 with her hand resting near an open laptop",
+    "R2 is the woman listening with her hands clasped on the wooden table",
+    "R1 and R2 are seated colleagues in a meeting-room conversation, with R1 oriented toward R2",
+    "an open laptop is near R1 on the table",
+    "a wooden table is in front of the seated colleagues",
+    "the setting is a modern office meeting room with grey curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking toward R2 with her hand resting near an open laptop, rather than R2 doing that toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman looking toward R2 with her hand resting near an open laptop"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person listening with her hands clasped on the wooden table, rather than R1 being the one with clasped hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman listening with her hands clasped on the wooden table"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated at the table in a listening posture with clasped hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman listening with her hands clasped on the wooden table"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

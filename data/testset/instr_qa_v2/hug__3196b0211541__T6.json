@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3196b0211541__T6",
+  "instruction": "Studio portrait photograph, medium shot. Against a solid light blue background, three women hug. On the left, the Asian woman in a beige tank top (R1) smiles towards the center, placing her hand on the shoulder of the curly-haired woman in a beige tank top (R2). The curly-haired woman closes her eyes with a warm smile. On the right, the afro-haired woman in a beige tank top (R3) smiles widely at the camera while hugging the curly-haired woman from behind. Soft studio lighting highlights their expressions.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 places her hand on R2's shoulder",
+    "R3 hugs R2 from behind",
+    "R2 is the central recipient of contact from R1 and R3",
+    "R1 smiles toward R2 while touching her shoulder",
+    "solid light blue studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing her hand on R2's shoulder, rather than R2 placing her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places her hand on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman being embraced from behind by R3, rather than R3 being the woman embraced from behind by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central recipient of contact from R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile toward R2 while making shoulder contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles toward R2 while touching her shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__8a5015fe6522__T2",
+  "instruction": "Cinematic film still, medium close-up. Inside a vintage camper van with a wooden ceiling, the blonde woman in a beaded white wedding dress (R1) is on the left foreground, looking slightly up and to the right. Behind her on the right, the brunette woman in a ruffled white wedding dress (R2) sits closely, looking off-camera to the right. Warm interior light illuminates them against the cool blue tones of the background window.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is in the foreground while R2 is behind her",
+    "R2 sits closely behind R1",
+    "R1 looks slightly up and to the right while R2 looks off-camera to the right",
+    "R1 and R2 are seated closely inside the camper van",
+    "the setting is inside a vintage camper van with warm interior lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned in the foreground with R2 behind her, rather than R2 being in the foreground with R1 behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in the foreground while R2 is behind her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 sit closely behind R1, rather than R1 sitting closely behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits closely behind R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated closely together, with R2 placed behind R1 rather than taking R1's foreground position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated closely inside the camper van"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

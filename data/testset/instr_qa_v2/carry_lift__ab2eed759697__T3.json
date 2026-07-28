@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__ab2eed759697__T3",
+  "instruction": "Candid lifestyle medium shot of a man in a purple hoodie (R1) holding a young boy in a light green sweatshirt (R2) outdoors by a wooden house. The man (R1) stands on the left, looking upwards, while holding the boy (R2) on the right. The boy (R2) looks forward with a neutral expression, his arms crossed. Soft natural daylight illuminates the scene, highlighting the pastel colors of their clothing.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds and supports R2 rather than R2 holding R1",
+    "R2 is the young boy being carried or held by R1",
+    "R1 remains the standing supporter while R2 is supported off or against him",
+    "R2 has his arms crossed while being held by R1",
+    "The pair is outdoors by a wooden house"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and supporting R2, rather than R2 holding and supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds and supports R2 rather than R2 holding R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being carried or held by R1, rather than R1 being carried or held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young boy being carried or held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 serve as the standing supporter for R2, rather than R2 serving as the standing supporter for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains the standing supporter while R2 is supported off or against him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned as the boy being held by R1 while keeping his arms crossed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his arms crossed while being held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

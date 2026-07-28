@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T72",
+  "instruction": "Candid documentary wide shot of an indoor motion capture studio with a red carpet. The man in the black polo shirt and blue shorts (R1) stands on the left, facing right, shaking right hands with the woman in the white t-shirt and blue jeans (R2) who stands on the right facing left in a three-quarters back view. Even overhead lighting illuminates the scene, highlighting the neutral tones and the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces right toward R2 during the handshake",
+    "R2 faces left toward R1 and is seen in a three-quarters back view",
+    "R1 and R2 clasp right hands with each other",
+    "R1 and R2 are the direct contact pair",
+    "indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant shown in a three-quarters back view while shaking R1's right hand, rather than R1 being the one described in a three-quarters back view?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric camera-facing body view during the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 directly clasping each other's right hands as their point of contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "right-hand-to-right-hand contact role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 an active participant in the hand contact with R2, rather than merely standing nearby without touching R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directly participates in the contact with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

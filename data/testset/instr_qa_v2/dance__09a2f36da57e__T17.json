@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T17",
+  "instruction": "Cinematic wide shot of a dance studio with a dark wall and wooden floor. In the foreground right, a bearded man in a brown shirt (R1) is on all fours, supporting a woman with a hair bun in a yellow shirt (R2) who balances horizontally on his back with legs extended. In the background left, a short-haired man in a brown shirt (R3) similarly supports a woman with a ponytail in a yellow shirt (R4) balancing on his back. Warm spotlight from the top right casts soft shadows on the floor.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 supports R2's weight from below while on all fours",
+    "R2 balances horizontally on R1's back with legs extended",
+    "R3 supports R4's weight from below while R4 balances on his back",
+    "R4 balances horizontally on R3's back",
+    "dance studio setting with a dark wall and wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 on all fours supporting R2's weight from below, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight from below while on all fours"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing horizontally on R1's back, rather than R1 balancing on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances horizontally on R1's back with legs extended"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 supporting R4 on his back, rather than R4 supporting R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 supports R4's weight from below while R4 balances on his back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned on all fours while R2 lies balanced across his back with her legs extended?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight from below while on all fours"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 the person balancing on R3's back while R3 acts as the base?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 balances horizontally on R3's back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

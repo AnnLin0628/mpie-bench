@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__1b1283168357__T2",
+  "instruction": "Candid full-length documentary photograph of an outdoor concrete pathway with a chain-link fence in soft daylight. On the left, the blonde woman in a white dress (R2) walks forward holding a bouquet, smiling joyfully at her partner. On the right, the person with the shaved head in a black dress (R1) walks closely beside her, leaning in to look affectionately at her face. They walk hand-in-hand, sharing an intimate moment under soft, natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans in to look affectionately at R2's face while they walk together",
+    "R2 smiles joyfully at R1 while walking forward",
+    "R2 holds the bouquet while walking hand-in-hand with R1",
+    "R1 and R2 walk hand-in-hand closely beside each other",
+    "A bouquet is carried by R2",
+    "They are on an outdoor concrete pathway with a chain-link fence"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one leaning in to look affectionately at R2's face, rather than R2 leaning in to look at R1's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans in toward R2's face"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the bouquet while walking with R1, rather than R1 holding the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the bouquet"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 smiling joyfully at R1 while R1 leans in toward her, rather than R1 being the smiling bouquet-holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles at R1 while R1 leans in"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking closely together while holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk hand-in-hand"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk beside R2 while directing affectionate attention toward R2's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks beside R2 and looks at her face"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet being carried by R2 during the hand-in-hand walk with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "bouquet held by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

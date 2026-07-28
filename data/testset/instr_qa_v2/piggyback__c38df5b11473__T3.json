@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__c38df5b11473__T3",
+  "instruction": "Candid outdoor photograph, low-angle medium selfie shot. In a mountainous landscape, a blonde woman in a blue checkered shirt (R2) on the left and a bearded man in a red plaid shirt (R1) on the right celebrate. Both wear sunglasses and cheer with open mouths, holding their joined hands high in the air. Bright daylight under a cloudy sky.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 actively raises his joined hand with R2 during the celebration",
+    "R2 actively raises her joined hand with R1 during the celebration",
+    "R1 and R2 hold their hands joined together high in the air",
+    "R1 and R2 cheer with open mouths while maintaining the raised hand contact",
+    "both R1 and R2 wear sunglasses",
+    "the celebration takes place outdoors in a mountainous landscape"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 actively holding the joined hands high together with R2, rather than R1 being uninvolved while only R2 raises a hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively raises his joined hand with R2 during the celebration"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 actively holding the joined hands high together with R1, rather than R2 being uninvolved while only R1 raises a hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively raises her joined hand with R1 during the celebration"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected by their joined hands raised high in the air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold their hands joined together high in the air"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 cheer with open mouths while keeping their hands joined overhead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 cheer with open mouths while maintaining the raised hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

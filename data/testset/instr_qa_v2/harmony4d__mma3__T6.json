@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T6",
+  "instruction": "Candid action photograph, full shot. Inside a martial arts gym with grey padded walls, the shirtless man with a mullet (R2) on the left and the man in the black t-shirt (R1) on the right spar. The man in the black t-shirt (R1) balances on one leg to deliver a high right kick. The shirtless man (R2) lifts his left knee to block the incoming kick, holding his white boxing gloves up defensively. Both wear protective white shin guards and glasses. The background is clear of bystanders. Neutral overhead gym lighting illuminates the grey floor mats.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 balances on one leg to deliver a high right kick toward R2",
+    "R2 lifts his left knee to block R1's incoming kick",
+    "R2 keeps his white boxing gloves raised defensively while facing R1's kick",
+    "R1 is the attacking kicker while R2 is the defensive blocker",
+    "white boxing gloves are used as defensive sparring gear",
+    "both R1 and R2 wear protective white shin guards",
+    "the sparring occurs inside a martial arts gym with grey padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on one leg to deliver a high right kick toward R2, rather than R2 delivering that high kick toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the attacking kicker and R2 is the target of the incoming kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lifting his left knee to block R1's incoming kick, rather than R1 lifting a knee to block a kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the knee block against R1's kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold his white boxing gloves up defensively while R1 attacks with the high kick, rather than R1 being the gloved defender against R2's kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defensive gloved blocker while R1 is the kicker"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in an attacking kicking posture while R2 is in a defensive blocking posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks and R2 defends during the sparring exchange"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

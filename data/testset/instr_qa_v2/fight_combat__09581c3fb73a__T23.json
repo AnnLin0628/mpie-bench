@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T23",
+  "instruction": "Candid action photograph, medium shot at eye-level. Under a covered outdoor pavilion with white metal trusses and blue pillars, two young men are sparring. On the left, the boxer in the blue tank top (R2) faces right, holding both gloves tightly in front of his face in a high guard. On the right, the boxer in the beige t-shirt (R1) stands with his back to the camera, throwing a punch with his left glove. The boxer in the beige t-shirt (R1) throws a punch at the boxer in the blue tank top (R2), who blocks with his high guard. The scene is illuminated by bright, natural daylight with soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 throws a left-glove punch at R2",
+    "R2 blocks R1's punch with a high guard",
+    "R1 is the attacker while R2 is the defender in the sparring exchange",
+    "R2 holds both gloves tightly in front of his face",
+    "boxing gloves are used as the contact-relevant sparring props",
+    "the sparring takes place under a covered outdoor pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a punch at R2, rather than R2 throwing a punch at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the puncher targeting R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 blocking R1's incoming punch with a high guard, rather than R1 blocking a punch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender blocking R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use his left glove to attack while R2 keeps both gloves up to absorb or stop the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks with one glove while R2 guards with both gloves"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep both gloves tightly in front of his face in a high guard while facing R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's defensive high-guard body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

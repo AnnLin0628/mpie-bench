@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T14",
+  "instruction": "Candid black and white close-up photograph of a couple outdoors. On the left, the smiling woman in the black cap (R2) looks warmly at her partner. On the right, the bearded man in the dark turtleneck (R1) laughs happily with his eyes closed. They lean in close, sharing an affectionate, joyful moment in soft daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks warmly at R1 while R1 laughs with his eyes closed",
+    "R1 is the bearded man laughing happily with his eyes closed while R2 looks at him",
+    "R1 and R2 lean in close together in an affectionate moment",
+    "R2 wears a cap while looking at R1",
+    "the couple is outdoors in soft daylight",
+    "the image is a candid black and white close-up"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking warmly at R1 while R1 laughs, rather than R1 looking warmly at R2 while R2 laughs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks warmly at R1 while R1 laughs"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one laughing happily with his eyes closed while R2 watches him warmly, rather than R2 laughing with closed eyes while R1 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs with eyes closed while R2 looks at him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 leaning in close together to share an affectionate, joyful moment?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 lean in close affectionately"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned as the partner gazing at R1 while R1 is positioned as the partner laughing with his eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gazes at R1 and R1 laughs"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

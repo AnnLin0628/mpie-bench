@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1fb80cb80877__T6",
+  "instruction": "A candid lifestyle photograph captured in a medium shot at eye-level. In an indoor creative space with a corkboard containing charts on the wall behind them, the redhead woman (R1) stands on the left wearing a brown tank top, beige skirt, and a pearl necklace, holding a white paper coffee cup in her right hand while looking directly at the camera with a warm smile. On the right, the dark-haired woman (R2) stands wearing a white wrap blouse with her left hand in her pocket, looking towards her friend with a joyful, closed-eye smile. The scene is bathed in bright, natural side-lighting that casts soft shadows, enhancing the friendly, relaxed atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the white paper coffee cup rather than R2 holding it",
+    "R1 looks directly at the camera while R2 looks toward R1 with a joyful closed-eye smile",
+    "R2 keeps her left hand in her pocket while R1 uses her right hand to hold the cup",
+    "white paper coffee cup held by R1",
+    "indoor creative space with a corkboard containing charts on the wall behind them",
+    "bright natural side-lighting with soft shadows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the white paper coffee cup rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the white paper coffee cup rather than R2 holding it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking directly at the camera while R2 looks toward R1, rather than R2 looking at the camera while R1 looks toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks directly at the camera while R2 looks toward R1 with a joyful closed-eye smile"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her left hand in her pocket while R1 uses her right hand to hold the cup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 keeps her left hand in her pocket while R1 uses her right hand to hold the cup"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

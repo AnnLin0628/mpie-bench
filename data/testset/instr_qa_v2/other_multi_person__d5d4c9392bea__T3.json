@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__d5d4c9392bea__T3",
+  "instruction": "Candid outdoor photograph, medium shot, low angle. In an autumn park, the bearded man in the tan hoodie (R2) kneels on the left with his arms raised, looking up. The young girl in the beige puffer coat (R1) stands on the right with arms outstretched, holding a yellow leaf towards him. Warm golden light illuminates the scene against a soft, blurred background of yellow trees.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a yellow leaf out toward R2",
+    "R2 kneels with arms raised and looks up toward R1",
+    "R1 stands with arms outstretched toward kneeling R2",
+    "yellow leaf is the contact-relevant object being offered",
+    "autumn park setting with yellow trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding a yellow leaf out toward R2, rather than R2 holding the leaf out toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 offers the yellow leaf to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 kneeling with arms raised and looking up toward R1, rather than R1 kneeling and looking up toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the kneeling upward-looking participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the standing participant extending her arms toward R2 while R2 remains kneeling below her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands and extends arms toward kneeling R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have his arms raised toward R1 as she presents something to him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises his arms toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

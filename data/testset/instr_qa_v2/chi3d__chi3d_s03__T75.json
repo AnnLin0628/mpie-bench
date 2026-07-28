@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T75",
+  "instruction": "A candid full shot photograph of a spacious indoor studio with a dark red carpeted floor and white walls. On the left, the man in the dark polo shirt and blue shorts (R1) stands facing right. On the right, the woman in the white patterned t-shirt and blue jeans (R2) stands angled away from the camera, facing left. They are shaking hands, holding their right hands clasped together in the center. Both look at each other. The scene is illuminated by bright overhead fluorescent lights, creating a neutral color palette with a prominent red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man participating in the right-hand clasp with R2",
+    "R2 is the woman participating in the right-hand clasp with R1",
+    "R1 and R2 clasp each other's right hands in the center",
+    "R1 faces toward R2 during the hand contact",
+    "R2 faces toward R1 during the hand contact",
+    "The interaction occurs in a spacious indoor studio with a dark red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man providing one side of the clasped right-hand contact with R2, rather than R2 being the man in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man participating in the right-hand clasp with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman providing the opposite side of the clasped right-hand contact with R1, rather than R1 being the woman in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman participating in the right-hand clasp with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding their right hands clasped together as the point of contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp each other's right hands in the center"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0fb258408fd1__T2",
+  "instruction": "A candid wedding photograph, medium shot at eye-level with a shallow depth of field. In an elegant indoor hotel lobby with potted plants and grey sofas in the background, the woman with curly hair in a white one-shoulder dress (R1) stands on the left, smiling as she looks at the woman in a white pantsuit (R2). The woman in a white pantsuit (R2) stands on the right, holding a bouquet of pink peonies and turning her head to look back at the woman in a white dress (R1) with a happy expression. The woman in a white dress (R1) keeps her left hand on the shoulder of the woman in a white pantsuit (R2). Soft, natural light fills the space, creating a warm and serene atmosphere with neutral tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 places her left hand on R2's shoulder",
+    "R2 is the person receiving R1's shoulder touch",
+    "R2 holds the bouquet of pink peonies",
+    "R1 smiles while looking at R2",
+    "R2 turns her head to look back at R1",
+    "the scene is an elegant indoor hotel lobby"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 keep her left hand on R2's shoulder, rather than R2 keeping her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places her left hand on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one receiving the shoulder touch from R1, rather than R1 receiving a shoulder touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person receiving R1's shoulder touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold the bouquet of pink peonies, rather than R1 holding the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the bouquet of pink peonies"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 turning her head to look back at R1 while holding the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 turns her head to look back at R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet of pink peonies being held in the scene?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bouquet of pink peonies"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

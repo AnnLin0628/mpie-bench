@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T34",
+  "instruction": "Candid documentary photograph, eye-level medium shot. Inside a judo dojo, the bearded young man in the white judo gi (R4) and the young woman in the blue judo gi (R1) jog forward side-by-side. The bearded young man (R4) looks slightly to his left while running, while the young woman (R1) looks straight ahead. The young man in the white judo gi (R2) is partially visible jogging directly behind them. Soft natural light enters from a window in the background, illuminating the runners as they warm up.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 jogs directly behind the front pair R1 and R4",
+    "R4 looks slightly to his left while running, while R1 looks straight ahead",
+    "R1 and R4 jog forward side-by-side as the visible leading pair",
+    "R2 is partially visible while jogging behind R1 and R4",
+    "The runners wear judo gis during the warm-up",
+    "The scene is inside a judo dojo with soft natural light from a background window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 jogging directly behind R1 and R4, rather than R1 and R4 jogging directly behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 trails behind the front pair R1 and R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While running, does R4 look slightly to his left while R1 looks straight ahead, rather than R1 being the one looking left and R4 looking straight ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the leftward gaze role while R1 has the straight-ahead gaze role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R4 jogging forward side-by-side as the visible front pair, with R2 positioned behind them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 lead side-by-side while R2 follows behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 partially visible while jogging behind R1 and R4, rather than being the fully visible runner at the front?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partially visible trailing jogger"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

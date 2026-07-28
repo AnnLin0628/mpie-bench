@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__b06393830cc5__T2",
+  "instruction": "Candid athletic photograph, full shot, low angle. Inside a gym with a red floor, the dark-haired woman with a white headband (R2) in a purple t-shirt sits on the left, smiling down at her legs. To her right, the blonde woman in a white t-shirt (R1) sits with hands clasped near her chin, looking toward her companion. They relax side-by-side under bright, even indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 looks toward R2 while R2 looks down at her own legs",
+    "R1 sits with hands clasped near her chin while R2 sits smiling down at her legs",
+    "R2 relaxes beside R1 in a seated athletic gym scene",
+    "R2 wears a headband",
+    "the scene is inside a gym with a red floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking toward R2, rather than R2 looking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directs her gaze toward R2 while R2 looks down"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 sit with her hands clasped near her chin while R2 smiles down at her own legs, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has clasped hands near her chin and R2 smiles down at her legs"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated near R2 with her hands clasped near her chin and her attention on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's seated attentive posture toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

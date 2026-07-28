@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T11",
+  "instruction": "Candid action photograph, full shot. Inside a gym with grey padded walls and floor, the shirtless man with a mullet (R2) stands on the left, facing right in a defensive stance. The man in the black t-shirt (R1) stands on the right, facing left and throwing a punch towards him. Both wear white shin guards, sparring gloves, and protective eyewear. Bright overhead gym lighting illuminates the scene, casting soft shadows on the grey floor. No bystanders are visible.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 throws a punch toward R2",
+    "R2 is in a defensive stance receiving R1's attack",
+    "R1 is the attacking sparring partner while R2 is the defending sparring partner",
+    "both R1 and R2 wear sparring gloves",
+    "both R1 and R2 wear protective shin guards",
+    "the scene is inside a gym with grey padded walls and floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a punch toward R2, rather than R2 throwing a punch toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 throws a punch toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person in a defensive stance facing R1's incoming punch, rather than R1 being the defensive target of R2's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in a defensive stance receiving R1's attack"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the attacking sparring partner while R2 is the defending sparring partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the attacking sparring partner while R2 is the defending sparring partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

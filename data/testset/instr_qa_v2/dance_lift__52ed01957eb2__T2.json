@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__52ed01957eb2__T2",
+  "instruction": "A candid full-shot photograph in a bright indoor ballet studio. The woman in the black leotard (R1) stands behind the young girl in the pink tutu (R2) as they practice. Both raise their arms upward in a coordinated ballet pose, with the instructor (R1) guiding the movement from behind. The young girl (R2) looks up toward her raised hands in profile, while the instructor (R1) focuses forward. Soft, natural light fills the space, casting gentle shadows against a neutral background with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands behind R2 and guides R2's ballet movement",
+    "R1 is the instructor guiding R2, while R2 is the young learner being guided",
+    "R1 and R2 both raise their arms upward in a coordinated ballet pose",
+    "R2 looks up toward her raised hands in profile while R1 focuses forward",
+    "The scene is a bright indoor ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing behind R2 and guiding R2's ballet movement, rather than R2 standing behind R1 and guiding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides R2 from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the instructor directing the practice while R2 is the young girl being instructed, rather than R2 instructing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is instructor and R2 is learner"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 practicing a coordinated ballet pose with both arms raised upward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "both perform the raised-arm ballet pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look up toward her raised hands in profile while R1 focuses forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks upward while R1 focuses forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

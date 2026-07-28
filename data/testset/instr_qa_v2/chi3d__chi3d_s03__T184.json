@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T184",
+  "instruction": "Candid documentary photograph, wide shot, slightly high angle. In an indoor motion capture studio with a red carpet and white walls, the man in the black t-shirt and blue shorts (R1) stands on the left, facing away-right. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing away-left. They are hugging each other, seen mostly from behind with their arms wrapped around one another's shoulders and backs. The scene is illuminated by overhead fluorescent lights, casting soft shadows on the carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps his arms around R2's shoulders and back",
+    "R2 wraps her arms around R1's shoulders and back",
+    "R1 and R2 are in a reciprocal shoulder-and-back embrace seen mostly from behind",
+    "R1 faces away-right toward R2 while R2 faces away-left toward R1",
+    "the interaction takes place in an indoor motion capture studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person wrapping his arms around R2's shoulders and back, rather than R1 being separate from R2 during the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's arms encircle R2's shoulders and back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person wrapping her arms around R1's shoulders and back, rather than R2 being separate from R1 during the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms encircle R1's shoulders and back"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 in direct upper-body contact with their arms around one another's shoulders and backs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "reciprocal shoulder-and-back arm contact between R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

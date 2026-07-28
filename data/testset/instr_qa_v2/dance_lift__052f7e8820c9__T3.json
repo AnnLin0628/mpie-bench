@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__052f7e8820c9__T3",
+  "instruction": "Candid documentary medium shot from a low angle in a ballet studio with concrete walls and wooden barres. The young girl in a black leotard (R1) arches her back while lying on her stomach, head tilted down and arms raised high. Kneeling behind her, the blonde instructor in a black long-sleeve top (R2) holds the young girl's wrists to guide her arms upward and backward, looking down with a focused expression. Soft natural light from the background windows illuminates the scene, casting gentle shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's wrists to guide R1's arms upward and backward",
+    "R1 is the person lying on her stomach and arching her back while being guided by R2",
+    "R2 kneels behind R1 and looks down while guiding R1's arm position",
+    "R1's arms are raised high while R2 controls the wrist contact",
+    "R1 has her head tilted down during the assisted ballet pose",
+    "The interaction takes place in a ballet studio with wooden barres"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's wrists to guide R1's arms upward and backward, rather than R1 holding R2's wrists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's wrists to guide R1's arms upward and backward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person lying on her stomach and arching her back while R2 assists from behind, rather than R2 lying down while R1 assists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person lying on her stomach and arching her back while being guided by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 control the wrist contact to adjust R1's arm position, rather than R1 controlling R2's arm position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 controls R1's wrist and arm positioning"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep her arms raised high while R2 holds her wrists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's arms are raised high while R2 holds the wrists"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the scene set in a ballet studio with wooden barres?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The interaction takes place in a ballet studio with wooden barres"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

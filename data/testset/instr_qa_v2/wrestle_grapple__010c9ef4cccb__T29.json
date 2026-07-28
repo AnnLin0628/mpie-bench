@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T29",
+  "instruction": "Candid documentary photograph, medium-full shot from a low angle in an indoor judo dojo with a yellow mat. The young woman in the blue judo gi (R1) is on all fours on the mat, facing left with her head down. Leaning over her from behind, the young man in the white judo gi (R2) grips her waist and belt, preparing a grappling move. The scene is illuminated by soft, even indoor lighting with a natural color palette.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is on all fours on the mat while R2 leans over her from behind",
+    "R2 grips R1's waist and belt, rather than R1 gripping R2's waist and belt",
+    "R2 is preparing the grappling move on R1 from behind",
+    "R1 is the lower grappling partner with her head down on the mat",
+    "R2 holds R1's judo belt during the grapple setup",
+    "the interaction takes place on a yellow mat in an indoor judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 on all fours on the mat while R2 leans over her from behind, rather than R2 being on all fours under R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is on all fours while R2 leans over her from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 grip R1's waist and belt, rather than R1 gripping R2's waist and belt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 controls the contact by gripping R1's waist and belt"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person preparing the grappling move on R1 from behind, rather than R1 preparing the move on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the grappling move on R1 from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the lower grappling partner with her head down on all fours while R2 is the partner leaning over her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is down on all fours and R2 is leaning over her"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the grappling scene set on a yellow mat inside an indoor judo dojo?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow mat in an indoor judo dojo"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

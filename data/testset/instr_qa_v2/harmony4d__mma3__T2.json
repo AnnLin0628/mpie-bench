@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T2",
+  "instruction": "Candid action photograph, full shot. In a gym with a circular logo on the grey padded wall, the shirtless man with a mullet (R2) lunges from the left, extending his right arm to throw a punch. The man in the black t-shirt (R1) stands on the right, facing left and raising his black-gloved hands to block the incoming strike. Both wear white shin guards and protective glasses. The gym is empty of other people, with camera tripods visible in the background. The lighting is even and neutral.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward and throws a punch toward R1",
+    "R1 raises his black-gloved hands to block R2's incoming strike",
+    "R2 is the attacker while R1 is the defender/blocker",
+    "R2 extends his right arm for the punch",
+    "R1 wears black gloves used for blocking",
+    "the interaction takes place in a gym with a circular logo on a grey padded wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one lunging forward to throw a punch at R1, rather than R1 lunging to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges forward and throws a punch toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one raising his gloved hands to block R2's incoming strike, rather than R2 blocking a strike from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises his black-gloved hands to block R2's incoming strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 acting as the puncher while R1 acts as the defender absorbing or stopping the attack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacker while R1 is the defender/blocker"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend his right arm in the punching motion directed toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends his right arm for the punch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

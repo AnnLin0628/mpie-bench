@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T3",
+  "instruction": "Candid lifestyle photograph, full shot. On a white studio floor with blurred blue wildflowers in the left foreground, three women sit close together. On the left, the woman with wavy light-brown hair (R3) in a black crop top, white unbuttoned shirt, and blue jeans sits barefoot, leaning towards the center. In the middle, the woman with long straight dark hair (R2) in a white top and denim jacket sits smiling downwards. On the right, the woman with curly brown hair (R1) in a white shirt and blue jeans sits barefoot, leaning in to hug R2. Bright, clean lighting fills the minimalist space.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 leans in to hug R2, making R1 the active hugger and R2 the recipient",
+    "R2 is the central woman receiving R1's inward hug rather than initiating it toward R1",
+    "R3 sits close and leans toward the center without being the main hugger",
+    "The three women sit close together on a white studio floor",
+    "Blurred blue wildflowers appear in the foreground of the minimalist studio scene"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman leaning in to hug R2, rather than R2 leaning in to hug R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active hugger and R2 is the recipient"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman receiving R1's inward hug while seated in the middle, rather than R1 receiving a hug initiated by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's hug"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit close to R2 and lean her body inward toward R2 for the hug?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's seated body configuration is directed toward hugging R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the women seated on a white studio floor with blurred blue wildflowers in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "white studio floor with blurred blue wildflowers in the foreground"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

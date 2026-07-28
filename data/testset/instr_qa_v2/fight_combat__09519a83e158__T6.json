@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T6",
+  "instruction": "Candid documentary photograph, medium close-up. Inside a boxing gym with black punching bags, the bearded man with a braided mohawk (R2) in a black t-shirt stands on the left, facing right. He uses his tattooed right hand to guide the raised black boxing glove of the woman with braided hair (R1), who stands on the right wearing a black strapless top. In the background, a blurred bystander in dark clothing is visible. Soft overhead lighting casts a cool tone over the training session.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 uses his tattooed right hand to guide R1's raised boxing glove",
+    "R1 is the person whose raised boxing glove is being guided by R2",
+    "R2 acts as the trainer guiding R1's glove during boxing practice",
+    "R1 holds up a black boxing glove as the contact-relevant object",
+    "black punching bags are visible in the boxing gym setting",
+    "the scene takes place inside a boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 use his tattooed right hand to guide R1's raised boxing glove, rather than R1 guiding R2's glove?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 guides R1's raised glove"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose boxing glove is being guided by R2, rather than R2 being the person whose glove is guided by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives glove guidance from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 take the trainer-like guiding role while R1 holds up the glove being corrected, rather than R1 taking that guiding role over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the active guiding duty and R1 has the guided glove role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding a raised boxing glove while R2 faces her and guides it with his hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's raised glove is guided by R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black boxing glove the object involved in the contact between R2's hand and R1?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black boxing glove"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

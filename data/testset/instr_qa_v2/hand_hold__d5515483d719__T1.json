@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d5515483d719__T1",
+  "instruction": "A candid outdoor photograph in a medium shot captures a sunny park pathway. On the left, the man in the plaid shirt (R1) walks forward, wearing sunglasses and looking toward his companion. On the right, the woman in the dark blue shirt (R2) walks beside him, smiling warmly as she looks back. They walk closely side-by-side under dappled sunlight filtering through green trees, creating a bright, warm atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in the plaid shirt wearing sunglasses and looking toward R2 while walking forward",
+    "R2 is the woman in the dark blue shirt smiling warmly and looking back toward R1 while walking beside him",
+    "R1 and R2 walk closely side-by-side as companions",
+    "R1 wears sunglasses",
+    "The scene is a sunny park pathway with green trees and dappled sunlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one wearing sunglasses and looking toward R2 while walking forward, rather than R2 being the one wearing sunglasses?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wears sunglasses and looks toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one smiling warmly and looking back toward R1, rather than R1 being described as the smiling woman looking back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles warmly and looks back toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the man in the plaid shirt walking beside R2, while R2 is the woman in the dark blue shirt walking beside R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct labeled walking roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

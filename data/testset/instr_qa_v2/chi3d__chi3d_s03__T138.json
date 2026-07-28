@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T138",
+  "instruction": "Candid documentary photograph, wide shot, slightly high angle. In an indoor motion capture studio with a red carpet and white walls, the woman in the white t-shirt and blue jeans (R2) stands on the left, facing right. The man in the black polo shirt and blue shorts (R1) stands on the right, facing left, reaching his left hand to touch the woman's waist. In the background, motion capture equipment and a dark screen are visible. Bright indoor lighting illuminates the scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches his left hand to touch R2's waist",
+    "R2 is the person whose waist is being touched by R1",
+    "R1 and R2 face each other during the waist-touching interaction",
+    "R1 uses his left hand for the contact with R2",
+    "the scene is an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching his left hand to touch R2's waist, rather than R2 reaching to touch R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the waist-touching contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose waist is being touched by R1, rather than R1 being the one touched at the waist by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the waist contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his left hand for the contact with R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's left hand is used for the waist-touching action"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

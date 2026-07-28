@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__c7ae42d6fccc__T1",
+  "instruction": "A candid documentary photograph with a wide, eye-level shot capturing a group walking in a park. The scene is set in an outdoor grassy park under bright daylight with lush green trees in the background. The woman in the red dress (R1) walks on the left, holding hands with a boy on her right and a girl on her left. Beside them, the girl in the pink shirt and red bucket hat (R2) walks hand-in-hand with the woman in the mustard cardigan (R3) in the center. The blonde girl in denim overalls and a red bucket hat (R4) walks on the right, holding hands with the woman in the mustard cardigan (R3). They all walk forward in a line. Three other children in red hats walk interspersed in the line holding hands. Bright natural daylight casts soft shadows, highlighting the warm tones of the park.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the girl walking hand-in-hand with R3, rather than R1 being R3's hand-holding partner in that center connection",
+    "R4 is the blonde girl holding hands with R3, rather than R2 holding hands with R4",
+    "R3 is the woman connected by hand-holding to both R2 and R4, rather than R1 occupying that connecting role",
+    "R1 walks forward while holding hands with two children near her",
+    "R2 walks hand-in-hand with R3 in the line",
+    "the group is walking in an outdoor grassy park under bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the girl walking hand-in-hand with R3, rather than R1 being the one holding R3's hand in that center connection?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the girl walking hand-in-hand with R3, rather than R1 being R3's hand-holding partner in that center connection"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the blonde girl holding hands with R3, rather than R2 holding hands with R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the blonde girl holding hands with R3, rather than R2 holding hands with R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the woman who is hand-connected to both R2 and R4, rather than R1 being the woman connected to those two labeled children?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the woman connected by hand-holding to both R2 and R4, rather than R1 occupying that connecting role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking forward while holding hands with two children near her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks forward while holding hands with two children near her"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk hand-in-hand with R3 as part of the line of people?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks hand-in-hand with R3 in the line"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T96",
+  "instruction": "Candid documentary photograph, full shot, eye-level. Inside a motion capture studio with a red carpeted floor and white walls, the bearded man in the black polo shirt and blue shorts (R1) stands on the right, facing left. He extends his right arm to punch the left shoulder of the woman in the white t-shirt and blue jeans (R2), who stands upright on the left facing him. The background features dark partitions and studio equipment under bright, even overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the active person extending his right arm to punch R2's shoulder",
+    "R2 is the person receiving the punch on her left shoulder from R1",
+    "R1's right arm is the punching arm aimed at R2, not the other way around",
+    "R2 stands upright facing R1 while receiving the shoulder punch",
+    "The interaction occurs inside a motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending his right arm to punch R2's shoulder, rather than R2 punching R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active puncher and R2 is the shoulder-contact target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 receive the punch on her left shoulder from R1, rather than R1 receiving a shoulder punch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the receiver of R1's shoulder punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's right arm the active punching arm aimed at R2, rather than R2's arm being the active punching arm aimed at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right arm performs the punch toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand upright facing R1 while being contacted by R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is the upright recipient facing R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while reaching across with his right arm toward R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body role is facing R2 and reaching to make shoulder contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

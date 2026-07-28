@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T230",
+  "instruction": "A candid documentary wide shot of an indoor motion capture studio with a red carpet. On the left, the man in the black polo and blue shorts (R1) stands facing right. On the right, the woman in the white t-shirt and blue jeans (R2) kicks her left leg forward, extending it towards the man's thigh. Bright overhead studio lighting illuminates the room, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 kicks her left leg forward toward R1's thigh rather than R1 kicking toward R2",
+    "R1 is the target/receiver of R2's leg extension rather than R2 being the target of R1's kick",
+    "R2 is the active kicker while R1 remains standing and facing her",
+    "R2's extended leg is directed toward R1's thigh",
+    "the interaction takes place in an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person kicking her left leg forward toward R1's thigh, rather than R1 kicking toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kicks her left leg forward toward R1's thigh rather than R1 kicking toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose thigh is being approached by R2's extended leg, rather than R2 being the target of R1's kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the target/receiver of R2's leg extension rather than R2 being the target of R1's kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active kicker while R1 stays standing and facing her, rather than R1 being the active kicker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active kicker while R1 remains standing and facing her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend her left leg forward toward R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's extended leg is directed toward R1's thigh"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

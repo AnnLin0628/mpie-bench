@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T1",
+  "instruction": "Cinematic medium shot of a man in a brown shirt and tan beanie (R1) and a woman in a black dress (R2) posing together against a draped, reflective silver fabric backdrop. The man (R1) stands on the left in profile, facing left with his arms extended forward. The woman (R2) stands close behind him on the right, wrapping her left arm over his shoulder and chest. Soft, diffused lighting highlights the cool metallic background, contrasting with the warm tones of the man's brown shirt and the woman's dark dress, creating a focused, artistic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her left arm over R1's shoulder and chest",
+    "R1 extends his arms forward while R2 stays close behind him",
+    "R2 is the behind-person making over-shoulder contact with R1",
+    "R1 is in front in profile with R2 close behind",
+    "draped reflective silver fabric backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping her left arm over R1's shoulder and chest, rather than R1 wrapping his arm over R2's shoulder and chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the over-shoulder and chest wrap on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending his arms forward while R2 is close behind him making the body contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends arms forward while R2 contacts him from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 stand behind R1 and reach over his shoulder, rather than R1 standing behind R2 and reaching over her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the behind-person reaching over R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned close behind R1 with her arm draped across his upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 close behind R1 with arm across R1's upper body"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

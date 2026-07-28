@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T44",
+  "instruction": "Candid outdoor photograph, full shot. In a grassy park surrounded by trees, three friends stand in a line. In the center, the Asian man in a red polo shirt (R3) laughs and gestures with his hands. To his left, the woman with a large afro in a red t-shirt (R6) looks forward expressively. To his right, the woman in a black beanie and red t-shirt (R5) claps her hands with a smile. Warm afternoon sunlight filters through the background trees, illuminating the green lawn.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R5 is the friend clapping her hands with a smile rather than R3",
+    "R3 is the friend laughing and gesturing with his hands rather than R5",
+    "R6 looks forward expressively rather than taking R5's clapping role",
+    "R3 stands in the center while laughing and gesturing",
+    "the friends are in a grassy park surrounded by trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the friend clapping her hands with a smile, rather than R3 being the one clapping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the friend clapping her hands with a smile rather than R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the friend laughing and gesturing with his hands, rather than R5 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the friend laughing and gesturing with his hands rather than R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the friend looking forward expressively, rather than R6 being the one assigned to clap like R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 looks forward expressively rather than taking R5's clapping role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand in the center while laughing and gesturing with his hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands in the center while laughing and gesturing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

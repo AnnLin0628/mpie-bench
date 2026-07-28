@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T14",
+  "instruction": "Cinematic video still, medium shot. In an indoor studio with a soft pastel gradient background, the blonde woman in the black halter dress (R3) stands on the left, smiling and looking towards the man. Next to her, the man in the black vest (R2) stands on the right, looking forward with both hands raised and pointing up. They stand side-by-side, holding hands. The scene is illuminated by soft, colorful studio lighting with pink and blue hues.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the hand-holding partner with both hands raised and pointing upward",
+    "R3 is the hand-holding partner smiling and looking toward R2",
+    "R2 and R3 stand side-by-side while holding hands",
+    "R2 looks forward during the pose",
+    "The scene is set in an indoor studio with a soft pastel gradient background",
+    "The lighting has soft pink and blue hues"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While the pair is holding hands, is R2 the person raising both hands and pointing upward, rather than R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric raised-hands pointing-up duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the hand-holding pair, is R3 the person smiling and looking toward R2, rather than R2 smiling and looking toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the asymmetric gaze-and-smile role toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R3 standing side-by-side while holding hands with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 are the contact pair holding hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look forward while maintaining the hand-holding pose with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces forward in the hand-holding pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

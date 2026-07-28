@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__95499000b35a__T2",
+  "instruction": "Candid lifestyle photograph, medium shot, eye-level. In a bright indoor space with a white wall and a glass window showing blurred greenery, the man in a denim shirt (R2) stands on the right in profile, smiling while carrying a stack of three cardboard boxes. The woman with braided hair (R1) in a light blue denim shirt stands on the left, leaning forward and smiling down at the boxes. Soft, natural light streams from the right, creating a warm, neutral-toned atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the person carrying and supporting the stack of cardboard boxes, not R1",
+    "R1 leans forward and smiles down at the boxes while R2 holds them",
+    "R2 has the box-carrier role while R1 has the looking/leaning-toward-the-boxes role",
+    "a stack of three cardboard boxes is being carried",
+    "bright indoor space with a white wall and a glass window showing blurred greenery"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 carrying and supporting the stack of cardboard boxes rather than R1 carrying it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the box carrier instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward and smiling down at the boxes while R2 is the one holding them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks toward the boxes while R2 holds them"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have the active carrying role with the boxes while R1 has the observing, leaning-toward-the-boxes role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the boxes and R1 observes them"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a stack of three cardboard boxes being carried?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "stack of three cardboard boxes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

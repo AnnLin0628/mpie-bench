@@ -1,0 +1,60 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T161",
+  "instruction": "Candid documentary full shot from behind of a man in a black polo and blue shorts (R1) and a woman in a white t-shirt and blue jeans (R2) standing side-by-side in an indoor motion capture studio. The studio features a red carpeted floor, white walls, and dark red partitions. Both subjects have their backs to the camera; the man (R1) stands on the right wearing a black cap, while the woman (R2) stands on the left. Overhead fluorescent lights cast soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in a black polo and blue shorts, while R2 is the woman in a white t-shirt and blue jeans",
+    "R1 is the person wearing a black cap, not R2",
+    "R1 and R2 stand side-by-side with their backs to the camera",
+    "R1 and R2 are in an indoor motion capture studio",
+    "the studio has a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the supporting / leading contact role relative to R2, rather than R2 taking that role toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "main_lt_3",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": true
+  }
+}

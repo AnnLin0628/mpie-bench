@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T94",
+  "instruction": "Candid documentary photograph, full shot, eye-level. Inside a motion capture studio with a red carpeted floor, the bearded man in the black polo shirt and blue shorts (R1) stands on the left, facing right. The woman in the white t-shirt and blue jeans (R2) lunges from the right, extending her right arm to punch the man's (R1) right shoulder. Both subjects are captured in profile against a background of white walls and studio equipment. The scene is illuminated by bright, even overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges toward R1 to punch him",
+    "R1 is the person being punched on the right shoulder by R2",
+    "R2 extends her right arm toward R1's right shoulder",
+    "R1 stands facing R2 while receiving the shoulder punch",
+    "motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward to punch R1, rather than R1 lunging forward to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active puncher and R1 is the target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose right shoulder is being punched by R2, rather than R2's shoulder being punched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the punch on his right shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend her right arm toward R1's shoulder, rather than R1 extending his right arm toward R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right arm is the punching arm aimed at R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in a lunging body position while reaching toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges toward R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing and facing R2 while serving as the target of R2's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands facing R2 as the punch target"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

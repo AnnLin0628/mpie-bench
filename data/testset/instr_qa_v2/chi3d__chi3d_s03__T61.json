@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T61",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and white walls. On the right side of the frame, the smiling man in the black polo shirt and blue shorts (R1) stands facing left. On the left side, the woman in the white t-shirt and blue jeans (R2) stands with her back partially turned to the camera. They face each other and shake right hands in the center of the room. No bystanders are present. Bright overhead lighting illuminates the scene, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the smiling man facing R2 during the right-hand handshake while R2 has her back partially turned",
+    "R2 is the woman with her back partially turned to the camera while shaking R1's right hand",
+    "R1 and R2 face each other and make contact with their right hands",
+    "R1 stands opposite R2 as the two perform the right-hand hand contact",
+    "The interaction occurs in an indoor motion capture studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the smiling man facing R2 during the right-hand shake, rather than R2 being the smiling man facing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the smiling man facing R2 during the right-hand handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant whose back is partially turned to the camera while shaking R1's right hand, rather than R1 being the one with his back partially turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back partially turned during the hand contact with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other while their right hands meet in contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other with right-hand contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing opposite R2 and using his right hand to contact R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses his right hand to contact R2's right hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

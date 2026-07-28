@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__69628680878d__T3",
+  "instruction": "Candid lifestyle medium shot in a cozy indoor living room. The boy in the brown long-sleeve shirt (R2) stands in the center-left with his back to the camera. Facing him on the right is the smiling girl in the olive green overalls (R1), holding a yellow plaid gift box that shows motion blur. On the left, a blurred hand holds a cream-colored gift box. The scene is lit by warm, soft indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the yellow plaid gift box rather than R2 holding it",
+    "R2 has his back to the camera while R1 faces him",
+    "R1 faces R2 while holding the gift box",
+    "yellow plaid gift box held by R1",
+    "cream-colored gift box held by a blurred hand",
+    "cozy indoor living room setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the yellow plaid gift box, rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the yellow plaid gift box rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one standing with his back to the camera while R1 faces him, rather than R1 having her back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his back to the camera while R1 faces him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing R2 while holding the gift box?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while holding the gift box"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing with his back toward the camera as R1 faces him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with his back to the camera opposite R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a yellow plaid gift box held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow plaid gift box held by R1"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a cream-colored gift box being held by a blurred hand?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "cream-colored gift box held by a blurred hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

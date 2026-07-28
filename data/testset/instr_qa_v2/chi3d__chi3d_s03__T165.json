@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T165",
+  "instruction": "A candid wide-angle photograph from a high angle shows an indoor motion capture studio with a red carpet. The woman in the white patterned t-shirt (R2) walks forward in blue jeans, looking down. Beside her on the right, the man in the black polo and blue shorts (R1) stands facing her, reaching his hand toward her back. Bright overhead lighting illuminates the scene, highlighting the technical equipment, a printer, and white walls in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person reaching his hand toward R2's back, rather than R2 reaching toward R1's back",
+    "R2 is the person walking forward and looking down while R1 stands facing her",
+    "R1 initiates the back-directed contact gesture toward R2, rather than R2 initiating it toward R1",
+    "R1 stands beside R2 while orienting his body toward her back/side",
+    "technical equipment and a printer are visible in the background",
+    "the scene is an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching his hand toward R2's back, rather than R2 reaching her hand toward R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person reaching his hand toward R2's back, rather than R2 reaching toward R1's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one walking forward while R1 stands facing her and reaches toward her back, rather than R1 walking forward while R2 reaches toward his back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person walking forward and looking down while R1 stands facing her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 initiating the back-directed contact gesture toward R2, rather than R2 initiating that gesture toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the back-directed contact gesture toward R2, rather than R2 initiating it toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk forward and look down while R1 remains the person reaching toward her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks forward while R1 reaches toward her back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

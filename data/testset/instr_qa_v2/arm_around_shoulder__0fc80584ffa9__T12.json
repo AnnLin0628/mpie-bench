@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T12",
+  "instruction": "Candid studio portrait, medium full shot. Against a light beige wall, two women sit on the floor. On the left, the woman with curly dark hair (R1) in a white shirt and jeans sits behind her companion, looking forward. On the right, the woman with curly brown hair (R3) in a black crop top and ripped jeans sits in front, eyes closed, touching her face. R1 rests her hand on R3's shoulder. Soft, even lighting creates a warm, serene mood.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 sits behind R3 and rests her hand on R3's shoulder",
+    "R3 sits in front of R1 while R1 is behind her",
+    "R3 has her eyes closed and touches her own face",
+    "R1 looks forward while seated behind R3",
+    "The portrait is set against a light beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting her hand on R3's shoulder, rather than R3 resting her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her hand on R3's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 seated behind R3 while making shoulder contact with R3, rather than R3 being behind R1 and contacting R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is behind R3 and initiates the shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 seated in front of R1 while R1 sits behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is in front and R1 is behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 touching her own face with her eyes closed while R1 looks forward behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 touches her face and closes her eyes while R1 looks forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

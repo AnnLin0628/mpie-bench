@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T2",
+  "instruction": "A candid outdoor photograph, eye-level medium shot. In a grassy park with a large suspension bridge and trees in the background, the woman with a shaved head in a pink long-sleeve top and gray shorts (R1) and the bearded man in a white t-shirt and black leggings (R2) sit side-by-side on the grass. The woman (R1) sits cross-legged on the left with her hands resting on her knees, while the bearded man (R2) sits cross-legged on the right with his hands resting in his lap. Both have their eyes closed in peaceful meditation. Bright, natural daylight illuminates the scene with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests her hands on her knees while R2 rests his hands in his lap",
+    "R2 rests his hands in his lap while R1 rests her hands on her knees",
+    "R1 and R2 both sit cross-legged on the grass",
+    "R1 and R2 both have their eyes closed in meditation",
+    "The scene is a grassy park with a large suspension bridge and trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest her hands on her knees while R2 rests his hands in his lap, rather than R2 resting his hands on his knees while R1 rests her hands in her lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her hands on her knees while R2 rests his hands in his lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with hands resting in his lap while R1 is the one with hands resting on her knees?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his hands in his lap while R1 rests her hands on her knees"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": true
+  }
+}

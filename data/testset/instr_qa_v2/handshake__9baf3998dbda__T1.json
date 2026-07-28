@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__9baf3998dbda__T1",
+  "instruction": "Candid office photograph, medium shot. Inside a modern office during the day, a woman in a beige blazer (R2) stands on the left, smiling warmly. She extends her hand to shake hands with a man in a dark blazer (R1) who stands on the right. The man leans forward, profile visible, reaching out to meet her hand over a wooden desk. A laptop and tablet rest on the desk in the foreground, with large windows and curtains in the background. Soft natural light illuminates the scene, creating a professional and welcoming atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her hand toward R1 to initiate the handshake",
+    "R1 leans forward and reaches out to meet R2's offered hand",
+    "R1 reaches toward R2's hand over a wooden desk",
+    "R2 smiles warmly while offering her hand to R1",
+    "a wooden desk is positioned in the foreground of the handshake interaction",
+    "the scene is inside a modern office during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward and reaching out to meet R2's offered hand, rather than R2 leaning forward to meet R1's offered hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward and reaches to meet R2's offered hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 reach toward R2's hand over the wooden desk, rather than R2 being described as reaching over the desk toward R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches across the desk area toward R2's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 smile warmly while offering her hand to R1, as R1 responds by reaching out to meet it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 offers her hand while R1 responds to the offer"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

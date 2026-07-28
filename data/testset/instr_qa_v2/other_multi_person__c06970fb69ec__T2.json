@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__c06970fb69ec__T2",
+  "instruction": "Candid documentary photograph, medium shot. In a sunny outdoor park with green grass and blurred trees, the bald man in the dark blue t-shirt (R1) on the left and the woman with a ponytail in the dark blue t-shirt (R2) on the right crouch in a line, pulling a thick yellow rope. The bald man (R1) pulls intensely with gritted teeth, while the woman (R2) stands behind him, pulling with a joyful, wide laugh. Bright natural daylight illuminates the scene with warm tones, soft shadows, and a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the front person in the rope-pulling line while R2 is behind him",
+    "R1 pulls the rope with gritted teeth while R2 pulls behind him with a joyful wide laugh",
+    "R2 stands behind R1 as they pull the rope together",
+    "R1 and R2 pull a thick yellow rope",
+    "the scene is a sunny outdoor park with green grass and blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the front person in the rope-pulling line with R2 behind him, rather than R2 being in front with R1 behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the front person in the rope-pulling line while R2 is behind him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 pull the thick yellow rope intensely with gritted teeth while R2 pulls behind him with a joyful wide laugh, rather than those roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pulls the rope with gritted teeth while R2 pulls behind him with a joyful wide laugh"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned behind R1 in the pulling line while both R1 and R2 pull the rope?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 as they pull the rope together"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 pulling a thick yellow rope?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 and R2 pull a thick yellow rope"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__771e3c77ab03__T4",
+  "instruction": "Candid corporate photograph, medium wide shot. In a bright office meeting room with white curtains and background shelves, four colleagues sit around a white table. The woman in the black blazer (R1) and the curly-haired man in the black blazer (R3) high-five in the center, with the woman holding papers. The man in the pinstripe suit (R4) on the far left and the gray-haired man in the gray suit (R2) on the far right watch them happily. Bright, even lighting fills the professional space.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 and R3 are the high-five contact pair while R2 watches",
+    "R1 and R3 are the high-five contact pair while R4 watches",
+    "R2 and R4 are observers rather than participants in the high-five",
+    "R1 holds papers while high-fiving R3",
+    "four colleagues sit around a white table",
+    "the scene is a bright office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R3 high-fiving each other while R4 watches, rather than R4 high-fiving R1 while R3 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 are the high-five contact pair while R4 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

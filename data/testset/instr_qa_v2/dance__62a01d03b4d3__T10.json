@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T10",
+  "instruction": "A candid full-shot photograph of a couple dynamically dancing tango in a minimalist room with a plain light wall and wooden floor. The man in the gray suit (R1) is on the left, facing right and leaning into the dance step. The woman in the black dress (R2), with a blue flower in her hair bun, is on the right, facing him in a close embrace as she spins, her leg extended back with visible motion blur. Her black dress flares out from the movement. The scene is illuminated by soft, natural light, capturing the fluid motion and energy of their dance against the simple background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the dancer spinning with her leg extended back",
+    "R1 leans into the tango step toward R2 while R2 spins",
+    "R2's dress flares from her spinning motion while R1 is the leaning dance partner",
+    "R1 and R2 face each other in a close tango dance hold",
+    "the scene is a minimalist room with a plain light wall and wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer spinning with her leg extended back, rather than R1 being the one spinning with an extended-back leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the spinning dancer with an extended-back leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning into the tango step toward R2 while R2 spins, rather than R2 leaning into the step while R1 spins?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans into the dance step while R2 spins"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's dress flare outward from her spinning movement while R1 remains the leaning dance partner, rather than R1 being described as the flaring, spinning dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's clothing flares due to her spin, distinguishing her role from R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other in a close tango dance hold while R2 performs the spin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other in close tango contact, with R2 spinning"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

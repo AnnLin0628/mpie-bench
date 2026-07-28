@@ -1,0 +1,82 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T6",
+  "instruction": "Studio photograph, medium-wide shot. A line of cheerleaders poses against a clean white backdrop. From left to right: the brown-haired woman (R10), the blonde woman (R2), the dark-haired woman (R3), the curly-haired woman (R1), the purple-haired woman (R7), the short black-haired woman (R4), the dark brown-haired woman (R9), and the long dark-haired woman (R6). They wear matching white 'Warsaw Mets' t-shirts and white cheer skirts. Each cheerleader stands with hands on hips, holding shiny orange pom-poms, looking forward with a serious, confident expression. The lighting is bright and even, casting soft shadows.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R1 is the curly-haired woman, while R2 is the blonde woman",
+    "R7 is the purple-haired woman, while R4 is the short black-haired woman",
+    "R1 stands in the cheerleader line with hands on hips holding orange pom-poms",
+    "R2 stands in the cheerleader line with hands on hips holding orange pom-poms",
+    "shiny orange pom-poms are held by the cheerleaders",
+    "the group poses against a clean white studio backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 pose with her hands on her hips while holding shiny orange pom-poms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in the cheerleader line with hands on hips holding orange pom-poms"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 pose with her hands on her hips while holding shiny orange pom-poms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in the cheerleader line with hands on hips holding orange pom-poms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

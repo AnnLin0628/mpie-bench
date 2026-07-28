@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc4bacc07276__T1",
+  "instruction": "A candid outdoor full shot from a low angle shows a young couple walking on a sunny day. On the left, the woman in the white long-sleeved dress (R1) walks forward wearing white boots, smiling. On the right, the man in the patterned short-sleeved shirt (R2) walks alongside her in khaki trousers and black shoes. They hold hands as they walk next to a black ornate metal fence on a stone wall. Bright daylight casts soft shadows on the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman walking forward while holding hands with R2",
+    "R2 is the man walking alongside R1 while holding her hand",
+    "R1 and R2 are walking together hand-in-hand",
+    "R1 smiles as she walks with R2",
+    "R1 and R2 walk next to a black ornate metal fence on a stone wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman walking forward while holding hands with R2, rather than R2 being the woman walking forward with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman walking forward while holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man walking alongside R1 while holding her hand, rather than R1 being the man walking alongside R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man walking alongside R1 while holding her hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk forward while holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks forward while holding R2's hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk alongside R1 while holding her hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks alongside R1 while holding her hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

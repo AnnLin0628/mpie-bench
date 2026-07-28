@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T175",
+  "instruction": "Candid documentary photograph, medium-full shot, slightly high angle. In an indoor studio with a red carpet, the man in the black polo shirt and blue shorts (R1) stands in the center with his back to the camera. The woman in the white t-shirt and blue jeans (R2) stands on the left, facing him. They hold hands under overhead artificial lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man standing with his back to the camera while holding hands with R2",
+    "R2 is the woman facing R1 while holding hands with him",
+    "R1 and R2 are the two labeled people engaged in the hand-holding contact",
+    "The scene is an indoor studio with a red carpet",
+    "The shot is a candid documentary-style medium-full photograph under overhead artificial lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with his back to the camera while holding hands with R2, rather than R2 being the person with her back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-to-camera position during the hand-holding contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person facing R1 during the hand-holding contact, rather than R1 being the one facing R2 from the front?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while they hold hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other, with R1 turned away from the camera and R2 facing him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "labeled hand-holding configuration between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the central man participating in the hand-holding contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's role as the central hand-holding participant"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

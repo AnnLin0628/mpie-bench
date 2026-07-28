@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__0d74e9de6ddb__T2",
+  "instruction": "Candid documentary photograph, medium shot. On an outdoor wooden deck with green trees in the background, three friends stack their hands together in the center. In the left foreground, the man in the gray t-shirt (R3) has his back to the camera. In the center background, the man in the orange t-shirt (R2) smiles. On the right, the woman in the beige hoodie (R4) is in side profile, smiling. They all extend their hands to stack them in a central huddle under warm, natural sunlight.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is the back-to-camera foreground participant contributing a hand to the central stack",
+    "R2 is the smiling center-background participant contributing a hand to the central stack",
+    "R4 is the smiling side-profile participant contributing a hand to the central stack",
+    "R2, R3, and R4 all extend their hands into the same central huddle",
+    "The interaction happens on an outdoor wooden deck with green trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the back-to-camera foreground participant contributing a hand to the central stack, rather than R2 taking that back-to-camera hand-stacking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the back-to-camera foreground participant contributing a hand to the central stack"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the smiling center-background participant contributing a hand to the stack, rather than R3 occupying that center-background hand-stacking role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the smiling center-background participant contributing a hand to the central stack"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the side-profile participant smiling while extending her hand into the central stack, rather than R2 being the side-profile hand-stacking participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the smiling side-profile participant contributing a hand to the central stack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R2, R3, and R4 each extend a hand into the same central huddle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2, R3, and R4 all extend their hands into the same central huddle"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 joining the hand stack while shown in side profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the side-profile participant contributing a hand to the central stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T5",
+  "instruction": "A candid studio photograph captures a medium full shot of two women dancing against a plain beige wall. On the left, the woman with an afro in a brown button-up dress (R1) stands facing forward, looking down with a soft expression as she dances with clenched fists. Beside her on the right, the woman with short brown hair in a striped shirt and white trousers (R2) stands angled left, eyes closed in enjoyment, hands raised mid-motion. The scene is illuminated by soft, diffused front lighting, creating a warm, minimalist aesthetic with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 dances while facing forward, looking down, and keeping clenched fists",
+    "R2 dances with eyes closed and hands raised mid-motion",
+    "R2 is angled toward R1 while dancing beside her",
+    "R1 has a soft downward-looking expression during the dance",
+    "The dancers are photographed against a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer looking down with clenched fists, rather than R2 being the one looking down with clenched fists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances while looking down with clenched fists"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer with eyes closed and hands raised mid-motion, rather than R1 having that raised-hands, eyes-closed pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances with eyes closed and hands raised mid-motion"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face forward while dancing with clenched fists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces forward and dances with clenched fists"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand angled toward R1 while raising her hands in mid-motion?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is angled toward R1 with raised hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 dancing against a plain beige wall in a studio-style photograph?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "plain beige wall studio setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

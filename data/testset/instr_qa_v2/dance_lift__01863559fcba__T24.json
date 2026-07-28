@@ -1,0 +1,82 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T24",
+  "instruction": "Candid dance studio photograph, medium-full shot. In a bright dance studio with a white floor and a window in the background, two young dancers pose. In the foreground, the blonde girl (R3) in a beige long-sleeve top, shorts, and white socks kneels on one knee with her arms gracefully raised. Behind her, the dark-haired girl (R6) in a matching beige outfit and white socks performs the same kneeling pose. Soft daylight from the window illuminates the clean, neutral-toned space.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R3 is the foreground dancer kneeling on one knee with arms gracefully raised",
+    "R6 is positioned behind R3 and performs the same kneeling pose",
+    "R3 takes the front position in the dance formation while R6 takes the rear position",
+    "Both labeled dancers are posed in a bright dance studio",
+    "A white floor is visible under the kneeling dancers",
+    "A window in the background provides soft daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the foreground kneeling dancer with raised arms while R6 is behind her, rather than R6 being the foreground dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 takes the foreground dance-formation role relative to R6"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the dancer positioned behind R3 performing the same kneeling pose, rather than R3 being behind R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 takes the rear dance-formation role relative to R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 kneel on one knee in the foreground with her arms gracefully raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's kneeling raised-arm dance pose in the foreground"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R6 perform the same kneeling pose behind R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 mirrors R3's kneeling pose from behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

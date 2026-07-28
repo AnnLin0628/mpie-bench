@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T189",
+  "instruction": "Candid documentary photograph from a wide, high angle showing an indoor motion capture lab with a red carpet and white walls. In the center-left of the room, the man in the black t-shirt and blue shorts (R1), wearing a black skullcap, tightly embraces the woman in the white t-shirt and blue jeans (R2). They stand facing each other in a full, warm hug. The room is brightly lit by overhead fluorescent lights, casting soft shadows on the red carpeted floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man described as tightly embracing R2",
+    "R2 is the woman being tightly embraced by R1",
+    "R1 and R2 stand facing each other in close full-body contact",
+    "the interaction occurs in an indoor motion capture lab",
+    "the room has a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person described as tightly embracing R2, rather than R2 being described as tightly embracing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the named active embracer of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being tightly embraced by R1, rather than R1 being the person being tightly embraced by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the named recipient of R1's tight embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does the instruction assign the tight embracing action to R1 around R2, rather than assigning that action to R2 around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric assignment of the embracing action to R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing face-to-face while in close full-body contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other in close contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set inside an indoor motion capture lab with a red carpeted floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor motion capture lab with red carpet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

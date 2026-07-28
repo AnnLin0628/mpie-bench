@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__790dbad50694__T2",
+  "instruction": "Candid street photograph, full shot at eye-level. On a city street crosswalk, the woman in the white jacket (R1) and the woman in the blue quilted sweater (R2) walk side-by-side. The woman in the white jacket (R1) is on the left, carrying a black handbag and looking forward. The woman in the blue sweater (R2) is on the right, smiling as she places her right arm around the shoulder of the woman in the white jacket (R1). The scene is captured in overcast daylight with cool, natural colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her right arm around R1's shoulder",
+    "R1 is the person receiving the shoulder-arm contact from R2",
+    "R2 initiates the shoulder contact while walking beside R1",
+    "R1 and R2 walk side-by-side in a candid street scene",
+    "R1 carries a black handbag",
+    "The scene takes place on a city street crosswalk"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 placing her right arm around R1's shoulder, rather than R1 placing her arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her right arm around R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being held by R2's arm, rather than R2 being the one whose shoulder is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the shoulder-arm contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active person making the affectionate shoulder contact with R1, rather than R1 being the active person making that contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the shoulder contact with R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side while R2 keeps an arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side with R2's arm around R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

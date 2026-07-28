@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T199",
+  "instruction": "A candid documentary medium-wide shot in an indoor motion capture studio with a red carpet. On the left, the woman in the white patterned t-shirt and blue jeans (R2) balances on her left leg, kicking her right leg forward. On the right, the man in the dark polo shirt and blue shorts (R1) stands with his back partially turned to the camera, receiving the kick near his hip. The two are in close contact during the martial arts practice. Bright overhead lighting illuminates the scene, casting soft shadows on the floor against white walls.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 delivers a forward kick toward R1 rather than R1 kicking R2",
+    "R1 receives R2's kick near his hip rather than R2 receiving a kick from R1",
+    "R2 balances on her left leg while using her right leg to kick R1",
+    "R1 stands as the contact target with his back partially turned while R2 kicks him",
+    "red carpet on the floor of the motion capture studio",
+    "indoor motion capture studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person delivering the forward kick toward R1, rather than R1 kicking R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers a forward kick toward R1 rather than R1 kicking R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 receiving the kick near his hip, rather than R2 receiving a kick near her hip from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's kick near his hip rather than R2 receiving a kick from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing on one leg while extending her right leg into the kick, rather than R1 balancing and kicking R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on her left leg while using her right leg to kick R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 serve as the contact target of the martial arts practice while R2 is the active kicker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands as the contact target with his back partially turned while R2 kicks him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

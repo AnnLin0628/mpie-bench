@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__afa13a922dae__T4",
+  "instruction": "Candid medium-shot documentary photograph in a subway station corridor with a shallow depth of field. On the left, the blonde woman in a striped crop top and jeans (R1) walks forward, partially cropped out of the frame. Beside her, the bearded man in a blue long-sleeve shirt and khaki shorts (R2) walks in stride, looking ahead with a neutral expression. They hold hands closely as they walk together. The background turnstiles are softly blurred, and warm overhead lighting illuminates the tiled floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 walks in stride beside R1 as R1 walks forward while they hold hands",
+    "R1 is the partially cropped person in the hand-holding pair",
+    "R1 and R2 hold hands closely while walking together",
+    "R2 looks ahead with a neutral expression while walking hand-in-hand with R1",
+    "R1 and R2 are in a subway station corridor with softly blurred turnstiles in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 walk in stride beside R1 as R1 walks forward while they hold hands, rather than R1 walking in stride beside R2 as R2 walks forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks in stride beside R1 as R1 walks forward while they hold hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partially cropped person in the hand-holding pair, rather than R2 being the partially cropped person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partially cropped person in the hand-holding pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands closely as they walk together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands closely while walking together"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

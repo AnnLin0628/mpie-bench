@@ -1,0 +1,72 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__020ba7faa67f__T3",
+  "instruction": "A candid documentary photograph in a medium shot captures a bright office setting with a wooden door in the background. Seated at a white desk in the foreground, the woman with short grey hair (R2) wearing a light pink blazer on the left and the man in the dark blue shirt (R4) on the right are shaking hands. Both individuals look towards the camera with warm, friendly smiles. On the desk between them lies a black folder, a pen, and rolled-up documents. The scene is illuminated by bright, natural indoor lighting, creating soft shadows and highlighting a neutral color palette with pink and dark blue accents.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is one of the named people clasping hands with R4 at the white desk",
+    "R4 is the other named person clasping hands with R2 at the white desk",
+    "R2 and R4 are seated at the desk during their hand-to-hand contact",
+    "a black folder lies on the desk between R2 and R4",
+    "a pen and rolled-up documents lie on the desk",
+    "the interaction takes place in a bright office with a wooden door in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R4 seated at the white desk while their hands meet in the greeting contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R4 are seated at the desk during their hand-to-hand contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

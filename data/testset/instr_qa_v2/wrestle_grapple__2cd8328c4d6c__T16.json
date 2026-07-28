@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T16",
+  "instruction": "Crisp studio photograph, full shot from a high angle. In a minimalist white studio with a seamless background, the woman in the black hooded outfit (R1) bends deeply forward in the foreground. Behind her, the woman in the white hooded outfit (R2) balances on one foot, lifting her other leg near R1's back in a coordinated, dynamic dance movement. Both barefoot dancers perform on the clean white floor under bright high-key studio lighting that casts soft, distinct shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 bends deeply forward in the foreground",
+    "R2 is behind R1",
+    "R2 balances on one foot while lifting her other leg near R1's back",
+    "R1 and R2 perform a coordinated dynamic dance movement",
+    "The scene is a minimalist white studio with a seamless background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer bending deeply forward in the foreground, rather than R2 being the one bent forward there?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the bent-forward foreground duty while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer behind R1 balancing on one foot and lifting her other leg near R1's back, rather than R1 doing that behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the one-foot balance and leg lift near R1's back"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lift a leg near R1's back while R1 stays bent deeply forward in front of her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's lifted leg is near R1's bent-forward back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in the forward bent body configuration with R2 positioned behind her during the coordinated dance movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct front-bent versus behind-balancing dance roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

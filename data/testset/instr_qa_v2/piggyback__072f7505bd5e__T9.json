@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__072f7505bd5e__T9",
+  "instruction": "Candid documentary medium shot of an outdoor park setting with autumn trees. The man in the white zip-up hoodie (R2) stands on the left in profile, looking up with a joyful smile as he holds the baby girl in the pink sweater and denim overalls (R1) high in the air. The baby girl (R1) is positioned on the right, laughing excitedly with her mouth wide open as she playfully flies horizontally, supported by the man's hands under her chest. The background consists of soft-focus, warm-toned autumn foliage. The scene is illuminated by soft, diffused natural daylight, creating a heartwarming atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 holds R1 high in the air rather than R1 holding R2",
+    "R2 supports R1's weight with his hands under R1's chest",
+    "R1 is the baby being lifted and playfully flying horizontally while R2 is the lifter",
+    "R2 stands below and looks up toward R1 as he holds her aloft",
+    "R1 laughs excitedly while being held in the air",
+    "The interaction takes place in an outdoor park with autumn trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1 high in the air, rather than R1 holding R2 high in the air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lifter and R1 is the lifted person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 support R1's weight from underneath with his hands under R1's chest, rather than R1 supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's body from below"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the baby flying horizontally in the air while R2 is the person holding her up, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is carried horizontally while R2 holds her aloft"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing below and looking up toward R1 as he holds her in the air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's standing lifter role beneath R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 laughing excitedly while being supported in the air by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's carried-and-supported role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

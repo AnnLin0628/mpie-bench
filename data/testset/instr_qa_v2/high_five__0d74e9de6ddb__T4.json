@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__0d74e9de6ddb__T4",
+  "instruction": "Candid documentary photograph, medium shot. On an outdoor wooden boardwalk next to a river, a group of friends stack their hands together in a huddle. In the left foreground, the woman in the beige hoodie (R4) is seen from a back-three-quarters view extending her arm. Behind her, the man in the gray t-shirt (R3) is partially visible, looking down. In the center background, the woman in the gray hijab (R1) laughs happily, looking towards the group. On the right, the man in the orange t-shirt (R2) stands in profile, smiling as he reaches his hand into the stack. Warm, natural sunlight filters through the trees, casting a soft glow over the scene.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 reaches his hand into the friends' hand stack while smiling in profile",
+    "R4 extends her arm from the foreground into the huddle",
+    "R1 laughs and looks toward the group rather than being the person reaching in from the right",
+    "R3 is partially visible behind R4 and looks down toward the huddle",
+    "the friends stack their hands together in a huddle",
+    "the scene is on an outdoor wooden boardwalk next to a river"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person reaching his hand into the friends' hand stack while R1 laughs and looks toward the group, rather than R1 being the one reaching in as R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches into the hand stack while R1 watches and laughs"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 extending her arm from the foreground into the huddle while R3 is partially visible behind her looking down, rather than R3 being the foreground arm-extender?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the foreground participant extending an arm; R3 is behind looking down"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 described as smiling in profile while reaching into the hand stack, rather than R4 being the person in profile on the right reaching in?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the profile reaching role on the right side of the huddle"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 participate in the huddle by extending her arm toward the central stack of hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 extends an arm into the group hand stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

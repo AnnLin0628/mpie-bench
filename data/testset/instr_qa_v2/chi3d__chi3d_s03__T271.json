@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T271",
+  "instruction": "Candid wide-angle documentary photograph of an indoor studio with a red carpet and an office printer in the background. The man in the black polo and blue shorts (R1) walks away from the camera. Beside him, the woman in the white t-shirt and blue jeans (R2) walks to his left, placing her right hand on the man's (R1) upper back. The scene is brightly lit by overhead fixtures.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her right hand on R1's upper back",
+    "R1 receives upper-back contact from R2",
+    "R2 walks beside R1 while maintaining hand contact on him",
+    "R1 walks away from the camera",
+    "office printer in the background",
+    "indoor studio setting with red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one placing her right hand on R1's upper back, rather than R1 placing his hand on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates hand contact on R1's upper back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the hand contact on his upper back from R2, rather than R2 receiving upper-back contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives upper-back contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk beside R1 while keeping her right hand on R1's upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks beside R1 with hand on his back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking away from the camera while R2 is the one touching his upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks away as R2 touches his back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

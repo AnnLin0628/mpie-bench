@@ -1,0 +1,104 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T21",
+  "instruction": "A candid full shot of three friends playing a game in a grassy park under soft daylight. On the left, the bald man in a dark blue t-shirt (R2) stands in profile, facing right. In the center, the smiling woman in a dark blue t-shirt with a red letter E (R4) stands facing forward. On the right, the laughing woman with an afro in a red t-shirt with a pink letter A (R6) faces left with her hands raised. They interact playfully in a semi-circle on the green lawn, with trees softly blurred in the background.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R6 is the laughing participant with her hands raised toward the group during the playful game",
+    "R2 stands in profile facing toward the other participants rather than raising his hands",
+    "R4 is the smiling forward-facing participant in the middle of the playful semi-circle",
+    "R2, R4, and R6 interact playfully as friends in a semi-circle",
+    "The interaction takes place on a grassy park lawn"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the participant with her hands raised during the playful game, rather than R2 being the one described with raised hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 has the raised-hands game role while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing in profile facing toward the other players, rather than R6 being the bald man in profile facing right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the profile-facing role toward the group, not R6"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the forward-facing smiling participant between the other players, rather than R2 taking that central forward-facing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the central forward-facing participant role, not R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R6 face toward the group with raised hands as part of the playful interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 faces the group with raised hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R2, R4, and R6 interact playfully together in a semi-circle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2, R4, and R6 are playful participants in a semi-circle"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the playful group interaction set on a grassy park lawn?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "grassy park lawn setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

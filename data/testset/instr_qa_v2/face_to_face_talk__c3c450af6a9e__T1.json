@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__c3c450af6a9e__T1",
+  "instruction": "A candid full-length photograph captures two companions standing on a rocky beach shoreline at dusk, with a city skyline and palm trees in the background. On the left, the person in the colorful crocheted vest (R2) stands in profile facing right, wearing beige cargo pants and holding a mate cup. Beside them on the right, the woman in the grey textured coat (R1) stands slightly behind, wearing glasses and looking forward with a gentle smile. The warm golden hour light casts a soft glow over the scene, creating a relaxed and peaceful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the companion holding the mate cup, not R1",
+    "R1 stands slightly behind R2, not the other way around",
+    "R2 is shown in profile facing right while R1 looks forward",
+    "R1 looks forward with a gentle smile while positioned behind R2",
+    "a mate cup is held by R2",
+    "the scene is a rocky beach shoreline at dusk with a city skyline and palm trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the mate cup, rather than R1 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the mate cup"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing slightly behind R2, rather than R2 standing slightly behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is slightly behind R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 shown in profile facing right while R1 looks forward, rather than R1 being the profile-facing person and R2 looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right in profile while R1 looks forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

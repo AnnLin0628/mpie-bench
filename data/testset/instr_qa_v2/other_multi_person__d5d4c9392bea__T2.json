@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__d5d4c9392bea__T2",
+  "instruction": "Candid outdoor photograph, medium shot, low angle. In an autumn park, the bearded man in the tan hoodie (R2) kneels on the left, looking at the young girl in the beige puffer coat (R1) who kneels on the right. Both hold handfuls of gathered yellow leaves. Warm, golden natural light fills the scene with a soft, blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the kneeling bearded man looking at R1, rather than R1 being the one described as looking at R2",
+    "R1 is the young girl being looked at by R2 while kneeling nearby",
+    "R1 and R2 both kneel in the scene while interacting with gathered leaves",
+    "both R1 and R2 hold handfuls of gathered yellow leaves",
+    "the scene is set in an autumn park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking at R1 while kneeling, rather than R1 being described as looking at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks at R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young girl being looked at by R2, rather than R2 being the young girl being looked at by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the young girl receiving R2's gaze"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 kneel while directing his attention toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kneels and attends to R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

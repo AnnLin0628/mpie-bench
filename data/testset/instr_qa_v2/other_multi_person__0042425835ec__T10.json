@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T10",
+  "instruction": "A full shot cinematic still of a grassy outdoor backyard surrounded by green trees. On the left, the woman in the crochet vest (R2) is blindfolded with a peach bandana, holding a wooden bat and swinging it forward. In the background center, the woman in the pink shirt (R1) stands watching with a smile. On the right, the man in the patterned tee (R3) wears white shorts and sneakers, watching excitedly with his hands raised. The blindfolded woman swings the wooden bat at a red heart-shaped pinata hanging from above, while her friends stand nearby watching and reacting. The scene is illuminated by bright daylight filtering through the trees.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the blindfolded participant swinging the wooden bat at the pinata, rather than R1 or R3",
+    "R1 stands watching and smiling while R2 performs the pinata swing",
+    "R3 watches excitedly with hands raised while R2 swings the bat",
+    "R2 holds the wooden bat used to strike the pinata",
+    "A red heart-shaped pinata hangs above as the target",
+    "The scene is a grassy outdoor backyard surrounded by green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blindfolded person swinging the wooden bat at the pinata, rather than R1 or R3 doing the swing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active blindfolded batter while R1 and R3 are watchers"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 watching with a smile while R2 swings the bat, rather than R1 being the one blindfolded and swinging?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the observer role while R2 has the swinging role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 reacting excitedly with his hands raised while R2 holds and swings the bat, rather than R3 being the bat swinger?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is an excited watcher, not the person swinging the bat"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 wear the blindfold while attempting to hit the pinata?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is blindfolded during the pinata action"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a wooden bat for the pinata swing?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "wooden bat held by R2"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the target a red heart-shaped pinata hanging from above?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red heart-shaped hanging pinata"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__34d97a41e384__T3",
+  "instruction": "Candid outdoor close-up photograph of a couple on a rocky coast. Under an overcast sky, the man with dark curly hair and glasses (R1), wearing a white long-sleeve shirt and a blue puffer vest, smiles widely in the center of the frame. He is carrying the woman with light brown hair (R2) on his back. The woman (R2), wearing a grey and green striped sweater, wraps her arms tightly around his chest from behind, her face resting near his shoulder with a happy expression. The camera captures them at eye-level with a shallow depth of field, softly blurring the green bushes in the background. The lighting is diffused and natural, casting soft shadows across their faces.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 on his back in a piggyback position",
+    "R1 supports R2's weight rather than being carried by R2",
+    "R2 wraps her arms around R1's chest from behind",
+    "R2's face rests near R1's shoulder while on his back",
+    "The scene is outdoors on a rocky coast under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his back, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his back in a piggyback position"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below while R2 rides on him, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight rather than being carried by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's chest from behind, rather than R1 wrapping his arms around R2's chest from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's chest from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned on R1's back with her face near R1's shoulder while R1 carries her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's face rests near R1's shoulder while on his back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

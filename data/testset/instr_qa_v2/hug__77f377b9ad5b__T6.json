@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__77f377b9ad5b__T6",
+  "instruction": "A candid outdoor photograph, close-up shot, shows a couple embracing in a snowy winter forest. The woman in the grey beanie (R1) stands on the right, wearing a black leather jacket and white mittens, smiling gently with her eyes open. She wraps her arms from behind around the man in the black beanie (R2), who stands on the left in a brown coat with his back partially turned. The background is filled with soft, snow-covered trees. The lighting is diffused and cool, highlighting the falling snow and creating a serene, romantic winter mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2 from behind",
+    "R2 is the person being encircled from behind by R1's arms",
+    "R1 is the rear embracing participant while R2 has his back partially turned",
+    "R1 wears white mittens during the arm-wrapping contact",
+    "the interaction takes place in a snowy winter forest"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2 from behind, rather than R2 wrapping his arms around R1 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2 from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being encircled from behind by R1's arms, rather than R1 being encircled from behind by R2's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being encircled from behind by R1's arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the rear participant in the contact, with her arms around R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the rear embracing participant"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have his back partially turned while R1 holds him from behind with her arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his back partially turned while R1 holds him from behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

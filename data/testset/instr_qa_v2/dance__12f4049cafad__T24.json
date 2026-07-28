@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T24",
+  "instruction": "A cinematic video still, medium close-up, capturing two women dancing in an indoor studio against a plain backdrop. In the left foreground, the blonde woman in the black halter dress (R3) laughs joyfully with her eyes closed, moving energetically. Behind her on the right, the Black woman in the red fringed dress (R1) smiles warmly while dancing with her hands raised. The blonde woman (R3) dominates the foreground while the Black woman (R1) dances slightly behind her, creating a lively, layered composition. Soft pink and purple studio lighting illuminates them with a warm, colorful glow.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 dominates the foreground while R1 dances slightly behind her",
+    "R1 dances behind R3 with her hands raised while R3 leads the foreground action",
+    "R3 laughs with her eyes closed while moving energetically",
+    "R1 smiles warmly while dancing with raised hands",
+    "The dancers are in an indoor studio against a plain backdrop with pink and purple lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 dominate the foreground of the dancing composition while R1 dances slightly behind her, rather than R1 dominating the foreground while R3 is behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 dominates the foreground while R1 dances slightly behind her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer positioned behind R3 with her hands raised, rather than R3 being the dancer behind R1 with raised hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances behind R3 with her hands raised while R3 leads the foreground action"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 laughing joyfully with her eyes closed while moving energetically in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 laughs with her eyes closed while moving energetically"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

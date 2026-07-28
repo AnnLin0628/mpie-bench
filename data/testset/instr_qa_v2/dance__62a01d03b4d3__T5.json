@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T5",
+  "instruction": "Candid full shot of a man in a gray suit (R1) and a woman in a black dress (R2) dancing tango outdoors next to a yellow and gray wall. The man on the right and the woman on the left hold hands in a dance pose under bright sunlight, casting sharp shadows on the wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in a gray suit holding hands with R2 in a tango dance pose",
+    "R2 is the woman in a black dress holding hands with R1 in a tango dance pose",
+    "R1 and R2 are connected by a handhold while dancing tango",
+    "R1 and R2 are posed as dance partners rather than separate individuals",
+    "the tango dance happens outdoors next to a yellow and gray wall",
+    "bright sunlight casts sharp shadows on the wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the gray suit holding hands with R2 in the tango pose, rather than R2 being the man in the gray suit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the male tango partner in a gray suit holding R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the black dress holding hands with R1 in the tango pose, rather than R1 being the woman in the black dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the female tango partner in a black dress holding R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other as part of their tango dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are connected by a handhold while dancing tango"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posed as tango dance partners rather than standing separately without contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain a partnered dance pose with contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

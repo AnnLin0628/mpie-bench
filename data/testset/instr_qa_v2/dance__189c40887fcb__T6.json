@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T6",
+  "instruction": "Cinematic film still, medium shot of a dimly lit hall with a stage background. On the left, the blonde man in an open leather jacket and corset (R1) stands with hand on hip, looking forward. In the center, the dark-haired man in a white t-shirt and harness (R3) extends one arm forward, looking at the camera. On the right, the long-haired man in a mesh shirt (R2) holds one hand behind his head, looking forward. The three dancers stand side-by-side in a coordinated dance pose under cool blue ambient light with purple highlights.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the dancer with a hand on hip while R3 extends an arm forward",
+    "R3 is the dancer extending one arm forward rather than R2",
+    "R2 is the dancer holding one hand behind his head rather than R1",
+    "R1, R2, and R3 are posed side-by-side in a coordinated dance formation",
+    "The scene is a dimly lit hall with a stage background and cool blue-purple lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer extending one arm forward, rather than R1 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the forward-extended arm role instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer holding one hand behind his head, rather than R3 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the hand-behind-head pose role instead of R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer standing with a hand on hip, rather than R2 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the hand-on-hip pose role instead of R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 each hold distinct coordinated dance poses rather than physically supporting or carrying one another?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the three labeled dancers form a coordinated pose without support or carrying"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the central performing figure with an arm extended toward the camera while R1 and R2 keep their own separate poses?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leads the forward-reaching gesture while R1 and R2 maintain different poses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

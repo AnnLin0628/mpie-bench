@@ -1,0 +1,90 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T11",
+  "instruction": "A cinematic medium-full shot of two friends on a sunny rooftop. In the foreground, the man with short gray hair in a gray t-shirt (R2) sits cross-legged, looking directly at the camera with a calm expression. Standing directly behind him, the woman with brown hair in a white open shirt and black crop top (R5) poses with a hand gesture, looking forward. The background features a bright blue sky with light clouds under direct sunlight.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R2 is seated cross-legged in the foreground while R5 stands directly behind him",
+    "R5 stands behind R2 rather than R2 standing behind R5",
+    "R5 poses with a hand gesture while R2 sits calmly looking at the camera",
+    "R2 looks directly at the camera with a calm expression",
+    "the scene is on a sunny rooftop with a bright blue sky and light clouds"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 seated cross-legged in the foreground while R5 stands behind him, rather than R5 being seated cross-legged in front of R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seated cross-legged in the foreground while R5 stands directly behind him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person standing directly behind R2, rather than R2 standing directly behind R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 stands behind R2 rather than R2 standing behind R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person posing with a hand gesture while R2 remains seated calmly, rather than R2 making the hand gesture behind R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 poses with a hand gesture while R2 sits calmly looking at the camera"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look directly at the camera with a calm expression while seated cross-legged?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks directly at the camera with a calm expression"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 face forward while standing behind R2 and posing with a hand gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 stands behind R2 and poses with a hand gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

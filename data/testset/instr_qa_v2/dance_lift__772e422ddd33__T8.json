@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T8",
+  "instruction": "Candid studio photograph, medium full shot. In a bright indoor dance studio with white paneled walls and a window, the instructor in a black top and white tights (R1) and the young student in a black crop top and shorts (R2) sit side-by-side on a white wooden step. Both perform a leg stretch, holding their raised left foot with their hands while looking forward with focused expressions. Bright natural light streams from the window in the background, illuminating the clean white setting and creating a calm atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the dance instructor while R2 is the young student",
+    "R2 is the young student stretching alongside instructor R1",
+    "R1 and R2 sit side-by-side while performing a leg stretch",
+    "R1 and R2 each hold their own raised left foot with their hands",
+    "R1 and R2 are seated on a white wooden step",
+    "bright indoor dance studio with white paneled walls and a window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the instructor while R2 is the young student, rather than R2 being the instructor and R1 being the student?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dance instructor while R2 is the young student"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the young student doing the stretch with instructor R1, rather than R1 being the young student instructed by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young student stretching alongside instructor R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both seated side-by-side while performing the same leg stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit side-by-side while performing a leg stretch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold R1's own raised left foot while R2 holds R2's own raised left foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 each hold their own raised left foot with their hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

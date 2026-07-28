@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__f5d108f7f8f8__T1",
+  "instruction": "Candid medium shot of a man in an orange beanie (R2) and a woman in a purple cropped hoodie (R1) talking in a gym. The man (R2) stands on the left in a white t-shirt, facing right and smiling with gesturing hands. The woman (R1) stands on the right, profile view, gesturing with her right hand and smiling back. They stand close together in a brightly lit fitness studio with yellow walls and hanging straps. The shot is captured with a shallow depth of field, highlighting their playful interaction.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the man in an orange beanie smiling and gesturing with his hands toward R1",
+    "R1 is the woman smiling back at R2 and gesturing with her right hand",
+    "R1 and R2 stand close together in a face-to-face conversation",
+    "hanging straps are visible in the gym setting",
+    "the interaction takes place in a brightly lit fitness studio with yellow walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person smiling and gesturing with his hands toward R1, rather than R1 being the one described with that hand-gesturing role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles and gestures with his hands toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person smiling back at R2 while gesturing with her right hand, rather than R2 being the one smiling back with a right-hand gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles back at R2 and gestures with her right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face toward R1 during their conversation while R1 returns his smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while R1 smiles back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing close to R2 in profile view while actively gesturing during the talk?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands close to R2 and gestures in profile"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

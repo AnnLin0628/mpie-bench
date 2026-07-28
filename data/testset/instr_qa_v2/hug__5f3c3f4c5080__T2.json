@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5f3c3f4c5080__T2",
+  "instruction": "A cinematic film still in a medium full shot captures a cozy indoor living room during the day. The elderly man in a striped shirt and khaki trousers (R1) stands on the left, facing right with his arms slightly open and a warm expression. The elderly woman in a white shirt and beige trousers (R2) stands on the right in profile, facing left towards him. The couple stands facing each other, preparing to dance, with R1 opening his arms invitingly. Warm, soft indoor lighting and natural light from the side illuminate the room, creating a peaceful and nostalgic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 opens his arms invitingly toward R2 to initiate the dance",
+    "R2 faces R1 as the person receiving R1's invitation to dance",
+    "R1 and R2 stand oriented toward each other while preparing to dance",
+    "R1 maintains an open-armed dance-lead posture toward R2",
+    "cozy indoor living room during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one opening his arms invitingly toward R2, rather than R2 opening her arms invitingly toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the dance invitation with open arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 facing R1 as the person being invited into the dance, rather than R1 being the one receiving an open-armed invitation from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's inviting dance gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold an open-armed, welcoming posture toward R2 for the dance setup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body posture is open and inviting toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

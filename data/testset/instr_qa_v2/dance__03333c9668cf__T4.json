@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03333c9668cf__T4",
+  "instruction": "Cinematic still with a retro 1980s aesthetic, medium shot at eye-level in an indoor dance studio with large arched windows. On the left, the man with a mustache and red headband in a blue t-shirt (R2) stands facing left, looking back over his shoulder with a smile, his left arm extended down and right arm bent in an aerobic pose. On the right, the woman with curly brown hair in a light blue leotard (R1) stands facing right, looking back over her shoulder with a smile. The man (R2) and the woman (R1) are positioned back-to-back, performing a synchronized aerobics routine. Bright, soft natural light streams from the windows behind them, creating a cool, airy palette.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the dancer facing left and looking back over his shoulder during the aerobics routine",
+    "R1 is the dancer facing right and looking back over her shoulder during the aerobics routine",
+    "R2 has a distinct aerobic arm pose with his left arm extended down and his right arm bent",
+    "R1 and R2 are positioned back-to-back while performing synchronized aerobics",
+    "the scene is set in an indoor dance studio with large arched windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer facing left and looking back over his shoulder, rather than R1 being the dancer facing left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the facing-left over-the-shoulder dance orientation"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer facing right and looking back over her shoulder, rather than R2 being the dancer facing right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the facing-right over-the-shoulder dance orientation"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the dancer holding the aerobic pose with his left arm extended down and his right arm bent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the specified asymmetric aerobic arm pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T229",
+  "instruction": "A candid documentary wide shot of an indoor motion capture studio with a red carpet. On the left, the woman in the white t-shirt and blue jeans (R2) stands on one leg, kicking her other leg high towards the right. On the right, the man in the black polo and blue shorts (R1) stands facing her, bracing as her foot makes contact with his thigh. The scene is illuminated by bright overhead studio lights, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 kicks one leg high so that her foot contacts R1's thigh",
+    "R1 braces and receives the contact on his thigh from R2's foot",
+    "R2 balances on one leg while delivering the kick toward R1",
+    "R1 faces R2 as the recipient of the kick rather than the kicker",
+    "the interaction takes place in an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person kicking high so that her foot makes contact with R1's thigh, rather than R1 kicking R2's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers the kick to R1's thigh"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person bracing to receive contact on his thigh from R2's foot, rather than R2 bracing to receive R1's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 braces as the recipient of R2's kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active striker with her leg extended toward R1, while R1 is the stationary receiver facing her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active kicker and R1 is the receiver"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing on one leg while extending her other leg toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on one leg during the kick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

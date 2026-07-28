@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T12",
+  "instruction": "A cinematic wide shot of a group of friends posing on a rooftop ledge under a bright blue sky. On the far left, the man with short blonde hair in a black hat (R4) stands looking forward. Next to him, the woman with brown hair in a white open shirt (R5) stands posing. In the center, the man with short gray hair in a gray t-shirt (R2) sits looking forward. To his right, the woman with reddish-brown hair in a white t-shirt (R1) sits smiling with her eyes closed. On the far right, the Black man in a dark blue shirt (R6) stands looking forward. Bright, direct sunlight casts soft shadows.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R2 is seated while R6 is standing, rather than their postures being swapped",
+    "R1 is seated while R5 is standing, rather than their postures being swapped",
+    "R1 and R2 are the seated people in the group pose",
+    "the group is posing on a rooftop ledge",
+    "R1 is smiling with her eyes closed",
+    "the scene is under a bright blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 seated while R6 is standing, rather than R6 being seated while R2 stands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seated while R6 is standing, rather than their postures being swapped"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 seated while R5 is standing, rather than R5 being seated while R1 stands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated while R5 is standing, rather than their postures being swapped"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the seated people in the group pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are the seated people in the group pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__77e034634520__T1",
+  "instruction": "Candid outdoor photograph, full shot. On a sunny park lawn with trees, the woman with tied-back hair (R2) in a dark blue t-shirt and light jeans stands on the left, gesturing forward. Next to her, the large bald man (R5) in a dark blue t-shirt and dark jeans stands looking ahead. Warm natural sunlight illuminates the scene.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R2 is the woman with tied-back hair who gestures forward while standing next to R5",
+    "R5 is the large bald man who looks ahead while standing next to R2",
+    "R2 performs the forward gesturing action rather than R5",
+    "R5 performs the looking-ahead role rather than R2 being the only one described that way",
+    "the scene is a sunny outdoor park lawn with trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person gesturing forward while R5 stands next to her looking ahead, rather than R5 being the one gesturing forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the forward gesture while R5 looks ahead"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the large bald man looking ahead next to R2, rather than R2 being described as the large bald man looking ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the looking-ahead role and large bald appearance next to R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand next to R5 while making a forward gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands next to R5 and gestures forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

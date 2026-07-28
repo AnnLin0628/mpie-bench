@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T8",
+  "instruction": "Cinematic still, low-angle medium close-up. In a dark indoor studio, the woman in the yellow long-sleeve shirt (R2) on the left tilts her head completely back, looking straight up with arms raised. Next to her, the man in the rust-brown long-sleeve shirt (R3) also tilts his head back, reaching his arm diagonally upward. In the background, several other hands and arms from unseen dancers reach toward the ceiling. Soft overhead light illuminates their faces and warm-toned shirts against the dark background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the dancer tilting her head completely back and looking straight up with arms raised",
+    "R3 is the dancer next to R2 who tilts his head back while reaching an arm diagonally upward",
+    "R2 and R3 are both participating in an upward-reaching dance pose",
+    "Background dancers' hands and arms reach toward the ceiling",
+    "The scene is set in a dark indoor studio with soft overhead lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer looking straight up with her head completely tilted back and arms raised, rather than R3 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the fully head-back, straight-up-looking raised-arms duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer reaching an arm diagonally upward next to R2, rather than R2 being the one with the diagonal single-arm reach?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the diagonal upward-reaching arm duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R3 both posed as dancers with their heads tilted back and their arms reaching upward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 share an upward-reaching dance configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

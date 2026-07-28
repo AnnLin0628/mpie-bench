@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T26",
+  "instruction": "Action sports medium full shot from an eye-level angle inside an indoor gym with weight racks and a patch of blue smoke in the background. On the right, the man in the black t-shirt and patterned leggings (R2) is positioned in profile, throwing a fast punch forward. On the left, the man in the patterned black-and-white t-shirt (R4) faces right, leaning his upper body backward to evade the incoming strike. The scene is illuminated by cool indoor lighting, highlighting the dynamic sparring interaction and the blue haze behind them.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the attacker throwing a fast forward punch toward R4",
+    "R4 is the defender leaning his upper body backward to evade R2's incoming strike",
+    "R2 and R4 are engaged in a dynamic sparring interaction with distinct attacker and evader roles",
+    "R2 is shown in profile while punching forward",
+    "R4 faces toward R2 while moving his upper body back from the strike",
+    "The scene is inside an indoor gym with weight racks and blue smoke or haze in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one throwing a fast punch toward R4, rather than R4 throwing the punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacker throwing the punch at R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one leaning his upper body backward to evade R2's incoming strike, rather than R2 leaning back to evade a strike from R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the evader reacting to R2's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have the active attacking role while R4 has the defensive evasion role in the sparring exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attacks while R4 evades"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned in profile while extending a punch forward toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's punching body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 facing R2 while leaning his upper body backward away from the incoming punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's evasive body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

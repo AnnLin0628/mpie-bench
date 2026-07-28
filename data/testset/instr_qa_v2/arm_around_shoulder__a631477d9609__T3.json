@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__a631477d9609__T3",
+  "instruction": "A candid documentary photograph in a full-length shot at eye-level captures an outdoor park with a dirt path surrounded by lush green trees. On the left, the blind man in a light green denim jacket (R1) stands stationary wearing sunglasses, a black turtleneck, black pants, and white sneakers, holding a white cane vertically in his right hand with a neutral expression. On the right, the woman in a tan coat (R2) stands beside him wearing a black beanie, a green scarf, a white t-shirt, blue jeans, and black boots, looking forward with a neutral expression. Her right arm is linked through his left arm as they pose side-by-side. The scene is illuminated by soft, diffused daylight with natural, muted colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 links her right arm through R1's left arm",
+    "R1 is the person whose left arm is linked by R2",
+    "R1 holds a white cane vertically in his right hand",
+    "R1 and R2 pose side-by-side with linked arms",
+    "outdoor park dirt path surrounded by green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 linking her right arm through R1's left arm, rather than R1 linking his arm through R2's?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 links her right arm through R1's left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose left arm is being linked by R2, rather than R2 being the person whose left arm is being linked by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose left arm is linked by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold the white cane vertically in his right hand while R2's linked arm is on R1's other side, rather than R2 holding the cane while R1 links arms with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the cane while R2 links arms with him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posed side-by-side with R2's arm connected through R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 pose side-by-side with linked arms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

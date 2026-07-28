@@ -1,0 +1,65 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__40aa4f308991__T3",
+  "instruction": "Cinematic medium profile photograph of a minimalist indoor studio with a white wall covered in handprint papers. On the left, the woman in the white crop top (R2) stands facing right, visible from the waist up. On the right, the man in the white t-shirt (R1) stands facing left, visible from the waist up. They stand facing each other, touching their raised left palms at chest height with neutral expressions. Soft, diffused overhead lighting illuminates the scene, creating a muted color palette of whites, grays, and soft skin tones with gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man facing left while touching R2's raised left palm",
+    "R2 is the woman facing right while touching R1's raised left palm",
+    "R1 and R2 make palm-to-palm contact with their raised left hands at chest height",
+    "handprint papers cover the white studio wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person facing left while touching R2's raised left palm, rather than R2 being the one facing left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces left in the palm-to-palm contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person facing right while touching R1's raised left palm, rather than R1 being the one facing right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right in the palm-to-palm contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 touching their raised left palms to each other at chest height?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share raised left-palm contact at chest height"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

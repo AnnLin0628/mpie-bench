@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MPI E Outputs · Gallery</title>
+  <style>
+    :root {
+      --bg: #0e1116;
+      --bg2: #161b22;
+      --panel: #1c2330;
+      --line: #2a3344;
+      --text: #e8edf5;
+      --muted: #8b97a8;
+      --accent: #3d9cf0;
+      --accent-dim: rgba(61, 156, 240, 0.18);
+      --ok: #3ecf8e;
+      --gap: 10px;
+      --cols: 5;
+      --side: 260px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "IBM Plex Sans", "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: var(--side) 1fr;
+      height: 100vh;
+    }
+
+    aside {
+      background: linear-gradient(180deg, #121820 0%, #0e1116 100%);
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .brand {
+      padding: 22px 20px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      font-weight: 650;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .brand p {
+      margin: 6px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .section-label {
+      padding: 14px 20px 8px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .model-list, .cat-list {
+      padding: 0 10px 10px;
+      overflow: auto;
+      min-height: 0;
+    }
+    .model-list { flex: 0 0 auto; max-height: 45%; }
+    .cat-list { flex: 1; }
+
+    .chip {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 10px 12px;
+      margin-bottom: 4px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      text-align: left;
+      transition: background .15s, border-color .15s;
+    }
+    .chip:hover { background: var(--bg2); }
+    .chip.active {
+      background: var(--accent-dim);
+      border-color: rgba(61, 156, 240, 0.45);
+      color: #fff;
+    }
+    .chip .count {
+      font-variant-numeric: tabular-nums;
+      font-size: 11px;
+      color: var(--muted);
+      background: var(--bg2);
+      padding: 2px 7px;
+      border-radius: 999px;
+    }
+    .chip.active .count {
+      color: var(--accent);
+      background: rgba(61, 156, 240, 0.12);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(14, 17, 22, 0.92);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    .toolbar .title {
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .toolbar .meta {
+      color: var(--muted);
+      font-size: 13px;
+      font-variant-numeric: tabular-nums;
+    }
+    .toolbar .spacer { flex: 1; }
+
+    .cols {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .cols input[type="range"] {
+      width: 100px;
+      accent-color: var(--accent);
+    }
+
+    .search {
+      width: 220px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--bg2);
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+      outline: none;
+    }
+    .search:focus { border-color: var(--accent); }
+
+    .gallery-wrap {
+      flex: 1;
+      overflow: auto;
+      padding: 16px 18px 40px;
+    }
+
+    .waterfall {
+      column-count: var(--cols);
+      column-gap: var(--gap);
+    }
+
+    .card {
+      break-inside: avoid;
+      margin-bottom: var(--gap);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      cursor: zoom-in;
+      position: relative;
+    }
+    .card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+      background: #0a0d12;
+    }
+    .card .cap {
+      padding: 7px 9px 8px;
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.35;
+      word-break: break-all;
+      border-top: 1px solid var(--line);
+    }
+    .card:hover {
+      border-color: rgba(61, 156, 240, 0.55);
+    }
+    .card:hover .cap { color: var(--text); }
+
+    .empty, .loading {
+      padding: 80px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sentinel {
+      height: 1px;
+      margin-top: 8px;
+    }
+
+    /* lightbox */
+    .lb {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 24px;
+      cursor: zoom-out;
+    }
+    .lb.open { display: flex; }
+    .lb img {
+      max-width: min(96vw, 1600px);
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    }
+    .lb .info {
+      position: absolute;
+      left: 20px;
+      bottom: 18px;
+      color: #cfd7e3;
+      font-size: 12px;
+      max-width: 70vw;
+      word-break: break-all;
+      background: rgba(0,0,0,.45);
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    .lb .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(20,24,32,.65);
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 1;
+    }
+    .lb .prev { left: 16px; }
+    .lb .next { right: 16px; }
+
+    @media (max-width: 900px) {
+      .app { grid-template-columns: 1fr; }
+      aside {
+        max-height: 38vh;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+      .search { width: 140px; }
+      :root { --cols: 2; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div class="brand">
+        <h1>MPI E Gallery</h1>
+        <p>Browse model outputs by category</p>
+      </div>
+      <div class="section-label">Models</div>
+      <div class="model-list" id="modelList"></div>
+      <div class="section-label">Categories</div>
+      <div class="cat-list" id="catList"></div>
+    </aside>
+
+    <main>
+      <div class="toolbar">
+        <div class="title" id="viewTitle">Select a model</div>
+        <div class="meta" id="viewMeta"></div>
+        <div class="spacer"></div>
+        <input class="search" id="search" type="search" placeholder="Filter filenames…" />
+        <label class="cols">
+          Cols
+          <input type="range" id="colRange" min="2" max="8" value="5" />
+          <span id="colVal">5</span>
+        </label>
+      </div>
+      <div class="gallery-wrap" id="scroll">
+        <div class="waterfall" id="waterfall"></div>
+        <div class="sentinel" id="sentinel"></div>
+        <div class="empty" id="empty" style="display:none">No images match this filter</div>
+        <div class="loading" id="loading">Loading…</div>
+      </div>
+    </main>
+  </div>
+
+  <div class="lb" id="lb">
+    <button class="nav prev" id="lbPrev" type="button" aria-label="prev">‹</button>
+    <img id="lbImg" alt="" />
+    <button class="nav next" id="lbNext" type="button" aria-label="next">›</button>
+    <div class="info" id="lbInfo"></div>
+  </div>
+
+  <script>
+    const state = {
+      models: [],
+      model: null,
+      category: null, // null = all
+      page: 0,
+      pageSize: 60,
+      hasMore: false,
+      loading: false,
+      images: [],       // loaded pages
+      filtered: [],     // after search
+      query: "",
+      lbIndex: -1,
+    };
+
+    const el = {
+      modelList: document.getElementById("modelList"),
+      catList: document.getElementById("catList"),
+      waterfall: document.getElementById("waterfall"),
+      scroll: document.getElementById("scroll"),
+      sentinel: document.getElementById("sentinel"),
+      empty: document.getElementById("empty"),
+      loading: document.getElementById("loading"),
+      viewTitle: document.getElementById("viewTitle"),
+      viewMeta: document.getElementById("viewMeta"),
+      search: document.getElementById("search"),
+      colRange: document.getElementById("colRange"),
+      colVal: document.getElementById("colVal"),
+      lb: document.getElementById("lb"),
+      lbImg: document.getElementById("lbImg"),
+      lbInfo: document.getElementById("lbInfo"),
+      lbPrev: document.getElementById("lbPrev"),
+      lbNext: document.getElementById("lbNext"),
+    };
+
+    function setCols(n) {
+      document.documentElement.style.setProperty("--cols", n);
+      el.colVal.textContent = n;
+    }
+
+    el.colRange.addEventListener("input", () => setCols(el.colRange.value));
+
+    async function fetchJSON(url) {
+      const r = await fetch(url);
+      if (!r.ok) throw new Error(await r.text());
+      return r.json();
+    }
+
+    function renderModels() {
+      el.modelList.innerHTML = state.models.map(m => `
+        <button class="chip ${m.name === state.model ? "active" : ""}" data-model="${m.name}">
+          <span>${m.name}</span>
+          <span class="count">${m.count}</span>
+        </button>
+      `).join("");
+      el.modelList.querySelectorAll(".chip").forEach(btn => {
+        btn.addEventListener("click", () => selectModel(btn.dataset.model));
+      });
+    }
+
+    async function loadCategories() {
+      const cats = await fetchJSON(`/api/categories?model=${encodeURIComponent(state.model)}`);
+      const total = state.models.find(m => m.name === state.model)?.count ?? 0;
+      el.catList.innerHTML = `
+        <button class="chip ${state.category === null ? "active" : ""}" data-cat="">
+          <span>All</span>
+          <span class="count">${total}</span>
+        </button>
+        ${cats.map(c => `
+          <button class="chip ${state.category === c.name ? "active" : ""}" data-cat="${c.name}">
+            <span>${c.name}</span>
+            <span class="count">${c.count}</span>
+          </button>
+        `).join("")}
+      `;
+      el.catList.querySelectorAll(".chip").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const cat = btn.dataset.cat || null;
+          selectCategory(cat);
+        });
+      });
+    }
+
+    async function selectModel(name) {
+      if (state.model === name && state.images.length) return;
+      state.model = name;
+      state.category = null;
+      state.query = "";
+      el.search.value = "";
+      renderModels();
+      el.viewTitle.textContent = name;
+      await loadCategories();
+      await resetAndLoad();
+    }
+
+    async function selectCategory(cat) {
+      state.category = cat;
+      await loadCategories();
+      await resetAndLoad();
+    }
+
+    async function resetAndLoad() {
+      state.page = 0;
+      state.hasMore = true;
+      state.images = [];
+      state.filtered = [];
+      el.waterfall.innerHTML = "";
+      el.empty.style.display = "none";
+      await loadMore();
+    }
+
+    async function loadMore() {
+      if (!state.model || state.loading || !state.hasMore) return;
+      state.loading = true;
+      el.loading.style.display = "block";
+      try {
+        const page = state.page + 1;
+        const params = new URLSearchParams({
+          model: state.model,
+          page: String(page),
+          page_size: String(state.pageSize),
+        });
+        if (state.category) params.set("category", state.category);
+        const data = await fetchJSON(`/api/images?${params}`);
+        state.page = data.page;
+        state.hasMore = data.has_more;
+        state.images.push(...data.images);
+        applyFilter(false);
+        el.viewMeta.textContent = state.category
+          ? `${state.category} · ${data.total} images · loaded ${state.images.length}`
+          : `${data.total} images · loaded ${state.images.length}`;
+      } catch (e) {
+        console.error(e);
+        el.viewMeta.textContent = "Failed to load";
+      } finally {
+        state.loading = false;
+        el.loading.style.display = state.hasMore ? "block" : "none";
+        if (!state.hasMore && state.filtered.length === 0) {
+          el.empty.style.display = "block";
+        }
+      }
+    }
+
+    function applyFilter(fromSearch) {
+      const q = state.query.trim().toLowerCase();
+      const prevLen = state.filtered.length;
+      state.filtered = q
+        ? state.images.filter(i => i.name.toLowerCase().includes(q))
+        : state.images.slice();
+
+      if (fromSearch) {
+        el.waterfall.innerHTML = "";
+        appendCards(state.filtered);
+      } else {
+        appendCards(state.filtered.slice(prevLen));
+      }
+      el.empty.style.display = state.filtered.length === 0 && !state.hasMore ? "block" : "none";
+    }
+
+    function appendCards(items) {
+      const frag = document.createDocumentFragment();
+      items.forEach((img) => {
+        const globalIdx = state.filtered.indexOf(img);
+        const card = document.createElement("div");
+        card.className = "card";
+        card.dataset.idx = String(globalIdx);
+        card.innerHTML = `
+          <img loading="lazy" decoding="async" src="${img.url}" alt="${img.name}" />
+          <div class="cap">${img.name}</div>
+        `;
+        card.addEventListener("click", () => openLb(Number(card.dataset.idx)));
+        frag.appendChild(card);
+      });
+      // re-index after append when filtered rebuilt
+      el.waterfall.appendChild(frag);
+      // fix indices after full rebuild
+      [...el.waterfall.children].forEach((c, i) => { c.dataset.idx = String(i); });
+    }
+
+    el.search.addEventListener("input", () => {
+      state.query = el.search.value;
+      applyFilter(true);
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some(e => e.isIntersecting)) loadMore();
+    }, { root: el.scroll, rootMargin: "400px" });
+    io.observe(el.sentinel);
+
+    function openLb(idx) {
+      if (idx < 0 || idx >= state.filtered.length) return;
+      state.lbIndex = idx;
+      const img = state.filtered[idx];
+      el.lbImg.src = img.url;
+      el.lbInfo.textContent = `${idx + 1} / ${state.filtered.length}  ·  ${img.name}`;
+      el.lb.classList.add("open");
+    }
+    function closeLb() {
+      el.lb.classList.remove("open");
+      state.lbIndex = -1;
+    }
+    function lbStep(d) {
+      if (state.lbIndex < 0) return;
+      openLb(Math.max(0, Math.min(state.filtered.length - 1, state.lbIndex + d)));
+    }
+
+    el.lb.addEventListener("click", (e) => {
+      if (e.target === el.lb || e.target === el.lbImg) closeLb();
+    });
+    el.lbPrev.addEventListener("click", (e) => { e.stopPropagation(); lbStep(-1); });
+    el.lbNext.addEventListener("click", (e) => { e.stopPropagation(); lbStep(1); });
+    document.addEventListener("keydown", (e) => {
+      if (!el.lb.classList.contains("open")) return;
+      if (e.key === "Escape") closeLb();
+      if (e.key === "ArrowLeft") lbStep(-1);
+      if (e.key === "ArrowRight") lbStep(1);
+    });
+
+    (async function init() {
+      setCols(el.colRange.value);
+      state.models = await fetchJSON("/api/models");
+      renderModels();
+      if (state.models.length) {
+        await selectModel(state.models[0].name);
+      } else {
+        el.loading.style.display = "none";
+        el.empty.style.display = "block";
+        el.empty.textContent = "No images found under outputs/";
+      }
+    })();
+  </script>
+</body>
+</html>

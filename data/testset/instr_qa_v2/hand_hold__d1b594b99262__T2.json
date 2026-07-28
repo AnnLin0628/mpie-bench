@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d1b594b99262__T2",
+  "instruction": "Candid medium full shot of two men walking down an outdoor stone staircase. On the left, the Black man in the gray polo shirt (R2) walks down while looking back and smiling at his partner. On the right, the bearded man in the black t-shirt (R1) wearing blue jeans walks down, smiling. They hold hands across the central metal handrail. Warm sunlight filters through the background trees, casting a golden glow and soft lens flare over the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks back and smiles at R1 while walking down and holding hands",
+    "R1 is the partner being looked back at by R2 during the hand-hold",
+    "R1 and R2 hold hands across the central metal handrail",
+    "central metal handrail between the two men",
+    "outdoor stone staircase"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking back and smiling at R1 while they walk down holding hands, rather than R1 looking back and smiling at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks back and smiles at R1 while walking down and holding hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner being looked back at by R2 during their hand-hold, rather than R2 being the partner looked back at by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partner being looked back at by R2 during the hand-hold"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other while walking down the staircase across a central metal handrail?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands across the central metal handrail"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking down an outdoor stone staircase?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor stone staircase"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

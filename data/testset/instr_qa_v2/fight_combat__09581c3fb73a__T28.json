@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T28",
+  "instruction": "A candid action photograph, eye-level medium shot, taken over the shoulder of the boxer in the blue tank top (R2) who is seen from behind in the right foreground. In the midground, the boxer in the beige t-shirt (R1) faces forward in black sweatpants and black boxing gloves, holding his guard up and looking at his opponent. The setting is an open-air training pavilion under bright daylight with natural colors.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the boxer seen from behind in the foreground, with the photograph taken over R2's shoulder",
+    "R1 is the boxer in the midground facing forward toward R2",
+    "R1 holds his boxing guard up while looking at his opponent",
+    "R1 has black boxing gloves raised in guard position",
+    "The scene is an open-air training pavilion in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer seen from behind in the foreground over whose shoulder the photograph is taken, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 foreground over-shoulder viewing role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer facing forward in the midground with his guard up toward his opponent, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 forward-facing guard role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look toward R2 as his boxing opponent while R2 is viewed from behind, rather than R2 facing forward and looking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric opponent-facing orientation"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding a raised boxing guard in front of his body while facing his opponent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guard body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

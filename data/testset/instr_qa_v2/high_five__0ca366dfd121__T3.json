@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__0ca366dfd121__T3",
+  "instruction": "A clean studio photograph captured in a medium shot at eye-level. In a minimalist indoor studio with a plain off-white background, three women pose together. On the left, the Caucasian woman in a black blazer (R3) stands facing right, smiling as she raises her right hand. On the right, the East Asian woman in a white collarless shirt and black pants (R2) stands facing left, smiling as she raises her left hand to high-five the Caucasian woman (R3). In the center, the Black woman in a white button-up shirt and black skirt (R1) stands with her arms crossed, smiling directly at the camera. The scene is illuminated by bright, soft, even studio lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 raises her right hand toward R2 for the high-five",
+    "R2 raises her left hand toward R3 for the high-five",
+    "R1 is the non-high-fiving woman with arms crossed while R2 and R3 form the high-five pair",
+    "R2 and R3 face each other with raised hands in a high-five pose",
+    "The scene is set in a minimalist indoor studio with a plain off-white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman standing with arms crossed while R2 and R3 are the two women raising hands toward each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the non-high-fiving woman with arms crossed while R2 and R3 form the high-five pair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__ballroom__T5",
+  "instruction": "Candid full shot of a dance studio setting. The woman in the red dress (R1) on the left and the man in the striped polo shirt (R2) on the right walk forward side-by-side. They hold hands, both wearing dark glasses and looking ahead. The background features white walls and tripods on a wooden floor under even indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman in the red dress holding hands with R2",
+    "R2 is the man in the striped polo shirt holding hands with R1",
+    "R1 and R2 walk forward together side-by-side while hand-in-hand",
+    "both R1 and R2 wear dark glasses",
+    "the setting is a dance studio with white walls, tripods, and a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in the red dress who is holding hands with R2, rather than R2 being the woman in the red dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman in the red dress holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man in the striped polo shirt whose hand is held by R1, rather than R1 being the man in the striped polo shirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man in the striped polo shirt holding hands with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward together while keeping their hands joined?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk forward together side-by-side while hand-in-hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain hand-in-hand with R2 as both of them look ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands and look ahead"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

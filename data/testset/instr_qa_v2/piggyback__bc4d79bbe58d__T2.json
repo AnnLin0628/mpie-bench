@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__bc4d79bbe58d__T2",
+  "instruction": "Candid outdoor full shot in profile on a sunny beach. On the right, the blonde woman in a yellow pineapple-print top and denim shorts (R1) crouches down, laughing. She holds the hands of the toddler girl in a floral swimsuit (R2), who stands on the left facing her. Bright direct sunlight casts warm tones over the scene with blue ocean waves in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 crouches down while interacting with R2",
+    "R1 holds the hands of R2",
+    "R2 stands facing R1 while R1 crouches",
+    "R1 is the blonde woman and R2 is the toddler girl",
+    "The interaction happens on a sunny beach with ocean waves in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person crouching down to interact with R2, rather than R2 crouching down to interact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 crouches down while interacting with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's hands while R2 stands facing her, rather than R2 holding R1's hands while R1 stands facing her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the hands of R2 as R2 stands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the standing toddler whose hands are held by crouching R1, rather than R1 being the standing toddler whose hands are held by crouching R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands while crouching R1 holds her hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 crouched down and laughing during the hand-holding interaction with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's crouched laughing role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 facing R1 while standing in the hand-holding interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's standing facing role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

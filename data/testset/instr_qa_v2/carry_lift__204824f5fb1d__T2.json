@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__204824f5fb1d__T2",
+  "instruction": "Candid close-up photograph in a sunny outdoor park with a blurred green background. The man in the white hoodie (R1) stands in the center, holding the baby in denim overalls (R3) in his arms while looking down and smiling. On the right, the woman in the black leather jacket (R2) is seen in profile, looking at the baby and gently touching the baby's chest with her hand. The baby rests comfortably in the man's arms, looking slightly downward. Warm, natural daylight softly illuminates the family, highlighting the gentle interaction.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 supports and carries R3 in his arms",
+    "R3 rests comfortably in R1's arms",
+    "R2 gently touches R3's chest with her hand",
+    "R2 looks at R3 while R1 is the one holding R3",
+    "sunny outdoor park with a blurred green background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting and carrying R3 in his arms, rather than R3 supporting or carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports and carries R3 in his arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding R3, rather than R2 being the one who holds R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, not R2, holds R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gently touching R3's chest with her hand, rather than R3 touching R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gently touches R3's chest"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 resting comfortably in R1's arms while R1 looks down toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 rests in R1's arms as R1 looks down"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

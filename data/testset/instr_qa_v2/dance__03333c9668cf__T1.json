@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03333c9668cf__T1",
+  "instruction": "Cinematic film still, medium-wide shot. Inside a bright dance studio with wooden floors and large windows, two people perform aerobics. In the foreground left, the woman in the white long-sleeve top and shorts (R4) is seen from behind in a low squat with one leg raised. In the background right, the man in the blue t-shirt and red headband (R2) stands in profile, performing a synchronized high-knee kick. Natural daylight streams through the windows, illuminating the warm wooden floor and casting soft shadows. The shot has a shallow depth of field, keeping the background sharp while the foreground figure is slightly soft.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 is the dancer in a low squat with one leg raised",
+    "R2 is the dancer standing in profile and performing the synchronized high-knee kick",
+    "R4 is the foreground dancer seen from behind while R2 is the background dancer",
+    "R2 and R4 perform synchronized aerobics/dance movements",
+    "the scene is a bright dance studio with wooden floors and large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the dancer in a low squat with one leg raised, rather than R2 being the one in that low squat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the dancer in a low squat with one leg raised"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer standing in profile and performing the synchronized high-knee kick, rather than R4 doing that high-knee kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer performing the high-knee kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground dancer seen from behind while R2 is the background dancer in profile, rather than those roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 foreground/back-view role versus R2 background/profile role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 perform the aerobics routine from a low squatting body position while R2 performs it from a standing high-knee kicking position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R2 have distinct synchronized exercise body configurations"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

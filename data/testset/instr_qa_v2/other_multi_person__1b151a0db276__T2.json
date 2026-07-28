@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__1b151a0db276__T2",
+  "instruction": "Candid studio photograph, full shot. Indoors, a girl in a maroon t-shirt and white pants (R2) on the left and a boy in a red beanie and white t-shirt (R1) on the right stand on a light gray sofa. Together, they hold a large Canadian flag open between them, smiling joyfully at each other. The background is a minimalist beige wall. The lighting is soft and warm, casting gentle shadows and emphasizing the bright red of the flag and the boy's beanie.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the boy holding one side of the large Canadian flag while R2 is the girl holding the opposite side",
+    "R2 holds the flag open together with R1, with each person controlling a different side of the flag",
+    "R1 and R2 stand on a light gray sofa while holding the flag between them",
+    "large Canadian flag held open between R1 and R2",
+    "light gray sofa used as the standing surface",
+    "minimalist beige indoor studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boy holding one side of the large Canadian flag, while R2 is the girl holding the opposite side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the boy holding one side of the large Canadian flag while R2 is the girl holding the opposite side"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold the flag from her own side opposite R1, rather than R1 being the girl holding that side opposite the boy?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the flag open together with R1, with each person controlling a different side of the flag"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both standing on the sofa while jointly holding the flag open between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand on a light gray sofa while holding the flag between them"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

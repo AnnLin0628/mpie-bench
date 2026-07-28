@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__7acbe2f54e65__T1",
+  "instruction": "A candid cinematic medium shot captures a sunlit park path surrounded by lush green trees. On the left, the curly-haired woman in a light cardigan (R1) walks forward, looking down with a gentle smile. Beside her on the right, the blonde woman in a patterned shirt (R2) walks in step, looking at her partner with a warm, happy expression. The curly-haired woman and the blonde woman are holding hands as they stroll together. Warm, natural afternoon sunlight filters through the background foliage, creating a soft, inviting atmosphere with vibrant green and beige tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks at R1 while they walk hand-in-hand, rather than R1 looking at R2",
+    "R1 looks down with a gentle smile while holding R2's hand, rather than R2 looking down",
+    "R1 and R2 hold hands as they stroll together",
+    "R2 walks in step beside R1 while holding hands",
+    "the pair strolls on a sunlit park path surrounded by green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner looking at R1 while they walk hand-in-hand, rather than R1 looking at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks at R1 while they walk hand-in-hand, rather than R1 looking at R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner looking down with a gentle smile while holding R2's hand, rather than R2 looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down with a gentle smile while holding R2's hand, rather than R2 looking down"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands as they stroll together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands as they stroll together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk in step beside R1 while maintaining the hand-holding contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks in step beside R1 while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

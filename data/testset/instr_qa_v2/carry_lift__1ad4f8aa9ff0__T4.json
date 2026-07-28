@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T4",
+  "instruction": "A candid outdoor photograph, low-angle medium shot from a side perspective. In a grassy park with a large suspension bridge in the background, the woman with a shaved head in a pink long-sleeve top and gray shorts (R1) and the bearded man in a white t-shirt and black leggings (R2) sit side-by-side on the grass. The woman (R1) sits in the foreground, and the bearded man (R2) sits slightly behind her. Both are cross-legged in lotus position with their hands resting on their knees in a mudra gesture, eyes closed in deep meditation. In the far background, a few tiny, blurred figures walk near the trees. Soft natural daylight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 sits in the foreground while R2 sits slightly behind her",
+    "R2 is positioned slightly behind R1 rather than in front of her",
+    "R1 and R2 sit side-by-side on the grass in lotus position",
+    "R1 and R2 both rest their hands on their knees in a mudra gesture with eyes closed",
+    "The scene is an outdoor grassy park with a large suspension bridge in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the meditator sitting in the foreground while R2 sits slightly behind her, rather than R2 being the foreground sitter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground position relative to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person seated slightly behind R1, rather than R1 being seated slightly behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 behind R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both seated side-by-side on the grass in lotus position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 seated side-by-side in lotus position"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 each have their hands resting on their knees in a mudra gesture while meditating?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 mudra meditation posture"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the meditation scene set in a grassy park with a large suspension bridge in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "grassy park with suspension bridge"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

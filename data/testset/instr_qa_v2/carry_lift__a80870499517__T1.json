@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__a80870499517__T1",
+  "instruction": "A candid cinematic medium shot of a playful couple on a park path. The blonde woman in a black leather jacket (R1) is in the foreground, leaning forward and laughing joyfully towards the camera. The man with curly hair and a mustache (R2) stands behind her, wrapping his arms tightly around her waist in a warm, playful embrace while smiling. The background features soft-focus green trees and a paved path. Natural daylight illuminates the scene, highlighting their happy expressions with soft shadows and a vibrant, natural color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands behind R1 and wraps his arms around R1's waist",
+    "R1 is the person being held around the waist by R2",
+    "R1 leans forward toward the camera while R2 remains behind her",
+    "R1 laughs joyfully in the foreground as R2 smiles behind her",
+    "The couple is on a park path with soft-focus green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his arms around R1's waist from behind, rather than R1 wrapping her arms around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the waist-hold on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held around the waist by R2, rather than R2 being held around the waist by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the waist-hold from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 stand behind R1 while holding her waist, rather than R1 standing behind R2 while holding him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R1 in the contact role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning forward toward the camera while R2 remains behind her in the playful waist-hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward as R2 holds her from behind"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 laughing in the foreground while R2 smiles from behind her during the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground laughing role with R2 behind smiling"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

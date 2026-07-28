@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__6dde770d54d0__T6",
+  "instruction": "Cinematic still, low-angle medium shot on a sandy beach against a clear blue sky. The boy in the blue and black wetsuit (R2) sits on the shoulders of the man in the black wetsuit (R1). The boy (R2) looks to the left with a happy expression, while the man (R1) looks upward and squints slightly into the sun. The man holds a white surfboard under his arm and grips the boy's legs for balance. Bright, direct sunlight illuminates them from the front.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2's weight from below with R2 sitting on R1's shoulders",
+    "R2 is the rider on R1's shoulders rather than the carrier",
+    "R1 grips R2's legs for balance while carrying him",
+    "R2 is positioned above R1 in a shoulder-ride configuration",
+    "R1 holds a white surfboard under his arm",
+    "The scene is on a sandy beach against a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below on his shoulders, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight from below with R2 sitting on R1's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting on R1's shoulders, rather than R1 sitting on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the rider on R1's shoulders rather than the carrier"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 grip R2's legs for balance while carrying him, rather than R2 gripping R1's legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's legs for balance while carrying him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned above R1 in a shoulder-ride configuration with R1 as the carrier?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned above R1 in a shoulder-ride configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a white surfboard under his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds a white surfboard under his arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

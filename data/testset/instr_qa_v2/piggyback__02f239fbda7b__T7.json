@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__02f239fbda7b__T7",
+  "instruction": "Candid family portrait photograph. A medium eye-level shot in a minimalist indoor studio with a white background. In the center, the older man with a white beard (R1) in a light blue sweater holds the young blonde girl (R2) in a light green shirt and plaid pants on his lap. The girl is positioned on the left, facing away from the camera. Standing on the right, the older woman with white hair and glasses (R3) in a pink sweatshirt leans affectionately against the man. They are all smiling warmly in a soft, brightly lit setting with pastel tones.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 holds and supports R2 on his lap",
+    "R2 is the young girl sitting on R1's lap rather than carrying him",
+    "R3 leans affectionately against R1 while standing",
+    "R2 faces away from the camera while on R1's lap",
+    "minimalist indoor studio with a white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and supporting R2 on his lap, rather than R2 holding or supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 on his lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting on R1's lap, rather than R1 sitting on R2's lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 occupies the carried/seated role on R1's lap"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 leaning affectionately against R1, rather than R1 leaning against R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans against R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the older man in the center who holds R2 while R2 is on his lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 on his lap"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03423d7e45eb__T8",
+  "instruction": "A full-shot cinematic still in a bright dance studio. The male dancer in the black top (R3) and the female dancer in the purple top (R1) stand side-by-side, looking at each other. He raises his left arm and she raises her left arm in high, curved ballet poses. She stands on pointe. Soft daylight fills the room.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 stands on pointe while R3 is not described as standing on pointe",
+    "R3 raises his left arm in a high, curved ballet pose",
+    "R1 raises her left arm in a high, curved ballet pose",
+    "R1 and R3 stand side-by-side looking at each other",
+    "The scene is a bright dance studio with soft daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer standing on pointe, rather than R3 being the one described as on pointe?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands on pointe while R3 is not described as standing on pointe"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 raise his left arm in a high, curved ballet pose, rather than R3 keeping his arm down while only R1 raises an arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 raises his left arm in a high, curved ballet pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 raise her left arm while standing on pointe, rather than R3 being the dancer combining the raised-arm pose with pointe work?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 combines a raised left arm with standing on pointe"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do both R1 and R3 hold high, curved ballet arm poses with their left arms raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 both raise their left arms in high, curved ballet poses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

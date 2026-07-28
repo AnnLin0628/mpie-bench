@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__7acbe2f54e65__T4",
+  "instruction": "A candid cinematic medium shot captures a leafy, sunlit park setting. On the left, the curly-haired woman in a light cardigan (R1) stands facing right, looking at her partner with a wide, joyful smile. On the right, the blonde woman in a patterned shirt (R2) stands facing left, smiling back warmly. The curly-haired woman reaches her arms out toward the blonde woman, preparing to embrace. Warm natural light filters through the trees, creating a bright, cheerful atmosphere with soft highlights on their hair and clothing.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person extending her arms toward R2 to initiate an embrace",
+    "R2 is the partner being approached by R1 and smiles back warmly",
+    "R1 faces and looks toward R2 with a wide joyful smile",
+    "R2 faces R1 and returns a warm smile",
+    "The interaction takes place in a leafy, sunlit park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one reaching her arms out toward R2 to initiate the embrace, rather than R2 reaching her arms out toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the embrace by extending her arms toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner being approached by R1's outstretched arms, rather than R2 being the one who initiates by extending arms first?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's arm-reaching approach"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": true
+  }
+}

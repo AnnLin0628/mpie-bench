@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__bdc9b8b51914__T2",
+  "instruction": "A candid medium-shot photograph of a minimalist indoor room with white walls and light wooden flooring. On the left, the man in the brown sweater (R1) sits in a light wooden armchair, holding a notebook on his lap and extending a glass of water with his right hand. On the right, the man in the white t-shirt (R2) sits on a teal velvet chair, leaning forward and reaching out with his left hand to take the glass. The room is brightly lit with soft, even light and gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends a glass of water toward R2 with his right hand",
+    "R2 leans forward and reaches with his left hand to take the glass from R1",
+    "R1 is the giver of the glass while R2 is the receiver",
+    "R1 sits with a notebook on his lap while offering the glass",
+    "a glass of water is being passed between R1 and R2",
+    "a notebook rests on R1's lap",
+    "the scene is a minimalist indoor room with white walls and light wooden flooring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending the glass of water toward R2, rather than R2 extending it toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the giver offering the glass to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching out to take the glass from R1, rather than R1 reaching out to take it from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the receiver taking the glass from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold out the glass with his right hand while R2 reaches for it with his left hand, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 offers with right hand and R2 receives with left hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated with a notebook on his lap while offering the glass to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's seated role includes holding a notebook and offering the glass"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated and leaning forward to receive the glass from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is leaning forward to accept the glass"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

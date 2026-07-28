@@ -1,0 +1,72 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__a0843f410da2__T5",
+  "instruction": "Candid medium wide photograph of a group of friends celebrating on a rooftop terrace with a modern building behind them. From left to right, a man with a bun (R5) in a black shirt, a bald man with glasses (R6) in a white t-shirt, a blonde woman (R1) in a striped jumpsuit holding a cupcake, a man with a white cap (R2) in a white t-shirt, a woman with tied-back hair (R4) in a black top, a dark-haired woman (R3) in a striped crop top, and a curly-haired woman (R7) in a striped dress stand in a line. They are all smiling and clapping happily in the bright daylight.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R1 is the blonde woman holding a cupcake rather than R2 holding it",
+    "R1 is the cupcake holder rather than R3 being described as holding the cupcake",
+    "R1, R2, R3, R4, R5, R6, and R7 are standing together in a line and clapping happily",
+    "R1 holds a cupcake",
+    "the group is celebrating on a rooftop terrace",
+    "a modern building is behind the group"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the cupcake, rather than R2 holding the cupcake?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the cupcake instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the cupcake holder among the named friends, rather than R3 being described as holding the cupcake?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the cupcake instead of R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 participating in the group celebration while holding a cupcake as R2, R3, R4, R5, R6, and R7 clap nearby?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the cupcake-holding role during the group clapping"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

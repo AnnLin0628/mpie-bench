@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc4bacc07276__T6",
+  "instruction": "Candid full-body photograph of a couple by a white wall and black fence. The woman in the white long-sleeved dress (R1) stands on the left, looking forward with a gentle smile. The man in the patterned short-sleeved shirt (R2) stands on the right, embracing her waist from the side. Bright daylight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 embraces R1's waist from the side rather than R1 embracing R2's waist",
+    "R1 is the person whose waist is being held by R2",
+    "R2 is the waist-embracing partner while R1 faces forward",
+    "R1 and R2 are positioned as a couple in close side contact",
+    "the couple is photographed by a white wall and black fence in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 embrace R1's waist from the side, rather than R1 embracing R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1's waist from the side rather than R1 embracing R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose waist is being held by R2, rather than R2 being the person whose waist is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose waist is being held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the partner making waist-level contact with R1 while R1 faces forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the waist-embracing partner while R1 faces forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand as the recipient of R2's side embrace at her waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are positioned as a couple in close side contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

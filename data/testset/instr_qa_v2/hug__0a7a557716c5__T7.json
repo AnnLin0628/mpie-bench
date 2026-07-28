@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0a7a557716c5__T7",
+  "instruction": "Candid medium photograph in a cozy indoor living room. In the foreground, the man with glasses (R4) and the Black man in a brown shirt (R5) stand in profile, smiling as they shake hands warmly. Behind them, the man in the gray shirt (R1) stands in the center looking forward, while the woman with dreadlocks (R7) stands on the left watching the interaction. Soft, warm indoor light fills the room, creating a friendly, festive mood.",
+  "n_person": 11,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11"
+  ],
+  "elements": [
+    "R4 and R5 are the foreground pair making hand-to-hand contact in a warm handshake",
+    "R7 watches R4 and R5's handshake rather than participating in the hand contact",
+    "R1 stands behind the R4-R5 handshake looking forward rather than taking part in the handshake",
+    "R4 shakes hands with R5 in the foreground while R1 remains behind the interaction",
+    "R5 is a handshaker with R4 rather than a background watcher like R7",
+    "The scene is a cozy indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 shake hands with R5 in the foreground while R1 remains behind the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's contact role is shaking hands with R5, not standing behind like R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": true
+  }
+}

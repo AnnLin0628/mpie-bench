@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__fa84740b4c7e__T1",
+  "instruction": "Candid documentary photograph, medium full shot. In a modern living room, the woman in the blue button-down shirt (R1) stands on the left in profile, gesturing expressively with both hands raised. Facing her on the right, the man in the light green t-shirt (R2) speaks animatedly with his mouth wide open, hands raised near his face. They are engaged in a heated conversation, standing close but without touching. The background features potted plants and a blue wall art piece under bright, natural indoor light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gestures expressively with both hands raised while R2 speaks animatedly with his mouth wide open",
+    "R2 holds his hands raised near his face while speaking, rather than R1 being described that way",
+    "R1 and R2 face one another in a close heated conversation without touching",
+    "R1 is the blue-shirted woman and R2 is the light-green-shirted man in the conversation",
+    "potted plants and a blue wall art piece appear in the background",
+    "the setting is a modern living room with bright natural indoor light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gesturing expressively with both hands raised while R2 is the person speaking animatedly with his mouth wide open?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gestures with both hands raised while R2 speaks with mouth wide open"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding his hands raised near his face while speaking, rather than R1 being described with hands near the face and mouth wide open?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 speaks animatedly with hands raised near his face"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the woman actively gesturing toward R2 while R2 responds by speaking animatedly back to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gestures toward R2 and R2 speaks back animatedly"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

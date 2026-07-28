@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T17",
+  "instruction": "Candid action photograph, full shot, eye-level. In an indoor martial arts studio, the man in the white gi (R1) on the left is kneeling on both knees, leaning forward. The man in the gray gi (R2) on the right is kneeling on one knee, leaning forward. They are locked in a close head-to-head clinch, holding each other's necks on a black mat under warm indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is kneeling on both knees while R2 is kneeling on one knee",
+    "R2 is kneeling on one knee while R1 is kneeling on both knees",
+    "R1 and R2 are leaning forward into a close head-to-head clinch",
+    "R1 and R2 are each holding the other's necks during the clinch",
+    "They are grappling on a black mat",
+    "The setting is an indoor martial arts studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kneeling on both knees while R2 is kneeling on one knee, rather than R2 kneeling on both knees while R1 kneels on one knee?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has both knees down and R2 has one knee down"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person in the clinch with only one knee down, while R1 is the person with both knees down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kneels on one knee while R1 kneels on both knees"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 leaning forward into each other in a close head-to-head clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 lean forward into a head-to-head clinch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold R2's neck while R2 holds R1's neck during the clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 each hold the other's necks"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a black mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat under the grapplers"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

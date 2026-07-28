@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T78",
+  "instruction": "A candid outdoor photograph with a medium-wide shot of friends sitting on the grass under a tree. On the far right, the large man in a dark blue t-shirt (R1) sits laughing while holding a white inflatable bowling pin high. In the center, the bald man in a dark blue t-shirt (R2) sits holding another pin vertically. On the left, the woman in a black beanie (R5) sits in the foreground holding a pin like a guitar, while the woman in a dark blue t-shirt (R4) sits behind her. Natural daylight filters through the trees, casting soft shadows on the green lawn.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 holds a white inflatable bowling pin high while sitting and laughing",
+    "R2 holds another inflatable bowling pin vertically",
+    "R5 holds an inflatable bowling pin like a guitar",
+    "R4 sits behind R5 while R5 is the one handling the guitar-like pin",
+    "multiple inflatable bowling pins are present",
+    "the friends are sitting on grass under a tree outdoors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding a white inflatable bowling pin high, rather than R2 holding that high-raised pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the high-raised inflatable bowling pin"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding another inflatable bowling pin vertically, rather than R1 being the one with the vertical pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the vertical inflatable bowling pin"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person holding a pin like a guitar, rather than R4 holding the guitar-like pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 holds the inflatable pin like a guitar"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 sitting behind R5 while R5 is in the foreground handling the pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 sits behind R5 as R5 handles the pin"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

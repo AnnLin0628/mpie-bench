@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__f8416f139ced__T4",
+  "instruction": "Candid outdoor portrait, close-up side profile. In a wooded park filled with autumn leaves, the woman in the black puffer jacket and mint beanie (R1) is seen in profile looking to the right. She carries the toddler girl in the pink turban beanie and skull-print jumpsuit (R2) piggyback on her back. The toddler smiles happily, looking forward in the same direction. Bright natural light illuminates the scene against a background of fallen leaves and trees.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 piggyback on her back",
+    "R1 supports R2's weight rather than being carried by R2",
+    "R2 rides as the toddler passenger on R1's back",
+    "R2 smiles while being carried piggyback by R1",
+    "wooded park setting with autumn leaves and trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 piggyback on her back, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 piggyback on her back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from underneath and behind, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight rather than being carried by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the toddler rider being carried on R1's back, rather than R1 riding on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rides as the toddler passenger on R1's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned on R1's back in a piggyback pose while R1 carries her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rides as the toddler passenger on R1's back"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 smiling while being carried by R1 in the piggyback interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles while being carried piggyback by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

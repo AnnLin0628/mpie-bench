@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T45",
+  "instruction": "Candid documentary photograph, medium close-up at eye-level. Inside a bright judo dojo with blue wall padding, the young man in the white gi (R2) on the left grapples closely with the man with short stubble in the white gi (R4) on the right. R2 faces right with a focused, downward gaze, wrapping his right arm over R4's shoulder and gripping his collar. R4 faces left, holding R2's sleeve in a defensive judo stance as they practice. Bright natural light streams from the background windows, casting soft shadows across their white uniforms and creating a shallow depth of field.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 wraps his right arm over R4's shoulder and grips R4's collar",
+    "R4 holds R2's sleeve in a defensive judo stance",
+    "R2 and R4 are the close grappling pair practicing judo",
+    "the contact grips involve the collars and sleeves of white judo gi uniforms",
+    "the interaction takes place inside a bright judo dojo with blue wall padding"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap his right arm over R4's shoulder and grip R4's collar, rather than R4 wrapping his arm over R2's shoulder and gripping R2's collar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the over-shoulder collar-grip duty on R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 hold R2's sleeve in a defensive judo stance, rather than R2 holding R4's sleeve defensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the defensive sleeve-holding duty on R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the grappler using an over-shoulder collar grip while R4 responds by holding R2's sleeve, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 applies the collar grip while R4 counters with a sleeve hold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R4 grappling closely with R2's arm over R4's shoulder and R4's hand on R2's sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R4 are in close judo grappling contact with distinct grip roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

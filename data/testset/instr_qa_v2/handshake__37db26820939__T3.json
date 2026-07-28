@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__37db26820939__T3",
+  "instruction": "Cinematic medium shot of a suburban front yard. The man in the white shirt (R1) on the left holds papers and shakes hands with the smiling man in the striped shirt and tie (R2) on the right. They stand before a garage door with a 'SOLD' sign in the foreground under bright daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the paper-holding participant during the handshake with R2",
+    "R2 is the smiling striped-shirt-and-tie participant opposite R1, not the paper holder",
+    "R1 and R2 make hand-to-hand contact in a handshake while R1 keeps the papers",
+    "papers are held by R1 during the interaction",
+    "a SOLD sign appears in the foreground",
+    "the interaction takes place before a garage door in a suburban front yard"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the smiling participant in the striped shirt and tie who shakes hands with the paper-holding R1, rather than being the one holding the papers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric opposite-handshake participant versus paper holder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 clasp hands with R2 while keeping papers in his own hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 hand-contact role with papers"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

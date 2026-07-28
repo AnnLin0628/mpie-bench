@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T10",
+  "instruction": "A cinematic low-angle medium-full shot of a group of friends on a sunny rooftop. From left to right: the Black man in a dark blue shirt (R6) looks up; the woman with reddish-brown hair in a white t-shirt (R1) raises her hand; the woman with brown hair in a white open shirt (R5) looks up; the woman with light brown hair in a denim vest (R3) looks up; the man with short gray hair in a gray t-shirt (R2) gestures with both hands; and the man with short blonde hair in a brown jacket and black hat (R4) looks down towards the group. Bright daylight illuminates the scene against a blue sky.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R1 raises her hand while R2 gestures with both hands",
+    "R4 looks down toward the group while R6 looks up",
+    "R2 gestures with both hands while R3 looks up",
+    "R5 looks up as part of the group",
+    "R4 is oriented downward toward the others",
+    "the scene is a sunny rooftop under a blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one raising her hand while R2 gestures with both hands, rather than R2 raising a hand and R1 gesturing with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises her hand while R2 gestures with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 looking down toward the group while R6 looks up, rather than R6 looking down toward the group and R4 looking up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 looks down toward the group while R6 looks up"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gesturing with both hands while R3 looks up, rather than R3 gesturing with both hands and R2 looking up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with both hands while R3 looks up"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have the role of looking down toward the rest of the group?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is oriented downward toward the others"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

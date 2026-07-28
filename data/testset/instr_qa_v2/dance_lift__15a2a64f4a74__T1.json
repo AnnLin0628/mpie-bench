@@ -1,0 +1,73 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T1",
+  "instruction": "A clean, realistic photographic medium full shot of a bright ballet studio with wooden barres. Five children stand in a diagonal line along the barre. From left to right: the girl with light brown hair (R2), the red-haired girl in a bun (R3), the boy with short brown hair (R4), the blonde girl in a bun (R1), and the red-haired boy (R5). The girls wear pink leotards with matching skirts and white tights, while the boys wear dark blue t-shirts with black shorts. They all stand close together, holding or leaning against the wooden barre, looking forward or slightly down. Bright, even, soft indoor lighting illuminates the scene, casting soft shadows on the dark floor.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 is the blonde girl in a bun standing along the barre after R4 and before R5 in the diagonal line, rather than taking R2's first position",
+    "R2 is the light-brown-haired girl at the start of the diagonal barre line, rather than taking R1's later position between R4 and R5",
+    "R1, R2, R3, R4, and R5 are all holding or leaning against the wooden barre",
+    "R3 is the red-haired girl in a bun standing along the barre",
+    "the wooden barre is the contact object used by the children",
+    "the scene is a bright ballet studio with wooden barres"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, R3, R4, and R5 all holding or leaning against the wooden barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "all five labeled children are in contact with or leaning on the barre"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the red-haired girl in a bun standing along the barre with the other children?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the red-haired girl in a bun participating at the barre"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": true
+  }
+}

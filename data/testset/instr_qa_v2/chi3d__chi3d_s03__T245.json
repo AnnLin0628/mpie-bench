@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T245",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet. The bearded man in a dark polo and blue shorts (R1) stands on the left, facing forward and smiling. He has his left arm around the shoulder of the woman in a white patterned t-shirt and blue jeans (R2), who stands on the right, also facing forward and smiling. The scene is evenly lit by bright overhead lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his left arm around R2's shoulder",
+    "R2 is the person whose shoulder is held by R1's arm",
+    "R1 stands beside R2 while making the shoulder contact",
+    "R2 stands beside R1 and receives the shoulder contact",
+    "the scene is an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person placing his left arm around R2's shoulder, rather than R2 placing her arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the shoulder-contact gesture toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is encircled by R1's arm, rather than R1 being the one encircled by R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's arm-around-shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand beside R2 while draping his arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body role is the arm-draping companion beside R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand beside R1 while R1's arm rests around her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body role is standing beside R1 as the person contacted at the shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 in an indoor motion capture studio with a red carpet?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor motion capture studio setting with red carpet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__4a6a0edc3dee__T2",
+  "instruction": "Candid street photograph, full-length shot. On a city crosswalk, the woman with long brown hair in a green coat (R1) on the left and the woman with short dark hair in a red sweater (R2) on the right embrace closely. The woman in the green coat wraps her arms around the waist of the woman in the red sweater, who rests her hands on the other's shoulders as they smile with their faces close together. In the background, a blurred pedestrian walks away under soft, diffused daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2's waist",
+    "R2 rests her hands on R1's shoulders",
+    "R1 holds R2 lower at the waist while R2 places hands higher on R1's shoulders",
+    "R1 and R2 maintain a close face-to-face embrace with distinct waist-holder and shoulder-rester roles",
+    "city crosswalk setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2's waist, rather than R2 wrapping her arms around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest her hands on R1's shoulders, rather than R1 resting her hands on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her hands on R1's shoulders"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person making lower waist contact on R2 while R2 makes upper shoulder contact on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 lower at the waist while R2 places hands higher on R1's shoulders"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 close together with R1 in the waist-holder role and R2 in the shoulder-rester role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain a close face-to-face embrace with distinct waist-holder and shoulder-rester roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

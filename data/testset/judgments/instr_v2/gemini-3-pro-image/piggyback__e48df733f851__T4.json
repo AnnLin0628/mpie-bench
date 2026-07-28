@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__e48df733f851__T4",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.85,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": 0.0,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": 0.0,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the supporting / leading contact role relative to R2, rather than R2 taking that role toward R1?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "left child wraps arms around the other"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "two children are hugging"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a contact-relevant object (if any instructed) involved in the interaction between R1 and R2, consistent with the edit instruction?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "no contact object is visible"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "piggyback__e48df733f851__T4",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "fallback_only",
+    "seconds": 10.02,
+    "written_at": "2026-07-17T23:25:46",
+    "gen_relpath": "outputs/gemini-3-pro-image/piggyback__e48df733f851__T4.png",
+    "qa_relpath": "instr_qa_v2/piggyback__e48df733f851__T4.json",
+    "n_questions": 3
+  }
+}

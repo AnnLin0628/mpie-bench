@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T5",
+  "instruction": "Crisp studio photograph, full shot from a high angle looking down at a minimalist white studio. On the left, the dancer in the black hooded outfit (R1) stands with legs apart and arms outstretched horizontally, looking toward their partner. On the right, the dancer in the white hooded outfit (R2) leans slightly with their right arm extended. R1's right hand touches R2's upper right arm in a balanced, fluid dance pose. Bright, even studio lighting casts soft, distinct shadows on the clean white floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1's right hand touches R2's upper right arm",
+    "R2 is the dancer whose upper right arm receives R1's hand contact",
+    "R1 stands with legs apart and arms outstretched horizontally toward R2",
+    "R2 leans slightly with their right arm extended during the pose",
+    "the dancers are in a minimalist white studio with bright even lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's right hand touching R2's upper right arm, rather than R2's hand touching R1's upper arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand touches R2's upper right arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer whose upper right arm is being contacted by R1, rather than R1 being the dancer whose upper arm is contacted by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the arm contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand with legs apart and arms outstretched horizontally while engaging with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's wide stance and horizontal arm extension"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean slightly with their right arm extended while R1 makes contact with R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's leaning pose with right arm extended"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

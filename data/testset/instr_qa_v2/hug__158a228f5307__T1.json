@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__158a228f5307__T1",
+  "instruction": "Candid lifestyle medium shot of an indoor birthday party. The grey-haired woman (R1) in a light grey dress stands on the left, smiling warmly. The short-haired woman (R2) in a white blouse and orange pants stands on the right, wrapping her arms around R1 in a warm embrace while holding a champagne glass. In the foreground, a wooden table is decorated with a white birthday cake with \"60\" candles, cupcakes, and champagne. Warm indoor lighting creates a festive, joyful atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1 in the embrace",
+    "R1 is the person being embraced by R2 while smiling",
+    "R2 holds a champagne glass during the embrace",
+    "A wooden table has a white birthday cake with \"60\" candles, cupcakes, and champagne",
+    "The setting is an indoor birthday party with warm festive lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping her arms around R1 in the embrace, rather than R1 being the one specifically described as wrapping her arms around R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the arm-wrapping embracer around R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving R2's arm-wrapping embrace, rather than R2 receiving that described embrace from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 embrace R1 while also holding a champagne glass?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 combines the embracing role with holding a champagne glass"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

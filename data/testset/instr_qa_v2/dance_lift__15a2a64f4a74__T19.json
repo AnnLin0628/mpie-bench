@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T19",
+  "instruction": "Candid documentary photograph, full shot at eye-level. Inside a bright ballet studio with a white wall and double wooden ballet barres, two young boys pose. On the left, the red-haired boy in a blue t-shirt and black shorts (R5) stands straight with his hands resting near his waist, looking forward. On the right, the brown-haired boy in a blue t-shirt and black shorts (R4) stands with slightly bent knees, raising his left arm high while keeping his right arm low, looking forward with an alert expression. The scene is illuminated by bright, even studio lighting, highlighting the natural wood of the barres and the deep blue of their shirts.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R4 raises his left arm high while R5 keeps his hands near his waist",
+    "R4 poses with slightly bent knees while R5 stands straight",
+    "R5 stands straight with hands resting near his waist as R4 performs the uneven arm pose",
+    "double wooden ballet barres are visible in the studio",
+    "bright ballet studio with a white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the boy raising his left arm high while R5 keeps his hands near his waist, rather than R5 raising his left arm high while R4 keeps his hands near his waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 raises his left arm high while R5 keeps hands near waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the boy posing with slightly bent knees while R5 stands straight, rather than R5 bending his knees while R4 stands straight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has bent-knee pose while R5 stands straight"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand straight with his hands resting near his waist while R4 performs the high-left-arm, low-right-arm pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 straight stance contrasted with R4 uneven arm pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 keep his right arm low while raising his left arm high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 asymmetric arm configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

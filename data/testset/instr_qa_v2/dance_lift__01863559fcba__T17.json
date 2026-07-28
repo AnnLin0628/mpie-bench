@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T17",
+  "instruction": "Candid documentary photograph, medium full shot. In a bright, minimalist indoor dance studio with white walls, the dark-haired girl in a beige long-sleeve top and shorts (R1) crouches on the floor in the foreground, looking down to the side. Behind her, the blonde girl in a beige long-sleeve top (R5) performs the same crouching floor stretch, looking forward-right. Both girls are spaced apart on the light grey floor, executing a synchronized warm-up routine. Soft, diffused natural light fills the space, creating a clean, neutral color palette of beige and white.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R1 crouches on the floor in the foreground and looks down to the side",
+    "R5 is behind R1, performing the same crouching floor stretch while looking forward-right",
+    "R1 and R5 are spaced apart while executing a synchronized warm-up routine",
+    "R1 and R5 are stretching on a light grey floor",
+    "The scene is a bright, minimalist indoor dance studio with white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the girl crouching on the floor in the foreground and looking down to the side, rather than R5 being the foreground girl with that gaze?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground crouching role with downward side gaze"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the girl positioned behind R1, performing the same crouching floor stretch while looking forward-right, rather than R1 being behind R5 with that gaze?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 background crouching role with forward-right gaze"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R5 both crouched on the floor in a synchronized warm-up stretch while remaining spaced apart?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R5 synchronized crouching floor-stretch roles without contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T19",
+  "instruction": "Candid studio photograph, medium shot. In a minimalist white studio, three friends sit huddled on the floor. On the left, the woman with wavy light brown hair (R3) in a white shirt over a black top looks down thoughtfully. In the center, the woman with straight dark hair (R2) in a white high-neck top looks forward with a gentle smile. On the right, the woman with curly brown hair (R1) in a white shirt rests with her eyes closed. They embrace affectionately in a tight group hug. The scene is illuminated by soft, bright studio lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the center participant in the tight seated group hug, between R3 and R1",
+    "R1 is the participant resting with eyes closed during the group embrace, rather than R2",
+    "R3 looks down thoughtfully while participating in the huddled floor hug",
+    "R2 looks forward with a gentle smile during the embrace",
+    "R1, R2, and R3 sit huddled together on the floor in a tight group embrace",
+    "The scene takes place in a minimalist white studio with soft bright lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the center participant in the tight seated group hug, between R3 and R1, rather than R1 being the center participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the center participant in the group embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant resting with eyes closed while in the group embrace, rather than R2 resting with eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the closed-eye resting role in the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": true
+  }
+}

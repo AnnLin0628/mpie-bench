@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__49a12311aeff__T2",
+  "instruction": "A candid documentary photograph in a medium shot captures three women in a bright gym setting. On the left, the black-haired woman in a black hoodie (R3) and on the right, the red-haired woman in a black sports bra (R2) are locked in a warm embrace, their arms wrapped around each other. In the center background, the gray-haired woman in a black sports bra (R1) stands facing forward, smiling happily as she watches them. The background shows gym machines and white walls. The lighting is bright and even, highlighting the joyful and friendly interaction.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 stands in the center background watching the interaction rather than participating in the embrace",
+    "R2 and R3 are the two women locked in the warm embrace while R1 is the onlooker",
+    "R3 has her arms wrapped around R2 as part of the embrace",
+    "R2 has her arms wrapped around R3 as part of the embrace",
+    "gym machines are visible in the bright gym setting",
+    "the scene has bright, even lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing in the center background watching R2 and R3, rather than being one of the two women in the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the onlooker while R2 and R3 are the contact pair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2 and R3 the pair with their arms wrapped around each other, while R1 is not embracing either of them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 are the embracing pair and R1 is outside the contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 embracing R2 rather than embracing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's contact partner in the embrace is R2, not R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 have her arms wrapped around R2 as part of the warm embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's arms are wrapped around R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have her arms wrapped around R3 as part of the warm embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms are wrapped around R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

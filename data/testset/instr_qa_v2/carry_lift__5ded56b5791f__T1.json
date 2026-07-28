@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__5ded56b5791f__T1",
+  "instruction": "A candid family photograph in an eye-level full shot captures a playful morning scene. In a cozy bedroom with patterned wallpaper and a white bed, the bearded man in a white t-shirt and striped pajama pants (R1) planks on a woven rug, smiling directly at the camera. The woman in a white button-up shirt and matching pants (R3) sits on his lower back, smiling warmly. She holds the toddler in striped pajamas (R2) steady as the child stands upright on the man's back. Soft, natural indoor light fills the room, creating a warm and cheerful atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 planks on the rug and supports others from below with his back",
+    "R3 sits on R1's lower back while R1 supports her weight",
+    "R2 stands upright on R1's back while R1 acts as the base",
+    "R3 holds R2 steady as the toddler stands on R1's back",
+    "R1 is positioned on a woven rug during the plank",
+    "the scene is set in a cozy bedroom with patterned wallpaper and a white bed"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R3's weight from below with his back, rather than R3 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R3 from below while she sits on his back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 acting as the base for R2 to stand on, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 standing upright on his back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 holding R2 steady while R2 stands on R1's back, rather than R2 holding R3 steady?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 steadies R2 during the balancing pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 seated on R1's lower back while R1 remains in a plank position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sits on R1's lower back as R1 planks"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing upright on R1's back while being steadied by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on R1's back with support from R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

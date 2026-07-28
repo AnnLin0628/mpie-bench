@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1a57fc26f9e5__T12",
+  "instruction": "A candid documentary photograph in a medium-full shot captures a couple spinning on a grassy hilltop. In the foreground, the man in the red striped shirt (R2) is seen from behind, wearing brown trousers and loafers. In the midground, the woman in the yellow cardigan (R1) faces the camera, smiling widely in blue jeans and white sneakers. They hold hands as they spin together on the green grass, with a vast landscape of rolling mountains and an overcast sky in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the camera-facing smiling partner while holding hands with R2 during the spin",
+    "R2 is the partner seen from behind while holding hands with R1 during the spin",
+    "R1 and R2 hold hands as they spin together",
+    "R1 and R2 are spinning together on a grassy hilltop",
+    "rolling mountains and an overcast sky form the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While R1 and R2 hold hands and spin, is R1 the partner facing the camera rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the camera-facing partner during the hand-held spin"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While spinning hand-in-hand, is R2 the partner seen from behind rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the back-facing partner during the hand-held spin"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the smiling front-facing partner connected by hand contact to R2, rather than R2 being the smiling front-facing partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the front-facing smiling role in the hand contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other while they spin together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share hand contact while spinning"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in the foreground seen from behind while R1 is in the midground facing him during their hand-held spin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R1 have distinct foreground/back-facing versus midground/front-facing positions during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

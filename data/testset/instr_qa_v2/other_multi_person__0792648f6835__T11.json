@@ -1,0 +1,93 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T11",
+  "instruction": "Cinematic low-angle medium shot looking up inside an indoor sports gymnasium. The young girl in a pink tracksuit (R5) is lifted high in the air, smiling down. On the lower left, the bearded man in a dark grey t-shirt (R4) holds her right foot, while on the lower right, the man with an afro (R1) in a white t-shirt holds her left foot, lifting her together. Bright overhead light fills the space, highlighting the ceiling structure and windows in the background.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 supports R5 by holding R5's left foot while R5 is lifted high",
+    "R4 supports R5 by holding R5's right foot while R5 is lifted high",
+    "R1 and R4 jointly lift R5, with R5 being the carried person",
+    "R5 is elevated above the supporters and smiling down",
+    "the scene is inside an indoor sports gymnasium"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R5 by holding R5's left foot, rather than R5 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R5 by holding R5's left foot while R5 is lifted high"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 supporting R5 by holding R5's right foot, rather than R5 supporting R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 supports R5 by holding R5's right foot while R5 is lifted high"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R4 lifting R5 high in the air, rather than R5 lifting R1 and R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 jointly lift R5, with R5 being the carried person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 the person being held up above the others while R1 and R4 act as her supporters?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is elevated above the supporters and smiling down"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold one of R5's feet while R4 holds the other foot to lift R5 together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 jointly lift R5, with R5 being the carried person"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__c67389ec74b2__T1",
+  "instruction": "A candid documentary photograph captured in a medium shot at eye-level, showing a couple dining indoors against a dark green paneled wall. On the left, the woman in the white hijab (R1) sits in a white dress, smiling warmly to the right. On the right, the man in the white button-down shirt (R2) sits facing her, smiling back. They are seated close together at a set dining table with plates and glasses in the foreground. The man (R2) rests his arm on the booth backrest behind the woman (R1) as they share a loving mutual gaze. The scene is illuminated by soft, natural indoor light, creating a gentle, intimate atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests his arm on the booth backrest behind R1",
+    "R1 is the person seated with R2's arm positioned behind her on the backrest",
+    "R1 and R2 sit close together facing each other and sharing a loving mutual gaze",
+    "a set dining table with plates and glasses is in front of them",
+    "the booth backrest is used by R2 as an armrest behind R1",
+    "the couple is dining indoors against a dark green paneled wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one resting his arm on the booth backrest behind R1, rather than R1 resting her arm behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the behind-the-partner arm position on the booth backrest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person seated in front of R2's arm on the booth backrest, rather than R2 being the one with R1's arm behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partner with R2's arm positioned behind her"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 dining indoors against a dark green paneled wall?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor dining scene with dark green paneled wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": true
+  }
+}

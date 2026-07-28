@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__ab2eed759697__T4",
+  "instruction": "Candid lifestyle medium shot of a man in a purple hoodie (R1) holding a young boy in a light green sweatshirt (R2) outdoors by a wooden house. The man (R1) stands on the left, laughing as he looks at the boy (R2) held on the right. The boy (R2) smiles back, his sweatshirt slightly lifted to reveal his belly. Soft natural daylight illuminates their joyful interaction, highlighting the warm tones of the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the adult man holding and supporting R2",
+    "R2 is the young boy being held by R1",
+    "R1 looks at R2 while laughing during the hold",
+    "R2 smiles back at R1 while being carried",
+    "R2's belly is slightly visible because his sweatshirt is lifted",
+    "The interaction takes place outdoors by a wooden house"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and supporting R2, rather than R2 holding and supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the supporter carrying R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the young boy being carried by R1, rather than R1 being carried by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the carried person"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look toward R2 while laughing as he holds him, rather than R2 being the one holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs while holding R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned in R1's hold as the child being carried?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in the carried role in R1's arms"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 smiling back at R1 while R1 holds him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 responds to R1 while being held"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

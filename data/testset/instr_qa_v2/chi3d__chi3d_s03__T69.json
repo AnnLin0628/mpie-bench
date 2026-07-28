@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T69",
+  "instruction": "Candid documentary wide shot of an indoor motion capture studio with a red carpet. The woman in the white t-shirt and blue jeans (R2) stands on the left, facing right in a three-quarters back view, shaking right hands with the man in the black polo shirt and blue shorts (R1) who stands on the right facing left. Bright overhead lighting illuminates the scene, highlighting the neutral colors and the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces left toward R2 during the right-hand contact",
+    "R2 faces right toward R1 during the right-hand contact",
+    "R2 is the person shown in a three-quarters back view while contacting R1",
+    "R1 and R2 join their right hands in the handshake contact",
+    "the scene is an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person facing left toward R2 during the right-hand contact, rather than R2 being the one facing left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces left toward R2 during the contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person facing right toward R1 during the right-hand contact, rather than R1 being the one facing right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right toward R1 during the contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 shown in a three-quarters back view while clasping R1's right hand, rather than R1 being the person shown in that back view?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the three-quarters back body view"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__6cd4539c27c8__T2",
+  "instruction": "Candid corporate photograph, medium shot. In a bright attic office, a woman in a houndstooth blazer (R4) stands in the center and shakes hands with a clean-shaven man in a black suit (R2) standing on the right. To the left, a bearded man in a black suit (R3) stands watching the interaction, while a bearded man with glasses and a striped tie (R1) stands in the background, smiling warmly. Natural light streams from a large skylight, highlighting the professional setting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 shakes hands with R2 as the central contact pair",
+    "R3 watches the handshake rather than participating in it",
+    "R1 smiles in the background rather than participating in the handshake",
+    "R4 and R2 are the only people making hand-to-hand greeting contact",
+    "The scene is a bright attic office with natural light from a skylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R4 and R2 the hand-to-hand greeting pair while R3 remains an observer of their interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R2 are the only people making hand-to-hand greeting contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

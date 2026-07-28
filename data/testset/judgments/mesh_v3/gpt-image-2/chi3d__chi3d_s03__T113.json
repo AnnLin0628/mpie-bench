@@ -1,0 +1,266 @@
+{
+  "sample_id": "chi3d__chi3d_s03__T113",
+  "model_id": "gpt-image-2",
+  "ok": true,
+  "backend": "multi_hmr",
+  "backend_model": "multiHMR_896_L",
+  "elapsed_ms": 184.8,
+  "cat": "chi3d",
+  "prompt": "A candid wide-angle photograph from a high angle shows an indoor motion capture studio with a red carpet. On the left, the man in the black polo shirt and blue shorts (R1) stands facing right. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing him, extending her right arm to poke his stomach. The room has white walls and studio equipment in the background. The lighting is even and neutral.",
+  "img": "outputs/gpt-image-2/chi3d__chi3d_s03__T113.png",
+  "det_scores_kept": [
+    0.4646,
+    0.7734
+  ],
+  "keep_idx": [
+    2,
+    3
+  ],
+  "person_select": "top_k_by_score_vs_prompt_R",
+  "n_humans": 2,
+  "n_expected": 2,
+  "n_detected_raw": 4,
+  "S_count_mesh": 1.0,
+  "S_anat_mesh": 0.844046584100894,
+  "S_anat_person": 0.989439861740387,
+  "S_anat_joint": 1.0,
+  "S_anat_bone": 0.9436792626153968,
+  "S_anat_self": 1.0,
+  "S_anat_shape": 1.0,
+  "S_anat_hand": 1.0,
+  "S_anat_part_mesh": 1.0,
+  "S_anat_scale": 1.0,
+  "S_anat_contact_region": null,
+  "S_anat_ownership": null,
+  "S_anat_residual": 1.0,
+  "S_anat_overcount": 0.6101164602522349,
+  "S_anat_abhuman": null,
+  "anat_scene": {
+    "cross_person_scale": {
+      "score": 1.0,
+      "available": true,
+      "height_ratio": 1.0787702455237747,
+      "arm_ratio": 1.0656449182594887
+    },
+    "contact_region_anat": {
+      "score": null,
+      "available": false,
+      "n_contact_joints": 0
+    },
+    "ownership": {
+      "score": null,
+      "available": false,
+      "confused_frac": null
+    },
+    "explain_residual": {
+      "score": 1.0,
+      "available": true,
+      "iou": 0.3437565850961327,
+      "iou_cues": {
+        "luma": 0.18921463791334103,
+        "otsu": 0.3437565850961327,
+        "sat": 0.29431778186183954
+      },
+      "method": "multi_cue_max",
+      "bbox_frac": 0.4684696197505298
+    },
+    "structure_overcount": {
+      "score": 0.6101164602522349,
+      "available": true,
+      "leftover_frac": 0.7919068317982121,
+      "orphan_frac": 0.0,
+      "n_leftover_blobs": 0,
+      "max_blob_frac": 0.0,
+      "P_extra_area": 0.38988353974776513,
+      "P_extra_blob": 0.0,
+      "method": "skeleton_torso",
+      "note": "unexplained_via_skeleton_torso",
+      "work_scale": 0.75,
+      "n_hands": null,
+      "n_torso": null
+    },
+    "abhuman": {
+      "score": null,
+      "available": false,
+      "n_anom": null,
+      "note": "missing_weights:abhuman/best.pt"
+    },
+    "P_anat_extra": 0.38988353974776513,
+    "P_anat_resid": 0.0,
+    "P_anat_struct": 0.0,
+    "P_anat_detect": 0.0,
+    "anat_formula": "penalty 1-0.40P_extra-0.30P_resid-0.15P_struct-0.15P_detect",
+    "w_extra": 0.4,
+    "w_resid": 0.3,
+    "w_struct": 0.15,
+    "w_detect": 0.15
+  },
+  "anat_leftover_frac": 0.7919068317982121,
+  "anat_n_leftover_blobs": 0,
+  "anat_overcount_note": "unexplained_via_skeleton_torso",
+  "P_anat_extra": 0.38988353974776513,
+  "P_anat_resid": 0.0,
+  "P_anat_struct": 0.0,
+  "P_anat_detect": 0.0,
+  "anat_formula": "penalty 1-0.40P_extra-0.30P_resid-0.15P_struct-0.15P_detect",
+  "S_inter_mesh": 1.0,
+  "S_prox": 1.0,
+  "S_pen": 1.0,
+  "anat_parts": [
+    {
+      "S_anat_mesh": 0.9889797546624143,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9412253581995426,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9412253581995426,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0637192960552677,
+          "thigh_over_shin": 0.9091812836799044,
+          "upper_arm_over_thigh": 0.7163814498559055,
+          "forearm_over_shin": 0.6123049648528915,
+          "finger_over_shin": 0.34005810942022974,
+          "torso_over_leg": 0.5955892828418854
+        },
+        "symmetry": {
+          "upper_arm": 0.028126903206323932,
+          "forearm": 0.014889652954898296,
+          "thigh": 0.051587258227914996,
+          "shin": 0.011190540851686255
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.2667305044829845,
+        "beta_abs_max": 1.3218207359313965
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5498056693499858,
+          "right_finger_over_forearm": 0.5610253755721676
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    },
+    {
+      "S_anat_mesh": 0.9898999688183596,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.946133167031251,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.946133167031251,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0804286065062556,
+          "thigh_over_shin": 0.9175714815332757,
+          "upper_arm_over_thigh": 0.7149891101575391,
+          "forearm_over_shin": 0.6072160743770654,
+          "finger_over_shin": 0.3386280348510318,
+          "torso_over_leg": 0.5749146582025507
+        },
+        "symmetry": {
+          "upper_arm": 0.02684773077771864,
+          "forearm": 0.013734652037149022,
+          "thigh": 0.04375372602334311,
+          "shin": 0.01262419050553717
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.1600065030157566,
+        "beta_abs_max": 0.5360190868377686
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5591463499050302,
+          "right_finger_over_forearm": 0.5561793571477279
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    }
+  ],
+  "pen_vert_ratio": 0.0,
+  "pen_inside_ratio": 0.0390625,
+  "pen_volume_m3": 0.008490614401232105,
+  "pen_depth_mean": 0.0,
+  "min_surf_dist": 0.03140396509974225,
+  "contact_band_hit": false,
+  "recon_fail": false,
+  "under_detect": false,
+  "pairs": [
+    {
+      "i": 0,
+      "j": 1,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.03140396509974225,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0390625,
+      "pen_volume_m3": 0.008490614401232105,
+      "volume_method": "trimesh.contains",
+      "vol_hull_a": 0.21735972867154188,
+      "vol_hull_b": 0.29134655028201484,
+      "contact_band_hit": false
+    }
+  ],
+  "tau_pen": 0.05,
+  "tau_contact": 0.02,
+  "tau_vol": 0.05,
+  "inter_regime": "prompt_contact_unspecified",
+  "needs_contact": false,
+  "contact_intent": "unspecified",
+  "pen_signal": "volume_band",
+  "P_fuse": 0.0,
+  "P_miss": 0.0,
+  "P_unwanted": 0.0,
+  "vol_ok": 0.05,
+  "vol_bad": 0.15,
+  "d_good": 0.05,
+  "d_fail": 0.4,
+  "w_prox": 0.45,
+  "w_pen": 0.55,
+  "w_fuse": 0.55,
+  "w_miss": 0.45,
+  "w_unwanted": 0.45,
+  "written_at": "2026-07-18T04:55:18",
+  "fuse_value": 0.008490614401232105,
+  "fuse_ok": 0.05,
+  "fuse_bad": 0.15,
+  "rescored_at": "2026-07-18T07:06:22",
+  "w_extra": 0.4,
+  "w_resid": 0.3,
+  "w_struct": 0.15,
+  "w_detect": 0.15
+}

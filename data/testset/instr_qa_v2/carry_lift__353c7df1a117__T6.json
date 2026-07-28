@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__353c7df1a117__T6",
+  "instruction": "Candid wedding photograph, medium shot. On an indoor stage with purple and white drapes, the groom in a silver shirt (R2) sits on the left, gently applying a tilak to the forehead of the bride in a light green saree (R1) who sits on the right with clasped hands. In the left background, the man in the black shirt (R4) watches. Other blurred guests sit in the background. Warm light glows from out-of-focus brass lamps in the foreground.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R2 applies a tilak to R1's forehead",
+    "R1 receives the tilak from R2 with clasped hands",
+    "R4 watches while R2 performs the tilak ritual on R1",
+    "tilak material or mark is applied to R1's forehead",
+    "indoor stage with purple and white drapes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gently applying a tilak to R1's forehead, rather than R1 applying a tilak to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 applies the tilak to R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the tilak on her forehead from R2, rather than R2 receiving it from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the tilak from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 watching while R2 performs the tilak application on R1, rather than R4 being the one applying the tilak?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is an onlooker while R2 applies the tilak to R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit with clasped hands while R2 reaches toward her forehead for the tilak ritual?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's receiving posture and R2's applying role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

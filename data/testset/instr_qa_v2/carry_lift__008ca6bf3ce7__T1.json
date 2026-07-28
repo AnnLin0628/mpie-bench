@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__008ca6bf3ce7__T1",
+  "instruction": "Candid home video style photograph, medium shot. Indoors with a wooden floor. The woman in the grey turtleneck (R1) sits in a cardboard box in the foreground, arms raised with a surprised expression. Behind her, the man in the teal henley (R2) leans over, smiling as he pushes the box. Bright indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 pushes the cardboard box that R1 is sitting in",
+    "R1 is the person seated inside the box being moved by R2",
+    "R2 leans over from behind R1 to propel the box",
+    "R1 raises her arms while seated in the box",
+    "cardboard box used as the contact object for moving R1",
+    "indoors on a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pushing the cardboard box that R1 is sitting in, rather than R1 pushing a box containing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 pushes the cardboard box that R1 is sitting in"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person seated inside the cardboard box being moved, rather than R2 being the person seated inside it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person seated inside the box being moved by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean over from behind R1 to propel the box, instead of R1 leaning over from behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans over from behind R1 to propel the box"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit in the box with her arms raised while R2 pushes from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises her arms while seated in the box"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a cardboard box the object being used to move or carry R1 during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "cardboard box used as the contact object for moving R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

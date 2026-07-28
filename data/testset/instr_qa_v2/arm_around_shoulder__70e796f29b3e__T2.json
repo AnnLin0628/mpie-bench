@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__70e796f29b3e__T2",
+  "instruction": "Clean studio photograph, medium full shot. In a minimalist indoor studio with a plain white background, a woman with curly black hair (R1) wearing a white t-shirt and blue jeans stands on the left, smiling directly at the camera. She rests her left hand on the right shoulder of a man with a beard (R2) standing next to her. The man (R2), wearing a white t-shirt and black jeans, stands facing forward with his hands in his pockets, smiling warmly at the camera. Bright, even studio lighting illuminates the pair, creating a clean and cheerful portrait.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests her left hand on R2's right shoulder",
+    "R2 receives the shoulder touch from R1 while not placing a hand on R1",
+    "R2 keeps his hands in his pockets while R1 makes the shoulder contact",
+    "R1 and R2 stand next to each other in a posed studio portrait with R1 touching R2",
+    "The portrait is set against a plain white minimalist indoor studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person resting a hand on R2's shoulder, rather than R2 resting a hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her left hand on R2's right shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the shoulder contact from R1, rather than R1 receiving shoulder contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder touch from R1 while not placing a hand on R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's left hand touch R2's right shoulder, rather than R2's hand touching R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her left hand on R2's right shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep his hands in his pockets while R1 is the one making shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 keeps his hands in his pockets while R1 makes the shoulder contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posed side by side in a portrait with R1 touching R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand next to each other in a posed studio portrait with R1 touching R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

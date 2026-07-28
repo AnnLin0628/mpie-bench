@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T3",
+  "instruction": "Candid full-shot photograph of a man in a brown shirt and tan beanie (R1) and a woman in a black dress with a white hair ribbon (R2) dancing barefoot in a spacious studio with light wooden floors. The man (R1) stands behind the woman (R2), supporting her waist with his right hand while lifting her left leg with his left hand. She arches her body backward in a graceful, dynamic pose. Soft, natural indoor lighting fills the space, highlighting the warm wooden textures of the floor and background stairs.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2's waist from behind during the dance",
+    "R1 lifts R2's left leg with his hand",
+    "R2 arches backward while being supported by R1",
+    "R1 stands behind R2 in a partnered dance support pose",
+    "The dance takes place in a spacious studio with light wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's waist from behind, rather than R2 supporting R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's waist from behind during the dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting R2's left leg with his hand, rather than R2 lifting R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts R2's left leg with his hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 arching her body backward while R1 supports her, rather than R1 arching backward while R2 supports him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 arches backward while being supported by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand behind R2 while holding her waist and leg in the dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 in a partnered dance support pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

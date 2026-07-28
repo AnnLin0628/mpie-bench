@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2f1a7131d3e9__T6",
+  "instruction": "Candid medium shot of two smiling judo practitioners sitting side-by-side on a gym mat. On the left, the dark-haired man (R2) in a white gi and black belt holds up a smartphone to take a selfie, his left arm draped over the shoulder of the blonde-haired man (R1) on the right. R1, also wearing a white gi and black belt, smiles happily towards the phone's camera. The background features large windows with soft natural light illuminating the indoor training hall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds up the smartphone to take the selfie rather than R1 holding it",
+    "R2 drapes his left arm over R1's shoulder rather than R1 draping an arm over R2",
+    "R1 smiles toward the phone camera while R2 operates the selfie phone",
+    "a smartphone is used as the selfie-taking object",
+    "R1 and R2 are seated side-by-side on a gym mat",
+    "the setting is an indoor training hall with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding up the smartphone to take the selfie, rather than R1 holding up the smartphone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the selfie taker holding the phone"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's left arm draped over R1's shoulder, rather than R1's arm being draped over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places an arm over R1's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated side-by-side on a gym mat while R2 maintains shoulder contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit together with R2's arm contacting R1's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a smartphone being used as the camera for the selfie?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "smartphone selfie camera"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

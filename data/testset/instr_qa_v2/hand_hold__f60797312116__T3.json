@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__f60797312116__T3",
+  "instruction": "Candid medium shot of the curly-haired person in the light blue cardigan (R1) on the left and the blonde person in the patterned shirt and sunglasses (R2) on the right walking arm-in-arm. They stroll side-by-side through a sunlit park. R1 looks down with a gentle, content smile, while R2 looks forward with a bright, happy smile. Warm, natural sunlight filters through the lush green trees in the background, creating a soft, bright atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the one looking down with a gentle, content smile while walking arm-in-arm with R2",
+    "R2 is the one looking forward with a bright, happy smile while walking arm-in-arm with R1",
+    "R1 and R2 are walking arm-in-arm side-by-side",
+    "R1 and R2 are strolling together through a sunlit park",
+    "lush green trees form the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking down with a gentle, content smile while walking arm-in-arm with R2, rather than R2 being the one looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the downward-looking expression during the arm-in-arm walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking forward with a bright, happy smile while walking arm-in-arm with R1, rather than R1 being the one looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the forward-looking expression during the arm-in-arm walk"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 strolling together rather than standing still while linked arm-in-arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are strolling while arm-in-arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

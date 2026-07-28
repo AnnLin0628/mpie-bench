@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T43",
+  "instruction": "A candid documentary photograph in a medium-wide, eye-level side profile shot captures an indoor studio with a red carpet and red partition screens. The man in the dark polo shirt and blue shorts (R1) stands on the left, facing right and leaning forward. He extends his right arm to touch the upper arm of the woman in the white patterned t-shirt and blue jeans (R2), who stands on the right facing him. The woman (R2) looks at the man with a neutral expression. The scene is lit by bright indoor lighting, emphasizing the warm wood floor and red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 initiates contact by extending his right arm toward R2",
+    "R1 touches R2's upper arm rather than R2 touching R1's upper arm",
+    "R2 receives the upper-arm touch from R1 while facing him",
+    "R1 leans forward toward R2 during the contact",
+    "The scene is an indoor studio with red carpet and red partition screens"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending his right arm to touch R2's upper arm, rather than R2 extending her arm to touch R1's upper arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates contact by extending his right arm toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose upper arm is being touched by R1, rather than R1 being the one whose upper arm is touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's upper arm rather than R2 touching R1's upper arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 initiate the physical contact by reaching toward R2, rather than R2 initiating the contact by reaching toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates contact by reaching toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning forward toward R2 while making contact with her upper arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward toward R2 during the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

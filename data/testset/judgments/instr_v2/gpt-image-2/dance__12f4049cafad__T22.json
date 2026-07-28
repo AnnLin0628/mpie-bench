@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T22",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.8529411764705882,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.75,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer striking a pose with her arms raised and looking at the camera, rather than R2 doing that central arms-raised pose?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "central R3 has both arms raised and faces camera"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 dancing while looking forward, whereas R4 is dancing while looking down, rather than those gaze directions being swapped?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R4 looks down but R1 is not looking forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 partially visible behind R3 while R3 is the central dancer posing?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 is partly hidden behind central posing R3"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance__12f4049cafad__T22",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 8.05,
+    "written_at": "2026-07-17T14:57:14",
+    "gen_relpath": "outputs/gpt-image-2/dance__12f4049cafad__T22.png",
+    "qa_relpath": "instr_qa_v2/dance__12f4049cafad__T22.json",
+    "n_questions": 3
+  }
+}

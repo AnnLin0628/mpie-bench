@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__68b9f2f529ba__T6",
+  "instruction": "Clean studio full-shot photograph of a shirtless man in black pants (R1) supporting a woman in a beige crop top and black shorts (R2) in an acrobatic pose. Against a draped beige fabric backdrop, the shirtless man (R1) stands center, holding the woman's (R2) raised left leg and her lifted left arm. The woman (R2) balances horizontally with her right arm extended to the side, looking forward-right. The scene is captured with soft, diffused studio lighting and a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2's body in an acrobatic dance lift",
+    "R1 holds R2's raised left leg",
+    "R1 holds R2's lifted left arm",
+    "R2 balances horizontally while being supported by R1",
+    "R1 stands underneath or beside R2 as the stabilizing base",
+    "The interaction takes place in a clean studio against a draped beige fabric backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's body in the acrobatic pose, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's body in an acrobatic dance lift"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's raised left leg, rather than R2 holding R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's raised left leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's lifted left arm, rather than R2 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's lifted left arm"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing horizontally while R1 serves as the supporting partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances horizontally while being supported by R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand as the stabilizing base for R2's lifted acrobatic position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands underneath or beside R2 as the stabilizing base"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

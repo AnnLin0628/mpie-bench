@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T3",
+  "instruction": "Cinematic film still, low-angle full shot. In a classical dance studio with wooden floors, the brunette ballerina (R1) in a white leotard and sheer skirt stands in the foreground left, posing en pointe on her left foot while holding the wooden barre. In the background right, the blonde ballerina (R2) in a white leotard and sheer skirt stands en pointe with her arms extended. Both dancers maintain elegant, upright postures. Soft natural light filters through a large window, illuminating the neutral-toned room and casting gentle shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the ballerina holding the wooden barre",
+    "R2 is the ballerina standing en pointe with arms extended",
+    "R1 poses en pointe on her left foot while using the barre",
+    "wooden barre",
+    "classical dance studio with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina holding the wooden barre, rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the barre instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina with arms extended while R1 holds the barre, rather than R1 being the arms-extended dancer and R2 holding the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends arms while R1 uses the barre"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 posing en pointe on her left foot while holding the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 poses en pointe on left foot and holds barre"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing en pointe with her arms extended and not using the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands en pointe with arms extended"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

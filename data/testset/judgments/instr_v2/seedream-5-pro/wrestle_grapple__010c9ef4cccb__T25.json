@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T25",
+  "model_id": "seedream-5-pro",
+  "S_instr": 0.5,
+  "S_instr_role": 0.5,
+  "S_instr_asymm": 0.5,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.5,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gripping R1's sleeve, rather than R1 gripping R3's sleeve?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "R1 visibly grips R3's blue sleeve"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 countering by holding R3's arm, rather than R3 countering by holding R1's arm?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 is holding R3's arm and sleeve"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 engaged with each other in a dynamic grapple, with R3 controlling R1's sleeve and R1 holding R3's arm?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "they grapple, but R3 grips R1's lapel not sleeve"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "wrestle_grapple__010c9ef4cccb__T25",
+    "model_id": "seedream-5-pro",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 9.78,
+    "written_at": "2026-07-18T10:51:19",
+    "gen_relpath": "outputs/seedream-5-pro/wrestle_grapple__010c9ef4cccb__T25.png",
+    "qa_relpath": "instr_qa_v2/wrestle_grapple__010c9ef4cccb__T25.json",
+    "n_questions": 3
+  }
+}

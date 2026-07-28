@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T7",
+  "instruction": "Candid photographic still, medium shot. In a bright ballet studio with wooden barres, the red-haired girl in a pink leotard (R3) stands on the left, holding the barre with one hand and looking back towards her classmate. On the right, the girl in the pink ballet skirt (R2) stands with hands on hips, looking forward. Soft, bright indoor lighting illuminates the clean, pastel pink and white setting.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R3 holds the ballet barre with one hand while R2 keeps her hands on her hips",
+    "R3 looks back toward R2 while R2 looks forward",
+    "R2 stands with hands on hips",
+    "R3 is holding a wooden barre",
+    "bright ballet studio with wooden barres"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 holding the ballet barre with one hand while R2 keeps her hands on her hips, rather than R2 holding the barre and R3 keeping hands on hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the barre-holding duty while R2 has the hands-on-hips pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one looking back toward R2 while R2 looks forward, rather than R2 looking back toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 directs attention back toward R2 while R2 faces forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand with her hands on her hips while R3 uses one hand to hold the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 hands-on-hips role contrasted with R3 barre-holding role"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the scene set in a bright ballet studio with wooden barres?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bright ballet studio with wooden barres"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

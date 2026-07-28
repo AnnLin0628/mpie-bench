@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T77",
+  "instruction": "A candid outdoor photograph with a full shot of a group of friends in a grassy park during the day. On the left, the large man in a dark blue t-shirt (R1) stands looking to the right. In the background, the man in a red polo shirt (R3) and the woman in a black beanie (R5) stand watching. On the right, the woman in a dark blue t-shirt (R4) bends forward with clenched fists and a focused expression. The scene is illuminated by soft, natural daylight, highlighting the lush green grass and surrounding trees.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 bends forward with clenched fists and a focused expression while R1 stands looking toward her direction",
+    "R1 stands upright looking to the right rather than bending forward with clenched fists",
+    "R3 and R5 stand in the background watching rather than taking R4's active bent-forward pose",
+    "R4 has the active focused body pose with clenched fists",
+    "the scene is a grassy outdoor park in daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one bending forward with clenched fists, rather than R1 being the one bent forward with clenched fists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the active bent-forward clenched-fist role instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing and looking toward R4's direction while R4 is bent forward, rather than R4 standing and R1 bending forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands looking toward R4 while R4 bends forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R3 and R5 background watchers while R4 holds the focused bent-forward pose, rather than R4 being the background watcher and R3 or R5 taking that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R5 watch from the background while R4 is the active focused figure"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have clenched fists and a focused expression while bending forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's body configuration is bent forward with clenched fists"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R3 and R5 stand in the background watching the scene?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R5 serve as background watchers"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

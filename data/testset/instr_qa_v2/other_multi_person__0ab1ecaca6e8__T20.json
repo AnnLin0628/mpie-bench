@@ -1,0 +1,75 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T20",
+  "instruction": "A cinematic full shot of four friends standing in a line on a grassy park field. From left to right, the bald man in the dark blue t-shirt (R2) points to the right while talking; the East Asian man in the red t-shirt with a yellow 'T' (R3) looks towards the others; the woman in the dark blue t-shirt with a red 'E' (R4) stands facing left; and the Black woman with a large afro in the red t-shirt with a pink 'A' (R6) gestures with her hands open. They stand on green grass under bright daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R2 points to the right while talking rather than R3 doing the pointing",
+    "R6 gestures with her hands open rather than R4 making the open-handed gesture",
+    "R3 looks toward the other friends rather than being the one pointing or gesturing",
+    "R4 stands facing left toward the group",
+    "R2, R3, R4, and R6 stand together in a line on a grassy park field",
+    "green grassy park field under bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one pointing to the right while talking, rather than R3 doing the pointing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points to the right while talking rather than R3 doing the pointing"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the one gesturing with her hands open, rather than R4 making the open-handed gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 gestures with her hands open rather than R4 making the open-handed gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 look toward the other friends while R2 is the one talking and pointing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 looks toward the other friends rather than being the one pointing or gesturing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

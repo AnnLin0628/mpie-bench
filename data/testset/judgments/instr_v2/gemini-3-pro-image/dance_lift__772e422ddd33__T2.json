@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T2",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.8529411764705882,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.75,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 3,
+  "n_all": 3,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 adjusting R2's ballet shoe, rather than R2 adjusting R1's shoe?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "crouching helper adjusts standing girl's shoe"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the girl standing en pointe while R1 crouches to help with her shoe, rather than R1 standing en pointe while R2 crouches to help?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "girl stands while helper crouches, not clearly en pointe"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 crouched near R2's foot as the helper adjusting the shoe?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "helper is crouched by the girl's foot"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance_lift__772e422ddd33__T2",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 6.85,
+    "written_at": "2026-07-17T23:23:37",
+    "gen_relpath": "outputs/gemini-3-pro-image/dance_lift__772e422ddd33__T2.png",
+    "qa_relpath": "instr_qa_v2/dance_lift__772e422ddd33__T2.json",
+    "n_questions": 3
+  }
+}

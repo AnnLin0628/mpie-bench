@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__bda22aec37f3__T2",
+  "instruction": "Candid family photograph, medium close-up. In a bright indoor room with a white paneled glass door in the background, the blonde woman in a coral hoodie (R1) on the left holds the right hand of the young blonde girl in a blue denim dress (R3) on the right. The woman (R1) looks down smiling, while the girl (R3) looks down. Another hand holds the girl's left arm from behind. Soft, natural indoor light creates a warm atmosphere with a shallow depth of field.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds R3's right hand",
+    "R2 holds R3's left arm from behind",
+    "R3 is the child receiving hand-and-arm contact from R1 and R2",
+    "R1 looks down smiling while holding R3's hand",
+    "bright indoor room with a white paneled glass door in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R3's right hand, rather than R3 holding R1's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R3's left arm from behind, rather than R3 holding R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R3's left arm from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the child whose hand and arm are being held by R1 and R2, rather than R3 being the one holding both of them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 receives contact from R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look down smiling while holding R3's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role and expression"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

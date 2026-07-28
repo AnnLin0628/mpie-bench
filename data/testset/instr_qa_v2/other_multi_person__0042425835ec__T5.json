@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T5",
+  "instruction": "Candid cinematic medium shot of an outdoor backyard garden. On the left, the woman in the pink shirt (R1) stands holding a wooden bat, smiling while blindfolded with a peach bandana. The man in the patterned t-shirt (R3), wearing glasses, stands behind her on the right, adjusting and tying the blindfold. Soft natural daylight illuminates the scene against a lush green foliage background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 adjusts and ties the blindfold on R1",
+    "R1 is the blindfolded participant receiving help from R3",
+    "R1 holds a wooden bat while R3 works on her blindfold",
+    "wooden bat held by R1",
+    "peach bandana used as R1's blindfold",
+    "outdoor backyard garden with lush green foliage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 adjusting and tying the blindfold on R1, rather than R1 adjusting and tying a blindfold on R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 adjusts and ties the blindfold on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the blindfolded participant receiving help from R3, rather than R3 being blindfolded and helped by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the blindfolded participant receiving help from R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand holding a wooden bat while R3 stands behind her working on the blindfold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a wooden bat while R3 works on her blindfold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

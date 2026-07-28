@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T32",
+  "instruction": "Candid outdoor photograph, medium shot. In a sunny park with green trees, four children stand side-by-side in a friendly huddle. On the far left, the boy with glasses in a yellow t-shirt (R1) stands facing forward, smiling. Next to him, the girl with curly hair in a brown dress and white cardigan (R3) smiles warmly. Beside her, the boy in a blue denim shirt (R5) smiles. On the far right, the girl with dark hair and bangs in a striped dress and dark cardigan (R4) smiles happily. They have their arms wrapped around each other's shoulders. Warm, bright sunlight filters through the trees from behind, creating a soft backlighting effect.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R3 is between R1 and R5 in the shoulder-linked huddle, contacting both adjacent children",
+    "R5 is between R3 and R4 in the shoulder-linked huddle, contacting both adjacent children",
+    "R1 is shoulder-linked with R3 as part of the friendly group huddle",
+    "R4 is shoulder-linked with R5 as part of the friendly group huddle",
+    "The children are in a sunny park with green trees and warm backlighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the child positioned between R1 and R5 with arms wrapped around neighboring shoulders, rather than R1 being between R3 and R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is between R1 and R5 in the shoulder-linked huddle"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the child positioned between R3 and R4 with arms wrapped around neighboring shoulders, rather than R4 being between R3 and R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is between R3 and R4 in the shoulder-linked huddle"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 participating in the huddle by linking shoulders with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is shoulder-linked with R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 participating in the huddle by linking shoulders with R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is shoulder-linked with R5"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__4fe6032f9795__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures an indoor study room. On the left, the woman in the beige pantsuit (R2) stands in profile, smiling as she extends her right hand. On the right, the man in the blue turtleneck (R1) leans forward, rising from a seat to shake her hand. They clasp right hands over a wooden table in the foreground, which is decorated with a colorful Scrabble board and educational books. The man holds a smartphone in his left hand. Warm, soft indoor lighting illuminates the scene, creating a cozy atmosphere with natural colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands and extends her right hand toward R1 to initiate the handshake",
+    "R1 leans forward while rising from a seat to meet R2's extended hand",
+    "R1 and R2 clasp right hands over a wooden table",
+    "R1 holds a smartphone in his left hand during the interaction",
+    "A Scrabble board and educational books are on the wooden table",
+    "The scene is an indoor study room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one standing and extending her right hand toward R1, rather than R1 standing and extending his right hand toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the handshake by extending her right hand toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one leaning forward and rising from a seat to meet R2's hand, rather than R2 rising from a seat to meet R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rises from a seated position to meet R2's extended hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 clasp right hands with R1 leaning forward from his seat and R2 standing in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct body configurations during the right-hand clasp"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a smartphone in his left hand during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds a smartphone"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

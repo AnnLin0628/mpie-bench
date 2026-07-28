@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T4",
+  "instruction": "Candid studio medium-full photograph of two women dancing in front of a plain beige wall. On the left, the woman with voluminous afro hair (R1) in a mauve dress dances with bent arms, looking at the camera. On the right, the woman with short brown hair (R2) in a striped shirt and white pants dances with a joyful smile. They move side-by-side under warm, soft lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 dances with bent arms and looks at the camera, rather than R2 being the one described that way",
+    "R2 dances with a joyful smile, rather than R1 being the one described that way",
+    "R1 and R2 dance side-by-side as separate dancers",
+    "R1 uses bent arms while R2 is the smiling dancer beside her",
+    "The dancers are in front of a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer with bent arms looking at the camera, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances with bent arms and looks at the camera"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer with a joyful smile, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances with a joyful smile"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 dancing side-by-side as separate dancers, without either one carrying or supporting the other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 dance side-by-side"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 dance with bent arms while R2 dances beside her with a joyful expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses bent arms while R2 is the smiling dancer beside her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

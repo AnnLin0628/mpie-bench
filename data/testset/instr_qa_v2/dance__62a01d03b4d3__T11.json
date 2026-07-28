@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__62a01d03b4d3__T11",
+  "instruction": "A candid full-shot photograph capturing a couple in a tight tango embrace inside a minimalist room with a plain light wall and wooden floor. The man in the gray suit (R1) on the left and the woman in the black dress (R2) on the right are spinning together. Her hair is in a bun with a blue flower accessory. There is pronounced motion blur on their legs and the hem of her flaring black dress, conveying rapid rotation. The soft, natural lighting emphasizes their close connection and the fluid, dramatic movement of the dance.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in the gray suit dancing in a tight tango embrace with R2",
+    "R2 is the woman in the black dress dancing in a tight tango embrace with R1",
+    "R2's black dress flares during the rapid spinning, rather than R1's suit flaring",
+    "R2 has a bun with a blue flower accessory",
+    "R1 and R2 are spinning together with motion blur on their legs",
+    "the dance takes place in a minimalist room with a plain light wall and wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the gray suit dancing in a tight tango embrace with R2, rather than R2 being the man in the gray suit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the male tango partner in the gray suit"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the black dress whose dress flares during the spin, rather than R1 being the partner with the flaring dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partner with the flaring black dress"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected in a tight tango embrace while spinning together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain a close tango dance embrace"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 dance as R1's close tango partner with her dress hem moving outward from the rapid rotation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is R1's close dance partner with motion in her dress"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__000ad2a1de74__T2",
+  "instruction": "A clean, minimalist studio portrait photograph with a calm and intimate mood. In a medium shot at eye-level against a solid, light olive-green wall, the woman with long black dreadlocks (R1) stands on the left, facing forward with a neutral, serious expression and looking directly into the camera. She wears a high-necked long-sleeved dress with a brown and white zebra-like pattern. To her right, the woman with long red hair (R6) wears a long-sleeved white dress with a light brown abstract pattern, leaning her head gently on the other woman's right shoulder and looking directly forward with a calm, neutral expression. She holds the other woman's right arm with both of her hands, one resting on the forearm and the other near the wrist. The scene is illuminated by soft, diffused studio lighting from the front, creating a warm, muted color palette with minimal shadows.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 leans her head on R1's right shoulder rather than R1 leaning on R6",
+    "R6 holds R1's right arm with both hands rather than R1 holding R6's arm",
+    "R1 is the shoulder-and-arm contact receiver while R6 initiates the leaning and holding contact",
+    "R6 has one hand on R1's forearm and another near R1's wrist",
+    "R1 faces forward while R6 leans gently against R1's shoulder",
+    "solid light olive-green studio wall background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 leaning her head gently on R1's right shoulder, rather than R1 leaning her head on R6's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 leans her head on R1's right shoulder rather than R1 leaning on R6"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 holding R1's right arm with both hands, rather than R1 holding R6's arm with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 holds R1's right arm with both hands rather than R1 holding R6's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder and arm receive the contact while R6 is the person leaning and grasping, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the shoulder-and-arm contact receiver while R6 initiates the leaning and holding contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R6 place one hand on R1's forearm and the other near R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 has one hand on R1's forearm and another near R1's wrist"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing forward while R6 leans gently against R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces forward while R6 leans gently against R1's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

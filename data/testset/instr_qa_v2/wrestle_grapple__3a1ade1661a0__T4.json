@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__3a1ade1661a0__T4",
+  "instruction": "Candid action photograph, medium full shot. Inside an indoor boxing gym, the dark-skinned boxer in red shorts (R2) on the left ducks his head and throws a punch. On the right, the light-skinned boxer in black shorts (R1) stands his ground, blocking the punch with his black gloves. The action is captured through the black ring ropes under bright overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 ducks his head and throws a punch toward R1",
+    "R1 stands his ground and blocks R2's punch",
+    "R1 uses black gloves to block the incoming punch from R2",
+    "R2 is the attacking boxer while R1 is the defending boxer",
+    "black boxing gloves are involved in the punch-blocking contact",
+    "the action occurs inside an indoor boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 ducking his head and throwing a punch at R1, rather than R1 ducking and throwing a punch at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 ducks his head and throws a punch toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing his ground and blocking R2's punch, rather than R2 standing his ground and blocking a punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands his ground and blocks R2's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use his black gloves to stop or absorb the punch thrown by R2, rather than R2 using gloves to stop a punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses black gloves to block the incoming punch from R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the attacking boxer while R1 is the defending boxer in the exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacking boxer while R1 is the defending boxer"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__353c7df1a117__T5",
+  "instruction": "A candid photographic medium close-up shot captures a warm moment in an outdoor garden with a soft, blurred green background. On the left, the laughing woman in the light blue saree (R1) closely embraces the smiling woman in the red saree (R5) on the right. The woman in the light blue saree (R1) holds the chin of the woman in the red saree (R5) with her hand as they share a joyful laugh. Both women wear traditional gold jewelry and white flowers in their hair. Soft, natural daylight illuminates the scene, highlighting the vibrant colors of their attire and creating a cheerful, affectionate atmosphere.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 holds R5's chin with her hand",
+    "R5 receives the chin-holding touch from R1",
+    "R1 closely embraces R5 during the joyful interaction",
+    "R1 and R5 share a laughing, affectionate close-contact moment",
+    "white flowers are worn in the women's hair",
+    "outdoor garden with a blurred green background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R5's chin with her hand, rather than R5 holding R1's chin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R5's chin"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person receiving the chin-holding touch from R1, rather than R1 receiving that touch from R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 receives R1's chin-holding touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 closely embrace R5 while also keeping her hand on R5's chin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 embraces R5 and holds her chin"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

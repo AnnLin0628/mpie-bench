@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__5d956fec4c77__T3",
+  "instruction": "Candid cinematic full shot of a cozy bedroom. On the left, the barefoot elderly woman with glasses (R2) in a white shirt and light trousers dances with her arms raised, smiling. On the right, the elderly bald man (R1) in a striped shirt and khaki pants faces her, reaching out to hold her hand. They dance on a dark patterned rug with a houseplant and armchair visible on the left. Warm, soft indoor lighting illuminates the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the elderly bald man facing R2 and reaching out to hold her hand",
+    "R2 is the barefoot elderly woman with glasses dancing with her arms raised",
+    "R1 plays the hand-reaching dance partner role while R2 plays the raised-arms dance partner role",
+    "R1 and R2 are dancing together in a bedroom",
+    "A dark patterned rug is under the dancing pair",
+    "The room has warm, soft indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person reaching out to hold R2's hand, rather than R2 being the person reaching out to hold R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches out to hold R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person dancing with her arms raised while R1 faces her, rather than R1 being the one dancing with raised arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances with arms raised while R1 faces her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 play the hand-taking dance partner role toward R2, rather than R2 taking that role toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the active hand-reaching role in the dance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

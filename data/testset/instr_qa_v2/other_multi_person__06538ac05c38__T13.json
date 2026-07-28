@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T13",
+  "instruction": "Candid lifestyle photograph, medium full shot. On a sunny rooftop under a blue sky with light clouds, a group of friends poses together. In the center foreground, the red-haired woman (R1) sits with eyes closed and a serene smile, wearing a white t-shirt and grey sweater. To her left, the grey-haired man (R2) sits in a grey t-shirt looking forward. In the background, the Asian woman (R5) stands on the left in a white shirt and black crop top, while the Black man (R6) stands on the right in a dark blue shirt. Bright daylight illuminates the scene with warm natural tones.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R1 is seated in the center foreground with eyes closed and a serene smile",
+    "R2 is seated near R1 and looking forward",
+    "R5 stands in the background while R1 sits in the foreground",
+    "R6 stands in the background while R1 and R2 are seated in the foreground",
+    "the group is on a sunny rooftop under a blue sky with light clouds"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person seated in the center foreground with eyes closed and a serene smile, rather than R2 having that eyes-closed center-foreground role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the seated center-foreground serene role, not R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 standing in the background while R1 sits in the foreground, rather than R1 standing in the background while R5 sits in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is a background standing person while R1 is foreground seated"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 standing in the background as part of the group while R1 and R2 are seated in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is standing in the background behind the seated foreground people"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

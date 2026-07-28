@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__452ea981607f__T1",
+  "instruction": "Candid lifestyle photograph, medium shot at eye-level. In a bright, minimalist indoor room, the bald elderly man (R2) in a blue sweater and the elderly woman with short white hair (R1) in a beige sweater are locked in a warm embrace. Positioned on the left, the bald elderly man (R2) faces right, wrapping his arms tightly around her. On the right, the elderly woman (R1) faces left, resting her head against his shoulder with a joyful, smiling expression. Their arms are wrapped around each other in a tight, affectionate hug. The background is softly blurred with a neutral wall and a small table. The scene is illuminated by soft, natural indoor light, creating a warm and intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests her head against R2's shoulder during the embrace",
+    "R2 provides the shoulder that R1 leans her head on, rather than the reverse",
+    "R2 wraps his arms tightly around R1",
+    "R1 and R2 face each other in a close affectionate embrace",
+    "The scene is in a bright, minimalist indoor room with soft natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting her head against R2's shoulder, rather than R2 resting his head against R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her head against R2's shoulder during the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 provide the shoulder that R1 leans her head on, rather than R1 providing the shoulder for R2's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 provides the shoulder that R1 leans her head on, rather than the reverse"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 wrapping his arms tightly around R1 in the close embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms tightly around R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 pressed close to R2 with her head against his shoulder while they embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps close body contact with R2 while resting on his shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

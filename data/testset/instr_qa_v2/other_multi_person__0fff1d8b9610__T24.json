@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T24",
+  "instruction": "A low-angle wide shot of three cheerleaders sitting on the floor of a bright white studio. On the left, the curly-haired cheerleader (R1) sits holding orange pom-poms. In the center, the short black-haired cheerleader (R4) sits back-to-back with her. On the right, the dark-haired cheerleader (R13) sits holding pom-poms. All three wear white, red, and yellow crop tops with white skirts and knee-high socks. Bright, high-key studio lighting illuminates the scene.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R4 is the cheerleader sitting back-to-back with R1, not R13",
+    "R1 holds orange pom-poms while seated back-to-back with R4",
+    "R13 sits separately holding pom-poms rather than joining the back-to-back contact pair",
+    "R1's orange pom-poms",
+    "R13's pom-poms",
+    "bright white studio floor setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the cheerleader sitting back-to-back with R1, rather than R13 being the one in back-to-back contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the back-to-back contact role with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold the orange pom-poms while seated back-to-back with R4, rather than R4 being described as the orange pom-pom holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the orange pom-pom holder in the back-to-back pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R13 seated apart from the R1-and-R4 back-to-back pair while holding pom-poms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R13 is a separate seated pom-pom holder, not part of the back-to-back contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R4 seated on the floor with their backs touching each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 have a seated back-to-back body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

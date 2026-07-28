@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T241",
+  "instruction": "Candid documentary photograph, wide full shot, slightly high angle. Inside a spacious motion capture studio featuring a dark red carpeted floor and white walls, the man in the black cap and blue shorts (R1) stands on the left, embracing the woman in the white t-shirt and blue jeans (R2) who stands on the right. The man (R1) has his right arm wrapped around her shoulder, while the woman (R2) wraps her arm around his waist, lifting her left leg slightly in a playful pose. They both face away from the camera, standing close together. Bright overhead indoor lighting illuminates the scene, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps his right arm around R2's shoulder",
+    "R2 wraps her arm around R1's waist",
+    "R2 lifts her left leg slightly while R1 stands",
+    "R1 and R2 stand close together facing away from the camera",
+    "The scene is inside a spacious motion capture studio with a dark red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping his right arm around R2's shoulder, rather than R2 wrapping her right arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the shoulder-embrace duty on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping her arm around R1's waist, rather than R1 wrapping his arm around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the waist-embrace duty on R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person lifting her left leg slightly in a playful pose, rather than R1 lifting his leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the playful leg-lift pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 have different embrace roles, with R1 holding R2 around the shoulder while R2 holds R1 around the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric embrace configuration between R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

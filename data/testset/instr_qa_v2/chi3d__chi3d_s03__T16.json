@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T16",
+  "instruction": "Candid documentary medium-wide shot of an indoor motion capture studio with a red carpet and a printer in the background. The woman in the white patterned t-shirt and blue jeans (R2) stands on the left, facing right, placing her right hand on the shoulder of the man in the black cap and dark polo shirt (R1). The man (R1) stands on the right, facing left, looking at her. Bright overhead lighting illuminates the room, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her right hand on R1's shoulder",
+    "R1 is the person receiving shoulder contact from R2",
+    "R2 faces R1 while making the shoulder contact",
+    "R1 faces and looks at R2 during the contact",
+    "indoor motion capture studio with a printer in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 placing her right hand on R1's shoulder, rather than R1 placing his right hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the shoulder-touch contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being touched by R2, rather than R2 being the one whose shoulder is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the shoulder contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 use her right hand to make contact with R1's shoulder, rather than R1 using his right hand to make contact with R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right hand is the contacting hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 while maintaining the hand-on-shoulder contact with him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while touching his shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face and look at R2 while receiving the shoulder touch from her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks at R2 while being touched on the shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

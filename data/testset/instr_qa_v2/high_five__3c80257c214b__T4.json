@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__3c80257c214b__T4",
+  "instruction": "Candid medium shot photograph. On an indoor squash court, the woman in the white athletic dress (R2) stands on the left, facing right, and high-fives the man in the blue t-shirt and black shorts (R1) standing on the right. Both smile warmly as their raised right hands meet. The woman holds her racket in her left hand, and the man holds his racket in his left hand. Bright, even indoor lighting fills the court.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the woman who actively high-fives R1 as the named partner",
+    "R1 returns R2's high-five with his raised right hand",
+    "R1 and R2 make contact with their raised right hands",
+    "R2 holds a squash racket in her left hand during the high-five",
+    "R1 holds a squash racket in his left hand during the high-five",
+    "The interaction takes place on an indoor squash court"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person described as actively high-fiving R1, rather than R1 being the one described as high-fiving R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman who actively high-fives R1 as the named partner"
+    },
+    {
+      "id": "q2",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a squash racket in her left hand while high-fiving R1?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 holds a squash racket in her left hand during the high-five"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a squash racket in his left hand while high-fiving R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds a squash racket in his left hand during the high-five"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 1,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

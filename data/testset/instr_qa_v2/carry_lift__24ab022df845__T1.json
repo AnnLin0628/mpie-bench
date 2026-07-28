@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__24ab022df845__T1",
+  "instruction": "Candid wedding photograph from a high-angle full shot looking down at an outdoor paved path bordered by stone tiles. The bride in a white wedding gown (R1) walks on the left, holding hands with the groom in a white tuxedo jacket and black trousers (R2) who walks on the right. Both are moving forward together, with the bride looking downward and the groom glancing toward her. Bright daylight illuminates the scene, casting soft shadows on the pavement and highlighting the clean white of their wedding attire.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the bride walking hand-in-hand with R2 the groom",
+    "R2 is the groom walking hand-in-hand with R1 the bride",
+    "R1 looks downward while R2 glances toward R1",
+    "R1 and R2 move forward together while holding hands",
+    "The scene is an outdoor paved path bordered by stone tiles"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the bride walking hand-in-hand with R2 the groom, rather than R2 being the bride walking hand-in-hand with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bride walking hand-in-hand with R2 the groom"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 glance toward R1 while R1 looks downward, rather than R1 glancing toward R2 while R2 looks downward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks downward while R2 glances toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding hands with R2 while walking forward together with him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 move forward together while holding hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 holding hands with R1 while walking forward together with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the groom walking hand-in-hand with R1 the bride"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

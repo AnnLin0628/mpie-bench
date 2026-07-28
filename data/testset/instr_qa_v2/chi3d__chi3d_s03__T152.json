@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T152",
+  "instruction": "A candid wide-angle documentary photograph shows an indoor motion capture studio with a red carpet and white walls. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing left, extending her right arm to touch the cheek of the man in the black polo shirt and blue shorts (R1). The man (R1) stands on the left, facing right and looking at her. The scene is brightly lit by even overhead lights, creating a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 actively extends her right arm to touch R1's cheek",
+    "R1 is the person receiving the cheek touch from R2",
+    "R1 faces and looks at R2 while she touches his cheek",
+    "R2 stands facing R1 during the cheek-touch interaction",
+    "the interaction takes place in an indoor motion capture studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending her right arm to touch R1's cheek, rather than R1 extending his arm to touch R2's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively extends her right arm to touch R1's cheek"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose cheek is being touched by R2, rather than R2 being the person whose cheek is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving the cheek touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 play the active touching role by reaching toward R1's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively reaches toward R1's face"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face and look at R2 while receiving the cheek touch from her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces and looks at R2 while receiving R2's cheek touch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

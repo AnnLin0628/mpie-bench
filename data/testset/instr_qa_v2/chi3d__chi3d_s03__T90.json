@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T90",
+  "instruction": "Candid documentary medium-wide shot of an indoor studio with a red carpet. On the left, the woman in the white t-shirt and blue jeans (R2) stands facing right. On the right, the man in the black polo and blue shorts (R1) faces her, extending his right hand to touch her upper chest. The room has white walls and is brightly lit by overhead lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his right hand to touch R2's upper chest",
+    "R2 is the person receiving R1's hand contact on her upper chest",
+    "R1 initiates the hand-to-chest contact rather than R2 initiating it",
+    "R1 and R2 face each other during the contact",
+    "the setting is a brightly lit indoor studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his right hand to touch R2's upper chest, rather than R2 extending her hand to touch R1's upper chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends his right hand to touch R2's upper chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose upper chest is being touched by R1's right hand, rather than R1 being the one touched on the upper chest by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's hand contact on her upper chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 initiate the hand-to-chest contact toward R2, rather than R2 initiating that contact toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the hand-to-chest contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his right hand as the contacting hand on R2's upper chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand is the contacting hand"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 while receiving the hand contact on her upper chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while receiving chest contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

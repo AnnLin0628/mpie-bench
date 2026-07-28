@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__6e3e8b7ae2fb__T3",
+  "instruction": "Candid documentary photograph, medium shot. In a bright hallway near a doorway, the man in the brown cardigan (R1) crouches on the left, adjusting a grey backpack. The boy in the school uniform (R2), wearing a white collared shirt and black trousers, stands on the right facing away from the camera. The man reaches forward with both hands to adjust the backpack straps on the boy's shoulders. Cool, natural daylight illuminates the scene from the side, casting soft shadows on the neutral-toned wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 adjusts the backpack straps on R2's shoulders",
+    "R1 reaches forward with both hands to help R2 rather than receiving help from R2",
+    "R2 wears the backpack while R1 handles the straps",
+    "R1 crouches while R2 stands facing away from the camera",
+    "a grey backpack is involved in the contact interaction",
+    "the scene is in a bright hallway near a doorway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 adjusting the backpack straps on R2's shoulders, rather than R2 adjusting straps on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 adjusts the backpack straps on R2's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 reach forward with both hands to help fix R2's backpack, rather than R2 reaching forward to fix R1's backpack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches forward with both hands to help R2 rather than receiving help from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person wearing the backpack while R1 handles its straps, rather than R1 wearing it while R2 handles the straps?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wears the backpack while R1 handles the straps"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

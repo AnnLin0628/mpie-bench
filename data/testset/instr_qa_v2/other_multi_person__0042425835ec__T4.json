@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T4",
+  "instruction": "A candid documentary medium shot captures a quiet moment outdoors. On the left, the woman in the pink shirt (R1) stands holding a wooden bat, looking forward. On the right, the man in the patterned shirt (R3), wearing glasses, stands behind her, carefully tying a peach bandana over her eyes as a blindfold. The background is a soft-focus green garden. Natural daylight softly illuminates the scene, creating a calm and focused atmosphere as they prepare for the game.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 ties a peach bandana over R1's eyes as a blindfold",
+    "R1 is the person being blindfolded by R3",
+    "R1 holds a wooden bat while R3 prepares the blindfold",
+    "wooden bat held by R1",
+    "peach bandana used as a blindfold",
+    "soft-focus green garden outdoors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 tying the peach bandana over R1's eyes, rather than R1 tying a bandana over R3's eyes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the blindfold-tying duty on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being blindfolded by R3, rather than R3 being blindfolded by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the blindfolding action from R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold the wooden bat while R3 ties the blindfold over her eyes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the bat as R3 handles the blindfold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned behind R1 while carefully tying the bandana onto her face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands behind R1 to tie the blindfold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

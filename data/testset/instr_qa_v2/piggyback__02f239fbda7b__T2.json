@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__02f239fbda7b__T2",
+  "instruction": "A candid studio portrait photograph in a medium close-up shot captures an intimate family embrace against a plain off-white background. In the lower center, the older man with a white beard (R1) in a light blue sweater looks up and to the right with a warm smile. Hugging him from behind, the young blonde boy (R4) on the left rests his cheek against the man's head, looking down, while the young blonde girl (R2) in a pink sweatshirt on the right leans close and smiles at the camera. Soft, diffused studio lighting fills the frame, emphasizing the gentle pastel colors of their sweaters and the cozy, affectionate mood.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 hugs R1 from behind rather than R1 hugging R4 from behind",
+    "R4 rests his cheek against R1's head rather than R1 resting his cheek against R4's head",
+    "R2 leans close to R1 while smiling at the camera rather than R1 leaning behind R2",
+    "R1 is the older man being embraced from behind by R4",
+    "plain off-white studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 rest his cheek against R1's head rather than R1 resting his cheek against R4's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 rests his cheek against R1's head rather than R1 resting his cheek against R4's head"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning close to R1 while smiling at the camera, rather than R1 leaning behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans close to R1 while smiling at the camera rather than R1 leaning behind R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the older man being embraced from behind by R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the older man being embraced from behind by R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

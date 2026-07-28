@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T64",
+  "instruction": "Candid outdoor medium full photograph of a grassy park with trees. In the foreground, the woman in the black beanie (R5) in a red t-shirt and blue jeans leans back in a deep squat, pulling hard on a yellow rope. On the right, the man in the red polo (R3) in a red polo and blue jeans pulls the rope with his mouth wide open in a shout of exertion. The bald man (R2) is partially visible behind the woman, supporting the pull. Together, they strain against the yellow rope in a tug-of-war match. Soft, natural daylight filters through the trees, casting gentle shadows.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R5 leans back in a deep squat while pulling hard on the yellow rope",
+    "R2 is behind R5 and supports the pull",
+    "R3 pulls on the yellow rope while shouting with his mouth wide open",
+    "R5, R2, and R3 strain against the yellow rope in a tug-of-war",
+    "the yellow rope is the contact object being pulled",
+    "the scene is a grassy park with trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the one leaning back in a deep squat while pulling hard on the yellow rope, rather than R3 being the one in that deep squat posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the deep-squat pulling role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned behind R5 to support the pull, rather than R5 being behind R2 supporting him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R5's team's pull from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one pulling the rope with his mouth wide open in a shout of exertion, rather than R5 being described with that shouting expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the shouting exertion role while pulling"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R5, R2, and R3 all straining on the yellow rope as participants in the tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5, R2, and R3 are tug-of-war participants"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a yellow rope the object being pulled in the tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow tug-of-war rope"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__04d814642f7c__T10",
+  "instruction": "Candid documentary medium shot in an indoor gym with a brick wall. The man in the grey t-shirt (R1) kneels on a blue mat on the right, holding his right fist up in a demonstration pose while looking intently at the woman. In the foreground left, the woman in the blue jacket (R2) is seen from behind, watching him. Soft side lighting illuminates the scene, highlighting the textures of the brick wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the demonstrator holding his right fist up while R2 watches",
+    "R2 is the observer seen from behind watching R1, rather than demonstrating",
+    "R1 kneels on a blue mat during the demonstration while R2 watches from the foreground",
+    "blue mat used under R1",
+    "indoor gym with a brick wall",
+    "soft side lighting illuminating the gym scene"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding his right fist up in a demonstration pose while R2 watches him, rather than R2 demonstrating with a raised fist while R1 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the demonstrator and R2 is the watcher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person seen from behind watching R1, rather than R1 being the behind-view observer watching R2 demonstrate?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the observer seen from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 kneeling on the mat during the demonstration while R2 remains in the foreground watching him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels as demonstrator while R2 watches"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look intently toward R2 as he demonstrates, with R2 positioned as the attentive viewer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directs the demonstration toward R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a blue mat that R1 kneels on?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "blue mat under R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0a7a557716c5__T8",
+  "instruction": "Candid medium photograph of a warmly lit indoor dining area decorated with glowing string lights. In the foreground, the young girl with space buns (R11) and the person with short curly hair (R10) face each other in profile, smiling warmly as they embrace. In the background, the man in the beige blazer (R2) stands looking on. The scene is illuminated by soft, golden light from the background decorations, creating a cozy and festive atmosphere.",
+  "n_person": 11,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11"
+  ],
+  "elements": [
+    "R10 is the foreground person facing and embracing R11, while R2 is only looking on in the background",
+    "R11 is part of the foreground embracing pair with R10 rather than an onlooker",
+    "R2 has the background observer role rather than participating in the foreground embrace",
+    "R11 and R10 face each other in profile while smiling warmly",
+    "The scene is a warmly lit indoor dining area with glowing string lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R10, rather than R2, the person facing R11 in profile in the foreground during the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R10 is the foreground embracing partner of R11, not the background onlooker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R11, rather than R2, part of the foreground embracing pair with R10?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R11 participates in the foreground embrace while R2 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 stand in the background looking on rather than being one of the two foreground people embracing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the observer role instead of the foreground contact role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R11 the foreground young girl with space buns who faces R10 in profile during the close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R11's body configuration and contact role relative to R10"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

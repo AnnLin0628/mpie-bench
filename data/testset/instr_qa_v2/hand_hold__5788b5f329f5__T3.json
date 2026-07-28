@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__5788b5f329f5__T3",
+  "instruction": "A candid outdoor full-body photograph captures a couple walking together on a sunny day. On the left, the blonde woman in the checkered dress (R2) walks forward, holding red roses in her right hand and looking at her partner. On the right, the man in the peach t-shirt (R1) walks beside her, looking back at her with a smile. They walk hand-in-hand along a paved path. The scene is illuminated by bright, direct sunlight casting shadows on the pavement, with green trees in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 carries red roses in her right hand while walking with R1",
+    "R1 walks beside R2 and smiles while looking back at her",
+    "R1 and R2 walk hand-in-hand together",
+    "red roses held by R2",
+    "paved outdoor path with green trees in bright sunlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one carrying red roses in her right hand while walking hand-in-hand with R1, rather than R1 carrying the roses?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the rose-carrying partner during the hand-hold"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner smiling and looking back at R2 as they walk together, rather than R2 being the smiling partner looking back at a rose-carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles back at R2 while R2 carries roses"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together while holding hands with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk hand-in-hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__c292c71a2ad5__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures a side-angle view with a shallow depth of field. The scene is set in a bright, minimalist indoor office with a white wall and a black monitor in the background. On the left foreground, the woman with highlighted brown hair in a light blue blazer (R1) stands in profile, smiling and clapping. Just behind her on the right, the woman with long dark hair in a purple tweed blazer (R2) stands facing right, laughing and clapping in unison. Soft, bright indoor lighting illuminates the scene, highlighting a cool color palette of blues and purples.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is positioned just behind R1 while both women clap",
+    "R1 is the foreground woman clapping in profile, while R2 stands behind her facing right",
+    "R1 smiles while clapping and R2 laughs while clapping",
+    "R1 and R2 clap in unison",
+    "a black monitor is visible in the office background",
+    "the scene is a bright minimalist indoor office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned just behind R1 while both are clapping, rather than R1 being positioned just behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R1 during the shared clapping action"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman clapping in profile in the foreground, rather than R2 taking that foreground profile-clapping role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the foreground profile-clapping role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile while clapping as R2 laughs while clapping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles during clapping while R2 laughs during clapping"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

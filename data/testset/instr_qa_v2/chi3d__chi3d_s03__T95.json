@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T95",
+  "instruction": "Candid documentary photograph, wide full shot, eye-level. In a motion capture studio with a red carpeted floor and white walls, the bearded man in the black polo shirt and blue shorts (R1) stands on the left, facing right. The woman in the white t-shirt and blue jeans (R2) lunges forward from the right, extending her right arm to touch the man's (R1) left shoulder. A ceiling projector and studio sensors are visible in the background. The room is brightly lit by overhead fluorescent lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward toward R1 while R1 remains standing",
+    "R2 extends her right arm to touch R1's left shoulder",
+    "R1 is the receiver of R2's shoulder touch",
+    "R1 faces R2 during the contact",
+    "ceiling projector visible in the motion capture studio",
+    "red carpeted floor and white walls in the studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward toward R1 while R1 stands, rather than R1 lunging forward toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lunges forward toward R1 while R1 remains standing"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's left shoulder, rather than R1 extending his arm to touch R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm to touch R1's left shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder touch from R2, rather than R2 receiving a shoulder touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the receiver of R2's shoulder touch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

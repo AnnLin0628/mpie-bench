@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__08d2596bbf41__T3",
+  "instruction": "A candid and joyful studio photograph of two friends embracing. On the left, the woman in the distressed denim jacket (R1) wraps her arms around her friend's waist, laughing heartily with her eyes closed and head tilted back. On the right, the woman in the blue-and-white striped off-the-shoulder top (R2) holds her close, smiling brightly with her teeth showing directly at the camera. The medium shot at eye level captures them from the waist up against a solid, vibrant red background. The scene is illuminated by bright, even studio lighting that casts soft shadows, highlighting their joyful interaction and the vivid red backdrop.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2's waist",
+    "R1 laughs with her eyes closed and head tilted back during the contact",
+    "R2 holds R1 close while smiling directly at the camera",
+    "R2 is the camera-facing smiling participant while R1 is the laughing, head-tilted participant",
+    "solid vibrant red studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2's waist, rather than R2 wrapping her arms around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one laughing with her eyes closed and head tilted back while holding R2, rather than R2 doing this?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs with her eyes closed and head tilted back during the contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding R1 close while smiling brightly toward the camera, rather than R1 being the camera-facing smiling participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 close while smiling directly at the camera"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep R1 close in the embrace while R1's arms are around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the camera-facing smiling participant while R1 is the laughing, head-tilted participant"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__15e6b1ccbace__T1",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Indoors in a living room, an elderly woman in the light purple t-shirt (R1) and an elderly man in the blue t-shirt (R2) sit side-by-side on a green mat on the floor. The elderly woman (R1) sits on the left, looking straight ahead with a somber expression. The elderly man (R2) sits on the right, arms crossed over his raised knee, also looking forward with a sad, contemplative gaze. Soft natural light illuminates the scene, highlighting the warm neutral background of a sofa and potted plant.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 has his arms crossed over a raised knee, unlike R1",
+    "R1 looks straight ahead with a somber expression while R2 has a sad, contemplative gaze with arms crossed",
+    "R1 and R2 sit side-by-side on a green mat on the floor",
+    "green mat on the floor supporting both seated people",
+    "indoor living room setting with sofa and potted plant in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with arms crossed over a raised knee, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his arms crossed over a raised knee, unlike R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking straight ahead with a somber expression while R2 is the one described with a sad, contemplative gaze and crossed arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks straight ahead with a somber expression while R2 has a sad, contemplative gaze with arms crossed"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both seated side-by-side on the floor on the green mat rather than standing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit side-by-side on a green mat on the floor"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a green mat on the floor beneath the seated R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "green mat on the floor supporting both seated people"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

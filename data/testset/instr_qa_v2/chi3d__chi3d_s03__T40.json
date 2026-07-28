@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T40",
+  "instruction": "Candid full shot of a motion capture studio with a red carpet. A woman in a white patterned t-shirt and blue jeans (R2) stands on the left, facing a bearded man in a black polo shirt and blue shorts (R1) who leans forward from the right to touch her waist. Bright overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward to touch R2's waist rather than R2 leaning forward to touch R1's waist",
+    "R2 is the person receiving the waist touch from R1 rather than initiating the waist touch",
+    "R1 initiates contact at R2's waist while R2 stands facing him",
+    "R1 is leaning toward R2's midsection while R2 remains standing",
+    "motion capture studio setting with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward to touch R2's waist, rather than R2 leaning forward to touch R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward to touch R2's waist rather than R2 leaning forward to touch R1's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose waist is being touched by R1, rather than R2 touching R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person receiving the waist touch from R1 rather than initiating the waist touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 initiate the waist-level contact with R2 while R2 stands facing him, rather than R2 initiating waist-level contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates contact at R2's waist while R2 stands facing him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning toward R2's midsection while R2 remains standing and facing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is leaning toward R2's midsection while R2 remains standing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

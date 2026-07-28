@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T26",
+  "instruction": "Candid studio photograph of a dance studio with a dark wall and wooden floor. In the center, the man in the rust-colored shirt (R1) stands in a tight embrace with the woman in the mustard yellow shirt (R2), who has her back to the camera. The man (R1) looks down thoughtfully as they hold each other. The scene is softly lit, highlighting the warm tones of the floor.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the person with her back to the camera during the embrace, rather than R1",
+    "R1 is the person looking down thoughtfully while holding R2, rather than R2 being described that way",
+    "R1 and R2 stand in close bodily contact in the center of the studio",
+    "R1 and R2 hold each other as part of the dance-studio interaction",
+    "The setting is a dance studio with a dark wall and wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with her back to the camera during the close embrace, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera in the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking down thoughtfully while holding R2, rather than R2 being the one described as looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down thoughtfully while in contact with R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold R2 while R2 holds R1 back in the dance-studio pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold each other"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

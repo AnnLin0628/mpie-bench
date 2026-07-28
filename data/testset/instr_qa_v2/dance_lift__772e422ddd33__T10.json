@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T10",
+  "instruction": "A clean, realistic documentary photograph in a medium full shot captures a bright indoor ballet studio with large windows. On the right, the woman in a black long-sleeved top and white tights (R1) sits on a white wooden platform with her knees bent, looking down thoughtfully with hands on her leg. On the left, the young girl in a black crop top and shorts (R2) sits next to her in a similar resting pose, looking forward. The scene is illuminated by soft, natural side light, creating a calm and clean atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks down thoughtfully while R2 looks forward",
+    "R1 is singled out as having her hands on her leg while seated",
+    "R1 sits with knees bent on a white wooden platform as R2 sits next to her in a resting pose",
+    "white wooden platform used as a seat",
+    "bright indoor ballet studio with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down thoughtfully while R2 is looking forward, rather than R2 looking down and R1 looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down thoughtfully while R2 looks forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the person singled out as resting with her hands on her leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is singled out as having her hands on her leg while seated"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated with bent knees on the white wooden platform while R2 sits next to her in a similar resting pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits with knees bent on a white wooden platform as R2 sits next to her in a resting pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 sit next to R1 in a calm resting pose rather than performing a lift or carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits next to R1 in a resting pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

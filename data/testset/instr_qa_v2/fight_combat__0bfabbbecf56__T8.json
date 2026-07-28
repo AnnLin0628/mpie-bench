@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T8",
+  "instruction": "Cinematic video still, medium shot. Inside an indoor boxing gym ring, the woman in the black and orange athletic suit (R1) stands on the left facing right, holding a red focus mitt. The woman in the white sports bra (R2) stands on the right facing left, her back partially to the camera, extending her left arm to strike the mitt with her black glove. Cool overhead lighting highlights their athletic forms against the dark background of hanging punching bags.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the red focus mitt as the target for the strike",
+    "R2 extends her left arm to punch the mitt with a black glove",
+    "R1 is the mitt holder while R2 is the striker",
+    "the red focus mitt is the contact target",
+    "R2 uses a black boxing glove to strike",
+    "the interaction takes place inside an indoor boxing gym ring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the focus mitt that absorbs R2's punch, rather than R2 holding the mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the red focus mitt as the target for the strike"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her gloved left arm to strike the mitt held by R1, rather than R1 striking a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her left arm to punch the mitt with a black glove"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 take the pad-holder role while R2 takes the puncher role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the mitt holder while R2 is the striker"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's punching motion directed toward the focus mitt controlled by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 strikes toward R1's held mitt"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red focus mitt being used as the target for the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the red focus mitt is the contact target"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 using a black boxing glove to make contact with the mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 uses a black boxing glove to strike"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

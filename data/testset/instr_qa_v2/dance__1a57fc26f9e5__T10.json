@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1a57fc26f9e5__T10",
+  "instruction": "A candid documentary photograph in a medium shot shows a couple dancing on a grassy mountain summit. On the left, the man in the red striped shirt (R2) stands in profile wearing brown trousers, raising his right arm high. On the right, the woman in the yellow cardigan (R1) stands in blue jeans, smiling joyfully with her left arm raised to clasp his hand above her head. They are captured mid-dance against a scenic backdrop of rolling blue mountains under an overcast sky with soft, natural lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 raises his right arm high as part of the dance handhold",
+    "R1 raises her left arm to clasp R2's raised hand above her head",
+    "R1 and R2 are captured mid-dance with an overhead clasped-hand contact",
+    "R2 stands in profile during the dance",
+    "The dance takes place on a grassy mountain summit with rolling blue mountains in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 raising his right arm high to create the overhead dance handhold while R1 reaches up with her left arm to clasp his hand above her own head, rather than R1 creating the overhead handhold for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises the high hand for R1 to clasp overhead"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer whose raised left hand clasps R2's raised right hand above R1's head, rather than R2 clasping R1's hand above his own head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 clasps R2's raised hand above her head"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected by a raised clasped-hand contact while they dance together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share an overhead clasped-hand dance contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in profile while participating in the dance with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in profile during the dance with R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 dancing on a grassy mountain summit with rolling blue mountains in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "grassy mountain summit with rolling blue mountains"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

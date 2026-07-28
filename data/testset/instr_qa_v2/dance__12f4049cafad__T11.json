@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T11",
+  "instruction": "Cinematic video still, medium shot. In an indoor studio with a pastel pink and purple gradient backdrop, the woman in the red fringed dress (R1) on the left and the blonde woman in the black halter dress (R3) on the right are dancing together. The woman in the red fringed dress (R1) is in profile facing right, smiling joyfully with her left arm raised. The blonde woman (R3) faces slightly left, smiling as she looks down, her arms extended in motion. They dance side-by-side in a lively, synchronized rhythm without touching. The scene is illuminated by soft, colorful studio lights casting a warm pink and cool blue glow.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 dances in profile facing right with her left arm raised",
+    "R3 dances while facing slightly left, looking down, with her arms extended in motion",
+    "R1 and R3 dance side-by-side in a lively synchronized rhythm without touching",
+    "R1 smiles joyfully while raising her arm during the dance",
+    "R3 smiles while looking down during the dance",
+    "The scene is set in an indoor studio with a pastel pink and purple gradient backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer in profile facing right with her left arm raised, rather than R3 being the one in that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the raised-left-arm profile dancing pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer facing slightly left with her arms extended in motion, rather than R1 being the one with arms extended that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the arms-extended dancing motion"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 smile joyfully while raising her left arm, rather than R3 being described as the joyful arm-raising dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the joyful arm-raising dancer"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 dancing side-by-side in a synchronized rhythm without touching each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 dance side-by-side without contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

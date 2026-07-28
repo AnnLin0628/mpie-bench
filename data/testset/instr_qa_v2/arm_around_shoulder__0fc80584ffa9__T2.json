@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T2",
+  "instruction": "Candid studio photograph, medium shot at eye-level. In an indoor studio with a plain dusty pink background, two friends share a joyful laugh. On the left, the curly-haired woman in a white button-down shirt (R1) laughs heartily with her mouth open, facing toward the left. Behind her on the right, the straight-haired woman in a denim jacket (R2) stands smiling with closed eyes, resting her right hand on the curly-haired woman's shoulder. Soft, warm studio lighting casts a gentle glow over the scene, highlighting the pastel pink palette and their cheerful expressions.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 rests her right hand on R1's shoulder",
+    "R1 receives the shoulder touch from R2",
+    "R2 stands behind R1 while making shoulder contact",
+    "R1 laughs heartily while R2 smiles with closed eyes",
+    "The scene is in an indoor studio with a plain dusty pink background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her right hand on R1's shoulder, rather than R1 resting her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the shoulder-touch initiator and R1 is the recipient"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder contact from R2, rather than R2 receiving shoulder contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's shoulder touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 stand behind R1 while placing a hand on R1's shoulder, rather than R1 standing behind R2 and placing a hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R1 while making shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 laughing heartily in front while R2 smiles behind her with a hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs while R2 smiles and maintains shoulder contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

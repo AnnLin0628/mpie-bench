@@ -1,0 +1,85 @@
+# --- data & runtime (large / local) ---
+# Ignore local data dumps, but keep the official published test set.
+data/**
+!data/testset/
+!data/testset/**
+scratch/
+logs/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.db
+*.sqlite
+.env
+.mpie_env
+
+# --- editor / agent local ---
+.cursor/
+.claude/
+
+# --- review frontend runtime ---
+code/review_frontend/runtime/
+code/review_frontend/runtime
+code/review_frontend/deploy_snapshots/
+
+# --- local-only trees (kept on disk, not published) ---
+paper_*/
+papers/
+*_submit/
+analysis/
+code/eval/run_letterbox_norm_*.sh
+docs/PROGRESS.md
+docs/00_proposal/
+docs/01_research/
+docs/03_licensing/
+
+# Local / private ops notes and cluster scripts (never publish)
+code/eval/FIX_*.md
+code/eval/RUN_*.md
+code/eval/INSTALL_*.md
+code/eval/RESULT_LAYOUT.md
+code/eval/README_*.md
+code/eval/PHASE2_*.md
+code/eval/setup_*.sh
+code/eval/download_*.sh
+code/eval/watch_*.sh
+code/eval/stage_*.sh
+code/eval/run_salvage_*.sh
+code/eval/run_smoke100_*.sh
+code/eval/run_download_*.sh
+code/eval/check_opensource*.sh
+code/eval/cleanup_*.sh
+code/eval/install_*offline*.sh
+code/eval/install_multihmr*.sh
+# machine-local env scripts (keep public setup_eval.sh)
+env/setup_4090*.sh
+env/setup_h20*.sh
+!env/setup_eval.sh
+docs/02_pipeline_design/salvage_*.md
+docs/02_pipeline_design/eval_*_status.md
+docs/02_pipeline_design/eval_machine_roles.md
+docs/02_pipeline_design/exp_*.md
+docs/02_pipeline_design/eval_opensource_*.md
+!docs/02_pipeline_design/eval_opensource.md
+# Historical research notes (superseded by protocol v3 / e2e docs)
+docs/02_pipeline_design/eval_protocol_v2.md
+docs/02_pipeline_design/eval_vlm_judge_v1.md
+docs/02_pipeline_design/eval_instr_vqa_redesign.md
+docs/02_pipeline_design/caption_prompt_v1.md
+
+# local eval secrets/config
+configs/eval.env
+
+# do not publish local build logs inside the testset
+data/testset/**/*.log
+data/testset/**/_build*
+data/testset/**/_logs/
+
+# additional local helper scripts (not part of the public API)
+code/eval/fix_*.sh
+code/eval/run_all_opensource_*.sh
+code/eval/run_mesh_v31_full_*.sh
+code/eval/smoke_*.py
+code/eval/analyze_human_consistency_*.py
+code/eval/run_gt_full2500_*.sh
+code/eval/summarize_gt_*.py

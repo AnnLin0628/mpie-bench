@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T240",
+  "instruction": "A candid full-shot photograph shows an indoor motion capture studio with a red carpet and white walls. The man in the black polo shirt and blue shorts (R1) and the woman in the white patterned t-shirt (R2) are walking away from the camera side-by-side. The man has his right arm wrapped around the woman's shoulder as they walk. Overhead studio lights illuminate the room, casting soft shadows on the floor. The camera captures their movement from behind at eye-level.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has his right arm wrapped around R2's shoulder",
+    "R2 is the person whose shoulder is being held by R1",
+    "R1 and R2 walk away from the camera side-by-side",
+    "the scene is an indoor motion capture studio",
+    "the studio has a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one wrapping his right arm around R2's shoulder, rather than R2 wrapping her arm around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the shoulder-wrapping contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the shoulder contact from R1's arm, rather than R1 receiving that same contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's arm-around-shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking away from the camera side-by-side while R1 keeps his arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together with R1's arm around R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking beside R1 as the person whose shoulder is held by R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is the companion being held at the shoulder by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

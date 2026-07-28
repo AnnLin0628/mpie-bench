@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T10",
+  "instruction": "Candid documentary full shot of an indoor martial arts studio with a grey floor and white walls. On the left foreground, the girl in the white uniform with a red belt (R4) performs a high block with her left arm raised and right fist at her hip. In the center background, the boy in the white uniform with a striped white belt (R2) stands with both arms raised in high blocks. On the right foreground, the girl in the orange uniform with a blue belt (R3) raises her left arm in a high block with her right fist at her hip. The three children face forward in a synchronized training formation under soft, diffused side lighting.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R4 performs a one-arm high block with her left arm raised and her right fist at her hip",
+    "R2 performs high blocks with both arms raised",
+    "R3 performs a one-arm high block with her left arm raised and her right fist at her hip",
+    "R4, R2, and R3 face forward in a synchronized martial arts training formation",
+    "The scene is an indoor martial arts studio with a grey floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the child performing a one-arm high block with her left arm raised and her right fist at her hip, rather than R2 being the one in that same one-arm stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 performs the one-arm high-block duty while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the child performing high blocks with both arms raised, rather than R3 being the child with both arms raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the both-arms-raised high-block role rather than R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 performing a one-arm high block with her left arm raised and her right fist at her hip, rather than R2 performing that one-arm configuration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the one-arm high-block configuration while R2 has both arms raised"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 keep her left arm raised in a high block while holding her right fist at her hip?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's high-block body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

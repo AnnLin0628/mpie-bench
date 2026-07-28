@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__405a8e47b7e8__T6",
+  "instruction": "A candid medium shot of a bright indoor workshop with white wood-paneled walls. On the left, the man with the afro (R2) wearing a gray button-down shirt stands watching his colleague. On the right, the man with the fade haircut (R3) wearing a rust-red turtleneck sweater and a green apron leans over a wooden table, using both hands to seal a yellow cylindrical container. Colorful glass vases and an open laptop are visible on the left side of the table. Bright natural light illuminates the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the hands-on worker sealing the yellow cylindrical container, while R2 watches",
+    "R2 is observing his colleague rather than performing the sealing task",
+    "R3 leans over the wooden table and uses both hands on the container",
+    "The yellow cylindrical container is the object being sealed",
+    "Colorful glass vases and an open laptop are on the table",
+    "The setting is a bright indoor workshop with white wood-paneled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 using both hands to seal the yellow cylindrical container, rather than R2 doing the sealing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the sealing task while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing and watching his colleague work, rather than R3 being the one who only watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the observer while R3 is the active worker"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 leaning over the wooden table while using both hands on the container?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's body configuration and task role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned as a watcher of R3's activity rather than as the person handling the container?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's observing role relative to R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

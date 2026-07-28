@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T12",
+  "instruction": "A candid studio photograph with a close-up shot against a clean white background. The blonde-haired man (R1) in a grey long-sleeved shirt stands on the right, cradling the face and neck of the long-haired person (R2) on the left with both hands. The long-haired person (R2), wearing a green shirt, looks up lovingly into his eyes with a soft expression. The scene is captured with soft, bright studio lighting, creating a warm, intimate atmosphere and highlighting their close connection.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 cradles R2's face and neck with both hands",
+    "R1's hands are on R2's face and neck rather than the reverse",
+    "R2 looks up into R1's eyes",
+    "R2 is the person receiving the face-and-neck hold from R1",
+    "R1 and R2 are in close contact",
+    "clean white studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 cradling R2's face and neck with both hands, rather than R2 cradling R1's face and neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 cradles R2's face and neck with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's hands the ones placed around R2's face and neck, rather than R2's hands being placed around R1's face and neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hands are on R2's face and neck rather than the reverse"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 look up into R1's eyes, rather than R1 being the one looking up into R2's eyes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks up into R1's eyes"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person whose face and neck are being held by R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person receiving the face-and-neck hold from R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 close enough that R1 can cradle R2's face and neck with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in close contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__3281eb3ed91b__T4",
+  "instruction": "A candid medium shot of a residential outdoor scene during the day. On the right side of the frame, the woman in the black patterned blouse (R1) stands facing left, smiling. On the left, the man in the dark gray puffer jacket (R2) stands in profile, smiling and laughing happily. The man and the woman shake hands next to white pillars and a dark front door of the house. Natural daylight softly illuminates the scene, creating gentle shadows and a bright atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman participant facing toward R2 during the handshake",
+    "R2 is the man participant smiling and laughing in profile during the handshake with R1",
+    "R1 and R2 make direct hand-to-hand contact with each other",
+    "R1 stands facing R2 while smiling during the interaction",
+    "R2 stands in profile toward R1 while smiling and laughing",
+    "the handshake occurs beside white pillars and a dark front door"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while making hand-to-hand contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands facing R2 while smiling during the interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand in profile toward R1 while making hand-to-hand contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in profile toward R1 while smiling and laughing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

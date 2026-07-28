@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T20",
+  "instruction": "Candid action photograph, medium shot at eye-level. In an outdoor covered training area, the man in the blue tank top and black shorts (R2) stands on the left, throwing a punch with his black boxing glove. The man in the beige t-shirt and black sweatpants (R1) stands on the right, ducking low with his back to the camera to evade the punch. They are sparring under bright, natural daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the person throwing a punch while R1 is the person evading it",
+    "R1 is ducking low to avoid R2's punch rather than punching R2",
+    "R2 uses a black boxing glove during the punch",
+    "R1 has his back to the camera while ducking",
+    "They are sparring in an outdoor covered training area"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing a punch while R1 ducks to evade it, rather than R1 throwing the punch at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the puncher and R1 is the evader"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 ducking low to avoid R2's punch, rather than R2 ducking to avoid a punch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the evasive ducking role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person using the black boxing glove to punch while R1 is not the one using the glove to punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the active gloved punching duty"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned with his back to the camera while ducking low during the sparring action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's ducking body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black boxing glove visible as the object used for the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black boxing glove used in the sparring punch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__6dde770d54d0__T4",
+  "instruction": "Candid outdoor photograph, medium shot in profile. On a sandy beach under a clear blue sky, the man in the black wetsuit (R1) and the boy in the black and blue wetsuit (R2) walk side-by-side in profile while holding hands. The man (R1) carries a surfboard under his arm, looking ahead with a smile. The boy (R2) walks beside him, looking ahead with a neutral expression. The scene is captured in bright, direct natural daylight with clear blue sky and realistic colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries the surfboard under his arm rather than R2 carrying it",
+    "R2 walks beside the surfboard-carrying R1 rather than being the surfboard carrier",
+    "R1 and R2 walk side-by-side in profile while holding hands",
+    "R1 holds hands with R2 while also carrying a surfboard",
+    "a surfboard is carried under R1's arm",
+    "the scene is on a sandy beach under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one carrying the surfboard under his arm while walking with R2, rather than R2 carrying the surfboard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the surfboard under his arm rather than R2 carrying it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boy walking beside the surfboard-carrying R1, rather than R2 being the person with the surfboard under his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks beside the surfboard-carrying R1 rather than being the surfboard carrier"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold R2's hand while also carrying the surfboard under his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds hands with R2 while also carrying a surfboard"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

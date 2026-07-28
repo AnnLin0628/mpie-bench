@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T88",
+  "instruction": "Candid documentary photograph, full shot from an eye-level angle. In an indoor motion capture studio with a red carpeted floor and white walls, the man in the dark polo shirt and blue shorts (R1) stands on the left, facing right. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing left. They are holding right hands, raised between them. The scene is illuminated by bright overhead lighting, creating a neutral color palette dominated by the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man facing right who holds his raised right hand with R2's right hand",
+    "R2 is the woman facing left whose raised right hand is held with R1's right hand",
+    "R1 and R2 face each other with their joined right hands raised between them",
+    "R1 uses his right hand for the contact with R2's right hand",
+    "The interaction takes place in an indoor motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man facing right who has his raised right hand held with R2's right hand, rather than R2 being the man in that raised-hand role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man facing right who holds his raised right hand with R2's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman facing left whose raised right hand is held with R1's right hand, rather than R1 being the woman in that counterpart handhold role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman facing left whose raised right hand is held with R1's right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his right hand, rather than his left hand, for the raised hand contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses his right hand for the contact with R2's right hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__4820a14a7506__T1",
+  "instruction": "Studio portrait photograph, full shot, front view. In an indoor studio with a draped beige fabric backdrop, three generations of women pose together. In the background, the older woman with short dark hair (R1) sits upright in a white shirt, smiling at the camera. In the middle ground, the younger woman with medium-length brown hair (R2) sits with legs spread wide in a white shirt and blue jeans, looking down at the child. In the foreground, the little girl with light brown hair (R3) sits between R2's legs in a white blouse and light blue jeans, looking slightly left. R1's hands rest on R2's shoulders, while R2 wraps her arms around R3's torso. Soft, diffused studio lighting creates a warm, neutral-toned atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 rests her hands on R2's shoulders",
+    "R2 wraps her arms around R3's torso",
+    "R3 sits between R2's spread legs",
+    "R1 sits behind R2 while contacting R2's shoulders",
+    "R2 sits in the middle ground and holds the child R3 in front of her",
+    "indoor studio with a draped beige fabric backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing her hands on R2's shoulders, rather than R2 placing her hands on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her hands on R2's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R3's torso, rather than R3 wrapping her arms around R2's torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R3's torso"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 seated between R2's spread legs, rather than R2 being seated between R3's legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sits between R2's spread legs"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting behind R2 while making contact with R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits behind R2 while contacting R2's shoulders"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned as the adult who holds R3 around the torso while R3 sits in front of her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits in the middle ground and holds the child R3 in front of her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

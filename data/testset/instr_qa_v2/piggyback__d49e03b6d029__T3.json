@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__d49e03b6d029__T3",
+  "instruction": "Candid family photograph, low-angle medium close-up. In a bright indoor living room, the bearded man (R2) in a white t-shirt lies face down on a woven rug. The blonde toddler girl (R1) in a striped grey onesie sits on his neck, smiling happily as she looks down. The man's hands hold her bare feet near his head. Warm, soft natural light illuminates the playful scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 sits on R2's neck rather than R2 sitting on R1",
+    "R2 lies face down underneath R1 rather than R1 lying underneath R2",
+    "R2 holds R1's bare feet near his head rather than R1 holding R2's feet",
+    "R1 smiles while looking down at R2 from her seated position on his neck",
+    "A woven rug is beneath R2 during the contact",
+    "The scene is in a bright indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 sitting on R2's neck, rather than R2 sitting on R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits on R2's neck rather than R2 sitting on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying face down underneath R1 while R1 is on top of him, rather than R1 lying underneath R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies face down underneath R1 rather than R1 lying underneath R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's bare feet near his head, rather than R1 holding R2's feet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's bare feet near his head rather than R1 holding R2's feet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

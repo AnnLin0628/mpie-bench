@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1e01f6ea28ec__T5",
+  "instruction": "An intimate studio portrait photograph, captured in a close-up shot at eye level. In a minimalist indoor photo studio with a seamless white background, the red-haired woman in the blue shirt (R2) is on the left, leaning her head close to her friend's head and looking directly at the camera with a bright, happy smile. Beside her on the right, the curly-haired woman in the green crop top (R1) stands close to her friend, looking directly at the camera with a warm, joyful smile. The red-haired woman (R2) rests her chin on her hand, which is placed on the curly-haired woman's (R1) right shoulder, as their heads touch. The scene is illuminated by bright, even studio lighting with soft shadows, creating a clean white and pastel color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her hand on R1's right shoulder",
+    "R2 rests her chin on her own hand while that hand is on R1's shoulder",
+    "R2 leans her head close to R1's head",
+    "R1 stands close as the shoulder-contact recipient beside R2",
+    "R1 and R2's heads touch in the close portrait",
+    "minimalist indoor studio with a seamless white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's hand placed on R1's right shoulder, rather than R1's hand being placed on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her hand on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her chin on her own hand while that hand is on R1's shoulder, rather than R1 resting her chin on a hand placed on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the chin-on-hand pose using R1's shoulder as the contact point"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning her head close to R1's head, rather than R1 being described as the one leaning her head close to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head close to R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand close beside R2 as the person whose shoulder receives R2's hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the shoulder-contact recipient while R2 touches her shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posed with their heads touching while R2 maintains the hand-on-R1-shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2's heads touch during R2's shoulder-touch pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

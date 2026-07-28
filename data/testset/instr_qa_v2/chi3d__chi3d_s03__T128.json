@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T128",
+  "instruction": "Candid wide-angle photograph in a motion capture studio with a red carpet. The woman in the white t-shirt and blue jeans (R2) stands on the left facing right, reaching out to touch the shoulder of the man in the dark polo shirt and blue shorts (R1), who stands on the right facing away. Bright overhead lighting illuminates the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches out to touch R1's shoulder",
+    "R1 is the shoulder-contact recipient while R2 initiates the touch",
+    "R2 is the active toucher and R1 is facing away",
+    "R2 is positioned to make shoulder contact with R1 rather than being touched by R1",
+    "motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching out to touch R1's shoulder, rather than R1 reaching out to touch R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches out to touch R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being touched by R2, rather than R2 being the one whose shoulder is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the shoulder-contact recipient while R2 initiates the touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active person reaching toward R1 while R1 faces away, rather than R1 actively reaching toward R2 while R2 faces away?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active toucher and R1 is facing away"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use her arm to make contact with R1's shoulder while R1 remains the contacted person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned to make shoulder contact with R1 rather than being touched by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T88",
+  "instruction": "A candid medium full shot of a grassy park on a sunny day. In the foreground, a bald man in a dark blue t-shirt (R2) stands holding a blue frisbee, looking ahead with a focused expression. In the background, an Asian man in a red polo (R3) stands on the left watching, and a woman in a black beanie and red t-shirt (R5) stands on the right watching. Natural daylight illuminates the green grass and trees.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R2 is the foreground person holding the blue frisbee rather than R3",
+    "R2 is holding the blue frisbee while R5 watches rather than R5 holding it",
+    "R3 watches from the background while R2 holds the frisbee",
+    "R5 watches from the background while R2 holds the frisbee",
+    "blue frisbee held by R2",
+    "grassy park in sunny natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the blue frisbee, rather than R3 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground person holding the blue frisbee rather than R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the blue frisbee while R5 watches, rather than R5 holding the frisbee while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is holding the blue frisbee while R5 watches rather than R5 holding it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 a background watcher of R2 with the frisbee, rather than R3 being the frisbee holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 watches from the background while R2 holds the frisbee"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 watching from the background while R2 stands in the foreground holding the frisbee?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 watches from the background while R2 holds the frisbee"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 watching from the background while R2 holds the frisbee in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 watches from the background while R2 holds the frisbee"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

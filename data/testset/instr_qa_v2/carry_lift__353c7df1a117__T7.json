@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__353c7df1a117__T7",
+  "instruction": "Candid wedding photograph, medium shot. On an indoor stage with purple and white drapes, the groom in a silver shirt (R2) and the bride in a light green saree (R1) sit side-by-side, sharing a warm look. Both wear pink lotus garlands. Blurred guests sit in the background. Warm, glowing bokeh from brass lamps frames the foreground.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 is the bride seated beside R2, rather than R2 being the bride",
+    "R2 is the groom seated beside R1, rather than R1 being the groom",
+    "R1 and R2 sit side-by-side and share a warm look",
+    "R1 and R2 both wear pink lotus garlands",
+    "brass lamps create warm glowing bokeh in the foreground",
+    "the scene is on an indoor stage with purple and white drapes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the bride seated beside R2, rather than R2 being the bride?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the bride role relative to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the groom seated beside R1, rather than R1 being the groom?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the groom role relative to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sitting side-by-side while sharing a warm look with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated together and looking warmly at each other"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

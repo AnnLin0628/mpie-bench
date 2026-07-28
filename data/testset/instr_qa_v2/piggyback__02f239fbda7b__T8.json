@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__02f239fbda7b__T8",
+  "instruction": "Candid family portrait photograph. A medium eye-level shot in a minimalist indoor studio with a white background. On the left, the young blonde girl (R2) in a light green shirt and plaid pants sits on the lap of the older man with a white beard (R1) in a light blue sweater, smiling towards the right. The man looks down with a gentle smile. On the right, the older woman with white hair and glasses (R3) in a pink sweatshirt stands close, leaning her head against his shoulder and looking upwards. The scene is softly illuminated with bright, diffused light.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 supports R2 by having R2 seated on his lap",
+    "R2 is the person sitting on R1's lap rather than supporting him",
+    "R3 leans her head against R1's shoulder",
+    "R3 stands close to R1 while making shoulder contact",
+    "minimalist indoor studio with a white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 serving as the seated support for R2 on his lap, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 by having R2 seated on his lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting on R1's lap, rather than R1 sitting on R2's lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lap-sitter while R1 is the lap support"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 lean her head against R1's shoulder, rather than R1 leaning his head against R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans her head against R1's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 standing close beside R1 while making shoulder contact with him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands close to R1 while leaning against his shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

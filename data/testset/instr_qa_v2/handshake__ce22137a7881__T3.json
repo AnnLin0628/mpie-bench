@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__ce22137a7881__T3",
+  "instruction": "Clean studio photograph, medium full shot. In a bright, minimalist office, the woman in the black suit (R2) stands on the left, facing right, and the man in the plaid blazer (R1) stands on the right, facing left. They shake right hands while jointly holding a brown paper bag labeled 'OPEN FOR BUSINESS' between them. The woman looks at the man with a pleasant smile, and the man smiles warmly back. Bright, even lighting illuminates the scene against a clean white background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in the plaid blazer facing R2 and clasping R2's right hand",
+    "R2 is the woman in the black suit facing R1 and clasping R1's right hand",
+    "R1 and R2 jointly hold a brown paper bag between them while their right hands are in contact",
+    "the brown paper bag is labeled 'OPEN FOR BUSINESS'",
+    "the scene is a bright minimalist office with a clean white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the plaid blazer clasping R2's right hand, rather than R2 being the man in the plaid blazer clasping R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man in the plaid blazer taking part in the right-hand contact with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the black suit clasping R1's right hand, rather than R1 being the woman in the black suit clasping R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman in the black suit taking part in the right-hand contact with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other while their right hands are clasped in contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face one another with their right hands clasped"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile warmly back toward R2 while maintaining the hand contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles back at R2 during the hand contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 jointly holding a brown paper bag between them during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 and R2 jointly hold a brown paper bag"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Does the paper bag between R1 and R2 display the text 'OPEN FOR BUSINESS'?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "brown paper bag labeled 'OPEN FOR BUSINESS'"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

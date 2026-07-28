@@ -1,0 +1,82 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T9",
+  "instruction": "A studio photograph of a cheerleader lineup. In a bright white studio, nine cheerleaders stand side-by-side. From left to right: the brunette cheerleader (R13), the blonde cheerleader (R2), the brunette cheerleader with long straight hair (R8), the dark-haired cheerleader (R14), the curly-haired cheerleader (R1), the purple-haired cheerleader (R7), the short-haired cheerleader (R4), the brown-haired cheerleader (R9), and the wavy-haired cheerleader (R10). They wear white t-shirts with a logo and white skirts, holding orange pom-poms at their hips. Bright, even lighting illuminates the scene.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R1 is the curly-haired cheerleader while R7 is the purple-haired cheerleader, not the reverse",
+    "R2 is the blonde cheerleader while R8 is the brunette cheerleader with long straight hair, not the reverse",
+    "R14 is the dark-haired cheerleader while R4 is the short-haired cheerleader",
+    "the labeled cheerleaders stand side-by-side in a studio cheerleader lineup",
+    "the cheerleaders hold orange pom-poms at their hips",
+    "the scene is a bright white studio with bright, even lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand side-by-side in the cheerleader lineup with the other labeled cheerleaders while holding pom-poms at her hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 participates in the lineup and holds pom-poms at hip level"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

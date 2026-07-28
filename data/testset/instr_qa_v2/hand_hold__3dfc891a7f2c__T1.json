@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__3dfc891a7f2c__T1",
+  "instruction": "A candid outdoor photograph shows a full shot of an older couple walking together in a sunny grassy park. On the left, the older bearded man in a beige polo shirt and brown pants (R1) walks forward, carrying a rolled-up black yoga mat under his arm and holding a water bottle. Beside him on the right, the older woman in a white t-shirt and beige pants (R2) walks in stride, smiling as she raises a clear water bottle in her hand. They walk side-by-side under bright, natural daylight with lush green trees in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries a rolled-up black yoga mat under his arm rather than R2 carrying it",
+    "R2 raises a clear water bottle while walking rather than R1 raising it",
+    "R1 holds a water bottle while also carrying the yoga mat, unlike R2 who raises only her bottle",
+    "R1 and R2 walk side-by-side in stride with distinct carried items",
+    "rolled-up black yoga mat",
+    "clear water bottles",
+    "sunny grassy park with green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying the rolled-up black yoga mat under his arm, rather than R2 carrying it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the yoga mat, not R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 raising a clear water bottle in her hand while walking, rather than R1 raising it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises the water bottle, not R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding a water bottle while also carrying the yoga mat, whereas R2 is not carrying the yoga mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has both the yoga mat and a water bottle"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side in stride, with R1 carrying items and R2 smiling while raising her bottle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together with distinct roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a rolled-up black yoga mat being carried under R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "rolled-up black yoga mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

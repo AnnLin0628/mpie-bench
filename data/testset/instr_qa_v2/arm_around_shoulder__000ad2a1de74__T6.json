@@ -1,0 +1,92 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__000ad2a1de74__T6",
+  "instruction": "A cheerful and candid lifestyle photograph with a joyful, energetic mood. In a medium shot at eye-level against a plain white wall, the woman with short black hair (R3) stands on the left wearing a white t-shirt and light blue denim shorts, smiling broadly as she looks down towards a small American flag she holds on a wooden stick in her right hand, pointing it forward. To her right, the woman with long straight black hair (R4) wears a light blue t-shirt and light blue denim shorts, smiling happily at the camera as she leans her head and shoulder against the other woman's left shoulder, resting her right hand there. The scene is illuminated by bright, even studio lighting from the front, creating a clean, bright color palette with minimal shadows.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R4 leans her head and shoulder against R3's shoulder rather than R3 leaning on R4",
+    "R4 rests her right hand on R3's shoulder rather than R3 resting a hand on R4",
+    "R3 is the person being leaned on by R4",
+    "R4 makes contact with R3's shoulder using her head, shoulder, and right hand",
+    "R3 holds a small American flag on a wooden stick",
+    "R3 points the small American flag forward",
+    "The scene is set against a plain white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 leaning her head and shoulder against R3's shoulder, rather than R3 leaning her head and shoulder against R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 leans on R3's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 rest her right hand on R3's shoulder, rather than R3 resting a hand on R4's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 places her hand on R3's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the person being leaned on by R4 at the shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 receives R4's shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 making contact with R3 by leaning her head and shoulder against R3 while resting her hand there?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's head, shoulder, and hand contact R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R3 holding a small American flag on a wooden stick in her right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the small American flag prop"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

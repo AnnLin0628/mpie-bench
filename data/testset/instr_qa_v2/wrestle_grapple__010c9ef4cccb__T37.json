@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T37",
+  "instruction": "Candid documentary photograph, medium full shot. Inside a judo dojo with a blue wall mat, the bearded man in the white judo gi (R4) stands on the left, looking toward the right. On the right, the woman in the blue judo gi (R1) stands facing forward with her eyes closed. They stand side-by-side on the mat under bright, even indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 is the bearded man in a white judo gi looking toward the right while R1 is the woman in a blue judo gi facing forward with eyes closed",
+    "R1, not R4, is described with eyes closed while standing forward-facing",
+    "R4 and R1 stand side-by-side on a judo mat",
+    "R1 and R4 wear judo gis as martial-arts uniforms",
+    "the scene is inside a judo dojo with a blue wall mat"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the bearded man looking toward the right, while R1 is the woman facing forward with her eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the looking-right role while R1 has the forward-facing eyes-closed role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person described as standing with her eyes closed, rather than R4 being the one with eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, not R4, has the eyes-closed stance"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R4 standing on a judo mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "judo mat under R1 and R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the scene set inside a judo dojo with a blue wall mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "judo dojo setting with blue wall mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

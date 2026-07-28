@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__62b1c8fca6b6__T2",
+  "instruction": "Candid office photograph, medium shot. Inside a modern office, the young Black man in a white dress shirt and maroon trousers (R1) stands on the left, leaning forward slightly. He holds a blue folder in his left hand while shaking right hands with the older bearded man in a dark gray suit (R2), who stands on the right facing left. They interact over a wooden desk with a laptop. The background shows office shelving. Soft, diffused indoor lighting fills the room, highlighting their professional interaction.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward slightly into the professional greeting while holding a blue folder in his left hand",
+    "R1 and R2 clasp right hands with each other across the desk",
+    "R2 faces R1 as the older bearded man in the suit during the handshake",
+    "R1 holds the blue folder while participating in the handshake",
+    "A wooden desk with a laptop sits between or near the two men",
+    "The scene is inside a modern office with shelving"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold the blue folder in his left hand while his right hand is engaged with R2's right hand, rather than R2 holding the blue folder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the folder while shaking R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 clasping each other's right hands in a professional greeting, with R1's free right hand contacting R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 use their right hands for the handshake"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

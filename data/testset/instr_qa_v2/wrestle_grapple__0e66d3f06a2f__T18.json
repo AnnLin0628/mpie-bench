@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T18",
+  "instruction": "Candid action photograph, full shot, eye-level. In an indoor martial arts studio, the man in the white gi (R1) on the left is kneeling and leaning forward, pushing down on the arm of the man in the gray gi (R2). The man in the gray gi (R2) on the right is sitting on the mat, leaning back to defend. They grapple on a black mat under warm indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 pushes down on R2's arm",
+    "R2 leans back to defend against R1's pressure",
+    "R1 kneels and leans forward while R2 sits on the mat",
+    "R1 and R2 grapple with contact on the mat",
+    "black mat",
+    "indoor martial arts studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 pushing down on R2's arm, rather than R2 pushing down on R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pushes down on R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning back to defend against R1's downward arm pressure, rather than R1 leaning back to defend against R2's pressure?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 defends against R1's pressure"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the grappler applying forward downward pressure while R2 is the grappler sitting back in defense?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks while R2 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 kneeling and leaning forward as R2 sits on the mat during the grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels forward while R2 sits"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a black mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

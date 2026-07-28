@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__771e3c77ab03__T1",
+  "instruction": "Candid office photograph, medium shot. In a bright office meeting room with shelves of document trays in the background, two colleagues celebrate. The curly-haired man in a black blazer (R3) sits on the left side of a white conference table, smiling warmly with his right hand raised high. The gray-haired man in a gray suit (R2) leans forward dynamically from the right, extending his right arm to meet the other's hand in a high-five. The table in the foreground holds papers and a smartphone. The scene is captured with clean, bright indoor lighting and a shallow depth of field.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is seated at the conference table with his right hand raised high for a high-five",
+    "R2 leans forward dynamically and extends his right arm to meet R3's raised hand",
+    "R2 is the reaching participant while R3 is the seated participant with the raised hand",
+    "A white conference table is in the foreground",
+    "Papers and a smartphone are on the table",
+    "The scene is in a bright office meeting room with shelves of document trays"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the colleague dynamically extending his right arm toward R3's raised hand, rather than R3 dynamically extending toward R2's raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the reaching participant and R3 is the raised-hand participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning forward as he extends his right arm to contact R3's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward and extends his arm for the high-five"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

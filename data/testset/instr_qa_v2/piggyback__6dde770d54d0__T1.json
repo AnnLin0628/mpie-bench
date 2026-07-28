@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__6dde770d54d0__T1",
+  "instruction": "Cinematic film still, low-angle medium full shot. On a sunny sandy beach with dunes in the background, the man in the black wetsuit (R1) and the boy in the black and blue wetsuit (R2) walk forward side-by-side while holding hands. The man (R1) carries a light-colored surfboard under his left arm, looking forward with a slight smile. The boy (R2) walks beside him with his eyes squinted closed against the light. The scene is illuminated by strong, warm backlighting that creates a hazy, high-key atmosphere with prominent lens flare.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man walking hand-in-hand with R2 while carrying a light-colored surfboard under his left arm",
+    "R2 is the boy walking beside R1 and holding R1's hand",
+    "R1 is the surfboard carrier while R2 is the hand-holding companion",
+    "a light-colored surfboard is carried by R1",
+    "the scene is on a sunny sandy beach with dunes in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While R1 and R2 walk hand-in-hand, is R1 the one carrying the light-colored surfboard under his left arm, rather than R2 carrying it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the surfboard carrier during the hand-holding walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boy walking beside the surfboard-carrying R1 while holding R1's hand, rather than R1 being the boy beside a surfboard-carrying R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the hand-holding boy companion, not the surfboard carrier"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking beside R1 as the boy hand-holding companion, while R1 is the man accompanying him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man and R2 is the boy walking hand-in-hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T19",
+  "instruction": "Candid black and white medium close-up of a couple embracing on an outdoor embankment. On the left, the man with wavy hair and a beard (R1) holds the woman in a black beret and dark coat (R2) close, his eyes closed as his head rests against her. The woman stands on the right with her back to the camera. The man's hand is spread flat on her back, embracing her tightly. The background is a softly blurred riverbank under overcast, diffused daylight, enhancing the quiet, emotional mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2 close in the embrace",
+    "R1's hand is spread flat on R2's back",
+    "R1 rests his head against R2 with his eyes closed",
+    "R2 stands with her back to the camera while being held by R1",
+    "the couple is on an outdoor embankment with a softly blurred riverbank background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding R2 close, rather than R2 being described as the one holding R1 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 close in the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's hand spread flat on R2's back, rather than R2's hand being spread flat on R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand is spread flat on R2's back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest his head against R2 with his eyes closed, rather than R2 resting her head against R1 with her eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests his head against R2 with his eyes closed"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person with her back to the camera while R1 holds her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with her back to the camera while being held by R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned close enough to R2 that his head rests against her during the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests his head against R2 with his eyes closed"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

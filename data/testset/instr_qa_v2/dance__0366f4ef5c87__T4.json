@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__0366f4ef5c87__T4",
+  "instruction": "Candid party photograph, medium shot. Indoors at a party with purple ambient light and a reel-to-reel player on the wall. The short-haired blonde woman (R1) in a pink polo shirt and blue jeans leans back playfully, laughing heartily while holding an orange soda bottle. The ginger man with a beard (R2) in a striped shirt stands behind her, holding her waist to support her as she tilts. The room is filled with warm pink and purple party lighting that highlights their joyful expressions.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1 by holding her waist as she leans back",
+    "R1 is the person tilting backward while R2 is the supporting person behind her",
+    "R2 stands behind R1 in the support role during the playful dance-like interaction",
+    "R1 holds an orange soda bottle",
+    "indoor party setting with purple ambient light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's waist to support her as she leans back, rather than R1 holding R2's waist to support him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 by holding her waist as she leans back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person tilting backward while R2 is the person supporting her from behind, rather than R2 tilting backward while R1 supports him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person tilting backward while R2 is the supporting person behind her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 take the supporting role behind R1 as she leans, rather than R1 taking the supporting role behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 in the support role during the playful dance-like interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning back playfully and laughing while being supported by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back laughing while R2 supports her"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding an orange soda bottle during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds an orange soda bottle"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

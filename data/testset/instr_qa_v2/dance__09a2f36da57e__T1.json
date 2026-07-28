@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T1",
+  "instruction": "A crisp, clean action photograph of a dance performance taken from a wide, eye-level angle. In a dance studio with dark gray walls and a warm wooden floor, two couples perform a synchronized lift. In the center foreground, the man in the rust-brown shirt (R1) bends forward at the waist, supporting the woman in the mustard yellow shirt (R2) horizontally on his back as she extends her left leg straight behind her. On the left, the man in the rust-brown shirt (R3) similarly bends forward to support the woman in the mustard yellow shirt (R4) on his back. On the right, a bystander couple in matching rust-brown and mustard-yellow attire performs the same lift. The scene is illuminated by even, soft studio lighting, highlighting the dancers' precise movements.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 bends forward and supports R2 horizontally on his back",
+    "R2 is carried on R1's back while extending her left leg behind her",
+    "R3 bends forward and supports R4 on his back",
+    "R4 is carried on R3's back during the synchronized lift",
+    "the performance takes place in a dance studio with dark gray walls and a warm wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 horizontally on his back, rather than R2 supporting R1 on her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the supporter and R2 is the carried dancer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 bending forward to support R4 on his back, rather than R4 bending forward to support R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the supporter and R4 is the carried dancer"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer lying horizontally across R1's back while R1 bears her weight from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is carried horizontally while R1 supports from below"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend her left leg straight behind her while positioned on R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration during the lift on R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R4 performing the same back-supported lift arrangement as R1 and R2, with R4 on R3's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is on R3's back in the synchronized lift"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__93491e015383__T2",
+  "instruction": "Candid outdoor medium-full photograph of a couple walking on a dirt path in a sunny park. On the left, the woman in the long black coat (R1) walks forward in blue jeans, her head turned to her right. On the right, the man in the black puffer jacket (R2) walks beside her, looking down. They hold hands, walking in unison. The background shows sunlit trees and a park bench. Warm, direct sunlight illuminates the scene, casting soft shadows on the ground.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks holding hands with R2 while turning her head toward R2",
+    "R2 walks holding hands with R1 while looking down",
+    "R1 and R2 hold hands while walking together in unison",
+    "R1 and R2 walk side by side on a dirt path",
+    "The scene is a sunny park with sunlit trees and a park bench"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one walking while turning her head toward R2, rather than R2 being the one turning his head toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric head orientation during hand-holding"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking down while holding hands with R1, rather than R1 being the one looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric gaze direction during hand-holding"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands as they walk together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "shared hand-holding contact while walking"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking beside R2 while their hands remain connected?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walking beside R2 with hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T6",
+  "instruction": "Cinematic medium-wide shot of an indoor gym. On the left, the man with the afro (R1) in a white t-shirt and grey sweatpants squats down in profile, facing right. On the right, the young girl in the pink hoodie (R5) stands straight, facing left and smiling at him. Soft side lighting highlights the warm wooden floor.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 is the squatting person while R5 stands straight",
+    "R5 is the standing smiling person facing R1 while R1 squats",
+    "R1 faces R5 in profile from a lowered squat",
+    "R5 faces R1 while standing upright",
+    "indoor gym with warm wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one squatting down while R5 remains standing straight, rather than R5 squatting while R1 stands straight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the squatting person while R5 stands straight"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the one standing upright and smiling at the squatting R1, rather than R1 being the upright smiling person facing a squatting R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the standing smiling person facing R1 while R1 squats"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a lowered squat posture in profile while facing R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R5 in profile from a lowered squat"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the scene set in an indoor gym with a warm wooden floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor gym with warm wooden floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

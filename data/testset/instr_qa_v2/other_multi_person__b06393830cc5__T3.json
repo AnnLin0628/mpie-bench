@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__b06393830cc5__T3",
+  "instruction": "Professional athletic photograph, medium-full shot, low angle. In an indoor gym with a red floor and concrete walls, the blonde woman in orange athletic wear (R4) sits in the foreground, stretching forward to touch her toes with a focused look. In the background, the dark-haired woman in turquoise athletic wear (R3) stands and bends forward to stretch. Cool indoor lighting highlights their vibrant outfits against the neutral background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 sits in the foreground stretching forward to touch her toes while R3 does not",
+    "R3 stands in the background bending forward to stretch while R4 does not",
+    "R4 has the seated toe-touch stretching role",
+    "R3 has the standing forward-bend stretching role",
+    "the scene is an indoor gym with a red floor and concrete walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person sitting in the foreground and stretching forward to touch her toes, rather than R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 sits in the foreground stretching forward to touch her toes while R3 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person standing in the background and bending forward to stretch, rather than R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands in the background bending forward to stretch while R4 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have the seated toe-touch stretching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the seated toe-touch stretching role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 have the standing forward-bend stretching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the standing forward-bend stretching role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

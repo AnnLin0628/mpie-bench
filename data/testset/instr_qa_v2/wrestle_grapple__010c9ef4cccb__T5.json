@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T5",
+  "instruction": "A cinematic medium shot of a judo match inside a bright, misty dojo. On the right, the young man with short dark hair (R2) in a white judo gi with a black belt stands in profile, grappling with his opponent. He extends his arm over his partner's shoulder while gripping his sleeve. On the left, a bystander with wavy light brown hair in a white gi spars with him, gripping his shoulder. Bright daylight streams from the background windows, creating a soft haze and high-key illumination.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 extends an arm over R1's shoulder while gripping R1's sleeve",
+    "R1 grips R2's shoulder while sparring with him",
+    "R2 has the sleeve-gripping role and R1 has the shoulder-gripping role in the grapple",
+    "R1 and R2 are engaged in a judo grappling match",
+    "a judo gi sleeve is used as a contact point in the grapple",
+    "the scene is inside a bright, misty dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend his arm over R1's shoulder while gripping R1's sleeve, rather than R1 doing that to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends arm over R1's shoulder and grips R1's sleeve"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 grip R2's shoulder while sparring with him, rather than R2 being the one described as gripping R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the grapple, does R2 have the sleeve-gripping role while R1 has the shoulder-gripping role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips sleeve while R1 grips shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 directly sparring with each other in a judo-style grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are grappling opponents"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

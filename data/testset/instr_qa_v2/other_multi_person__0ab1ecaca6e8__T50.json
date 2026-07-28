@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T50",
+  "instruction": "A cinematic medium shot of a sunny outdoor park with green grass and leafy trees. On the left, the woman with the afro (R6) in a red t-shirt and jeans pulls a playful, wide-eyed expression. In the center, the East Asian man (R3) in a red polo shirt and a red bandana laughs heartily with his hands raised in a gesture. On the right, the woman in the black beanie (R5) in a red t-shirt smiles. The woman with the afro and the woman in the beanie keep their arms draped over the shoulders of the central East Asian man as he laughs. Bright, natural daylight illuminates the scene.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R6 drapes an arm over R3's shoulder while R3 is the recipient of that shoulder contact",
+    "R5 drapes an arm over R3's shoulder while R3 is the recipient of that shoulder contact",
+    "R6 and R5 flank R3 and keep their arms over R3's shoulders as R3 laughs",
+    "R3 raises his hands while R6 and R5 are the ones making shoulder contact with him",
+    "the interaction takes place in a sunny outdoor park with grass and trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 draping an arm over R3's shoulder, rather than R3 draping an arm over R6's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 initiates shoulder-draping contact onto R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 draping an arm over R3's shoulder, rather than R3 draping an arm over R5's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 initiates shoulder-draping contact onto R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the central person receiving shoulder contact from both R6 and R5, rather than R3 being the one placing arms over both of them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 receives the shoulder contact from R6 and R5"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R6 and R5 keep their arms draped over R3's shoulders while R3 laughs between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 and R5 maintain shoulder-draping roles around R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 have his hands raised while R6 and R5 are the ones making shoulder contact with him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 raises his hands as R6 and R5 contact his shoulders"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0e21d858f215__T8",
+  "instruction": "A clean studio photograph with a medium shot at eye-level. In a minimalist white studio, three women pose in a tight embrace. On the left, the woman in the lavender shirt (R2) stands in profile, laughing with squinted eyes. In the center, the woman in the green blazer (R3) stands facing left, making a playful kissing face. On the right, the woman in the blue blazer (R1) hugs the woman in the green blazer (R3) from behind, wrapping her arms around her chest and smiling happily at the camera. Bright, even studio lighting creates a cheerful atmosphere against the white background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 hugs R3 from behind",
+    "R1 wraps her arms around R3's chest",
+    "R3 is the person being held by R1 while making a playful kissing face",
+    "R2 stands in profile laughing during the tight group embrace",
+    "the scene is a minimalist white studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R3's chest, rather than R3 wrapping her arms around R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's arms encircle R3's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the woman being held from behind by R1, rather than R1 being held from behind by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 receives the behind-the-back embrace from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 smiling at the camera while holding R3 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles while performing the behind-the-back hold on R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in profile and laughing while R1 and R3 are in the behind-the-back embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is the laughing profile participant next to the R1-R3 embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

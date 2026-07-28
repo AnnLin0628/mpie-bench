@@ -1,0 +1,75 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__a0843f410da2__T10",
+  "instruction": "Candid medium shot of two women standing close together on an outdoor rooftop terrace during the day. On the left, the dark-haired woman (R3) wearing a striped crop top and high-waisted brown pants smiles warmly while looking towards the left. On the right, the woman with a curly afro (R7) wearing a striped dress is captured in profile, smiling and looking in the same direction. They stand side-by-side in front of a low red brick wall under soft, natural daylight with a clear, bright sky background.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R3 is the dark-haired woman in a striped crop top and high-waisted brown pants, rather than R7",
+    "R7 is the woman with a curly afro in a striped dress, rather than R3",
+    "R7 is captured in profile while standing close beside R3",
+    "R3 and R7 are standing side-by-side and looking in the same direction",
+    "a low red brick wall is behind the women",
+    "the setting is an outdoor rooftop terrace during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R7 captured in profile while standing close beside R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 is the profile-view woman standing close beside R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

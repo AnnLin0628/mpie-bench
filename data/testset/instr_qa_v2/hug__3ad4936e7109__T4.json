@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T4",
+  "instruction": "Candid lifestyle photograph, full shot. On a white studio floor, three women sit huddled together. On the left, the woman with wavy light-brown hair (R3) in a black crop top, white unbuttoned shirt, and blue jeans sits barefoot, looking at the camera with a soft smile. In the center, the woman with long straight dark hair (R2) in a white top and denim jacket sits smiling forward. On the right, the woman with curly brown hair (R1) in a white shirt and blue jeans sits barefoot, leaning into R2 with her eyes closed and a happy smile. Bright, soft lighting illuminates the clean, minimalist setting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 leans into R2 with eyes closed and a happy smile",
+    "R2 is the central seated woman receiving R1's lean/contact",
+    "R3 sits huddled with R1 and R2 as part of the seated group",
+    "R1, R2, and R3 are seated together on a white studio floor",
+    "the scene has bright, soft lighting in a clean minimalist studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman leaning into R2, rather than R2 leaning into R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans into R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman receiving R1's lean/contact while seated with her, rather than R1 receiving R2's lean?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's lean"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 sit huddled together with R1 and R2 in the group pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 participates in the seated huddle"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1, R2, and R3 seated on a white studio floor in a clean minimalist setting?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "white studio floor and minimalist setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

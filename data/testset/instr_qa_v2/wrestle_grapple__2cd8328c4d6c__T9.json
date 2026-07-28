@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T9",
+  "instruction": "A clean studio photograph captured in a high-angle full shot. In a minimalist white studio with a seamless white floor, the woman in the white outfit (R2) stands on the left, leaning forward to place her right hand on the upper back of the woman in the black outfit (R1) on the right. The woman in the black outfit (R1) leans forward dynamically, extending her arms outward in a fluid dance pose. Both performers are barefoot, engaged in an expressive contemporary dance sequence. Bright, diffused studio lighting illuminates the scene, casting soft, distinct shadows on the white surface beneath them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her right hand on R1's upper back",
+    "R1 is the person receiving upper-back contact from R2",
+    "R1 extends her arms outward while R2 makes hand contact with R1's back",
+    "R2 leans forward toward R1's back while R1 leans forward in a dance pose",
+    "minimalist white studio with seamless white floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place her right hand on R1's upper back, rather than R1 placing her right hand on R2's upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her right hand on R1's upper back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer whose upper back is being touched by R2, rather than R2 being the one touched on the upper back by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving upper-back contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending her arms outward while R2 uses her right hand to contact R1's back, rather than R2 extending her arms outward while R1 contacts R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends her arms outward while R2 makes hand contact with R1's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean forward toward R1's back while R1 leans forward in a fluid dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward toward R1's back while R1 leans forward in a dance pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

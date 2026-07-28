@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T4",
+  "instruction": "Candid documentary photograph, full-body shot from a slightly high angle. In an indoor motion capture studio with a red carpet and white walls, the woman in a white t-shirt and blue jeans (R2) stands on the left, facing right. She leans forward, extending her left arm to touch the chest of the bearded man in a black cap and dark polo shirt (R1), who stands on the right facing her. The room is illuminated by even overhead lighting, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward toward R1 to initiate contact",
+    "R2 extends her left arm to touch R1's chest",
+    "R1 is the person receiving the chest touch from R2",
+    "R1 and R2 stand facing each other during the contact",
+    "R2's hand/arm contact is directed at R1's chest",
+    "indoor motion capture studio with red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person leaning forward to touch R1's chest, rather than R1 leaning forward to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates chest contact with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend her left arm toward R1, rather than R1 extending his arm toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends left arm toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being touched by R2, rather than R2's chest being touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest touch from R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's arm contact aimed at R1's chest rather than another body part?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 touches R1's chest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

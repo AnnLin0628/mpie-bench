@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T5",
+  "instruction": "Cinematic full shot of an indoor gym with wooden floors. On the left, the man with the afro (R1) in a white t-shirt and grey sweatpants stands facing right with his arms raised. On the right, the young girl in the pink hoodie (R5) performs a full split on the floor, facing left with her arms raised high in a mirrored posture. Soft side lighting illuminates the warm wooden court.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R5 performs a full split on the floor while R1 remains standing",
+    "R1 stands upright with arms raised while R5 mirrors the raised-arm posture from the floor",
+    "R5 is the lower floor-split participant and R1 is the upright participant",
+    "R1 and R5 face each other while holding raised-arm poses",
+    "the wooden gym floor is the surface beneath R5 during the split",
+    "the scene is an indoor gym with wooden court flooring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person performing a full split on the floor while R1 remains standing, rather than R1 performing the split on the floor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 performs a full split on the floor while R1 remains standing"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 upright with arms raised while R5 mirrors the raised-arm posture from a floor split, rather than R5 being upright and R1 mirroring from a floor split?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands upright with arms raised while R5 mirrors the raised-arm posture from the floor"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the lower participant on the floor in a split while R1 is the higher standing participant, rather than R1 being the lower floor-split participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the lower floor-split participant and R1 is the upright participant"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand facing R5 with his arms raised as R5 holds a mirrored raised-arm pose from her split?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R5 face each other while holding raised-arm poses"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the scene set in an indoor gym with wooden court flooring?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene is an indoor gym with wooden court flooring"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T274",
+  "instruction": "A candid documentary photograph from a wide angle shows an indoor studio with a red carpeted floor and white walls. The woman in the white t-shirt and blue jeans (R2) stands upright on the left, facing right with a neutral expression. The man in the dark grey t-shirt and blue shorts (R1) leans forward from the right, extending his arms to place both hands on her chest while keeping his right leg stretched back. Bright overhead fluorescent lighting illuminates the room, creating a warm red tone on the carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward and places both hands on R2's chest",
+    "R2 receives the two-handed chest contact while standing upright",
+    "R1 extends his arms toward R2 during the contact",
+    "R2 remains upright as the contacted person",
+    "indoor studio with red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward to place both hands on R2's chest, rather than R2 placing both hands on R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates two-handed chest contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving R1's hands on her chest while standing upright, rather than R1 receiving R2's hands on his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the chest contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 lean forward toward R2 during the hand-to-chest contact, rather than R2 leaning forward toward R1 to make that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the forward-leaning contact maker"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have both arms extended so that both of his hands are on R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends both arms to contact R2's chest"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing upright while R1's hands make contact with her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 remains upright as the contacted person"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

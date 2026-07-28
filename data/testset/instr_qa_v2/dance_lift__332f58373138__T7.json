@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__332f58373138__T7",
+  "instruction": "A candid documentary photograph from a side-angle medium full shot shows a ballet studio with wooden floors. The instructor in a black zip-up bodysuit (R1) kneels on the left, holding and guiding the pointed foot of the young girl in a pink leotard (R3). The young girl (R3) stands on the right, holding the barre with her leg extended forward. In the background, another young girl in a pink leotard stands at the barre. The room is illuminated by bright, even indoor lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds and guides R3's pointed foot",
+    "R3 stands with her leg extended while R1 kneels to guide her foot",
+    "R2 is separate in the background at the barre while R1 works with R3",
+    "R3 holds the ballet barre during the guided foot position",
+    "ballet barre used for support",
+    "ballet studio with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and guiding R3's pointed foot, rather than R3 holding and guiding R1's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides R3's foot"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the standing dancer with her leg extended while R1 kneels to guide her foot, rather than R1 standing with a leg extended while R3 kneels?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands as R1 kneels and assists"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 separate in the background at the barre while R1's hands-on guidance is directed to R3, rather than R2 being the girl whose foot R1 is guiding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is not the guided student; R3 is"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 hold the barre while R1 guides her extended foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 uses the barre during R1's guidance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

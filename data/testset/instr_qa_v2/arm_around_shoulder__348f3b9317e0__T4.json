@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__348f3b9317e0__T4",
+  "instruction": "A cinematic fashion portrait photograph in a close-up shot at eye-level, set in a minimalist indoor studio with a plain beige wall. On the left, the red-haired woman in the beige striped blazer (R1) stands in profile facing right, turning her head to look back toward the camera with a neutral expression. Directly behind her, the blonde woman in the white t-shirt (R2) stands close, facing left in profile with her head tilted down. Their bodies are pressed close together in a back-to-front pose. Harsh, direct sunlight streams from the upper left, casting sharp diagonal shadows across the subjects and the background wall, creating a warm, muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is directly behind R1 in a back-to-front close pose",
+    "R1 is the front figure turning her head back toward the camera while R2 stands close behind",
+    "R1 and R2 have their bodies pressed close together with R1 in front and R2 behind",
+    "R1 faces right in profile while R2 faces left in profile behind her",
+    "minimalist indoor studio with a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned directly behind R1 in the back-to-front pose, rather than R1 being behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is directly behind R1 in a back-to-front close pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the front figure turning her head back toward the camera while R2 stands close behind her, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the front figure turning her head back toward the camera while R2 stands close behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 pressed close together with R1 in front and R2 behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have their bodies pressed close together with R1 in front and R2 behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

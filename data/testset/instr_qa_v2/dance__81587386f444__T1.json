@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__81587386f444__T1",
+  "instruction": "A candid wedding photograph, medium shot at eye-level. Outdoors by a yellow stucco wall, the blonde man with a mullet in a black velvet suit (R2) on the left and the dark-haired man in a navy suit (R1) on the right are slow dancing. The blonde man (R2) holds the dark-haired man's (R1) waist, and their other hands are clasped. They look lovingly at each other under soft, warm natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's waist during the slow dance",
+    "R1 is the partner whose waist is held by R2",
+    "R1 and R2 have their other hands clasped while dancing",
+    "R1 and R2 are slow dancing together",
+    "The scene is outdoors by a yellow stucco wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's waist during the slow dance, rather than R1 holding R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's waist during the slow dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner whose waist is being held by R2, rather than R2 being the partner whose waist is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partner whose waist is held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 slow dancing with one of R2's hands on R1's waist and their other hands clasped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 slow dance with R2 holding R1's waist and their other hands clasped"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 have their free hands clasped together while R2 maintains the waist-holding role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have their other hands clasped while dancing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

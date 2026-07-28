@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__318b5a7a4e2a__T3",
+  "instruction": "Candid outdoor photograph, medium close-up. On a winter street, the woman in the red puffer jacket (R1) on the left holds up a red smartphone, smiling happily at the screen. Standing close on the right, the woman in the light gray puffer jacket (R2) looks at the phone with a smile. They are positioned side-by-side, focused on the device together. Bright daylight and soft backlighting illuminate the scene, creating a cool winter atmosphere with a vibrant red accent.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up the red smartphone for the shared viewing moment rather than R2 holding it",
+    "R2 looks at the smartphone being held by R1 rather than presenting the phone herself",
+    "R1 smiles at the phone screen while showing it to R2",
+    "R1 and R2 stand close side-by-side focused on the same device",
+    "a red smartphone is visible as the shared contact-relevant object",
+    "the scene is an outdoor winter street in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding up the red smartphone for both women to view, rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the phone holder and presenter"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking at the smartphone held by R1, rather than being the one holding the phone up for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the viewer of R1's phone"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person actively presenting the screen while R2 shares attention to it, rather than R2 presenting the screen to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leads the shared phone-viewing action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together side-by-side while focusing on the same smartphone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share attention on the phone while standing close"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a red smartphone involved in the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red smartphone"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

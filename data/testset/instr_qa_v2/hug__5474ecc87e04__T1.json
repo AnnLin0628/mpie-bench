@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5474ecc87e04__T1",
+  "instruction": "Candid outdoor photograph, medium shot. In a bright winter park with bare trees, the woman with curly hair (R1) wearing a black puffer jacket, a thick gray scarf, and gray fingerless gloves stands on the left, smiling warmly. The man in the gray beanie (R2) wearing a plaid jacket with a fleece collar stands behind her to the right, smiling down affectionately. He wraps his arm around her chest in a cozy embrace, while she holds his gloved hand. Bright natural sunlight backlights the couple, creating a warm, soft winter atmosphere with a shallow depth of field.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 wraps his arm around R1's chest from behind",
+    "R1 holds R2's gloved hand while he embraces her",
+    "R1 is the person being embraced in front and R2 is the person behind her",
+    "R2's gloved hand is held by R1",
+    "bright winter park with bare trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap his arm around R1's chest from behind, rather than R1 wrapping her arm around R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one encircling R1's chest in the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding R2's gloved hand while R2 is the person embracing her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hand as R2 embraces her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 behind R1 and smiling down at her, rather than R1 being behind R2 and smiling down at him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned behind R1 in the affectionate contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person in front being held around the chest by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the embraced person in front"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

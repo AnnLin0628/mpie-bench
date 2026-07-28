@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T50",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and partition screens. On the left, the woman in the patterned white t-shirt and blue jeans (R2) stands facing away, extending her right arm to touch the chest of the man in the dark polo shirt and blue shorts (R1), who stands on the right facing her. Bright overhead lighting illuminates the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm toward R1's chest",
+    "R2 is the person touching R1's chest, rather than R1 touching R2's chest",
+    "R1 is the recipient of the chest touch from R2",
+    "R1 and R2 stand facing each other during the contact",
+    "The interaction takes place in an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's chest, rather than R1 extending his arm to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the chest-touch contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being touched by R2, rather than R2 being the person whose chest is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use her right arm as the contacting arm while interacting with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right arm is the contact limb"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

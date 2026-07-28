@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T10",
+  "instruction": "A cinematic video still, medium shot, captures a joyful dance in an indoor studio with a soft pink and blue gradient background. On the left, the Black woman with braided hair in a pink fringed dress (R1) is shown in profile facing right, smiling as she dances with a raised fist. On the right, the blonde woman in the black halter dress (R3) faces her, laughing and looking at her partner with her hand raised. They dance facing each other in a lively, shared moment. The scene is bathed in soft, colorful studio lighting with warm pink and blue hues.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 dances in profile facing R3 with a raised fist",
+    "R3 faces R1 while laughing and raising her hand",
+    "R1 and R3 dance as partners facing each other",
+    "R1 smiles during the dance while R3 looks at her partner",
+    "the dance takes place in an indoor studio with a soft pink and blue gradient background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer shown in profile with a raised fist facing R3, rather than R3 being shown in profile with the raised fist facing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances in profile facing R3 with a raised fist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer laughing and looking toward R1 with her hand raised, rather than R1 being the one laughing and looking toward R3 with that raised-hand response?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 faces R1 while laughing and raising her hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile while dancing toward R3, as R3 looks back at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles during the dance while R3 looks at her partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

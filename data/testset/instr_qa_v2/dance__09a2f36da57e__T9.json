@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T9",
+  "instruction": "A cinematic medium close-up still of a contemporary dance performance on a dark stage. On the left, the woman in the yellow shirt (R2) tilts her head far back, looking up with arms raised. In the center, the man in the rust shirt (R3) arches his arm overhead, head tilted back. On the right, the woman in the yellow shirt (R4) looks upward to the right with arms raised. Their bodies are clustered closely, hands reaching toward the ceiling. In the background, several bystander arms are raised in unison. Soft overhead lighting illuminates the warm yellow and rust shirts against the dark background.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 tilts her head far back and looks upward with her arms raised",
+    "R3 arches his arm overhead with his head tilted back",
+    "R4 looks upward to the right with her arms raised",
+    "R2, R3, and R4 are clustered closely in a contemporary dance pose with hands reaching upward",
+    "bystander arms in the background are raised in unison",
+    "the dance is performed on a dark stage with soft overhead lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer tilting her head far back and looking upward with raised arms, rather than R3 taking that same head-far-back raised-arm role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the head-far-back upward-looking raised-arm dance pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer arching his arm overhead with his head tilted back, rather than R4 being the one described with the overhead arched arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the overhead arched-arm dance gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the dancer looking upward to the right with arms raised, rather than R2 being described as looking upward to the right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the upward-right gaze with raised arms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2, R3, and R4 clustered closely together in a contemporary dance formation with their hands reaching toward the ceiling?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2, R3, and R4 form a close clustered dance pose with upward-reaching hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 occupy the central dance role between R2 and R4 while all three hold upward-reaching performance poses?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the central dancer in the clustered upward-reaching formation"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

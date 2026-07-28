@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b34e248b6fe4__T1",
+  "instruction": "Candid winter photograph, medium close-up. On a snowy outdoor street, the blonde woman in a beige coat and plaid scarf (R1) stands on the left in profile. The bearded man in a fur-hooded parka (R2) stands on the right, leaning forward to blow warm air onto her hands, which he holds gently in his own. Overcast daylight casts a soft glow over the scene, highlighting the muted winter tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward to blow warm air onto R1's hands",
+    "R2 holds R1's hands gently in his own",
+    "R1 is the person receiving hand-warming from R2",
+    "R1 and R2 are in a close hand-holding winter interaction",
+    "snowy outdoor street setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward to blow warm air onto R1's hands, rather than R1 blowing warm air onto R2's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 warms R1's hands by blowing on them"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's hands gently in his own while warming them, rather than R1 holding R2's hands to warm them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hands as the active warmer"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose hands are being warmed, rather than R2 being the one receiving warmth?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the hand-warming action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1's hands placed in R2's hands during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hands are held by R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 bent or leaning toward R1's hands as part of the hand-warming gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans toward R1's hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

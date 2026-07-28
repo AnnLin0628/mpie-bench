@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__768f8e60571a__T2",
+  "instruction": "A minimalist studio portrait photograph, captured in a medium close-up shot at eye-level against a solid beige background. The man in the white t-shirt (R1) stands on the left in profile facing left with his head tilted slightly back. The man in the pink t-shirt (R2) stands behind him, leaning his head down to rest his cheek on R1's shoulder while looking directly at the camera with a melancholic expression. R2 wraps his arms around R1, holding R1's shoulder and waist. The lighting is soft and diffused, casting gentle shadows and highlighting the warm, pastel color palette of their clothing against the neutral backdrop.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests his cheek on R1's shoulder",
+    "R2 wraps his arms around R1 and holds R1's shoulder and waist",
+    "R2 stands behind R1 while leaning down toward R1's shoulder",
+    "R1 is the person being held by R2 at the shoulder and waist",
+    "solid beige studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest his cheek on R1's shoulder, rather than R1 resting his cheek on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his cheek on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap his arms around R1 and hold R1's shoulder and waist, rather than R1 wrapping his arms around R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms around R1 and holds R1's shoulder and waist"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 behind R1 while leaning down toward R1's shoulder, rather than R1 being behind R2 and leaning onto R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 while leaning down toward R1's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person being held by R2 at the shoulder and waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being held by R2 at the shoulder and waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

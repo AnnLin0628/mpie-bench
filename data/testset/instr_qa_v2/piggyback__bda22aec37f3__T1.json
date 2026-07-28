@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__bda22aec37f3__T1",
+  "instruction": "Candid family photograph, medium close-up. In a bright indoor room with a white paneled glass door in the background, the blonde woman in a coral hoodie (R1) sits on the left, smiling warmly at the young blonde girl in a blue denim dress (R3) on the right. The woman (R1) holds the girl's (R3) right hand gently with both of her hands. The girl (R3) looks down with a soft smile. Soft, natural light illuminates the scene with warm tones and a shallow depth of field.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds R3's right hand gently with both of R1's hands",
+    "R3 is the person whose right hand is being held by R1",
+    "R1 sits and smiles warmly toward R3 during the hand contact",
+    "R3 looks down with a soft smile while R1 holds her hand",
+    "a bright indoor room with a white paneled glass door in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R3's right hand with both of R1's hands, rather than R3 holding R1's hand with both of her hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R3's right hand gently with both of R1's hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person whose right hand is being gently held by R1, rather than R1 being the person whose right hand is held by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the person whose right hand is being held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting while gently holding R3's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits and holds R3's hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 look down with a soft smile while R1 holds her right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 looks down with a soft smile while R1 holds her hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__7a9988f94b0e__T1",
+  "instruction": "Candid sports photograph, low-angle medium shot. In an indoor volleyball gym with a paneled ceiling, the man in the blue shirt and black sleeves (R1) stands on the left in profile, smiling. Facing him on the right, the man in the black shirt and grey sleeves (R2) also stands in profile, smiling. They are positioned close together, clasping both of their hands firmly in the center of the frame. A volleyball net is visible in the background. The scene is illuminated by bright overhead gym lighting, casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the blue-shirted man participating in the two-hand clasp with R2",
+    "R2 is the black-shirted man participating in the two-hand clasp with R1",
+    "R1 and R2 face each other closely in profile while clasping both hands",
+    "both of R1's and R2's hands are firmly clasped together between them",
+    "a volleyball net is visible in the indoor gym background",
+    "bright overhead gym lighting illuminates the scene"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the blue-shirted participant clasping both hands with R2, rather than R2 being the blue-shirted participant in the hand clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the blue-shirted man participating in the two-hand clasp with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the black-shirted participant clasping both hands with R1, rather than R1 being the black-shirted participant in the hand clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the black-shirted man participating in the two-hand clasp with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are both of R1's hands and both of R2's hands involved in the firm clasp between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "both of R1's and R2's hands are firmly clasped together between them"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

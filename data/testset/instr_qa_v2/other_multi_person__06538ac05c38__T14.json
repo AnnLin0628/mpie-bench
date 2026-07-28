@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T14",
+  "instruction": "Candid lifestyle photograph, medium full shot. On a sunny rooftop under a blue sky, a group of friends interacts. In the center, the grey-haired man (R2) in a grey t-shirt and the red-haired woman (R1) in a white t-shirt sit looking at each other and smiling. On the left, the man in the black hat (R4) in a brown shirt and red bandana stands talking to the Asian woman (R5), who gestures back. On the right, the Black man (R6) in a dark blue shirt stands looking down at the seated pair. Bright daylight casts warm natural tones across the scene.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R4 is the one standing and talking to R5 while R5 gestures back",
+    "R6 stands looking down at the seated pair R1 and R2",
+    "R1 and R2 sit facing each other and smiling",
+    "R4 and R5 interact with R4 speaking and R5 responding by gesture",
+    "the group is on a sunny rooftop under a blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person talking to R5 while R5 gestures back, rather than R5 being the one described as talking to R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 talks to R5 while R5 gestures back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R6 stand looking down at the seated pair R1 and R2, rather than R1 and R2 standing over R6 and looking down at him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 looks down at seated R1 and R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 responding to R4 with a gesture while R4 stands talking to her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 gestures back to R4 as R4 talks"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

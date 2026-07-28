@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__752a5c436f7f__T1",
+  "instruction": "Candid documentary photograph, medium shot. In a bright indoor dining room, the curly blonde woman (R1) in a white blouse and black skirt stands on the left, shaking hands with the curly-haired man with glasses (R4) in a dark blazer on the right. In the background, the grey-haired man (R3) in a dark blazer embraces the blonde woman (R2) in a black blazer. A table with wine glasses and appetizers sits between them under soft, bright natural light from a window.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is the one embracing R2",
+    "R2 is the person being embraced by R3",
+    "R1 is the handshake partner of R4, not part of the embrace with R3",
+    "R3 and R2 form the background embrace pair while R1 and R4 form the handshake pair",
+    "a table with wine glasses and appetizers sits between the people",
+    "the scene is a bright indoor dining room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person actively embracing R2, rather than R2 being described as the one embracing R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the one embracing R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the embrace from R3, rather than R3 receiving an embrace from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being embraced by R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 in the hand-contact interaction with R4, rather than R1 being the person embraced by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the handshake partner of R4, not part of the embrace with R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R3 and R2 form the background embrace pair while R1 and R4 form the separate hand-contact pair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R2 form the background embrace pair while R1 and R4 form the handshake pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

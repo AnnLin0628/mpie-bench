@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__a451fa938d81__T3",
+  "instruction": "An overhead aerial photograph captures a group of people lying on a green lawn. In a wide high-angle drone shot looking straight down, several people lie on the grass in a circle, holding hands, though some individuals are digitally blurred. Among the visible people, the man in the white shirt and beige shorts (R3) lies at the top, smiling up. To his right, the man in the yellow shirt and pink shorts (R1) lies with arms outstretched and eyes closed. On the left, the woman in the green tank top and white pants (R2) wears a straw hat and smiles. Several other young adults lie in the circle, with some individuals on the right and bottom heavily blurred. The scene is illuminated by soft, diffused daylight, highlighting the vibrant green grass and colorful outfits.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 lies in the hand-holding circle with arms outstretched and eyes closed",
+    "R3 lies at the top of the circle smiling up, instead of having R1's eyes-closed outstretched-arm role",
+    "R2 lies in the circle smiling while wearing a straw hat",
+    "the visible people lie on the grass in a circle holding hands",
+    "R2's straw hat",
+    "green lawn viewed from an overhead high-angle drone shot"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person lying in the hand-holding circle with arms outstretched and eyes closed, rather than R3 having that eyes-closed outstretched-arm role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the outstretched-arm, eyes-closed role in the circle"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the visible man lying at the top of the hand-holding circle and smiling up, rather than R1 occupying that top smiling-up role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the top smiling-up role in the circle"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lie as part of the same circle of people holding hands on the grass?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 participates in the hand-holding circle"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 all lie down on the lawn as participants in the circular hand-holding arrangement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 are lying participants in the circle"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the group shown from an overhead high-angle drone view on a green lawn?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "overhead drone view of a green lawn"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

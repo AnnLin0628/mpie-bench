@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T11",
+  "instruction": "Cinematic full shot of a dimly lit indoor gym. On the left, the shirtless man with short dark hair (R1) sits on the floor in black shorts, smiling. On the right, the shirtless bearded man with a shoulder tattoo (R3) kneels in black pants. The two men face each other on the gym mat, clasping their gloved hands in a friendly handshake. A strong backlight creates a bright flare and silhouettes the training rigs in the background, casting cool blue and grey tones over the scene.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is seated on the gym floor while clasping gloved hands with R3",
+    "R3 is kneeling on the gym mat while clasping gloved hands with R1",
+    "R1 and R3 are the labeled people engaged in the friendly gloved handshake",
+    "the clasped hands are gloved",
+    "the interaction takes place on a gym mat in a dimly lit indoor gym",
+    "training rigs are silhouetted in the backlit background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 seated on the floor while clasping gloved hands with kneeling R3, rather than R3 being the seated person and R1 the kneeling person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the seated handshake participant and R3 is the kneeling handshake participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 kneeling on the gym mat while clasping gloved hands with seated R1, rather than R1 kneeling on the mat while R3 sits?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the kneeling handshake participant facing seated R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting on the floor in the contact pose while R3 kneels opposite him in the contact pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits and R3 kneels during the hand-clasp interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R3 positioned on a gym mat during their hand-clasp interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "gym mat under the interacting people"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

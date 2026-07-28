@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T19",
+  "instruction": "Cinematic medium-full shot in a bright indoor hall. The man in the brown shirt (R1) carries his partner on his shoulders. The woman in the black outfit (R2) is draped over him, her legs bent in the air. The man (R1) supports her weight from below. Bright backlight streams from the background, creating a soft, airy atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 on his shoulders",
+    "R1 supports R2's weight from below rather than the reverse",
+    "R2 is draped over R1 while being carried",
+    "R2's legs are bent in the air while she is on R1",
+    "bright indoor hall with strong backlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his shoulders, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 support R2's weight from below, rather than R2 supporting R1's weight from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight from below rather than the reverse"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being carried and draped over R1, rather than R1 being draped over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is draped over R1 while being carried"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned on R1's shoulders while R1 acts as the carrier?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is on R1's shoulders while R1 carries her"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2's legs bent in the air while she is draped over R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's legs are bent in the air while she is on R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

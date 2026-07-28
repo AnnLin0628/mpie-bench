@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ef2b0836ea2e__T2",
+  "instruction": "Candid lifestyle close-up photograph from an overhead angle of a cozy indoor living room. On a gray fabric couch, the bearded man with glasses (R2) in a pink t-shirt lies on the left, laughing heartily with his mouth open. Next to him, the woman in the white t-shirt (R1) lies on the right, smiling widely up at him. Her left hand gently touches his neck, and his hand rests on his wavy hair. Soft, diffused natural light highlights their joyful expressions, creating a warm, intimate atmosphere with muted colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently touches R2's neck with her left hand",
+    "R2 rests his hand on his own wavy hair",
+    "R1 smiles up at R2 while R2 laughs with his mouth open",
+    "R1 and R2 lie close together on the same couch",
+    "gray fabric couch supporting both people",
+    "cozy indoor living room setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently touching R2's neck with her left hand, rather than R2 touching R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently touches R2's neck with her left hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting his hand on his own wavy hair, rather than R1 resting her hand on her own hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his hand on his own wavy hair"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 smiling up at R2 while R2 laughs with his mouth open, rather than R2 smiling up at R1 while R1 laughs with her mouth open?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles up at R2 while R2 laughs with his mouth open"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 lying close together on the same couch while R1's hand is in contact with R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 lie close together on the same couch with R1 touching R2's neck"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

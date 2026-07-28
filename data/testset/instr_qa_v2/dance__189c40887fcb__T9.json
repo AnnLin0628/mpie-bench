@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T9",
+  "instruction": "Cinematic action still, medium-wide low-angle shot. In a dimly lit indoor hall with wooden floors and a balcony, two men perform a dynamic dance. In the right foreground, the young man in the white t-shirt and black harness (R3) is captured mid-leap in a low crouch, arms flung wide. In the left background, the blonde man in the black leather jacket (R1) crouches low with arms spread. On the far right, a cropped glimpse of another dancer's leg is visible. Cool blue ambient light and red highlights illuminate the scene, creating motion blur.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the dancer captured mid-leap in a low crouch with arms flung wide, rather than R1",
+    "R1 is the dancer crouching low with arms spread in the background, rather than R3",
+    "R2 appears only as a cropped glimpse of another dancer's leg, rather than as the main leaping dancer",
+    "R1 and R3 are both performing dynamic dance poses with arms spread or flung wide",
+    "The scene is set in a dimly lit indoor hall with wooden floors and a balcony"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer captured mid-leap in a low crouch with arms flung wide, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the main mid-leap dance action instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer crouching low with arms spread in the background, rather than R3 being the background crouching dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the background crouching dance role instead of R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 perform a dynamic dance pose with arms flung wide while low to the ground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's dance body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 perform a low crouching dance pose with arms spread?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's dance body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__6e3e8b7ae2fb__T4",
+  "instruction": "Candid documentary photograph, medium shot. In a bright hallway near a doorway, the man in the brown cardigan (R1) crouches on the left, adjusting the front straps of a grey backpack. The boy in the school uniform (R2), wearing a white collared shirt and black trousers, stands on the right facing the man. The man uses both hands to secure the straps on the boy's chest. Cool, natural daylight from the side illuminates the scene, casting soft shadows on the neutral-toned wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 secures the front straps of R2's backpack rather than R2 securing R1's straps",
+    "R1 uses both hands to adjust straps on R2's chest while R2 receives the adjustment",
+    "R1 crouches in the helper role while R2 stands facing him as the backpack is fitted",
+    "R2 is the person wearing the grey backpack being adjusted",
+    "The grey backpack has front straps on R2's chest",
+    "The scene is in a bright hallway near a doorway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 securing the front straps of R2's backpack, rather than R2 securing straps on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 secures the front straps of R2's backpack rather than R2 securing R1's straps"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use both hands to adjust straps on R2's chest, rather than R2 using both hands to adjust straps on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses both hands to adjust straps on R2's chest while R2 receives the adjustment"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 crouching in the helper role while R2 stands and has the backpack fitted, rather than R2 crouching to fit a backpack on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 crouches in the helper role while R2 stands facing him as the backpack is fitted"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person wearing the backpack while R1 fastens its front straps?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person wearing the grey backpack being adjusted"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

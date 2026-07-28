@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T36",
+  "instruction": "Cinematic video still, medium shot from a low angle. Inside a dark boxing gym, the woman in the orange and black athletic top (R1) stands on the left in profile, holding up red boxing mitts. The Asian woman in the white sports bra (R2) stands on the right, facing left, landing a left punch. Her black-gloved hand makes contact with the raised red mitt of the woman in the orange and black top. The background features red ring ropes and a circular gym logo. Dim overhead lighting casts a cool-toned, athletic mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up red boxing mitts as the target for R2's punch",
+    "R2 lands a left punch into the mitt held by R1",
+    "R2's black-gloved hand contacts R1's raised red mitt",
+    "R1 is the pad holder while R2 is the striker",
+    "red boxing mitts are the contact-relevant object",
+    "the scene is inside a dark boxing gym with red ring ropes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the raised red boxing mitt that receives R2's punch, rather than R2 holding a mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds up red boxing mitts as the target for R2's punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 delivering a left punch into R1's mitt, rather than R1 delivering a punch into a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lands a left punch into the mitt held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's black-gloved hand make contact with R1's raised red mitt, instead of R1's glove contacting a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's black-gloved hand contacts R1's raised red mitt"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 serving as the pad holder while R2 serves as the striker in the boxing drill?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the pad holder while R2 is the striker"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are red boxing mitts being used as the contact target for the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red boxing mitts are the contact-relevant object"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

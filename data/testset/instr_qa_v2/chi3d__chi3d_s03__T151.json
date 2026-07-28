@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T151",
+  "instruction": "A candid wide-angle documentary photograph captures an indoor motion capture studio with a red carpet and white walls. The man in the black polo shirt and blue shorts (R1) stands on the right, facing left, and touches the cheek of the woman in the white t-shirt and blue jeans (R2) with his right hand. The woman (R2) stands on the left, facing right and looking at him. The setting is illuminated by neutral overhead lighting, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 actively touches R2's cheek with his right hand",
+    "R2 receives the cheek touch from R1 and looks at him",
+    "R1 faces R2 during the cheek-touch interaction",
+    "R2 faces R1 during the cheek-touch interaction",
+    "indoor motion capture studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person touching R2's cheek with his right hand, rather than R2 touching R1's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively touches R2's cheek"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose cheek is being touched by R1, rather than R1 being the person whose cheek is being touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's cheek touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active cheek toucher while R2 looks at him and receives the touch, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric active toucher versus receiving person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his right hand to make contact with R2's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right-hand contact on R2's cheek"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

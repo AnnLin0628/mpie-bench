@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T176",
+  "instruction": "Candid documentary photograph, medium-full shot, eye-level. In an indoor studio with a red carpet and a radiator on the wall, the man in the black polo shirt and blue shorts (R1) stands on the left, facing right. The woman in the white t-shirt and blue jeans (R2) stands behind him, hugging him from behind with her arms wrapped around his waist under overhead artificial lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 hugs R1 from behind rather than R1 hugging R2 from behind",
+    "R2 wraps her arms around R1's waist rather than R1 wrapping his arms around R2's waist",
+    "R1 is the person being held while R2 is the person holding from behind",
+    "R2 stands behind R1 with her arms around him",
+    "R1 remains standing while being embraced from behind by R2",
+    "indoor studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's arms wrapped around R1's waist, rather than R1's arms wrapped around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's waist rather than R1 wrapping his arms around R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held around the waist while R2 is the person doing the holding from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being held while R2 is the person holding from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand behind R1 with her arms around him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 with her arms around him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing while being embraced from behind by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains standing while being embraced from behind by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

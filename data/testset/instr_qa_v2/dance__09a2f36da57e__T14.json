@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T14",
+  "instruction": "Cinematic medium close-up of a contemporary dance performance in a dark studio. On the far left, the man in the brown shirt (R1) is partially visible in profile with his arm raised. In the center, the man in the brown shirt (R3) is in profile facing right, head lowered, with his right arm extended upward. On the right, the woman in the yellow shirt (R4) stands in profile facing right, looking forward with her arms raised. Other dancers' arms are visible reaching upward in the background. Soft overhead light illuminates the dancers against the dark background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is partially visible in profile with an arm raised",
+    "R3 is in the center in profile facing right, with head lowered and right arm extended upward",
+    "R4 stands in profile facing right, looking forward with both arms raised",
+    "R3 has a head-lowered, single-arm-up pose while R4 has a forward-looking, both-arms-up pose",
+    "the dancers are performing in a dark studio under soft overhead light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer with head lowered and right arm extended upward, rather than R4 being the one with that head-lowered single-arm-up pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the head-lowered single-arm-up dance pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the dancer looking forward with both arms raised, rather than R3 being the dancer looking forward with both arms raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the forward-looking both-arms-raised pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 only partially visible in profile with an arm raised, rather than R3 being only partially visible in that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is partially visible in profile with an arm raised"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 face right in profile while extending his right arm upward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 faces right in profile with right arm extended upward"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 stand in profile facing right while holding both arms raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 stands in profile facing right with both arms raised"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

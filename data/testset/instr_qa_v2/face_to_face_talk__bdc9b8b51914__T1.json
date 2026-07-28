@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__bdc9b8b51914__T1",
+  "instruction": "A candid medium-shot photograph of a minimalist indoor room with white walls and light wooden flooring. On the left, the man in the brown sweater (R1) sits in a light wooden armchair, holding a glass of water and looking down at a notebook. On the right, the man in the white t-shirt (R2) sits on a teal velvet chair, leaning forward to write on the notebook held between them. The two men are focused on the notebook, with the man in the white t-shirt pointing a pen at the page. The scene is illuminated by bright, even indoor lighting, casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward to write on the notebook rather than R1 writing on it",
+    "R2 points a pen at the notebook page rather than R1 pointing the pen",
+    "R1 holds a glass of water while R2 handles the pen-focused writing action",
+    "R1 and R2 are seated facing a shared notebook between them",
+    "notebook used as the shared focus of the interaction",
+    "pen used by R2 to indicate or write on the page",
+    "minimalist indoor room with white walls and light wooden flooring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward to write on the notebook, rather than R1 being the one writing on it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 writes on the notebook rather than R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pointing a pen at the notebook page, rather than R1 pointing the pen at the page?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points the pen at the notebook page"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding a glass of water while R2 performs the pen-and-notebook action, rather than R2 holding the glass while R1 writes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the glass while R2 handles the writing action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated and focused on the same notebook between them, with R2 leaning in toward the page?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share focus on a notebook with R2 leaning in"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T62",
+  "instruction": "Candid outdoor medium close-up photograph of a sunny, grassy park surrounded by lush trees. In the left foreground, the woman in the dark blue t-shirt (R4) is seen from the side with her right arm raised high. In the right foreground, the woman with the afro (R6) in a red t-shirt raises her left arm to clasp hands with her in a celebratory high-five. In the background, the man in the red polo (R3) smiles and claps, the bald man (R2) in a dark blue t-shirt gestures happily on the left, and the woman in the black beanie (R5) is partially visible on the right. Bright, natural sunlight filters through the trees, creating a warm, vibrant atmosphere.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 raises her right arm high as one half of the celebratory high-five",
+    "R6 raises her left arm to clasp R4's raised hand in the high-five",
+    "R3 is a background onlooker who smiles and claps instead of joining the hand clasp",
+    "R2 gestures happily in the background rather than being part of the high-five contact",
+    "R5 is partially visible on the right side of the background",
+    "The scene is a sunny, grassy park surrounded by lush trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R6 raise her left arm to clasp R4's raised hand, rather than R4 being the one raising a left arm to clasp R6's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 left-arm clasping duty toward R4's raised hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R4 and R6 the contact pair whose raised hands clasp in celebration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R6 form the celebratory hand-clasp pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 gesturing happily in the background rather than being one of the two people whose hands clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 background gesturing role outside the hand-clasp contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

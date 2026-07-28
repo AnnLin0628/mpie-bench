@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1a57fc26f9e5__T16",
+  "instruction": "A cinematic medium shot captures a couple dancing in a rustic indoor room. The woman with long dark hair in a blue plaid shirt (R1) is in the left foreground, her back to the camera as she spins. The man in the red striped shirt and beige pants (R2) is on the right background, facing forward with a gentle smile and eyes closed. They hold hands while dancing together. The scene is illuminated by warm indoor light and a blue accent light in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the spinning dancer with her back to the camera while holding R2's hand",
+    "R2 is the forward-facing dance partner with eyes closed while holding R1's hand",
+    "R1 spins as R2 remains the forward-facing partner in the dance",
+    "R1 and R2 hold hands while dancing together",
+    "R1 and R2 are dancing as a couple",
+    "the dance takes place in a rustic indoor room with warm indoor light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner spinning with her back to the camera while holding R2's hand, rather than R2 being the spinning partner with his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the spinning dancer with her back to the camera while holding R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner facing forward with eyes closed while holding R1's hand, rather than R1 being the forward-facing partner with eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the forward-facing dance partner with eyes closed while holding R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 perform the spin in the dance while R2 remains the forward-facing partner, rather than R2 spinning while R1 remains forward-facing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 spins as R2 remains the forward-facing partner in the dance"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other while dancing together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while dancing together"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 interacting as dance partners in a couple dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are dancing as a couple"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

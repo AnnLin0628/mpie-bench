@@ -1,0 +1,74 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T102",
+  "instruction": "A candid documentary photograph in a medium full shot shows a lively scene at an outdoor park with a grassy lawn. On the left, the woman with a large afro (R6) in a red t-shirt and blue jeans dances happily with her arms slightly raised. On the right, the East Asian man (R3) in a red polo shirt and blue jeans dances alongside her, pointing forward with a joyful expression. They are both smiling and moving to the music on the green grass under the soft shade of background trees. The lighting is bright and natural.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 is the dancer pointing forward while dancing alongside R6",
+    "R6 is the dancer with arms slightly raised while R3 points forward",
+    "R6 and R3 dance alongside each other on the grass",
+    "both R6 and R3 smile and move to the music",
+    "the scene is an outdoor park with a grassy lawn and background trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3, rather than R6, the dancer who is pointing forward while dancing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the dancer pointing forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6, rather than R3, the dancer with arms slightly raised while dancing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the dancer with arms slightly raised"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 dancing happily near R3 as R3 dances alongside her with a joyful expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 and R3 dance alongside one another with joyful expressions"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

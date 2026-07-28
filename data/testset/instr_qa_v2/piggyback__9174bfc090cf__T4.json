@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__9174bfc090cf__T4",
+  "instruction": "Candid outdoor photograph, medium close-up from a low angle. Against a backdrop of palm trees and a bright blue sky, the man in the maroon polo shirt (R1) carries the young girl in the pink tie-dye dress (R2) on his shoulders. Both the man (R1) and the young girl (R2) look toward the left with cheerful smiles. Her hands rest gently on his head as he holds her legs securely. The scene is bathed in vibrant, direct sunlight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 carries R2 on his shoulders",
+    "R1 supports R2's weight from below rather than R2 supporting R1",
+    "R1 holds R2's legs securely while R2 is on his shoulders",
+    "R2 rests her hands on R1's head while being carried",
+    "outdoor setting with palm trees and a bright blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his shoulders, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric support duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's legs securely while R2 rides on his shoulders, rather than R2 holding R1's legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's legs while carrying her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned on top of R1's shoulders while R1 carries her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rides on R1's shoulders"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2's hands resting on R1's head as R1 carries her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her hands on R1's head"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

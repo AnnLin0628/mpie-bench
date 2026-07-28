@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T4",
+  "instruction": "Candid action photograph, full shot, eye-level from a slightly rear angle. Set in an outdoor covered training area with concrete flooring and white pillars under bright daylight. On the left, the man in the beige t-shirt (R1) has his back partially turned as he lunges forward to throw a punch. On the right, the man in the green long-sleeve shirt (R3) stands holding up focus mitts to block the strike. The punch from the man in the beige t-shirt is directed at the mitt held by the man in the green long-sleeve shirt. Bright natural daylight casts soft shadows across the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 lunges forward to throw a punch at R3's focus mitts",
+    "R3 holds up focus mitts to block or receive R1's strike",
+    "R1 is the striker while R3 is the mitt holder in the combat drill",
+    "focus mitts are the contact-relevant objects used for the punch",
+    "the scene is an outdoor covered training area"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing the punch toward the mitts held by R3, rather than R3 throwing a punch toward mitts held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the puncher and R3 is the mitt holder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold up the focus mitts to block or receive R1's strike, rather than R1 holding mitts for R3's strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 blocks or receives the strike with focus mitts"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lunging forward as the attacker while R3 remains in the defensive mitt-holding role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks while R3 holds mitts defensively"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person whose punch is directed at the training target held by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's punch is aimed at R3's mitt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

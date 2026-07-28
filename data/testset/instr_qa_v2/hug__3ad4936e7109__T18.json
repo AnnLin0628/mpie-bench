@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T18",
+  "instruction": "Candid studio photograph, medium shot. In a minimalist white studio, three friends sit closely on the floor. On the left, the woman with wavy light brown hair (R3) in a white shirt over a black top rests her head on the center woman's shoulder with her eyes closed. In the center, the woman with straight dark hair (R2) in a white high-neck top smiles gently at the camera. On the right, the woman with curly brown hair (R1) in a white shirt smiles warmly. They are locked in a cozy group hug. Soft, bright studio lighting fills the clean space.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 rests her head on R2's shoulder",
+    "R2 provides the shoulder that R3 leans on",
+    "R3 has her eyes closed while leaning on R2",
+    "R1, R2, and R3 sit closely together in a cozy contact pose",
+    "minimalist white studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 resting her head on R2's shoulder, rather than R2 resting her head on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 rests her head on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder supports R3's leaned head, rather than R3 being the shoulder support for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 provides the shoulder that R3 leans on"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 keep her eyes closed while leaning on R2, rather than R2 being the one with eyes closed while leaning on R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has her eyes closed while leaning on R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned as the central friend in the close seated contact pose with R3 leaning onto her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is central in the seated contact pose while R3 leans onto her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

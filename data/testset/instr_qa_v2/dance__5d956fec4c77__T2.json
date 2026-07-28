@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__5d956fec4c77__T2",
+  "instruction": "Candid cinematic full shot of a cozy bedroom. On the left, the barefoot elderly woman with glasses (R2) in a white shirt and light trousers extends her arms forward while dancing. On the right, the elderly bald man (R1) in a striped shirt and khaki pants stands with his back to the camera, facing her. They dance on a dark patterned rug in front of a bed and curtains. Warm, soft indoor lighting fills the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her arms forward while dancing rather than R1 doing so",
+    "R1 faces R2 with his back to the camera rather than R2 being the one with her back to the camera",
+    "R1 is the facing dance partner while R2 performs the forward arm extension",
+    "R2 dances with her arms extended forward toward R1",
+    "R1 stands facing R2 during the dance",
+    "R1 and R2 dance on a dark patterned rug in a cozy bedroom"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending her arms forward while dancing, rather than R1 extending his arms forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her arms forward while dancing rather than R1 doing so"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one with his back to the camera while facing R2, rather than R2 being the one with her back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 with his back to the camera rather than R2 being the one with her back to the camera"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 act as the facing dance partner while R2 performs the forward arm extension, rather than R2 standing back-to-camera while R1 extends his arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the facing dance partner while R2 performs the forward arm extension"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 dancing with her arms extended forward toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances with her arms extended forward toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

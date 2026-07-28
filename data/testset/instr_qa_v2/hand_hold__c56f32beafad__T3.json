@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__c56f32beafad__T3",
+  "instruction": "Candid outdoor full shot of a man in an olive green parka (R1) and a woman in a beige fuzzy coat and pink beanie (R2) walking hand-in-hand on a snowy forest path. The man (R1) is on the left looking ahead, and the woman (R2) is on the right looking at him. They hold hands as they step forward. Soft winter daylight illuminates the cool-toned scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks at R1 while R1 looks ahead during the hand-in-hand walk",
+    "R1 looks ahead while walking hand-in-hand with R2",
+    "R1 and R2 hold hands as they step forward together",
+    "R1 and R2 are walking on a snowy forest path",
+    "soft winter daylight illuminates the outdoor scene"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking at R1 while R1 looks ahead during their hand-in-hand walk, rather than R1 looking at R2 while R2 looks ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks at R1 while R1 looks ahead during the hand-in-hand walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking ahead as he walks hand-in-hand with R2, rather than R2 being the one looking ahead while R1 looks at her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks ahead while walking hand-in-hand with R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands as they step forward together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands as they step forward together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking hand-in-hand with R2 rather than carrying or supporting R2's body weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are walking hand-in-hand without a carrying or support role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

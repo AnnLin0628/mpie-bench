@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__26d4b1ec995f__T6",
+  "instruction": "Cinematic film still, medium shot. In a modern office, the man in the grey patterned blazer (R2) on the left and the man in the light blue sweater (R1) on the right stand in profile facing each other. They shake right hands in front of a large window overlooking a city street. Cool, overcast daylight fills the room, casting soft shadows with a muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the light-blue-sweater participant clasping R2's right hand",
+    "R2 is the grey-patterned-blazer participant whose right hand is clasped by R1",
+    "R1 and R2 stand in profile facing each other during the handshake",
+    "R1 and R2 shake right hands in front of their bodies",
+    "The handshake takes place in a modern office with a large window overlooking a city street"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the light blue sweater who clasps R2's right hand, rather than R2 being the light-blue-sweater participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the light-blue-sweater participant clasping R2's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man in the grey patterned blazer whose right hand is clasped by R1, rather than R1 being the grey-blazer participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the grey-patterned-blazer participant whose right hand is clasped by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 using their right hands to clasp each other in front of their bodies?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 shake right hands in front of their bodies"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

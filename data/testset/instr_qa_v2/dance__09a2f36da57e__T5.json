@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T5",
+  "instruction": "Candid photographic medium shot of an indoor dance studio with a dark background. On the left, the woman in the mustard-yellow shirt (R2) stands with her left arm arched overhead, looking forward with a serious expression. In the center, the man in the rust-brown shirt (R3) is in profile facing left, his right arm arched over his head as he looks down. They stand close together, their raised arms overlapping in a dense group composition. On the right, a bystander woman with curly reddish-blonde hair in a mustard-yellow shirt looks upward with raised arms, surrounded by other blurred hands in the background. Dim, dramatic overhead lighting illuminates the scene with a warm color palette.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 has her left arm arched overhead while looking forward",
+    "R3 has his right arm arched over his head while in profile and looking down",
+    "R2 and R3 stand close together with their raised arms overlapping",
+    "R4 is a bystander looking upward with raised arms rather than being the central dance partner",
+    "indoor dance studio with a dark background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person with her left arm arched overhead while looking forward, rather than R3 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her left arm arched overhead while looking forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person in profile with his right arm arched over his head while looking down, rather than R2 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has his right arm arched over his head while in profile and looking down"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 a bystander looking upward with raised arms, rather than R4 being the central close dance partner with R2 or R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is a bystander looking upward with raised arms rather than being the central dance partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R2 and R3 form the central close dance grouping with their raised arms overlapping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 stand close together with their raised arms overlapping"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

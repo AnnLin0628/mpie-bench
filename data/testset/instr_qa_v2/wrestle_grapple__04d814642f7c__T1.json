@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__04d814642f7c__T1",
+  "instruction": "Candid documentary photograph, medium-full shot from a low angle. In a gym setting with kettlebells on shelves and colorful medicine balls in the background, the woman in the grey t-shirt and khaki pants (R2) on the left and the man in the green hoodie and grey sweatpants (R1) on the right are bending forward at the waist. Both reach their hands toward the floor in a synchronized hamstring stretch, facing slightly toward each other. The indoor gym lighting is bright and even, casting soft shadows on the black floor mat.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 bends forward at the waist and reaches his hands toward the floor in the synchronized stretch rather than supporting or carrying R2",
+    "R2 bends forward at the waist and reaches her hands toward the floor in the synchronized stretch rather than being supported or carried by R1",
+    "R1 and R2 face slightly toward each other while doing the same hamstring stretch",
+    "R1 is the man in a green hoodie and grey sweatpants participating in the stretch",
+    "R2 is the woman in a grey t-shirt and khaki pants participating in the stretch",
+    "a black floor mat is under them as they reach toward the floor",
+    "the scene is an indoor gym with kettlebells on shelves and colorful medicine balls in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 bending forward and reaching toward the floor for his own hamstring stretch, rather than supporting or carrying R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 bends forward at the waist and reaches his hands toward the floor in the synchronized stretch rather than supporting "
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 bending forward and reaching toward the floor for her own hamstring stretch, rather than being supported or carried by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 bends forward at the waist and reaches her hands toward the floor in the synchronized stretch rather than being suppo"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both bending forward at the waist with their hands reaching toward the floor in a synchronized hamstring stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 perform the same synchronized forward hamstring stretch"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black floor mat beneath R1 and R2 as they reach their hands toward the floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a black floor mat is under them as they reach toward the floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

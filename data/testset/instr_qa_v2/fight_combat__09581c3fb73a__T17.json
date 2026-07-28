@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T17",
+  "instruction": "Candid action photograph, full shot at eye-level. In an outdoor covered training area, the man in the beige t-shirt and black sweatpants (R1) stands on the left in a boxing stance, facing right. The man in the blue tank top and black shorts (R2) stands on the right with his back to the camera, facing left in a boxing stance. They are sparring on the concrete floor under bright, natural daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the sparring partner whose back is to the camera, rather than R1",
+    "R1 faces toward R2 in a boxing stance while R2 faces back toward R1 from the opposite direction",
+    "R1 and R2 are sparring with each other in boxing stances",
+    "R1 is the man in the beige t-shirt and black sweatpants participating in the sparring",
+    "R2 is the man in the blue tank top and black shorts participating in the sparring",
+    "outdoor covered training area on a concrete floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the sparring participant whose back is to the camera, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the boxer with his back to the camera"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 facing toward R2 in a boxing stance while R2 faces back toward R1 from the opposite direction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other in opposing boxing stances"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sparring with each other in boxing stances?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are mutual sparring partners"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the participant wearing the beige t-shirt and black sweatpants while sparring with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the beige-shirted sparring participant"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 sparring in an outdoor covered training area on a concrete floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor covered training area with concrete floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

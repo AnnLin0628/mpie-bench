@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T91",
+  "instruction": "Candid documentary medium-wide shot of an indoor studio with a red carpet. On the left, the man in the black polo and blue shorts (R1) stands facing right, touching the left shoulder of the woman in the white t-shirt and blue jeans (R2) who stands on the right facing left. The background features white walls and office equipment under bright overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 performs the shoulder-touch contact on R2",
+    "R2 receives the shoulder-touch contact from R1",
+    "R1 touches R2's shoulder rather than R2 touching R1's shoulder",
+    "R2's shoulder is the contacted body part in the interaction",
+    "the interaction occurs in an indoor studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person touching R2's shoulder, rather than R2 touching R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the shoulder-touch contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the shoulder contact from R1, rather than R1 receiving shoulder contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder-touch contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's shoulder the body part being touched by R1, rather than R1's shoulder being touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's shoulder is the contacted body part in the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

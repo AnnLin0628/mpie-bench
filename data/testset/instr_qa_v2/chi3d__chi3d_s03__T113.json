@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T113",
+  "instruction": "A candid wide-angle photograph from a high angle shows an indoor motion capture studio with a red carpet. On the left, the man in the black polo shirt and blue shorts (R1) stands facing right. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing him, extending her right arm to poke his stomach. The room has white walls and studio equipment in the background. The lighting is even and neutral.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active person poking R1's stomach",
+    "R1 is the person receiving the stomach poke from R2",
+    "R2 extends her right arm toward R1 rather than R1 extending his arm to poke R2",
+    "R1 and R2 stand facing each other during the poke",
+    "R2's hand/arm makes the directed contact toward R1's stomach",
+    "The interaction takes place in an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one poking R1's stomach, rather than R1 poking R2's stomach?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active person poking R1's stomach"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose stomach is being poked by R2, rather than R2 being poked by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving the stomach poke from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend her right arm toward R1's stomach, rather than R1 extending his arm toward R2's stomach?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm toward R1 rather than R1 extending his arm to poke R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing face-to-face while R2 performs the poke?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand facing each other during the poke"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's hand or arm the body part directed toward R1's stomach for the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand/arm makes the directed contact toward R1's stomach"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

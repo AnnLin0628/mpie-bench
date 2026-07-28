@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__6eaf0296a8da__T3",
+  "instruction": "Candid outdoor photograph, full shot. On an outdoor cobblestone path next to a rustic stone wall, the smiling woman in the polka-dot dress (R2) on the left stands close and holds hands with the man in the brown fedora and white shirt (R1) on the right. The man stands facing her in profile, holding his silver saxophone in his other hand. Natural daylight illuminates the scene with warm tones, capturing their happy expressions and the green foliage behind them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a silver saxophone in his other hand while holding hands with R2",
+    "R2 stands close to R1 and holds hands with him",
+    "R1 faces R2 in profile during the hand-holding interaction",
+    "silver saxophone held by R1",
+    "outdoor cobblestone path beside a rustic stone wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the silver saxophone in his other hand while holding hands with R2, rather than R2 holding the saxophone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the saxophone while hand-holding with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing close and holding hands with R1 while R1 carries the saxophone in his other hand, rather than R2 carrying the saxophone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 hand-holds R1 while R1 has the saxophone"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 in profile during their hand-holding interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 in profile"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand close enough to R1 to hold his hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands close and holds R1's hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

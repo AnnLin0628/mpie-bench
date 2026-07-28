@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__47c4dac39572__T8",
+  "instruction": "Cinematic film still, medium shot. In an outdoor park by a lake during the day, the bearded man in the beige corduroy shirt (R1) on the right and the woman in the beige hijab (R2) on the left are dancing. Their hands are joined above her head as she turns, with her back partially to the camera. The man looks at her attentively. Soft natural daylight illuminates the scene with warm tones and a blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 guides the dance by keeping their joined hands raised above R2's head as R2 turns",
+    "R2 is the one turning beneath the raised joined hands, not R1",
+    "R1 and R2 are dancing with their hands joined above R2's head",
+    "R1 looks attentively at R2 while she turns",
+    "R2 has her back partially to the camera during the turn",
+    "The scene is an outdoor park by a lake during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person turning beneath the raised joined hands, rather than R1 being the one turning beneath R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the turning dancer under the raised hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 dancing with their hands joined above R2's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 dance with joined hands raised over R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look attentively at R2 while R2 turns during the dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attends to R2 as she turns"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 dancing in an outdoor park by a lake during the day?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor park by a lake in daytime"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

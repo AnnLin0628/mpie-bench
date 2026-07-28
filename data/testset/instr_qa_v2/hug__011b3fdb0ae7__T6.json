@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__011b3fdb0ae7__T6",
+  "instruction": "Candid lifestyle photograph, medium shot. In a bright indoor room, the curly-haired woman in a red top and patterned pajama pants (R1) on the left and the straight-haired woman in a pink fuzzy sweater and patterned pajama pants (R3) on the right hold the young boy in a gray sweater (R2) aloft between them. The straight-haired woman (R3) kisses the boy's cheek affectionately, while the curly-haired woman (R1) looks up at him with a smile. The young boy (R2) looks down towards them. Soft daylight fills the space, highlighting the warm family moment.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 helps hold R2 aloft rather than being held by R2",
+    "R3 helps hold R2 aloft rather than being held by R2",
+    "R3 kisses R2 on the cheek rather than R2 kissing R3",
+    "R2 is the young boy suspended between R1 and R3",
+    "R1 looks up at R2 with a smile while he is held above",
+    "bright indoor room setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 helping support R2 aloft, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 helps hold R2 aloft rather than being held by R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 helping support R2 aloft, rather than R2 supporting R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 helps hold R2 aloft rather than being held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 kissing R2 on the cheek, rather than R2 kissing R3 on the cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 kisses R2 on the cheek rather than R2 kissing R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young boy being held aloft between R1 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young boy suspended between R1 and R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look up at R2 with a smile while R2 is held above her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up at R2 with a smile while he is held above"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

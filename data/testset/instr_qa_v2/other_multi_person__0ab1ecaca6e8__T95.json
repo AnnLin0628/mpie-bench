@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T95",
+  "instruction": "Candid outdoor medium shot of a group in a grassy park. In the foreground, a bald light-skinned man with a beard in a dark blue t-shirt and black pants (R2) crouches on the right, looking left. Next to him, a woman in a dark blue t-shirt and light blue jeans (R4) leans forward with hands ready to catch. In the background, a Black woman with an afro in a red t-shirt (R6), an Asian man in a red polo shirt (R3), and a woman in a black beanie and red t-shirt (R5) stand watching. The scene is lit by soft natural daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 leans forward with hands ready to catch while R2 crouches nearby",
+    "R2 is crouching and looking left rather than being the catch-ready person",
+    "R6 stands watching in the background while R4 has the catch-ready foreground role",
+    "R3 and R5 are background watchers rather than the foreground catch-ready participant",
+    "the group is in a grassy outdoor park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 leaning forward with hands ready to catch, rather than R2 being the one with hands ready to catch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the catch-ready role while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 crouching while R4 leans forward ready to catch, rather than R4 crouching while R2 prepares to catch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 crouches and R4 prepares to catch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 standing in the background watching while R4 is the foreground person ready to catch, rather than R6 being the catch-ready foreground person and R4 watching from the background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is a watcher and R4 is catch-ready"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R5 standing in the background watching rather than taking the foreground catch-ready role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R5 are background watchers"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

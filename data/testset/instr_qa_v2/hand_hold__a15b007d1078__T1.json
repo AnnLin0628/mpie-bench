@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__a15b007d1078__T1",
+  "instruction": "Candid medium shot photograph of a couple in a sunlit narrow alleyway. On the left, the woman in the brown jacket (R1) stands facing right, holding a vintage camera and smiling. On the right, the man in the mustard shirt (R2) stands facing left, looking at her. They are holding hands. The scene is illuminated by warm, soft daylight with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman holding the vintage camera while hand-holding R2",
+    "R2 is the man looking toward R1 during the hand-hold",
+    "R1 and R2 are standing face-to-face while holding hands",
+    "a vintage camera is present and held by R1",
+    "the couple is in a sunlit narrow alleyway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the person holding a vintage camera while R1 and R2 are holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the camera holder during the hand-hold"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the person looking toward the other person while R1 holds the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks toward R1 while R1 holds the camera"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 smile while holding the vintage camera as R2 looks at her, rather than R2 being the smiling camera holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the smiling camera holder and R2 is the viewer"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing face-to-face while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other in a hand-holding pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

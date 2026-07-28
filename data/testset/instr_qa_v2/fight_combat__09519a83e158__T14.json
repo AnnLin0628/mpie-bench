@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T14",
+  "instruction": "Candid documentary photograph, medium shot. Inside a boxing gym, the woman in the black tube top (R1) punches a silver double-end bag with a focused, open-mouthed expression. The bearded man in the black t-shirt (R2) stands behind her, holding her left hand to assist her training. The background features a black cage fence under cool gym lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the boxer punching the silver double-end bag",
+    "R2 assists R1 by holding R1's left hand from behind",
+    "R1's left hand is the hand being held or guided by R2",
+    "R2 stands behind R1 during the training contact",
+    "a silver double-end bag is the punching target",
+    "the scene is inside a boxing gym with a black cage fence"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person punching the silver double-end bag, rather than R2 being the one punching it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the boxer punching the bag"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 assisting R1's training by holding R1's left hand from behind, rather than R1 holding R2's hand to assist him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 assists R1 by holding her hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's left hand the hand being held or guided by R2, rather than R2's hand being held or guided by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand is the guided hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand behind R1 while maintaining hand contact with R1's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 and holds her hand"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 training as the active striker facing the bag while R2 serves as her assisting trainer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the striker and R2 is the assistant"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a silver double-end bag serving as the target that R1 punches?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "silver double-end punching bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

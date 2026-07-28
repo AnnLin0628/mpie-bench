@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__379445d742e6__T1",
+  "instruction": "Candid documentary full shot of an outdoor paved path lined with green grass and trees in daylight. On the left, the dark-haired woman in a black long-sleeved top and pants (R1) walks forward looking down, her left hand resting on the shoulder of the white-haired woman in a black short-sleeved dress (R2) who walks beside her on the right, also looking down. They walk side-by-side in natural daylight with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests her left hand on R2's shoulder",
+    "R2 receives the shoulder contact from R1's hand",
+    "R1 initiates the contact by placing her hand on R2 rather than the reverse",
+    "R1 and R2 walk side-by-side while the shoulder contact is maintained",
+    "They are on an outdoor paved path lined with grass and trees in daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting her left hand on R2's shoulder, rather than R2 resting her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her left hand on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving shoulder contact from R1's hand, rather than R1 receiving shoulder contact from R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder contact from R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 initiate the upper-body contact by placing her hand on R2, rather than R2 placing a hand on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the contact by placing her hand on R2 rather than the reverse"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk beside R2 while maintaining her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side while the shoulder contact is maintained"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking together on an outdoor paved path lined with grass and trees in daylight?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "They are on an outdoor paved path lined with grass and trees in daylight"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T21",
+  "instruction": "Clean studio photograph, full shot. In a minimalist indoor studio with a beige wall and white floor, three young gymnasts pose. On the left, the dark-haired girl (R1) in a beige long-sleeve top and shorts stands on one leg in a vertical split. On the right, the dark-haired girl (R6) in a matching beige outfit performs a vertical split on the opposite leg. In the center foreground, the blonde girl (R5) in a beige long-sleeve top and shorts holds a backbend bridge pose on the floor. Soft, diffused natural light illuminates the scene, creating a warm, neutral color palette.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R5 is the gymnast holding a backbend bridge pose on the floor, rather than R1 or R6",
+    "R1 is a standing gymnast performing a vertical split, rather than the floor bridge gymnast",
+    "R6 is also a standing gymnast performing a vertical split on the opposite leg from R1",
+    "R5's body role is a floor-based backbend bridge pose in the center foreground",
+    "R1 and R6 have matching upright vertical-split pose roles while R5 has the contrasting bridge role",
+    "the scene is a minimalist indoor studio with a beige wall and white floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the gymnast holding a backbend bridge pose on the floor, rather than R1 or R6 holding that floor bridge pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the floor bridge gymnast rather than R1 or R6"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 a standing gymnast performing a vertical split, rather than being the gymnast down on the floor in the backbend bridge?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the standing vertical-split role rather than R5's floor bridge role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 performing a vertical split on the opposite leg from R1, rather than R6 having the same floor bridge role as R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 has a standing opposite-leg vertical split role, not R5's bridge role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 positioned in the center foreground while holding a backbend bridge pose on the floor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's body configuration is a center-foreground floor bridge"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R6 both have upright vertical-split pose roles while R5 has the contrasting floor-based bridge pose role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R6 are vertical-split gymnasts while R5 is the bridge gymnast"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

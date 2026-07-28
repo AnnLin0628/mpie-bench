@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__0366f4ef5c87__T1",
+  "instruction": "Candid party photograph, medium shot. Indoors at a lively party with a reel-to-reel player on the wall. The short-haired blonde woman (R1) in a pink polo shirt and blue jeans stands in the foreground, smiling widely while holding an orange soda bottle. Behind her, the ginger man with a beard (R2) in a striped shirt wraps his arms around her waist in a warm embrace, smiling down at her. The scene is bathed in vibrant purple and pink ambient light, creating a festive and intimate mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps his arms around R1's waist from behind",
+    "R1 is the person being held around the waist by R2",
+    "R2 smiles down at R1 while embracing her from behind",
+    "R1 stands in the foreground while R2 is positioned behind her in the waist embrace",
+    "R1 holds an orange soda bottle",
+    "the party setting includes a reel-to-reel player on the wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his arms around R1's waist from behind, rather than R1 wrapping her arms around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms around R1's waist from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held around the waist by R2, rather than R2 being held around the waist by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being held around the waist by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 behind R1 and smiling down at her while embracing her waist, rather than R1 being behind R2 and smiling down at him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles down at R1 while embracing her from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in the foreground while R2 is positioned behind her during the waist embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in the foreground while R2 is positioned behind her in the waist embrace"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding an orange soda bottle during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds an orange soda bottle"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

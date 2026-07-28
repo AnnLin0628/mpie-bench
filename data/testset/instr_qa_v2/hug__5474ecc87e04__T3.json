@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5474ecc87e04__T3",
+  "instruction": "Candid outdoor photograph, medium close-up. In a bright winter forest, the woman with curly hair (R1) wearing a black puffer jacket and a gray scarf looks off to the left with a soft, serene smile. The man in the gray beanie (R2) wearing a plaid jacket stands close behind her, looking at her face with an affectionate, gentle smile. He wraps his arm over her shoulder in a warm embrace, holding her close. Bright, natural daylight illuminates the couple, creating soft winter tones and a beautifully blurred background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 wraps his arm over R1's shoulder to hold her close",
+    "R2 stands close behind R1 rather than R1 standing behind R2",
+    "R2 looks at R1's face while R1 looks away from him",
+    "R1 is the person being held close in the embrace",
+    "The scene is a bright winter forest with natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap his arm over R1's shoulder to hold her close, rather than R1 wrapping her arm over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one wrapping an arm over R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned close behind R1 while holding her, rather than R1 being behind R2 and holding him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 in the close embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being held close by R2's arm, rather than R2 being the person held close by R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the close arm-over-shoulder hold from R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look at R1's face while R1 looks off away from him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gazes at R1 while R1 looks off"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

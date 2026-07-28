@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T8",
+  "instruction": "Candid action photograph, full shot. Inside a martial arts gym with grey padded walls, the shirtless man with a mullet (R2) on the left and the man in the black t-shirt (R1) on the right continue sparring. The shirtless man (R2) throws a straight left punch, while the man in the black t-shirt (R1) ducks low to slip the punch and lunges forward. Both wear glasses, boxing gloves, and white shin guards. In the background, a bystander in a black t-shirt stands watching. Neutral overhead lighting illuminates the grey floor mats.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 throws a straight left punch toward R1 while R1 slips it",
+    "R1 ducks low to avoid R2's punch rather than punching",
+    "R1 lunges forward while evading R2's strike",
+    "R2 is the attacking puncher and R1 is the evasive sparring partner",
+    "R1 and R2 both wear boxing gloves",
+    "R1 and R2 both wear white shin guards",
+    "the sparring occurs inside a martial arts gym with grey padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one throwing a straight left punch toward R1, rather than R1 throwing the straight left punch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 throws a straight left punch toward R1 while R1 slips it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one ducking low to slip R2's punch, rather than R2 ducking low to slip R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 ducks low to avoid R2's punch rather than punching"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lunging forward while evading R2's strike, rather than R2 lunging forward while evading R1's strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lunges forward while evading R2's strike"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 acting as the attacking puncher while R1 acts as the evasive sparring partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacking puncher and R1 is the evasive sparring partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

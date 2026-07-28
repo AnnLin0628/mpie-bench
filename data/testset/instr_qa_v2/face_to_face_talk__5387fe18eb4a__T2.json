@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__5387fe18eb4a__T2",
+  "instruction": "Candid documentary photograph, medium close-up at eye-level with a shallow depth of field. In an outdoor European street, the blonde woman in the gray turtleneck (R1) stands on the left, smiling widely towards the camera. Next to her, the man in the tan corduroy jacket (R2) stands on the right, smiling. The man (R2) extends his arm forward, holding a white smartphone that is blurred in the immediate foreground to take a selfie of them both. The scene is lit by soft, natural daylight, casting gentle highlights on their faces.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends his arm forward holding the smartphone to take a selfie of both people",
+    "R1 is the companion posing in R2's selfie rather than the one operating the phone",
+    "R2 is the selfie-taker while R1 smiles toward the camera beside him",
+    "white smartphone blurred in the immediate foreground",
+    "outdoor European street setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending his arm forward to hold the smartphone for the selfie, rather than R1 holding the smartphone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric selfie-taking duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 posing as the companion included in the selfie while R2 operates the phone, rather than R1 operating the phone for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is included in R2's selfie rather than taking it"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing together for a selfie with R2 acting as the phone holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the phone while both pose together"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a white smartphone visible blurred in the immediate foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "white smartphone in the foreground"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

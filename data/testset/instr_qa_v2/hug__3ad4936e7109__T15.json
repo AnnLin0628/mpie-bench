@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T15",
+  "instruction": "A candid studio photograph, captured in a full shot from a slightly high angle. In a minimalist indoor studio with a white background and floor, three barefoot friends sit together. On the left, the woman with wavy light brown hair (R3), wearing a black crop top, white shirt, and blue jeans, laughs while looking right. In the center, the woman with straight dark hair (R2), in a white top, denim jacket, and black pants, laughs heartily. On the right, the woman with curly brown hair (R1), in a white shirt and blue jeans, laughs joyfully. The friends sit on the floor, with the woman on the left (R3) reaching her arm towards the center woman (R2) as they share a playful laugh under bright, even studio lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 actively reaches her arm toward R2",
+    "R2 is the target of R3's reaching gesture",
+    "R3 reaches toward R2 rather than toward R1",
+    "R1 sits as the separate laughing friend while R3 reaches toward R2",
+    "R1, R2, and R3 sit together on the floor in a minimalist white studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one actively reaching her arm toward R2, rather than R2 reaching her arm toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 actively reaches her arm toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being reached toward by R3, rather than R3 being the person reached toward by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the target of R3's reaching gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 reach her arm toward R2 rather than toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 reaches toward R2 rather than toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the friend performing the reaching gesture toward R2 while R1 remains another seated laughing friend?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits as the separate laughing friend while R3 reaches toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__21a7f6d8bbb1__T4",
+  "instruction": "Cinematic film still, full shot through boxing ring ropes. The shirtless tattooed man (R1) on the right, back to the camera, extends a punch toward the shirtless athletic man with braids (R2) on the left, who leans back to evade. Both wear black shorts and boxing gloves. The dark gym setting is lit by cool overhead spotlights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the boxer extending a punch toward R2",
+    "R2 is the boxer leaning back to evade R1's punch",
+    "R1 has the attacking punching role while R2 has the defensive evading role",
+    "both R1 and R2 wear boxing gloves",
+    "the scene is framed through boxing ring ropes",
+    "the setting is a dark gym lit by cool overhead spotlights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending a punch toward R2, rather than R2 extending a punch toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the boxer throwing the punch toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning back to evade R1's punch, rather than R1 leaning back to evade R2's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the boxer evading R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the attacking role with an outstretched punch while R2 takes the defensive role of pulling away?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks while R2 defends by evading"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown with his back toward the camera while punching in R2's direction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration while performing the punch"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the boxing action shown through boxing ring ropes in a dark gym with cool overhead spotlights?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing ring ropes and dark gym setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3196b0211541__T3",
+  "instruction": "Candid studio portrait, medium close-up. Against a plain light grey background, three women are huddled in a warm embrace. On the left, the straight-haired woman (R1) in a white strap top smiles gently at the camera. In the center, the freckled woman with an afro (R3) in a light blue top smiles warmly, her hand resting on R1's shoulder. On the right, the curly-haired woman (R2) in a dark strap top leans her head close, smiling softly. The scene is illuminated by soft, diffused studio lighting, creating a calm and affectionate atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 rests her hand on R1's shoulder",
+    "R1 receives the shoulder touch from R3",
+    "R2 leans her head close to the others",
+    "R3 is positioned in the central contact role of the huddle",
+    "plain light grey studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 resting her hand on R1's shoulder, rather than R1 resting her hand on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 hand-on-shoulder contact directed toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving R3's hand on her shoulder, rather than R3 receiving a hand-on-shoulder touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R3's shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning her head close toward the huddled group, rather than R1 being described as the one leaning her head close toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the head-leaning contact role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 in the center of the close huddle while maintaining shoulder contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the central contact role with R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, and R3 arranged in a close, warm huddle with R3's hand contacting R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "three-person close huddle with labeled shoulder contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

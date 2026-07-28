@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T6",
+  "instruction": "A candid lifestyle photograph, medium shot of a couple walking in an outdoor park near a bridge. On the left, the smiling woman with a shaved head (R1) wearing a white crop top and grey shorts carries a pink tote bag. On the right, the bearded man (R2) wearing a white t-shirt walks with his arm around her shoulder, kissing her cheek. He carries a rolled-up red yoga mat under his arm. Bright, natural daylight illuminates the scene, casting soft shadows on the grass with a blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 has his arm around R1's shoulder",
+    "R2 is kissing R1's cheek",
+    "R1 is the person receiving the cheek kiss from R2",
+    "R1 carries a pink tote bag",
+    "R2 carries a rolled-up red yoga mat under his arm",
+    "the couple is walking in an outdoor park near a bridge"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 put his arm around R1's shoulder, rather than R1 putting her arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his arm around R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 kissing R1's cheek, rather than R1 kissing R2's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is kissing R1's cheek"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person receiving the cheek kiss while R2 leans in to kiss her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving the cheek kiss from R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 carrying a pink tote bag?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 carries a pink tote bag"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 carrying a rolled-up red yoga mat under his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 carries a rolled-up red yoga mat under his arm"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking in an outdoor park near a bridge?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the couple is walking in an outdoor park near a bridge"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

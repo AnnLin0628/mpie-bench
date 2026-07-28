@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T10",
+  "instruction": "Cinematic still, wide low-angle shot. In a dimly lit hall with wooden floors, three dancers perform floor choreography. In the center foreground, the young man in the white t-shirt and black harness (R3) leans back, supporting himself on his right hand with his left leg extended. On the left, the blonde man in the black leather jacket (R1) leans back on the floor. On the far right, the man in the black mesh top (R2) is partially visible lying down. Moody red and blue lighting illuminates the dramatic poses.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the dancer in the center foreground leaning back and supporting himself on his right hand",
+    "R3 extends his left leg while supporting himself on the floor",
+    "R1 leans back on the floor as part of the choreography",
+    "R2 is partially visible lying down",
+    "the dancers perform in a dimly lit hall with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer supporting himself on his right hand while leaning back, rather than R1 doing that support pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the one-hand self-supporting floor pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partially visible dancer lying down, rather than R3 being the partially visible lying-down dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the partially visible lying-down role while R3 is foregrounded"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 leaning back in the center foreground with his left leg extended?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's extended-leg floor choreography role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning back on the floor as part of the floor choreography?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's leaning-back floor choreography role"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the dancers performing in a dimly lit hall with wooden floors?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "dimly lit hall with wooden floors"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

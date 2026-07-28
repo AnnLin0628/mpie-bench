@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T21",
+  "instruction": "Candid outdoor photograph, medium full shot from a low angle looking up. On an outdoor rooftop under a bright blue sky with light clouds, the woman with reddish-brown hair (R1) sits in the foreground wearing a white t-shirt, blue jeans, and a light grey sweater draped over her shoulders, smiling as she looks to the left. Directly behind her stands the Black man with a beard (R6), wearing a dark blue short-sleeved shirt, grey jeans, and white sneakers, looking off-camera with a relaxed smile. The scene is illuminated by bright natural daylight, creating a cheerful, sunny atmosphere with soft shadows.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R1 is seated in the foreground while R6 stands directly behind her",
+    "R6 is the person standing behind R1 rather than the seated foreground person",
+    "R1 is the seated foreground subject in the arrangement with R6 behind her",
+    "R6 is the relaxed standing subject positioned directly behind R1",
+    "The scene is on an outdoor rooftop under a bright blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 seated in the foreground while R6 stands directly behind her, rather than R6 being seated in the foreground with R1 behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated in the foreground while R6 stands directly behind her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R6 occupy the standing-behind role relative to seated R1, rather than R1 occupying the standing-behind role relative to R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the person standing behind R1 rather than the seated foreground person"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the seated foreground person in the arrangement with R6 behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the seated foreground subject in the arrangement with R6 behind her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R6 the relaxed standing person positioned directly behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the relaxed standing subject positioned directly behind R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

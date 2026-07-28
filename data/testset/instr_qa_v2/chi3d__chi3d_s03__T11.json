@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T11",
+  "instruction": "A candid full-shot documentary photograph of an indoor motion capture studio with a red carpeted floor and white walls. On the left, the man in the black polo shirt and blue shorts (R1) stands facing right, extending his left arm to touch the right shoulder of the woman in the white t-shirt and blue jeans (R2). The woman (R2) stands on the right, facing left, looking towards him. No bystanders are present. The scene is illuminated by bright overhead fluorescent lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person extending an arm to make contact with R2",
+    "R1 touches R2's right shoulder rather than R2 touching R1's shoulder",
+    "R2 receives the shoulder touch while looking toward R1",
+    "R1 uses his left arm for the shoulder contact",
+    "The interaction takes place in an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one extending his arm to touch R2, rather than R2 extending an arm to touch R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the contact toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 touch R2's shoulder, rather than R2 touching R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the shoulder touch from R1, rather than R1 receiving a shoulder touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the contact recipient"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his left arm to reach toward R2's right shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's left arm contacts R2's right shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

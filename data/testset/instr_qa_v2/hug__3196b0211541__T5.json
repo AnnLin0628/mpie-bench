@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3196b0211541__T5",
+  "instruction": "Studio portrait photograph, medium shot. Against a solid light blue background, three women pose closely. On the left, the Asian woman in a beige tank top (R1) smiles forward, holding the arm of the curly-haired woman in a beige tank top (R2) in the center, who also smiles. On the right, the afro-haired woman in a beige tank top (R3) hugs the curly-haired woman from behind, smiling widely with her chin on her shoulder. Soft studio lighting illuminates their warm skin tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds R2's arm",
+    "R3 hugs R2 from behind",
+    "R3 places her chin on R2's shoulder",
+    "R2 is the central person receiving contact from both R1 and R3",
+    "solid light blue studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's arm, rather than R2 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 place her chin on R2's shoulder, rather than R2 placing her chin on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 places her chin on R2's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the central person receiving contact from both R1 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central person receiving contact from both R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in contact with R2 by holding R2's arm while they pose closely?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__6766c79343cf__T1",
+  "instruction": "Candid documentary photograph, medium shot. Inside an unfinished concrete building, the woman in the yellow safety vest and yellow hard hat (R2) stands on the left in profile, facing right. On the right, the woman in the orange safety vest and white hard hat (R1) stands in profile, facing left. They clasp their right hands in a firm handshake between them, smiling and making eye contact. The background features a plain concrete wall and a glass sliding door on the far left. Natural, soft light illuminates the scene, highlighting the bright safety gear against the muted grey surroundings.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the profile person facing left into the handshake with R2",
+    "R2 is the profile person facing right into the handshake with R1",
+    "R1 and R2 clasp their right hands in a firm handshake between them",
+    "R1 and R2 smile and make eye contact during the handshake",
+    "R1 and R2 wear hard hats as safety gear during the interaction",
+    "The handshake occurs inside an unfinished concrete building"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the handshake, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

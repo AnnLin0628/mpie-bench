@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__04d814642f7c__T9",
+  "instruction": "Candid documentary medium-full shot in an indoor gym. The man in the green hoodie (R1) stands center-right, extending his arms forward with interlocked fingers to stretch, looking ahead. In the foreground left, the woman in the grey t-shirt (R2) stands with her back to the camera, facing him. Overhead gym lighting casts a natural glow over the scene, with training equipment softly blurred in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his arms forward with interlocked fingers to stretch rather than R2 doing that action",
+    "R2 stands with her back to the camera facing R1 rather than R1 being the back-to-camera person",
+    "R1 looks ahead while stretching as R2 faces him",
+    "training equipment is softly blurred in the gym background",
+    "the setting is an indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending his arms forward with interlocked fingers to stretch, rather than R2 doing that stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the forward interlocked-finger stretch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing with her back to the camera while facing R1, rather than R1 being the back-to-camera person facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 with her back to the camera"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look ahead while holding his arms extended in a stretch as R2 stands opposite him facing him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stretches while R2 faces him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__601fd93fbbee__T7",
+  "instruction": "Candid cinematic still, medium close-up. Outdoors in a sunny grassy field, friends gather. In the foreground, the man in the olive shirt (R3) embraces the red-haired woman (R2) from behind. The red-haired woman, wearing a black off-shoulder top, smiles brightly at the camera, while the man in the olive shirt looks to the left with a pleased expression. In the left background, the man with glasses (R4) sits in a striped shirt, looking away. Bright daylight illuminates the scene, casting soft shadows over a warm, blurred background.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R3 embraces R2 from behind in the foreground",
+    "R2 is the person being embraced while R3 is the person doing the behind embrace",
+    "R2 smiles toward the camera during the embrace with R3",
+    "R4 sits in the left background looking away while R2 and R3 are the foreground contact pair",
+    "The scene is outdoors in a sunny grassy field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person embracing R2 from behind, rather than R2 embracing R3 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the behind embrace on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being held in the foreground by R3, rather than R3 being held from behind by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the embraced person and R3 is the embracer"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned behind R2 while maintaining the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's body position is behind R2 during contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 smiling toward the camera while R3 embraces her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's foreground role during R3's embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__77e034634520__T5",
+  "instruction": "Candid documentary photograph, medium shot. In a sunny outdoor park with green grass and trees, a woman in a black beanie and red t-shirt (R4) stands in the foreground right, her body angled away as she turns her head back to laugh joyfully. Behind her on the left, a bald man in a dark blue t-shirt (R1) stands in the background, smiling warmly as he watches her. The scene is illuminated by bright, warm natural sunlight filtering through the trees, creating a shallow depth of field that softly blurs the background.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 is behind R4, smiling and watching her",
+    "R4 is in the foreground, angled away while turning her head back and laughing",
+    "R4 is the joyful laughing subject rather than R1",
+    "R1 is the warm observer rather than the foreground laughing subject",
+    "the scene is set in a sunny outdoor park with grass and trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person behind R4 who is smiling and watching her, rather than R4 being the background observer watching R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the background observer watching R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground person turning her head back and laughing, rather than R1 being the foreground laughing subject?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the foreground laughing subject"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have her body angled away while turning her head back joyfully?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 turns back while laughing"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile warmly while directing his attention toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles while watching R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__e73975b1f538__T2",
+  "instruction": "A candid family photograph shows a medium full shot of an indoor playroom. On a green rug with a white faux fur mat, the man with grey hair and beard (R1) is on all fours, wearing a blue and white checkered shirt and dark jeans, smiling at the camera. Sitting on his back, the older girl with long blonde hair (R2), wearing a pink short-sleeved dress and grey tights, extends her arms out like wings with a joyful smile. In the background, a younger blonde girl in a white top smiles with her arms slightly raised. A wooden clothing rack with hanging dresses stands behind them. The scene is illuminated by soft, bright indoor light, creating a warm, pastel-toned atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is on all fours supporting R2 on his back",
+    "R2 is sitting on R1's back rather than carrying him",
+    "R1 is underneath while R2 balances above with arms extended like wings",
+    "R1 and R2 are in a piggyback-style family play pose",
+    "A green rug with a white faux fur mat is under the interaction",
+    "The setting is an indoor playroom"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 on all fours supporting R2 on his back, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight from below"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 sitting on R1's back while R1 carries her, rather than R1 sitting on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the rider and R1 is the carrier"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned underneath on hands and knees while R2 is above him with her arms extended like wings?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the lower support and R2 is the upper passenger"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 maintain the playful piggyback-style riding role on R1's back while R1 holds the crawling support posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "piggyback-style contact role between R1 and R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 positioned on a green rug with a white faux fur mat beneath them?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "green rug and white faux fur mat under the play interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

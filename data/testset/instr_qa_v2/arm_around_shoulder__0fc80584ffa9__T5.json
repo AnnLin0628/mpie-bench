@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T5",
+  "instruction": "Candid studio portrait, medium shot. Indoors against a solid dusty pink wall, the curly-haired woman in a white shirt (R1) stands in front, smiling at the camera with one hand in her jeans pocket. The straight-haired woman in a denim jacket (R2) stands behind, hugging her with hands on her shoulders and smiling gently. Soft, diffused studio lighting creates a warm, minimalist atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 stands behind R1 and places her hands on R1's shoulders",
+    "R1 is the front person receiving the shoulder contact from R2",
+    "R1 smiles toward the camera with one hand in her jeans pocket while R2 smiles behind her",
+    "the portrait is indoors against a solid dusty pink wall",
+    "soft diffused studio lighting creates a warm minimalist atmosphere"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person behind R1 placing hands on R1's shoulders, rather than R1 standing behind R2 with hands on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the shoulder-contact giver from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the front person receiving R2's hands on her shoulders, rather than R2 being the front person receiving R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the shoulder contact in front"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 initiate the arm-around-shoulder contact on R1 from behind, rather than R1 initiating that contact on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the behind-the-shoulders contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned in front while R2 is positioned behind her with hands resting on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "front-and-behind shoulder-contact configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

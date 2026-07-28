@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__6dde770d54d0__T5",
+  "instruction": "Cinematic still, medium full shot on a sandy beach under a clear blue sky. In the center foreground, the boy in the blue and black wetsuit (R2) rides on the shoulders of the man in the black wetsuit (R1). The boy (R2) points toward the left with his right arm and smiles, while the man (R1) holds a white surfboard under his left arm and looks toward the left with an open mouth. The man holds the boy's legs to secure him. Bright, direct daylight casts soft shadows on the sand.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 on his shoulders",
+    "R1 holds R2's legs to secure him",
+    "R2 rides on R1's shoulders as the passenger",
+    "R2 points with his right arm while being carried",
+    "R1 holds a white surfboard under his left arm",
+    "sandy beach under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his shoulders, rather than R2 carrying R1 on his shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's legs to secure R2, rather than R2 holding R1's legs to secure R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's legs to secure him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person riding above on R1's shoulders, rather than R1 riding above on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rides on R1's shoulders as the passenger"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 point with his right arm while R1 supports him on his shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points with his right arm while being carried"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a white surfboard under his left arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a white surfboard under his left arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

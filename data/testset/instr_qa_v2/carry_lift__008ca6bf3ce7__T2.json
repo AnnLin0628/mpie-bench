@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__008ca6bf3ce7__T2",
+  "instruction": "Cinematic romantic film still, close-up low angle. Outdoors in front of a beige house. The smiling woman in the pink turtleneck (R1) has her arms wrapped around the neck of the man in the teal henley (R2), who holds her close. Warm natural sunlight illuminates them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2's neck",
+    "R2 holds R1 close while her arms are around his neck",
+    "R2 is the person whose neck is encircled by R1's arms",
+    "R1 is the smiling woman engaged in the close romantic contact with R2",
+    "They are outdoors in front of a beige house"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her arms around R2's neck, rather than R2 wrapping his arms around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding R1 close while R1's arms are around his neck, rather than R1 holding R2 close in that same role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 close while her arms are around his neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose neck is encircled by R1's arms, rather than R1 being the one whose neck is encircled by R2's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose neck is encircled by R1's arms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the smiling woman who has her arms wrapped around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the smiling woman engaged in the close romantic contact with R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the man who holds R1 close during the romantic contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 close while her arms are around his neck"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

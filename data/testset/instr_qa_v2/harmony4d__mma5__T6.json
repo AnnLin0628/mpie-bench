@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma5__T6",
+  "instruction": "A candid action photograph with a low-angle full shot of an indoor gym with gray mats. On the left, the man in the black and yellow athletic wear (R1) stands leaning forward, looking down. On the right, the man in the gray t-shirt (R2) lies on his back on the mat, facing upward with his legs raised defensively. The standing man (R1) grips the raised leg of the grounded man (R2) to control his movement. In the background, the legs of blurred bystanders and several camera tripods are visible. The lighting is neutral and overhead, casting soft shadows on the gray floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands over R2 while gripping R2's raised leg to control his movement",
+    "R2 is grounded on his back with his legs raised defensively toward R1",
+    "R1 is the standing, forward-leaning person looking down at R2",
+    "R2 is the face-up grounded person on the mat",
+    "gray gym mats are under the interaction",
+    "camera tripods and blurred bystander legs are visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gripping R2's raised leg to control R2's movement, rather than R2 gripping R1's raised leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls R2 by gripping R2's raised leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the standing person leaning over the grounded R2, rather than R2 standing over a grounded R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is standing over R2 while R2 is grounded"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying on his back with legs raised defensively toward R1, rather than R1 lying on his back with legs raised toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defensive grounded person with raised legs"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning forward and looking down at R2 during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward looking down at R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 face-up on the mat while R1 remains upright near him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies face-up on the mat as R1 stays upright"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

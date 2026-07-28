@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T17",
+  "instruction": "A candid documentary wide shot captures an indoor motion capture studio featuring a red carpet, white walls, and technical equipment. On the left, the woman in the white t-shirt and blue jeans (R2) stands facing right, reaching her hand toward the man's shoulder. On the right, the man in the black polo shirt and blue shorts (R1) stands facing left, looking directly at her. The room is brightly lit by overhead fluorescent lights, casting soft shadows on the red floor. The camera is positioned at eye level, capturing both subjects in full-body view.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches her hand toward R1's shoulder",
+    "R1 is the person whose shoulder R2 is reaching toward",
+    "R1 looks directly at R2 while she reaches toward him",
+    "R2 faces R1 while extending her hand toward his shoulder",
+    "R1 faces R2 as the recipient of her reaching gesture",
+    "technical equipment is visible in the indoor motion capture studio",
+    "the scene is set on a red carpet in a brightly lit indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one reaching her hand toward R1's shoulder, rather than R1 reaching his hand toward R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches her hand toward R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder R2 is reaching toward, rather than R2 being the person whose shoulder R1 reaches toward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the target of R2's reaching gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking directly at R2 while R2 reaches toward him, rather than R2 being described as looking directly at R1 while he reaches toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks directly at R2 while R2 reaches toward him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

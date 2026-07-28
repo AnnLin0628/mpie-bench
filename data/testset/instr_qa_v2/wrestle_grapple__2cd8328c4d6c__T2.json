@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T2",
+  "instruction": "Studio photograph, full shot, high angle. In a minimalist white studio, the dancer in the white outfit (R2) on the left leans forward with one arm extended, while the dancer in the black outfit (R1) on the right stands tall, leaning back with one arm raised high. They pose back-to-back without touching, executing sharp, angular contemporary dance movements. Bright, clean studio lighting casts soft, distinct shadows on the white floor, emphasizing the high-contrast black and white palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands tall while leaning back with one arm raised high",
+    "R2 leans forward with one arm extended",
+    "R1 and R2 pose back-to-back without touching",
+    "R1 and R2 execute sharp angular contemporary dance movements",
+    "minimalist white studio with bright clean lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing tall and leaning back with one arm raised high, rather than R2 taking that raised-arm leaning-back pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's raised-arm leaning-back dance pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward with one arm extended, rather than R1 taking that forward-leaning extended-arm pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's forward-leaning extended-arm dance pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posed back-to-back without touching, with R1 leaning back and R2 leaning forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "back-to-back non-contact body configuration with distinct R1/R2 poses"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold the tall, raised-arm role in the dance pose while R2 holds the forward-reaching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contrasting contemporary dance roles for R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

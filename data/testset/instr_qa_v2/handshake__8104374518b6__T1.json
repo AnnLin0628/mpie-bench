@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__8104374518b6__T1",
+  "instruction": "Professional corporate photograph, medium shot. In a modern office meeting room with grey curtains, the woman with long brown hair (R1) on the left, standing in profile in a beige blazer, shakes hands with the woman with short blonde hair (R2) on the right, who stands in a light blue blazer. They stand opposite each other, clasping right hands over a wooden conference table holding a laptop and water glasses. Soft indoor lighting illuminates the scene, creating a cool-toned, professional atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the long-brown-haired woman in profile clasping R2's right hand",
+    "R2 is the short-blonde-haired woman reciprocating the right-hand clasp with R1",
+    "R1 and R2 stand opposite each other while clasping right hands",
+    "the clasped hands are over a wooden conference table",
+    "the conference table holds a laptop and water glasses",
+    "the scene is a modern office meeting room with grey curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the long-brown-haired woman in profile clasping R2's right hand, rather than R2 being that in-profile right-hand participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the in-profile participant clasping R2's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stand opposite each other while clasping each other's right hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand opposite each other in a right-hand clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is the contact between R1 and R2 specifically a meeting of their right hands rather than another body part?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 make contact through their right hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

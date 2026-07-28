@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__6766c79343cf__T2",
+  "instruction": "Candid documentary photograph, medium shot. Inside an unfinished concrete building, the woman in the yellow safety vest and yellow hard hat (R2) stands on the left in profile, facing right. On the right, the woman in the orange safety vest and white hard hat (R1) stands in profile, facing left. They shake right hands, with R2's thumb resting visibly on top of R1's hand. Both women maintain eye contact and smile warmly. The background consists of a concrete wall and a glass door. Natural light fills the space, emphasizing the vibrant orange and yellow vests.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's thumb rests visibly on top of R1's hand during their right-hand clasp",
+    "R1's hand is the one underneath R2's visible thumb in the clasp",
+    "R1 and R2 clasp right hands while facing each other",
+    "R1 and R2 maintain eye contact and smile during the hand contact",
+    "the interaction occurs inside an unfinished concrete building with a concrete wall and glass door"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have her thumb visibly resting on top of R1's hand, rather than R1's thumb resting on top of R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's thumb rests visibly on top of R1's hand during their right-hand clasp"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose hand is underneath R2's visible thumb in the hand clasp, rather than R2 being underneath R1's thumb?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand is the one underneath R2's visible thumb in the clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the hand contact, is R2's hand positioned on top at the thumb area while R1's hand receives that top thumb placement, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand has the top thumb placement over R1's hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 maintain eye contact and smile warmly while their right hands are clasped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain eye contact and smile during the hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

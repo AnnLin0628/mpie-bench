@@ -1,0 +1,65 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T2",
+  "instruction": "Candid studio medium photograph of two women posing in front of a plain white wall. On the left, the woman with voluminous afro hair (R1) in a mauve shirt makes a 'T' hand gesture while smiling. On the right, the woman with short brown hair (R2) in a striped shirt smiles warmly with closed eyes. They stand side-by-side under soft, even lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman making a 'T' hand gesture while smiling",
+    "R2 is the woman smiling warmly with closed eyes",
+    "R1 and R2 pose side-by-side with distinct gestures/expressions",
+    "plain white wall studio setting under soft, even lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person making a 'T' hand gesture, rather than R2 making that gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the distinctive T hand gesture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person smiling warmly with closed eyes while R1 is the one making the 'T' hand gesture, rather than those roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the closed-eye smile role while R1 gestures"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold her hands in a T-shaped pose while R2 poses next to her with a warm closed-eye smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand-pose role contrasted with R2's expression role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

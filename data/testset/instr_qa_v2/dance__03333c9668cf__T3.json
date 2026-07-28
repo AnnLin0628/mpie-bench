@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03333c9668cf__T3",
+  "instruction": "Cinematic still with a retro 1980s aesthetic, medium shot at eye-level in an indoor dance studio with large arched windows. On the left, the man with a mustache and red headband in a blue t-shirt (R2) stands facing left, looking back over his shoulder with a smile while holding his arms in an aerobic pose. On the right, the woman with curly brown hair in a light blue leotard (R1) stands facing right, looking back over her shoulder with a smile. The man (R2) and the woman (R1) are positioned back-to-back, performing a synchronized aerobics routine. Bright, soft natural light streams from the windows behind them, creating a cool, airy palette.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the mustached man in a red headband holding his arms in an aerobic pose",
+    "R1 is the curly-haired woman in a light blue leotard paired back-to-back with R2",
+    "R1 and R2 perform a synchronized aerobics routine back-to-back",
+    "R2 looks back over his shoulder with a smile during the routine",
+    "The setting is an indoor dance studio with large arched windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the dancer described as holding his arms in an aerobic pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the aerobic arm pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the curly-haired woman paired back-to-back with the mustached man?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman paired back-to-back with R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned back-to-back while performing a synchronized aerobics routine?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 perform synchronized aerobics back-to-back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look back over his shoulder with a smile during the aerobics routine?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles while looking back over his shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

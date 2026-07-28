@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__906857f24c03__T7",
+  "instruction": "Studio photograph, full shot. In an indoor studio with draped beige curtains, a shirtless man in black pants (R2) stands facing forward, looking down at a woman in a beige sports bra and black shorts (R1). The woman is suspended in a side-lying pose, her left leg extended and right leg bent. The shirtless man supports her by holding her left thigh and her raised hand. No bystanders are present. Soft, warm studio lighting illuminates the scene, casting gentle shadows on the fabric background.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's suspended body weight",
+    "R2 holds R1's left thigh while supporting her",
+    "R2 holds R1's raised hand while supporting her",
+    "R1 is suspended in a side-lying dance pose while R2 stands",
+    "R1 has one leg extended and the other bent during the supported pose",
+    "The scene is an indoor studio with draped beige curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's weight while R1 is suspended, rather than R1 supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's suspended body weight"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's left thigh as part of the support, rather than R1 holding R2's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's left thigh while supporting her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's raised hand while supporting her pose, rather than R1 holding R2's raised hand to support him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's raised hand while supporting her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the suspended dancer in a side-lying pose while R2 remains standing and supports her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is suspended in a side-lying dance pose while R2 stands"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have one leg extended and the other bent while being held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has one leg extended and the other bent during the supported pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

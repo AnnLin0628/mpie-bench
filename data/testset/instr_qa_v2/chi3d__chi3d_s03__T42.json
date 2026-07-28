@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T42",
+  "instruction": "A candid documentary photograph in a medium-wide, eye-level shot captures an indoor studio with a red carpet and dark red partition screens. The man in the dark polo shirt and blue shorts (R1) stands in the foreground with his back to the camera, reaching towards the woman in the white patterned t-shirt and blue jeans (R2). The woman (R2) stands in the background right, facing forward-left, looking at the man with a neutral expression. The man (R1) touches her right arm near the elbow. The scene features even indoor lighting with a dominant red and white color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches toward R2",
+    "R1 touches R2's right arm near the elbow",
+    "R2 receives the arm contact while looking at R1",
+    "R1 is foreground with back to camera while contacting R2",
+    "indoor studio with red carpet and dark red partition screens"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching toward R2, rather than R2 reaching toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 touching R2's right arm near the elbow, rather than R2 touching R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's right arm near the elbow"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving contact on her right arm from R1, rather than R1 receiving arm contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the arm contact from R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face toward R1 and look at him while R1 makes contact with her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks at R1 while R1 contacts her arm"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned with his back to the camera while reaching out to touch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is foreground with back to camera while contacting R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

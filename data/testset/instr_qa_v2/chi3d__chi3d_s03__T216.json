@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T216",
+  "instruction": "Candid documentary photograph, full shot from a slightly high angle. Inside a motion capture studio with a red carpeted floor and white walls, the woman in the white t-shirt and blue jeans (R2) stands on the left, facing right, and kicks her right leg forward. The man in the black polo shirt and blue shorts (R1) stands on the right, facing slightly left. The woman (R2) kicks her right leg forward towards the man's (R1) left leg. The room is brightly lit by overhead indoor lighting with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active person kicking her right leg forward toward R1's left leg",
+    "R1 is the target of R2's forward kick rather than the kicker",
+    "R2 extends her right leg forward while R1 stands facing her",
+    "R1 stands facing slightly toward R2 during the kick",
+    "the scene is inside a motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 kicking her right leg forward toward R1's left leg, rather than R1 kicking toward R2's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active kicker aiming toward R1's left leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose leg is being approached by R2's kick, rather than R1 being the one delivering the kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the target of R2's forward kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have her right leg extended forward in a kicking motion toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right leg forward toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

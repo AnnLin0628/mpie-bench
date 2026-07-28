@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__5788b5f329f5__T1",
+  "instruction": "A candid outdoor full-body photograph captures a couple walking on a sunny day. On the left, the blonde woman in the checkered dress (R2) walks forward, holding a bouquet of red roses in her right hand and looking lovingly at her partner. On the right, the man in the peach t-shirt (R1) walks beside her, returning her gaze with a gentle smile. They walk side-by-side on a paved park path, holding hands. The scene is illuminated by bright, direct midday sunlight casting sharp shadows on the ground, with lush green trees in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 carries the bouquet of red roses while walking hand-in-hand with R1",
+    "R1 returns R2's loving gaze while they walk together holding hands",
+    "R1 and R2 walk side by side while holding hands",
+    "R2 holds the bouquet of red roses in her right hand",
+    "They are on a paved park path in bright midday sunlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one carrying the bouquet of red roses while holding hands with R1, rather than R1 carrying the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the bouquet of red roses while walking hand-in-hand with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner returning R2's loving gaze as they walk hand-in-hand, rather than R2 returning the gaze of bouquet-carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 returns R2's loving gaze while they walk together holding hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side by side while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side by side while holding hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking forward with R1 beside her while they remain connected by their held hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side by side while holding hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a bouquet of red roses being carried by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 holds the bouquet of red roses in her right hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

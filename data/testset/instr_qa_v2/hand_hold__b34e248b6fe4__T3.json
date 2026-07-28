@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b34e248b6fe4__T3",
+  "instruction": "Candid winter photograph, medium close-up. On a snowy outdoor street, the blonde woman in a beige coat and plaid scarf (R1) is positioned on the left in a back-three-quarter view. The bearded man in a fur-hooded parka (R2) stands on the right, holding her hands in his and smiling warmly at her. Soft overcast daylight illuminates the scene with muted winter tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's hands in his rather than R1 holding R2's hands in hers",
+    "R2 is the warm-smiling person directing attention toward R1 while holding her hands",
+    "R1 is the person whose hands are being held by R2",
+    "R1 is shown in a back-three-quarter body view while interacting with R2",
+    "R1 and R2 are on a snowy outdoor street"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's hands in his, rather than R1 holding R2's hands in hers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hands in his rather than R1 holding R2's hands in hers"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person smiling warmly at R1 while holding her hands, rather than R1 being the person smiling warmly at R2 while holding his hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the warm-smiling person directing attention toward R1 while holding her hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose hands are being held by R2, rather than R2 being the person whose hands are being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose hands are being held by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in a back-three-quarter view while R2 is the one engaging her by holding her hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is shown in a back-three-quarter body view while interacting with R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected through their hands, with R2 taking the active hand-holding role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 takes the active hand-holding role with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

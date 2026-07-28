@@ -1,0 +1,74 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T2",
+  "instruction": "A candid outdoor photograph of a playful teambuilding activity in a grassy park. On the left, the bald man in the navy t-shirt (R2) stands laughing with his mouth wide open, holding a white inflatable bowling pin in his hand. On the right, the woman in the navy t-shirt (R4) stands in light blue jeans, raising a white inflatable bowling pin high above her head with both hands. They are positioned side-by-side on the green grass in front of a red and white banner. The lighting is bright and natural, casting soft shadows across the lawn.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 raises a white inflatable bowling pin high above her head with both hands, rather than R2 doing so",
+    "R2 holds a white inflatable bowling pin in his hand while laughing, rather than R4 being the one in that hand-held laughing role",
+    "R4 uses both hands in an overhead lifting pose while R2 stands laughing with his pin",
+    "white inflatable bowling pins are being held by the named participants",
+    "the activity takes place on green grass in front of a red and white banner"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person raising a white inflatable bowling pin high above her head with both hands, rather than R2 doing that overhead raising action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 raises the inflatable pin overhead rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person laughing with his mouth wide open while holding a white inflatable bowling pin in his hand, rather than R4 being in that laughing hand-held-pin role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 laughs while holding the pin in hand rather than R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 use both hands to lift her inflatable bowling pin overhead while R2 stands laughing with his own pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the two-handed overhead lifting role while R2 has the laughing holding role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

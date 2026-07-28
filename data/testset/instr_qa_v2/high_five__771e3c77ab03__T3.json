@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__771e3c77ab03__T3",
+  "instruction": "Candid corporate photograph, medium shot. In a bright office meeting room with white curtains, the man in the pinstripe suit (R4) on the left and the woman in the black blazer (R1) on the right celebrate a victory. They sit at a white round table, clasping their raised hands together in a joyful high-five. Both are laughing with open mouths, looking at each other. Bright, soft natural light illuminates the clean setting, creating a professional and cheerful atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 is the pinstripe-suited man raising his hand into the celebratory high-five with R1",
+    "R1 is the black-blazer woman reciprocally raising her hand to clasp R4's hand",
+    "R1 and R4 clasp their raised hands together in a joyful high-five",
+    "R1 and R4 sit at a white round table during the interaction",
+    "the scene is a bright office meeting room with white curtains",
+    "R1 and R4 laugh with open mouths while looking at each other"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in the black blazer who reciprocally raises her hand to clasp R4's hand, rather than R4 being the black-blazer participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the black-blazer woman reciprocally raising her hand to clasp R4's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R4 sitting at the same white round table while making the raised-hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R4 sit at a white round table during the interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

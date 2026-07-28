@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__a88de8c242c4__T1",
+  "instruction": "A candid street photograph with a full-body shot of two women walking on a city sidewalk next to classic buildings. On the left, the woman with long brown hair and glasses in a green coat (R1) walks forward with a cheerful smile. On the right, the woman with short dark hair in an orange sweater (R2) walks closely beside her, looking up at her friend with an affectionate expression. They walk shoulder-to-shoulder in natural daylight, creating a warm and friendly atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks up at R1 with an affectionate expression rather than R1 looking up at R2",
+    "R1 walks forward with a cheerful smile while R2 walks closely beside her",
+    "R2 is the one directing affectionate attention toward R1 as they walk together",
+    "R1 and R2 walk shoulder-to-shoulder on the city sidewalk",
+    "R1 is described as the long-haired woman with glasses walking beside R2",
+    "The scene is a city sidewalk next to classic buildings"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking up at R1 with an affectionate expression, rather than R1 looking up at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks up at R1 with affectionate attention"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one walking forward with a cheerful smile while R2 walks closely beside her, rather than R2 being the cheerful forward-looking person that R1 looks up at?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks forward cheerfully while R2 attends to her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 direct her affectionate gaze toward R1 as they walk, rather than R1 directing that same upward affectionate gaze toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the affectionate gazer toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the long-haired woman with glasses walking alongside R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the glasses-wearing walking partner beside R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking on a city sidewalk next to classic buildings?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "city sidewalk beside classic buildings"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T97",
+  "instruction": "A candid outdoor full shot captures a group of friends on a grassy park field during the day. On the right, the bald man in a dark blue t-shirt (R2) stands facing left, clapping with a focused expression. To his left, the woman in a dark blue t-shirt (R4) leans forward with clenched fists, looking intently to the left. In the background, the man in a red polo shirt (R3) stands on the left, while the woman in a red t-shirt and black beanie (R5) is partially visible behind the bald man (R2). They stand closely, reacting to an off-camera event. The scene is illuminated by bright, natural daylight with soft shadows on the green grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R2 is the person clapping with a focused expression rather than R4",
+    "R4 leans forward with clenched fists rather than R2",
+    "R5 is partially visible behind R2 rather than R2 being partially visible behind R5",
+    "R3 stands in the background as part of the reacting group",
+    "R2 and R4 stand close while reacting differently to an off-camera event",
+    "The scene is outdoors on a grassy park field in daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person clapping with a focused expression, rather than R4 being the one clapping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the clapping person, not R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person leaning forward with clenched fists, rather than R2 taking that clenched-fist leaning posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 leans forward with clenched fists, not R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 partially visible behind R2, rather than R2 being partially visible behind R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is partially visible behind R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand in the background while R2 is one of the closer reacting people who is clapping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands in the background while R2 claps among the reacting group"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R4 standing close together while reacting differently, with R2 clapping and R4 leaning forward with clenched fists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R4 have different visible reaction roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__04d814642f7c__T2",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Inside a gym with a white brick wall background, the man in the grey t-shirt and black shorts (R1) stands on the left in profile, holding and adjusting the pink boxing glove on the hand of the woman in the light blue jacket and grey shorts (R2). The woman stands on the right, facing him with a warm smile as she prepares for boxing. The interaction is close and supportive. Soft, natural indoor lighting illuminates the pair, creating a friendly workout atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds and adjusts the boxing glove on R2's hand",
+    "R2 receives help from R1 with her boxing glove rather than helping R1",
+    "R1 acts as the supportive gear-adjuster while R2 prepares for boxing",
+    "R2 faces R1 while her boxing glove is being adjusted",
+    "a pink boxing glove is the contact-relevant object between them",
+    "the pair is inside a gym with a white brick wall background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and adjusting the boxing glove on R2's hand, rather than R2 adjusting a glove on R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds and adjusts the boxing glove on R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving help with her boxing glove from R1, rather than R1 receiving glove help from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives help from R1 with her boxing glove rather than helping R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 take the supportive gear-adjusting role while R2 prepares for boxing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 acts as the supportive gear-adjuster while R2 prepares for boxing"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a pink boxing glove being used as the contact-relevant object between the two people?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a pink boxing glove is the contact-relevant object between them"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

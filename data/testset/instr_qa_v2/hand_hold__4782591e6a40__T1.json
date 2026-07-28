@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__4782591e6a40__T1",
+  "instruction": "Candid street photograph, full-length shot. On an urban sidewalk during the day, the woman in the white halter maxi dress (R2) on the left and the person in the light blue denim jacket (R1) on the right run joyfully hand-in-hand. The woman (R2) smiles and looks ahead, while the person in the denim jacket (R1) smiles warmly at her. They hold hands in the center as they run forward. The background shows a soft-focus city street with trees. Soft, natural daylight illuminates the scene, creating a bright and cheerful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 smiles warmly toward R2 while they run hand-in-hand",
+    "R2 looks ahead while running as R1 looks toward her",
+    "R1 and R2 hold hands while running forward together",
+    "R1 and R2 are in a joyful hand-in-hand running interaction",
+    "urban sidewalk in daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one smiling warmly at R2 while they run hand-in-hand, rather than R2 being the one smiling warmly at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directs a warm smile toward R2 during the hand-hold run"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 look ahead while running as R1 looks toward her, rather than R1 looking ahead while R2 looks toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks ahead while R1 looks at R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other as they run forward together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 run forward while holding hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 running joyfully hand-in-hand with R1 while R1 stays connected to her through the hand hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R1 maintain hand contact while running joyfully"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

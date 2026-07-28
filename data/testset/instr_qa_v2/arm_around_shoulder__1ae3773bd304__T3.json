@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1ae3773bd304__T3",
+  "instruction": "A candid portrait photograph in a medium close-up shot at eye-level, set indoors next to a window with a grey wall background. On the left, in the background, the woman in the white shirt (R1) stands behind, leaning her shoulder against the other woman's back and looking directly at the camera with a calm, soft expression. On the right, in the foreground, the woman in the grey long-sleeve shirt (R2) stands with her hands in her green trousers pockets, facing forward and looking directly at the camera with a subtle, gentle smile. The woman in the white shirt (R1) stands closely behind the woman in the grey shirt (R2), resting her right shoulder and arm against the back of the woman in the grey shirt's (R2) left shoulder. Bright, direct sunlight from the right casts sharp diagonal shadows across their shirts and faces, highlighting a neutral color palette of white, grey, and green.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands closely behind R2 and leans her shoulder and arm against R2's back/left shoulder",
+    "R2 is the foreground person being leaned against by R1, rather than leaning on R1",
+    "R2 keeps her hands in her trouser pockets while R1 remains behind her in contact",
+    "both R1 and R2 face forward and look directly at the camera",
+    "the portrait is indoors next to a window with a grey wall background",
+    "bright direct sunlight casts sharp diagonal shadows across the two women"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing closely behind R2 and resting her shoulder and arm against R2's back/left shoulder, rather than R2 resting on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rear shoulder/arm contact on R2's back/left shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person in front being leaned against by R1, rather than R1 being the person in front leaned against by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the leaning contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 make the close shoulder-to-back contact from behind while R2 remains upright facing forward, rather than R2 making that contact from behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the rear shoulder-to-back contact with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing with her hands in her trouser pockets while R1 stays close behind her in contact with her shoulder/back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 hands-in-pockets role while R1 leans behind her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

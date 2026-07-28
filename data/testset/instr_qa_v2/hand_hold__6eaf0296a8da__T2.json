@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__6eaf0296a8da__T2",
+  "instruction": "Candid outdoor photograph, full shot. On an outdoor cobblestone path next to a rustic stone wall, the woman in the polka-dot dress (R2) on the left dances gracefully while holding hands with the man in the brown fedora and white shirt (R1) on the right. The man holds his silver saxophone in one hand and extends his other hand to connect with hers. Natural daylight casts soft shadows across the scene, highlighting their joyful interaction and the green foliage in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a silver saxophone in one hand while extending his other hand to R2",
+    "R2 dances gracefully while holding hands with R1",
+    "R1's free hand connects with R2's hand",
+    "silver saxophone held by R1",
+    "outdoor cobblestone path next to a rustic stone wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding a silver saxophone in one hand while extending his other hand to R2, rather than R2 holding the saxophone and extending a free hand to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the saxophone and uses his other hand for contact with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one dancing gracefully while holding R1's hand, rather than R1 being the one described as dancing gracefully while holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances while maintaining hand contact with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 extend his non-saxophone hand to connect with R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's free hand connects with R2's hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold hands with R1 as part of their dance interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds hands with R1 while dancing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

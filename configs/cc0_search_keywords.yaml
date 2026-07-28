@@ -1,0 +1,63 @@
+# CC0/free-stock video search keywords (data source layer 2)
+# Sites: Pexels / Pixabay / Videvo (free tier)
+# Usage: search per interaction type; prefer full-body multi-person, clear action, >5s, 1080p+
+# Log each download in videos table: license_tier=cc0 + source URL (meta_json)
+# Target: >= 30 candidate videos per (interaction_type x C-tier) cell
+
+hug:                # C2
+  - hug couple
+  - friends hugging
+  - family hug reunion
+  - group hug          # 3+ people
+dance:              # C2-C3
+  - couple dancing tango
+  - salsa dance couple
+  - swing dance
+  - ballroom dance lift
+dance_lift:         # C3 high-contact (dense dance lifts, separate bucket)
+  - dance lift
+  - ballet pas de deux lift
+  - acro dance
+fight_combat:       # C3 high-contact (striking, not grappling; former C4)
+  - boxing sparring
+  - martial arts training
+  - kickboxing practice
+wrestle_grapple:    # C3 high-contact (former C4)
+  - wrestling training
+  - judo throw
+  - brazilian jiu jitsu
+  - grappling practice
+carry_lift:         # C3 — dataset gap, prioritize
+  - acroyoga            # carry/lift/shoulder-ride rich source
+  - couple carry
+  - bride carry
+  - lifting person overhead
+  - fireman carry
+handshake:          # C1
+  - handshake business
+  - handshake greeting
+high_five:          # C1
+  - high five friends
+  - team high five
+piggyback:          # C3 — gap, prioritize
+  - piggyback ride
+  - piggyback couple
+  - shoulder ride       # shoulder ride
+hand_hold:          # C1
+  - holding hands walking
+  - couple holding hands
+arm_around_shoulder:  # C2
+  - arm around shoulder friends
+  - friends walking together
+face_to_face_talk:  # C0-C1 (low-contact control)
+  - conversation two people
+  - couple talking closeup
+restrain_pin:       # C3 high-contact (former C4)
+  - self defense training
+  - wrestling pin
+other_multi_person: # 3+ person scenes — gap, prioritize
+  - cheerleading stunt   # pyramid/toss stunts
+  - human pyramid
+  - acrobatics group
+  - trust fall group
+  - tug of war

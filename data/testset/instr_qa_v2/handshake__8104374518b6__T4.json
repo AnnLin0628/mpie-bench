@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__8104374518b6__T4",
+  "instruction": "Professional corporate photograph, medium shot. In a modern office meeting room, the woman with long brown hair (R1) on the left, standing in profile in a beige blazer, shakes hands with the woman with short blonde hair (R2) on the right, wearing a light blue blazer. They look directly at each other with pleasant expressions while clasping right hands over a wooden conference table with a laptop. Soft indoor lighting creates a clean, cool-toned professional atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the long-brown-haired woman in profile who clasps R2's right hand",
+    "R2 is the short-blonde-haired woman who returns the right-hand clasp with R1",
+    "R1 and R2 clasp right hands with each other in a professional handshake",
+    "the handshake occurs over a wooden conference table",
+    "a laptop is on the conference table",
+    "the scene is a modern office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the long-brown-haired woman in profile clasping R2's right hand, rather than R2 being the long-brown-haired woman in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the long-brown-haired profile participant in the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the short-blonde-haired woman returning the right-hand clasp with R1, rather than R1 being the short-blonde-haired woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the short-blonde participant in the handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile as she shakes R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration during the handshake"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

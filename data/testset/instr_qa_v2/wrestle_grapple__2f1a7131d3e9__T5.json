@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2f1a7131d3e9__T5",
+  "instruction": "Candid high-angle over-the-shoulder photograph of two judo practitioners sitting together on a red tatami mat. On the left, the blonde-haired man (R1) is seen from behind wearing a white gi. On the right, the dark-haired man (R2) in a white gi holds a black smartphone in front of them, displaying a selfie preview on the screen. R2's left hand rests on R1's shoulder as they both look down at the phone. Bright, even indoor lighting illuminates the scene, casting soft shadows on the vibrant red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds the black smartphone in front of both practitioners for a selfie preview",
+    "R2's left hand rests on R1's shoulder",
+    "R1 is the practitioner whose shoulder is being touched by R2",
+    "R1 and R2 both look down at the phone",
+    "black smartphone displaying a selfie preview",
+    "red tatami mat setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the black smartphone in front of both practitioners, rather than R1 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the black smartphone in front of both practitioners for a selfie preview"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest his left hand on R1's shoulder, rather than R1 resting his hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's left hand rests on R1's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the practitioner whose shoulder is being touched by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both looking down at the phone that R2 is holding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both look down at the phone"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black smartphone displaying a selfie preview in the scene?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black smartphone displaying a selfie preview"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the judo practitioners sitting on a red tatami mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red tatami mat setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T15",
+  "instruction": "A candid outdoor full shot of a sunny park with lush green grass and leafy trees. On the left, the woman with dark hair tied back (R4) in a dark blue t-shirt and light blue jeans jumps high in the air with her back partially turned to the camera. On the right, the bald man (R2) in a dark blue t-shirt and black pants jumps facing her. Together, they perform an energetic mid-air double high-five celebration under the bright natural sunlight filtering through the trees.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 is the high-five partner whose back is partially turned toward the camera while R2 faces her",
+    "R2 jumps facing R4 during the mid-air double high-five",
+    "R4 and R2 reciprocally raise their hands toward each other for an energetic double high-five",
+    "R4 and R2 are both airborne during the celebration contact",
+    "The interaction takes place outdoors in a sunny park with grass and trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the participant with her back partially turned to the camera while high-fiving R2, rather than R2 being the one with his back partially turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the back-partially-turned orientation during the high-five"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

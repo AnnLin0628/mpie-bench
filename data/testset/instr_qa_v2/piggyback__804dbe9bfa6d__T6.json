@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__804dbe9bfa6d__T6",
+  "instruction": "Candid lifestyle photograph, medium shot. Indoors against a grey-blue wall, the bearded man in the white t-shirt (R2) stands on the left, holding the baby in the white bodysuit (R1) close to his chest. The baby, also wearing light pink pants, is held upright facing left. The man looks affectionately at the baby. Soft side lighting highlights the gentle interaction.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports and holds R1 close to his chest",
+    "R1 is the baby being carried upright by R2",
+    "R2 is the adult caregiver looking affectionately at R1 while holding R1",
+    "R1 is positioned upright against R2 rather than supporting R2",
+    "the scene is indoors against a grey-blue wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding and supporting R1 close to his chest, rather than R1 holding and supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports and holds R1 close to his chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the baby being carried upright by R2, rather than R2 being carried upright by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the baby being carried upright by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 provide the supportive body contact for R1, rather than R1 providing supportive body contact for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is positioned upright against R2 rather than supporting R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 held upright against R2's chest while R2 carries R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the baby being carried upright by R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 looking affectionately at R1 while holding R1 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the adult caregiver looking affectionately at R1 while holding R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

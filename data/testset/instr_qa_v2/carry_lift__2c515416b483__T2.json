@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__2c515416b483__T2",
+  "instruction": "A clean studio portrait photograph captured in a medium shot at eye-level. In a minimalist indoor studio with a plain white background, the blonde woman in the long-sleeved lace dress (R1) stands on the left, and the brunette woman in the strapless white lace dress (R2) stands on the right. They face forward, standing close with their arms wrapped around each other's waist, jointly holding a single bouquet of white roses between them. The blonde woman has a neutral expression, while the brunette woman smiles gently. The scene is illuminated by soft, bright studio lighting, creating a clean, high-key look.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the blonde woman with a neutral expression while R2 is the brunette woman smiling gently",
+    "R1 wears the long-sleeved lace dress while R2 wears the strapless white lace dress",
+    "R1 and R2 stand close facing forward with their arms around each other's waists",
+    "R1 and R2 jointly hold one bouquet between them",
+    "a single bouquet of white roses is held between R1 and R2",
+    "minimalist indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the supporting / leading contact role relative to R2, rather than R2 taking that role toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together facing forward with their arms wrapped around each other's waists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 waist-wrap contact pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 jointly hold the bouquet between their bodies while standing close together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 jointly holding central bouquet"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a single bouquet of white roses being held between R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "single bouquet of white roses"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": true
+  }
+}

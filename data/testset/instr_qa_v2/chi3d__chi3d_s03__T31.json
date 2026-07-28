@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T31",
+  "instruction": "A candid documentary wide shot from a slightly high angle shows an indoor motion capture studio with a red carpet and white walls. On the left, the bearded man in a black polo and blue shorts (R1) stands with his back to the camera, holding the face of the woman in a white t-shirt and blue jeans (R2) with both of his hands. The woman (R2) stands on the right, facing left with a neutral expression as she looks at the man. The background contains technical equipment and tripods. The scene is illuminated by overhead fluorescent lights, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's face with both hands",
+    "R2 is the person whose face is being held by R1",
+    "R2 faces and looks at R1 while R1 holds her face",
+    "R1 has his back to the camera during the face-holding contact",
+    "indoor motion capture studio with red carpet and technical equipment"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's face with both hands, rather than R2 holding R1's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the face-holding contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the recipient whose face is being held by R1, rather than R1 being the recipient held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the face-holding contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use both of his hands on R2's face while R2 looks toward him, rather than R2 using both hands on R1's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses both hands to hold R2's face"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 facing and looking at R1 while R1 holds her face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces and looks at R1 during the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

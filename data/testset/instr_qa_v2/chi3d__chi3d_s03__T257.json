@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T257",
+  "instruction": "A candid documentary wide shot from a slightly high angle shows an indoor motion capture studio with a red carpeted floor and white walls. On the left, the man in the black polo shirt and blue shorts (R1) stands in profile, facing right. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing left, extending her right arm to touch the man (R1)'s chest. The two interact in the center of the room under bright overhead fluorescent lighting, which casts soft shadows on the neutral-colored walls and the prominent red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's chest",
+    "R1 is the person receiving the chest touch from R2",
+    "R1 and R2 face each other during the contact",
+    "R2's contact is directed to R1's torso/chest area",
+    "the interaction takes place in an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's chest, rather than R1 extending an arm to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm to touch R1's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the chest contact from R2, rather than R2 receiving chest contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person receiving the chest touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 initiate the physical contact by reaching toward R1's torso, rather than R1 initiating contact with R2's torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates contact toward R1's torso/chest"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's right arm extended toward R1's chest area during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact is directed to R1's torso/chest area"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

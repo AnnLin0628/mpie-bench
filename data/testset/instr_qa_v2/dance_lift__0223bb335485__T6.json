@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T6",
+  "instruction": "Cinematic low-angle wide shot in a classical ballet studio. In the foreground, the dark-haired ballerina (R1) in a white leotard and sheer skirt holds the barre, extending her left leg back and left arm forward. In the background, the blonde ballerina (R2) in a white leotard and sheer skirt performs a matching pose along the barre. Bright backlight from the large window creates a soft, hazy atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the foreground ballerina holding the barre while extending her left leg back and left arm forward",
+    "R2 is the background ballerina performing a matching pose along the barre",
+    "R1 leads the visible foreground barre pose while R2 mirrors it in the background",
+    "Both R1 and R2 use the ballet barre as the contact object for their pose",
+    "The scene is set in a classical ballet studio with bright backlight from a large window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground ballerina holding the barre in the extended pose, rather than R2 being the foreground ballerina in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground barre-pose performer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the background ballerina performing a matching pose along the barre, rather than R1 being the background matcher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the background matching-pose performer"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 serve as the prominent foreground dancer whose pose R2 matches in the background, rather than R2 serving as the prominent foreground dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground pose is matched by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding the barre while extending her left leg back and left arm forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the barre in an extended ballet pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 performing a matching ballet pose along the barre in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs a matching pose along the barre"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

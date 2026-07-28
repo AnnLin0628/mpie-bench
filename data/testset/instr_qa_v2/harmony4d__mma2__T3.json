@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma2__T3",
+  "instruction": "Candid action photograph with motion blur, full shot at eye-level. In an indoor gym with gray padded walls, the man in the blue tank top (R1) is on the left, facing away and executing a dynamic right kick toward the right. The bearded man in the maroon t-shirt (R2) stands on the right, facing left, bracing defensively to block the kick. The kicking leg shows motion blur. Neutral overhead lighting illuminates the gray mat floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 executes a dynamic right kick toward R2",
+    "R2 braces defensively to block R1's kick",
+    "R1 is the attacker/kicker while R2 is the defensive blocker",
+    "R1's kicking leg shows motion blur",
+    "the interaction takes place in an indoor gym with gray padded walls and a gray mat floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 delivering a dynamic right kick toward R2, rather than R2 delivering the kick toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kicker targeting R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 bracing defensively to block R1's kick, rather than R1 bracing to block a kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defensive blocker of R1's kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the attacking participant with the extended kicking leg while R2 is the participant receiving and blocking the attack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric attacker versus defender roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 perform the kick while R2 faces him in a defensive blocking posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kicks and R2 blocks"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1's kicking leg show motion blur as he attacks toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's blurred kicking motion"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

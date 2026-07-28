@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__8b327eda3c0d__T3",
+  "instruction": "Candid documentary photograph, medium shot from a low angle. Outdoors under tree branches, the bearded man in a beige shirt (R2) holds the young child in an orange polo shirt (R1). The young child (R1) points forward to the right with an outstretched arm, and the bearded man (R2) looks in the same direction. Warm, natural sunlight illuminates the scene through the green leaves.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds and supports R1, rather than R1 holding R2",
+    "R1 is the young child being carried or held by R2",
+    "R1 points forward with an outstretched arm while R2 looks in the same direction",
+    "R2 is the bearded man holding the child R1",
+    "The scene is outdoors under tree branches with green leaves"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding and supporting R1, rather than R1 holding and supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric support/contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young child being held by R2, rather than R2 being the person held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric carried-person role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the adult bearded man carrying the child R1, rather than R1 carrying the bearded man R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric carrier role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 point forward with an outstretched arm while R2 looks in the same direction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pointing while R2 follows the gaze direction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

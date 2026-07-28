@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T20",
+  "instruction": "Studio portrait, close-up shot. Against a solid dusty pink background, two friends pose closely. In the foreground, the woman with curly brown hair (R1) in a white shirt smiles broadly at the camera. Behind her, the woman with straight dark hair (R2) in a denim jacket rests her chin affectionately on the shoulder of the woman with curly brown hair, smiling warmly. Warm, soft studio lighting highlights their faces, creating a gentle and intimate atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 rests her chin on R1's shoulder",
+    "R1's shoulder serves as the resting surface for R2's chin",
+    "R1 is in the foreground while R2 poses behind her in close contact",
+    "R2 smiles warmly while leaning her chin onto R1's shoulder",
+    "solid dusty pink studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting her chin on R1's shoulder, rather than R1 resting her chin on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her chin on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is used as the resting place for R2's chin, rather than R2's shoulder being used for R1's chin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's shoulder serves as the resting surface for R2's chin"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned in the foreground while R2 poses behind her in close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in the foreground while R2 poses behind her in close contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 pose behind R1 with her head close enough to rest her chin on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles warmly while leaning her chin onto R1's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

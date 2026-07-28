@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__97da679c7869__T1",
+  "instruction": "A candid photograph, medium shot at eye-level, set against a plain light gray wall. On the left, the man with an afro in a white tank top (R1) stands in profile, holding a lipstick container in his left hand while carefully applying lipstick to the lips of the woman in a white lace wedding dress (R2) with his right hand. The woman (R2) stands on the right, facing slightly left with her head tilted up and lips parted, looking forward. The scene is illuminated by bright, even studio lighting, creating a clean and neutral atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 applies lipstick to R2's lips rather than R2 applying lipstick to R1",
+    "R1 is the active makeup applier while R2 is the recipient with lips parted",
+    "R1 uses his right hand to apply lipstick to R2 while holding the lipstick container in his left hand",
+    "R2 tilts her head up and presents her lips for R1's application",
+    "lipstick container held by R1",
+    "plain light gray wall setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 applying lipstick to R2's lips, rather than R2 applying lipstick to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 applies lipstick to R2's lips rather than R2 applying lipstick to R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active makeup applier using his hand near R2's mouth, rather than R2 being the one applying makeup to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active makeup applier while R2 is the recipient with lips parted"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 receiving the lipstick application with her lips parted and head tilted up, rather than R1 receiving lipstick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 tilts her head up and presents her lips for R1's application"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold the lipstick container in his left hand while applying lipstick to R2 with his right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses his right hand to apply lipstick to R2 while holding the lipstick container in his left hand"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned as the person having lipstick applied to her lips by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's lipstick application"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

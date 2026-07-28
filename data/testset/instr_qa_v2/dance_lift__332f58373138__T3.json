@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__332f58373138__T3",
+  "instruction": "Candid medium full shot in a ballet studio. On the left, the young ballet student in a black tutu (R2) sits on the floor with her arms raised in a circular pose. On the right, the female instructor in a black bodysuit (R1) kneels and gently adjusts the student's arm. Soft indoor lighting illuminates the gray wall and wooden floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 gently adjusts R2's raised arm",
+    "R2 is the student receiving the arm adjustment from R1",
+    "R1 kneels to correct R2's circular ballet arm pose while R2 sits",
+    "R2 sits on the floor with arms raised in a circular pose",
+    "The interaction takes place in a ballet studio with a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently adjusting R2's arm, rather than R2 adjusting R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently adjusts R2's raised arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballet student whose arm is being adjusted by R1, rather than R1 being the student adjusted by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the student receiving the arm adjustment from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 kneel to correct R2's circular arm pose while R2 sits, rather than R2 kneeling to correct R1's pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels to correct R2's circular ballet arm pose while R2 sits"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting on the floor with her arms raised in a circular ballet pose while R1 kneels near her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits on the floor with arms raised in a circular pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 acting as the female instructor while R2 is the young ballet student being guided?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the instructor and R2 is the student being guided"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set in a ballet studio with a wooden floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The interaction takes place in a ballet studio with a wooden floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

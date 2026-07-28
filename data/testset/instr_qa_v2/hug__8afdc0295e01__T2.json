@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__8afdc0295e01__T2",
+  "instruction": "A candid documentary photograph captures a medium shot of three colleagues in a bright modern office. In the center, the smiling man in the black blazer (R1) wraps his arms around two women in a warm embrace. On the left, the woman in the beige vest (R3) hugs him closely, her back partially to the camera. On the right, the woman in the brown plaid blazer (R2) joins the group hug, her arms extended around the man. The background is filled with office shelves and green potted plants under soft, warm indoor lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the central colleague in the group embrace with R2 and R3",
+    "R1 wraps his arms around both R2 and R3",
+    "R2 joins the embrace by extending her arms around R1",
+    "R3 hugs R1 closely with her back partially toward the camera",
+    "The interaction happens in a bright modern office with shelves and green potted plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the central person being embraced by both R2 and R3, rather than R2 being the central person embraced by R1 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the central colleague in the group embrace with R2 and R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap his arms around both R2 and R3, rather than R2 being the one who wraps around both other colleagues?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps his arms around both R2 and R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend her arms around R1 as she joins the group embrace, rather than R1 being described as joining an embrace centered on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 joins the embrace by extending her arms around R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R3 both in contact with R1 as part of the same group embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 both participate in the embrace with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

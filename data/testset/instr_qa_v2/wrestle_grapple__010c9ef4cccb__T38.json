@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T38",
+  "instruction": "Candid documentary photograph, low-angle medium shot. In a judo dojo, the woman in the blue judo gi (R1) on the left and the young man in the white judo gi (R2) on the right kneel side-by-side on a blue and yellow mat. Both are bowing deeply forward with their heads lowered and hands flat on the mat. On the far left, a cropped leg of a bystander is partially visible. Soft indoor lighting illuminates the scene against a beige wall.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the woman in the blue judo gi bowing on the mat, rather than R2 being the woman in the blue gi",
+    "R2 is the young man in the white judo gi bowing on the mat, rather than R1 being the young man in the white gi",
+    "R1 and R2 both kneel side-by-side while bowing deeply forward",
+    "R1 and R2 both have their hands flat on the mat as they bow",
+    "the blue and yellow judo mat is under R1 and R2's hands and knees",
+    "the scene is set in a judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in the blue judo gi bowing on the mat, rather than R2 being the woman in the blue gi?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman in the blue judo gi bowing on the mat, rather than R2 being the woman in the blue gi"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the young man in the white judo gi bowing on the mat, rather than R1 being the young man in the white gi?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young man in the white judo gi bowing on the mat, rather than R1 being the young man in the white gi"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both kneeling side-by-side while bowing deeply forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both kneel side-by-side while bowing deeply forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 both have their heads lowered and their hands flat on the mat as they bow?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both have their hands flat on the mat as they bow"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a blue and yellow mat underneath R1 and R2 as they kneel and bow?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the blue and yellow judo mat is under R1 and R2's hands and knees"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

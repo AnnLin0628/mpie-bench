@@ -1,0 +1,90 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T44",
+  "instruction": "Candid documentary photograph, over-the-shoulder medium shot with shallow depth of field. In an indoor judo dojo, the man in the white gi with 'G. LOPES' on the back (R4) is in the left foreground, facing away. In the background, the young man in the white gi (R2) and the older man in the white gi (R3) sit on the mat looking to the right. In the right foreground, the young woman in the blue gi (R1) sits smiling slightly. Soft indoor lighting fills the room.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 is the back-facing foreground man wearing a gi with 'G. LOPES' on the back",
+    "R1 is the seated young woman in a blue gi smiling slightly in the foreground",
+    "R2 and R3 are seated on the mat in the background looking to the right",
+    "R2 is the young seated man while R3 is the older seated man",
+    "judo mat",
+    "judo gi uniforms",
+    "indoor judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground person facing away with 'G. LOPES' on the back of his gi, rather than R1, R2, or R3 having that back-facing foreground role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the back-facing foreground man wearing a gi with 'G. LOPES' on the back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young woman seated in the foreground and smiling slightly, rather than R2 or R3 being the smiling foreground woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the seated young woman in a blue gi smiling slightly in the foreground"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R3 the two people seated on the mat in the background while R4 faces away in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 are seated on the mat in the background looking to the right"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young seated man and R3 the older seated man?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the young seated man while R3 is the older seated man"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a judo mat visible as the surface where R2 and R3 are sitting?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "judo mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

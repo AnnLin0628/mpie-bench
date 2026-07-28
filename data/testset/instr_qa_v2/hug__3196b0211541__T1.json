@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3196b0211541__T1",
+  "instruction": "Candid studio portrait, medium close-up. Against a plain light grey studio background, three women embrace closely. On the left, the straight-haired woman (R1) in a white strap top looks forward with a soft smile. In the center, the freckled woman with an afro (R3) in a light blue top smiles warmly at the camera, her hand resting on R1's shoulder. On the right, the curly-haired woman (R2) in a dark strap top leans in, looking at the camera with a slight smile. Soft, diffused studio lighting illuminates their faces, creating a warm, intimate atmosphere with neutral tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 rests her hand on R1's shoulder",
+    "R1 receives R3's hand on her shoulder",
+    "R2 leans in close to the group",
+    "R3 is the central participant in the close embrace",
+    "plain light grey studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 rest her hand on R1's shoulder, rather than R1 resting her hand on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 rests her hand on R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving R3's hand on her shoulder, rather than R2 receiving that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R3's hand on her shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning in close to the group while looking toward the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans in close to the group"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the central woman in the close three-person embrace, with contact to R1 through her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the central participant in the close embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

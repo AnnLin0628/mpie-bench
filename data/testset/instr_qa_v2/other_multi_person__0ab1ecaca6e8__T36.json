@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T36",
+  "instruction": "A candid lifestyle photograph in a medium full shot captures a sunny rooftop under a clear blue sky. In the foreground, the woman with short bleached hair (R9), wearing a denim jacket and black midi skirt, dances dynamically while looking towards the camera. Behind her on the left, the woman in the black beanie (R8), wearing khaki capri pants, dances in motion. In the background, the woman with purple hair (R7) in a bright green hoodie is partially visible. The friends are captured mid-dance under bright, direct sunlight casting soft shadows.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R9 is the foreground dancer looking toward the camera, rather than R8",
+    "R8 is dancing behind R9, rather than R9 dancing behind R8",
+    "R7 is partially visible in the background while R9 is the prominent foreground dancer",
+    "R9 dances dynamically in the foreground",
+    "R8 dances in motion behind R9",
+    "The scene is a sunny rooftop under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the foreground dancer looking toward the camera, rather than R8 being the foreground dancer looking toward the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 is the foreground dancer looking toward the camera, rather than R8"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R8 dancing behind R9, rather than R9 dancing behind R8?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R8 is dancing behind R9, rather than R9 dancing behind R8"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R7 only partially visible in the background while R9 is the prominent foreground dancer, rather than R9 being partially visible in the background while R7 is foregrounded?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 is partially visible in the background while R9 is the prominent foreground dancer"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R8 dancing in motion behind R9?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R8 dances in motion behind R9"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

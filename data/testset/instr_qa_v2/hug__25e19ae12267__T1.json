@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__25e19ae12267__T1",
+  "instruction": "Candid full-shot documentary photograph of an outdoor scene on concrete steps in front of a green wooden door. The man in the maroon hoodie (R2) stands on the left wearing a yellow backpack, hugging the woman in the maroon puffer jacket (R1) who stands on the right wearing a white backpack and light blue jeans. They embrace tightly, her arms wrapped around his shoulders and his arms around her waist, as she smiles warmly. Natural daylight illuminates the scene with soft shadows and muted outdoor tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2's shoulders during the embrace",
+    "R2 wraps his arms around R1's waist during the embrace",
+    "R1 and R2 hold each other tightly with different arm positions",
+    "R1 wears a white backpack while embracing R2",
+    "R2 wears a yellow backpack while embracing R1",
+    "The scene is outdoors on concrete steps in front of a green wooden door"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's arms wrapped around R2's shoulders, rather than R2's arms being wrapped around R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2's shoulders during the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's arms wrapped around R1's waist, rather than R1's arms being wrapped around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms around R1's waist during the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold each other tightly with R1 holding R2 at shoulder level and R2 holding R1 at waist level?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold each other tightly with different arm positions"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 on concrete steps in front of a green wooden door?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The scene is outdoors on concrete steps in front of a green wooden door"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

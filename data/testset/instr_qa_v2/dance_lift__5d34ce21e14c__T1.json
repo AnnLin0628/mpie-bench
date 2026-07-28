@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__5d34ce21e14c__T1",
+  "instruction": "A clean studio photograph, full-body wide shot. In an indoor dance studio with a beige backdrop and white wall, three women are dancing in a synchronized line. On the left, the dark-haired woman in the white t-shirt and blue jeans (R2) crouches low with knees bent, looking forward. In the center foreground, the brown-haired woman in the white crop top and black jeans (R1) leans forward with her right leg extended, head tilted back with an expressive open-mouthed face. On the right, the blonde woman in the white crop top and dark blue jeans (R3) leans forward with legs spread, looking forward. The scene is illuminated by bright, even studio lighting with warm beige and white tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the center-foreground dancer leaning forward with her right leg extended and her head tilted back",
+    "R2 is the dancer crouching low with knees bent while looking forward",
+    "R3 is the dancer leaning forward with legs spread while looking forward",
+    "R1 has an expressive open-mouthed face during the dance pose",
+    "The three labeled women are dancing in a synchronized line",
+    "The setting is an indoor dance studio with a beige backdrop and white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer leaning forward with her right leg extended, rather than R2 being the one in that extended-leg pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the extended-leg forward-leaning dance pose instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer crouching low with bent knees, rather than R1 being the crouched dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the low crouched knees-bent role instead of R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer leaning forward with legs spread while looking forward, rather than R2 taking that legs-spread leaning pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the legs-spread forward-leaning dance role instead of R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 tilt her head back with an expressive open-mouthed face during her dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's expressive head-tilted-back dance configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look forward while holding a low crouch with her knees bent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's forward-looking crouched dance configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

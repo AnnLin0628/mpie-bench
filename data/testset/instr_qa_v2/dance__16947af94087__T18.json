@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T18",
+  "instruction": "Candid action photograph from a low angle in a bright indoor hall. The man in the brown shirt and beanie (R1) lifts his partner high. The woman in the black outfit (R2) is suspended horizontally, her head with a white ribbon pointing right. The man (R1) supports her legs and waist, looking upward. Bright, airy daylight fills the space.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lifts R2 high rather than R2 lifting R1",
+    "R1 supports R2's legs and waist while R2 is suspended",
+    "R2 is the horizontally suspended partner being carried by R1",
+    "R1 looks upward toward R2 while supporting her",
+    "R2 has a white ribbon at her head",
+    "The scene is a bright indoor hall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting R2 high, rather than R2 lifting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the lifter and R2 is the lifted partner"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 support R2's legs and waist while R2 is suspended, rather than R2 supporting R1's legs and waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's body from the legs and waist"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner held horizontally in the air while R1 remains the supporter below, rather than R1 being held horizontally by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is horizontally suspended and R1 is supporting her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 looking upward while holding R2 during the dance lift?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role is the upward-looking supporter holding R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's body suspended horizontally as R1 supports her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration is horizontal suspension during R1's lift"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

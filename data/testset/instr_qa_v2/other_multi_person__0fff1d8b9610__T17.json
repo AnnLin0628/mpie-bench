@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T17",
+  "instruction": "An action photograph with a high-angle full shot captures a bright white indoor studio where two cheerleaders perform a routine. In the foreground center, the cheerleader with long dark hair (R14) wears a white \"Warsaw Mets\" t-shirt, a white skirt with a red and yellow waistband, white knee-high socks, and white sneakers, standing in a wide stance with orange pom-poms. In the background right, the cheerleader with curly brown hair (R11) in a matching outfit is captured mid-motion, looking to her right. They perform a synchronized dance, holding metallic orange pom-poms. The scene is illuminated by bright, even studio lighting with vertical light tubes in the background, casting soft shadows on the white floor.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R14 is the foreground-center cheerleader standing in a wide stance with orange pom-poms, while R11 is not in that foreground wide-stance role.",
+    "R11 is the background cheerleader captured mid-motion and looking to her right, while R14 is not in that background mid-motion role.",
+    "R14 and R11 perform a synchronized cheerleading dance routine together.",
+    "R14 and R11 hold metallic orange pom-poms during the routine.",
+    "The scene is a bright white indoor studio with vertical light tubes."
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R14 the foreground-center cheerleader standing in a wide stance with orange pom-poms, rather than R11?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 has the foreground wide-stance cheerleader role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R11 the cheerleader in the background captured mid-motion and looking to her right, rather than R14?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R11 has the background mid-motion cheerleader role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R14 and R11 performing a synchronized cheerleading dance routine together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 and R11 perform synchronized dance roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

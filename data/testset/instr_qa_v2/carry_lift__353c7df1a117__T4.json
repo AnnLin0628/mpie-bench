@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__353c7df1a117__T4",
+  "instruction": "Romantic medium close-up of a couple outdoors. On the left, the bride in the light green saree (R1) stands in profile, looking up lovingly with her hand on the groom's shoulder. On the right, the groom in the grey shirt (R2) stands in profile, looking down with his forehead resting against hers. The background is a soft, out-of-focus green forest under warm, natural daylight.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 places her hand on R2's shoulder",
+    "R2 rests his forehead against R1's forehead",
+    "R1 looks up at R2 while R2 looks down at R1",
+    "R1 and R2 stand in profile facing each other in close contact",
+    "soft green forest background under warm natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one placing her hand on R2's shoulder, rather than R2 placing his hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places her hand on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one resting his forehead against R1's forehead, rather than R1 being described as resting her forehead against R2's?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his forehead against R1's forehead"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking up at R2 while R2 looks down at R1, rather than R2 looking up at R1 while R1 looks down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up at R2 while R2 looks down at R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

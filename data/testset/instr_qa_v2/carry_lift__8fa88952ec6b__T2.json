@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__8fa88952ec6b__T2",
+  "instruction": "Candid medium full shot of a woman in a light blue pajama set (R1) and a man in a white t-shirt and blue pants (R2) holding hands while jumping on an outdoor bed. The woman (R1) is on the left, facing right, holding the man's hands as she bounces. The man (R2) is on the right, facing left, holding her hands with a joyful expression. They jump together on a white mattress set in a pine forest. Soft natural daylight illuminates the scene, creating a gentle, playful atmosphere with natural green and white tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's hands while she bounces on the outdoor bed",
+    "R2 holds R1's hands back while they jump together",
+    "R1 and R2 face each other during the hand-holding jump",
+    "R1 and R2 jump together on a white mattress",
+    "the white mattress is set outdoors in a pine forest",
+    "soft natural daylight illuminates the playful scene"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one described as holding R2's hands as she bounces on the bed, rather than R2 being the only active bouncer while R1 is passive?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hands while she bounces"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 return the hand contact by holding R1's hands while jumping with her, rather than R1 holding R2 without R2 holding her hands back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hands back during the jump"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while holding hands and jumping together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other during the hand-holding jump"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 bouncing together with R2 while their hands remain connected?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 bounces with R2 while maintaining hand contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the bed set outdoors in a pine forest?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor pine forest setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

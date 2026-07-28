@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__8b327eda3c0d__T1",
+  "instruction": "Candid documentary photograph, medium shot from a low angle. Outdoors next to a tree, the bearded man in a beige shirt (R2) holds the young child in an orange polo shirt (R1) in his arms. The young child (R1) reaches a hand up to touch the tree trunk while looking up, and the bearded man (R2) looks up at the child with a smile. Warm, natural sunlight filters through the green leaves in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds and supports R1 in his arms",
+    "R1 is the carried child rather than the carrier",
+    "R1 reaches up to touch the tree while R2 looks up at R1",
+    "R2 cradles R1 as R1 is positioned in R2's arms",
+    "tree trunk touched by R1",
+    "outdoor setting next to a tree with sunlight through leaves"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding and supporting R1 in his arms, rather than R1 holding and supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds and supports R1 in his arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the child being carried in R2's arms, rather than R2 being carried in R1's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the carried child rather than the carrier"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 reach up to touch the tree trunk while R2 looks up at R1, rather than R2 reaching up to touch the tree while R1 looks up at him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches up to touch the tree while R2 looks up at R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 cradling R1 in his arms while R1 is positioned as the carried child?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 cradles R1 as R1 is positioned in R2's arms"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction outdoors next to a tree with sunlight filtering through green leaves?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor setting next to a tree with sunlight through leaves"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

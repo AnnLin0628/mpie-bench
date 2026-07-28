@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T298",
+  "instruction": "A candid wide-angle documentary photograph in a motion capture studio with a red carpet. On the left, the bearded man in a black t-shirt and blue shorts (R1) stands facing forward-right. On the right, the woman in a white t-shirt and blue jeans (R2) leans forward, extending her right hand to touch the man's chest while her left leg is raised slightly behind her. The background features white walls, a radiator, and bright overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right hand to touch R1's chest",
+    "R1 receives the chest touch from R2 rather than initiating it",
+    "R2 leans forward toward R1 while making the chest contact",
+    "R2 has her left leg raised slightly behind her during the interaction",
+    "The interaction takes place in a motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right hand to touch R1's chest, rather than R1 extending a hand to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the chest-touch contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being touched by R2, rather than R2 being the person whose chest is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward toward R1 while reaching to his chest, rather than R1 leaning forward toward R2 to touch her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward as the active reaching person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing upright while R2 reaches toward his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands as the contacted person while R2 reaches"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

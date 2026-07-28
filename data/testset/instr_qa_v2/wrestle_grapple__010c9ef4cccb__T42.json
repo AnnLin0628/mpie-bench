@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T42",
+  "instruction": "Candid action photograph, eye-level medium shot. Inside an indoor judo dojo with a yellow tatami mat, the woman in the blue judo gi (R1) and the young man in the white judo gi (R2) are standing and grappling. Positioned on the left, the woman (R1) grips his collar, while the young man (R2) on the right holds her sleeve, both locked in a focused judo stance. Natural light streams from the windows in the background, casting soft shadows across the neutral-toned training room.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 grips R2's collar during the judo grapple",
+    "R2 holds R1's sleeve during the judo grapple",
+    "R1 has the collar-gripping role while R2 has the sleeve-holding role",
+    "R1 and R2 are standing and grappling in a focused judo stance",
+    "the judo gi collar and sleeve serve as contact-relevant gripping surfaces",
+    "the interaction takes place inside an indoor judo dojo with a tatami mat"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gripping R2's collar, rather than R2 gripping R1's collar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's collar during the judo grapple"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's sleeve, rather than R1 holding R2's sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's sleeve during the judo grapple"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the grip exchange, does R1 control R2 at the collar while R2 controls R1 at the sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the collar-gripping role while R2 has the sleeve-holding role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing and grappling with each other in a focused judo stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are standing and grappling in a focused judo stance"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the judo interaction take place inside an indoor dojo with a tatami mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction takes place inside an indoor judo dojo with a tatami mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

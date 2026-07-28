@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__610b7e6f2694__T2",
+  "instruction": "Candid lifestyle medium shot in a bright bedroom. The bearded man in a denim shirt (R2) lies on a bed on the left, smiling up at the baby girl with pink hair clips (R1) whom he holds in the air. The baby girl (R1), in a white shirt and jeans, looks down at her father with a happy expression. Warm natural light fills the room, highlighting the yellow bedding and white pillow.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1 in the air",
+    "R1 is the baby being lifted above R2",
+    "R2 supports R1 while lying on the bed",
+    "R2 lies on the bed and smiles up at R1",
+    "bed serves as the surface under R2 during the lift",
+    "bright bedroom setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1 in the air, rather than R1 holding R2 in the air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 in the air"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the baby being lifted above R2, rather than R2 being lifted above R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the baby being lifted above R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 support R1 while lying on the bed, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 while lying on the bed"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 lying on the bed and smiling up at R1 while he holds her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on the bed and smiles up at R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

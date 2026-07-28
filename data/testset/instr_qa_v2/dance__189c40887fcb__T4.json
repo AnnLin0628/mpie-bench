@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T4",
+  "instruction": "Cinematic still of a medium shot capturing a dynamic dance movement in a spacious hall. In the foreground, the man in the black mesh crop top (R2) leans his torso dramatically to the left, arms extended mid-motion, looking toward the camera. In the background, the blonde man in the leather jacket (R1) stands watching, his body slightly turned. The interaction is defined by the foreground dancer's energetic movement relative to the stationary figure behind him. Cool, dim ambient lighting with subtle blue and red undertones fills the space, casting soft shadows on the wooden floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 performs the energetic foreground dance movement while R1 watches from the background",
+    "R2 leans his torso dramatically with arms extended while R1 remains standing and stationary",
+    "R1 is the observer of R2's dance rather than the active dancer",
+    "R2 is positioned as the foreground dancer looking toward the camera, with R1 behind him watching",
+    "The dance scene takes place in a spacious hall with cool, dim ambient lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the foreground person performing the energetic dance movement while R1 stands watching in the background, rather than R1 dancing energetically while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active dancer and R1 is the stationary watcher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean his torso dramatically with arms extended mid-motion while R1 remains standing behind him, rather than R1 leaning dramatically while R2 stands behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the dramatic leaning dance pose while R1 stays stationary"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the background observer of R2's dance movement, rather than R2 being the observer of R1's dance movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 watches R2 rather than being the dancer watched by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

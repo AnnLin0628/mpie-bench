@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T9",
+  "instruction": "Candid action photograph, full shot. In an indoor martial arts studio with wooden floors and a dark mat, the bearded Black man in a white gi (R1) on the left and the Asian man with braided hair in a gray gi (R2) on the right engage in a standing grapple. Both lean forward in low stances, facing each other and gripping collars and shoulders. Warm indoor lighting casts soft shadows across the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the left-side standing grappler engaging R2 while gripping R2's collar or shoulder area",
+    "R2 is the right-side standing grappler engaging R1 while gripping R1's collar or shoulder area",
+    "R1 and R2 face each other in low forward-leaning grappling stances with mutual upper-body grips",
+    "gi collars and shoulder areas serve as contact points for the grapple",
+    "the grapple takes place on or near a dark mat in an indoor martial arts studio",
+    "wooden floors are visible in the indoor studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the left-positioned grappler who grips R2's collar or shoulder area during the standing grapple, rather than R2 occupying that left-side grappling role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the left-side standing grappler engaging R2 while gripping R2's collar or shoulder area"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the right-positioned grappler who grips R1's collar or shoulder area during the standing grapple, rather than R1 occupying that right-side grappling role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the right-side standing grappler engaging R1 while gripping R1's collar or shoulder area"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other in low, forward-leaning stances while maintaining collar or shoulder grips on each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other in low forward-leaning grappling stances with mutual upper-body grips"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the standing grapple set in an indoor martial arts studio with a dark mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the grapple takes place on or near a dark mat in an indoor martial arts studio"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

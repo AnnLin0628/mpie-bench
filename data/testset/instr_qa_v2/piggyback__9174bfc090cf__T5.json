@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__9174bfc090cf__T5",
+  "instruction": "A candid outdoor photograph captured in a low-angle close-up shot under a clear, bright blue sky. On the left, the man in the maroon polo shirt (R1) looks up and smiles. In the center, the young girl in the pink tie-dye dress (R2) holds green binoculars to her eyes, smiling. On the right, the woman in the blue top (R3) looks toward the left with a happy expression. They stand close together, sharing a joyful moment under the bright, direct sunlight that casts a warm glow on their faces against the vibrant blue sky.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2, rather than R1, holds the green binoculars to her eyes",
+    "R2, rather than R3, is the person using the binoculars",
+    "R1 looks up and smiles while R2 looks through the binoculars",
+    "R3 looks toward the left with a happy expression while R2 uses the binoculars",
+    "green binoculars are held to R2's eyes",
+    "the group is outdoors under a clear bright blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, holding the green binoculars to her eyes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the binoculars user instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R3, the one looking through the green binoculars?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the binoculars user instead of R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look up and smile while R2 holds the binoculars to her eyes, rather than R1 using the binoculars and R2 only looking up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have different visual actions"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold the binoculars up to her own eyes while standing close with R1 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is actively using the binoculars among the group"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

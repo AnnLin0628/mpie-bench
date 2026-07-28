@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__873554e12381__T5",
+  "instruction": "Cinematic stage photograph, full shot. On an indoor theater stage with a dark teal backdrop featuring white snowflakes and 'CENTRO TOLZU' text, two ballet dancers perform. In the foreground, the female ballet dancer in a pink tutu and tiara (R2) balances on one pointe shoe, her right leg bent and raised, looking forward. Behind her, the male ballet dancer in a red long-sleeved top and white tights (R1) stands supporting her, his raised right hand holding her raised right hand. Cool stage lighting illuminates the performers, casting soft shadows, highlighting the teal and pink color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 from behind during the ballet pose",
+    "R1 holds R2's raised right hand while she balances",
+    "R2 balances on one pointe shoe with a bent raised right leg",
+    "R2 is the foreground dancer being supported while R1 stands behind her",
+    "R2 uses a pointe shoe as part of the balancing pose",
+    "The dancers are on an indoor theater stage with a dark teal backdrop featuring white snowflakes and 'CENTRO TOLZU' text"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing behind R2 and supporting her, rather than R2 standing behind and supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from behind during the ballet pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2's raised right hand as part of supporting her balance, rather than R2 holding R1's raised hand to support his balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's raised right hand while she balances"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the dancer balancing on one pointe shoe while R1 stands behind her as the supporting partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on one pointe shoe with a bent raised right leg"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in the foreground with her right leg bent and raised while R1 remains behind her in the partnered ballet pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground dancer being supported while R1 stands behind her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

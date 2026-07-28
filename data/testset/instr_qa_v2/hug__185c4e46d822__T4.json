@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__185c4e46d822__T4",
+  "instruction": "Playful studio full shot photograph against a plain white background. On the left, the dark-skinned woman with curly black hair (R1) in a white t-shirt and blue jeans sits barefoot on a red armchair, laughing happily. On the right, the young girl with long straight dark hair (R2), wearing an oversized plaid coat, blue jeans, and oversized black high heels, leans forward to hug the woman. Bright, even studio lighting fills the space, emphasizing the warm interaction and the bold red of the armchair.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward toward R1 to initiate the embrace",
+    "R1 is seated and receives the embrace from R2",
+    "R1 remains seated on the red armchair while R2 approaches her",
+    "R1 is supported by the red armchair during the interaction",
+    "The scene is a studio full shot against a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward toward seated R1 to embrace her, rather than R1 leaning forward from the chair to embrace R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the forward leaning contact toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person receiving R2's embrace, rather than R2 being seated and receiving an embrace from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the seated recipient of R2's hug"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 approach R1 from a standing or forward-leaning posture while R1 stays seated, rather than R1 approaching a seated R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 approaches while R1 remains seated"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting on the armchair while R2 leans in toward her for contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 seated, R2 leaning in"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

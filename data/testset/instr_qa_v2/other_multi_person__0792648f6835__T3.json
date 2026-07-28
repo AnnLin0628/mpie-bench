@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0792648f6835__T3",
+  "instruction": "Cinematic medium close-up in an indoor sports gym. Three cheerleaders pose close together. On the left, the brunette cheerleader (R9) looks to the right with a smirk. In the center, the blonde cheerleader with her hair in a high bun (R2) tilts her head far right, looking forward. On the right, the red-haired cheerleader (R3) smiles broadly, looking forward. Soft indoor lighting illuminates their faces against a blurred background of colorful bleachers.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R9 looks to the right with a smirk",
+    "R2 tilts her head far right while looking forward",
+    "R3 smiles broadly while looking forward",
+    "R9, R2, and R3 pose close together as cheerleaders",
+    "indoor sports gym with blurred colorful bleachers"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the cheerleader who looks to the right with a smirk, rather than R2 being described as doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 has the asymmetric smirking-and-looking-right role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the cheerleader who tilts her head far right while looking forward, rather than R3 being described as doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric head-tilting role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the cheerleader who smiles broadly while looking forward, rather than R9 being described as doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the asymmetric broad-smiling role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the center cheerleader with blonde hair in a high bun who looks forward while tilting her head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the center forward-looking cheerleader with a high bun and tilted head"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

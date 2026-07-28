@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__eee3f103ea42__T3",
+  "instruction": "Candid documentary medium full shot of a sandy beach under an overcast sky. On the left, the older man in the red athletic shirt (R3) jogs forward, looking back over his shoulder. In the center, the woman in the grey jacket and black visor (R2) jogs with arms outstretched. On the right, the older man in the dark camo shirt (R1) jogs behind her with his hands on her shoulders. The lighting is diffuse with cool tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 jogs behind R2 with his hands on R2's shoulders",
+    "R2 is the runner whose shoulders are being held by R1 while her arms are outstretched",
+    "R3 jogs forward while looking back, rather than being the person making shoulder contact",
+    "R1 and R2 are in direct hand-to-shoulder contact during the jog",
+    "R2 jogs with arms outstretched as R1 follows close enough to touch her shoulders",
+    "The scene is a sandy beach under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 jogging behind R2 with his hands on R2's shoulders, rather than R2 jogging behind R1 with her hands on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 jogs behind R2 with his hands on R2's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the runner whose shoulders are being held by R1 while she keeps her own arms outstretched, rather than R1 being the runner whose shoulders R2 holds?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the runner whose shoulders are being held by R1 while her arms are outstretched"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 jogging forward and looking back over his shoulder, rather than being the person who places hands on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 jogs forward while looking back, rather than being the person making shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 make direct hand-to-shoulder contact with R2 during the jog?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in direct hand-to-shoulder contact during the jog"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 jog with her arms outstretched while R1 follows close enough behind her to touch her shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 jogs with arms outstretched as R1 follows close enough to touch her shoulders"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

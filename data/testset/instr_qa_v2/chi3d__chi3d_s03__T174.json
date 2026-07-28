@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T174",
+  "instruction": "Candid documentary photograph, medium-full shot, eye-level. In an indoor studio with a red carpet and white walls, the woman in the white t-shirt and blue jeans (R2) stands on the left, facing right and smiling. The man in the black polo shirt and blue shorts (R1) stands on the right, facing her. They hold hands in the center of the room under overhead artificial lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man facing R2 in the hand-holding interaction",
+    "R2 is the smiling woman facing R1 while holding hands",
+    "R1 and R2 hold hands with each other in the center of the room",
+    "R2 smiles while facing R1 during the contact",
+    "the scene is an indoor studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man facing R2 in the hand-holding interaction, rather than R2 being the man facing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the male hand-holding partner facing R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the smiling woman facing R1 while holding hands, rather than R1 being the smiling woman facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the smiling female hand-holding partner facing R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while holding hands in the center of the room?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other during hand contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 smile while she holds hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles during the hand-holding contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

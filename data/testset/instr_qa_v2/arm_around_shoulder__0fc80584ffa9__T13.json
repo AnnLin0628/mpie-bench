@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T13",
+  "instruction": "A clean studio portrait of two women against a solid dusty rose wall. On the left, the straight-haired woman in a denim jacket (R2) looks away in profile. Behind her, the curly-haired woman in a black tank top (R3) stands close, resting her hand with a silver watch on the other's shoulder while looking forward. Soft, diffused studio lighting illuminates the scene with a warm, minimalist aesthetic.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 rests her hand on R2's shoulder rather than R2 resting a hand on R3",
+    "R3 stands close behind R2 while making the shoulder contact",
+    "R2 receives the shoulder touch from R3",
+    "R3's hand with a silver watch is the hand placed on R2's shoulder",
+    "the portrait is set against a solid dusty rose wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 resting her hand on R2's shoulder, rather than R2 resting her hand on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the shoulder-touching person and R2 is the person being touched"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 standing close behind R2 while touching R2's shoulder, rather than R2 standing behind R3 and touching R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is behind R2 and initiates the shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman receiving the shoulder contact from R3, rather than R3 receiving shoulder contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the contact recipient and R3 is the contact giver"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand close to R2 with her hand placed on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's hand is placed on R2's shoulder"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 looking away in profile while R3 looks forward from behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks away in profile while R3 looks forward behind her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

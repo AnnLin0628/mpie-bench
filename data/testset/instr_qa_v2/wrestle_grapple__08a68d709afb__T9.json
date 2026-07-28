@@ -1,0 +1,92 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T9",
+  "instruction": "Candid documentary full shot of an indoor martial arts studio with a grey floor and white walls. On the left foreground, the girl in the white uniform with a red belt (R4) holds a wide horse stance with fists at her hips. In the center background, the boy in the white uniform with a striped white belt (R2) stands with feet apart. On the right foreground, the girl in the orange uniform with a blue belt (R3) stands with fists at her hips. The three children are in a triangle formation, looking forward with serious expressions under soft, diffused side lighting.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R4 holds a wide horse stance with fists at her hips rather than R2 doing that role",
+    "R3 stands with fists at her hips while R2 is the child standing with feet apart",
+    "R2 stands with feet apart in the center background rather than holding the same foreground fists-at-hips pose as R4",
+    "R4 is in a martial arts horse stance with fists at her hips",
+    "R3 is also posed with fists at her hips",
+    "The children are arranged in a triangle formation",
+    "The setting is an indoor martial arts studio with a grey floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the girl holding a wide horse stance with fists at her hips, rather than R2 being the one described in that horse stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds a wide horse stance with fists at her hips rather than R2 doing that role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the girl posed with fists at her hips while R2 is the boy standing with feet apart, rather than R3 being the feet-apart center-background child?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands with fists at her hips while R2 is the child standing with feet apart"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the child standing with feet apart, rather than R4 being described only as the feet-apart standing child?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with feet apart rather than holding the same foreground fists-at-hips horse stance as R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 hold a wide horse stance with her fists at her hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is in a martial arts horse stance with fists at her hips"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand in a martial arts pose with her fists at her hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is posed with fists at her hips"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

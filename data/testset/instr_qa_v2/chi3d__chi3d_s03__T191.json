@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T191",
+  "instruction": "Candid documentary photograph from a wide, high angle in a motion capture lab with a red carpet, white pillar, and a dark cabinet in the background. The man in the black t-shirt and blue shorts (R1), wearing a black skullcap, stands behind the woman in the white t-shirt with a red pattern and blue jeans (R2), holding her in a close back hug. They stand together in the center of the room, illuminated by bright overhead lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands behind R2 and holds R2 from the back",
+    "R2 is the person held from behind by R1",
+    "R1 has the rear enclosing contact role while R2 is in front",
+    "R1 and R2 are in a close back-hold body configuration",
+    "The interaction takes place in a motion capture lab"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing behind R2 and holding R2 from the back, rather than R2 standing behind and holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 and holds R2 from the back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being held from behind by R1, rather than R2 holding R1 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person held from behind by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the rear enclosing contact role while R2 remains in the front position, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the rear enclosing contact role while R2 is in front"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing together in a close back-hold body configuration with R1 directly behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in a close back-hold body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned in front of R1 while being held close by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned in front while R1 holds her close"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

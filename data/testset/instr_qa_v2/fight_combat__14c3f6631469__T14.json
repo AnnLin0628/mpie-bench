@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T14",
+  "instruction": "Candid documentary photograph, full-body shot. In an indoor boxing gym with white brick walls and blue floor mats, the man in the gray t-shirt and black shorts (R1) stands on the left, bending forward to help the woman in the blue jacket and dark shorts (R2) sit up. The woman (R2) sits on the blue mat on the right, holding his hands and looking up. Pink boxing gloves lie on the floor in front of them. Bright, even indoor lighting illuminates the scene with natural tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 bends forward to help R2 sit up",
+    "R2 is the seated person receiving assistance from R1",
+    "R1 and R2 hold hands as part of the sit-up assistance",
+    "R2 sits on the blue mat while looking up at R1",
+    "pink boxing gloves lie on the floor in front of them",
+    "the interaction occurs in an indoor boxing gym with blue floor mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 bending forward to help R2 sit up, rather than R2 bending forward to help R1 sit up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 bends forward to help R2 sit up"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the seated person receiving assistance from R1, rather than R1 being the seated person receiving assistance from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the seated person receiving assistance from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 provide the support from a standing, bent-forward posture while R2 receives it from a seated posture on the mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from above while R2 is seated"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands as R1 assists R2 with sitting up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands as part of the sit-up assistance"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting on the blue mat and looking up toward R1 while holding his hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits on the blue mat while looking up at R1"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the scene take place in an indoor boxing gym with blue floor mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction occurs in an indoor boxing gym with blue floor mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

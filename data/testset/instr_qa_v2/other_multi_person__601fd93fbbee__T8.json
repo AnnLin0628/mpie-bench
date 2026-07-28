@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__601fd93fbbee__T8",
+  "instruction": "Candid documentary photograph, medium shot. Outdoors on a sunny concrete plaza, two friends play. In the right foreground, the woman with long light brown hair (R6) balances on one leg with her arms outstretched, smiling as she moves. She wears a dark sheer top and light blue jeans. In the left background, the woman with curly dark hair (R5) squats down in a dark sheer top and tan pants, smiling as she watches her friend. Bright, direct sunlight fills the scene, creating a high-key, energetic atmosphere against a clear sky.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 balances on one leg with arms outstretched while R5 watches",
+    "R5 squats down watching R6 rather than performing the balance",
+    "R6 is the moving, balancing friend",
+    "R5 is the squatting observer",
+    "the scene is outdoors on a sunny concrete plaza"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 balancing on one leg with her arms outstretched while R5 watches, rather than R5 balancing while R6 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 balances on one leg while R5 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the friend squatting down and watching R6, rather than R6 squatting down and watching R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 squats and observes R6"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R6 have her arms outstretched as she balances on one leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 balancing posture with arms outstretched"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

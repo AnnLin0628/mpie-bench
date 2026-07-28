@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T117",
+  "instruction": "A candid documentary photograph in a wide full-body shot captures an indoor motion capture studio featuring a red carpeted floor, white walls, and technical equipment in the background. On the left, the man in the black cap, black polo, and blue shorts (R1) stands in profile facing right, extending his right arm forward. On the right, the woman in the white t-shirt and blue jeans (R2) stands still in profile facing left. The man (R1) touches the cheek of the woman (R2) with his right hand as they stand close together. The scene is illuminated by bright overhead lighting, casting soft shadows on the warm red carpet and neutral background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 touches R2's cheek with his right hand",
+    "R2 is the person whose cheek is being touched by R1",
+    "R1 extends his right arm forward toward R2",
+    "R2 stands still while receiving the cheek touch from R1",
+    "R1 and R2 stand close together in profile facing each other",
+    "The scene is an indoor motion capture studio with a red carpeted floor and technical equipment in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one touching R2's cheek with his right hand, rather than R2 touching R1's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches R2's cheek with his right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the cheek touch from R1, rather than R1 receiving a cheek touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose cheek is being touched by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 extend his right arm forward toward R2 while R2 remains still, rather than R2 extending an arm toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends his right arm forward toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

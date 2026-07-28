@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T300",
+  "instruction": "A candid wide-angle documentary photograph in a motion capture studio with a red carpet. On the left, the bearded man in a black t-shirt and blue shorts (R1) stands facing right, extending his right arm to touch the chest of the woman in a white t-shirt and blue jeans (R2), who stands upright on the right facing him. The background shows white walls, a radiator, and bright overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his right arm toward R2's chest",
+    "R1 touches R2's chest rather than R2 touching R1's chest",
+    "R2 receives the chest touch while standing upright facing R1",
+    "R1 and R2 face each other during the contact",
+    "motion capture studio setting with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his right arm to touch R2's chest, rather than R2 extending an arm to touch R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric chest-touch duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does the contact originate from R1's right arm and land on R2's chest, rather than originating from R2 and landing on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "direction of physical contact from R1 to R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose chest is being touched by R1, rather than R1 being the person whose chest is being touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 as recipient of R1's chest touch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

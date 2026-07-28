@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc4bacc07276__T2",
+  "instruction": "A candid outdoor full shot from a low angle captures a couple standing on a sidewalk. On the left, the woman in the white long-sleeved dress (R1) stands in white boots, smiling warmly at her partner. On the right, the man in the patterned short-sleeved shirt (R2) stands in khaki trousers, holding her hand and looking back at her. They are positioned next to a black ornate metal fence. Bright daylight illuminates the scene with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's hand",
+    "R1 is the partner whose hand is held by R2",
+    "R2 looks back at R1 while holding her hand",
+    "R1 smiles warmly at R2 while standing with him",
+    "R1 and R2 stand next to a black ornate metal fence"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding R1's hand, rather than R1 being described as the one holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner whose hand is being held by R2, rather than R2 being the partner whose hand is being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partner whose hand is held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look back at R1 while holding her hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks back at R1 while holding her hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile warmly at R2 while standing with him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles warmly at R2 while standing with him"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 positioned next to a black ornate metal fence?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 and R2 stand next to a black ornate metal fence"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

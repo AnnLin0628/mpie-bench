@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T9",
+  "instruction": "Candid action photograph, medium full shot. In an indoor boxing gym, the woman with curly hair (R2) in a blue jacket and pink boxing gloves stands in the foreground, punching a red heavy bag on the left. Behind her, the man in the gray t-shirt (R1) stands in black shorts, watching her form with a focused expression. Bright overhead fluorescent lighting illuminates the gym.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active boxer punching the heavy bag while R1 watches her",
+    "R1 observes R2's boxing form rather than being the one throwing punches",
+    "R2 stands in the foreground striking the bag as R1 remains behind her",
+    "R2 wears boxing gloves used for punching the bag",
+    "a red heavy bag is the object being hit",
+    "the scene is an indoor boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 punching the heavy bag while R1 watches her, rather than R1 punching the bag while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active boxer punching the heavy bag while R1 watches her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 observing R2's boxing form from behind, rather than R2 observing R1's form?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 observes R2's boxing form rather than being the one throwing punches"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person in the foreground actively striking the bag while R1 remains behind her as an observer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in the foreground striking the bag as R1 remains behind her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 focused on watching R2's technique instead of physically contacting the heavy bag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 observes R2's boxing form rather than being the one throwing punches"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the object being punched a red heavy bag?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a red heavy bag is the object being hit"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

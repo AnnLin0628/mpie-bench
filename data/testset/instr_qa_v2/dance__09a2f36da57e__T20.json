@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T20",
+  "instruction": "Cinematic wide shot of a dance studio with dark walls and a wooden floor. In the center, the man in the brown long-sleeve shirt (R1) is on all fours, supporting the woman in the yellow long-sleeve shirt (R2) who arches her back backward over him, reaching one arm down. To the left, the man in the brown shirt and black pants (R3) is on all fours, supporting the woman with the ponytail in a yellow shirt (R4) who arches backward over his back. On the right, a bystander pair of dancers in yellow and brown shirts perform a similar back-bend pose. Dim ambient light with a bright spotlight from the upper right illuminates the scene, casting soft shadows.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is on all fours supporting R2 from below while R2 arches backward over him",
+    "R3 is on all fours supporting R4 from below while R4 arches backward over his back",
+    "R2 reaches one arm down while arching backward over R1",
+    "R4 arches backward over R3's back",
+    "the scene is a dance studio with dark walls and a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's body from below while on all fours, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the base supporting R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 supporting R4 from below while on all fours, rather than R4 supporting R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the base supporting R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer arching backward over R1 and reaching one arm down, rather than R1 arching backward over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 arches backward over R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned on all fours as the support base for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's support-base body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 positioned over R3's back in a backward-arching pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's arched-over-R3 body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T10",
+  "instruction": "Candid action photograph, full shot. Inside a gym with grey padded walls and windows in the background, the man in the black t-shirt (R1) stands on the left, facing right and throwing a punch. The shirtless man with a mullet (R2) stands on the right, back to the camera, facing left to engage. Both wear white shin guards and sparring gear. In the background, several blurred gym-goers in athletic wear train. Bright overhead lighting illuminates the scene, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the active puncher throwing a punch toward R2",
+    "R2 is the sparring partner facing R1 to engage rather than the one throwing the punch",
+    "R1 delivers the attack while R2 engages defensively/oppositionally",
+    "R2 has his back to the camera while facing R1 during the sparring exchange",
+    "both R1 and R2 wear white shin guards",
+    "both R1 and R2 wear sparring gear",
+    "the scene is inside a gym with grey padded walls and windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person throwing a punch toward R2, rather than R2 throwing a punch toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active puncher throwing a punch toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the sparring partner facing R1 to engage with R1's punch, rather than R1 facing a punch thrown by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the sparring partner engaging R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have the attacking punch role while R2 has the opposing engagement role, rather than those roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks with a punch while R2 engages as the opponent"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

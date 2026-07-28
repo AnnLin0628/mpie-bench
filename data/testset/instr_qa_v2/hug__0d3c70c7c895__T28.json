@@ -1,0 +1,74 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T28",
+  "instruction": "Candid medium shot of four children standing side-by-side in a sunny park, smiling at the camera. On the left, the boy with glasses (R1) in a yellow t-shirt stands with his arm around the next girl. The girl with curly hair (R3) in a white cardigan and reddish-brown jumpsuit stands next to him, smiling. Beside her, the boy with short brown hair (R5) in a blue denim shirt smiles warmly. On the far right, the girl with dark straight hair (R4) in a dark blue cardigan smiles brightly. Warm sunlight filters through the trees behind them.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 places his arm around R3",
+    "R3 is the child next to R1 receiving R1's arm-around contact",
+    "R1 and R3 stand side-by-side in an arm-around pose",
+    "R5 stands beside R3 smiling",
+    "R4 stands with the group smiling",
+    "The group is in a sunny park with trees behind them"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the child who has his arm around R3, rather than R3 being described as having her arm around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his arm around R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the child receiving the arm-around contact from R1, rather than R3 being the one wrapping an arm around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the child next to R1 receiving R1's arm-around contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand side-by-side with R3 while maintaining the arm-around pose on her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 stand side-by-side in an arm-around pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

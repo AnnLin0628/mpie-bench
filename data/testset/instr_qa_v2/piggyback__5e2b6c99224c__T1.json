@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__5e2b6c99224c__T1",
+  "instruction": "Candid outdoor full shot of a man in a black t-shirt and brown pants (R1) playfully lifting a toddler in brown overalls and a black beanie (R2) in front of a modern white building. The man (R1) crouches slightly, smiling warmly as he holds the toddler (R2) around the waist. The toddler is suspended mid-air, facing towards the man. Bright, natural daylight illuminates the scene, casting soft shadows on the paved ground.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 playfully lifts and supports R2 in mid-air",
+    "R1 holds R2 around the waist rather than R2 holding R1 that way",
+    "R2 is the toddler being carried or suspended while facing R1",
+    "R1 crouches slightly while supporting R2",
+    "The scene is outdoors in front of a modern white building"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting and supporting R2 in mid-air, rather than R2 lifting and supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the lifter/supporter and R2 is the lifted person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2 around the waist to keep R2 suspended, rather than R2 holding R1 around the waist to suspend R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's waist as the active support contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 crouching slightly while supporting R2's body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body posture while supporting R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

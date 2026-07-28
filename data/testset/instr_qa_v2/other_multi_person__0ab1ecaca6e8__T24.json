@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T24",
+  "instruction": "An eye-level full shot of four friends posing together in a grassy park. Standing side-by-side from left to right, they spell out the word 'TEAM' with their shirts. On the far left, the East Asian man in a red t-shirt with a yellow letter T (R3) points to his shirt. Next to him, the woman in a dark blue t-shirt with a red letter E (R4) raises her left arm. Beside her, the woman with an afro in a red t-shirt with a pink letter A (R6) stands with arms outstretched. On the far right, the bald man in a dark blue t-shirt with a light blue letter M (R2) smiles with arms wide. The group stands on green grass with trees in the background under bright daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 points to the letter T on his own shirt while R4 raises her left arm",
+    "R4 raises her left arm while R6 stands with both arms outstretched",
+    "R2 smiles with arms wide while R3 points to his shirt",
+    "R6 stands with arms outstretched",
+    "The shirts display letters that spell TEAM",
+    "The group is in a grassy park with trees in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one pointing to the letter T on his own shirt while R4 raises her left arm, rather than R4 pointing to the T shirt and R3 raising her left arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 points to the letter T on his own shirt while R4 raises her left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 raise her left arm while R6 stands with both arms outstretched, rather than R6 raising only her left arm and R4 standing with both arms outstretched?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 raises her left arm while R6 stands with both arms outstretched"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one smiling with arms wide while R3 points to his shirt, rather than R3 being the one with arms wide and R2 pointing to his shirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles with arms wide while R3 points to his shirt"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R6 stand with her arms outstretched?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 stands with arms outstretched"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

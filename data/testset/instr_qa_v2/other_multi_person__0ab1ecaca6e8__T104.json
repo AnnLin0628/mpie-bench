@@ -1,0 +1,75 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T104",
+  "instruction": "A candid documentary photograph in a medium close-up, shot from a slightly high angle, captures a relaxed moment at an outdoor park. The woman with a ponytail (R4) in a dark blue t-shirt and light blue jeans sits cross-legged on the green grass, smiling warmly as she looks to the right. In the right foreground, the East Asian man (R3) in a red t-shirt is partially visible, gesturing with his hands as he speaks to her. The background features a lush green lawn under bright, natural daylight with soft shadows.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 is gesturing with his hands while speaking to R4",
+    "R4 is seated cross-legged on the grass as R3 addresses her",
+    "R4 smiles warmly while looking toward the speaking R3",
+    "R3 is partially visible in the foreground while interacting with R4",
+    "R4 is sitting on green grass",
+    "the scene is an outdoor park in natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gesturing with his hands while speaking to R4, rather than R4 gesturing with her hands while speaking to R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the active speaker gesturing toward R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the seated cross-legged person on the grass being addressed by R3, rather than R3 being the seated cross-legged person addressed by R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is seated while R3 addresses her"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 only partially visible in the foreground while participating in the conversation with R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's partial foreground speaker role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

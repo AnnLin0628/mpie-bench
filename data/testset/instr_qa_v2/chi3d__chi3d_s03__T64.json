@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T64",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and white walls. On the left side of the frame, the man in the black polo shirt and blue shorts (R1) stands in profile facing right. On the right side, the woman in the white t-shirt and blue jeans (R2) stands facing left. They face each other and hold hands in the center of the room. No bystanders are present. Bright overhead lighting illuminates the scene, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the profile-facing-right participant holding hands with R2",
+    "R2 is the facing-left participant holding hands with R1",
+    "R1 and R2 face each other while holding hands in the center of the room",
+    "the interaction takes place in an indoor motion capture studio",
+    "the studio has a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing in profile and facing right toward R2 while they hold hands, rather than R2 being the profile-facing-right participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the profile-facing-right participant holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person facing left toward R1 while they hold hands, rather than R1 being the facing-left participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the facing-left participant holding hands with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold each other's hands while facing one another?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other while holding hands in the center of the room"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned as the hand-holding contact pair in the center of the room?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other while holding hands in the center of the room"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

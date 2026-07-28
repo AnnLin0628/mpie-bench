@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__afa13a922dae__T2",
+  "instruction": "Candid full-body documentary photograph inside a subway station near the exit turnstiles. The blonde woman in a striped crop top and jeans (R1) walks on the left, smiling up at her partner. Beside her, the bearded man in a blue long-sleeve shirt and khaki shorts (R2) walks forward, looking back at her with a smile. His left arm rests over her shoulder while they hold hands at waist level. The scene is lit by warm overhead lights, creating a soft, casual atmosphere on the tiled floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's left arm rests over R1's shoulder",
+    "R1 is the partner under R2's arm at the shoulder",
+    "R1 and R2 hold hands at waist level while walking",
+    "R1 smiles up at R2 while R2 looks back at her",
+    "subway station near exit turnstiles"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest his left arm over R1's shoulder, rather than R1 resting her arm over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arm-over-shoulder contact duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is under R2's draped arm, rather than R2 being under R1's draped arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's arm-over-shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other at waist level while walking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hand-holding while walking"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile up at R2 while R2 looks back at her with a smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up toward R2 while R2 looks back at R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

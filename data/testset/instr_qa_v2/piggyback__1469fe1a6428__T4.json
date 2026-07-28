@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__1469fe1a6428__T4",
+  "instruction": "Candid action photograph, full shot. In a grassy field, the man in the blue plaid shirt and black pants (R1) spins the woman in the white long-sleeve top and white pants (R2) horizontally in his arms. The man (R1) faces forward with a joyful smile, while the woman's (R2) long hair whips through the air. Warm golden hour light with soft sun flare fills the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 spins R2 horizontally in his arms",
+    "R1 supports and carries R2 rather than R2 supporting R1",
+    "R2 is the person being spun and carried by R1",
+    "R2's body is positioned horizontally while in R1's arms",
+    "R1 faces forward with a joyful smile while carrying R2",
+    "the interaction occurs in a grassy field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 spinning R2 horizontally in his arms, rather than R2 spinning R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 spins R2 horizontally in his arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting and carrying R2's body, rather than R2 supporting and carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports and carries R2 rather than R2 supporting R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being swung through the air by R1, rather than R1 being swung through the air by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being spun and carried by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned horizontally while held in R1's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body is positioned horizontally while in R1's arms"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face forward with a joyful smile while carrying R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces forward with a joyful smile while carrying R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

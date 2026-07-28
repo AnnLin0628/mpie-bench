@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__a0869ec9d7e4__T1",
+  "instruction": "Cinematic close-up shot from a low angle inside a bright room with white curtains. On the left, the woman in the light blue shirt (R2) tilts her head back, looking up with a calm smile and raising her hand in a gentle stop gesture. On the right, the bearded man in the white t-shirt (R1) leans in close, staring down at her with an intense, serious expression. Soft natural light illuminates the scene, creating a bright, neutral-toned atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans in close and stares down at R2",
+    "R2 tilts her head back and looks up at R1",
+    "R2 raises her hand in a gentle stop gesture toward R1",
+    "R1 has an intense, serious expression while R2 has a calm smile",
+    "bright room with white curtains and soft natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning in close and staring down at R2, rather than R2 leaning in close and staring down at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans in close and stares down at R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 tilting her head back and looking up at R1, rather than R1 tilting his head back and looking up at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 tilts her head back and looks up at R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one raising a hand in a gentle stop gesture toward R1, rather than R1 raising the stop gesture toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises her hand in a gentle stop gesture toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

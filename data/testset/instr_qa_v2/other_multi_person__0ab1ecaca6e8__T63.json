@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T63",
+  "instruction": "Candid outdoor full photograph of a grassy park with trees. In the foreground, the woman in the black beanie (R5) in a red t-shirt and blue jeans leans forward, pulling hard on a yellow rope. Behind her, the man in the red polo (R3) in a red polo and blue jeans crouches and pulls the rope with determination. The bald man (R2) is partially visible directly behind the woman, assisting in the pull. The group is aligned in a row, gripping the thick yellow rope in a game of tug-of-war. Soft, natural daylight filters through the trees, highlighting the natural green and red palette.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R5 is the foreground puller leaning forward and pulling hard on the yellow rope",
+    "R3 is behind R5, crouching and pulling the rope",
+    "R2 is partially visible directly behind R5 and assists in the pull",
+    "R5, R3, and R2 are aligned in a row as part of the tug-of-war",
+    "the group grips a thick yellow rope",
+    "the scene is an outdoor grassy park with trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the foreground person leaning forward and pulling hard on the yellow rope, rather than R3 being the foreground lead puller?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the foreground puller leaning forward and pulling hard on the rope"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 crouching behind R5 while pulling the rope, rather than R5 crouching behind R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 crouches behind R5 and pulls the rope"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 partially visible directly behind R5 and assisting in the pull, rather than R5 being partially visible behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is partially visible behind R5 and assists the tug-of-war pull"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R5, R3, and R2 aligned in a row while participating in the same tug-of-war pull?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5, R3, and R2 are row-aligned participants in the tug-of-war"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the group gripping a thick yellow rope during the tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "thick yellow rope used for tug-of-war"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

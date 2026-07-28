@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__59d27448c718__T4",
+  "instruction": "Candid cinematic medium shot of an indoor party. On the left, the light-brown-haired man in a checkered shirt under a green t-shirt (R2) looks toward his friend. On the right, the dark-haired man in a green t-shirt (R1) tilts his head far back, holding an empty red cup upside down over his open mouth. They stand side-by-side behind a table of red cups. Dim indoor lighting with blue and warm tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 tilts his head far back with his mouth open while holding an empty red cup upside down over his mouth",
+    "R2 looks toward R1 as the observing friend rather than performing the cup-over-mouth action",
+    "R1 handles the empty red cup while R2 stands beside him without taking that drinking role",
+    "empty red cup held upside down over R1's open mouth",
+    "table of red cups in front of the two men",
+    "dim indoor party setting with blue and warm tones"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man tilting his head far back and holding an empty red cup upside down over his open mouth, rather than R2 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the cup-over-mouth action instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking toward R1 while R1 performs the upside-down-cup gesture, rather than R1 looking toward R2 doing it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 observes R1's cup action"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold the empty red cup over his own open mouth while R2 stands beside him without holding that cup over his mouth?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the cup holder and R2 is not"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

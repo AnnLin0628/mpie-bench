@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__59d27448c718__T7",
+  "instruction": "Candid party photograph, medium shot. Indoors at a party with a dark background. On the left, the brown-haired man in a plaid shirt under a green t-shirt (R2) leans forward, reaching towards red cups on a table. On the right, the dark-haired man in a green t-shirt (R1) stands smiling and cheering, holding a red cup. Dim, warm indoor lighting highlights their expressions.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward toward the red cups on the table while R1 stands cheering",
+    "R1 holds a red cup while R2 reaches toward cups on the table",
+    "R1 is the smiling, cheering participant and R2 is the forward-leaning participant",
+    "red cups are present as party objects being held or reached for",
+    "the scene is indoors at a party with dim warm lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning forward toward the red cups on the table, rather than R1 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward toward the red cups on the table"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one standing smiling and cheering while holding a red cup, rather than R2 taking that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands smiling and cheering while holding a red cup"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 reach toward cups on the table while R1 remains upright and cheers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches toward cups while R1 cheers"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 participating by cheering with a cup rather than leaning forward to grab from the table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 cheers with a cup instead of reaching toward the table"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

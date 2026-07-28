@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T190",
+  "instruction": "Candid documentary photograph from a wide, high angle in a motion capture lab with a red carpet and dark red partition walls. In the center, the man in the black t-shirt and blue shorts (R1), wearing a black skullcap, stands directly behind the woman in the white t-shirt with a red pattern and blue jeans (R2), embracing her in a warm back hug. She stands facing forward, holding his hands wrapped around her chest. The scene is illuminated by bright overhead lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands directly behind R2 and embraces her from behind",
+    "R1's hands are wrapped around R2's chest",
+    "R2 holds R1's hands while they are wrapped around her chest",
+    "R2 stands facing forward as the recipient of the back hug",
+    "The scene is in a motion capture lab with a red carpet and dark red partition walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing directly behind R2 and wrapping his arms around her chest, rather than R2 standing behind R1 and wrapping her arms around him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the back-hug embracer behind R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's hands against her chest, rather than R1 holding R2's hands against his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hands while receiving the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person facing forward while being embraced from behind by R1, rather than R1 facing forward while being embraced from behind by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the forward-facing recipient of R1's back hug"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have his hands wrapped around R2's chest as part of the back embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hands are around R2's chest"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand in front of R1 while maintaining contact with R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in front and holds R1's hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__b0f0cb3460f1__T1",
+  "instruction": "A cinematic film still of a medium shot capturing a couple on an outdoor hilltop overlook at sunset. On the left, the woman in the floral strap top (R2) stands in profile facing right, smiling gently with her hand raised to her hair. On the right, the man in the black beanie and black t-shirt (R1) stands in profile facing left, smiling warmly at her. They stand close together, sharing an intimate moment against a soft, blurred city skyline. The scene is illuminated by warm, backlit golden hour light, creating a bright, hazy background and a soft glow around their silhouettes.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 raises a hand to her hair while facing R1",
+    "R1 smiles warmly at R2 while facing her",
+    "R1 and R2 stand close together in profile facing each other",
+    "R2 smiles gently during the face-to-face moment",
+    "outdoor hilltop overlook at sunset with a blurred city skyline"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person raising a hand to her hair while R1 faces her, rather than R1 being the one raising a hand to his hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises a hand to her hair while facing R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person smiling warmly at R2 while R2 smiles gently back, rather than R2 being the one described as smiling warmly at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles warmly at R2 while R2 smiles gently"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 maintain a gentle, hair-touching pose while R1 focuses his warm smile toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 poses with hand at hair while R1 smiles toward her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

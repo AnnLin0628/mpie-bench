@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__71ba2ba4a6da__T1",
+  "instruction": "Candid outdoor photograph, full shot at eye-level. In a dry grassy field under a clear blue sky, the woman in the shearling-lined denim jacket (R1) stands on the left, playfully kicking her left leg up high while smiling. The man in the denim jacket (R2) stands on the right, holding her hand and smiling down at her leg. They hold hands in the center. Bright natural sunlight illuminates the scene with warm tones and soft shadows, creating a joyful, sunny atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person playfully kicking her left leg up high while R2 holds her hand",
+    "R2 is the person holding R1's hand and looking down toward R1's raised leg",
+    "R1 and R2 hold hands in the center while R1 performs the leg kick",
+    "R2 remains standing and smiling while R1 is the one making the playful kicking pose",
+    "The interaction takes place in a dry grassy field under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person playfully kicking her left leg up high while R2 holds her hand, rather than R2 being the one kicking his leg up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person playfully kicking her left leg up high while R2 holds her hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding R1's hand and smiling down toward R1's raised leg, rather than R1 holding R2's hand while R2 raises a leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person holding R1's hand and looking down toward R1's raised leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 make the playful high-leg kicking pose while staying connected to R2 by the hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands in the center while R1 performs the leg kick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

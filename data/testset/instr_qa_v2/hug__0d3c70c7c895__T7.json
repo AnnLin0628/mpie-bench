@@ -1,0 +1,73 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T7",
+  "instruction": "Candid documentary photograph, medium shot at eye-level with shallow depth of field. In a sunny outdoor park, the boy with glasses in a yellow t-shirt (R1) hugs the boy with short brown hair in a light blue denim shirt (R5) tightly from the side, smiling broadly. The boy in the denim shirt (R5) stands close and smiles warmly at the camera. In the far background on the left, two blurred bystanders sit on the grass. The scene is filled with warm, golden hour backlight and a soft lens flare.",
+  "n_person": 9,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R1 is the active person hugging R5 tightly from the side",
+    "R5 is the person being hugged by R1 and stands close",
+    "R1 performs the side embrace while R5 smiles warmly at the camera",
+    "R1 and R5 maintain close side contact with distinct roles",
+    "The scene takes place in a sunny outdoor park with warm golden-hour backlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person being held in R1's tight side embrace, rather than R1 being held in R5's side embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the person receiving the side embrace from R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 perform the tight side embrace while R5 stands close and smiles at the camera, rather than R5 performing that embrace around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the active contact role while R5 stands close and smiles"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned at R5's side during the close contact between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 contacts R5 from the side"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

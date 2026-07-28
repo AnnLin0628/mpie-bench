@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__6bffeaff1f5b__T1",
+  "instruction": "Candid documentary medium shot of an indoor room near a window. On the left, the woman with curly hair (R1) in a blue corduroy jacket and green pants sits cross-legged, looking concernedly at the woman with straight dark hair (R2) on the right. The woman with straight dark hair (R2) wears a dark green sweater and jeans, sitting with her chin resting on her hand and looking down sadly. The woman with curly hair (R1) places her left hand comfortingly on the other woman's shoulder. Soft natural light filters through the window behind them, casting cool tones over the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places her hand comfortingly on R2's shoulder",
+    "R1 is the concerned comforter while R2 is the sad recipient",
+    "R2 rests her chin on her own hand while looking down sadly",
+    "R1 sits cross-legged while attending to R2",
+    "the scene is indoors near a window with soft natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing her hand comfortingly on R2's shoulder, rather than R2 placing her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 comforts R2 by touching R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the concerned person offering comfort to R2, rather than R2 being the one comforting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is comforter and R2 is comforted"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 sit sadly with her chin resting on her own hand while R1 attends to her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the sad, chin-on-hand recipient posture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

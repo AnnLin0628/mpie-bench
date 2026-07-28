@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T33",
+  "instruction": "Candid medium shot of an indoor birthday party setting. The girl with curly dark hair (R2), wearing a red turtleneck and dark blue skirt, stands on the left, facing right with her arms outstretched to embrace her friend. The girl with long wavy brown hair (R8), wearing a yellow-striped shirt and black overalls, stands on the right, facing left. She laughs joyfully while holding a wrapped gift box, leaning in to return the hug. In the background, a grey sofa is decorated with colorful balloons and a birthday banner, alongside a large green potted plant. The scene is brightly lit with soft, warm light, creating a cheerful atmosphere.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R2 extends her arms to initiate an embrace toward R8",
+    "R8 leans in to return R2's hug while holding the gift",
+    "R2 and R8 face each other during the embrace",
+    "R8 holds a wrapped gift box during the interaction",
+    "the setting is an indoor birthday party with balloons and a birthday banner"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with arms outstretched to initiate an embrace toward R8, rather than R8 being the one described with outstretched arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the embrace with outstretched arms toward R8"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R8 the one leaning in to return R2's hug while holding a wrapped gift box, rather than R2 holding the gift box and returning R8's hug?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R8 returns the hug while holding the gift box"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R8 facing each other as R2 reaches out to embrace and R8 leans in to return the hug?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R8 face each other with distinct embrace-return roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R8 holding a wrapped gift box during the interaction with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "wrapped gift box held by R8"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

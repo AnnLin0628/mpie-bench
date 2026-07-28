@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__3a1ade1661a0__T6",
+  "instruction": "Candid action photograph, full shot at eye-level. Inside an indoor boxing gym, two men spar within a ring with black ropes. On the left, the dark-skinned boxer in red shorts (R2) stands facing right, leaning forward with his red gloves raised in a defensive guard. On the right, the light-skinned boxer in black shorts (R1) has his back partially turned to the camera, extending his left arm to throw a punch towards his opponent. The light-skinned boxer (R1) connects his punch against the guard of the dark-skinned boxer (R2). Bright overhead lighting illuminates the ring, highlighting the athletic build of both fighters.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his left arm to throw a punch toward R2",
+    "R1's punch connects against R2's raised defensive guard",
+    "R2 raises his red boxing gloves to block or absorb R1's punch",
+    "R2 leans forward facing R1 in a defensive guard",
+    "R1 has his back partially turned to the camera while punching",
+    "boxing gloves are the contact-relevant objects in the sparring exchange",
+    "the sparring occurs inside an indoor boxing gym ring with black ropes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer extending his left arm to punch toward R2, rather than R2 extending an arm to punch toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 throws the punch toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's punch connect against R2's raised defensive guard, rather than R2's punch connecting against R1's guard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's punch lands on R2's guard"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 using his raised red boxing gloves to block or absorb R1's punch, rather than R1 blocking a punch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 defends with gloves against R1's punch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning forward with his gloves raised in a defensive guard while facing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's defensive body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 partially turned with his back toward the camera while extending his punching arm toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's punching body configuration"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the sparring taking place inside an indoor boxing gym ring with black ropes?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor boxing gym ring with black ropes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

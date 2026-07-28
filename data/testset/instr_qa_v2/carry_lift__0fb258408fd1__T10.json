@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0fb258408fd1__T10",
+  "instruction": "Cinematic medium shot of two women celebrating in an indoor studio with a gray background and white pedestals holding elegant rose floral arrangements. On the left, the woman with curly hair (R1) in a white one-shoulder ruffled dress faces right, laughing happily. On the right, the woman with straight dark hair (R2) in a white satin blazer faces left, smiling. They stand facing each other, holding both hands together in a joyful, celebratory moment under soft studio lighting, creating a warm and intimate atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the curly-haired woman laughing while holding both hands with R2",
+    "R2 is the straight dark-haired woman smiling while holding both hands with R1",
+    "R1 and R2 face each other while their hands are joined",
+    "white pedestals hold elegant rose floral arrangements",
+    "the interaction takes place in an indoor studio with a gray background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the curly-haired woman laughing while holding both hands with R2, rather than R2 being the curly-haired laughing participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the curly-haired laughing participant in the two-hand clasp"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the straight dark-haired woman smiling while holding both hands with R1, rather than R1 being the straight dark-haired smiling participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the straight dark-haired smiling participant in the two-hand clasp"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 participate directly in the hand-to-hand celebratory contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directly holds hands with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

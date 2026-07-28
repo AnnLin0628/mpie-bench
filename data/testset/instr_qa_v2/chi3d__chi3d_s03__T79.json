@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T79",
+  "instruction": "Candid documentary photograph, wide shot, high angle. Inside a motion capture studio with a red carpet and white walls, the man in the dark polo shirt and blue shorts (R1) stands on the left, facing right. He shakes right hands with the woman in the white t-shirt and blue jeans (R2), who stands on the right facing left. Bright overhead lighting from a ceiling projector and fixtures illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 uses his right hand in the handshake with R2",
+    "R2 uses her right hand in the handshake with R1",
+    "R1 and R2 face each other while making right-hand contact",
+    "R1 is the man in the dark polo shirt and blue shorts participating in the handshake",
+    "R2 is the woman in the white t-shirt and blue jeans participating in the handshake",
+    "the interaction takes place inside a motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person using his right hand to clasp R2's right hand, rather than R1 using his left hand in the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right-hand contact duty in the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose right hand is clasped by R1's right hand, rather than R2 offering her left hand for the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right-hand contact duty in the handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the man participating in the right-hand contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled participant role in the handshake"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the woman participating in the right-hand contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's labeled participant role in the handshake"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

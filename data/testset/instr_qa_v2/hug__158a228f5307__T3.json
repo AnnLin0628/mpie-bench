@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__158a228f5307__T3",
+  "instruction": "Candid lifestyle medium shot of an indoor birthday party. The grey-haired woman (R1) in a light grey dress stands in the center, laughing happily with her eyes closed. The blonde woman (R3) in an orange patterned dress on the left leans in to hug R1's shoulder, while the short-haired woman (R2) in a white blouse on the right embraces her. A decorated wooden table with a \"60\" birthday cake and cupcakes sits in the foreground under warm indoor lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 leans in to hug R1's shoulder",
+    "R2 embraces R1 while R1 is the central recipient",
+    "R1 is the central person being embraced by both R2 and R3",
+    "R1 laughs with her eyes closed during the contact",
+    "decorated wooden table with a \"60\" birthday cake and cupcakes",
+    "indoor birthday party under warm lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 lean in to hug R1's shoulder, rather than R1 leaning in to hug R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the one leaning in to make shoulder contact with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 embrace R1 while R1 is the central person receiving the embrace, rather than R1 being the one primarily embracing R2 from the side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 as R1 receives the contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the central focus being contacted by both R2 and R3, rather than R2 and R3 embracing each other as the main contact pair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the shared central recipient of R2 and R3's contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in the center laughing with her eyes closed while R2 and R3 make close celebratory contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's central receiving role and expression during the interaction"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a decorated wooden table in the foreground holding a \"60\" birthday cake and cupcakes?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "foreground table with 60 birthday cake and cupcakes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

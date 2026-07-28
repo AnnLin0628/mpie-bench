@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T27",
+  "instruction": "Candid action medium close-up in an indoor judo dojo with blue wall mats. On the left, the male judoka in a white gi with 'G. LOPES POR' on the back (R4) is seen from behind, gripping the lapel of the older male judoka in a white gi (R3) on the right. The older judoka faces left with a focused expression. Bright, even indoor lighting illuminates the scene against the blue background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 grips the lapel of R3's gi",
+    "R3 is the older judoka receiving R4's lapel grip",
+    "R4 is seen from behind while initiating the lapel grip on R3",
+    "R3 faces toward R4 with a focused expression during the grapple",
+    "the gi lapel is the contact-relevant object being held",
+    "the scene is inside a judo dojo with blue wall mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 gripping the lapel of R3's gi, rather than R3 gripping the lapel of R4's gi?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 grips the lapel of R3's gi"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the older judoka whose lapel is being gripped by R4, rather than R4 being the older judoka whose lapel is gripped by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the older judoka receiving R4's lapel grip"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the judoka applying the lapel grip while seen from behind, rather than R3 being the one applying that grip from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is seen from behind while initiating the lapel grip on R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 face toward R4 with a focused expression while R4 holds his lapel?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 faces toward R4 with a focused expression during the grapple"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

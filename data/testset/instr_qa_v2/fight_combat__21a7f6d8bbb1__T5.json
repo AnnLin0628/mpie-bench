@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__21a7f6d8bbb1__T5",
+  "instruction": "Cinematic film still, medium-wide low-angle shot of an indoor boxing ring. Inside the ring, the shirtless Black man with braided hair (R2) on the left and the shirtless tattooed white man (R1) on the right are sparring. The shirtless Black man (R2) is in profile, wearing dark shorts and boxing gloves, facing right in a defensive stance. The shirtless tattooed white man (R1) has his back to the camera, wearing black shorts and gloves, facing left. The scene is dimly lit with cool blue-gray tones and overhead spotlights casting dramatic shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the boxer in a defensive stance facing R1",
+    "R1 is the boxer with his back to the camera facing R2",
+    "R2 is shown in profile while R1 is shown from behind",
+    "R1 and R2 are sparring with each other inside the boxing ring",
+    "Both R1 and R2 are wearing boxing gloves",
+    "The interaction takes place in an indoor boxing ring under overhead spotlights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer in a defensive stance facing R1, rather than R1 being the one described in the defensive stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the boxer in a defensive stance facing R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer with his back to the camera while facing R2, rather than R2 being the boxer with his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the boxer with his back to the camera facing R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 shown in profile while R1 is shown from behind, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is shown in profile while R1 is shown from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the sparring take place inside an indoor boxing ring under overhead spotlights?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The interaction takes place in an indoor boxing ring under overhead spotlights"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

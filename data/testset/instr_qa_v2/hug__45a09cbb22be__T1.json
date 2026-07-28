@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__45a09cbb22be__T1",
+  "instruction": "A candid documentary photograph, medium shot at eye-level. In a bright indoor art studio with a black folding screen, the woman in the beige shirt (R2) stands on the left, looking skeptically at the man in the pink t-shirt (R1) on the right. The man stands looking down at a cherry blossom ink painting on the table with a gentle smile. They stand side-by-side, hands resting near the artwork. Soft, warm indoor lighting illuminates the scene, highlighting the pastel tones of their clothing.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks skeptically at R1",
+    "R1 looks down at the cherry blossom ink painting with a gentle smile",
+    "R1 and R2 stand side-by-side with hands near the artwork",
+    "cherry blossom ink painting on the table",
+    "bright indoor art studio with a black folding screen"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking skeptically at R1, rather than R1 looking skeptically at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs skeptical attention toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking down at the cherry blossom ink painting with a gentle smile, rather than R2 doing so?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 focuses on the artwork with a gentle smile"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stand side-by-side near the artwork, with R1 attending to the painting while R2 attends to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "different attention roles beside the artwork"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

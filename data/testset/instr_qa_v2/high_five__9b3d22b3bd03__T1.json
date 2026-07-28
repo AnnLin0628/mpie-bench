@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__9b3d22b3bd03__T1",
+  "instruction": "A cinematic film still, full shot at eye-level, captures an outdoor tennis court on a sunny day. On the left, the girl in the light green tank top and purple tennis skirt (R1) stands in profile, smiling as she raises her right hand. Facing her on the right, the girl in the turquoise polo and white tennis skirt (R2) raises her right hand to return the high-five. Both girls hold tennis rackets in their left hands. A dark, out-of-focus obstruction appears in the lower center foreground. Bright, direct sunlight illuminates the scene, casting soft shadows on the green court surface.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 raises her right hand to initiate or offer the high-five while R2 raises her right hand to return it",
+    "R2 is the returner of R1's high-five rather than the initiator",
+    "R1 and R2 face each other with raised right hands for the high-five",
+    "R1 holds a tennis racket in her left hand",
+    "R2 holds a tennis racket in her left hand",
+    "The interaction takes place on an outdoor tennis court"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a high-five with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five initiator/active hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the high-five, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

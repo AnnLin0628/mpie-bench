@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__043852ee1028__T9",
+  "instruction": "A cheerful studio portrait photograph with a vibrant and clean style, captured in a close-up shot at eye-level against a solid, bright yellow backdrop. On the left, the woman with brown hair and bangs (R2) stands in a light gray bra with her arms crossed over her chest, smiling brightly at the camera. On the right, the woman with voluminous curly dark hair (R1) stands slightly behind her in a dark gray tank top, resting her hand gently on her companion's shoulder and smiling warmly. The scene is illuminated by bright, even studio lighting, creating a joyful and energetic atmosphere.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 rests her hand gently on R2's shoulder",
+    "R2 is the person receiving the shoulder touch from R1",
+    "R1 stands slightly behind R2 while making the shoulder contact",
+    "R2 keeps her arms crossed over her chest while R1 touches her shoulder",
+    "R1 and R2 are smiling in a close-up studio portrait",
+    "The portrait is set against a solid bright yellow backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting her hand on R2's shoulder, rather than R2 resting her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the shoulder-touch contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the shoulder touch from R1, rather than R1 receiving that touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 stand slightly behind R2 while placing her hand on R2's shoulder, rather than R2 standing behind R1 and placing a hand on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is positioned slightly behind R2 while making the contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her arms crossed over her chest while R1 is the one making shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's crossed-arm body configuration contrasts with R1's shoulder-touching role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

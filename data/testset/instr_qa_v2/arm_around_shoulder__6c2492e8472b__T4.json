@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__6c2492e8472b__T4",
+  "instruction": "Candid lifestyle photograph, medium shot. Two men stand close together outdoors against a grey corrugated metal wall. On the left, the fair-skinned man in the teal t-shirt and pinkish-grey open shirt (R2) is shown in profile, leaning his left arm casually over his companion's shoulder while looking forward. On the right, the Black man in the light blue open shirt over a white t-shirt (R1) stands facing him, looking at him with a calm, attentive expression. The scene is illuminated by soft, diffused daylight, highlighting the cool grey tones of the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans his left arm casually over R1's shoulder",
+    "R1 is the person whose shoulder receives R2's draped arm",
+    "R1 faces and looks at R2 while R2 makes the shoulder contact",
+    "R2 stands close to R1 in profile during the arm-around-shoulder interaction",
+    "R1 and R2 are outdoors against a grey corrugated metal wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning his left arm over R1's shoulder, rather than R1 leaning an arm over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places his arm over R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being used for R2's draped arm, rather than R2's shoulder being used by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 stand as the attentive recipient of R2's shoulder contact, rather than R2 receiving that contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient while R2 initiates the shoulder drape"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand close to R1 with his arm casually resting over R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's close arm-over-shoulder pose with R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 and look at him while R2's arm is over his shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 during R2's shoulder contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

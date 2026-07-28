@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T9",
+  "instruction": "Cinematic medium-wide shot from a low angle of a couple practicing yoga outdoors under a cloudy sky. On the right, the woman with buzzed hair (R1) in a beige sports bra and grey shorts holds a warrior pose with arms outstretched. On the left, the bearded man (R2) in a white t-shirt and black leggings holds the same pose facing the opposite direction. Soft, overcast daylight illuminates the scene with muted natural tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the buzzed-haired woman holding a warrior pose",
+    "R2 is the bearded man holding the same warrior pose",
+    "R1 and R2 face opposite directions while posing",
+    "both R1 and R2 have arms outstretched in the yoga pose",
+    "the yoga practice takes place outdoors under a cloudy sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the buzzed-haired woman holding the warrior pose, rather than R2 being the buzzed-haired woman in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the buzzed-haired woman holding a warrior pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the bearded man holding the matching warrior pose, rather than R1 being the bearded man in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the bearded man holding the same warrior pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a warrior pose with arms outstretched while R2 also holds the same yoga pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "both R1 and R2 have arms outstretched in the yoga pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 practicing yoga outdoors under a cloudy sky?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the yoga practice takes place outdoors under a cloudy sky"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

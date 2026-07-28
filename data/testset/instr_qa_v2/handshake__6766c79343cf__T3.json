@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__6766c79343cf__T3",
+  "instruction": "Candid documentary photograph, medium shot. Inside an unfinished concrete building, the woman in the yellow safety vest and yellow hard hat (R2) stands on the left in profile, facing right. On the right, the woman in the orange safety vest and white hard hat (R1) stands in profile, facing left. They are captured mid-handshake, gripping each other's right hands with a slightly adjusted hold. They look at each other with friendly expressions. The background shows a textured concrete wall and a glass door frame. Soft, natural lighting illuminates the subjects and their colorful safety vests.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the handshake participant facing left toward R2 while gripping R2's right hand",
+    "R2 is the handshake participant facing right toward R1 while gripping R1's right hand",
+    "R1 and R2 are directly engaged in a reciprocal right-hand handshake",
+    "R1 and R2 look at each other with friendly expressions during the handshake",
+    "Both R1 and R2 wear safety hard hats during the interaction",
+    "The interaction occurs inside an unfinished concrete building with a textured concrete wall and glass door frame"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 directly engaged with each other by gripping each other's right hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are directly engaged in a reciprocal right-hand handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

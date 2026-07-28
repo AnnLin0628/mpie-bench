@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__a484166354bd__T2",
+  "instruction": "An artistic studio photograph in a medium shot captures a dark indoor setting with dappled shadow patterns. On the left, the glitter-covered woman (R1) stands facing right, looking down intently at her cupped hands. On the right, the glitter-covered man (R2) leans forward, facing left, and extends his right arm to gently touch or reach toward her hands. Both subjects are covered in shimmering gold and multicolored glitter, wearing dark briefs. The warm, low-key lighting highlights the sparkling texture of their skin, casting soft shadows on the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward and extends his right arm toward R1's cupped hands",
+    "R1 holds her own hands cupped while R2 reaches toward them",
+    "R1 looks down at her cupped hands as R2's hand approaches them",
+    "R1 stands facing R2 while R2 leans in toward R1",
+    "both R1 and R2 are covered in shimmering gold and multicolored glitter",
+    "the scene is a dark indoor studio with dappled shadow patterns"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending his right arm toward R1's cupped hands, rather than R1 extending her arm toward R2's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches toward R1's cupped hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding her own hands cupped as the target of R2's reaching gesture, rather than R2 holding cupped hands for R1 to reach toward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's cupped hands are the focus of R2's reach"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down at her cupped hands while R2 leans in to touch or reach toward them, rather than R2 looking down at his hands while R1 leans in?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 watches her cupped hands as R2 reaches toward them"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing facing R2 while R2 leans forward toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands as R2 leans in toward her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

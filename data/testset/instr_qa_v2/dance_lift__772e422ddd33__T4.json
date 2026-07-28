@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T4",
+  "instruction": "Candid studio photograph, full-shot at eye-level. In a bright dance studio with a large mirror, the woman in a black leotard and white tights (R1) stands on the right foreground with her back to the camera, holding the hands of the young girl in a pink tutu (R2) overhead. The girl (R2) stands en pointe facing the mirror with her back to the camera. The woman (R1) supports her balance. Their reflections are visible in the mirror on the left. Soft, bright daylight illuminates the clean studio space.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2's balance while R2 stands en pointe",
+    "R1 holds R2's hands overhead to steady her",
+    "R2 is the dancer being balanced and supported by R1",
+    "R1 and R2 are connected hand-to-hand during the dance pose",
+    "The scene is a bright dance studio with a large mirror showing their reflections"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's balance while R2 stands en pointe, rather than R2 supporting R1's balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's balance while R2 stands en pointe"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's hands overhead to steady R2, rather than R2 holding R1's hands overhead to steady R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hands overhead to steady her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the young dancer balanced en pointe with help from R1, rather than R1 being the one balanced en pointe with help from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer being balanced and supported by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 maintain hand contact with R2 while guiding R2's dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are connected hand-to-hand during the dance pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing en pointe while R1 steadies her through their joined hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands en pointe while R1 steadies her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

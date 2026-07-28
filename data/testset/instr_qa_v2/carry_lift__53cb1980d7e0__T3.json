@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__53cb1980d7e0__T3",
+  "instruction": "Cinematic medium shot of a man in a brown plaid coat (R1) and a woman in a red plaid blazer (R2) in front of a green wooden wall. The man (R1) on the left holds a grey rabbit with his eyes closed. The woman (R2) on the right holds a black rabbit, looking forward with a somber expression. They stand close together, lost in their own thoughts. Soft natural light highlights their faces against the dark green background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the grey rabbit rather than R2",
+    "R2 holds the black rabbit rather than R1",
+    "R1 keeps his eyes closed while R2 looks forward with a somber expression",
+    "R1 and R2 stand close together while each holds a separate rabbit",
+    "grey rabbit held by R1",
+    "black rabbit held by R2",
+    "green wooden wall background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding the grey rabbit, rather than R2 holding the grey rabbit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the grey rabbit rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the black rabbit, rather than R1 holding the black rabbit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the black rabbit rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have his eyes closed while R2 looks forward with a somber expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps his eyes closed while R2 looks forward with a somber expression"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together while each holds a separate rabbit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together while each holds a separate rabbit"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

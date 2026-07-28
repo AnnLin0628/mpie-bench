@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__21a7f6d8bbb1__T9",
+  "instruction": "Cinematic film still, medium full shot. In a dimly lit boxing gym next to a boxing ring, the man with braided hair in the white t-shirt (R2) stands on the left, leaning against a black pillar. Beside him on the right, the tattooed man in the black sleeveless shirt (R1) sits on the ring's edge with hands on his lap. Both look directly at the camera with serious expressions. Warm overhead lighting casts soft shadows across the brick walls and gym equipment.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 sits on the edge of the boxing ring while R2 stands leaning against a black pillar",
+    "R2 is the one leaning against the black pillar rather than R1",
+    "R1 has his hands on his lap while seated on the ring edge",
+    "the boxing ring is present as the object R1 sits on",
+    "the black pillar is present as the object R2 leans against",
+    "the scene is a dimly lit boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 sitting on the boxing ring's edge while R2 stands leaning against a black pillar, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits on the ring edge while R2 stands leaning against the pillar"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person leaning against the black pillar rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one leaning against the black pillar"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit with his hands on his lap on the edge of the boxing ring?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated on the ring edge with hands on his lap"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 remain standing while leaning his body against the pillar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands while leaning against the pillar"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

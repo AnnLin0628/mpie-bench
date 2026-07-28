@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T105",
+  "instruction": "A candid documentary photograph with a wide shot, eye-level angle, set in an indoor motion capture studio with a red carpeted floor and white walls. The man in the dark polo shirt and blue shorts (R1) stands on the right in profile facing right, wearing a black cap. The woman in the white t-shirt and blue jeans (R2) stands on the left, leaning forward to touch the man's upper back with her right hand. Bright overhead fluorescent lighting illuminates the scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward and touches R1's upper back with her right hand",
+    "R1 receives the upper-back contact from R2 rather than initiating it",
+    "R2 is the person reaching toward R1's back while R1 stands in profile",
+    "R1 stands in profile facing right as R2 contacts his upper back",
+    "The scene is an indoor motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 touching R1's upper back with her right hand, rather than R1 touching R2's upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 touches R1's upper back with her right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving contact on his upper back from R2, rather than R2 receiving upper-back contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the upper-back contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward toward R1 to make the back contact, rather than R1 leaning forward to touch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward to touch R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in profile while R2 reaches to touch his upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile as R2 reaches to his back"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 make the contact using her right hand on R1's upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses her right hand to contact R1's upper back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

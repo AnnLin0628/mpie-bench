@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__32b55aa6035c__T1",
+  "instruction": "Candid medium shot of a bright apartment interior. On the left, the Black man in a tan coat (R2) holds a cardboard box and smiles warmly at the woman. On the right, the Asian woman in a dark green coat (R1) holds a smaller cardboard box, looking back at him with a smile. They stand side-by-side, sharing a happy moment during their move. Soft natural daylight fills the room, creating a bright and clean atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds the larger cardboard moving box while smiling warmly at R1",
+    "R1 holds the smaller cardboard moving box while smiling back at R2",
+    "R2 carries a moving box as he engages R1 with a warm smile",
+    "R1 carries her own smaller moving box while looking back at R2",
+    "both R1 and R2 are holding cardboard moving boxes",
+    "R1's cardboard box is smaller than R2's box",
+    "bright apartment interior with soft natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the larger cardboard moving box and smiling warmly at R1, rather than R1 holding the larger box and smiling that way at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the larger cardboard moving box while smiling warmly at R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding the smaller cardboard box and smiling back at R2, rather than R2 being the one with the smaller box smiling back at her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the smaller cardboard moving box while smiling back at R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 carry a moving box while engaging R1 with a warm smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries a moving box as he engages R1 with a warm smile"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 carry her own smaller moving box while looking back at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries her own smaller moving box while looking back at R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are cardboard moving boxes being held by both R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "both R1 and R2 are holding cardboard moving boxes"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1's cardboard box smaller than R2's box?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's cardboard box is smaller than R2's box"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

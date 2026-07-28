@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T285",
+  "instruction": "A candid wide-angle photograph from a slightly high angle captures an indoor motion capture studio with a red carpet and white walls. In the center-left, the man in the black polo and blue shorts (R1) stands in profile facing left with a neutral expression. Behind him, the woman in the white t-shirt and blue jeans (R2) leans forward, pushing his lower back with both hands to nudge him forward. The studio background features equipment and white walls under bright, even overhead lighting that casts soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 pushes R1's lower back with both hands to move him forward",
+    "R1 is the person being nudged forward by R2",
+    "R2 leans forward behind R1 while applying contact to his lower back",
+    "R1 stands in profile while receiving the push from R2",
+    "indoor motion capture studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pushing R1's lower back with both hands, rather than R1 pushing R2's lower back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 pushes R1's lower back with both hands to move him forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being nudged forward by R2, rather than R2 being nudged forward by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being nudged forward by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward behind R1 to apply the push, rather than R1 leaning forward behind R2 to push her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward behind R1 while applying contact to his lower back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 using both hands on R1's lower back as the contact point for the nudge?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hands contact R1's lower back"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in profile while receiving the push from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile while receiving the push from R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

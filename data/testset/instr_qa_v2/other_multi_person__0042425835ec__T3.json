@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T3",
+  "instruction": "A candid documentary medium shot shows a playful outdoor game. On the left, the man in the patterned shirt (R3) is blindfolded, smiling as he swings a yellow bat upward at a red piñata. On the right, the woman in the pink shirt (R1) laughs joyfully while watching him. The background consists of lush green trees and bushes. Soft, natural daylight fills the scene, casting gentle shadows and highlighting their happy expressions as they play together.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the blindfolded player swinging a yellow bat upward at the red piñata",
+    "R1 is watching and laughing while R3 plays",
+    "R3 performs the active hitting role rather than R1",
+    "A yellow bat is used in the game",
+    "A red piñata is the target of the swing",
+    "The scene is outdoors with green trees and bushes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the blindfolded person swinging the yellow bat at the red piñata, rather than R1 doing the swinging?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the active blindfolded piñata hitter while R1 is not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 laughing and watching R3 play, rather than R3 laughing and watching R1 swing the bat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the observer while R3 is the player"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 take the active game role by swinging upward at the piñata while R1 remains a joyful watcher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 swings at the piñata and R1 watches"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

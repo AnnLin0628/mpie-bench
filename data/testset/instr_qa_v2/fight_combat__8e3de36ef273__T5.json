@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__8e3de36ef273__T5",
+  "instruction": "A cinematic film still captured in a medium shot inside a brightly lit boxing gym. Two fighters stand opposite each other inside the boxing ring, preparing for a match. On the left side of the frame, the shirtless, sweaty dark-skinned man with a beard (R2) stands in profile facing right. On the right side, the shirtless light-skinned man with braided hair and a tribal shoulder tattoo (R1) stands in profile facing left. The two men maintain intense, unwavering eye contact with serious expressions. The background shows the boxing ring ropes, hanging heavy bags, and a polished wooden floor under bright, even indoor gym lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the light-skinned fighter with braided hair and a tribal shoulder tattoo facing R2",
+    "R2 is the dark-skinned bearded fighter facing R1",
+    "R1 and R2 stand opposite each other in a boxing-ring faceoff",
+    "boxing ring ropes are visible around the fighters",
+    "hanging heavy bags are visible in the gym",
+    "brightly lit boxing gym setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the light-skinned fighter with braided hair and a tribal shoulder tattoo facing R2, rather than R2 being that fighter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the braided-haired tattooed fighter facing R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dark-skinned bearded fighter facing R1, rather than R1 being that fighter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the bearded dark-skinned fighter facing R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing opposite each other in profile while maintaining intense eye contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are squared off in a profile faceoff"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 preparing to face each other for a boxing match inside the ring?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are opponents preparing for a match"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

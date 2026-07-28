@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T45",
+  "instruction": "Candid documentary photograph, full shot, slightly low angle. The scene is set in an indoor motion capture studio featuring a dark red carpet, white walls, and red partition screens. The man in the black polo shirt and blue shorts (R1) stands on the left side of the frame, facing right in profile. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing left toward him. She reaches out with her right hand to touch the man's (R1) right shoulder. Overhead indoor lighting casts soft shadows across the warm-toned room, highlighting the interaction between the two subjects.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches out with her right hand to touch R1's right shoulder",
+    "R1 receives the shoulder touch from R2 rather than touching R2",
+    "R2 is the active toucher while R1 is the recipient",
+    "R1 and R2 face each other during the shoulder-touch interaction",
+    "the scene is set in an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching out with her right hand to touch R1's right shoulder, rather than R1 reaching out to touch R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively touches R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder touch from R2, rather than R2 receiving a shoulder touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 initiate the physical contact by extending her right hand toward R1, rather than R1 initiating contact toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2's right hand make contact with R1's right shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand contacts R1's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

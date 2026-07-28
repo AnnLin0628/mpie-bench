@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T7",
+  "instruction": "Candid cinematic medium shot of an outdoor backyard with hanging string lights. On the left, the man in the patterned t-shirt (R3), wearing a peach bandana and glasses, extends his hand in a scissors gesture. On the right, the woman in the pink shirt (R1) stands watching and smiling. An off-screen person's hand extends from the right edge to play rock-paper-scissors. Warm ambient light glows from the background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 extends his hand in a scissors gesture for rock-paper-scissors",
+    "R2 is represented by an off-screen hand extending in to play rock-paper-scissors",
+    "R1 stands watching and smiling rather than playing",
+    "R3 and R2 are the active rock-paper-scissors participants while R1 is an observer",
+    "The scene is an outdoor backyard with hanging string lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person extending a hand in a scissors gesture toward R2's off-screen hand, rather than R1 doing the scissors gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 makes the scissors gesture while R1 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the off-screen participant whose hand extends into the scene to play against R3, rather than R3 being the off-screen hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the off-screen hand opponent and R3 is visible"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 watching and smiling while R3 and R2 play rock-paper-scissors, rather than R1 being the active hand opponent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the observer, not the active rock-paper-scissors player"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R2 the two participants engaged in the rock-paper-scissors action while R1 observes them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R2 are active participants; R1 is an onlooker"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

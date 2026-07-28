@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__423751002ab8__T2",
+  "instruction": "Candid corporate medium shot from a slightly low angle in a bright office. The woman with dark brown hair in a dark blue blazer (R1) on the left laughs in profile, raising her arm high. Next to her, the woman with curly dark hair in a black blazer (R4) and the woman with long dark brown hair in a black blazer (R3) look up and smile, raising their arms. On the right, the blonde woman in a teal top (R2) smiles in profile. Their hands are joined high in a celebratory team stack under bright, natural indoor light.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 raises her arm high into the celebratory team hand stack while R2 is only described smiling in profile",
+    "R3 and R4 look up and raise their arms toward the joined hands while R2 is not described looking up",
+    "R1, R3, and R4 are active arm-raisers in the high joined-hand stack with R2 included in the stack",
+    "All four labeled women have their hands joined high in a celebratory team stack",
+    "The interaction takes place in a bright office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman raising her arm high into the celebratory hand stack while R2 is only described smiling in profile, rather than R2 being the one described raising her arm high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively raises her arm high while R2 is only described smiling in profile"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R3 and R4 look up and raise their arms toward the joined hands, rather than R2 being described as the one looking up and raising her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 look up and raise their arms while R2 does not have that described role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 participating from a smiling profile pose in the team stack while R1 is the one laughing in profile with her arm raised high, rather than those two roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the high raised-arm laughing role and R2 has the smiling profile participant role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R3, and R4 raising their arms so their hands can meet high with the others in the celebratory team stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R3, and R4 raise their arms into the high team stack"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are the hands of R1, R2, R3, and R4 joined together high in a celebratory team stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "all four labeled women join hands high in the team stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

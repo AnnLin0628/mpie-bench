@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T273",
+  "instruction": "A candid documentary photograph from a wide, high angle shows an indoor motion capture studio with a red carpeted floor. The man in the dark grey t-shirt and blue shorts (R1) stands on the center-left, leaning forward with his right leg extended back, placing his right hand on the chest of the woman in the white t-shirt and blue jeans (R2). The woman (R2) stands upright on the center-right, facing him with her arms at her sides. Bright overhead lighting illuminates the scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his right hand on R2's chest",
+    "R2 does not place a hand on R1 and keeps her arms at her sides",
+    "R1 leans forward toward R2 while R2 stands upright facing him",
+    "R1's right hand is the contact point on R2's chest",
+    "The interaction takes place in an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing his right hand on R2's chest, rather than R2 placing her hand on R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his right hand on R2's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 keep her arms at her sides while R1 is the one making hand-to-chest contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 does not place a hand on R1 and keeps her arms at her sides"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward toward R2 while R2 remains upright facing him, rather than R2 leaning forward into R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward toward R2 while R2 stands upright facing him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1's right hand the body part making contact with R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand is the contact point on R2's chest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

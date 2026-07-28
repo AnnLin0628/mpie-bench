@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T162",
+  "instruction": "Candid documentary full shot from a front-three-quarter angle of a man in a black polo and blue shorts (R1) and a woman in a white t-shirt and blue jeans (R2) in a motion capture studio with a red carpet. The man (R1) stands on the left, facing right, and places his left hand on the right arm of the woman (R2), who stands on the right facing forward. The room has white walls and overhead fluorescent lighting casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his left hand on R2's right arm",
+    "R2 is the person whose right arm is being touched by R1",
+    "R1 is the active toucher and R2 is the contact recipient",
+    "R1 faces toward R2 while making arm contact",
+    "R2 stands facing forward while receiving the arm contact",
+    "motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person placing his hand on R2's arm, rather than R2 placing her hand on R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active toucher and R2 is the contact recipient"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use his left hand to touch R2's right arm, rather than R2 using her hand to touch R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his left hand on R2's right arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose right arm receives contact from R1, rather than R1 being the person whose arm receives contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose right arm is being touched by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

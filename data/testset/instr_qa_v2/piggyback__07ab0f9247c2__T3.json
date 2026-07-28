@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__07ab0f9247c2__T3",
+  "instruction": "Cinematic outdoor medium shot of a dry grassy field during a warm sunset. In the foreground on the right, the young girl in a pink ruffled top (R3) is shown in a side profile view, holding a colorful rainbow kite and looking down at it. In the background on the left, the young boy in a grey t-shirt and dark pants (R2) stands with his back turned to the camera, holding the kite string spool. The entire scene is bathed in warm golden sunset light with a soft, shallow depth of field.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 holds the colorful rainbow kite",
+    "R2 holds the kite string spool",
+    "R3 looks down at the kite while R2 has his back turned to the camera",
+    "the colorful rainbow kite is present",
+    "the kite string spool is present",
+    "the scene is in a dry grassy field at warm sunset"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 holding the colorful rainbow kite while R2 holds the kite string spool, rather than R2 holding the kite and R3 holding the spool?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the kite and R2 holds the kite string spool"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person looking down at the kite she is holding, while R2 has his back turned and holds the spool, rather than R2 looking down at the kite in his hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 attends to the kite while R2 handles the spool with his back turned"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have the role of holding the kite string spool in the background while R3 holds the kite in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the spool while R3 holds the kite"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 shown in side profile holding and looking down at the kite, while R2 is turned away from the camera with the spool?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is in side profile with the kite and R2 is back-turned with the spool"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

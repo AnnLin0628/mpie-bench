@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__9d731b4b6726__T2",
+  "instruction": "A candid cinematic photograph, medium close-up. Indoors at a festive dining table, an older woman with white hair (R1) sits on the left, looking down lovingly at a young blonde boy (R2) who sits in her lap. The older woman wraps her arms around the boy's waist, holding him close. In the foreground, a tall white candle burns, casting a warm glow. A decorated Christmas tree with glowing golden bokeh lights fills the background, creating a cozy and intimate holiday atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 by having R2 sit in her lap",
+    "R1 wraps her arms around R2's waist to hold him close",
+    "R2 is the child being held in R1's lap",
+    "R1 is the older woman seated while holding R2",
+    "a tall white candle burns in the foreground",
+    "a decorated Christmas tree with warm lights is in the background",
+    "the setting is indoors at a festive dining table"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 in her lap, rather than R2 supporting R1 in his lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 by having R2 sit in her lap"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2's waist to hold him close, rather than R2 wrapping his arms around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2's waist to hold him close"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting in R1's lap, rather than R1 sitting in R2's lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the child being held in R1's lap"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the seated older woman holding R2 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the older woman seated while holding R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young boy being held close by R1 while sitting in her lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the child being held in R1's lap"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

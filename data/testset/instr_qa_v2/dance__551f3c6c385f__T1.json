@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__551f3c6c385f__T1",
+  "instruction": "A candid full-length snapshot of two women dancing on an outdoor balcony with a metal railing, surrounded by lush green trees. On the left, the strawberry-blonde woman in the magenta dress (R2) dances with her arms raised, looking downward with a soft smile. On the right, the red-haired woman in the black halter dress and black ankle boots (R1) dances alongside her, arms raised high, smiling joyfully. The two dance in a carefree, synchronized manner side-by-side. The scene is illuminated by soft, natural daylight filtering through the background foliage, creating a bright and lively atmosphere with gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the red-haired woman dancing with arms raised high and smiling joyfully",
+    "R2 is the strawberry-blonde woman dancing with arms raised while looking downward with a soft smile",
+    "R1 and R2 dance alongside each other in a carefree, synchronized manner",
+    "R1 and R2 are shown full-length while dancing side-by-side",
+    "a metal railing is present on the outdoor balcony",
+    "the balcony is surrounded by lush green trees in soft natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer with red hair who raises her arms high and smiles joyfully, rather than R2 being described with that joyful high-arm dancing pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the joyful red-haired dancer with arms raised high"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the strawberry-blonde dancer who looks downward with a soft smile while dancing with raised arms, rather than R1 being described as looking downward softly?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the downward-looking strawberry-blonde dancer with a soft smile"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 dance alongside R2 while R1 smiles joyfully and R2 looks downward with a soft smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct dancing expressions while dancing alongside each other"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 dancing on an outdoor balcony surrounded by lush green trees in soft natural daylight?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor balcony with green trees and natural daylight"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

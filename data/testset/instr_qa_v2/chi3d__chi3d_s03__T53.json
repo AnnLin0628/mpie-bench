@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T53",
+  "instruction": "Candid documentary wide shot of an indoor motion capture studio featuring a red carpet, white walls, and background partitions. On the left, the man in the dark polo shirt and blue shorts (R1) stands facing away and to the right, leaning forward to reach his left hand toward the woman in the white t-shirt and blue jeans (R2). The woman (R2) stands upright on the right side of the frame, facing left and looking directly at him. The entire room is brightly lit by overhead lights, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward and reaches his left hand toward R2",
+    "R2 stands upright and looks at R1 while R1 is the one reaching",
+    "R1 is the reaching person rather than R2",
+    "R1 uses his left hand for the reaching gesture toward R2",
+    "R2 faces and attends to R1 as the target of his reach",
+    "The setting is a brightly lit indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward and reaching his left hand toward R2, rather than R2 leaning forward and reaching toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward and reaches his left hand toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 remain standing upright and looking at R1 while R1 is the one extending a hand toward her, rather than R1 standing upright while R2 extends a hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands upright and looks at R1 while R1 is the one reaching"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the active reaching person in the interaction, rather than R2 being the active reaching person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the reaching person rather than R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 use his left hand as the hand reaching toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses his left hand for the reaching gesture toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

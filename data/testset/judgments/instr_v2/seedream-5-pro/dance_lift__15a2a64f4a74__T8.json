@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__15a2a64f4a74__T8",
+  "model_id": "seedream-5-pro",
+  "S_instr": 0.9019607843137254,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.8333333333333334,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 mirroring R3's extended-arm pose, rather than R3 mirroring R1's pose?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "background child matches foreground dancer's extended arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the foreground dancer whose right-arm pose is being copied by R1, rather than R1 being the foreground dancer copied by R3?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "foreground dancer's right arm is extended"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look toward R3 while matching R3's pose, rather than R3 looking toward R1 while matching R1's pose?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "background child looks generally toward the right"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned in the background while copying R3's extended-arm pose?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 appears behind the foreground dancer"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance_lift__15a2a64f4a74__T8",
+    "model_id": "seedream-5-pro",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 12.6,
+    "written_at": "2026-07-17T23:25:41",
+    "gen_relpath": "outputs/seedream-5-pro/dance_lift__15a2a64f4a74__T8.png",
+    "qa_relpath": "instr_qa_v2/dance_lift__15a2a64f4a74__T8.json",
+    "n_questions": 4
+  }
+}

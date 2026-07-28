@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T8",
+  "instruction": "Cinematic action shot, wide shot of a spacious hall with balconies and a stage background. On the left, the blonde man in a leather jacket (R1) is captured mid-jump with his back partially turned. In the center, the dark-haired man in a white t-shirt and harness (R3) performs a high kick toward the camera. On the right, the long-haired man in a mesh shirt and skirt (R2) kicks his leg up. The three dancers perform energetic, synchronized jumps and kicks across the hall under cool blue ambient light with soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is captured mid-jump with his back partially turned",
+    "R3 performs a high kick toward the camera",
+    "R2 kicks his leg up",
+    "R1, R2, and R3 perform energetic synchronized jumps and kicks",
+    "The dancers are in a spacious hall with balconies and a stage background under cool blue ambient light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer performing a high kick toward the camera, rather than R1 doing that specific toward-camera high kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the toward-camera high kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer captured mid-jump with his back partially turned, rather than R2 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is mid-jump with back partially turned"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer kicking his leg up, rather than R1 being the one described as kicking his leg up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kicks his leg up"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 each have distinct dance actions, with R1 mid-jumping, R3 high-kicking toward the camera, and R2 kicking his leg up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct labeled dance actions for R1, R2, and R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

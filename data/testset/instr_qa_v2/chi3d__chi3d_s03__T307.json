@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T307",
+  "instruction": "A candid documentary medium-full shot from behind captures an indoor studio with a red carpeted floor, white walls, and an office printer visible in the background. On the left, the man in the black polo shirt and blue shorts (R1) stands facing right, reaching out with his right hand to touch the right shoulder of the woman in the white t-shirt and blue jeans (R2). The woman (R2) stands on the right, facing away from the camera. The room is lit by warm overhead lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches out with his right hand to touch R2's right shoulder",
+    "R2 receives the shoulder touch from R1 rather than touching R1",
+    "R1 initiates contact while R2 faces away from the camera",
+    "R1 and R2 are standing during the shoulder-touch interaction",
+    "an office printer is visible in the background",
+    "the scene is an indoor studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching out with his right hand to touch R2's right shoulder, rather than R2 reaching out to touch R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the shoulder-touch contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is being touched by R1, rather than R1 being the person whose shoulder is touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face toward R2 while initiating the shoulder touch, rather than R2 facing toward R1 to initiate the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces toward R2 and initiates contact while R2 faces away"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

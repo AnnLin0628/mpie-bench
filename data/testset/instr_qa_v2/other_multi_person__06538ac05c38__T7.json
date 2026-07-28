@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__06538ac05c38__T7",
+  "instruction": "Low-angle cinematic wide shot. On a rooftop under a clear sky, five friends stand in a line. From left to right: the woman in the white t-shirt (R1) stands with her hands clasped near her chin, looking up; the woman in the black crop top (R5) smiles while looking to the right; the woman in the denim vest (R3) stands in the center with her hand touching her hair; the man in the gray t-shirt (R2) stands looking forward; and the man in the green jacket and black hat (R4) stands on the far right with hands clasped. Bright daylight illuminates the scene.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R1 has hands clasped near her chin and looks up while R2 looks forward",
+    "R3 touches her hair while R2 looks forward",
+    "R4 has hands clasped while R5 smiles and looks to the right",
+    "R3 stands in the center with her hand touching her hair",
+    "R5 smiles while looking to the right",
+    "the group is on a rooftop under a clear sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one clasping her hands near her chin and looking up, rather than R2 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has hands clasped near her chin and looks up while R2 looks forward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one touching her hair while R2 looks forward, rather than R2 touching his hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 touches her hair while R2 looks forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one standing with hands clasped while R5 smiles and looks to the right, rather than R5 being the hands-clasped person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has hands clasped while R5 smiles and looks to the right"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand in the center with her hand touching her hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands in the center with her hand touching her hair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

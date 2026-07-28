@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__29c1a22cd096__T1",
+  "instruction": "A candid medium shot photograph set in an indoor office with a wooden bookshelf in the background. On the left, the bearded man in the grey polo (R2) stands in profile facing right, holding a manila folder in his left hand and smiling. On the right, the woman with glasses (R1) stands facing left, holding a folder in her left hand and smiling back. They extend their right arms to shake hands in the center of the frame. The scene is illuminated by warm indoor lighting, casting soft shadows on the cream-colored walls.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 smiles back at R2 while extending her right arm into the handshake",
+    "R2 holds a manila folder in his left hand while extending his right arm toward R1",
+    "R1 and R2 meet with their right hands while each keeps a folder in the left hand",
+    "R1 holds a folder in her left hand during the handshake",
+    "R2 holds a manila folder in his left hand during the handshake",
+    "indoor office with a wooden bookshelf in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the participant specifically holding a manila folder in his left hand while extending his right arm to shake with R1, rather than R1 being the one specified with the manila folder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a manila folder in his left hand while extending his right arm toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other and extend their right arms so their right hands meet between them, while their left hands remain occupied with folders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 meet with their right hands while each keeps a folder in the left hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding her folder with her left hand while using her right hand to meet R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a folder in her left hand during the handshake"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a manila folder as he greets R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a manila folder in his left hand during the handshake"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

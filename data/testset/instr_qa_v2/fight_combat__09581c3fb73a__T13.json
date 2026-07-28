@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T13",
+  "instruction": "Candid action photograph, medium shot. In a covered outdoor pavilion during the day, the boxer in the blue tank top (R2) on the left lunges forward in a wide stance, throwing a punch. The boxer in the beige t-shirt (R1) stands on the right, seen from behind, guarding with black boxing gloves. Bright natural daylight illuminates the scene with neutral tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 lunges forward in a wide stance and throws the punch while R1 guards",
+    "R1 is the guarding boxer rather than the punching boxer",
+    "R2 is the attacking boxer rather than the defending boxer",
+    "R1 uses black boxing gloves while guarding",
+    "The interaction takes place in a covered outdoor pavilion during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward and throwing a punch while R1 guards, rather than R1 throwing the punch while R2 guards?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attacks with a punch while R1 defends"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer in the defensive guarding role with gloves, rather than R2 being the one guarding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the guarding duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer advancing in a wide stance to strike, rather than R1 advancing to strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the advancing puncher"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in a guarded boxing posture as R2 attacks with a punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends while R2 punches"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

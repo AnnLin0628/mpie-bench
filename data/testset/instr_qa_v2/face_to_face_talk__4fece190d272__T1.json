@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__4fece190d272__T1",
+  "instruction": "A minimalist lifestyle photograph with a full shot captures a bright, clean indoor studio with white walls and a potted olive tree. On the left, the man in the black suit (R2) sits in a modern white armchair, holding a laptop on his lap and looking toward his colleague. On the right, the woman in the white shirt and black vest (R1) sits on a textured white block, holding a black clipboard and looking down at her notes. The two are positioned a few feet apart, engaged in a quiet, collaborative workspace interaction. The scene is illuminated by soft, diffused natural light, creating a bright, neutral color palette with minimal shadows and a clean, professional atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds a laptop on his lap while R1 holds a black clipboard",
+    "R1 looks down at her notes while R2 looks toward R1",
+    "R2 sits in a modern white armchair while R1 sits on a textured white block",
+    "a laptop is on R2's lap",
+    "a black clipboard is held by R1",
+    "the setting is a bright, clean indoor studio with white walls and a potted olive tree"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the laptop on his lap while R1 holds the black clipboard, rather than R1 holding the laptop on her lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the laptop-on-lap duty while R1 has the clipboard-holding duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down at her notes while R2 looks toward R1, rather than R2 being the one looking down at notes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is focused on notes while R2 directs attention toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 seated in the modern white armchair while R1 is seated on the textured white block, rather than their seats being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 occupies the armchair and R1 occupies the textured block"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit separately from R2 while holding her clipboard and consulting her notes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's seated work role is clipboard note-checking"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a black clipboard?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black clipboard held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__0366f4ef5c87__T2",
+  "instruction": "Candid party photograph, medium shot. Indoors at a party with purple ambient light and music notes on the wall. The short-haired blonde woman (R1) in a pink polo shirt and blue jeans stands in profile, holding an orange soda bottle and smiling happily. The ginger man with a beard (R2) in a striped shirt stands closely behind her, wrapping his arms around her waist and smiling down at her. The entire scene is illuminated by warm, colorful pink and purple party lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands closely behind R1 and wraps his arms around R1's waist",
+    "R1 is the person being held around the waist by R2",
+    "R1 holds an orange soda bottle while R2 is the one holding her waist",
+    "R1 smiles in profile while R2 smiles down at her from behind",
+    "orange soda bottle held by R1",
+    "indoor party setting with purple ambient light and music notes on the wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his arms around R1's waist from behind, rather than R1 wrapping her arms around R2's waist from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the waist-holder behind R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being encircled at the waist by R2, rather than R2 being encircled at the waist by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person held around the waist"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the orange soda bottle while R2 wraps his arms around her waist, rather than R2 holding the bottle while R1 wraps her arms around him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the bottle and R2 holds R1's waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand closely behind R1 with his arms around her waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's behind-and-waist-holding role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile as the front person while R2 smiles down at her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 front/profile role with R2 behind"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding an orange soda bottle?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "orange soda bottle held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

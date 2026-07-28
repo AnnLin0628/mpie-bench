@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T15",
+  "instruction": "Cinematic medium close-up shot of a contemporary dance performance in a dark indoor studio. In the center, the clean-shaven man in the rust-colored shirt (R3) is in profile facing right, head bowed with a focused expression. To his right, the woman in the mustard yellow shirt (R4) with curly strawberry-blonde hair looks right with a serious expression. In the bottom-left, the bearded man in the rust-colored shirt (R1) is partially visible. The clean-shaven man and the curly-haired woman stand close, their arms raised high with hands curved gracefully. In the background, several blurred arms of other dancers are raised upward. Dramatic overhead lighting illuminates the warm rust and yellow tones against the dark background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is the central clean-shaven male dancer in profile with head bowed while R4 is beside him looking right",
+    "R1 is only partially visible in the bottom-left while R3 is central",
+    "R3 and R4 stand close with their arms raised high and hands curved gracefully",
+    "R4 is the curly-haired woman looking right with a serious expression",
+    "dark indoor studio with dramatic overhead lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the central clean-shaven male dancer shown in profile with his head bowed while R4 is the curly-haired woman beside him looking right, rather than those roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the central bowed-profile dancer and R4 is the adjacent curly-haired dancer looking right"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R3 and R4 stand close together as the main raised-arm dance pair with their hands curved gracefully?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R4 perform close together with raised curved hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 look to the right with a serious expression while standing close to R3 in the dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's dance role includes looking right seriously beside R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

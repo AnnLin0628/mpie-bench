@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T147",
+  "instruction": "A candid documentary wide shot of an indoor motion capture studio with a red carpeted floor, white walls, and white floor markers. On the left, the woman in the white t-shirt and blue jeans (R2) stands facing right, extending her right arm to touch the chest of the man in the black cap and blue shorts (R1), who stands on the right facing left with a neutral expression. The room is illuminated by bright overhead fluorescent lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's chest",
+    "R1 is the person whose chest is being touched by R2",
+    "R2 initiates the chest contact while R1 remains neutral",
+    "R1 and R2 face each other during the contact",
+    "indoor motion capture studio with red carpet and white floor markers"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's chest, rather than R1 extending his arm to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates chest contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the touch on his chest from R2, rather than R2 receiving a chest touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the contact recipient"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 actively reach toward R1 while R1 stands with a neutral expression, rather than R1 actively reaching toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active toucher and R1 is neutral"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

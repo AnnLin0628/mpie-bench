@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0042425835ec__T12",
+  "instruction": "A full shot cinematic still of a grassy outdoor backyard surrounded by green trees. On the left, the woman in the crochet vest (R2) is blindfolded with a peach bandana, holding a wooden bat high and laughing. In the background center, the woman in the pink shirt (R1) laughs and reacts. On the right, the man in the patterned tee (R3) laughs and claps his hands together in excitement. The blindfolded woman holds the wooden bat high after swinging at a red pinata, while her friends stand behind her, laughing and celebrating the moment. The scene is illuminated by bright daylight filtering through the trees.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the blindfolded participant holding a wooden bat high after swinging at the red pinata",
+    "R1 stands behind R2 and laughs/reacts as a friend rather than swinging the bat",
+    "R3 stands behind R2 and claps in excitement rather than swinging the bat",
+    "R2 wears a peach bandana as a blindfold",
+    "A wooden bat is used to strike the red pinata",
+    "The scene is a grassy outdoor backyard surrounded by green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blindfolded person holding the wooden bat high after swinging at the red pinata, rather than R1 being the one swinging while R2 only reacts?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active blindfolded batter while R1 reacts"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wielding the bat at the pinata while R3 claps as a celebrating friend, rather than R3 wielding the bat while R2 claps?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 swings the bat and R3 claps"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 clapping his hands together in excitement as R2 holds the bat, rather than R2 clapping while R3 holds the bat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the clapping onlooker and R2 is the bat holder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned behind the blindfolded R2, laughing and reacting to R2's pinata swing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is a reacting friend behind R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a wooden bat high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "wooden bat held by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

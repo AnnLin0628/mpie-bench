@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T8",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.5980392156862745,
+  "S_instr_role": 0.5,
+  "S_instr_asymm": 0.6666666666666666,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.5,
+  "S_instr_prop_object": null,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer performing a high kick toward the camera, rather than R1 doing that specific toward-camera high kick?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "center dancer high-kicks toward camera"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer captured mid-jump with his back partially turned, rather than R2 being the one described that way?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "left dancer is airborne and turned partly away"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer kicking his leg up, rather than R1 being the one described as kicking his leg up?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "center dancer has a leg raised high"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 each have distinct dance actions, with R1 mid-jumping, R3 high-kicking toward the camera, and R2 kicking his leg up?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R1 and R2 fit, but R3 is not the toward-camera high kick"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "dance__189c40887fcb__T8",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 45.34,
+    "written_at": "2026-07-17T14:55:50",
+    "gen_relpath": "outputs/gemini-3-pro-image/dance__189c40887fcb__T8.png",
+    "qa_relpath": "instr_qa_v2/dance__189c40887fcb__T8.json",
+    "n_questions": 4
+  }
+}

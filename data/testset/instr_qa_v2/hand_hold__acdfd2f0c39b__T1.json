@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__acdfd2f0c39b__T1",
+  "instruction": "A candid street photograph captures a full-length shot of two men walking on a city sidewalk under green trees during the day. On the left, the white man in the pink shirt (R2) walks forward, holding a clear plastic cup in his right hand while looking to his right. On the right, the Black man in the white shirt (R1) walks alongside him, looking back at his partner. The two men are holding hands as they stroll together. The scene is illuminated by soft, natural daylight filtering through the leaves, creating gentle shadows on the pavement with a cool color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the cup-holder while walking hand-in-hand with R1",
+    "R1 looks back at R2 while they stroll together",
+    "R1 and R2 hold hands as they walk",
+    "R2 holds a clear plastic cup in his right hand",
+    "the pair walks on a city sidewalk under green trees in daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding a clear plastic cup while walking hand-in-hand with R1, rather than R1 being the cup-holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the cup-holder role during the hand-holding walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking back at R2 as they walk together holding hands, rather than R2 looking back at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the look-back role toward R2 during the interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk forward while holding hands with R1 and carrying the cup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks forward in the hand-holding pair while carrying the cup"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

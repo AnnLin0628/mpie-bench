@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__6dde770d54d0__T3",
+  "instruction": "Cinematic film still, low-angle medium full shot. On a sunny sandy beach with dunes in the background, the man in the black wetsuit (R1) and the boy in the black and blue wetsuit (R2) walk forward side-by-side while holding hands. The man (R1) carries a surfboard under his left arm, looking upward with a smile. Beside him, the boy (R2) walks with his eyes closed and head tilted slightly up. The image features bright, warm backlighting that creates a soft lens flare and a hazy, atmospheric look.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries the surfboard under his left arm while walking with R2",
+    "R2 is the hand-holding companion beside R1 and is not carrying the surfboard",
+    "R1 and R2 walk forward side-by-side while holding hands",
+    "R1 smiles and looks upward while walking with R2",
+    "R2 walks with eyes closed and head tilted slightly up",
+    "a surfboard is carried by R1",
+    "the scene is a sunny sandy beach with dunes in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one carrying the surfboard under his left arm while holding R2's hand, rather than R2 carrying the surfboard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the surfboard rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the unencumbered hand-holding companion walking beside R1, rather than being the person with the surfboard under his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks beside R1 without carrying the surfboard"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward side-by-side while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk forward side-by-side holding hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 smile and look upward while walking hand-in-hand with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles and looks upward during the hand-holding walk"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

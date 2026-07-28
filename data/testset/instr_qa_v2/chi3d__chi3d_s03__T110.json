@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T110",
+  "instruction": "A candid medium-wide photograph taken inside a motion capture studio with a red carpeted floor and dark partition screens. On the left, the man in the dark polo shirt and blue shorts (R1) stands in profile facing right. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing him, extending her right arm straight out to touch his chest. The background shows white walls, a wooden floor section, and studio equipment. The scene is illuminated by overhead fluorescent lights, creating a neutral and functional atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm straight out to touch R1's chest",
+    "R1 receives the chest touch from R2 rather than touching R2",
+    "R2 is the active toucher while R1 stands facing her",
+    "R1 stands in profile facing R2 as R2 reaches toward his chest",
+    "motion capture studio setting with red carpeted floor and dark partition screens"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm straight out to touch R1's chest, rather than R1 extending his arm to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively reaches out to touch R1's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving contact on his chest from R2's hand, rather than R2 receiving chest contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active toucher with an outstretched arm while R1 stands facing her, rather than R1 being the active toucher with an outstretched arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active toucher and R1 is the contacted person"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T50",
+  "instruction": "Candid action medium photograph from a high angle in an indoor judo dojo with yellow mats. The young man with short dark hair (R2) in a white judo gi is seen from behind, pinning the woman with curly brown hair in a bun (R1) in a blue judo gi to the mat. The woman lies on her back, looking up at him. The scene is illuminated by bright, diffuse indoor lighting, highlighting the warm yellow tones of the mat.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 pins R1 to the mat rather than R1 pinning R2",
+    "R1 is the pinned person lying on her back while R2 controls her from above",
+    "R1 looks up at R2 during the pin",
+    "the grapple takes place on yellow judo mats",
+    "the setting is an indoor judo dojo",
+    "both named participants wear judo gis during the grapple"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 pinning R1 to the mat, rather than R1 pinning R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 pins R1 to the mat rather than R1 pinning R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person lying on her back being pinned by R2, rather than R2 lying on his back being pinned by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the pinned person lying on her back while R2 controls her from above"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have the controlling grappling role over R1 while R1 looks up at him from the mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 controls the grapple while R1 looks up from the mat"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 on her back on the mat with R2 positioned over her in the judo pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lies on her back while R2 is over her in the pin"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

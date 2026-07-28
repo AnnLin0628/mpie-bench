@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__332f58373138__T8",
+  "instruction": "A candid documentary photograph from a medium shot shows a ballet studio. The instructor in a black zip-up bodysuit (R1) stands on the left, facing right with her arms raised. The blonde girl in a black ballet tutu (R2) stands on the right, facing left with her leg extended and arms raised in a matching pose. They smile at each other under warm, soft indoor lighting with glowing background lights.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the instructor while R2 is the blonde girl matching the pose",
+    "R2 extends her leg while R1 raises her arms as the instructor",
+    "R1 and R2 face each other with raised arms in a ballet pose",
+    "R2 wears a ballet tutu as part of the dance setup",
+    "the scene is a ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 identified as the instructor guiding the ballet pose, rather than R2 being identified as the instructor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the instructor, not R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blonde girl extending her leg while matching R1's raised-arm pose, rather than R1 being the girl extending her leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 matches R1's pose and extends her leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other while both hold their arms raised in a matching ballet pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other with raised arms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 performing the leg-extended ballet position while R1 remains standing with arms raised as the instructor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her leg while R1 stands as instructor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

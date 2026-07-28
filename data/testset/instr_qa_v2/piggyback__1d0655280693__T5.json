@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__1d0655280693__T5",
+  "instruction": "A candid outdoor photograph in a medium shot captures a hiking scene on a sandy trail with green shrubs under bright daylight. On the right, the man in the red plaid shirt (R1) leans forward, looking down with a supportive smile as he extends his hand. On the left, the blonde woman in the grey t-shirt (R2) climbs the sandy slope with her back partially turned. They are holding hands as the man (R1) helps the woman (R2) ascend. The scene is bathed in warm, natural light with soft shadows and a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 helps R2 ascend the sandy slope",
+    "R2 receives climbing assistance from R1",
+    "R1 extends his hand as the supporter while R2 uses the handhold",
+    "R1 leans forward toward R2 during the assist",
+    "R2 climbs the sandy slope with her back partially turned",
+    "outdoor sandy trail with green shrubs in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 helping R2 ascend the sandy slope, rather than R2 helping R1 ascend?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 helps R2 ascend the sandy slope"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person climbing up and receiving assistance from R1, rather than R1 receiving assistance from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives climbing assistance from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 extend his hand as the supporter while R2 uses that handhold to climb, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends his hand as the supporter while R2 uses the handhold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning forward toward R2 while holding her hand to assist her movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward toward R2 during the assist"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 climbing the sandy slope with her back partially turned while holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 climbs the sandy slope with her back partially turned"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

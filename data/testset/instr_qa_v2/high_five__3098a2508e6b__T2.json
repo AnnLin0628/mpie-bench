@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__3098a2508e6b__T2",
+  "instruction": "Candid street photograph, full shot. On a city pavement, the blonde woman in a brown cap and black vest (R1) on the left and the red-haired woman in a blue knit vest and brown pleated skirt (R2) on the right walk forward side-by-side. They look at each other and smile warmly under soft natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the blonde woman in a brown cap and black vest walking beside R2",
+    "R2 is the red-haired woman in a blue knit vest and brown pleated skirt walking beside R1",
+    "R1 and R2 walk forward side-by-side",
+    "R1 and R2 look at each other and smile warmly",
+    "The scene is on a city pavement under soft natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the blonde woman in a brown cap and black vest walking beside R2, rather than R2 being the blonde woman in those items?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the blonde woman in a brown cap and black vest walking beside R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the red-haired woman in a blue knit vest and brown pleated skirt walking beside R1, rather than R1 being the red-haired woman in those items?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the red-haired woman in a blue knit vest and brown pleated skirt walking beside R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward side-by-side together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk forward side-by-side"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look at R2 while R2 looks back at R1 as they smile warmly?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 look at each other and smile warmly"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 on a city pavement under soft natural daylight?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The scene is on a city pavement under soft natural daylight"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

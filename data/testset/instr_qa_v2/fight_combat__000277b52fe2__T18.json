@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T18",
+  "instruction": "Cinematic film still, low-angle medium full shot. On a gym floor in front of a red wall with a white knight mural, two men rest after training. On the left, the shirtless young man with short dark hair (R1) sits on the floor, leaning back on his left hand. On the right, the shirtless bearded man with a shoulder tattoo (R3) sits on his knees. The young man (R1) and the bearded man (R3) clasp their right hands together in a respectful gesture. A strong backlight shines from behind them, creating a bright flare and highlighting their sweaty skin.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is seated on the floor leaning back on his left hand while clasping R3's right hand",
+    "R3 is sitting on his knees while clasping R1's right hand",
+    "R1 supports his own upper body with his left hand on the floor during the hand clasp",
+    "R1 and R3 clasp their right hands together in a respectful post-training gesture",
+    "The interaction happens on a gym floor in front of a red wall with a white knight mural"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant seated on the floor and leaning back on his left hand while clasping R3's right hand, rather than R3 taking that leaning-back floor-seated role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated on the floor leaning back on his left hand while clasping R3's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the participant sitting on his knees while clasping R1's right hand, rather than R1 being the kneeling participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is sitting on his knees while clasping R1's right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the clasp, does R1 support his own upper body with his left hand on the floor while R3 remains upright on his knees?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports his own upper body with his left hand on the floor during the hand clasp"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R3 resting on a gym floor in front of a red wall with a white knight mural?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The interaction happens on a gym floor in front of a red wall with a white knight mural"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T1",
+  "instruction": "A candid full-shot photograph from an eye-level angle shows an indoor martial arts studio with wooden walls and a black mat. On the right, the martial artist in the black gi (R1) is crouching, facing left, and holding the arm of the partner. On the left, the martial artist in the pink gi (R2) is sitting on the mat, facing right, leaning back with legs bent. The martial artist in the black gi (R1) maintains a firm grip on the arm of the martial artist in the pink gi (R2) as they practice a technique. The scene is illuminated by warm indoor lighting with natural tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 maintains a firm grip on R2's arm during the martial arts technique",
+    "R1 is crouching while controlling R2's arm rather than being the seated partner",
+    "R2 is sitting on the mat and leaning back with legs bent while R1 holds the arm",
+    "R1 and R2 are practicing a grappling or martial arts technique involving arm control",
+    "R2 is seated on a black mat",
+    "The setting is an indoor martial arts studio with wooden walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the martial artist maintaining a firm grip on R2's arm, rather than R2 maintaining a firm grip on R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 crouching and controlling R2's arm while R2 is the one seated on the mat, rather than R2 crouching and controlling R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 crouches and controls the seated R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting on the mat, leaning back with legs bent, while R1 holds R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 seated and leaning back as R1 holds the arm"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 practicing a martial arts grappling technique in which R1 has the active arm-control role over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has active arm-control role over R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 sitting on a black mat during the practice technique?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat under R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

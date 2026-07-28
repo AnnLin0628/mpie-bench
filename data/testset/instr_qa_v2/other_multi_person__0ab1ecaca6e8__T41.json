@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T41",
+  "instruction": "Candid outdoor photograph, medium full shot. On a sunny rooftop patio, a group of friends dances joyfully. In the center foreground, the woman with short blonde hair (R9) in a denim jacket, black crop top, and black skirt dances with her right arm raised. To her left, the woman in a black beanie and khaki capris (R8) moves with arms outstretched, while behind her, the woman in a neon green dress (R7) raises both arms. On the right, the man with curly hair in a brown jacket (R10) dances with a smile. Bright afternoon sunlight illuminates the scene, casting soft shadows on the concrete floor.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R9 is the center-foreground dancer with her right arm raised",
+    "R8 moves with arms outstretched",
+    "R7 raises both arms behind R8",
+    "R10 dances while smiling",
+    "the group dances on a sunny rooftop patio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the center-foreground dancer raising her right arm, rather than R8 being the dancer in that raised-right-arm role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 has the raised-right-arm dancing role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R8 the dancer moving with arms outstretched, rather than R7 being the one in the outstretched-arms role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R8 has the outstretched-arms dancing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R7 raise both arms behind R8, rather than R8 being behind R7 with both arms raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 is the both-arms-raised dancer behind R8"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R10 dance while smiling, rather than R9 being described as the smiling curly-haired dancer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R10 is the smiling dancer"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R9 dancing in the center foreground while R7 dances behind R8 with both arms raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 foreground dancing role and R7 behind-R8 raised-arms role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

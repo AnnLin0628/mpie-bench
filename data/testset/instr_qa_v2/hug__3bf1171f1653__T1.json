@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3bf1171f1653__T1",
+  "instruction": "Candid outdoor photograph, medium full shot. In a sunny park with palm trees, the man in the black-and-white leaf-patterned shirt and yellow pants (R1) on the left and the man in the black bowler hat and striped vest (R2) on the right embrace in a warm hug. The man (R1) has his back partially turned, while the smiling man (R2) faces him, arms wrapped around each other's shoulders. Bright afternoon sunlight illuminates the scene, casting soft shadows on the grass.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has his back partially turned during the embrace",
+    "R2 faces R1 during the embrace",
+    "R2 is smiling while facing R1",
+    "R1 and R2 have their arms wrapped around each other's shoulders",
+    "R1 and R2 are in a warm shoulder-level embrace",
+    "the scene is a sunny park with palm trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one with his back partially turned during the embrace, rather than R2 being the one with his back partially turned?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has his back partially turned during the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one facing R1 during the embrace, rather than R1 being the one facing R2 while R2 turns away?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 during the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the smiling man who faces R1 as they embrace, rather than R1 being described as the smiling man facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is smiling while facing R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 have their arms wrapped around each other's shoulders during the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have their arms wrapped around each other's shoulders"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

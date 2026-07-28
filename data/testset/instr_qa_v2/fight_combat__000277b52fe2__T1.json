@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T1",
+  "instruction": "Cinematic medium shot of an indoor boxing gym with a misty atmosphere. On the left, the man in the black t-shirt (R2) stands in profile facing right, holding up white focus mitts. On the right, the man in the graphic t-shirt (R4) faces left, throwing a fast, motion-blurred punch with his blue-gloved hand. The two men are engaged in a sparring session, with the man in the graphic t-shirt (R4) striking the focus mitt held by the man in the black t-shirt (R2). The background features dark gym racks in a hazy, dimly lit environment. Soft overhead lighting casts a cool, atmospheric glow over the scene.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 holds up focus mitts to receive R4's punch",
+    "R4 throws a punch toward the mitts held by R2",
+    "R2's mitt is the target absorbing R4's blue-gloved strike",
+    "R2 is the mitt-holder while R4 is the puncher in the sparring interaction",
+    "white focus mitts are present as contact targets",
+    "the scene is an indoor boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding up focus mitts to receive R4's punch, rather than R4 holding mitts for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds up focus mitts to receive R4's punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 throwing a punch toward the focus mitts held by R2, rather than R2 punching toward mitts held by R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 throws a punch toward R2's mitts"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's focus mitt serve as the target absorbing R4's blue-gloved strike, rather than R4's mitt absorbing a strike from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's mitt absorbs R4's strike"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 acting as the mitt-holder while R4 acts as the puncher in the sparring session?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the mitt-holder and R4 is the puncher"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are white focus mitts present as the contact target for the sparring drill?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "white focus mitts are used as sparring targets"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

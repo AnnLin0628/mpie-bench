@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__348f3b9317e0__T2",
+  "instruction": "A cinematic fashion portrait photograph in a medium shot at eye-level, set in a minimalist indoor studio with a plain beige wall. On the left, the red-haired woman in the oversized beige striped blazer (R1) stands in profile facing right, turning her head to look directly at the camera with a neutral expression. Directly behind her, the blonde woman in the white t-shirt and black pants (R2) stands close, facing left in profile and looking slightly upward. The blonde woman (R2) places her left hand flat on the red-haired woman's (R1) shoulder. Harsh, direct sunlight streams from the upper left, casting sharp diagonal shadows across the subjects and the background wall, creating a warm, muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her left hand flat on R1's shoulder",
+    "R1 is the shoulder-contact recipient while R2 is the toucher",
+    "R2 stands close behind R1 while making shoulder contact",
+    "R1 turns her head toward the camera while R2 looks slightly upward",
+    "minimalist indoor studio with a plain beige wall",
+    "harsh direct sunlight casts sharp diagonal shadows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place her left hand flat on R1's shoulder, rather than R1 placing her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active shoulder toucher and R1 is touched"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder contact from R2, rather than R2 receiving shoulder contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the shoulder-contact recipient"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing close behind R1 while touching R1's shoulder, rather than R1 standing behind R2 while touching her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned behind R1 during the shoulder-touch interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in profile while turning her head to look directly at the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body and head orientation"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

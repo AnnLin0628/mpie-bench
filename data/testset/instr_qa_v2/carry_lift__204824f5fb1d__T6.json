@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__204824f5fb1d__T6",
+  "instruction": "A candid family photograph in a medium shot captures a playful moment in an outdoor park with a grassy field and blurred background. The man in the white zip-up hoodie (R1) stands in the center, carrying the toddler in denim overalls (R3) on his shoulders while looking up and laughing. On the right, the woman in the black leather jacket (R2) stands in profile, looking up joyfully at the child. Together, the man (R1) and the woman (R2) hold the toddler's (R3) hands high in the air, forming a playful arch. The scene is bathed in soft, diffused daylight, featuring a muted, natural color palette and a shallow depth of field.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 carries R3 on his shoulders, supporting R3 from below",
+    "R3 rides on R1's shoulders rather than carrying or supporting R1",
+    "R2 stands near R1 and looks up at R3 while not carrying R3",
+    "R1 and R2 hold R3's hands high in the air to form a playful arch",
+    "R3's hands are held by both R1 and R2",
+    "The interaction takes place in an outdoor park with a grassy field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R3 on his shoulders, rather than R3 carrying or supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R3 on his shoulders, supporting R3 from below"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 positioned on top of R1's shoulders while R1 supports R3's weight from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 rides on R1's shoulders rather than carrying or supporting R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking up at R3 while R1 is the one carrying R3, rather than R2 carrying R3 herself?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands near R1 and looks up at R3 while not carrying R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold R3's hands high in the air to create a playful arch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold R3's hands high in the air to form a playful arch"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3's hands being held by both R1 and R2 during the shoulder-carry interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's hands are held by both R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

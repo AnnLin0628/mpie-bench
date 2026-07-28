@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__0e515a665e40__T1",
+  "instruction": "Candid documentary photograph, medium close-up shot. Indoors in a bright office during the day, the bearded man in the striped shirt (R1) sits on the left side of the frame, looking attentively towards the center with a neutral expression. Beside him, the woman in the beige collared shirt (R2) sits on the right, looking forward-left with her mouth slightly open as if speaking or reacting. In the immediate foreground, a blurry, out-of-focus hand holds a thin wooden stick, partially obscuring the view. Soft, natural light streams from a window in the background, illuminating the scene with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the one with her mouth slightly open as if speaking or reacting while R1 looks attentively",
+    "R1 is the attentive listener looking toward the center rather than R2 taking that listening role",
+    "R1 and R2 are seated beside each other in a conversational office moment with distinct listener/reactor roles",
+    "a blurry foreground hand holds a thin wooden stick",
+    "the scene is indoors in a bright office during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with her mouth slightly open as if speaking or reacting, while R1 looks attentively rather than R1 being the one speaking or reacting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 speaks or reacts while R1 listens attentively"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the attentive listener looking toward the center, rather than R2 being described as the neutral attentive listener?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the attentive listening role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated beside each other with R1 attending to the interaction and R2 appearing to speak or react?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct seated conversation roles for R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

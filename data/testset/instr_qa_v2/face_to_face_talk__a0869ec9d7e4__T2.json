@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__a0869ec9d7e4__T2",
+  "instruction": "Cinematic low-angle close-up in a bright room with white curtains. On the left, the woman in the light blue shirt (R2) leans back, looking up defensively. On the right, the bearded man in the white t-shirt (R1) leans forward aggressively, shouting and pointing his index finger directly at her face. The shot captures dynamic motion blur on the man. Soft natural light fills the space, maintaining a bright, neutral palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 aggressively leans forward toward R2 while shouting",
+    "R1 points his index finger directly at R2's face",
+    "R2 leans back defensively and looks up at R1",
+    "R1 is the active confronter while R2 is the defensive recipient",
+    "bright room with white curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one leaning forward aggressively and shouting at R2, rather than R2 leaning forward and shouting at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 aggressively confronts R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 point his index finger directly at R2's face, rather than R2 pointing at R1's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points at R2's face"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one leaning back defensively and looking up while R1 advances toward her, rather than R1 leaning back defensively from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defensive recipient of R1's confrontation"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 depicted as the active aggressor confronting R2 while R2 reacts defensively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 aggressor role and R2 defensive role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have dynamic motion blur as he moves forward toward R2 during the confrontation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 moves forward dynamically toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

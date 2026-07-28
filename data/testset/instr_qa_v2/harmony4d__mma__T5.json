@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T5",
+  "instruction": "Candid full shot at eye-level of an indoor martial arts gym with gray padded walls. On the left, the man in the gray t-shirt (R2) stands in a defensive stance facing right, blocking with his gloved hands. On the right, the young man in the white t-shirt (R1) faces left, executing a high front kick with his right leg. His white shin guard makes contact with the midsection of the man in the gray t-shirt (R2). Both wear protective glasses and focus intensely on the sparring session. Even overhead gym lighting casts soft shadows on the gray floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 executes a high front kick toward R2",
+    "R1's shin guard contacts R2's midsection",
+    "R2 blocks defensively with gloved hands while receiving R1's kick",
+    "R1 uses his right leg as the kicking leg",
+    "R1 wears a white shin guard involved in the contact",
+    "R2 wears gloves used for blocking",
+    "The scene is an indoor martial arts gym with gray padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 executing the high front kick into R2's midsection, rather than R2 kicking R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kicker and R2 is the receiver of the kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's shin guard make contact with R2's midsection, rather than R2's shin guard contacting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's shin guard is the contact point against R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 blocking defensively with gloved hands while R1 attacks with the front kick, rather than R1 blocking R2's kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the defensive blocking role and R1 has the attacking kicking role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 using his right leg as the raised kicking leg during the sparring contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is a right-leg high front kick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

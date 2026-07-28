@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__75261906cd11__T1",
+  "instruction": "Candid street photograph, full shot at eye-level. On an outdoor paved path lined with green trees, the man in the blue sweatshirt and black shorts (R1) stands on the left, facing right and looking at his companion. The blonde woman in the dark jacket and jeans (R2) stands on the right, facing left, holding a coffee cup and carrying a beige tote bag as she looks back at him. They stand close together, engaged in a casual conversation. In the background, a few blurred figures and parked cars are visible under soft, natural daylight with cool tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds the coffee cup while R1 does not",
+    "R2 carries the beige tote bag while R1 does not",
+    "R1 and R2 face each other while standing close in casual conversation",
+    "coffee cup held by R2",
+    "beige tote bag carried by R2",
+    "outdoor paved path lined with green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the coffee cup rather than R1 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the coffee cup while R1 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 carrying the beige tote bag rather than R1 carrying it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries the beige tote bag while R1 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 carrying a beige tote bag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "beige tote bag carried by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

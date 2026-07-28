@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__6830c8178900__T2",
+  "instruction": "Candid family photograph, full shot. In an outdoor yard, a man in a dark striped polo shirt and black pants (R2) on the right holds hands with a young girl in a pink dress (R1) on the left. The man (R2) leans forward, guiding the young girl (R1) as they step together on the dirt ground. A large red bougainvillea bush and a wooden fence fill the background under warm, natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 guides R1 by holding her hand as they step together",
+    "R1 is the young girl being led by R2",
+    "R2 leans forward in the guiding role during the hand-holding interaction",
+    "R1 and R2 hold hands while walking or stepping together",
+    "the interaction takes place in an outdoor yard on dirt ground",
+    "a red bougainvillea bush and wooden fence are in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 guiding R1 by the hand as they step together, rather than R1 guiding R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 guides R1 by holding her hand as they step together"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young girl being led by R2, rather than R2 being led by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the young girl being led by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward in the guiding role while holding R1's hand, rather than R1 leaning forward to guide R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward in the guiding role during the hand-holding interaction"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands while stepping together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while walking or stepping together"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

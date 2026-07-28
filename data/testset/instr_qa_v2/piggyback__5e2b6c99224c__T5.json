@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__5e2b6c99224c__T5",
+  "instruction": "Candid outdoor medium shot of a man in a black t-shirt and black cap (R1) carrying a young child in brown overalls and a black beanie (R2) on his shoulders. In the center foreground, the man (R1) looks up and to the right with an open mouth while holding the child's ankles. The child (R2) sits astride his shoulders looking forward. The background is a dense green hedge in bright, natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 on his shoulders",
+    "R1 supports R2 from below rather than being carried by R2",
+    "R1 holds R2's ankles during the shoulder carry",
+    "R2 sits astride R1's shoulders",
+    "R2 looks forward while seated on R1",
+    "the scene has a dense green hedge in bright natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his shoulders, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 from below in the shoulder-carry position, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from below rather than being carried by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's ankles, rather than R2 holding R1's ankles?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's ankles during the shoulder carry"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 sit astride R1's shoulders while R1 carries the child?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits astride R1's shoulders"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the child riding on top of R1, with R1 acting as the carrier underneath?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is on top of R1 in the carrying role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

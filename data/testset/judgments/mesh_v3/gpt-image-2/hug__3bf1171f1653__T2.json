@@ -1,0 +1,266 @@
+{
+  "sample_id": "hug__3bf1171f1653__T2",
+  "model_id": "gpt-image-2",
+  "ok": true,
+  "backend": "multi_hmr",
+  "backend_model": "multiHMR_896_L",
+  "elapsed_ms": 264.8,
+  "cat": "hug",
+  "prompt": "Candid outdoor photograph, medium shot. In a sunny park with palm trees under a blue sky, the man in the black-and-white leaf-patterned shirt and sunglasses (R1) stands on the left next to the man in the black bowler hat and striped vest (R2) on the right. Both smile at the camera; the man (R1) gestures a shaka sign, while the man (R2) puts his arm around his shoulder and gestures with a gloved hand. Bright daylight fills the scene.",
+  "img": "outputs/gpt-image-2/hug__3bf1171f1653__T2.png",
+  "det_scores_kept": [
+    0.4895,
+    0.4578
+  ],
+  "keep_idx": [
+    2,
+    7
+  ],
+  "person_select": "top_k_by_score_vs_prompt_R",
+  "n_humans": 2,
+  "n_expected": 2,
+  "n_detected_raw": 13,
+  "S_count_mesh": 1.0,
+  "S_anat_mesh": 0.8636040453510349,
+  "S_anat_person": 0.9893347245817817,
+  "S_anat_joint": 1.0,
+  "S_anat_bone": 0.9431185311028358,
+  "S_anat_self": 1.0,
+  "S_anat_shape": 1.0,
+  "S_anat_hand": 1.0,
+  "S_anat_part_mesh": 1.0,
+  "S_anat_scale": 1.0,
+  "S_anat_contact_region": 1.0,
+  "S_anat_ownership": null,
+  "S_anat_residual": 0.7,
+  "S_anat_overcount": 0.884010113377587,
+  "S_anat_abhuman": null,
+  "anat_scene": {
+    "cross_person_scale": {
+      "score": 1.0,
+      "available": true,
+      "height_ratio": 1.0120558972404576,
+      "arm_ratio": 1.0144684207812464
+    },
+    "contact_region_anat": {
+      "score": 1.0,
+      "available": true,
+      "n_contact_joints": 5
+    },
+    "ownership": {
+      "score": null,
+      "available": false,
+      "confused_frac": null
+    },
+    "explain_residual": {
+      "score": 0.7,
+      "available": true,
+      "iou": 0.7644661026710899,
+      "iou_cues": {
+        "luma": 0.7644661026710899,
+        "otsu": 0.38703147753485007,
+        "sat": 0.3402284606226367
+      },
+      "method": "multi_cue_max",
+      "bbox_frac": 0.8753938674918409
+    },
+    "structure_overcount": {
+      "score": 0.884010113377587,
+      "available": true,
+      "leftover_frac": 0.5727919092979304,
+      "orphan_frac": 0.0,
+      "n_leftover_blobs": 0,
+      "max_blob_frac": 0.0,
+      "P_extra_area": 0.11598988662241308,
+      "P_extra_blob": 0.0,
+      "method": "skeleton_torso",
+      "note": "unexplained_via_skeleton_torso",
+      "work_scale": 0.75,
+      "n_hands": null,
+      "n_torso": null
+    },
+    "abhuman": {
+      "score": null,
+      "available": false,
+      "n_anom": null,
+      "note": "missing_weights:abhuman/best.pt"
+    },
+    "P_anat_extra": 0.11598988662241305,
+    "P_anat_resid": 0.30000000000000004,
+    "P_anat_struct": 0.0,
+    "P_anat_detect": 0.0,
+    "anat_formula": "penalty 1-0.40P_extra-0.30P_resid-0.15P_struct-0.15P_detect",
+    "w_extra": 0.4,
+    "w_resid": 0.3,
+    "w_struct": 0.15,
+    "w_detect": 0.15
+  },
+  "anat_leftover_frac": 0.5727919092979304,
+  "anat_n_leftover_blobs": 0,
+  "anat_overcount_note": "unexplained_via_skeleton_torso",
+  "P_anat_extra": 0.11598988662241305,
+  "P_anat_resid": 0.30000000000000004,
+  "P_anat_struct": 0.0,
+  "P_anat_detect": 0.0,
+  "anat_formula": "penalty 1-0.40P_extra-0.30P_resid-0.15P_struct-0.15P_detect",
+  "S_inter_mesh": 1.0,
+  "S_prox": 1.0,
+  "S_pen": 1.0,
+  "anat_parts": [
+    {
+      "S_anat_mesh": 0.9898269797838878,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9457438921807348,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9457438921807348,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0746399303308518,
+          "thigh_over_shin": 0.9158799520747118,
+          "upper_arm_over_thigh": 0.7171154352866913,
+          "forearm_over_shin": 0.611173688939888,
+          "finger_over_shin": 0.36105031831729273,
+          "torso_over_leg": 0.5862262223349206
+        },
+        "symmetry": {
+          "upper_arm": 0.026515764246479556,
+          "forearm": 0.015376074496851796,
+          "thigh": 0.0448659442392161,
+          "shin": 0.010903211092129746
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.2568183869123459,
+        "beta_abs_max": 0.5677741765975952
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.6063605602114194,
+          "right_finger_over_forearm": 0.574895775416755
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    },
+    {
+      "S_anat_mesh": 0.9888424693796757,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9404931700249367,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9404931700249367,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0717868542048603,
+          "thigh_over_shin": 0.9120316625639665,
+          "upper_arm_over_thigh": 0.7185380957427853,
+          "forearm_over_shin": 0.6114363984824356,
+          "finger_over_shin": 0.34484053379805024,
+          "torso_over_leg": 0.5824459935579327
+        },
+        "symmetry": {
+          "upper_arm": 0.02889347942101202,
+          "forearm": 0.011875046256304077,
+          "thigh": 0.05060652297588246,
+          "shin": 0.015737245301915087
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.2048269987106323,
+        "beta_abs_max": 0.5649847388267517
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5887327699818956,
+          "right_finger_over_forearm": 0.5389402005497324
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    }
+  ],
+  "pen_vert_ratio": 0.0,
+  "pen_inside_ratio": 0.036458333333333336,
+  "pen_volume_m3": 0.010346751083045018,
+  "pen_depth_mean": 0.0,
+  "min_surf_dist": 0.02223314069685938,
+  "contact_band_hit": false,
+  "recon_fail": false,
+  "under_detect": false,
+  "pairs": [
+    {
+      "i": 0,
+      "j": 1,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.02223314069685938,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.036458333333333336,
+      "pen_volume_m3": 0.010346751083045018,
+      "volume_method": "trimesh.contains",
+      "vol_hull_a": 0.29306311583487266,
+      "vol_hull_b": 0.28379660113494903,
+      "contact_band_hit": false
+    }
+  ],
+  "tau_pen": 0.05,
+  "tau_contact": 0.02,
+  "tau_vol": 0.05,
+  "inter_regime": "prompt_contact_required",
+  "needs_contact": true,
+  "contact_intent": "required",
+  "pen_signal": "volume_band",
+  "P_fuse": 0.0,
+  "P_miss": 0.0,
+  "P_unwanted": 0.0,
+  "vol_ok": 0.05,
+  "vol_bad": 0.15,
+  "d_good": 0.05,
+  "d_fail": 0.4,
+  "w_prox": 0.45,
+  "w_pen": 0.55,
+  "w_fuse": 0.55,
+  "w_miss": 0.45,
+  "w_unwanted": 0.45,
+  "written_at": "2026-07-18T05:08:42",
+  "fuse_value": 0.010346751083045018,
+  "fuse_ok": 0.05,
+  "fuse_bad": 0.15,
+  "rescored_at": "2026-07-18T07:06:23",
+  "w_extra": 0.4,
+  "w_resid": 0.3,
+  "w_struct": 0.15,
+  "w_detect": 0.15
+}

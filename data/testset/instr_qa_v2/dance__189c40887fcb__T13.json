@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T13",
+  "instruction": "Cinematic full shot of an indoor dance hall with a wooden floor. On the left, the dark-haired dancer in a white t-shirt and black harness (R3) dances with arms bent upward. Beside him on the right, the dancer in a black mesh top and kilt (R2) lifts one leg with arms raised. They perform a synchronized routine side-by-side under dim, cool blue ambient lighting with subtle red highlights.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 lifts one leg with arms raised while R3 dances with arms bent upward",
+    "R3 dances with arms bent upward rather than lifting one leg like R2",
+    "R2 and R3 perform a synchronized routine side-by-side",
+    "R2 dances beside R3 in the same routine",
+    "The dance takes place in an indoor dance hall with a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer lifting one leg with arms raised, rather than R3 being the one lifting a leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the leg-lift dance role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer with arms bent upward while R2 is the one lifting a leg, rather than those dance actions being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the bent-arm dance role while R2 has the leg-lift role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R3 performing a synchronized dance routine side-by-side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 perform synchronized side-by-side dancing"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 dance beside R3 as part of the same routine, with R2 using a raised-arm leg-lift pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances beside R3 with a raised-arm leg-lift pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

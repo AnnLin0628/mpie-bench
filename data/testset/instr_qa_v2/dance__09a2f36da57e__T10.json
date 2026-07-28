@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T10",
+  "instruction": "A cinematic medium close-up still of a contemporary dance performance on a dark stage. On the left, the woman in the yellow shirt (R2) reaches upward, head tilted back looking straight up. In the center, the man in the rust shirt (R3) arches his arm overhead, looking up and slightly right. On the right, the woman in the yellow shirt (R4) looks toward the upper right with arms raised. The dancers are huddled closely, their hands reaching high. In the background, multiple bystander arms are raised. Soft overhead lighting highlights the warm yellow and rust tones against the dark grey backdrop.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 reaches upward with her head tilted back and gaze straight up, rather than R3 doing that exact pose",
+    "R3 arches his arm overhead while looking up and slightly right, rather than R2 having that exact described role",
+    "R4 looks toward the upper right with arms raised, rather than R3 being described that way",
+    "R2, R3, and R4 are closely huddled as dancers with hands reaching high",
+    "multiple bystander arms are raised in the background",
+    "the dance performance is on a dark stage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer who reaches upward with her head tilted back looking straight up, rather than R3 being described in that exact pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches upward with head tilted back and gaze straight up"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer who arches his arm overhead while looking up and slightly right, rather than R2 being described with that exact arm-and-gaze role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 arches his arm overhead and looks up and slightly right"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the dancer whose arms are raised while she looks toward the upper right, rather than R3 being described as the one with that exact raised-arm gaze?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 raises her arms and looks toward the upper right"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2, R3, and R4 huddled closely together as dancers with their hands reaching high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2, R3, and R4 closely huddled with hands reaching high"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

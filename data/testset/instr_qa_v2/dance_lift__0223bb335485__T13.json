@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T13",
+  "instruction": "Candid realistic photograph, medium full shot. In a bright, white-walled ballet studio, the blonde ballerina (R2) in a white leotard and sheer skirt leans forward over a wooden barre on the left, smiling downward. Beside her on the right, the dark-haired ballerina (R1) in a matching white leotard and skirt stands upright, holding the barre behind her and looking left with a neutral expression. Soft, diffused daylight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the ballerina leaning forward over the wooden barre",
+    "R1 is the ballerina standing upright and holding the barre behind her",
+    "R2 smiles downward while R1 looks left with a neutral expression",
+    "wooden ballet barre used as the contact object",
+    "bright white-walled ballet studio setting",
+    "soft diffused daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina leaning forward over the wooden barre, rather than R1 being the one leaning forward over it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric leaning-over-barre role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing upright and holding the barre behind her, rather than R2 taking that upright holding-behind pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric upright barre-holding role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 smile downward while leaning over the barre as R1 looks left with a neutral expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R1 have distinct gaze and expression roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned beside R2 while R1 remains upright and R2 bends forward over the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 upright beside R2 bending over the barre"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

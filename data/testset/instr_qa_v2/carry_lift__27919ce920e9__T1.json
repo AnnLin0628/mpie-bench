@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__27919ce920e9__T1",
+  "instruction": "A candid wedding photograph in a medium shot captures an intimate moment indoors. Against a clean white wall adorned with elegant floral arrangements, the groom in the dark suit (R1) stands on the left in profile, raising his arms to lift a sheer white veil over the head of the bride in the strapless white gown (R2). The bride stands on the right in profile, holding a pastel floral bouquet and looking up lovingly at him. The groom's hands gently hold the edges of the veil above her head. Soft, bright natural light illuminates the couple, casting gentle shadows and highlighting the romantic, neutral-toned setting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lifts the sheer white veil over R2's head",
+    "R1 holds the edges of the veil above R2 rather than R2 holding it above R1",
+    "R2 stands as the bride receiving the veil placement from R1",
+    "R2 holds a pastel floral bouquet during the interaction",
+    "the sheer white veil is the contact object being handled",
+    "the scene is indoors against a clean white wall with floral arrangements"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting a sheer white veil over R2's head, rather than R2 lifting a veil over R1's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts the sheer white veil over R2's head"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's hands holding the edges of the veil above R2's head, rather than R2 holding the veil above R1's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the edges of the veil above R2 rather than R2 holding it above R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the veil placement from R1, rather than R1 receiving the veil placement from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands as the bride receiving the veil placement from R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 raise his arms toward R2's head as part of placing or lifting the veil for her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises his arms to place the veil over R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a pastel floral bouquet while R1 lifts the veil for her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a pastel floral bouquet during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

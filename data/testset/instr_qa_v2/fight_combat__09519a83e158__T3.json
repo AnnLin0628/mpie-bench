@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T3",
+  "instruction": "Candid medium shot in an MMA gym. A bearded man in a black t-shirt (R2) stands on the left in a boxing stance with raised fists, facing a speed bag. A woman in a black tube top (R1) stands on the right, watching him. Neutral lighting with a chain-link fence background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active boxer in a raised-fist stance facing the speed bag while R1 watches",
+    "R1 is the observer of R2's training rather than the person training on the bag",
+    "R2 engages with the speed bag as the target rather than R1",
+    "R2 has raised fists in a boxing stance while R1 remains a spectator",
+    "a speed bag is present as the training object",
+    "the setting is an MMA gym with a chain-link fence background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person in a boxing stance with raised fists facing the speed bag, rather than R1 being the boxer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active boxer facing the speed bag while R1 is not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 watching R2 train, rather than R2 watching R1 train?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the watcher while R2 is the trainee"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 engage with the speed bag as the training target, rather than R1 engaging with it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is assigned to the speed-bag training role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 posed with raised fists in a boxing stance while R1 remains a spectator?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the fighting stance role and R1 has the spectator role"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a speed bag present as the object R2 is facing for training?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "speed bag training object"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

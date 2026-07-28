@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T4",
+  "instruction": "Studio photograph, full shot, high angle. In a minimalist white studio, the dancer in the white outfit (R2) on the left leans back and twists with arms raised, while the dancer in the black outfit (R1) on the right crouches low, leaning forward with arms extended. The two dancers lean their backs against each other, creating a balanced, interlocking contemporary dance pose. Bright, clean studio lighting casts soft, distinct shadows on the white floor, emphasizing the high-contrast black and white palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the low crouching dancer leaning forward with arms extended, while R2 is the dancer leaning back and twisting with arms raised",
+    "R2 takes the raised-arm backward-twisting role while R1 takes the low forward-leaning counterpose role",
+    "R1 and R2 press their backs against each other to form an interlocking contemporary dance pose",
+    "R1 and R2 create a balanced back-to-back contact configuration",
+    "The interaction occurs in a minimalist white studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer crouching low and leaning forward with arms extended, rather than R2 doing that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the low crouching dancer leaning forward with arms extended"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer leaning back and twisting with arms raised, rather than R1 doing that raised-arm backward-twisting role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer leaning back and twisting with arms raised"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 provide the low forward-leaning counterpose while R2 provides the raised-arm backward-twisting pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have different asymmetric dance duties in the interlocking pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 leaning their backs against each other to make the main contact in the dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 press their backs against each other"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 form a balanced, interlocking contemporary dance pose through back-to-back contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 create a balanced interlocking back-to-back configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

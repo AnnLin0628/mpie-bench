@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__988f38d47271__T3",
+  "instruction": "Candid team photograph, wide shot. In a bright, modern office conference room, four colleagues gather around a white table. From left to right, the blonde woman in the blue dotted blouse (R3), the man in the blue and brown cardigan (R2), the woman in the dark blue dress (R1), and the Black man in the white henley shirt (R4) all lean forward. They smile and laugh as they stack their hands together in a central team huddle over the table. Natural light floods the room from large windows in the background, creating a cheerful, collaborative atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 contributes her hand to the central team hand stack with R2, R3, and R4 rather than being supported or carried by another person",
+    "R4 participates in the shared hand stack with R1, R2, and R3 rather than standing aside as an onlooker",
+    "R2 and R3 lean forward to add their hands into the same group huddle rather than one holding a separate target or prop for the other",
+    "R1, R2, R3, and R4 all lean forward around the table for a central team huddle",
+    "the group stacks their hands together over a white table",
+    "the setting is a bright modern office conference room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the team huddle, is R1 adding her own hand to the central stack with R2, R3, and R4, rather than being carried or physically supported by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 contributes her hand to the central team hand stack rather than being supported or carried by R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 join the same central hand stack with R1, R2, and R3, rather than standing apart as an onlooker while only the others make contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 participates in the shared hand stack rather than being an onlooker"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2 and R3 both leaning in to add hands to the group stack, rather than R2 holding a separate object or target for R3 to use?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 share the hand-stacking role rather than R2 serving as a prop holder for R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, R3, and R4 all leaning forward around the table to participate in the central team huddle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "all four labeled colleagues lean forward and participate in the hand-stack huddle"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, R3, and R4 place their hands together in one shared central stack rather than making separate contacts?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the four labeled people make one shared hand stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T70",
+  "instruction": "Cinematic outdoor medium close-up in a park. In the foreground, the large Black man in a dark blue t-shirt (R1) grimaces intensely while holding a blue frisbee. Behind him in the background, the East Asian man in a red polo (R3) stands smiling. Natural daylight filters through the soft-focus trees behind them.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 is the foreground person holding the blue frisbee, not R3",
+    "R3 is the smiling background person behind R1, not the foreground frisbee holder",
+    "R1 grimaces intensely while R3 smiles behind him",
+    "R1 is positioned in the foreground with R3 behind him",
+    "blue frisbee held by R1",
+    "outdoor park setting with soft-focus trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the blue frisbee rather than R3 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground person holding the blue frisbee, not R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the smiling person standing behind R1 rather than R1 being the smiling person behind R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the smiling background person behind R1, not the foreground frisbee holder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 grimace intensely in the foreground while R3 smiles behind him, rather than R3 grimacing in the foreground while R1 smiles behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grimaces intensely while R3 smiles behind him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

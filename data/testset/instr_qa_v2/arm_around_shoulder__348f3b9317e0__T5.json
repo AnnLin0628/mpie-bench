@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__348f3b9317e0__T5",
+  "instruction": "A cinematic fashion portrait photograph in a medium shot at eye-level, set in a minimalist indoor studio with a plain beige wall. On the left, the red-haired woman in the beige striped blazer (R1) stands facing forward, her eyes closed and her head tilted to the right, resting gently against the cheek of the blonde woman in the dark grey blazer (R2). The blonde woman (R2) stands facing forward, looking directly at the camera with a serious, neutral expression, while holding the red-haired woman's (R1) arm with her left hand. Harsh, direct sunlight streams from the upper left, casting sharp diagonal shadows across the subjects and the background wall, creating a warm, muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests her tilted head and cheek gently against R2 rather than the reverse",
+    "R2 holds R1's arm with her left hand rather than R1 holding R2's arm",
+    "R1 keeps her eyes closed while leaning into cheek contact with R2",
+    "R2 faces forward and looks at the camera while maintaining contact with R1's arm",
+    "the portrait is set in a minimalist indoor studio with a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one resting her tilted head gently against R2's cheek, rather than R2 resting her head against R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her tilted head and cheek gently against R2 rather than the reverse"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding R1's arm with her left hand, rather than R1 holding R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's arm with her left hand rather than R1 holding R2's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep her eyes closed while leaning her head into cheek contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps her eyes closed while leaning into cheek contact with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face forward and look directly at the camera while holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces forward and looks at the camera while maintaining contact with R1's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

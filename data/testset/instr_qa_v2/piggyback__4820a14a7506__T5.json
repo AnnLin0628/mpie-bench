@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__4820a14a7506__T5",
+  "instruction": "A clean studio portrait photograph with a full-length, eye-level view captures three family members against a draped beige fabric backdrop. On the left, the younger woman with medium-length brown hair (R2) in a white button-up shirt and wide-leg blue jeans stands barefoot, holding the young girl with light brown hair (R3). The young girl (R3), wearing a white blouse and blue jeans, is carried horizontally. On the right, the older woman with short dark hair and bangs (R1) in a long white shirt and blue jeans stands barefoot, helping support the young girl. The younger woman and the older woman smile warmly as they jointly hold the child between them. Soft, diffused studio lighting illuminates the scene, creating a warm, minimalist aesthetic with gentle shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 helps support R3's body while R3 is being carried",
+    "R2 holds and carries R3 rather than being carried by R3",
+    "R3 is the child being carried horizontally between R1 and R2",
+    "R1 and R2 jointly hold R3 between them",
+    "The portrait is set in a clean studio against a draped beige fabric backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 helping support the young girl R3's body, rather than R3 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding and carrying the young girl R3, rather than R3 holding or carrying R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person being carried horizontally by R1 and R2, rather than R3 carrying either adult?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the carried person"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 jointly hold R3 between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 jointly hold R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 positioned horizontally while being held by R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is carried horizontally"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

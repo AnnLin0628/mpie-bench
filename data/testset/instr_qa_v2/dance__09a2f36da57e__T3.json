@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T3",
+  "instruction": "A realistic wide-angle photograph of a dance studio with dark walls and a wooden floor. In the center, the man in the rust-brown shirt (R1) bends forward, supporting the woman in the yellow shirt (R2) horizontally on his back. On the left, the man in the rust-brown shirt (R3) similarly supports the woman in the yellow shirt (R4) on his back. All wear black pants and are barefoot. On the right, a bystander pair in matching yellow and brown shirts performs the same pose. The studio is evenly lit, highlighting the dancers' synchronized athletic poses.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 bends forward and supports R2 horizontally on his back",
+    "R2 is carried horizontally on R1's back",
+    "R3 bends forward and supports R4 horizontally on his back",
+    "R4 is carried horizontally on R3's back",
+    "the setting is a dance studio with dark walls and a wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 bending forward to support R2's weight horizontally on his back, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 horizontally on his back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 bending forward to support R4's weight horizontally on his back, rather than R4 supporting R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 supports R4 horizontally on his back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R3 the base dancers carrying R2 and R4 respectively, rather than R2 and R4 being the bases who carry them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 carry R2 and R4 respectively"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned horizontally across R1's back while R1 is bent forward underneath her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is horizontal on R1's back"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 positioned horizontally across R3's back while R3 is bent forward underneath her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is horizontal on R3's back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

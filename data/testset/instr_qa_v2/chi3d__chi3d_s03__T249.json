@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T249",
+  "instruction": "A candid documentary photograph in a wide shot from a slightly low angle shows an indoor motion capture studio with a red carpeted floor and white walls. In the center of the room, the man in the black cap (R1) stands on the left facing forward with a neutral expression, wearing a dark polo shirt and blue shorts. Beside him, the woman in the white patterned t-shirt (R2) stands on the right in blue jeans, leaning her shoulder and head slightly toward him with a smile. The room is brightly lit by overhead fluorescent lights, casting soft shadows on the red floor, with motion capture cameras visible on the background walls.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans her shoulder and head toward R1",
+    "R1 remains upright facing forward while R2 leans toward him",
+    "R2 is the smiling partner leaning in toward R1",
+    "R1 is the neutral, forward-facing partner beside R2",
+    "indoor motion capture studio with red carpeted floor and wall cameras"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean her shoulder and head toward R1, rather than R1 leaning his shoulder and head toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one leaning toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the upright, forward-facing partner while R2 inclines toward him, rather than R2 staying upright while R1 inclines toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains upright as R2 leans in"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1's body role involve standing neutrally and facing forward beside R2 as she leans toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands neutrally while R2 leans toward him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

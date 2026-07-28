@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T20",
+  "instruction": "An action photograph with a high-angle full shot captures a bright white indoor studio. In the foreground, the cheerleader with long dark hair (R14) in a white t-shirt and white skirt turns her body to the left, swinging her orange pom-poms with motion blur. In the background right, the cheerleader with curly brown hair (R11) in a matching outfit also turns to the left, holding her pom-poms. They perform a synchronized dance step against a white backdrop with glowing vertical light tubes. The studio lighting is bright and warm, casting soft shadows on the floor.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R14 is the foreground cheerleader swinging orange pom-poms with motion blur",
+    "R11 is the background cheerleader holding pom-poms while also turning left",
+    "R14 and R11 perform a synchronized dance step",
+    "orange pom-poms are used in the dance",
+    "the dancers are in a bright white indoor studio with glowing vertical light tubes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R14 the foreground cheerleader swinging orange pom-poms with motion blur, rather than R11 being the foreground cheerleader with the motion-blurred swing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 is the foreground dancer actively swinging pom-poms with motion blur"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R11 the background cheerleader holding her pom-poms while also turning left, rather than R14 being the background cheerleader in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R11 is the background dancer holding pom-poms while turning left"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R14 and R11 performing a synchronized dance step, with R14 swinging her pom-poms in the foreground and R11 matching the turn in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 and R11 have distinct foreground/background dance roles in a synchronized step"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R14 turn her body to the left while swinging her pom-poms as part of the dance step?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 turns left while swinging pom-poms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

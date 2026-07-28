@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc4bacc07276__T3",
+  "instruction": "A candid outdoor full shot from a low angle shows an intimate moment. On the left, the woman in the white long-sleeved dress (R1) leans against a white stone wall beneath a black ornate metal fence, smiling up at her partner. On the right, the man in the patterned short-sleeved shirt (R2) stands close, facing her with his hand in his pocket. They share a close, affectionate gaze in the bright daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans against a white stone wall rather than R2 leaning against it",
+    "R2 stands close facing R1 with his hand in his pocket rather than R1 doing that role",
+    "R1 smiles up at R2 from the wall rather than R2 smiling up at R1 from the wall",
+    "R2 faces R1 closely while R1 remains leaned against the wall",
+    "white stone wall that R1 leans against",
+    "black ornate metal fence above the wall in an outdoor daylight setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning against the white stone wall, rather than R2 being the one leaning against it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans against the wall while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing close and facing R1 with his hand in his pocket, rather than R1 standing that way facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands close facing R1 with hand in pocket"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 smiling up at R2 from beside the wall, rather than R2 smiling up at R1 from beside the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles up at R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 closely while R1 remains leaned against the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 as R1 leans on the wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

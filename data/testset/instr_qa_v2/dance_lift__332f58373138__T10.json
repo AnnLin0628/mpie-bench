@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__332f58373138__T10",
+  "instruction": "A candid documentary medium shot captures a ballet lesson inside a softly lit studio. On the left, the female ballet instructor in a black bodysuit (R1) stands in profile, guiding the young ballet student in a black tutu (R2) on the right. The instructor (R1) uses both hands to carefully adjust the student's (R2) raised right arm and extended left arm, correcting her form. The student (R2) faces forward, smiling directly at the camera. In the background, a grey wall, a wooden ballet barre, and warm overhead string lights create a soft, focused atmosphere with gentle shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 uses both hands to adjust R2's ballet arm positions",
+    "R1 is the instructor correcting R2's form rather than being corrected by R2",
+    "R2 receives guidance from R1 while holding a raised right arm and extended left arm",
+    "wooden ballet barre in the studio background",
+    "softly lit ballet studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use both hands to carefully adjust R2's raised right arm and extended left arm, rather than R2 adjusting R1's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 adjusts R2's arm positions"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballet instructor correcting R2's form, rather than R2 correcting R1's form?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 corrects R2's ballet form"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the student receiving arm-position guidance from R1, rather than R1 receiving guidance from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives guidance from R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 holding a raised right arm and an extended left arm while R1 guides those arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's guided ballet arm configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

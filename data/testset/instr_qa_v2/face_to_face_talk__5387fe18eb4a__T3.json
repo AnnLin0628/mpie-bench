@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__5387fe18eb4a__T3",
+  "instruction": "Candid documentary photograph, medium shot at eye-level with a shallow depth of field. In an outdoor European street, the blonde woman in the gray turtleneck (R1) stands on the left, leaning close to her partner and looking up to the right with a joyful smile. Beside her, the man in the tan corduroy jacket (R2) stands on the right, holding his arm up to take a selfie while looking up and smiling. The couple is positioned closely together against a softly blurred background of white buildings. The scene is illuminated by soft, natural daylight, creating a warm and bright atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 raises his arm to take the selfie while R1 does not",
+    "R1 is the close-leaning partner while R2 is the selfie-taker",
+    "R1 and R2 stand closely together as a smiling couple",
+    "R2 holds the implied selfie-taking device or camera position",
+    "outdoor European street with softly blurred white buildings"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding his arm up to take the selfie, rather than R1 holding her arm up to take it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises his arm to take the selfie while R1 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner leaning close beside R2 while R2 leads the selfie-taking action with his raised arm, rather than R2 being the leaning non-selfie-taking partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the close-leaning partner while R2 is the selfie-taker"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned closely together as a couple, with R1 leaning toward R2 and both smiling?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand closely together as a smiling couple"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

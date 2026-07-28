@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__97925788aea7__T4",
+  "instruction": "A candid photographic medium full shot captures an outdoor narrow alleyway with stone steps. The man in the white suit (R2) wearing white angel wings on the left and the woman in the black dress (R1) wearing black angel wings on the right walk side-by-side down the stairs. They hold hands as they descend, with both of them stepping down in unison. Both face forward with neutral expressions. The background features warm-toned European buildings. The scene is illuminated by warm, natural daylight with soft shadows that enhance the warm color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman in the black dress and black angel wings holding hands with R2 while descending the stairs",
+    "R2 is the man in the white suit and white angel wings holding hands with R1 while descending the stairs",
+    "R1 and R2 walk side-by-side down the stairs while holding hands",
+    "Both R1 and R2 step down the stairs in unison",
+    "R1 wears black angel wings and R2 wears white angel wings",
+    "The pair is in an outdoor narrow alleyway with stone steps"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in black angel wings holding hands with R2 as they descend the stairs, rather than R2 being the woman in black angel wings?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman in black angel wings in the hand-holding pair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man in white angel wings holding hands with R1 as they descend the stairs, rather than R1 being the man in white angel wings?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man in white angel wings in the hand-holding pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands while walking side-by-side down the stairs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while descending together"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 descending stone steps in an outdoor narrow alleyway?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor narrow alleyway with stone steps"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

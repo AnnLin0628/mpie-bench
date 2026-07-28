@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T256",
+  "instruction": "Candid documentary photograph, wide shot, slightly elevated angle. In an indoor motion capture studio with a red carpet and white walls, the woman in the white patterned t-shirt and blue jeans (R2) stands on the left, facing right and extending her right hand to touch the chest of the man in the black polo shirt and blue shorts (R1). The man stands upright on the right, facing left and looking at her. The background features dark red partition screens and motion capture cameras. The room is illuminated by overhead fluorescent lights, creating a neutral atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right hand to touch R1's chest",
+    "R1 is the person receiving the chest touch from R2",
+    "R2 initiates the hand-to-chest contact while R1 stands upright facing her",
+    "R1 stands upright and looks at R2 as she reaches toward him",
+    "indoor motion capture studio with red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending her right hand to touch R1's chest, rather than R1 extending his hand to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates hand-to-chest contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being touched by R2, rather than R2 being the person whose chest is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 make contact with R1 using her right hand, rather than R1 making contact with R2 using his right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses her right hand for the contact with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

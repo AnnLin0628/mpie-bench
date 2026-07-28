@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T99",
+  "instruction": "A candid outdoor full shot captures three friends celebrating on a grassy park field. On the left, the woman with a large afro in a red t-shirt (R6) stands clapping and smiling. In the center, the man in a red polo shirt (R3) stands with his arms outstretched, smiling happily. On the right, the woman in a red t-shirt and black beanie (R5) stands smiling and dancing. The three are aligned horizontally, sharing a joyful moment under soft daylight filtering through the background trees, casting a warm glow over the green grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R6 is clapping and smiling while R3 has his arms outstretched",
+    "R5 is dancing and smiling while R3 has his arms outstretched",
+    "R3 is the friend standing with arms outstretched while R6 claps and R5 dances",
+    "R6, R3, and R5 are celebrating together",
+    "the celebration takes place on a grassy park field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the one clapping and smiling while R3 stands with arms outstretched, rather than R3 clapping while R6 has arms outstretched?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 claps while R3 has arms outstretched"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the one smiling and dancing while R3 stands with arms outstretched, rather than R3 dancing while R5 has arms outstretched?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 dances while R3 has arms outstretched"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person with arms outstretched while R6 claps, rather than R6 having arms outstretched while R3 claps?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 outstretches his arms and R6 claps"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 participate in the celebration by standing with his arms outstretched while R6 claps and R5 dances?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's celebratory body role differs from R6's and R5's actions"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R6, R3, and R5 celebrating on a grassy park field?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "grassy park field setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

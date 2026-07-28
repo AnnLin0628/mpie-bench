@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__28e2ad191bd7__T1",
+  "instruction": "Candid documentary photograph, medium close-up at eye-level. In a bright indoor dining room, the bald man in the reddish-brown shirt (R2) and the woman with curly hair (R1) sit side-by-side at a table. The bald man (R2) is on the left, holding chopsticks in his right hand and looking down towards the right. The woman (R1), wearing a black sleeveless top and a pearl necklace, sits on the right, looking down with a neutral expression. Soft natural light illuminates the scene, creating a warm, intimate atmosphere with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds chopsticks in his right hand at the table",
+    "R1 sits beside R2 and looks down with a neutral expression",
+    "R1 and R2 are seated side-by-side at a dining table",
+    "chopsticks are present as an eating object",
+    "a dining table is present",
+    "the setting is a bright indoor dining room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding chopsticks in his right hand at the table, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds chopsticks in his right hand at the table"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the diner looking down with a neutral expression beside R2, while R2 is the chopstick-holding diner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down neutrally while R2 holds chopsticks"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated side-by-side at the same dining table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated side-by-side at a dining table"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

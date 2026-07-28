@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T33",
+  "instruction": "Cinematic full shot of an indoor boxing gym with a misty atmosphere and a red mural on the wall. On the left, the shirtless man in black boxing shorts (R1) stands in profile, wearing black boxing gloves in a defensive stance, looking at his opponent. On the right, the bearded shirtless man (R3) faces him, wearing green boxing gloves and colorful leggings in a boxing stance, focused on R1. The two men are positioned opposite each other, ready to spar. Cool overhead lights create dramatic backlighting through the mist, contrasting with the warm red background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the boxer in a defensive stance looking at R3",
+    "R3 is the bearded opponent facing R1 in a boxing stance",
+    "R1 and R3 are positioned opposite each other ready to spar",
+    "R1 wears black boxing gloves",
+    "R3 wears green boxing gloves",
+    "the scene is an indoor boxing gym with mist and a red mural"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer in a defensive stance looking at R3, rather than R3 being the one described in that defensive stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the boxer in a defensive stance looking at R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the bearded shirtless opponent facing R1 in a boxing stance, rather than R1 being the bearded opponent facing R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the bearded opponent facing R1 in a boxing stance"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 positioned opposite each other as boxing opponents ready to spar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 are positioned opposite each other ready to spar"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

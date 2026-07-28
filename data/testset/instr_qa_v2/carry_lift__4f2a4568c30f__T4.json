@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__4f2a4568c30f__T4",
+  "instruction": "Candid wedding photograph, medium shot. In a scenic outdoor setting, a man in a black leather jacket (R1) on the left holds the raised hand of a woman with long curly hair (R2). The woman, wearing a white leather jacket and lace dress, smiles as she faces forward, holding a bouquet in her lower hand. Warm natural light highlights the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's raised hand",
+    "R2 is the person whose hand is raised and held by R1",
+    "R2 faces forward and smiles while R1 holds her raised hand",
+    "R2 holds a bouquet in her lower hand",
+    "The scene is outdoors in warm natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's raised hand, rather than R2 holding R1's raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's raised hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose hand is raised and being held by R1, rather than R1 being the person with the raised hand held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose raised hand is held"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face forward and smile while R1 holds her raised hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body and expression role during R1's hand-hold"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Does R2 hold a bouquet in her lower hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the bouquet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

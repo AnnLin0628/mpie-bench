@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__77e034634520__T3",
+  "instruction": "Candid outdoor photograph, medium shot. On a sunny park lawn, the woman in the brown beanie (R4) in a red t-shirt stands in the foreground, pointing both index fingers upward with a smile. In the background, the woman with tied-back hair (R2) dances on the left, the large bald man (R5) stands in the center, and the bald man with a beard (R1) points upward on the right. Warm sunlight fills the scene.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R4 is the foreground woman pointing both index fingers upward with a smile",
+    "R1 points upward while R5 stands in the center",
+    "R2 dances while R5 stands",
+    "R4 uses both index fingers for the upward-pointing gesture",
+    "the scene is a sunny park lawn with warm sunlight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground person pointing both index fingers upward with a smile, rather than R5 doing that foreground two-finger pointing action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the foreground woman pointing both index fingers upward with a smile"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 pointing upward while R5 stands in the center, rather than R5 being the one pointing upward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points upward while R5 stands in the center"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 dancing while R5 stands, rather than R5 dancing while R2 stands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances while R5 stands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 use both index fingers to make an upward-pointing gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 uses both index fingers for the upward-pointing gesture"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 perform an upward-pointing gesture while R2 performs a dancing action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points upward while R2 dances"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

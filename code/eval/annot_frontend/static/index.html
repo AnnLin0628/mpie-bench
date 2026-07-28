@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MPIE human consistent annotation</title>
+  <link rel="stylesheet" href="/static/annot.css?v=5.2" />
+</head>
+<body>
+  <div id="app">
+    <!-- HOME -->
+    <section id="view-home" class="view">
+      <header class="top">
+        <div>
+          <p class="brand">MPIE-Bench · Anat / Inter</p>
+          <h1>human consistent annotation</h1>
+        </div>
+        <p class="req-badge">need <strong>3</strong> Annotators completed independently</p>
+      </header>
+
+      <section class="panel guidelines">
+        <h2>Labeling principles (please read first)</h2>
+        <ol id="guidelines-list"></ol>
+        <div class="encode encode-strong">
+          <span><b>1</b> = This picture item<strong>normal</strong>(pass)</span>
+          <span><b>0</b> = This picture item<strong>There is a problem</strong>(fail)</span>
+          <span><b>U</b> = Unable to judge</span>
+        </div>
+        <p class="encode-note">Note: selecting 1 means the item is normal (pass). Example: I1 selects 1 when there is no defect and the image looks fine.</p>
+        <p class="warn">The interface does not and should not display any mesh or VLM Fraction. The final result of the three people will be chosen as the gold standard by taking the majority vote afterwards.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Please select your identity</h2>
+        <p class="sub">Each annotator uses a fixed ID, no serial numbering is required throughout the process. Three people entered separately and each labeled the same batch of samples.</p>
+        <div id="ann-cards" class="ann-grid"></div>
+      </section>
+
+      <section class="panel muted">
+        <h2>Subset description</h2>
+        <ul id="split-stats"></ul>
+      </section>
+    </section>
+
+    <!-- WORK -->
+    <section id="view-work" class="view hidden">
+      <header class="work-bar">
+        <button type="button" id="btn-home" class="linkish">← Return to select annotator</button>
+        <div class="who">
+          current:<strong id="who-label"></strong>
+          <span id="prog-text" class="prog"></span>
+        </div>
+        <div class="split-tabs" id="split-tabs"></div>
+      </header>
+
+      <div class="work-layout">
+        <aside class="rules-rail">
+          <h3>Principle Quick Check</h3>
+          <ol id="guidelines-mini"></ol>
+          <h3>shortcut key</h3>
+          <ul class="keys">
+            <li><kbd>1</kbd> This item is normal</li>
+            <li><kbd>0</kbd> There is a problem with this item</li>
+            <li><kbd>U</kbd> Unable to judge</li>
+            <li><kbd>J</kbd> / <kbd>K</kbd> upper and lower items</li>
+            <li><kbd>S</kbd> or <kbd>Enter</kbd> Save and next</li>
+            <li><kbd>N</kbd> Skip (do not save)</li>
+          </ul>
+        </aside>
+
+        <main class="stage">
+          <div id="empty-todo" class="empty hidden">This subset has been completed 🎉 Can switch subsets or return.</div>
+          <div id="stage-body">
+            <div class="img-pane">
+              <img id="gen-img" alt="generated" />
+              <div class="meta-line">
+                <span id="meta-idx"></span>
+                <span id="meta-ids"></span>
+                <span id="meta-intent" class="chip"></span>
+                <span id="meta-cat" class="chip soft"></span>
+              </div>
+            </div>
+            <div class="form-pane">
+              <details open>
+                <summary>Editing instructions (Chinese, for verification)</summary>
+                <pre id="prompt-box"></pre>
+              </details>
+              <details>
+                <summary>Original English text prompt(for future reference)</summary>
+                <pre id="prompt-en-box" class="prompt-en"></pre>
+              </details>
+              <h3>Overall preference (required · 1–5）</h3>
+              <div id="overall-form" class="qlist"></div>
+              <h3>Contact Intent (required) · Please judge for yourself according to the instructions)</h3>
+              <p class="encode-note" id="intent-system-hint"></p>
+              <div id="intent-human-box" class="intent-seg" role="group" aria-label="Contact Intent">
+                <button type="button" data-v="required" title="Directive requires contact">required to contact</button>
+                <button type="button" data-v="forbidden" title="Instructions No Contact">forbidden No contact</button>
+                <button type="button" data-v="unspecified" title="unclear">unspecified Not clear</button>
+              </div>
+              <h3>Inter(All questions must be answered) <small id="intent-hint"></small></h3>
+              <div id="inter-form" class="qlist"></div>
+              <h3>Anat</h3>
+              <div id="anat-form" class="qlist"></div>
+              <label class="notes">Remark <input id="notes" type="text" maxlength="500" placeholder="Optional, just one sentence" /></label>
+              <div class="actions">
+                <button type="button" id="btn-save" class="primary">Save and next (S)</button>
+                <button type="button" id="btn-skip">jump over</button>
+                <span id="save-msg" class="msg"></span>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+  </div>
+  <script src="/static/annot.js?v=5.2"></script>
+</body>
+</html>

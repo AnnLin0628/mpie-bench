@@ -1,0 +1,91 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T7",
+  "instruction": "A clean, minimalist lifestyle photograph captured from a low angle wide shot. Inside a bright, white-walled yoga studio with large windows and wooden wall bars, two subjects perform yoga. In the foreground right, the young woman in the beige sports bra (R4) is in an upright pigeon pose, her torso lifted, head facing forward, and arms relaxed by her sides. Behind her to the left, the blonde girl in the beige long-sleeve top (R5) mirrors the pose, holding her torso upright with hands resting on the floor. They are aligned diagonally, performing the stretch in unison. Bright, soft natural light fills the space, creating a serene, neutral-toned atmosphere.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 is the foreground yoga participant in an upright pigeon pose with torso lifted and arms relaxed by her sides",
+    "R5 is the yoga participant behind R4, mirroring the upright pigeon pose with hands resting on the floor",
+    "R4 and R5 perform the yoga stretch in unison while maintaining different arm and hand placements",
+    "R5's hands contact the floor during the pose",
+    "the yoga studio has large windows and wooden wall bars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the participant in the foreground holding an upright pigeon pose with arms relaxed by her sides, rather than R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 foreground upright pigeon pose with relaxed arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the participant behind R4 who mirrors the pose with hands resting on the floor, rather than R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 behind R4 with hands on floor"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 holding her torso lifted in the upright pigeon pose while R5 mirrors the same stretch behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R5 perform matching upright pigeon stretches"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 keep her hands on the floor while maintaining the upright pigeon pose behind R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 hand placement during the yoga pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R4 and R5 performing yoga inside a bright white-walled studio with large windows and wooden wall bars?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "bright yoga studio with windows and wooden wall bars"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

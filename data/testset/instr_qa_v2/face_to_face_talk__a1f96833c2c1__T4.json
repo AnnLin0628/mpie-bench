@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__a1f96833c2c1__T4",
+  "instruction": "Candid documentary medium shot of a bright indoor study room. On the left, the woman with dark hair and glasses (R2) sits looking at her companion, pointing a pen toward an open book. On the right, the man with short curly blonde hair (R1) sits looking down at papers on the wooden desk. They sit together at the table with documents, a laptop, and a glass of water. Soft natural light from the window behind them illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 points a pen toward an open book while interacting with R1",
+    "R1 looks down at papers on the wooden desk rather than pointing the pen",
+    "R2 looks toward R1 as she directs attention to the book",
+    "R1 sits with attention on the desk papers during the study-table interaction",
+    "open book and pen used by R2",
+    "documents, laptop, and glass of water on the wooden desk",
+    "bright indoor study room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one pointing a pen toward an open book, rather than R1 pointing the pen toward the book?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points a pen toward an open book while interacting with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking down at papers on the wooden desk, rather than R2 being the one looking down at the papers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at papers on the wooden desk rather than pointing the pen"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look toward R1 while using the pen to direct attention to the open book?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks toward R1 as she directs attention to the book"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated at the table with his attention on the papers while R2 directs the study material with the pen?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits with attention on the desk papers during the study-table interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

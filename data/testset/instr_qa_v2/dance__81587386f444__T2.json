@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__81587386f444__T2",
+  "instruction": "A candid wedding photograph, medium shot at eye-level. Outdoors next to a yellow wall, the blonde man with a mullet in a black velvet suit (R2) on the left and the dark-haired man in a navy suit (R1) on the right are slow dancing. They lean in close with eyes closed, their noses touching as they prepare to kiss, holding hands in soft daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the dark-haired man in a navy suit slow dancing with R2",
+    "R2 is the blonde man with a mullet in a black velvet suit slow dancing with R1",
+    "R1 and R2 lean in close with their noses touching as they prepare to kiss",
+    "R1 and R2 hold hands while slow dancing",
+    "The scene is outdoors next to a yellow wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dark-haired man in the navy suit slow dancing with R2, rather than R2 being the dark-haired man in the navy suit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dark-haired navy-suited dance partner"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blonde man with a mullet in the black velvet suit slow dancing with R1, rather than R1 being the blonde man with a mullet in the black velvet suit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the blonde mullet-haired black-velvet-suited dance partner"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other while slow dancing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands during the dance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

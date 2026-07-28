@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__26d4b1ec995f__T5",
+  "instruction": "Cinematic film still, medium shot. In a modern office, the man in the grey patterned blazer (R2) stands on the left in a three-quarter back view, shaking hands with the man in the light blue sweater (R1) who stands on the right in profile. They clasp right hands in front of a large window overlooking a city street. Cool, overcast daylight illuminates the scene, creating a muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the handshake participant shown in a three-quarter back view, not R1",
+    "R1 is the handshake participant shown in profile, not R2",
+    "R1 and R2 make contact by clasping right hands",
+    "R1 and R2's hand contact is positioned in front of the large window",
+    "The interaction takes place in a modern office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person shown in a three-quarter back view while clasping hands with R1, rather than R1 being the one shown in a three-quarter back view?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the three-quarter back-view role during the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person shown in profile during the hand clasp with R2, rather than R2 being the one shown in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the profile-view role during the handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 make their contact through clasped right hands in front of their bodies?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp right hands as the contact configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 directly engaged with R2 through the right-hand clasp rather than standing apart without hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is physically connected to R2 by the hand clasp"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 interacting in a modern office setting?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "modern office setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

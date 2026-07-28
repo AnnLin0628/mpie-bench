@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1fb80cb80877__T5",
+  "instruction": "An elegant studio portrait photograph captured in a medium shot at eye-level. In a minimalist indoor studio with a plain off-white background, the redhead woman (R1) stands on the left, wearing a light blue shirt draped off her shoulder over a brown top, with her right hand touching her neck as she looks slightly away with a confident, serene expression. On the right, the dark-haired woman (R2) stands facing forward, wearing a white wrap blouse with puffed sleeves, with her left hand resting gently on her collarbone as she looks directly at the camera with a calm, poised expression. The two stand close together under soft, diffused studio lighting that creates a neutral, warm color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the redhead woman touching her own neck with her right hand",
+    "R2 is the dark-haired woman resting her left hand on her own collarbone",
+    "R1 looks slightly away with a confident, serene expression",
+    "R2 looks directly at the camera with a calm, poised expression",
+    "R1 wears a light blue shirt draped off her shoulder over a brown top",
+    "R2 wears a white wrap blouse with puffed sleeves",
+    "minimalist indoor studio with a plain off-white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman touching her own neck with her right hand, rather than R2 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the redhead woman touching her own neck with her right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman resting her left hand gently on her own collarbone, rather than R1 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dark-haired woman resting her left hand on her own collarbone"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look slightly away while holding a serene, confident expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks slightly away with a confident, serene expression"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face forward and look directly at the camera with a calm, poised expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks directly at the camera with a calm, poised expression"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

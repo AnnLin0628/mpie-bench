@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T2",
+  "instruction": "High-angle cinematic medium close-up of a man in a brown shirt and tan beanie (R1) and a woman in a black dress (R2) against a reflective silver backdrop. The man (R1), wearing a white t-shirt under his open brown shirt, looks to the left. The woman (R2) stands closely behind him, leaning her head near his neck with her arm draped over his shoulder. Bright, clean overhead lighting illuminates the scene, emphasizing the metallic texture of the background and casting soft shadows on their faces.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 drapes her arm over R1's shoulder rather than R1 draping his arm over R2's shoulder",
+    "R2 leans her head near R1's neck from behind rather than R1 leaning near R2's neck",
+    "R1 is the front person receiving R2's over-shoulder contact",
+    "R2 stands closely behind R1 while making shoulder and neck-area contact",
+    "reflective silver backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 draping her arm over R1's shoulder, rather than R1 draping his arm over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 drapes her arm over R1's shoulder rather than R1 draping his arm over R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning her head near R1's neck from behind, rather than R1 leaning his head near R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head near R1's neck from behind rather than R1 leaning near R2's neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person in front receiving R2's over-shoulder contact, rather than R2 being in front receiving R1's over-shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the front person receiving R2's over-shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand closely behind R1 while her arm rests over his shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands closely behind R1 while making shoulder contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

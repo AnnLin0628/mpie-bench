@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T5",
+  "instruction": "A candid cinematic still, medium close-up shot of a couple outdoors in a grassy field on an overcast day. On the right, the woman with a shaved head (R1) wearing a light pink long-sleeve top holds a red smartphone, looking down at the screen. On the left, the bearded man (R2) wearing a white t-shirt stands close, resting his hand on her shoulder as he looks down at the phone. The background shows a softly blurred grassy hill under diffused, natural daylight with muted colors and soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the red smartphone while looking down at its screen",
+    "R2 stands close to R1 and looks down at the phone R1 is holding",
+    "R2 rests his hand on R1's shoulder",
+    "the red smartphone is the shared object of attention",
+    "the couple is outdoors in a grassy field"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the red smartphone for both people to look at, rather than R2 holding the phone for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the phone holder while R2 looks at the phone"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest his hand on R1's shoulder, rather than R1 resting her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 makes shoulder contact with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking down at the phone being held by R1, rather than R1 looking down at a phone held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 views the phone controlled by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person whose hands are occupied with the smartphone while R2 stands close beside her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's role is holding the phone while R2 stands close"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person making physical contact by placing a hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is hand-on-shoulder"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a red smartphone the object being held and viewed during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red smartphone"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

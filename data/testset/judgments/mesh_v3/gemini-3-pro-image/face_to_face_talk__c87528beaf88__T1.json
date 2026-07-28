@@ -1,0 +1,266 @@
+{
+  "sample_id": "face_to_face_talk__c87528beaf88__T1",
+  "model_id": "gemini-3-pro-image",
+  "ok": true,
+  "backend": "multi_hmr",
+  "backend_model": "multiHMR_896_L",
+  "elapsed_ms": 178.3,
+  "cat": "face_to_face_talk",
+  "prompt": "Candid documentary photograph, medium shot at eye-level. Indoors, against a light wood-paneled wall, the Black woman with short blonde hair in the white sleeveless top and red pants (R2) leans against a red counter on the left, holding a paper cup and smiling at her companion. On the right, the Asian woman in the black sleeveless top and brown skirt (R1) stands holding her paper cup with both hands, her eyes closed in a gentle smile. The two are positioned close together in friendly conversation. Soft, warm indoor lighting illuminates the scene, highlighting the vibrant red counter and wooden background.",
+  "img": "outputs/gemini-3-pro-image/face_to_face_talk__c87528beaf88__T1.png",
+  "det_scores_kept": [
+    0.4512,
+    0.563
+  ],
+  "keep_idx": [
+    4,
+    10
+  ],
+  "person_select": "top_k_by_score_vs_prompt_R",
+  "n_humans": 2,
+  "n_expected": 2,
+  "n_detected_raw": 12,
+  "S_count_mesh": 1.0,
+  "S_anat_mesh": 0.8675118800599216,
+  "S_anat_person": 0.9898679347456211,
+  "S_anat_joint": 1.0,
+  "S_anat_bone": 0.9459623186433122,
+  "S_anat_self": 1.0,
+  "S_anat_shape": 1.0,
+  "S_anat_hand": 1.0,
+  "S_anat_part_mesh": 1.0,
+  "S_anat_scale": 1.0,
+  "S_anat_contact_region": 1.0,
+  "S_anat_ownership": 0.5238095238095237,
+  "S_anat_residual": 1.0,
+  "S_anat_overcount": 0.8473511287212325,
+  "S_anat_abhuman": null,
+  "anat_scene": {
+    "cross_person_scale": {
+      "score": 1.0,
+      "available": true,
+      "height_ratio": 1.0486761039625008,
+      "arm_ratio": 1.0578608709068316
+    },
+    "contact_region_anat": {
+      "score": 1.0,
+      "available": true,
+      "n_contact_joints": 4
+    },
+    "ownership": {
+      "score": 0.5238095238095237,
+      "available": true,
+      "confused_frac": 0.16666666666666666
+    },
+    "explain_residual": {
+      "score": 1.0,
+      "available": true,
+      "iou": 0.5574837611953499,
+      "iou_cues": {
+        "luma": 0.5574837611953499,
+        "otsu": 0.4800046927008801,
+        "sat": 0.3006325648860684
+      },
+      "method": "multi_cue_max",
+      "bbox_frac": 0.8061224489788419
+    },
+    "structure_overcount": {
+      "score": 0.8473511287212325,
+      "available": true,
+      "leftover_frac": 0.6021190970230139,
+      "orphan_frac": 0.03082077954729646,
+      "n_leftover_blobs": 1,
+      "max_blob_frac": 0.03082077954729646,
+      "P_extra_area": 0.15264887127876742,
+      "P_extra_blob": 0.10583235540539018,
+      "method": "skeleton_torso",
+      "note": "unexplained_via_skeleton_torso",
+      "work_scale": 0.5601750547045952,
+      "n_hands": null,
+      "n_torso": null
+    },
+    "abhuman": {
+      "score": null,
+      "available": false,
+      "n_anom": null,
+      "note": "missing_weights:abhuman/best.pt"
+    },
+    "P_anat_extra": 0.15264887127876747,
+    "P_anat_resid": 0.0,
+    "P_anat_struct": 0.4761904761904763,
+    "P_anat_detect": 0.0,
+    "anat_formula": "penalty 1-0.40P_extra-0.30P_resid-0.15P_struct-0.15P_detect",
+    "w_extra": 0.4,
+    "w_resid": 0.3,
+    "w_struct": 0.15,
+    "w_detect": 0.15
+  },
+  "anat_leftover_frac": 0.6021190970230139,
+  "anat_n_leftover_blobs": 1,
+  "anat_overcount_note": "unexplained_via_skeleton_torso",
+  "P_anat_extra": 0.15264887127876747,
+  "P_anat_resid": 0.0,
+  "P_anat_struct": 0.4761904761904763,
+  "P_anat_detect": 0.0,
+  "anat_formula": "penalty 1-0.40P_extra-0.30P_resid-0.15P_struct-0.15P_detect",
+  "S_inter_mesh": 1.0,
+  "S_prox": 1.0,
+  "S_pen": 1.0,
+  "anat_parts": [
+    {
+      "S_anat_mesh": 0.9897702040068082,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9454410880363098,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9454410880363098,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0668917579963484,
+          "thigh_over_shin": 0.9163159023994751,
+          "upper_arm_over_thigh": 0.7022359978472987,
+          "forearm_over_shin": 0.6031258628085173,
+          "finger_over_shin": 0.34684315089881995,
+          "torso_over_leg": 0.5563096477460759
+        },
+        "symmetry": {
+          "upper_arm": 0.026673762292658127,
+          "forearm": 0.015195776520020915,
+          "thigh": 0.044222892238152636,
+          "shin": 0.012113610483811042
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.3619788885116577,
+        "beta_abs_max": 1.1136558055877686
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5736083656061676,
+          "right_finger_over_forearm": 0.5765659139080811
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    },
+    {
+      "S_anat_mesh": 0.989965665484434,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9464835492503146,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9464835492503146,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0836605378461914,
+          "thigh_over_shin": 0.9154603751359665,
+          "upper_arm_over_thigh": 0.7179405158767579,
+          "forearm_over_shin": 0.6065055162903162,
+          "finger_over_shin": 0.3576039057893205,
+          "torso_over_leg": 0.5657551122134101
+        },
+        "symmetry": {
+          "upper_arm": 0.028061275664521924,
+          "forearm": 0.013612229307770764,
+          "thigh": 0.043514143076414345,
+          "shin": 0.011141963300726667
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.1841682828962803,
+        "beta_abs_max": 0.7501718997955322
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5916677804336765,
+          "right_finger_over_forearm": 0.5875312822751503
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    }
+  ],
+  "pen_vert_ratio": 0.0,
+  "pen_inside_ratio": 0.013020833333333334,
+  "pen_volume_m3": 0.002376804528067732,
+  "pen_depth_mean": 0.0,
+  "min_surf_dist": 0.01628419954409683,
+  "contact_band_hit": true,
+  "recon_fail": false,
+  "under_detect": false,
+  "pairs": [
+    {
+      "i": 0,
+      "j": 1,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.01628419954409683,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.013020833333333334,
+      "pen_volume_m3": 0.002376804528067732,
+      "volume_method": "trimesh.contains",
+      "vol_hull_a": 0.19495509362362282,
+      "vol_hull_b": 0.1825385877556018,
+      "contact_band_hit": true
+    }
+  ],
+  "tau_pen": 0.05,
+  "tau_contact": 0.02,
+  "tau_vol": 0.05,
+  "inter_regime": "prompt_contact_required",
+  "needs_contact": true,
+  "contact_intent": "required",
+  "pen_signal": "volume_band",
+  "P_fuse": 0.0,
+  "P_miss": 0.0,
+  "P_unwanted": 0.0,
+  "vol_ok": 0.05,
+  "vol_bad": 0.15,
+  "d_good": 0.05,
+  "d_fail": 0.4,
+  "w_prox": 0.45,
+  "w_pen": 0.55,
+  "w_fuse": 0.55,
+  "w_miss": 0.45,
+  "w_unwanted": 0.45,
+  "written_at": "2026-07-17T13:46:34",
+  "fuse_value": 0.002376804528067732,
+  "fuse_ok": 0.05,
+  "fuse_bad": 0.15,
+  "rescored_at": "2026-07-17T14:08:23",
+  "w_extra": 0.4,
+  "w_resid": 0.3,
+  "w_struct": 0.15,
+  "w_detect": 0.15
+}

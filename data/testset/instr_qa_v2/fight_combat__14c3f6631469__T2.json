@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T2",
+  "instruction": "Candid action photograph, full shot. Inside a boxing gym with black mats and red punching bags, the man in the gray t-shirt and black shorts (R1) stands on the left, holding up boxing mitts. The barefoot woman in the blue hoodie and gray shorts (R2) stands on the right, throwing a straight right punch with a pink glove that connects with his mitt. Bright overhead lighting fills the room.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up boxing mitts for R2 to hit",
+    "R2 throws a straight right punch that connects with R1's mitt",
+    "R1 is the mitt holder while R2 is the striker",
+    "boxing mitts are used as the contact target",
+    "R2 wears a pink boxing glove that makes contact with the mitt",
+    "the scene is inside a boxing gym with black mats and red punching bags"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding up the boxing mitts to receive R2's punch, rather than R2 holding mitts for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds up boxing mitts for R2 to hit"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing the straight right punch into R1's mitt, rather than R1 throwing a punch into R2's mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 throws a straight right punch that connects with R1's mitt"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 acting as the mitt holder while R2 acts as the boxer striking the mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the mitt holder while R2 is the striker"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are boxing mitts raised as the target for the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing mitts are used as the contact target"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2's pink boxing glove the object making contact with the mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 wears a pink boxing glove that makes contact with the mitt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

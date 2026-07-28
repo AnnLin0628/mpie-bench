@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__19f2c5ee0c1c__T1",
+  "instruction": "A candid cinematic medium shot of an indoor restaurant with hanging green plants and warm pendant lights. On the left, the man with dreadlocks in the dark suit (R2) stands in a three-quarter back view facing right. On the right, the bearded man in the black suit (R1) stands facing left. They shake right hands in the center of the frame, with the bearded man (R1) looking down at their hands with a gentle smile. The scene is illuminated by warm overhead lights and soft natural light from a side window, creating a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the bearded man in a black suit looking down at the joined hands with a gentle smile during the handshake",
+    "R2 is the man with dreadlocks in a dark suit shown in a three-quarter back view while facing R1",
+    "R1 and R2 clasp their right hands together in the center of the frame",
+    "R1 faces R2 during the right-hand clasp while R2 is viewed from behind at an angle",
+    "the restaurant setting includes hanging green plants and warm pendant lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the bearded man looking down at the joined right hands with a gentle smile, rather than R2 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the distinctive gaze and smile role during the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man with dreadlocks shown in a three-quarter back view while facing R1, rather than R1 being shown in that three-quarter back view?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the three-quarter back-view body orientation"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the hand contact, is R1 facing R2 while looking down at their hands, rather than R2 being the labeled person looking down at the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's attention is directed toward the joined hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1's right hand and R2's right hand clasped together at the center of the frame?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 make right-hand contact with each other"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

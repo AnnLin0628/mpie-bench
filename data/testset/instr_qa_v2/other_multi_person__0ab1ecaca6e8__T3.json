@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T3",
+  "instruction": "A candid action photograph taken in a grassy park during a teambuilding event. In the background, the bald man in the navy t-shirt (R2) stands holding a white inflatable bowling pin over his shoulder, shouting playfully with his mouth open. In the foreground, the woman in the navy t-shirt (R4) ducks slightly with her hands raised defensively, reacting with a surprised expression. A red and white banner hangs behind them in the trees. The lighting is soft and natural, highlighting their playful interaction.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R2 holds a white inflatable bowling pin over his shoulder while R4 reacts defensively",
+    "R4 ducks slightly with hands raised, responding to R2 rather than initiating the action",
+    "R2 is the playful shouter with the prop while R4 is the surprised defender",
+    "white inflatable bowling pin used in the playful interaction",
+    "grassy park setting during a teambuilding event",
+    "red and white banner hanging behind them in the trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the white inflatable bowling pin over his shoulder while R4 ducks defensively, rather than R4 holding the pin over her shoulder while R2 ducks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a white inflatable bowling pin over his shoulder while R4 reacts defensively"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person ducking slightly with her hands raised in defense from R2's playful action, rather than R2 ducking defensively from R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 ducks slightly with hands raised, responding to R2 rather than initiating the action"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one shouting playfully with his mouth open while holding the prop, and R4 the one reacting with a surprised defensive expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the playful shouter with the prop while R4 is the surprised defender"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have her hands raised defensively while reacting to R2's playful motion with the inflatable pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's defensive body configuration in response to R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

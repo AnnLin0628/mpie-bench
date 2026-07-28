@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__405a8e47b7e8__T3",
+  "instruction": "A candid medium-shot documentary photograph in a bright workshop. On the left, the smiling young man with an afro in a grey shirt (R2) shakes hands with the smiling young man with dark curly hair in a plaid flannel shirt (R1) on the right. R1 holds a smartphone in his left hand. A wooden bird sculpture sits on the table between them in the foreground. The room is brightly lit with soft, natural light coming from the windows, creating a warm and friendly atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 and R2 are the named handshake contact pair, not R3",
+    "R1 is the handshake participant holding a smartphone in his left hand",
+    "R2 is the afro-haired grey-shirted participant shaking hands with R1",
+    "R1 is R2's direct hand-to-hand handshake partner",
+    "a wooden bird sculpture sits on the table between the handshake participants",
+    "the interaction takes place in a bright workshop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    },
+    {
+      "id": "q3",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a smartphone in his left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a smartphone"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 1,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T12",
+  "instruction": "Cinematic film still, close-up shot. In a spacious indoor hall, the woman in the black slip dress (R2) on the left and the man in the brown shirt and beanie (R1) on the right are in profile, touching foreheads. They look intensely into each other's eyes at extremely close range. The background is softly blurred. Soft natural light illuminates their faces, maintaining a warm, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man in the brown shirt and beanie participating in the forehead-to-forehead contact with R2",
+    "R2 is the woman in the black slip dress participating in the forehead-to-forehead contact with R1",
+    "R1 and R2 are in profile with their foreheads touching at extremely close range",
+    "R1 and R2 look intensely into each other's eyes during the close contact",
+    "The scene is a spacious indoor hall with a softly blurred background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the brown shirt and beanie who is touching foreheads with R2, rather than R2 being the man in the brown shirt and beanie?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man in the brown shirt and beanie participating in the forehead-to-forehead contact with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the black slip dress who is touching foreheads with R1, rather than R1 being the woman in the black slip dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman in the black slip dress participating in the forehead-to-forehead contact with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 in profile with their foreheads touching at extremely close range?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in profile with their foreheads touching at extremely close range"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 look intensely into each other's eyes while their faces are extremely close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 look intensely into each other's eyes during the close contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

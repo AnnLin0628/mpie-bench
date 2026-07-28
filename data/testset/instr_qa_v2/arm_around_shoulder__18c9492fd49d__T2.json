@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__18c9492fd49d__T2",
+  "instruction": "A cinematic still captured from a slightly low angle in a medium shot. On an outdoor wooden boardwalk with a metal railing, surrounded by lush green trees, four friends are interacting. On the left, the man in the orange t-shirt (R2) stands in profile facing right, reaching out to clasp hands with the man in the grey t-shirt (R4) who stands on the right facing left. Slightly behind them, the woman in the beige hoodie (R1) stands facing right with a cheerful smile, while the woman in the grey hijab (R3) stands second from the right, looking at the hand clasp with a bright, joyful smile. Bright, warm sunlight filters through the canopy, creating a backlit effect with soft lens flare and a warm color palette.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 initiates the hand clasp by reaching out to R4",
+    "R2 and R4 are the hand-clasping contact pair",
+    "R3 watches the hand clasp rather than participating in it",
+    "R1 stands slightly behind the hand-clasping pair and smiles",
+    "The setting is an outdoor wooden boardwalk with a metal railing"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching out to clasp hands with R4, rather than R4 being described as the one reaching out to clasp R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the hand clasp with R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 watching R2 and R4's hand clasp with a joyful smile, rather than being the person clasping hands with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is an observer of the R2-R4 hand clasp, not R2's contact partner"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R4 the two people making hand contact with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R4 form the hand-clasping contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand slightly behind the hand-clasping pair while smiling, rather than being one of the two people clasping hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is positioned behind the R2-R4 contact interaction and is not the hand-clasp partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

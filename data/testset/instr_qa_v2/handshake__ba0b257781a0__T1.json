@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__ba0b257781a0__T1",
+  "instruction": "A professional corporate photograph with a full-length, eye-level shot captures a modern, minimalist office with a desk, chair, and grey paneled wall. On the left, the woman in the dark skirt suit (R2) stands in profile facing right, smiling as she extends her right hand. On the right, the man in the dark suit (R1) stands in profile facing left, smiling slightly with his left hand in his pocket while extending his right hand. The woman (R2) and the man (R1) shake hands firmly in the center of the frame. The scene is illuminated by bright, even office lighting, creating a clean, neutral color palette with cool grey tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 keeps his left hand in his pocket while extending his right hand to shake R2's right hand",
+    "R2 extends her right hand toward R1 for the handshake while R1's non-shaking left hand remains pocketed",
+    "R1 and R2 clasp right hands firmly in the center of the frame",
+    "R1 and R2 stand in profile facing each other during the handshake",
+    "modern minimalist office with a desk, chair, and grey paneled wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person keeping his left hand in his pocket while extending his right hand to shake R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's non-shaking hand is pocketed while he shakes R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person extending her right hand toward R1 while R1 keeps his left hand in his pocket?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends right hand to R1, contrasted with R1's pocketed left hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the handshake, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

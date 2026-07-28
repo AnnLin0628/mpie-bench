@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__be1077601065__T3",
+  "instruction": "Candid office photograph, medium shot. In a modern office meeting room, the Black man in the green t-shirt (R1) sits on the left, body angled right, clapping with open hands and smiling. Beside him on the right, the Black woman with braided hair and glasses (R3) in a white turtleneck also claps and smiles, looking in the same direction. They sit at a light-colored desk with a laptop and a blue mug. Bright, natural indoor lighting illuminates the scene, creating a professional and positive atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is seated at the desk, angled toward R3's side, clapping with open hands and smiling",
+    "R3 is seated beside R1, clapping and smiling while looking in the same direction",
+    "R3 is the braided-haired woman with glasses who claps beside R1",
+    "R1 and R3 are both participating in the applause rather than one being only an onlooker",
+    "a light-colored desk holds a laptop and a blue mug",
+    "the setting is a modern office meeting room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose body is angled toward R3's side while clapping, rather than R3 being described as angled toward R1's side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated at the desk, angled toward R3's side, clapping with open hands and smiling"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the braided-haired woman with glasses who claps beside R1, rather than R1 taking that braided-haired, glasses-wearing clapping role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the braided-haired woman with glasses who claps beside R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 both seated at the desk and clapping, with R1 using open hands and R3 clapping beside him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 are both participating in the applause rather than one being only an onlooker"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

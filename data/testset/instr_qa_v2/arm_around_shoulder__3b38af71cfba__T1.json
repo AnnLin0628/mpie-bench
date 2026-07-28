@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__3b38af71cfba__T1",
+  "instruction": "A clean studio portrait photograph captured in a medium close-up shot at eye-level. In a minimalist indoor studio with a seamless white background, the dark-haired woman (R2) on the left and the blonde woman (R1) on the right stand facing each other in profile. The dark-haired woman (R2) wears a beige ribbed sleeveless top, and the blonde woman (R1) wears a white ribbed sleeveless top. They embrace closely, wrapping their arms around each other's backs and waists with neutral expressions. The scene is illuminated by bright, even studio lighting, creating soft shadows and a clean, neutral color palette.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the blonde woman embracing R2",
+    "R2 is the dark-haired woman embracing R1",
+    "R1 wraps her arms around R2's back and waist",
+    "R2 wraps her arms around R1's back and waist",
+    "R1 and R2 face each other in profile during the close embrace",
+    "the scene is a minimalist indoor studio with a seamless white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the blonde woman who wraps her arms around R2's back and waist, rather than R2 being the blonde woman in that contact role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the blonde woman embracing R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dark-haired woman who wraps her arms around R1's back and waist, rather than R1 being the dark-haired woman in that contact role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dark-haired woman embracing R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2's back and waist during the close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2's back and waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's back and waist during the close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's back and waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

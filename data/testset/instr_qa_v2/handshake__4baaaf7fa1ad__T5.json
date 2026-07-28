@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__4baaaf7fa1ad__T5",
+  "instruction": "A candid medium shot of an elegant indoor room with patterned wallpaper and wooden trim. On the left, the man in the dark blue suit (R1) stands in profile, looking down at their hands. On the right, the bald man with glasses in the blue suit (R2) stands facing him, also looking down. They are engaged in a warm handshake, with the bald man (R2) clasping the other man's (R1) right hand with both of his hands. Warm indoor lighting from a wall lamp illuminates the scene, creating soft shadows and a natural color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 clasps R1's right hand with both of R2's hands",
+    "R1 is the person whose right hand is being enclosed by R2's two hands",
+    "R2 provides the two-handed clasp while R1's right hand is the hand being held",
+    "R1 and R2 both look down at their joined hands during the contact",
+    "R1 stands in profile while R2 faces him during the hand contact",
+    "The interaction occurs in an elegant indoor room with patterned wallpaper and wooden trim"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 clasping R1's right hand with both of R2's hands, rather than R1 clasping R2's hand with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 clasps R1's right hand with both of R2's hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose right hand is enclosed by R2's two-handed clasp, rather than R2 being enclosed by R1's two hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose right hand is being enclosed by R2's two hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 take the more enclosing two-hand role around R1's right hand, rather than R1 taking that two-hand role around R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 provides the two-handed clasp while R1's right hand is the hand being held"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile while R2 faces him during the hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile while R2 faces him during the hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

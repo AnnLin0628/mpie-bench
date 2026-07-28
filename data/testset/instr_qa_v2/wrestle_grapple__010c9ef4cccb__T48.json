@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T48",
+  "instruction": "Candid sports photograph, medium shot at eye-level. Inside a judo dojo with blue wall padding, two male judokas are sparring. On the left, the young man in the white judogi (R2) stands facing right, gripping his opponent's collar. On the right, the middle-aged man in the white judogi (R3) leans forward, facing left, gripping the young man's sleeve. Both maintain focused expressions as they grapple for dominance. The lighting is soft and natural, coming from the side and highlighting their forms against the blue background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 grips R3's collar during the judo grapple",
+    "R3 grips R2's sleeve during the judo grapple",
+    "R3 leans forward toward R2 while maintaining his sleeve grip",
+    "R2 stands facing R3 while gripping R3's collar",
+    "white judogi collars and sleeves are used as grip points",
+    "the sparring takes place inside a judo dojo with blue wall padding"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gripping R3's collar, rather than R3 gripping R2's collar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the collar-gripping duty on R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 gripping R2's sleeve, rather than R2 gripping R3's sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the sleeve-gripping duty on R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the judoka leaning forward toward R2 while gripping him, rather than R2 being the one described as leaning forward toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans forward into the grapple"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand facing R3 while using a collar grip on R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's grappling role and body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 face R2 while counter-gripping R2's sleeve in the grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's grappling role and body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__30eea825ff3a__T1",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.5125,
+  "S_instr_role": 0.75,
+  "S_instr_asymm": 0.5,
+  "S_instr_prop": 0.0,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 0.75,
+  "S_instr_prop_object": 0.0,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the counterpart whose right hand is clasped by R1's right hand while R1 is the one carrying the phone and coffee cup, rather than those labeled roles being reversed?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "the right-side person carries a cup while shaking hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 shaking each other's right hands in a professional greeting?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "they clasp right hands in a greeting"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 using her right hand to shake R2's right hand while keeping her left hand occupied with the phone and coffee cup?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "her right hand shakes while left holds a cup"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a blue smartphone in R1's left hand during the interaction?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "no blue smartphone is visible"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "handshake__30eea825ff3a__T1",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 11.79,
+    "written_at": "2026-07-17T23:30:22",
+    "gen_relpath": "outputs/gpt-image-2/handshake__30eea825ff3a__T1.png",
+    "qa_relpath": "instr_qa_v2/handshake__30eea825ff3a__T1.json",
+    "n_questions": 4
+  }
+}

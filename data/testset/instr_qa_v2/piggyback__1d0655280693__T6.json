@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__1d0655280693__T6",
+  "instruction": "A candid outdoor photograph in a medium shot shows a sandy hiking trail with green pine branches in the foreground. On the left, the blonde woman in the grey t-shirt (R2) hikes up the slope, seen from behind. On the right, the man in the red plaid shirt (R1) walks alongside her, facing left. He places his right hand on the lower back of the woman (R2) to guide and support her climb. The image features warm natural daylight, soft shadows, and a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his right hand on R2's lower back to guide and support her climb",
+    "R1 is the supporter/guide while R2 is the person being supported up the slope",
+    "R2 hikes up the slope with R1 walking alongside her",
+    "R1's contact is on R2's lower back",
+    "the scene is a sandy outdoor hiking trail"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing his hand on R2's lower back to support her climb, rather than R2 placing her hand on R1's lower back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 with a hand on her lower back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person guiding and supporting R2 up the slope, rather than R2 guiding and supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the guide/supporter and R2 is being guided"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 hiking up the slope while R1 walks alongside her and assists her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 climbs while R1 assists from alongside"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 make contact with R2's lower back as part of helping her climb?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact point is R2's lower back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

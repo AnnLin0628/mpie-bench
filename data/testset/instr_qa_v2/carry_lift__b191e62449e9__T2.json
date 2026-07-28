@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__b191e62449e9__T2",
+  "instruction": "Cinematic medium shot in a bright indoor space with wooden floors and arched windows. In the right foreground, the man with the afro (R1) wearing a dark t-shirt and dark pants carries a green velvet sofa, viewed from the side. In the left background, the man with the bandana (R2) wearing a dark jumpsuit and red sneakers holds the other end of the sofa. They work together to move the sofa across the room. Bright natural light illuminates the scene, highlighting the green fabric and casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries one end of the green velvet sofa from the foreground side",
+    "R2 holds the other end of the green velvet sofa in the background",
+    "R1 and R2 jointly move the sofa across the room with distinct carrying positions",
+    "green velvet sofa",
+    "bright indoor space with wooden floors and arched windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person carrying the sofa from the foreground side, rather than R2 being the foreground carrier?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries one end of the green velvet sofa from the foreground side"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the other end of the sofa while R1 carries the foreground end, rather than R1 holding R2's end?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the other end of the green velvet sofa in the background"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R1 and R2 have distinct sofa-moving roles, with R1 carrying one end and R2 holding the opposite end, rather than their roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 jointly move the sofa across the room with distinct carrying positions"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 working together to move the same sofa across the room?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 jointly move the sofa across the room"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T17",
+  "instruction": "A clean studio portrait photograph, shot at eye-level with a medium scale and shallow depth of field. The scene is set indoors against a plain white background. In the foreground, out-of-focus purple wildflowers frame three women sitting closely on the floor. On the left, the curly-haired woman in a white shirt (R1) leans back against the straight-haired woman in a white sleeveless top (R2) in the center, who clasps R1's arm. On the right, the curly-haired woman in a black tank top (R3) sits behind R2, resting her hand on R2's shoulder. All three look forward with soft, calm expressions. Bright, even studio lighting illuminates the scene, highlighting the neutral tones and blue denim.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 leans back against R2 rather than R2 leaning back against R1",
+    "R2 clasps R1's arm rather than R1 clasping R2's arm",
+    "R3 rests her hand on R2's shoulder rather than R2 resting her hand on R3's shoulder",
+    "R2 is the central seated contact partner between R1 and R3",
+    "R3 sits behind R2 while touching R2's shoulder",
+    "the portrait is set indoors against a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning back against R2, rather than R2 leaning back against R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back against R2 rather than R2 leaning back against R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 clasp R1's arm, rather than R1 clasping R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 clasps R1's arm rather than R1 clasping R2's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 resting her hand on R2's shoulder, rather than R2 resting her hand on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 rests her hand on R2's shoulder rather than R2 resting her hand on R3's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the central seated contact partner who is clasping R1's arm while being touched on the shoulder by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central seated contact partner between R1 and R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 sit behind R2 while placing her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sits behind R2 while touching R2's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

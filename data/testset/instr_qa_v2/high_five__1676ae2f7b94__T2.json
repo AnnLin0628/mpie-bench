@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1676ae2f7b94__T2",
+  "instruction": "A candid, clean studio photograph in a medium shot showing two women laughing during a hand-clapping game against a plain beige backdrop. On the left, the woman with short brown hair (R2) in a striped shirt and beige pants sits facing right, laughing heartily. On the right, the woman with dark curly afro hair (R1) in a purple long-sleeve shirt sits facing left, smiling and laughing. They look at each other as the woman with short brown hair's left hand touches the woman with dark curly afro hair's right hand, capturing a moment of playful motion. The scene is illuminated by soft, even studio lighting with a warm, neutral palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's left hand touches R1's right hand during the hand-clapping game",
+    "R1's right hand is the hand meeting R2's left hand in the clap",
+    "R2 is the short-brown-haired woman engaged in the clap with R1",
+    "R1 and R2 sit facing each other while laughing and playing",
+    "plain beige studio backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the hand-clapping game, is R2 the one whose left hand touches R1's right hand, rather than R1's left hand touching R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's left hand touches R1's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's right hand the hand that meets R2's left hand in the clap, rather than R1 using her left hand to meet R2's right hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand meets R2's left hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 make the described hand contact toward R1 with her left hand while R1 meets it with her right hand, rather than their hand-contact roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2-left-hand to R1-right-hand contact role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the short-brown-haired woman laughing while engaged in the hand-clapping contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the short-brown-haired participant in contact with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

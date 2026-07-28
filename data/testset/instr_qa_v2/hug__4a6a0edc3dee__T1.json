@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__4a6a0edc3dee__T1",
+  "instruction": "Candid street photograph, full-length shot. On a city crosswalk, the woman with long brown hair in a green coat (R1) stands on the left, facing right and smiling. Opposite her, the woman with short dark hair in a red sweater (R2) stands on the right, facing left and laughing. The woman in the green coat and the woman in the red sweater hold hands between them at waist level. The background features blurred buildings and parked cars under soft, diffused daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the smiling woman with long brown hair in a green coat who faces R2",
+    "R2 is the laughing woman with short dark hair in a red sweater who faces R1",
+    "R1 and R2 hold hands between them at waist level",
+    "R1 faces right toward R2 while R2 faces left toward R1",
+    "The scene is a city crosswalk with blurred buildings and parked cars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the smiling woman facing R2, while R2 is the laughing woman facing R1, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiling toward R2 and R2 laughing toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the long-brown-haired woman in the green coat holding hands with R2, rather than R2 being the long-brown-haired woman in the green coat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 as the green-coated hand-holder paired with R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other between their bodies at waist level?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hand contact at waist level"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face toward R2 while maintaining hand contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 during the hand-holding interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

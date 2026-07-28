@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T9",
+  "instruction": "Cinematic film still, medium close-up shot. Inside a bright, white classical ballet studio with large windows, the blonde ballerina (R2) stands on the left in profile, wearing a white leotard and looking down towards her companion. The brunette ballerina (R1) stands in the center wearing a white leotard and a sheer white wrap skirt, looking down as she adjusts her skirt with her hand. Soft, diffused natural light streams in from the right, creating a muted, gentle color palette with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 adjusts her own skirt with her hand while R2 does not perform that skirt-adjusting action",
+    "R2 looks down toward R1 while R1 looks down as she adjusts her skirt",
+    "R1 is the ballerina in the center engaged in adjusting her skirt",
+    "R2 is the ballerina standing in profile and looking toward R1",
+    "R1 has a sheer white wrap skirt that she is touching or adjusting",
+    "The scene is set inside a bright white classical ballet studio with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina adjusting her own skirt with her hand, rather than R2 adjusting R1's skirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the skirt-adjusting action on her own skirt"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking down toward R1 while R1 looks down as she adjusts her skirt, rather than R1 being the one looking down toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs her gaze down toward R1 while R1 focuses downward on adjusting her skirt"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the ballerina in the center who is looking down and adjusting her skirt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's role is the central ballerina adjusting her skirt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

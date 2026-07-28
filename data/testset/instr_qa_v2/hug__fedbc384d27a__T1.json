@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__fedbc384d27a__T1",
+  "instruction": "A candid documentary photograph in a medium shot captures a cozy indoor setting in front of a window with wooden blinds. The woman in the white knit sweater (R2) on the left and the boy in the blue sweater (R1) on the right are embracing in a warm hug. The woman (R2) wraps her arms around the boy's (R1) neck, holding a blue wrapped gift in her hand behind him, while the boy (R1) wraps his arms around her waist with a joyful smile. Warm, natural light filters through the window blinds, casting soft shadows across the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1's neck while they are in contact",
+    "R1 wraps his arms around R2's waist while they are in contact",
+    "R2 holds a blue wrapped gift in her hand behind R1",
+    "R2's arm position is higher around R1's neck while R1's arm position is lower around R2's waist",
+    "a blue wrapped gift is present during the contact",
+    "the scene is indoors in front of a window with wooden blinds"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping her arms around R1's neck, rather than R1 wrapping his arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's neck while they are in contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping his arms around R2's waist, rather than R2 wrapping her arms around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps his arms around R2's waist while they are in contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding a blue wrapped gift behind R1 during the contact, rather than R1 holding the gift behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a blue wrapped gift in her hand behind R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "During the contact, does R2 use a higher arm position around R1's neck while R1 uses a lower arm position around R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arm position is higher around R1's neck while R1's arm position is lower around R2's waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

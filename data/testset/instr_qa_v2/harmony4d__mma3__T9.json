@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T9",
+  "instruction": "Candid action photograph, full shot. Inside a gym with grey padded walls and floor, the man in the black t-shirt (R1) on the left, with his back partially turned, throws a punch at the shirtless man with a mullet (R2) on the right. The shirtless man (R2) faces left, absorbing or blocking the blow. Both fighters wear white shin guards, sparring gloves, and protective eyewear. Bright overhead gym lighting illuminates the scene, casting soft shadows on the grey floor. No bystanders are visible in this shot.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the striker throwing a punch toward R2",
+    "R2 is the defender absorbing or blocking R1's punch",
+    "R1 punches while R2 receives or blocks the blow rather than the reverse",
+    "R1 and R2 are engaged in sparring with gloves and protective gear",
+    "Both fighters wear white shin guards",
+    "The action takes place inside a gym with grey padded walls and floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a punch at R2, rather than R2 throwing the punch at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the striker throwing a punch toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 absorbing or blocking the blow from R1, rather than R1 absorbing or blocking a blow from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender absorbing or blocking R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have the attacking role while R2 has the defensive blocking role in the sparring exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 punches while R2 receives or blocks the blow rather than the reverse"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 facing toward R1 while responding to R1's incoming punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned to receive or block R1's strike"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__07ab0f9247c2__T8",
+  "instruction": "Candid documentary photograph, medium close-up, eye-level. Outdoors near a beach, the man in the blue waffle-knit t-shirt (R1) stands in the center wearing sunglasses, looking slightly right with a neutral expression. The girl with dark hair (R3) is behind him, giving him a piggyback ride with her arms wrapped around his neck. She looks forward, pointing to the left with her right index finger. The scene is softly backlit by a bright, pale sky, creating a cool-toned atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 gives R1 a piggyback ride rather than R1 giving R3 one",
+    "R3 is behind R1 with her arms wrapped around R1's neck",
+    "R1 is the person in front while R3 makes piggyback-style contact from behind",
+    "R3 points with her right index finger while maintaining contact with R1",
+    "The scene is outdoors near a beach"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 giving R1 a piggyback ride, rather than R1 giving R3 a piggyback ride?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 gives R1 a piggyback ride rather than R1 giving R3 one"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 behind R1 with her arms wrapped around R1's neck, rather than R1 being behind R3 with his arms around her neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is behind R1 with her arms wrapped around R1's neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person in front receiving the piggyback-style contact from R3 behind him, rather than R3 being in front receiving that contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person in front while R3 makes piggyback-style contact from behind"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 wrap her arms around R1's neck while interacting with him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arms around R1's neck"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 pointing with her right index finger while she remains behind and in contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 points with her right index finger while maintaining contact with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

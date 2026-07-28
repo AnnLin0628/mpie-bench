@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__95499000b35a__T2",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.85,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 1.0,
+  "S_instr_prop": 0.0,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": 0.0,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 carrying and supporting the stack of cardboard boxes rather than R1 carrying it?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 is holding the boxes"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward and smiling down at the boxes while R2 is the one holding them?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 smiles downward while R2 holds boxes"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have the active carrying role with the boxes while R1 has the observing, leaning-toward-the-boxes role?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2 carries while R1 leans toward them"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a stack of three cardboard boxes being carried?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "only two boxes are visible"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "carry_lift__95499000b35a__T2",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 7.03,
+    "written_at": "2026-07-17T14:40:30",
+    "gen_relpath": "outputs/gemini-3-pro-image/carry_lift__95499000b35a__T2.png",
+    "qa_relpath": "instr_qa_v2/carry_lift__95499000b35a__T2.json",
+    "n_questions": 4
+  }
+}

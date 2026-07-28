@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__097f6c255771__T7",
+  "instruction": "Cinematic film still, full-body shot. In a bright dance studio with large windows, the female ballet dancer in a black long-sleeved top and white tutu (R1) performs a ballet pose in the center, extending her left leg horizontally to the side with her arms outstretched. Behind her, the male dancer in a black top and tights (R2) supports her waist with both hands to maintain her balance. Bright natural light streams from the background windows, casting a cool tone over the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's waist with both hands while R1 performs the ballet pose",
+    "R1 is the dancer being balanced, and R2 is the dancer providing support",
+    "R1 extends one leg horizontally with arms outstretched while R2 remains behind supporting her",
+    "R2 is positioned behind R1 with both hands on her waist",
+    "The scene is a bright dance studio with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's waist with both hands to help maintain her balance, rather than R1 supporting R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's waist with both hands while R1 performs the ballet pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer being balanced in the ballet pose while R2 is the dancer providing support, rather than R2 being balanced by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dancer being balanced, and R2 is the dancer providing support"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending her leg and arms in the pose while R2 remains behind her giving waist support, rather than R2 performing that extended-leg pose while R1 supports him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends one leg horizontally with arms outstretched while R2 remains behind supporting her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned behind R1 with both hands placed at R1's waist as she maintains the ballet pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned behind R1 with both hands on her waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

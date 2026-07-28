@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__ac0b3ec11caa__T3",
+  "instruction": "Candid documentary full shot indoors with a large window showing a blurry wooded background. In the center, the young girl with long red hair (R2) in a black leotard stands looking down, her messy hair falling over her face. Directly behind her, the woman with short brown hair (R1) in a black long-sleeve shirt stands looking down, using her hands to adjust the hair on top of the girl's head. The scene is lit by soft natural light with a muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 adjusts the hair on top of R2's head with her hands",
+    "R2 is the person receiving the hair adjustment from R1",
+    "R1 stands directly behind R2 while tending to R2's hair",
+    "R2 stands looking down while R1 works on her hair",
+    "indoor scene with a large window and blurry wooded background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 using her hands to adjust R2's hair, rather than R2 using her hands to adjust R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 adjusts the hair on top of R2's head with her hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose hair is being adjusted by R1, rather than R1 being the person whose hair is being adjusted by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person receiving the hair adjustment from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 stand directly behind R2 while tending to the top of R2's head, rather than R2 standing behind R1 to tend to R1's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands directly behind R2 while tending to R2's hair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing and looking down while R1 works on R2's hair from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands looking down while R1 works on her hair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

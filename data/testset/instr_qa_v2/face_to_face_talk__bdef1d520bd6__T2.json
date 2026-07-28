@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__bdef1d520bd6__T2",
+  "instruction": "Cinematic film still, medium shot. In a cozy room by a window with books and roses, an older blonde woman (R1) in a beige shirt and pants sits on the left, leaning forward and talking to the bearded man (R2) in a beige shirt and pants sitting in an armchair on the right. They hold hands, with his hand clasping hers. Soft natural light from the window highlights their warm, intimate interaction in a neutral-toned setting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's hand clasps R1's hand",
+    "R1 leans forward and talks to R2",
+    "R1 and R2 are seated while holding hands",
+    "R2 sits in an armchair during the interaction",
+    "the interaction takes place in a cozy room by a window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's hand clasping R1's hand, rather than R1 being described as the one clasping R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand clasps R1's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward and talking to R2, rather than R2 being the described forward-leaning speaker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward and talks to R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated while leaning toward R2 during their hand-holding conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated, leaning toward R2, and holding hands with him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated in an armchair while participating in the hand-holding interaction with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits in an armchair while holding hands with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

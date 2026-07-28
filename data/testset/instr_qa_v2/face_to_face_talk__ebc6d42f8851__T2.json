@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ebc6d42f8851__T2",
+  "instruction": "Candid documentary photograph, medium full shot from a low angle looking up an indoor marble staircase. A man with dark curly hair (R2) in a gray blazer and black pants stands on a lower step with a tan backpack, looking down at a notebook. A woman with ginger hair (R1) wearing glasses, a dark blazer, and tan pants stands on a higher step, holding the open black notebook and smiling towards the camera. The background is brightly lit from above, creating a high-contrast, overexposed upper frame with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands on a higher stair step while R2 stands on a lower step",
+    "R1 holds the open black notebook while R2 looks down at it",
+    "R2 carries a tan backpack while R1 is the notebook holder",
+    "open black notebook",
+    "tan backpack",
+    "indoor marble staircase"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing on a higher stair step holding the open black notebook, rather than R2 being the higher-step person holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is higher on the staircase and holds the notebook"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on a lower step looking down at the notebook held by R1, rather than R1 standing lower and looking down at a notebook held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is lower and looks at R1's notebook"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person carrying the tan backpack while R1 is the person holding the open notebook, rather than those object roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries backpack while R1 holds notebook"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold the open notebook as R2 attends to it from a lower stair step?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 presents or holds the notebook for R2 to look at"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

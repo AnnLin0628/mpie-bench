@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__011b3fdb0ae7__T4",
+  "instruction": "A candid photograph in a bright indoor room with pampas grass. In a medium close-up profile shot, the woman with straight dark hair (R3) in a pink fuzzy sweater embraces the woman with curly black hair (R1) in a red shirt, kissing her forehead. The curly-haired woman has her eyes closed. Soft natural light illuminates their affectionate moment.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 kisses R1 on the forehead rather than R1 kissing R3",
+    "R3 initiates the embrace and forehead kiss while R1 receives it",
+    "R1 has eyes closed while being held and kissed by R3",
+    "R3 and R1 are the contact pair rather than R2 being part of the affectionate contact",
+    "bright indoor room with pampas grass"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 kissing R1 on the forehead, rather than R1 kissing R3 on the forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 kisses R1 on the forehead rather than R1 kissing R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the affectionate initiator who embraces R1 and gives the forehead kiss, rather than R1 being the one who kisses R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 initiates the embrace and forehead kiss while R1 receives it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 receiving the forehead kiss with her eyes closed, rather than R3 being the one receiving a forehead kiss from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has eyes closed while being held and kissed by R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the curly-haired woman being embraced by R3 during the affectionate contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the curly-haired woman being embraced by R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is the affectionate contact described as occurring between R3 and R1, rather than R2 being the person kissed on the forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R1 are the contact pair rather than R2 being part of the affectionate contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

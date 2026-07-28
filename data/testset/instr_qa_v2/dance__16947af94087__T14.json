@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T14",
+  "instruction": "Candid documentary photograph, medium shot. In a bright indoor dance studio, the woman in the black dress (R2) leans slightly forward with her left arm extended. The man in the brown beanie (R1) stands behind her, holding and guiding her extended arm. The lighting is bright and diffused, capturing their fluid movement.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds and guides R2's extended arm",
+    "R2 is the person leaning slightly forward with her left arm extended",
+    "R1 stands behind R2 while guiding her movement",
+    "R2 receives arm guidance from R1 during the dance interaction",
+    "bright indoor dance studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and guiding R2's extended arm, rather than R2 holding and guiding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric guiding duty on R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person extending her left arm while R1 guides it, rather than R1 extending his arm while R2 guides it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends the arm that R1 guides"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 receive arm guidance from R1 during the dance movement, rather than R1 receiving arm guidance from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is guided by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing behind R2 while maintaining contact with her extended arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind R2 and contacts her arm"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning slightly forward while R1 helps direct her arm position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward as R1 directs her arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

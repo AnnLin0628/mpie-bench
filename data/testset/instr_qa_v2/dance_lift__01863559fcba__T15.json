@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T15",
+  "instruction": "A clean, bright lifestyle photograph with a medium shot of a minimalist white dance studio. On the right foreground, the young woman in the beige sports bra (R4) stands with her arms raised straight up, looking forward. In the background on the left, the blonde girl in the beige long-sleeve crop top (R5) stands with her arms extended straight forward and her eyes closed. They are practicing synchronized dance poses. Soft natural light from large windows illuminates the scene, creating a neutral beige and white palette.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 is the dancer with her arms raised straight up",
+    "R5 is the dancer with her arms extended straight forward and her eyes closed",
+    "R4 and R5 are practicing synchronized dance poses with different arm positions",
+    "R4 is looking forward while holding the raised-arm pose",
+    "the scene is a clean, bright minimalist white dance studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person holding her arms raised straight up, rather than R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the raised-arms dance duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person holding her arms extended straight forward with her eyes closed, rather than R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 has the forward-arms closed-eyes dance duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 look forward while standing in the dance pose with both arms raised straight up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's body configuration and gaze in the dance pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand in the dance pose with both arms extended straight forward and her eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's body configuration and closed-eye pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

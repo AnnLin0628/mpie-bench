@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__71ba2ba4a6da__T9",
+  "instruction": "A candid romantic close-up photograph of a couple kissing outdoors in a sunny field. On the right, the woman with long brown hair (R1) in a denim jacket leans in to kiss her partner. On the left, the man with short dark hair (R2), also in a denim jacket, holds her close. The woman wraps her hand around the back of the man's neck. The background shows softly blurred trees under warm, bright sunlight that creates a gentle rim light on their hair.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans in to kiss R2",
+    "R2 holds R1 close during the kiss",
+    "R1 wraps her hand around the back of R2's neck",
+    "R1 and R2 are in a close romantic kissing pose",
+    "sunny outdoor field with softly blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning in to kiss R2, rather than R2 being the one described as leaning in to kiss R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the lean-in toward R2 for the kiss"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1 close during the kiss, rather than R1 being the one described as holding R2 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 close"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her hand around the back of R2's neck, rather than R2 wrapping a hand around the back of R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand is around the back of R2's neck"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 kissing while R2 keeps R1 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is holding R1 close during the kiss"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned close enough to R2 to kiss him while placing her hand behind his neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's contact role combines kissing R2 with touching the back of his neck"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T32",
+  "instruction": "A candid documentary medium wide shot at eye-level shows an indoor studio with a red carpet and white walls. On the right, the bearded man in a black polo and blue shorts (R1) leans forward, holding the upper arms of the woman in a white t-shirt and blue jeans (R2) with both hands. The woman (R2) stands on the left in profile, facing right and looking directly at the man with a neutral expression. A white radiator is visible on the wall behind them. The scene is illuminated by bright overhead lights, highlighting the red carpet and white walls.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's upper arms with both hands",
+    "R1 leans forward while making arm contact with R2",
+    "R2 is the person being held by the upper arms by R1",
+    "R2 faces and looks directly at R1 while being held",
+    "indoor studio with red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's upper arms with both hands, rather than R2 holding R1's upper arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's upper arms with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward while holding R2, rather than R2 leaning forward while holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward while making arm contact with R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's upper arms the body parts being held by R1, rather than R1's upper arms being held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person being held by the upper arms by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face and look directly at R1 while R1 holds her upper arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces and looks directly at R1 while being held"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

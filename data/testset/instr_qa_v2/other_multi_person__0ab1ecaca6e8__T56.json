@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T56",
+  "instruction": "Candid outdoor photograph, full shot. In a grassy park, the woman in the black beanie (R5) wearing a red t-shirt stands center-left, touching her head with her hand. Beside her on the right, the Asian man in the red polo (R3) stands with hands on his hips, looking to the left. In the background, the heavy-set man in black (R1) is on the left, the woman in the dark t-shirt (R4) is in the center, and the bald man in the dark t-shirt (R2) is on the right. Bright daylight illuminates the group.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R5 is the person touching her own head with her hand while R3 has his hands on his hips",
+    "R3 is the person standing with hands on hips while R5 is touching her head",
+    "R5 stands beside R3 while performing the head-touching action",
+    "R3 looks to the left while keeping his hands on his hips",
+    "R1, R4, and R2 are in the background relative to R5 and R3",
+    "the group is in a grassy park in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the person touching her own head with her hand, while R3 instead has his hands on his hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 head-touching role versus R3 hands-on-hips role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person standing with his hands on his hips, rather than R5 being the one with hands on hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 hands-on-hips duty rather than R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand beside R3 while touching her own head with her hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 standing near R3 with a hand on her own head"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 look to the left while keeping his hands on his hips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 gaze and hands-on-hips body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

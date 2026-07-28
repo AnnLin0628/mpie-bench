@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc0d288eb885__T1",
+  "instruction": "Candid documentary photograph, full-length shot. On a sunny city sidewalk, the smiling woman in the white halter dress (R1) and the person in the denim jacket and khaki shorts (R2) walk hand-in-hand. Positioned on the left, the woman (R1) holds her dress hem and looks joyfully at her partner. On the right, the person (R2), with blue face paint, walks alongside her, looking back with a warm smile. They hold hands in the center of the frame as they move forward together. The scene is illuminated by soft, warm natural daylight, creating a cheerful and bright atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the partner holding her dress hem while walking hand-in-hand with R2",
+    "R2 is the blue-face-painted partner looking back warmly at R1 while holding R1's hand",
+    "R1 and R2 walk forward together with their hands joined between them",
+    "R1 holds the hem of her dress during the interaction",
+    "the interaction takes place on a sunny city sidewalk"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While walking hand-in-hand, is R1 the partner holding her dress hem, rather than R2 being the partner holding a dress hem?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partner holding her dress hem while walking hand-in-hand with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blue-face-painted partner looking back warmly at R1 while holding R1's hand, rather than R1 being the blue-face-painted partner looking back at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the blue-face-painted partner looking back warmly at R1 while holding R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding R2's hand while also using her other hand to hold her dress hem?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hand and separately holds her dress hem"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk alongside R1 while maintaining hand contact with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks alongside R1 while holding hands"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking together on a sunny city sidewalk?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction takes place on a sunny city sidewalk"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

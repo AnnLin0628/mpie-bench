@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__76a898e6cf80__T2",
+  "instruction": "Cinematic close-up profile shot in an indoor room with pink background lighting. The man in the plaid shirt and red bandana (R1) is on the right, hands raised near his face. The woman in the plaid shirt (R2) stands close on the left, smiling warmly up at him. Warm lighting with a soft pink background glow highlights their close interaction.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has his hands raised near his face while interacting with R2",
+    "R2 smiles warmly up at R1",
+    "R2 stands close to R1 in a face-to-face interaction",
+    "R1 is the man in a plaid shirt and red bandana",
+    "the interaction takes place in an indoor room with pink background lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one with his hands raised near his face, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has his hands raised near his face while interacting with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one smiling warmly up at R1, rather than R1 smiling up at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles warmly up at R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 in a close interaction while keeping his hands raised near his face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has his hands raised near his face while interacting with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

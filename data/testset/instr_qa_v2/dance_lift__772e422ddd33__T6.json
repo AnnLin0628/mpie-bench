@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T6",
+  "instruction": "Candid studio photograph, medium shot. In a bright indoor dance studio with white paneled walls, the instructor in a black long-sleeved top (R1) stands behind the young student in a pink tutu (R2). The young student stands in profile facing left with her arms raised high and one leg extended back. The instructor places both of her hands on the student's waist to adjust her posture, looking forward with a neutral, focused expression. Soft, bright natural light illuminates the clean white setting, creating a gentle and focused atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands behind R2 and places both hands on R2's waist",
+    "R1 adjusts or guides R2's dance posture rather than being adjusted by R2",
+    "R2 is the student holding the dance pose while R1 is the instructor correcting it",
+    "R2 has arms raised high and one leg extended back during the correction",
+    "the interaction occurs in a bright indoor dance studio with white paneled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing both hands on R2's waist to adjust R2's posture, rather than R2 placing hands on R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 adjusts R2's waist/posture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the instructor guiding R2's dance position while R2 is the student being corrected, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 instructor guides R2 student"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand behind R2 while making contact with R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind and contacts R2's waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 holding a ballet-like pose with arms raised high and one leg extended back while R1 corrects her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 poses while R1 corrects"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

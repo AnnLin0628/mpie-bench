@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__58b277ce30a2__T2",
+  "instruction": "A candid medium close-up photograph in a bright indoor room with a green potted plant in the background. On the left, the man in the red sweater (R2) sits facing right, looking up at the woman in the gray turtleneck (R1) on the right. The woman (R1) raises her right hand to gesture while speaking, looking slightly forward with an expressive face. Soft natural light fills the space, highlighting their expressions with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the speaker who raises her right hand to gesture",
+    "R2 is seated facing R1 and looking up at her",
+    "R1 gestures expressively while R2 listens from a seated position",
+    "R1 and R2 are engaged in a face-to-face conversation",
+    "a green potted plant is visible in the bright indoor background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person raising her right hand to gesture while speaking, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active hand-gesturing speaker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the seated person looking up at R1, rather than R1 being seated and looking up at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seated and looking up toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the expressive speaking-and-gesturing role while R2 takes the seated listening role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 speaks and gestures while R2 listens seated"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown with an expressive face while gesturing during the conversation with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's expressive gesturing role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

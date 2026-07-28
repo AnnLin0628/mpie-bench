@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T21",
+  "instruction": "A candid action photograph captured from a medium, slightly high angle shows an indoor martial arts studio with wooden floors and a black mat. On the right, the man in the white gi (R1) is kneeling and leaning forward in a dominant grappling posture. On the left, the man in the gray gi (R2) lies on his back with his knees bent. The man in the white gi (R1) leans over the man in the gray gi (R2), gripping his upper body, while the man in the gray gi (R2) holds his partner's arms defensively. Bright natural light streams from background windows, casting warm tones and soft shadows across the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 kneels and leans forward over R2 in a dominant grappling posture",
+    "R2 lies on his back with knees bent beneath R1",
+    "R1 grips R2's upper body while R2 holds R1's arms defensively",
+    "R2 is the person being controlled from above rather than the person on top",
+    "a black mat is part of the grappling area",
+    "the scene is an indoor martial arts studio with wooden floors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kneeling and leaning forward over R2 in a dominant grappling posture, rather than R2 kneeling over R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the top dominant grappler over R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying on his back beneath R1 with his knees bent, rather than R1 lying on his back beneath R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lower grappler on his back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 grip R2's upper body while R2 holds R1's arms defensively, rather than R2 gripping R1's upper body from a dominant position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls R2's upper body while R2 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the partner being controlled from below while R1 leans over him during the grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is controlled from below by R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black mat associated with the grappling area?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat in the martial arts studio"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

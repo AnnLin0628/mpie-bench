@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__3098a2508e6b__T1",
+  "instruction": "Candid street photograph, full shot. Outdoors in front of a dark wooden doorway, the blonde woman in a brown cap and black vest (R1) on the left walks forward holding a yellow drink, looking at the red-haired woman in a blue knit vest and brown pleated skirt (R2) on the right, who walks beside her. They walk side-by-side out of the building under natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a yellow drink while walking with R2",
+    "R1 looks toward R2 as they walk side-by-side",
+    "R2 walks beside R1 out of the building",
+    "yellow drink held by R1",
+    "dark wooden doorway outdoors under natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding the yellow drink while walking with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the drink rather than R2 being the drink-holder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look toward R2 as they walk together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 directs her gaze toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking beside R1 as they leave the building together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks beside R1 in the shared walking action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side rather than standing still?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

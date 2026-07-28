@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5474ecc87e04__T4",
+  "instruction": "Candid close-up photograph. Outdoors in a bright winter setting, the woman with curly hair (R1) wearing a black puffer jacket and a gray scarf is shown in profile, looking to the left with a gentle, relaxed smile. The man in the gray beanie (R2) wearing a plaid jacket embraces her closely from behind, smiling warmly as he gazes at her face. Their shoulders are pressed together in an intimate embrace. Bright natural daylight highlights their features against a soft, out-of-focus winter background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 embraces R1 closely from behind",
+    "R1 is the person being embraced from behind by R2",
+    "R2 smiles while gazing at R1's face",
+    "R1 and R2 have their shoulders pressed together in an intimate close contact",
+    "R1 is shown in profile with a gentle relaxed smile",
+    "the scene is outdoors in a bright winter setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 embracing R1 closely from behind, rather than R1 embracing R2 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 closely from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being embraced from behind by R2, rather than R2 being embraced from behind by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person being embraced from behind by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gazing at R1's face while smiling warmly, rather than R1 gazing at R2's face in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles while gazing at R1's face"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 pressed closely together at the shoulders while R2 is positioned behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have their shoulders pressed together in an intimate close contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown in profile with a gentle, relaxed smile while R2 embraces her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is shown in profile with a gentle relaxed smile"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

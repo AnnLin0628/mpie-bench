@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__7ddec0b673dc__T1",
+  "instruction": "Cinematic medium shot of a bright office with brick pillars and large windows. On the left, the man in the brown turtleneck (R2) stands in profile, holding printed documents and looking towards his colleague. On the right, the Black man in the white shirt (R1) stands facing him, holding a paper sheet. They are standing close, engaged in a calm professional discussion. Warm, soft daylight streams from the background windows, illuminating the scene with a natural, soft glow.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds printed documents while looking toward R1",
+    "R1 holds a paper sheet while facing R2",
+    "R2 stands in profile during the discussion with R1",
+    "R1 faces R2 in a calm professional discussion",
+    "printed documents are part of the office discussion",
+    "the scene is set in a bright office with brick pillars and large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding printed documents while looking toward R1, rather than R1 being the one holding those printed documents?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds printed documents while looking toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding a paper sheet while facing R2, rather than R2 being the one holding that paper sheet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a paper sheet while facing R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing in profile and looking toward R1, rather than R1 standing in profile and looking toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in profile during the discussion with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T8",
+  "instruction": "Candid documentary photograph, eye-level full shot from behind. In a training dojo with a textured brown wall, the standing woman in the black gi (R1) is positioned with her back to the camera, holding the leg of the girl in the pink gi (R2). The girl in the pink gi (R2) is inverted, balancing on her shoulders on the black mat with her legs extended upward. The standing woman in the black gi (R1) controls the position from above. Soft indoor lighting highlights the grapplers against the neutral background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's leg while R2 is inverted",
+    "R1 controls the grappling position from above rather than being controlled by R2",
+    "R2 balances upside down on her shoulders on the mat while R1 stands",
+    "R1 is the standing grappler and R2 is the inverted grappler",
+    "black mat supporting R2's shoulders",
+    "training dojo with a textured brown wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's leg while R2 is inverted, rather than R2 holding R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's leg while R2 is inverted"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 controlling the grappling position from above while R2 is below, rather than R2 controlling R1 from above?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls the grappling position from above rather than being controlled by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person balancing upside down on her shoulders while R1 remains standing, rather than R1 being inverted on her shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances upside down on her shoulders on the mat while R1 stands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the standing grappler in contact with R2's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the standing grappler and R2 is the inverted grappler"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black mat beneath the grapplers, supporting R2's shoulder-balance position?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat supporting R2's shoulders"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

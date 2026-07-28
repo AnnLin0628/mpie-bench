@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__81587386f444__T4",
+  "instruction": "A candid wedding photograph, medium shot at eye-level. In a misty outdoor setting, the dark-haired man in a navy suit (R1) on the left dances and laughs joyfully, holding hands with the blonde man with a mullet in a black velvet suit (R2), who has his back partially to the camera. In the background, a laughing bystander in a suit is visible under soft, diffused light.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the dark-haired man dancing and laughing joyfully while holding hands with R2",
+    "R2 is the blonde man whose back is partially to the camera while holding hands with R1",
+    "R1 and R2 are connected by hand-holding as dance partners",
+    "A laughing bystander is visible in the background",
+    "The scene is a misty outdoor wedding setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one dancing and laughing joyfully while holding R2's hand, rather than R2 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the joyful active dancer holding R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one with his back partially to the camera while holding hands with R1, rather than R1 being turned that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the partially turned-away body orientation in the hand-holding dance"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands as dance partners?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are connected by hand-holding during the dance"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 visibly laughing during the hand-held dance with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's visible joyful expression while dancing with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

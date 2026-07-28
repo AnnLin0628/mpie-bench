@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__583dfbda7458__T1",
+  "instruction": "Candid medium shot of a bright indoor living room. On a dark couch, the woman in the blue t-shirt and beige pants (R2) sits on the left, facing right and gesturing with open hands. Opposite her, the woman in the white dress with black sleeves (R1) sits on the right, facing left and gesturing back. They are engaged in a friendly conversation. The background features large windows and potted plants. Bright natural light illuminates the scene, creating a clean, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 gestures with open hands toward R1",
+    "R1 gestures back to R2",
+    "R1 and R2 sit opposite one another while conversing",
+    "both named women are seated on a dark couch",
+    "the scene is a bright indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman gesturing with open hands toward R1, rather than R1 being the open-hand gesturer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with open hands toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman gesturing back to R2, rather than R2 being the one described as gesturing back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gestures back to R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated opposite each other while engaging in a friendly conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 sit opposite one another while conversing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

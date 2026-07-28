@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma2__T7",
+  "instruction": "Candid full shot of an indoor martial arts gym with gray mats. On the left, the man in the blue sleeveless shirt (R1) stands with his left leg slightly raised. On the right, the bearded man in the maroon t-shirt (R2) extends his arms to engage in a clinch. Bright overhead lighting illuminates the neutral-toned training area.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends his arms to engage R1 in a clinch",
+    "R1 stands with his left leg slightly raised while R2 reaches for the clinch",
+    "R2 has the active clinch-engagement role toward R1",
+    "gray training mats are present",
+    "the setting is an indoor martial arts gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person extending his arms to engage R1 in a clinch, rather than R1 being the one extending his arms to engage R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 actively extends arms for the clinch with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing with his left leg slightly raised while R2 reaches in for the clinch, rather than R2 having the raised leg while R1 reaches in?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the raised-leg stance while R2 has the reaching clinch role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend his arms toward R1 as part of engaging in a clinch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is reaching toward R1 for a clinch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

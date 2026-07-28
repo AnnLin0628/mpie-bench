@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T1",
+  "instruction": "A candid outdoor photograph, eye-level full shot. On a wooden pier with a large suspension bridge under an overcast sky, the bearded man in a white t-shirt and black leggings (R2) and the woman with a shaved head in a white crop top and gray shorts (R1) stand side-by-side. The bearded man (R2) balances on his left leg on a pink mat, while the woman with a shaved head (R1) balances on her right leg on a beige mat. Both have their opposite foot tucked against their thigh and arms outstretched horizontally in a matching yoga pose, looking forward with calm expressions. Soft, diffused daylight illuminates the scene with a muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 balances on her right leg on a beige mat while R2 does not",
+    "R2 balances on his left leg on a pink mat while R1 does not",
+    "R1 and R2 both hold a matching one-legged yoga pose with the opposite foot tucked against the thigh",
+    "R1 and R2 both stretch their arms horizontally while balancing",
+    "R1 uses a beige yoga mat and R2 uses a pink yoga mat",
+    "The scene is on a wooden pier with a large suspension bridge under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on her right leg on a beige mat, rather than R2 being the one balancing on a beige mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances on her right leg on a beige mat while R2 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing on his left leg on a pink mat, rather than R1 being the one balancing on a pink mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on his left leg on a pink mat while R1 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both holding a matching one-legged yoga pose with the opposite foot tucked against the thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both hold a matching one-legged yoga pose with the opposite foot tucked against the thigh"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 both keep their arms outstretched horizontally while balancing in the yoga pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 both stretch their arms horizontally while balancing"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are there two yoga mats, with R1 on a beige mat and R2 on a pink mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses a beige yoga mat and R2 uses a pink yoga mat"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the yoga pose taking place on a wooden pier with a large suspension bridge visible under an overcast sky?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The scene is on a wooden pier with a large suspension bridge under an overcast sky"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

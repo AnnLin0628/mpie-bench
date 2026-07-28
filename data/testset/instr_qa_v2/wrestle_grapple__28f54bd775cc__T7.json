@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T7",
+  "instruction": "Candid documentary photograph, eye-level full shot. In a training dojo with a textured brown wall, the standing woman in the black gi (R1) leans forward to control the leg of the girl in the pink gi (R2). The girl in the pink gi (R2) is inverted on her back on the black mat, legs extended upward in a defensive guard position. The standing woman in the black gi (R1) maintains her balance while gripping her opponent's pants. Soft indoor lighting illuminates the grappling partners, creating a focused athletic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 controls R2's leg while leaning forward, rather than R2 controlling R1's leg",
+    "R1 remains standing and balanced while R2 is inverted on her back with legs upward",
+    "R1 grips R2's pants as part of the grappling control",
+    "R2 is in a defensive guard position on the black mat",
+    "the grappling takes place in a training dojo with a textured brown wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward to control R2's leg, rather than R2 controlling R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls R2's leg while leaning forward, rather than R2 controlling R1's leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 remain standing and balanced while R2 is inverted on her back, rather than R2 standing over an inverted R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains standing and balanced while R2 is inverted on her back with legs upward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gripping R2's pants to maintain grappling control, rather than R2 gripping R1's pants?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's pants as part of the grappling control"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 on her back with her legs extended upward in a defensive guard position while R1 stands over her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in a defensive guard position on the black mat"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 positioned on a black mat during the grappling exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 is in a defensive guard position on the black mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

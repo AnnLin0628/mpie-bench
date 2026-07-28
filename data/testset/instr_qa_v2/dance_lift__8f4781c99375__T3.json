@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__8f4781c99375__T3",
+  "instruction": "Candid outdoor full shot of a shirtless man with a man-bun (R1) and a woman in a black swimsuit (R2) performing a partner stretch on a beach. The shirtless man (R1) on the left leans back in a squat, holding hands with the woman (R2) who stands on his thighs and leans backward. The ocean and sandy shoreline stretch across the background under a cloudy sky. The lighting is soft and natural, emphasizing the athletic pose with cool, neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 from below by squatting while R2 stands on R1's thighs",
+    "R2 is elevated on R1's thighs rather than R1 standing on R2",
+    "R1 and R2 hold hands while leaning backward in a partner stretch",
+    "R1 is the base of the partner stretch and R2 is the person balancing on him",
+    "R2 leans backward while standing on R1's thighs",
+    "The partner stretch takes place on a beach with ocean and sandy shoreline in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 from below in a squat while R2 stands on R1's thighs, rather than R2 supporting R1 from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 from below by squatting while R2 stands on R1's thighs"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person balancing on R1's thighs, rather than R1 balancing on R2's thighs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is elevated on R1's thighs rather than R1 standing on R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 act as the lower base of the partner stretch while R2 is the elevated partner leaning back, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the base of the partner stretch and R2 is the person balancing on him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands as part of the partner stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while leaning backward in a partner stretch"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning backward while standing on R1's thighs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans backward while standing on R1's thighs"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

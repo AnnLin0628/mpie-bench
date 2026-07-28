@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__97925788aea7__T2",
+  "instruction": "A candid photographic medium full shot captures an outdoor narrow alleyway with stone steps. The man in the white suit (R2) wearing white angel wings on the left and the woman in the black dress (R1) wearing black angel wings on the right walk side-by-side down the stairs. They hold hands as they descend, with the man's left leg forward and the woman's right leg forward. Both face forward with neutral expressions. The background features warm-toned European buildings. The scene is illuminated by warm, natural daylight with soft shadows that enhance the warm color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 steps downward with his left leg forward while R1 steps downward with her right leg forward",
+    "R1 is the black-winged participant stepping with her right leg forward, rather than R2",
+    "R2 is the white-winged participant stepping with his left leg forward, rather than R1",
+    "R1 and R2 hold hands while descending the stairs side-by-side",
+    "R1 and R2 wear visible angel-wing props",
+    "the interaction takes place on outdoor stone steps in a narrow alleyway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 step down with his left leg forward while R1 steps down with her right leg forward, rather than R2 having the right leg forward and R1 the left?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 left-leg-forward descent paired with R1 right-leg-forward descent"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the black-winged participant stepping with her right leg forward, rather than R2 being the black-winged participant with the right leg forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has black angel wings and right leg forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the white-winged participant stepping with his left leg forward, rather than R1 being the white-winged participant with the left leg forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has white angel wings and left leg forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 hold each other's hands while descending the stairs side-by-side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain hand-to-hand contact while walking down stairs"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 descending outdoor stone steps in a narrow alleyway?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor narrow alleyway with stone steps"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

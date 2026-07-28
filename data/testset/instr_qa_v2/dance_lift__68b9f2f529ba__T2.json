@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__68b9f2f529ba__T2",
+  "instruction": "Studio photograph, full-body shot. In a minimalist indoor studio with a plain gray background, a shirtless man in black sweatpants (R1) stands on the left, leaning back slightly. He holds the foot of a woman in a beige sports bra and black shorts (R2) high above his head. The woman (R2) performs an inverted backbend, arching her body with her hands resting on the man's lower thighs for support. The scene is illuminated by soft, diffused studio lighting, maintaining a cool gray color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's foot high above his head to support the lift",
+    "R2 performs an inverted backbend while being supported by R1",
+    "R2 rests her hands on R1's lower thighs for support",
+    "R1 stands and leans back slightly during the lift",
+    "R2 arches her body upside down with one foot elevated by R1",
+    "minimalist indoor studio with a plain gray background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's foot high above his head, rather than R2 holding R1's foot above her head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's foot high above his head to support the lift"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person performing the inverted backbend while R1 supports her, rather than R1 being the inverted person supported by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs an inverted backbend while being supported by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's hands resting on R1's lower thighs for support, rather than R1's hands resting on R2's lower thighs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her hands on R1's lower thighs for support"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand and lean back slightly while supporting R2 in the dance lift?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands and leans back slightly during the lift"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 arched upside down in an inverted backbend with her foot elevated by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 arches her body upside down with one foot elevated by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

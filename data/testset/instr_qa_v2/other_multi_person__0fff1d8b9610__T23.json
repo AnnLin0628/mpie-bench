@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T23",
+  "instruction": "A high-angle full shot of two cheerleaders performing in a bright white studio. In the foreground, the dark-haired cheerleader (R9) wearing a white t-shirt and white skirt with a red and yellow waistband spins with orange pom-poms, her eyes closed in motion. Behind her, the curly-haired cheerleader (R1) in a matching uniform dances with pom-poms, looking down. Bright, high-key studio lighting creates a clean, energetic atmosphere with soft shadows on the floor.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R9 is the foreground cheerleader spinning with orange pom-poms, rather than R1",
+    "R1 is behind R9 dancing with pom-poms and looking down, rather than R9 taking that rear role",
+    "R9 has eyes closed while spinning in motion",
+    "R1 dances with pom-poms behind the foreground performer",
+    "orange pom-poms are used in the cheerleading performance",
+    "the performance takes place in a bright white studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the cheerleader spinning in the foreground with orange pom-poms, rather than R1 being the foreground spinner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 is the foreground spinner with orange pom-poms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the cheerleader behind R9 who is dancing with pom-poms and looking down, rather than R9 taking that behind-looking-down role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances behind R9 while looking down"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R9 perform the spinning motion with eyes closed while R1 performs a separate dance behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 spins with eyes closed while R1 dances behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__3a21169c313d__T1",
+  "instruction": "Candid outdoor photograph, medium shot. Next to a textured white wall in bright daylight, the man in the beige polo shirt (R1) stands on the left, looking to the right with a calm expression and hands clasped. Beside him, the woman in the black strapless top and white jacket (R2) leans her head back with eyes closed and a soft smile, her arm resting on the wall behind him. Strong sunlight from the left casts sharp shadows on the wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests her arm on the wall behind R1 rather than R1 resting an arm behind R2",
+    "R1 keeps his hands clasped while R2 uses the wall behind him",
+    "R2 leans her head back with eyes closed beside R1 while R1 remains upright and calm",
+    "textured white wall behind/next to the pair",
+    "bright outdoor daylight with sharp wall shadows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose arm rests on the wall behind R1, rather than R1 resting an arm on the wall behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arm rests on the wall behind R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 keep his hands clasped while R2 rests an arm on the wall behind him, rather than R2 clasping her hands while R1 rests an arm behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has clasped hands while R2 uses the wall behind him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning her head back with eyes closed beside R1 while R1 remains upright with a calm expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans back with eyes closed while R1 stands calmly"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

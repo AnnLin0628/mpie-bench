@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T52",
+  "instruction": "Candid action photograph, low-angle medium full shot. Inside a judo dojo on a yellow tatami mat. The woman in the blue judo gi (R1) stands on the left, leaning over the young man in the white judo gi (R2) who lies on his back on the mat. R1 holds R2's arm, looking down at him, while R2 looks up at her with his gi slightly open. Soft indoor lighting casts gentle shadows.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 applies the arm-hold/control to R2, rather than R2 applying it to R1",
+    "R1 is above R2, leaning over him, while R2 is lying on his back",
+    "R2 is the person on the mat being held by the arm",
+    "R1 looks down at R2 while R2 looks up at her",
+    "the interaction occurs on a yellow tatami mat",
+    "the setting is inside a judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's arm, rather than R2 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 applies the arm-hold/control to R2, rather than R2 applying it to R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning over R2 while R2 lies on his back, rather than R2 leaning over R1 while R1 lies on her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is above R2, leaning over him, while R2 is lying on his back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being controlled from above on the mat, rather than R1 being controlled from above by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person on the mat being held by the arm"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand and lean over R2 during the judo grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in the upper standing/leaning role over R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look down at R2 while R2 looks up at her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at R2 while R2 looks up at her"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a yellow tatami mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction occurs on a yellow tatami mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

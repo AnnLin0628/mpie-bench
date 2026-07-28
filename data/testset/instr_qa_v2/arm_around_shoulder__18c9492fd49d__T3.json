@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__18c9492fd49d__T3",
+  "instruction": "A cinematic still captured from a slightly low angle in a medium shot. On an outdoor wooden boardwalk with a metal railing, surrounded by lush green trees, four friends are interacting. On the left, the man in the orange t-shirt (R2) stands in profile facing right, shaking hands with the man in the grey t-shirt (R4) who stands on the right facing left. Between them, the woman in the beige hoodie (R1) stands facing right with a smile, while the woman in the grey hijab (R3) stands second from the right, laughing as she watches the handshake. Bright, warm sunlight filters through the canopy, creating a backlit effect with a warm color palette.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 and R4 are the handshaking contact pair",
+    "R3 is laughing while watching R2 and R4's handshake rather than joining it",
+    "R1 is a smiling non-handshaking participant between the two handshakers",
+    "R2 and R4 face each other during their handshake",
+    "The interaction occurs on an outdoor wooden boardwalk with a metal railing"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 a smiling non-handshaking participant between R2 and R4, rather than R1 being the person whose hand R4 is shaking?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is a smiling non-handshaking participant between the two handshakers"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": true
+  }
+}

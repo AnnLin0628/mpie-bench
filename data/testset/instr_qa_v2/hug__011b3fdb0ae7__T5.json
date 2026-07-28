@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__011b3fdb0ae7__T5",
+  "instruction": "Candid lifestyle photograph, medium close-up. In a bright indoor room decorated with pampas grass, the curly-haired woman in a red top (R1) stands on the right, kissing the forehead of the straight-haired woman in a pink fuzzy sweater (R3) who stands on the left. The straight-haired woman (R3) has her eyes closed in a serene expression, leaning gently into the embrace. Her hand rests softly on the curly-haired woman's (R1) shoulder. Soft natural light illuminates the scene from a nearby window, creating a warm and intimate atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 kisses R3 on the forehead",
+    "R3 receives the forehead kiss from R1 with eyes closed",
+    "R3 leans gently into R1's embrace",
+    "R3's hand rests on R1's shoulder",
+    "bright indoor room with pampas grass"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kissing R3 on the forehead, rather than R3 kissing R1 on the forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 delivers the forehead kiss to R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 receiving the forehead kiss from R1 with her eyes closed, rather than R1 receiving a forehead kiss from R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 receives R1's forehead kiss"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 rest her hand on R1's shoulder, rather than R1 resting her hand on R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's hand rests on R1's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 leaning gently into R1's embrace while R1 is the one kissing her forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans into R1's embrace during the forehead kiss"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the curly-haired woman engaged in close affectionate contact with R3, who has a serene expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 have distinct affectionate contact roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

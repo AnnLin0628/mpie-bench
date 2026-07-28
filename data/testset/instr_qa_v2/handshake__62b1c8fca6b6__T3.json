@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__62b1c8fca6b6__T3",
+  "instruction": "Candid office photograph, medium shot. In a modern office, the young Black man in a white dress shirt and maroon trousers (R1) stands on the left, looking down at the wooden desk while holding a blue folder. The older bearded man in a dark gray suit (R2) stands on the right, facing left and gesturing with his open left hand toward the desk, inviting R1 to sit. A laptop sits on the wooden desk in the foreground. The background features office shelves. The scene is illuminated by soft, natural indoor light, creating a professional and polite atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 gestures with an open left hand toward the desk to invite R1 to sit",
+    "R1 looks down at the wooden desk while holding a blue folder",
+    "R2 faces R1 while directing attention toward the desk",
+    "R1 holds a blue folder",
+    "a laptop sits on the wooden desk",
+    "modern office with shelves in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person gesturing with an open left hand toward the wooden desk to invite R1 to sit, rather than R1 doing that to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with an open left hand toward the desk to invite R1 to sit"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking down at the wooden desk while holding a blue folder, rather than R2 being the folder holder looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down at the wooden desk while holding a blue folder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 and direct an open-hand gesture toward the desk while R1 stands by the desk with the folder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while directing attention toward the desk"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a blue folder?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds a blue folder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

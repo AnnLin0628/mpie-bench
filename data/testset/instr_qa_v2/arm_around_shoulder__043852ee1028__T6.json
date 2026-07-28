@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__043852ee1028__T6",
+  "instruction": "A candid outdoor lifestyle photograph captured in a full shot at eye-level from a side-angle profile, showing two women walking forward on a grassy park with lush green trees in the background. On the left, the woman with curly brown hair (R5) walks in an olive green sports bra and matching leggings, holding a pink water bottle in her right hand and looking towards her companion. On the right, the woman with blonde-highlighted hair (R3) walks in a maroon sports bra and matching leggings, looking back at her companion. The two women are holding hands as they walk side-by-side. The scene is illuminated by soft, diffused overcast daylight, creating a bright and natural green-dominated color palette.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R5 is the companion carrying the pink water bottle while walking hand-in-hand with R3",
+    "R3 is the companion looking back toward R5 while they walk hand-in-hand",
+    "R5 and R3 walk side-by-side with their hands joined",
+    "R5 holds a pink water bottle in her right hand",
+    "The pair is walking in a grassy park with green trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the one carrying the pink water bottle while walking hand-in-hand with R3, rather than R3 carrying it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 carries the pink water bottle during the hand-holding walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one looking back toward R5 as they walk hand-in-hand, rather than R5 being the one looking back toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 looks back toward R5 during the hand-holding interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R5 and R3 walking side-by-side with their hands joined between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 and R3 are hand-in-hand while walking side-by-side"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a pink water bottle being held by R5?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "pink water bottle held by R5"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

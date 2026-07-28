@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T6",
+  "instruction": "An action candid medium close-up shot on a yellow tatami mat. The young man with short dark hair (R2) in a white judo gi stands over his opponent, executing a throw. He firmly grips the opponent's white gi collar with his right hand, pulling him downward. In the foreground, a bystander with wavy light brown hair in a white gi is bent deeply forward as he is thrown. Warm, soft lighting illuminates the clean white uniforms and the yellow floor.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 executes a judo throw on R1",
+    "R2 stands over R1 while pulling R1 downward",
+    "R2 grips R1's gi collar with his right hand as the controlling contact",
+    "R1 is bent deeply forward as the person being thrown",
+    "the gi collar is the contact-relevant grip point",
+    "the interaction takes place on a yellow tatami mat"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 executing a throw on R1, rather than R1 throwing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 executes a judo throw on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing over R1 while pulling R1 downward, rather than R1 standing over R2 and pulling R2 downward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands over R1 while pulling R1 downward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 grip R1's gi collar with his right hand to control the throw, rather than R1 gripping R2's collar to control R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips R1's gi collar with his right hand as the controlling contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 bent deeply forward as the person being thrown by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is bent deeply forward as the person being thrown"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the upright thrower controlling R1's movement during the grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the thrower controlling R1"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the people positioned on a yellow tatami mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction takes place on a yellow tatami mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

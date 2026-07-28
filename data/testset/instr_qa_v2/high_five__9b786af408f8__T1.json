@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__9b786af408f8__T1",
+  "instruction": "Candid documentary photograph from a high-angle overhead view of an office meeting room. Around a wooden table, a diverse business team stacks their hands in the center. On the left, the man with wavy grey hair (R1) in a brown suit leans forward. At the top-center, the bald Black man (R3) in a white shirt and black tie joins the stack. On the top-right, the older Black man (R4) in a dark suit and red tie leans in. On the right, the woman with curly black hair (R2) in a black top places her hand. In the foreground, a bystander with short white hair in a grey jacket sits with her back to the camera, adding her hand to the stack. The lighting is bright and even.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 places her hand into the central hand stack while R4 is described as leaning in toward it",
+    "R3 joins the central hand stack from the top-center position rather than R1 taking that joining position",
+    "R1 leans forward toward the hand stack at the table while R2 is the one explicitly placing her hand",
+    "R1, R2, R3, and R4 participate around a shared central hand stack",
+    "A wooden table is the object around which the hands are stacked",
+    "The scene is an office meeting room viewed from a high-angle overhead perspective"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place her hand into the central hand stack, rather than R4 being the person explicitly described as placing her hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 places her hand into the central hand stack while R4 is described as leaning in toward it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 join the central hand stack from the top-center position, rather than R1 taking that top-center joining role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 joins the central hand stack from the top-center position rather than R1 taking that joining position"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 described as leaning forward toward the shared hand stack, while R2 is the named person who places her hand into it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward toward the hand stack at the table while R2 is the one explicitly placing her hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, R3, and R4 all oriented around the same central stack of hands on the table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, R3, and R4 participate around a shared central hand stack"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 leaning in toward the group hand stack rather than standing apart from the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 leans in toward the shared central hand stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

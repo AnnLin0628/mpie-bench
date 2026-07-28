@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T7",
+  "instruction": "Candid studio photograph, full shot. In a bright indoor dance studio with white paneled walls, the young student in a black crop top and skirt (R2) stands on the left, holding the white wall panel with her left hand while looking towards her teacher. The instructor in a black leotard and white tights (R1) stands on the right, facing away in profile, looking back towards the student. Soft, bright natural light illuminates the clean white setting, creating a clean, minimalist aesthetic with a gentle and focused atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the young student holding the white wall panel with her left hand",
+    "R1 is the instructor/teacher looking back toward R2",
+    "R2 looks toward R1 as her teacher",
+    "R1 stands facing away in profile while looking back toward R2",
+    "a white wall panel is present and is held by R2",
+    "the scene is a bright indoor dance studio with white paneled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the young student holding the white wall panel with her left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the student holding the wall panel"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the instructor who looks back toward the student?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the instructor looking back toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking toward R1 as her teacher, rather than R1 being the student looking toward R2 as teacher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks toward R1 as the teacher"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

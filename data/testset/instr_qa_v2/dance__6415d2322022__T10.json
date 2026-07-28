@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__6415d2322022__T10",
+  "instruction": "A candid documentary medium shot captures a cozy, warmly lit indoor living room. On the left, the woman with short grey hair (R1) wearing a yellow collared shirt and a beige knit vest stands smiling at her partner. On the right, the man with glasses (R2) in a brown fleece jacket stands facing her. They are slow dancing together, holding hands clasped in the center of the frame. The background features a softly blurred painting and warm, dim indoor lighting, creating an intimate and comfortable atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the short grey-haired woman smiling at R2 during the dance",
+    "R2 is the man with glasses facing R1 as her dance partner",
+    "R1 and R2 are slow dancing together",
+    "R1 and R2 have their hands clasped together in the center of the frame",
+    "The scene is a cozy, warmly lit indoor living room with a softly blurred painting in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the short grey-haired woman smiling at R2 during the slow dance, rather than R2 being the short grey-haired woman smiling at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman smiling at R2 during the dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man with glasses facing R1 as her dance partner, rather than R1 being the man with glasses facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man with glasses facing R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 have their hands clasped together as part of the dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while dancing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

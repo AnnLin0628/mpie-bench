@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T47",
+  "instruction": "Action sports photograph, full shot from a low angle. Inside a judo dojo with yellow mats and blue wall padding, two judokas are engaged in ground grappling. The woman in the blue judogi (R1) is kneeling on the mat with her back to the camera, actively pinning her opponent. The opponent in the white judogi (R2) lies flat on his back, legs raised high in the air as he attempts to defend. The camera captures the intense physical struggle from a side perspective. The lighting is bright and even across the scene, casting soft shadows on the yellow mat.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 actively pins R2 on the mat",
+    "R2 is the opponent being pinned while lying on his back and defending",
+    "R1 kneels on the mat over R2 during the ground grapple",
+    "R2 raises his legs high while defending from underneath",
+    "yellow judo mats are the contact surface for the grapple",
+    "the interaction occurs inside a judo dojo with blue wall padding"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 actively pinning R2 on the mat, rather than R2 pinning R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively pins R2 on the mat"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the judoka lying on his back and defending while R1 pins him, rather than R1 being the one lying on her back and defending?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the opponent being pinned while lying on his back and defending"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kneeling over R2 in the dominant grappling position, rather than R2 kneeling over R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels on the mat over R2 during the ground grapple"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have his legs raised high in the air while defending from underneath R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises his legs high while defending from underneath"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 kneeling on the mat with her back to the camera as she grapples with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels on the mat over R2 during the ground grapple"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the ground-grappling scene set inside a judo dojo with blue wall padding?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction occurs inside a judo dojo with blue wall padding"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

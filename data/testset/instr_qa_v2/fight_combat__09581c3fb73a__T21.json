@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T21",
+  "instruction": "Candid action photograph, medium shot at eye-level. Under a covered outdoor pavilion with white metal trusses and blue pillars, two young men are sparring. On the left, the boxer in the blue tank top (R2) stands in a defensive stance with black gloves raised, facing right and looking at his opponent. On the right, the boxer in the beige t-shirt (R1) is positioned with his back to the camera, facing left in a boxing stance with gloves up. The two boxers face each other, preparing to engage. In the background, a blurred bystander sits on a chair. The scene is illuminated by bright, natural daylight with soft shadows.",
+  "n_person": 3,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the boxer facing R1 in a defensive stance with black gloves raised",
+    "R1 is the boxer with his back to the camera, facing R2 in a boxing stance with gloves up",
+    "R1 and R2 are the sparring pair while R3 is only a seated background bystander",
+    "R1 and R2 face each other preparing to engage in boxing",
+    "boxing gloves are the contact-relevant equipment on the sparring men",
+    "the scene is under a covered outdoor pavilion with white trusses and blue pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer in the defensive stance with black gloves raised toward R1, rather than R1 being the boxer described in that defensive stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the defensive boxing role facing R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer with his back to the camera and gloves up facing R2, rather than R2 being the one with his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-to-camera boxing stance facing R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R2 the sparring pair while R3 remains a seated background bystander, rather than R3 taking part as one of the boxers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 spar while R3 is only an onlooker"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

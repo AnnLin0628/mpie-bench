@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T10",
+  "instruction": "A studio photograph of two cheerleaders in a bright white studio. On the left, the short-haired cheerleader (R4) stands with her body turned away, looking back over her shoulder at the camera with a smile. On the right, the wavy-haired cheerleader (R10) stands with her back completely to the camera, raising one orange pom-pom high in the air. They wear matching white t-shirts and white skirts with red and yellow waistbands, holding metallic orange pom-poms. The scene is illuminated by bright, even studio lighting with soft shadows on the floor.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R10 raises one orange pom-pom high in the air while R4 does not take that raised-pom role",
+    "R4 looks back over her shoulder toward the camera while R10 has her back completely to the camera",
+    "R4 stands with her body turned away and smiles back at the camera",
+    "R10 stands with her back completely to the camera",
+    "the cheerleaders hold metallic orange pom-poms",
+    "the scene is a bright white studio photograph"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R10 the cheerleader raising one orange pom-pom high in the air, rather than R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R10 has the high-raised pom-pom role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the cheerleader looking back over her shoulder at the camera, rather than R10?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the over-the-shoulder camera-facing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R10 keep her back completely to the camera while R4 turns away but looks back toward the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R10 is fully back-facing while R4 looks back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R10 standing with her back completely to the camera while holding a pom-pom up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R10's back-facing pose with raised pom-pom"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

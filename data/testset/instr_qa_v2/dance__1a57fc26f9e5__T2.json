@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1a57fc26f9e5__T2",
+  "instruction": "Cinematic film still, eye-level medium shot. Inside a rustic room with aged plaster walls and a retro TV on a checkered tablecloth, the man in the red striped shirt (R2) stands on the right, facing left. He holds his partner's hand aloft as they dance. A bystander woman with long dark hair, wearing a blue plaid shirt and black pants, stands facing away from the camera, holding his hand. Warm indoor lighting illuminates the scene, contrasted by a cool blue light glowing from a background window.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's hand aloft during the dance",
+    "R2 leads the raised-hand dance contact while R1's hand is being raised",
+    "R1 is the partner connected to R2 by a hand hold",
+    "R1 faces away from the camera while holding R2's hand",
+    "rustic room with aged plaster walls and a retro TV on a checkered tablecloth"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's hand aloft as they dance, rather than R1 holding R2's hand aloft?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hand aloft during the dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person leading the raised-hand dance contact while R1's hand is being raised, rather than R1 leading by raising R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leads the raised-hand dance contact while R1's hand is being raised"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the dance partner whose hand is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partner connected to R2 by a hand hold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing away from the camera while holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces away from the camera while holding R2's hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

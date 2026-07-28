@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__8afdc0295e01__T1",
+  "instruction": "A candid documentary photograph captures a medium shot of a bright modern office. In the center, the man in the black blazer (R1) stands behind a cluttered desk, looking up with an intense expression as he throws papers. To his left, the woman in the beige vest (R3) faces right, throwing white sheets into the air with her arms raised. To his right, the woman in the brown plaid blazer (R2) faces left, raising her hands high in celebration. The three colleagues are joyfully throwing papers and high-fiving. The background features shelves with green plants under warm indoor lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 stands behind the cluttered desk and throws papers",
+    "R3 throws white sheets into the air with her arms raised",
+    "R2 raises her hands high in celebration",
+    "the colleagues are joyfully throwing papers and high-fiving",
+    "white sheets and papers are airborne",
+    "the scene is a bright modern office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing behind the cluttered desk and throwing papers, rather than R2 being the one behind the desk throwing papers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the desk-side paper-throwing role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person throwing white sheets into the air with raised arms, rather than R2 being the one throwing the white sheets?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the white-sheet throwing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person raising her hands high in celebration while R3 throws white sheets, rather than R3 only raising hands in celebration while R2 throws the sheets?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the raised-hands celebration role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 all participate in the joyful paper-throwing and high-fiving interaction with distinct visible actions?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "three labeled colleagues share the celebration interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

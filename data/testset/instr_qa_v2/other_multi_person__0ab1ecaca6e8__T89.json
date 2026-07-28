@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T89",
+  "instruction": "A candid outdoor photograph of a group of friends gathered in a grassy park during a bright day. In the center foreground, a bald man in a dark blue t-shirt (R2) is captured from behind, standing with his back to the camera and pointing his right arm forward. In the background, a smiling woman with an afro in a red t-shirt (R6) stands on the left side of the lawn, while a man in a red polo shirt (R3) stands on the right, watching the action. The scene is shot from a medium-full perspective with natural daylight highlighting the green grass and surrounding trees.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R2 is the central foreground person pointing his right arm forward",
+    "R3 watches the action instead of being the person pointing",
+    "R6 stands smiling in the background rather than performing the pointing gesture",
+    "R2 is captured from behind with his back to the camera",
+    "the group is in a grassy outdoor park in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person pointing his right arm forward, rather than R3 being the one pointing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 points forward while R3 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 watching the action while R2 performs the forward-pointing gesture, rather than R3 performing the pointing action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is an observer while R2 is the active pointer"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the central foreground figure pointing forward, rather than R6 being the central foreground pointer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the active central pointing role instead of R6"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 captured from behind with his back to the camera while pointing his right arm forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's back-facing body configuration and pointing action"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

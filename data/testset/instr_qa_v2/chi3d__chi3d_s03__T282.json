@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T282",
+  "instruction": "A candid documentary wide shot captures an indoor motion capture studio with a red carpeted floor, white walls, and dark partitions. The woman in the white patterned t-shirt and blue jeans (R2) stands in the foreground, facing left. The man in the black polo shirt and blue shorts (R1) stands behind her, leaning forward. He places his hands on her upper back as if guiding her forward. The scene is illuminated by bright overhead fluorescent lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his hands on R2's upper back, rather than R2 placing her hands on R1's back",
+    "R1 is the person guiding R2 forward from behind, rather than R2 guiding R1",
+    "R2 is the person receiving the upper-back contact and forward guidance from R1",
+    "R1 stands behind R2 while leaning forward to make contact with her upper back",
+    "The interaction takes place in an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing his hands on R2's upper back, rather than R2 placing her hands on R1's upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 makes the upper-back contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 guiding R2 forward from behind, rather than R2 guiding R1 forward from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the guiding role while R2 is guided"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving hands-on contact on her upper back from R1, rather than R1 receiving that contact from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the upper-back guidance contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing behind R2 while leaning forward to touch her upper back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body position and contact role behind R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

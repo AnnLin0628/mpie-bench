@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__b812d6fe6366__T1",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Indoors near a bright window, the person in the striped shirt and glasses (R2) stands on the left, facing right, smiling warmly. The person in the light green waffle-knit shirt (R1) stands on the right, facing left in profile. They embrace closely; R1's arms are wrapped around R2's waist, and R2 holds R1's forearm. They gaze affectionately into each other's eyes. Soft natural light from the side illuminates the scene, creating a gentle, intimate mood with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps both arms around R2's waist",
+    "R2 holds R1's forearm",
+    "R1 is the forearm-holder's partner whose arms encircle R2's waist",
+    "R2 faces R1 while being held around the waist",
+    "R1 and R2 gaze into each other's eyes during the close contact",
+    "indoors near a bright window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's arms wrapped around R2's waist, rather than R2's arms being wrapped around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps both arms around R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's forearm, rather than R1 holding R2's forearm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's forearm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose forearm is being held by R2 while R1 encircles R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the forearm-holder's partner whose arms encircle R2's waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 while R2 is the one being held around the waist by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while being held around the waist"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

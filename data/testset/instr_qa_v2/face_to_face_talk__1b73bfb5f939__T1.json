@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__1b73bfb5f939__T1",
+  "instruction": "Candid lifestyle photograph, medium shot. In a cozy indoor living room with a white brick wall and hanging plants, the woman with curly dark hair in a beige fleece jacket (R1) sits on the left side of a couch, smiling and touching her hair. On the right, the woman with her hair in a bun wearing a striped sweater (R2) sits facing her, talking with her hand resting on the couch. The two women sit side-by-side, engaged in a friendly conversation. Bright, soft natural light illuminates the scene, creating a warm, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 sits on the couch smiling and touching her own hair while R2 talks",
+    "R2 sits facing R1 and speaks while her hand rests on the couch",
+    "R1 is not the one described as talking with her hand resting on the couch",
+    "both women are seated on a couch during the conversation",
+    "the scene is a cozy indoor living room with a white brick wall and hanging plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman smiling and touching her own hair, rather than R2 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles and touches her own hair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman talking with her hand resting on the couch, rather than R1 having that described role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 talks with her hand resting on the couch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 sit facing R1 in conversation, rather than R1 being the one specifically described as sitting facing R2 and talking?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while talking"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated on the couch while engaged in conversation with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 seated and conversing with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T32",
+  "instruction": "Candid medium close-up of two men sparring in an outdoor covered training area. On the left, the man in the blue tank top (R2) is seen in profile, holding a high guard with black boxing gloves. On the right, the man in the beige t-shirt (R1) ducks low beneath R2's guard. Bright daylight illuminates the scene under the white roof structure.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 ducks low beneath R2's raised boxing guard",
+    "R2 holds the high guard while R1 is the one evading below it",
+    "R2's black boxing gloves form the guard R1 ducks under",
+    "R1 and R2 are sparring in opposing roles rather than mirroring the same posture",
+    "black boxing gloves are used as sparring equipment",
+    "outdoor covered training area under a white roof structure"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 ducking low beneath R2's guard, rather than R2 ducking beneath R1's guard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 ducks low beneath R2's raised boxing guard"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the high guard over R1's ducking position, rather than R1 holding the high guard over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the high guard while R1 is the one evading below it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R2's black boxing gloves form the guard that R1 ducks under, rather than R1's gloves forming a guard that R2 ducks under?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's black boxing gloves form the guard R1 ducks under"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 maintaining a defensive high-guard posture while R1 takes the lower evasive ducking posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are sparring in opposing roles rather than mirroring the same posture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

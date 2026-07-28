@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T145",
+  "instruction": "A candid documentary wide shot of an indoor motion capture studio with a red carpeted floor, white walls, and white floor markers. On the left, the man in the black cap and blue shorts (R1) stands in profile, facing right with a neutral expression. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing him, extending her right arm fully to punch his chest. The room is illuminated by bright overhead fluorescent lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active puncher extending her right arm toward R1's chest",
+    "R1 is the person receiving the chest punch from R2",
+    "R2 targets R1's chest rather than R1 targeting R2's chest",
+    "R1 stands in profile facing R2 during the interaction",
+    "R2 stands facing R1 with her right arm fully extended",
+    "indoor motion capture studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one extending her right arm to punch R1's chest, rather than R1 extending an arm to punch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active puncher and R1 is the target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being punched by R2, rather than R2 being the person whose chest is punched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest punch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2's extended right arm aim at R1's chest, rather than R1's extended arm aiming at R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 targets R1's chest with the punch"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile facing R2 while receiving the punch toward his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 as the punch receiver"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

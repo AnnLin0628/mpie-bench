@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T197",
+  "instruction": "A candid documentary wide shot of an indoor motion capture studio with a red carpet and white walls. On the left, the woman in the white patterned t-shirt and blue jeans (R2) stands upright, facing right with a neutral expression. On the right, the man in the dark polo shirt and blue shorts (R1) leans his torso back on his left leg, executing a high side kick with his right leg directly towards her hip. The two interact as his foot makes light contact with her side. The studio is brightly lit by overhead lights, casting soft shadows on the red floor, with motion capture cameras visible in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 executes a high side kick toward R2's hip",
+    "R1's foot makes light contact with R2's side",
+    "R2 stands upright receiving the side contact from R1's kick",
+    "R1 leans his torso back on his left leg while kicking",
+    "R2 faces R1 during the interaction",
+    "indoor motion capture studio with red carpet, white walls, and visible motion capture cameras"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 executing a high side kick toward R2's hip, rather than R2 executing a kick toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kicker and R2 is the target of the kick"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's foot make light contact with R2's side, rather than R2's foot contacting R1's side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's foot contacts R2's side"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the upright person receiving contact at her side from R1's kick, rather than R1 receiving a side kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the contact from R1's kick"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning his torso back on one leg while performing the kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back while kicking"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0fb258408fd1__T9",
+  "instruction": "Candid photographic medium shot of three friends posing playfully in an indoor dressing room with clothes racks and a green sofa in the background. On the left, the woman with straight dark hair (R2) wears light blue satin pajamas and smiles warmly with her left arm raised. In the center, the woman with dark wavy hair (R3) wears a pink satin slip dress and a sheer pink veil, smiling directly at the camera. On the right, the woman with curly hair (R1) wears burgundy satin pajamas and smiles with her right arm raised. They pose closely together under bright, soft indoor lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 raises her right arm while R3 is not described as raising an arm",
+    "R2 raises her left arm while R3 is not described as raising an arm",
+    "R1 and R2 are the arm-raising friends while R3 is the central camera-facing poser",
+    "R3 smiles directly at the camera between the other two friends",
+    "clothes racks are visible in the indoor dressing room",
+    "a green sofa is visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising her right arm while R3 is not described as raising an arm, rather than R3 raising her right arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the raised-right-arm gesture instead of R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 raising her left arm while R3 is not described as raising an arm, rather than R3 raising her left arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the raised-left-arm gesture instead of R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R2 the two friends making raised-arm gestures while R3 is the central camera-facing poser, rather than R3 being one of the raised-arm friends?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are the arm-raising pair while R3 has the central posing role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

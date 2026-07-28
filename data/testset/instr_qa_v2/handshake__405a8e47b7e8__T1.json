@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__405a8e47b7e8__T1",
+  "instruction": "A candid medium-shot documentary photograph of a bright indoor workshop. On the right, the young man with dark curly hair in a plaid flannel shirt (R1) stands holding a white smartphone, looking down at the screen with a neutral expression. To his left, the young man with an afro in a grey shirt (R2) stands with his arms crossed, leaning in slightly to look at the phone screen. In the foreground, a wooden bird sculpture sits on a table. The scene is illuminated by bright, diffused indoor light, creating a clean and neutral color palette.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds the white smartphone as the shared viewing object",
+    "R2 leans in to look at the phone screen held by R1",
+    "R1 looks down at the smartphone screen while holding it",
+    "R2 stands with his arms crossed while viewing R1's phone",
+    "white smartphone",
+    "wooden bird sculpture on a table",
+    "bright indoor workshop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the white smartphone for viewing, rather than R2 holding the smartphone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the shared smartphone instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning in to look at the phone screen held by R1, rather than R1 leaning in to view a phone held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the viewer leaning toward R1's phone"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 looking down at the smartphone screen while holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's role is holding and looking down at the phone"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand with his arms crossed while looking toward the phone screen R1 is holding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is arms-crossed observer of R1's phone"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a white smartphone being used as the shared focus between R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "white smartphone"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

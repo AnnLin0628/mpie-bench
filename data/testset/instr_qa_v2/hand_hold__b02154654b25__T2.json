@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b02154654b25__T2",
+  "instruction": "Candid documentary full shot of a forest trail. On the left, the older man with a white beard (R1) in a rust shirt walks forward. On the right, the curly-haired youth (R2) in a yellow plaid shirt walks slightly behind, looking down at his hands. They hike side-by-side under sun-dappled natural light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks forward slightly ahead of R2 on the hike",
+    "R2 walks slightly behind R1 while looking down at his hands",
+    "R1 and R2 hike side-by-side without a swapped lead/trailing arrangement",
+    "R2 keeps his gaze down toward his hands during the hike",
+    "The scene is a candid full shot on a forest trail under sun-dappled natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 walking forward slightly ahead of R2, rather than R2 walking ahead of R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks forward slightly ahead of R2 on the hike"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one walking slightly behind while looking down at his hands, rather than R1 being the one behind and looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks slightly behind R1 while looking down at his hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the forward position in the pair's hike while R2 follows slightly behind, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hike side-by-side without a swapped lead/trailing arrangement"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 hiking on a forest trail under sun-dappled natural light?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The scene is a candid full shot on a forest trail under sun-dappled natural light"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

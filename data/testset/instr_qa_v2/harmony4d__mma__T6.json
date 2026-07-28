@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma__T6",
+  "instruction": "Candid full shot at eye-level inside an indoor gym with large windows. In the foreground, the man in the gray t-shirt (R2) is seen from behind with his legs spread wide, blocking a kick. Facing him, the young man in the white t-shirt (R1) stands on his left leg, holding his right leg up mid-kick. Both wear protective eyewear and focus on their sparring positions. In the background, a few blurred bystanders watch from the side. Bright daylight from the windows illuminates the scene, creating soft reflections on the floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the kicker with one leg raised mid-kick toward R2",
+    "R2 is the defender blocking R1's kick with legs spread wide",
+    "R1 balances on one leg while executing the kick",
+    "both R1 and R2 wear protective eyewear for sparring",
+    "the scene is inside an indoor gym with large windows",
+    "blurred bystanders watch the sparring in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding his leg up mid-kick toward R2, rather than R2 kicking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kicker with one leg raised mid-kick toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one blocking R1's kick, rather than R1 blocking a kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender blocking R1's kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 balance on one leg while raising his other leg for the kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances on one leg while executing the kick"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

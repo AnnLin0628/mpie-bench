@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__e2d035df6f66__T2",
+  "instruction": "A cinematic still medium shot shows an indoor setting by a large window with a hazy winter view. On the left, the bearded man in the white dress shirt (R2) stands in profile, holding a red cup and listening. On the right, the woman in the white button-down shirt (R1) stands in profile, holding a brown paper cup with a thoughtful expression. They stand opposite each other, sharing a quiet moment in their conversation. Soft, cool daylight from the window illuminates the scene with muted tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the listener in the conversation while holding a red cup",
+    "R1 holds a brown paper cup and appears thoughtful during the conversation",
+    "R1 and R2 stand opposite each other in profile as conversation partners",
+    "R1 has a brown paper cup",
+    "R2 has a red cup",
+    "The scene is indoors by a large window with a hazy winter view"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person listening in profile while holding a red cup, rather than R1 being the listener with the red cup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the listener in the conversation while holding a red cup"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding a brown paper cup with a thoughtful expression during the conversation, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a brown paper cup and appears thoughtful during the conversation"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stand opposite each other in profile as conversation partners, with R2 listening?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand opposite each other in profile as conversation partners"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

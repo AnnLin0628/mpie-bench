@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T21",
+  "instruction": "A high-angle full shot of two cheerleaders performing in a bright white studio. In the foreground, the dark-haired cheerleader (R9) wearing a white t-shirt and white skirt with a red and yellow waistband jumps dynamically while holding orange pom-poms, looking downwards. Behind her, the curly-haired cheerleader (R1) in a matching uniform jumps with her arms raised, smiling. Bright, high-key studio lighting illuminates the clean white space, casting soft shadows on the floor.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R9 is the foreground cheerleader jumping dynamically while holding orange pom-poms, rather than R1",
+    "R1 is behind R9 jumping with arms raised and smiling, rather than being the foreground pom-pom holder",
+    "R9 looks downward while performing with the pom-poms, rather than R1 being described that way",
+    "R1 performs with raised arms behind R9",
+    "orange pom-poms are held by R9",
+    "the performance takes place in a bright white studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the foreground cheerleader jumping dynamically while holding orange pom-poms, rather than R1 being the foreground pom-pom holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 is the foreground pom-pom-holding jumper"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the cheerleader behind R9 who jumps with arms raised and smiles, rather than R9 being the rear arms-raised cheerleader?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the rear arms-raised smiling jumper"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 looking downward while performing with the pom-poms, rather than R1 being described as the downward-looking pom-pom performer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 is the downward-looking pom-pom performer"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 perform a jump with her arms raised behind R9?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's raised-arm jumping role behind R9"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

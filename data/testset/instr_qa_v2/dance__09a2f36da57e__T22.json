@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T22",
+  "instruction": "A cinematic wide shot of a minimalist dance studio with a dark wall and wooden floor. In the foreground center-left, the bearded man in the brown shirt (R1) kneels on all fours with his head bowed. In the center, the woman in the yellow shirt (R2) performs a headstand, extending one leg straight up and the other horizontally to the right. On the far left, the clean-shaven man in the brown shirt (R3) is kneeling on all fours, while on the far right, the woman in the yellow shirt with a ponytail (R4) holds a back-bending headstand. In the background, two other dancers in matching attire kneel in similar poses. A warm spotlight from the right casts a bright flare across the moody, low-key scene.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 performs a headstand while R1 kneels on all fours",
+    "R4 holds a back-bending headstand while R3 kneels on all fours",
+    "R2 has one leg straight up and the other extended horizontally during her headstand",
+    "R1 kneels on all fours with his head bowed",
+    "the dancers pose on a wooden floor",
+    "minimalist dance studio with a dark wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 performing a headstand while R1 kneels on all fours, rather than R1 doing the headstand and R2 kneeling on all fours?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs a headstand while R1 kneels on all fours"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 holding a back-bending headstand while R3 kneels on all fours, rather than R3 holding the back-bending headstand and R4 kneeling on all fours?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds a back-bending headstand while R3 kneels on all fours"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer extending one leg straight up and another horizontally during a headstand, rather than R1 doing that leg-extension headstand pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has one leg straight up and the other extended horizontally during her headstand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 kneeling on all fours with his head bowed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels on all fours with his head bowed"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 holding a back-bending headstand pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds a back-bending headstand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

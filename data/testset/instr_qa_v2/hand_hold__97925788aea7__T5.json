@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__97925788aea7__T5",
+  "instruction": "Candid street photograph, low-angle full shot looking up outdoor stone stairs in a narrow alleyway. On the left, the man in the white suit and white wings (R2) walks down the steps, looking towards his partner. On the right, the woman in the black dress and black wings (R1) walks beside him, looking back at him. The man and the woman hold hands as they descend the staircase together. The scene is illuminated by warm natural daylight, casting soft shadows on the stone steps and warm-toned walls.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the black-winged woman looking back at R2 while they hold hands and descend the stairs",
+    "R2 is the white-winged man looking toward R1 while they hold hands and descend the stairs",
+    "R1 and R2 hold hands as they walk down the staircase together",
+    "R1 walks beside R2 during the shared descent",
+    "R1 has black wings and R2 has white wings",
+    "the interaction occurs on outdoor stone stairs in a narrow alleyway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman with black wings looking back at R2 while they hold hands, rather than R2 being that black-winged woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the black-winged woman looking back at R2 during the hand-hold"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man with white wings looking toward R1 as they descend the stairs hand in hand, rather than R1 being that white-winged man?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the white-winged man looking toward R1 during the hand-hold"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands with each other while descending the staircase together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 maintain hand contact while walking down the stairs"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk beside R2 as they descend together, with both partners engaged in the shared hand-hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks beside R2 during the hand-held descent"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 descending outdoor stone stairs in a narrow alleyway?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor stone stairs in a narrow alleyway"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

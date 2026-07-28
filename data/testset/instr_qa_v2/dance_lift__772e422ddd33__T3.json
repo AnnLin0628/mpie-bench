@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T3",
+  "instruction": "Candid studio photograph, full-shot at eye-level. In a bright dance studio with a large mirror, the woman in a black leotard and white tights (R1) stands on the right foreground with her back to the camera, holding the hands of the young girl in a pink tutu (R2). The girl (R2) stands en pointe facing the mirror, also with her back to the camera. The woman (R1) guides her raised arms. Their reflections are visible in the mirror on the left. Soft, bright daylight illuminates the studio.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 guides R2's raised arms rather than R2 guiding R1's arms",
+    "R1 holds R2's hands to assist the dance practice rather than R2 holding R1's hands to assist her",
+    "R2 is the dancer standing en pointe while R1 is the adult helper guiding her",
+    "R1 and R2 are both turned with their backs to the camera during the hand-held dance instruction",
+    "a bright dance studio with a large mirror showing their reflections"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 guiding R2's raised arms rather than R2 guiding R1's raised arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides R2's raised arms rather than R2 guiding R1's arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's hands to assist R2's dance pose rather than R2 holding R1's hands to assist R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hands to assist the dance practice rather than R2 holding R1's hands to assist her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one standing en pointe while R1 acts as the guide, rather than R1 standing en pointe while R2 guides her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer standing en pointe while R1 is the adult helper guiding her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold the hands of R2 during the dance instruction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hands during the dance practice"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

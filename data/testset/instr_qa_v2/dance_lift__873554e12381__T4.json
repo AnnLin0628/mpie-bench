@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__873554e12381__T4",
+  "instruction": "Cinematic full shot of a ballet performance on an indoor stage with a dark green festive backdrop. On the left, the male dancer in a red jacket and white tights (R1) stands facing right, holding his partner's hand high. On the right, the female dancer in a pink tutu (R2) stands on pointe, facing forward-left. Soft stage lighting illuminates the couple, creating a warm focus against the cool background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's hand high during the ballet pose",
+    "R2 is the partner whose hand is held high by R1",
+    "R2 stands on pointe while R1 remains standing and holding her hand",
+    "R1 faces toward R2 during the partnered dance pose",
+    "indoor stage with a dark green festive backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's hand high, rather than R2 holding R1's hand high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hand high during the ballet pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer whose hand is being held high by R1, rather than R1 being the one whose hand is held high by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partner whose hand is held high by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on pointe while R1 stands beside her holding her hand, rather than R1 being on pointe while R2 holds his hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on pointe while R1 remains standing and holding her hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 take the partner-leading handhold role by raising the joined hand during the ballet performance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hand high during the ballet pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 perform the pointe-standing partner role while connected by hand to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on pointe while R1 remains standing and holding her hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

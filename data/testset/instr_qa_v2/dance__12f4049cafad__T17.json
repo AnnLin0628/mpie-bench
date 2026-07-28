@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T17",
+  "instruction": "Cinematic video still, medium shot. In an indoor studio, the man in the black vest (R2) stands on the left, dancing with a slight smile and gesturing with his hands. Beside him on the right, the woman in the red fringed dress (R1) poses with her hands raised to shoulder height, palms open, looking surprised with an open mouth. They dance side-by-side without physical contact. On the far-left edge, a small cropped portion of an arm is visible. The scene is illuminated by soft, colorful studio lighting with a vibrant pink and purple gradient background.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 poses with hands raised to shoulder height and open palms while looking surprised",
+    "R2 dances with a slight smile and gestures with his hands",
+    "R1 has an open-mouthed surprised expression while R2 has a slight smile",
+    "R1 and R2 dance side-by-side without physical contact",
+    "indoor studio with soft colorful lighting and a pink-purple gradient background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one posing with her hands raised to shoulder height and palms open, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 poses with raised open hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one dancing with a slight smile and gesturing with his hands, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances and gestures with his hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look surprised with an open mouth while R2 shows a slight smile, rather than the expressions being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 surprised expression versus R2 slight smile"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 dancing side-by-side without physical contact, with R1 posing and R2 gesturing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "side-by-side non-contact dance roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

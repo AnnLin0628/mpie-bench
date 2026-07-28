@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__47c4dac39572__T7",
+  "instruction": "Cinematic film still, over-the-shoulder medium shot. In an outdoor park by a lake during the day, the bearded man in the beige corduroy shirt (R1) is positioned in the right foreground with his back to the camera. Facing him on the left, the woman in the beige hijab (R2) smiles warmly and looks directly at him. Soft natural daylight illuminates the scene with warm tones and a blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the foreground figure with his back to the camera while R2 faces him",
+    "R2 smiles warmly and looks directly at R1",
+    "the shot is framed over R1's shoulder toward R2",
+    "R1 and R2 are facing each other in conversation-like orientation",
+    "the scene is outdoors in a park by a lake during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person shown with his back to the camera while R2 faces him, rather than R2 being the one with her back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has back-to-camera position while R2 faces him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person smiling warmly and looking directly at R1, rather than R1 being shown smiling directly at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs warm smile and gaze toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is the over-the-shoulder framing taken from behind R1 toward R2, rather than from behind R2 toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "camera is positioned over R1's shoulder toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep her attention directed toward R1 while they face each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's gaze and attention are directed to R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

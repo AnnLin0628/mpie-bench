@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__377ec7edaebd__T3",
+  "instruction": "Candid outdoor photograph, full shot at eye-level. In a wooded park, the man in the blue short-sleeved shirt (R1) and the woman in the grey blazer (R2) walk side-by-side on a dirt path. The man (R1) on the left looks toward the woman with a warm smile, while the woman (R2) on the right looks back at him, talking. Her right arm is linked through his left arm, and their hands are clasped together. Soft natural daylight filters through the background trees.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's right arm is linked through R1's left arm",
+    "R1 is the person whose left arm is linked by R2",
+    "R1 and R2 clasp hands while walking side-by-side",
+    "R1 looks toward R2 with a warm smile while R2 talks back to him",
+    "The pair are walking on a dirt path in a wooded park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's right arm linked through R1's left arm, rather than R1's right arm being linked through R2's left arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right arm is linked through R1's left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose left arm is being linked by R2, rather than R2 being the one whose left arm is linked by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose left arm is linked by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one talking back to R1 while R1 looks at her with a warm smile, rather than R1 being the one talking while R2 only smiles?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks toward R2 with a warm smile while R2 talks back to him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together with R2's arm linked through R1's arm and their hands clasped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp hands while walking side-by-side"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking on a dirt path in a wooded park?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The pair are walking on a dirt path in a wooded park"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

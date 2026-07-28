@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__b812d6fe6366__T2",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Indoors near a bright window, the person in the striped shirt and glasses (R2) stands on the left, smiling as they face right. The person in the light green waffle-knit shirt (R1) stands on the right, facing left with their back partially turned to the camera. They are in a close embrace; R2's tattooed arm wraps around R1's back, with R2's hand resting gently on R1's upper arm. Soft natural light from the window illuminates the couple, casting gentle shadows and creating a warm, intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's tattooed arm wraps around R1's back",
+    "R2's hand rests gently on R1's upper arm",
+    "R1 has their back partially turned to the camera while R2 embraces them",
+    "R2 faces R1 while making the described arm contact",
+    "R1 faces R2 while being held by R2's arm",
+    "the scene is indoors near a bright window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is the specifically described tattooed arm wrapping around the other's back R2's arm around R1, rather than R1's arm around R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's tattooed arm wraps around R1's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2's hand resting gently on R1's upper arm, rather than R1's hand resting on R2's upper arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand rests gently on R1's upper arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with their back partially turned to the camera while R2's arm wraps around R1's back, rather than R2 being in that receiving position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has their back partially turned to the camera while R2 embraces them"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 while wrapping an arm around R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while making the described arm contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while being contacted by R2's arm around their back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while being held by R2's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

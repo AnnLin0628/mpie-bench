@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__086830a8e487__T1",
+  "instruction": "A cinematic still, candid photograph in a medium shot at eye-level captures an indoor room with a wooden parquet floor, a dark blue curtain, and a large brown teddy bear in the background. On the left, the young boy in the white martial arts uniform (R2) sits on the floor with his legs extended, while the young girl in the yellow long-sleeved shirt and green shorts (R1) sits on his lap facing him. They are joyfully playing a hand-clapping game, their hands meeting in the air between them. The young girl (R1) smiles happily, looking at the young boy (R2) who looks back at her. Soft, diffused natural light streams from the window behind them, creating a gentle backlight and a cool, calm atmosphere with muted tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 sits on R2's lap facing him",
+    "R2 sits on the floor with legs extended while supporting R1 on his lap",
+    "R1 is the lap-sitter and R2 is the seated base during the hand-clapping game",
+    "R1 and R2 face each other with their hands meeting in the air between them",
+    "a large brown teddy bear is in the background",
+    "the scene is an indoor room with a wooden parquet floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 sitting on R2's lap facing him, rather than R2 sitting on R1's lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits on R2's lap facing him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 seated on the floor with his legs extended while supporting R1 on his lap, rather than R1 being the floor-seated base supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits on the floor with legs extended while supporting R1 on his lap"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the hand-clapping game, is R1 the child perched on R2 while R2 is the child underneath her, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the lap-sitter and R2 is the seated base during the hand-clapping game"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set in an indoor room with a wooden parquet floor?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene is an indoor room with a wooden parquet floor"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

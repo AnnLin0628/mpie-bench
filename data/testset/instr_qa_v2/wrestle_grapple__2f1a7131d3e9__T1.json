@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2f1a7131d3e9__T1",
+  "instruction": "Candid documentary photograph, high-angle medium shot. Inside an indoor judo training hall on a bright red mat, the short-haired man (R2) sits on the left holding a dark smartphone in his hand, with his right arm draped over the shoulder of the wavy-haired man (R1) who sits closely on the right. Both men are dressed in white judo gis. They are looking down intently at the phone screen with relaxed expressions. Bright, natural light illuminates the scene from the side, casting soft shadows on the vibrant red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 drapes his right arm over R1's shoulder",
+    "R1 is the person whose shoulder is under R2's arm",
+    "R2 holds the smartphone that both men look at",
+    "R1 sits closely beside R2 during the shoulder contact",
+    "a dark smartphone is visible in R2's hand",
+    "the interaction takes place in an indoor judo training hall on a bright red mat"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 draping his right arm over R1's shoulder, rather than R1 draping an arm over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 drapes his right arm over R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is under R2's draped arm, rather than R2 being under R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose shoulder is under R2's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding the smartphone that both R1 and R2 look down at, rather than R1 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the smartphone that both men look at"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit closely beside R2 while receiving R2's shoulder-draped arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits closely beside R2 during the shoulder contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a dark smartphone visible in R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "a dark smartphone is visible in R2's hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

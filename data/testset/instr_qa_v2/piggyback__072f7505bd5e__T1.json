@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__072f7505bd5e__T1",
+  "instruction": "A candid family photograph in a medium shot captures a joyful indoor moment against a plain white wall. On the left, the man in the dark green long-sleeve shirt (R2) stands in profile, smiling warmly as he lifts the baby girl in the light green shirt (R1) high into the air. The baby girl (R1), wearing pink pants and a high ponytail, laughs happily while looking down at him. The man (R2) securely supports her torso with both hands, holding her aloft. The woman (R3) is absent from the scene. Soft, diffused indoor lighting fills the space, creating a bright, clean atmosphere with minimal shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 lifts R1 high into the air",
+    "R2 supports R1's torso with both hands",
+    "R1 is the baby being held aloft by R2",
+    "R1 looks down at R2 while he holds her",
+    "R3 is absent from the scene",
+    "the scene is indoors against a plain white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lifting R1 high into the air, rather than R1 lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lifter and R1 is the lifted person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 support R1's torso with both hands, rather than R1 supporting R2's torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's torso"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 being held aloft by R2, rather than R2 being held aloft by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is held aloft by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 looking down toward R2 while R2 holds her in the air?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body position and gaze while R2 holds her"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 absent from the scene rather than participating in lifting or holding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is absent from the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__82436b3f4c31__T2",
+  "instruction": "Candid medium shot of an indoor plant shop. On the left, the florist with short blonde hair (R1) in a teal top and apron stands facing right, holding glasses and gesturing with her left hand while speaking. On the right, the woman with long blonde hair (R2) in a light lavender shirt stands facing left, holding an open red notebook and listening. Soft, warm indoor lighting illuminates the scene, with lush green plants in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 speaks to R2 while gesturing, rather than R2 being the speaker",
+    "R2 listens to R1 while holding an open red notebook, rather than R1 being the listener with the notebook",
+    "R1 holds glasses while addressing R2, rather than R2 holding the glasses and addressing R1",
+    "R1 and R2 face each other with R1 as speaker and R2 as listener",
+    "R1 holds glasses",
+    "R2 holds an open red notebook",
+    "the scene is an indoor plant shop with green plants in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one speaking and gesturing with her left hand while R2 listens?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 speaks to R2 while gesturing, rather than R2 being the speaker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one listening while holding an open red notebook, rather than R1 being the listener with the notebook?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 listens to R1 while holding an open red notebook, rather than R1 being the listener with the notebook"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the glasses while addressing R2, rather than R2 holding the glasses and addressing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds glasses while addressing R2, rather than R2 holding the glasses and addressing R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other with R1 in the speaker role and R2 in the listener role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other with R1 as speaker and R2 as listener"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

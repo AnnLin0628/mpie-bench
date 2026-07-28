@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__31af72cb5238__T1",
+  "instruction": "Cinematic low-angle medium shot of an outdoor concrete wall against a clear blue sky. On the left, the boy in the tie-dye shirt (R2) stands on the wall, leaning down with a smile. On the right, the boy in the pink striped shirt (R1) climbs up the wall, seen from behind, looking up at his friend. Bright daylight illuminates the scene with natural shadows and a deep blue sky.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 climbs up the concrete wall toward R2",
+    "R2 stands on top of the wall while leaning down toward R1",
+    "R1 looks up at R2 from below as he climbs",
+    "R2 smiles down at R1 from the wall",
+    "the concrete wall is the shared climbing/standing surface",
+    "the scene is outdoors under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one climbing up the wall toward R2, rather than R2 climbing up toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 climbs up the concrete wall toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one standing on the wall and leaning down toward R1, rather than R1 standing on the wall and leaning down toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on top of the wall while leaning down toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking upward from below at R2, rather than R2 looking upward from below at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up at R2 from below as he climbs"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 remain above on the wall while R1 is in the climbing role below him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is above on the wall while R1 climbs below"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning down with a smile toward R1 as R1 climbs up to him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles down at R1 from the wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

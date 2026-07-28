@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T261",
+  "instruction": "Candid wide-angle photograph from a high angle showing an indoor motion capture studio with a red carpet. On the left, the man in the black cap and dark polo shirt (R1) stands facing right. On the right, the woman in the white patterned t-shirt and blue jeans (R2) stands with her back to the camera, extending her right arm to touch the man's (R1) chest. Overhead fluorescent lights illuminate the room, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's chest",
+    "R1 is the person receiving the chest touch from R2",
+    "R2 has her back to the camera while reaching toward R1",
+    "R1 stands facing R2 during the contact",
+    "indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's chest, rather than R1 extending his arm to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the chest-touching contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being touched by R2, rather than R2 being the person whose chest is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the back-to-camera person reaching toward R1, rather than R1 being the back-to-camera person reaching toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches toward R1 while her back faces the camera"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing with her back to the camera as she extends her right arm toward R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body orientation and arm extension toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

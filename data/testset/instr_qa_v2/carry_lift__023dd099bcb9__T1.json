@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__023dd099bcb9__T1",
+  "instruction": "Candid documentary medium shot of an indoor wedding venue with white drapes. On the right, the older woman in a floral dress (R1) stands looking down, holding a gold necklace. On the left, the young bride in a red dress (R2) stands holding a rose bouquet, looking forward. The older woman prepares the necklace next to the bride. In the bottom right foreground, a blurred bystander's head is partially visible. Bright, warm indoor lighting illuminates the scene, highlighting the vibrant red and floral colors.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds and prepares a gold necklace next to R2 rather than R2 preparing it for R1",
+    "R2 is the bride holding a rose bouquet while R1 handles the necklace",
+    "R1 looks down at the necklace while R2 looks forward",
+    "gold necklace",
+    "rose bouquet",
+    "indoor wedding venue with white drapes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and preparing the gold necklace next to R2, rather than R2 holding and preparing a necklace for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the necklace-preparing person beside R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the bride holding the rose bouquet while R1 is the older woman handling the necklace, rather than R1 holding the bouquet while R2 handles the necklace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds bouquet and R1 handles necklace"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look down toward the necklace while standing beside R2, who looks forward with the bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attends to the necklace while R2 stands as the bride with bouquet"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a rose bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "rose bouquet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

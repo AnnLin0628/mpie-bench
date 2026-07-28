@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T262",
+  "instruction": "Candid wide-angle photograph of an indoor motion capture studio with a red carpet. On the left, the woman in the white patterned t-shirt and blue jeans (R2) stands facing right. On the right, the man in the black cap and dark polo shirt (R1) stands facing left. They are clasping right hands at chest height. Bright overhead lights illuminate the scene, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces left toward R2 while clasping R2's right hand",
+    "R2 faces right toward R1 while clasping R1's right hand",
+    "R1 and R2 clasp each other's right hands at chest height",
+    "R1 and R2 stand facing one another during the hand clasp",
+    "the interaction occurs in an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 facing left toward R2 while clasping R2's right hand, rather than R2 being the one facing left toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces left toward R2 while clasping R2's right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 facing right toward R1 while clasping R1's right hand, rather than R1 being the one facing right toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right toward R1 while clasping R1's right hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 clasping each other's right hands at chest height?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 clasp each other's right hands at chest height"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the hand-clasp interaction taking place in an indoor motion capture studio with a red carpet?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction occurs in an indoor motion capture studio with a red carpet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

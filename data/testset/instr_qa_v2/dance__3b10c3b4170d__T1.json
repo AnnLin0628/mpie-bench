@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__3b10c3b4170d__T1",
+  "instruction": "Candid action photograph, medium shot. Inside a dance studio with beige walls, the woman in the teal t-shirt (R2) dances dynamically in the center-left, smiling with a raised fist. Behind her to the right, the woman in the pink sports bra (R1), wearing glasses, dances with a joyful expression. In the bottom-left foreground, a female bystander with whipped brown hair is captured in motion blur. Soft indoor lighting illuminates the warm-toned scene.",
+  "n_person": 3,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the dancer with a raised fist, rather than R1",
+    "R1 dances behind R2, rather than R2 dancing behind R1",
+    "R3 is a motion-blurred foreground bystander while R1 and R2 are dancing",
+    "R1 dances with a joyful expression and wears glasses",
+    "R2 smiles while dancing dynamically",
+    "the scene is inside a dance studio with beige walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer raising a fist while dancing, rather than R1 raising the fist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer with the raised fist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 dancing behind R2, rather than R2 dancing behind R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances behind R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 dancing dynamically with a raised fist and a smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances dynamically with a raised fist and smile"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 dancing with a joyful expression behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 dances joyfully behind R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

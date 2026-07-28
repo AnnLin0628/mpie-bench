@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T35",
+  "instruction": "Candid action photograph, medium shot. Inside a judo dojo with a beige wall and blue mat, the man with his back turned (R4) in a white gi with \"G. LOPES POR\" on the back grapples with the young man in the white gi (R2) on the right. The man (R4) wraps his arm around the young man's (R2) neck, while the young man (R2) grips his arm, both focused on a judo throw. Bright, natural indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 wraps his arm around R2's neck during the grapple",
+    "R2 grips R4's arm while being neck-controlled by R4",
+    "R4 and R2 are engaged in a judo throw attempt",
+    "R4 has his back turned while grappling R2",
+    "the action takes place on a blue mat inside a judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 wrapping his arm around R2's neck, rather than R2 wrapping his arm around R4's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 applies neck control to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gripping R4's arm while R4 controls R2's neck, rather than R4 gripping R2's arm in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips the arm of R4 during R4's neck wrap"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 the back-turned grappler engaged with R2 in the judo throw attempt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the back-turned participant grappling R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the young man being grappled by R4 while holding onto R4's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is gripping R4's arm during the grapple"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the judo action taking place on a blue mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "blue mat used for the judo interaction"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the grapple occurring inside a judo dojo with a beige wall?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor judo dojo setting with beige wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

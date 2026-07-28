@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T304",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet. The man in the black polo shirt and blue shorts (R1) stands on the left, facing away from the camera. The woman in the white t-shirt and blue jeans (R2) stands on the right, stepping forward and extending her left arm to touch his shoulder. Overhead fluorescent lights illuminate the room, creating a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 touches R1's shoulder rather than R1 touching R2's shoulder",
+    "R2 steps forward toward R1 while R1 faces away",
+    "R1 is the shoulder-contact recipient while R2 is the toucher",
+    "R2 extends her left arm to reach R1's shoulder",
+    "R1 stands facing away as R2 reaches toward him",
+    "indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one touching R1's shoulder, rather than R1 touching R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 touches R1's shoulder rather than R1 touching R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 stepping forward toward R1 while R1 faces away, rather than R1 stepping forward toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 steps forward toward R1 while R1 faces away"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being touched by R2, rather than R2 being the shoulder-contact recipient?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the shoulder-contact recipient while R2 is the toucher"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 extend her left arm to make contact with R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her left arm to reach R1's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

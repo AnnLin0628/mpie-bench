@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__13ca6a563768__T12",
+  "instruction": "A candid athletic photograph in a wide full shot captures an indoor boxing gym. On the left, the man in the orange beanie (R1), wearing a white t-shirt, light blue sweatpants, and white sneakers, stands holding a black punching bag. On the right, the blonde woman in the lavender cropped hoodie (R2), wearing black leggings and black sneakers, punches the bag from a rear-facing angle. Medicine balls rest on the floor behind them. The background features a gray concrete wall with yellow floor trim. Bright, even gym lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds and stabilizes the black punching bag while R2 punches it",
+    "R2 is the boxer striking the bag rather than the person holding it",
+    "R1 is the bag holder rather than the puncher",
+    "R2 punches the bag from a rear-facing angle",
+    "black punching bag",
+    "medicine balls on the gym floor",
+    "indoor boxing gym with gray concrete wall and yellow floor trim"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and stabilizing the black punching bag while R2 punches it, rather than R2 holding the bag for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the punching bag for R2's punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person throwing a punch into the bag, rather than R1 being the one punching it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the puncher"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have the contact role of gripping the punching bag while R2 has the contact role of striking it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips the bag and R2 strikes it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned to punch the bag from a rear-facing angle while R1 remains the bag holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 punches from a rear-facing angle while R1 holds the bag"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black punching bag being used as the shared contact object between R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black punching bag"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

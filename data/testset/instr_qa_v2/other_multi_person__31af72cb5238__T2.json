@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__31af72cb5238__T2",
+  "instruction": "Cinematic low-angle medium shot of an outdoor concrete wall under a clear blue sky. On the left, the boy in the tie-dye shirt (R2) stands upright on the wall, arms extended slightly for balance, looking down. On the right, the boy in the pink striped shirt (R1) stands in profile, looking downward. Bright, direct daylight casts soft shadows against the vibrant blue sky.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands upright on the concrete wall with arms slightly extended for balance",
+    "R1 stands in profile looking downward while R2 is the one balanced on the wall",
+    "R2 looks down from the wall",
+    "R1 looks downward from a standing profile pose",
+    "outdoor concrete wall",
+    "clear blue sky in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boy standing upright on the concrete wall with his arms slightly extended for balance, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one balanced upright on the wall"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boy standing in profile and looking downward while R2 is the one standing upright on the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the profile downward-looking role while R2 has the wall-standing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in profile and look downward rather than standing upright on the wall with arms extended for balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile looking downward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__grappling__T3",
+  "instruction": "Candid documentary full shot of an indoor training room with black mats. On the left, the man in the white and blue t-shirt (R2) is bent forward, pushing against his partner. On the right, the man in the black t-shirt (R1) is bent low in a defensive posture, reaching his right hand down toward R2's leg. Bright indoor lighting illuminates the scene with neutral colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is bent forward and pushing against R1",
+    "R1 is bent low in a defensive posture while reaching his right hand toward R2's leg",
+    "R2 applies forward pressure while R1 responds defensively near R2's leg",
+    "R1 and R2 are engaged in a grappling or wrestling-style training interaction",
+    "black mats cover the indoor training room floor",
+    "the scene takes place in an indoor training room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one bent forward and pushing against R1, rather than R1 being the one bent forward and pushing against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is bent forward and pushing against R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one bent low in a defensive posture and reaching his right hand toward R2's leg, rather than R2 reaching down toward R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is bent low in a defensive posture while reaching his right hand toward R2's leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 apply forward pressure against R1 while R1 responds by lowering his body and reaching toward R2's leg, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 applies forward pressure while R1 responds defensively near R2's leg"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned in a grappling-style training exchange, with R2 pressing forward and R1 defending low?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are engaged in a grappling or wrestling-style training interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

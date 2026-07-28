@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0a7a557716c5__T2",
+  "instruction": "Candid documentary photograph, medium shot. Inside a festively decorated room, the woman with dreadlocks (R7) is seen from the back-left, reaching her hand towards the man with glasses (R4) who stands in the center smiling in a white sweatshirt. On the right, the man with the red bandana (R5) stands in side-back profile. In the background left, the man in the gray shirt (R1) smiles. The scene is brightly lit with warm, soft indoor light.",
+  "n_person": 11,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11"
+  ],
+  "elements": [
+    "R7 is the person reaching her hand toward R4",
+    "R4 is the central smiling person being approached by R7's outstretched hand",
+    "R5 is separate from the R7-to-R4 reaching action and stands in side-back profile",
+    "R1 remains in the background smiling rather than taking the reaching role",
+    "R4 wears glasses",
+    "the scene is inside a festively decorated room with warm indoor light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R7 the person reaching her hand toward R4, rather than R4 reaching his hand toward R7?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 reaches toward R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the central smiling person being approached by R7's outstretched hand, rather than R7 being the central smiling person approached by R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the approached central person"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 separate from the R7-to-R4 reaching action in side-back profile, rather than being the person R7 is reaching toward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is not the target of R7's reach"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R7 seen from the back-left with her hand extended toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7's reaching body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain in the background smiling rather than taking R7's reaching role toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is a background smiling participant"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

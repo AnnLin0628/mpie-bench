@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0e21d858f215__T2",
+  "instruction": "Clean fashion studio photograph, extreme low-angle close-up looking directly up. In a bright indoor studio with a white ceiling, three women lean over the camera. The woman in the blue blazer (R1) on the left looks down with a slight smirk. In the center, the woman in the green blazer (R3) looks down with a serene expression. Leaning in from the top right, the woman in the purple shirt (R2) looks down into the frame. Their faces are clearly visible against the white ceiling under bright, even studio lighting that highlights their pastel clothing.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the centered woman leaning over the low-angle camera",
+    "R2 leans into the frame from the top right while looking down",
+    "R1 looks down with a slight smirk rather than a serene expression",
+    "R1, R2, and R3 lean over the camera and look down into the frame",
+    "The scene is a bright indoor fashion studio with a white ceiling"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the centered woman leaning over the camera, rather than R1 or R2 being the centered woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the centered woman leaning over the low-angle camera"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman leaning into the frame from the top right, rather than R3 doing so?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans into the frame from the top right while looking down"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look down with a slight smirk, rather than R3 having the smirk while R1 looks serene?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down with a slight smirk rather than a serene expression"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1, R2, and R3 all leaning over the camera and looking down into the frame?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 lean over the camera and look down into the frame"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

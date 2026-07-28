@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T36",
+  "instruction": "Cinematic full shot of the martial arts gym. In the foreground right, the man in the black t-shirt and shorts (R1) stands defensively with hands raised, facing left. In the background center, the man in the patterned rash guard (R4) spars, while the man in the black 'GLORY' shorts (R2) is active in the background right. In the foreground left, a bystander in a black t-shirt and leggings lunges forward toward R1. Cool overhead lighting casts soft shadows across the white mat.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 lunges forward toward R1",
+    "R1 stands defensively with hands raised while R3 approaches",
+    "R4 spars in the background while R1 remains defensive in the foreground",
+    "R2 is active in the background",
+    "the martial arts action occurs on a white mat",
+    "the setting is a martial arts gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 lunging forward toward R1, rather than R1 lunging forward toward R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 lunges forward toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing defensively with hands raised while R3 is the one lunging toward him, rather than R3 defending while R1 lunges?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends while R3 lunges"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person sparring in the background while R1 remains in a defensive stance, rather than R1 being the background sparring person and R4 being defensive?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 spars while R1 stands defensively"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have his hands raised in a defensive stance as he faces the approaching R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's defensive body configuration toward R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 described as active in the background while R4 is the one sparring?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 active in background while R4 spars"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the martial arts action taking place on a white mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "white mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

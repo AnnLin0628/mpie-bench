@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T8",
+  "instruction": "Crisp studio photograph, full shot from a high angle in a minimalist white studio. In the foreground, the dancer in the black hooded outfit (R1) is seen from behind, leaning forward. In the background, the dancer in the white hooded outfit (R2) also faces away, leaning forward. R1 leans their torso heavily against R2's back, creating a physical, weight-bearing contact as they move together. Bright, even studio lighting casts soft shadows on the clean white floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans their torso heavily against R2's back",
+    "R2's back receives and supports R1's weight-bearing contact",
+    "R1 applies pressure onto R2 rather than the reverse",
+    "Both R1 and R2 face away while leaning forward",
+    "The scene is a minimalist white studio with bright, even lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning their torso heavily against R2's back, rather than R2 leaning heavily against R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans their torso heavily against R2's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose back bears R1's weight-bearing contact, rather than R1 bearing R2's weight on their back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's back receives and supports R1's weight-bearing contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 applying body pressure onto R2 as they move together, rather than R2 applying body pressure onto R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 applies pressure onto R2 rather than the reverse"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both leaning forward while R1 maintains contact with R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "Both R1 and R2 face away while leaning forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

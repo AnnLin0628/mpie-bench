@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__906857f24c03__T10",
+  "instruction": "A minimalist studio portrait, medium shot from a profile angle. Against a plain grey background, the woman in the beige crop top (R1) stands on the left, facing left in profile with a neutral expression. Behind her, the shirtless man (R2) stands facing the same direction, placing his hands gently on her shoulders. The cool, even studio lighting casts soft shadows, highlighting their profiles and athletic builds.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places his hands gently on R1's shoulders",
+    "R1 is the person receiving shoulder contact from R2",
+    "R2 stands behind R1 while making shoulder contact",
+    "R1 and R2 face the same direction in profile during the contact",
+    "The scene is a minimalist studio portrait against a plain grey background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place his hands gently on R1's shoulders, rather than R1 placing her hands on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active shoulder-touching person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulders are being touched by R2, rather than R2 being the one whose shoulders are touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the shoulder contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 stand behind R1 while making contact with her shoulders, rather than R1 standing behind R2 to make that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is behind R1 during the shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing the same direction in profile while R2's hands rest on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "shared profile orientation with R2 contacting R1's shoulders"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

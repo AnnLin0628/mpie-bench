@@ -1,0 +1,103 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T1",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.5,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.0,
+  "S_instr_prop": 1.0,
+  "S_instr_scene": 1.0,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": 1.0,
+  "n_main": 5,
+  "n_all": 6,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on her right leg on a beige mat, rather than R2 being the one balancing on a beige mat?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "R1 is on beige mat but standing on left leg"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing on his left leg on a pink mat, rather than R1 being the one balancing on a pink mat?",
+      "a": "no",
+      "score": 0.0,
+      "gold_a": "yes",
+      "evidence": "R2 is on pink mat but standing on right leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both holding a matching one-legged yoga pose with the opposite foot tucked against the thigh?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "both hold a one-legged tree pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 both keep their arms outstretched horizontally while balancing in the yoga pose?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "both arms are extended horizontally"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are there two yoga mats, with R1 on a beige mat and R2 on a pink mat?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "beige mat under R1 and pink mat under R2"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the yoga pose taking place on a wooden pier with a large suspension bridge visible under an overcast sky?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "wooden pier, bridge, and cloudy sky visible"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "carry_lift__1ad4f8aa9ff0__T1",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 12.4,
+    "written_at": "2026-07-17T14:36:59",
+    "gen_relpath": "outputs/gpt-image-2/carry_lift__1ad4f8aa9ff0__T1.png",
+    "qa_relpath": "instr_qa_v2/carry_lift__1ad4f8aa9ff0__T1.json",
+    "n_questions": 6
+  }
+}

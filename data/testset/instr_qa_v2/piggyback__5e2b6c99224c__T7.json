@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__5e2b6c99224c__T7",
+  "instruction": "Candid outdoor medium shot of a man in a black t-shirt and black cap (R1) carrying a young child in brown overalls and a black beanie (R2) on his shoulders. In the center foreground, the man (R1) points to the left with his tattooed left arm while looking in that direction. The child (R2) sits astride his shoulders, reaching forward with his right hand. The background is a dense green hedge in bright daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries R2 on his shoulders",
+    "R1 supports R2's weight from below",
+    "R2 sits astride R1's shoulders as the passenger",
+    "R1 points with his tattooed left arm while looking that way",
+    "R2 reaches forward with his right hand from atop R1",
+    "outdoor scene with dense green hedge in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carrying R2 on his shoulders, rather than R2 carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries R2 on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight from below"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 sitting astride R1's shoulders as the passenger, rather than R1 sitting astride R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits astride R1's shoulders as the passenger"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 point with his tattooed left arm while R2 remains seated on his shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 points with his tattooed left arm while carrying R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 reach forward with his right hand from atop R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches forward with his right hand from atop R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1327841225b4__T1",
+  "instruction": "Candid athletic photograph, eye-level medium shot. On an outdoor reddish track with green grass behind, the man in the black t-shirt (R1) on the left and the woman in the black and gray long-sleeve top (R2) on the right perform forearm planks facing each other. The man (R1) extends his left arm to high-five the woman (R2), who extends her right arm to meet his hand in the center. Both look at each other with focused, friendly expressions. Bright direct sunlight casts sharp shadows on the track.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his left arm toward R2 for the high-five",
+    "R2 extends her right arm to meet R1's hand in the center",
+    "R1 and R2 perform forearm planks facing each other during the hand contact",
+    "R2 meets R1's reaching hand while remaining in the facing plank position",
+    "outdoor reddish track with green grass behind"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person extending her right arm to meet R1's hand in the center, rather than R1 extending a right arm to meet R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm to meet R1's hand in the center"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 reach out from his plank with his left hand while R2 answers with her right hand, rather than their hand roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric left-hand/right-hand high-five roles"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the high-five, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": true
+  }
+}

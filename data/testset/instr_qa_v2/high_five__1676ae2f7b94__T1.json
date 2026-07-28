@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1676ae2f7b94__T1",
+  "instruction": "A candid, clean studio photograph in a medium shot showing two women playing a hand-clapping game against a plain beige backdrop. On the left, the woman with short brown hair (R2) in a striped shirt and beige pants sits facing right, smiling warmly. On the right, the woman with dark curly afro hair (R1) in a purple long-sleeve shirt sits facing left, also smiling. They look at each other as the woman with short brown hair's left hand touches the woman with dark curly afro hair's right hand in a high-five, with their other hands raised in the air. The scene is illuminated by soft, even studio lighting, creating a warm and joyful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2's left hand touches R1's right hand in the high-five contact",
+    "R1's non-contact hand and R2's non-contact hand are both raised during the hand-clapping game",
+    "R1 and R2 sit facing each other while playing the hand-clapping game",
+    "R1 and R2 look at each other and smile during the contact",
+    "The scene is a clean studio photograph against a plain beige backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 using her right hand as the contact hand against R2's left hand, rather than R2 using her right hand against R1's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand is the contact hand while R2's left hand is the contact hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a high-five with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look toward R2 while R2 looks toward R1 during their hand-clapping contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 look at each other during the contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the high-five, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "high-five contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

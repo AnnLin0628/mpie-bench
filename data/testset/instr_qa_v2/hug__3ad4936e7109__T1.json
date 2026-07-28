@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T1",
+  "instruction": "Candid studio portrait, medium close-up. Against a solid dusty rose background, the woman with curly brown hair (R1) in a white button-down shirt stands in the foreground, smiling warmly and looking to the left. Behind her, the woman with long straight dark hair (R2) in a denim jacket hugs her from behind, wrapping her arms around her shoulders and smiling joyfully. Soft, even studio lighting illuminates the scene with a warm, clean color palette.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1's shoulders from behind",
+    "R1 is the foreground person being embraced from behind by R2",
+    "R2 is the rear person doing the shoulder-wrapping contact",
+    "R1 smiles in front while R2 smiles behind her",
+    "solid dusty rose studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 behind R1 wrapping her arms around R1's shoulders, rather than R1 being behind R2 wrapping her arms around R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the rear shoulder-wrapping embrace on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person in the foreground receiving the from-behind shoulder wrap, rather than R2 receiving it from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's rear embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's arms the ones encircling R1's shoulders from behind, rather than R1's arms encircling R2's shoulders from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms provide the behind-the-shoulders contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in front while R2 is positioned behind her making shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 foreground role and R2 rear contact role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

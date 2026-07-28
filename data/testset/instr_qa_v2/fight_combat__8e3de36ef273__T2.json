@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__8e3de36ef273__T2",
+  "instruction": "Cinematic sports photograph, medium close-up profile shot. Inside a brightly lit indoor boxing gym, the shirtless, sweaty dark-skinned man with a black beard (R2) on the left, wearing red boxing gloves, stands facing the shirtless light-skinned man with braided hair and a tribal shoulder tattoo (R1) on the right. Both men are in profile, locked in an intense, motionless stare-down. The background features the boxing ring ropes and gym interior under bright overhead lighting, casting soft shadows on their athletic, muscular bodies, creating a dramatic, focused atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the man wearing red boxing gloves during the stare-down",
+    "R1 is the light-skinned man with braided hair and a tribal shoulder tattoo facing R2",
+    "R1 and R2 face each other in profile during an intense, motionless stare-down",
+    "R2's red boxing gloves are visible as contact-relevant boxing gear",
+    "boxing ring ropes and an indoor gym setting appear in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2, rather than R1, the man wearing red boxing gloves during the stare-down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the red-gloved boxer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1, rather than R2, the light-skinned man with braided hair and a tribal shoulder tattoo facing the gloved opponent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the braided, tattooed opponent"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 as the red-gloved boxer while R1 faces him as the tattooed braided opponent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R1 hold distinct opposing stare-down roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

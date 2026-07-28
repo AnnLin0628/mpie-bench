@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__25aeabb8ae48__T2",
+  "instruction": "A candid outdoor photograph, medium shot, shows a couple posing together in a sunny park. On the left, the man with curly grey hair (R1) in a dark coat, brown sweater, and blue scarf smiles directly at the camera. On the right, the woman with dark hair (R2) wearing a brown leather jacket and beige turtleneck stands close, also smiling at the camera. The man has his arm wrapped around her shoulder, and the woman rests her hand on his chest. Warm natural sunlight illuminates the scene with soft-focus trees behind them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has his arm wrapped around R2's shoulder",
+    "R2 rests her hand on R1's chest",
+    "R1's contact role is shoulder-wrapping while R2's contact role is chest-touching",
+    "R1 and R2 stand close together while smiling at the camera",
+    "The couple is posed in a sunny outdoor park with soft-focus trees behind them"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 have his arm wrapped around R2's shoulder, rather than R2 having her arm wrapped around R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps his arm around R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest her hand on R1's chest, rather than R1 resting his hand on R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her hand on R1's chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's contact with R2 described as an arm around her shoulder while R2's contact with R1 is her hand on his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "different asymmetric contact roles: R1 shoulder-wraps, R2 chest-touches"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing close together while maintaining the described shoulder-and-chest contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand close together in contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

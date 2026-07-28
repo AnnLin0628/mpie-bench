@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__c23e0d586fbc__T5",
+  "instruction": "Candid cinematic still, medium shot. On a sandy beach with a rocky shoreline under an overcast sky, a young couple walks together. On the left, the woman in the peach crop top and light blue jeans (R1) walks forward with a gentle smile, her dark hair blowing in the wind. Beside her on the right, the man in the blue t-shirt and olive shorts (R2) walks with a warm smile, wearing a striped headband. They walk side-by-side, holding hands, with the man positioned slightly behind the woman. The scene is illuminated by soft, diffused daylight, creating a muted, warm color palette with low contrast and a soft-focus background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks slightly ahead of R2 while they hold hands",
+    "R2 is positioned slightly behind R1 while walking with her",
+    "R1 appears to lead the shared walk rather than R2 leading",
+    "R1 and R2 walk together side-by-side while holding hands",
+    "the couple is on a sandy beach with a rocky shoreline"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 walking slightly ahead of R2 while they hold hands, rather than R2 walking slightly ahead of R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks slightly ahead of R2 while they hold hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned slightly behind R1 as they walk together, rather than R1 being slightly behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned slightly behind R1 while walking with her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 appear to lead the shared walk with R2 following slightly behind, rather than R2 leading with R1 following?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 appears to lead the shared walk rather than R2 leading"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together side-by-side while holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together side-by-side while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

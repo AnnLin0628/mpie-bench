@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__68d4b4652423__T2",
+  "instruction": "Candid documentary photograph, medium shot. In a sunny outdoor park with lush green trees, the woman with curly dark hair (R1) and the man with long brown hair (R2) share an intimate kiss. On the left, the woman in a dark blue shirt with a black panel tilts her head up. On the right, the man in a blue plaid shirt leans down to press his lips to hers. A thick tree trunk stands directly behind them on the right. Bright, natural sunlight filters through the leaves, creating a warm, soft-focus background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 tilts her head upward toward R2 during the kiss",
+    "R2 leans downward to press his lips to R1's lips",
+    "R1 and R2 share an intimate lip-to-lip kiss",
+    "R1 is the woman with curly dark hair and R2 is the man with long brown hair",
+    "The interaction occurs in a sunny outdoor park with lush green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 tilting her head up toward R2 during the kiss, rather than R2 being the one tilting up toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 tilts her head upward toward R2 during the kiss"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning down to press his lips to R1's lips, rather than R1 leaning down to press her lips to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans downward to press his lips to R1's lips"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 engaged in an intimate lip-to-lip kiss with R1 positioned as the upward-tilting partner and R2 as the downward-leaning partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share an intimate lip-to-lip kiss"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the curly-haired woman receiving R2's downward lean during the kiss?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman with curly dark hair and R2 is the man with long brown hair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

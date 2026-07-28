@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T67",
+  "instruction": "A candid outdoor full shot captures a sunny grassy park with tall trees in the background. On the left, the East Asian man in a red polo shirt (R3) leans forward in a deep squat, pulling a yellow rope. On the right, the Black woman in a red t-shirt (R5) bends deeply at the waist, pulling the yellow rope. They are playing a competitive game of tug-of-war together, holding onto the rope with both hands. The scene is illuminated by bright, natural daylight, casting soft shadows on the green grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 is the tug-of-war participant pulling the yellow rope from a deep squat while R5 pulls it while bent deeply at the waist",
+    "R5 is the tug-of-war participant bending deeply at the waist while R3 is in a deep squat",
+    "R3 and R5 hold the yellow rope with both hands as opposing tug-of-war players",
+    "yellow rope used for tug-of-war",
+    "sunny grassy park with tall trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 pulling the yellow rope from a deep squat while R5 pulls the rope while bent deeply at the waist, rather than R5 being the one in the deep squat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the deep-squat pulling posture and R5 has the bent-at-waist pulling posture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the tug-of-war player bending deeply at the waist to pull the yellow rope, rather than R3 being described with that bent-at-the-waist role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the bent-at-waist rope puller"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 hold the yellow rope with both hands while leaning forward in a deep squat as a tug-of-war participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's body configuration and contact role on the rope"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 hold the yellow rope with both hands while bending deeply at the waist as the opposing tug-of-war participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's body configuration and contact role on the rope"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the contact-relevant object between R3 and R5 a yellow rope used for tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow tug-of-war rope"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

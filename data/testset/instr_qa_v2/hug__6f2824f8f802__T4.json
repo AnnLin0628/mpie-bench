@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__6f2824f8f802__T4",
+  "instruction": "Candid outdoor photograph, medium close-up at eye-level. In front of a wooden house, the man in the purple hoodie (R1) stands in the center foreground with arms crossed, smiling widely. Behind him, the woman in the yellow sweatshirt (R2) hugs him from behind, wrapping her arms over his shoulders and chest while smiling warmly at the camera. Soft natural daylight illuminates the scene with warm tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms over R1's shoulders and chest from behind",
+    "R1 is the person being embraced from behind by R2",
+    "R1 keeps his arms crossed while R2's arms are around him",
+    "R2 stands behind R1 while making the rear arm contact",
+    "the scene is outdoors in front of a wooden house"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping her arms over R1's shoulders and chest from behind, rather than R1 wrapping his arms over R2 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the rear arm wrap around R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being embraced from behind by R2, rather than R2 being embraced from behind by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the behind-the-body contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R2's arms placed over R1's shoulders and chest while R1's own arms remain crossed, rather than R1 placing his arms over R2's shoulders and chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arms make the upper-body contact while R1's arms are crossed"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand behind R1 while making contact around his upper body?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned behind R1 in the rear embrace configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

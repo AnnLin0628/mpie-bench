@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ba66f934c035__T2",
+  "instruction": "Candid lifestyle photograph, medium close-up at eye-level with shallow depth of field. At an outdoor cafe, the man with dark curly hair (R2) in a black t-shirt sits on the left, and the woman with long curly blonde hair (R1) in a black long-sleeve shirt sits on the right of a dark round table. They are in profile, facing each other. Their right elbows rest on the table with hands clasped in a playful arm-wrestling pose. Both are smiling and looking directly at each other. Soft, natural daylight illuminates the scene against a blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman in the arm-wrestling pair facing R2 across the table",
+    "R2 is the man in the arm-wrestling pair facing R1 across the table",
+    "R1 and R2 have their right hands clasped against each other in a playful arm-wrestling pose",
+    "R1 and R2 each rest a right elbow on the dark round table while arm-wrestling",
+    "the dark round table supports their elbows during the contact pose",
+    "the scene is at an outdoor cafe"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman opponent clasping hands with R2 in the playful arm-wrestling pose, rather than R2 being the woman opponent clasping hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman in the arm-wrestling pair facing R2 across the table"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man opponent whose right hand is clasped with R1's right hand for arm-wrestling, rather than R1 being the man opponent clasped with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man in the arm-wrestling pair facing R1 across the table"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other in profile while keeping their right hands clasped in an arm-wrestling configuration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have their right hands clasped against each other in a playful arm-wrestling pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 each rest a right elbow on the table while maintaining the arm-wrestling hand clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 each rest a right elbow on the dark round table while arm-wrestling"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

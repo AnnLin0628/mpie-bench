@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__7a3519b47d94__T1",
+  "instruction": "Candid full shot photograph of an indoor playroom with a white wall and green turf floor. On the left, the girl with braided hair (R1) in an orange t-shirt and yellow cropped pants leans back, smiling. On the right, the boy with shaggy dark hair (R2) in a white t-shirt and brown pants pulls a green rope to the right in profile. They are playing tug-of-war, pulling the rope in opposite directions. Bright, even indoor lighting illuminates the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 pulls the green rope to the right while R1 opposes the pull from the other side",
+    "R1 leans back against the tug-of-war pull rather than R2 being the one described as leaning back",
+    "R1 and R2 play tug-of-war by pulling the same rope in opposite directions",
+    "the contact-relevant object is a green rope",
+    "the scene is an indoor playroom with a green turf floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person pulling the green rope to the right while R1 pulls against him from the opposite direction, rather than R1 being the one pulling the rope to the right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 pulls the green rope to the right while R1 opposes the pull from the other side"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning back against the tug-of-war force while R2 pulls the rope, rather than R2 being the one described as leaning back against R1's pull?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back against the tug-of-war pull rather than R2 being the one described as leaning back"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 engaged in tug-of-war by pulling the same rope in opposite directions?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 play tug-of-war by pulling the same rope in opposite directions"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 oppose R2 through the rope in a pulling contest rather than cooperating with R2 to pull the rope in the same direction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 pull against each other in tug-of-war"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the tug-of-war object a green rope?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the contact-relevant object is a green rope"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

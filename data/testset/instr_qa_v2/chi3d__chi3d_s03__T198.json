@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T198",
+  "instruction": "A candid documentary wide shot from a high angle in an indoor motion capture studio with a red carpet. On the left, the woman in the white patterned t-shirt and blue jeans (R2) stands facing the right, watching the action. On the right, the man in the dark polo shirt and blue shorts (R1) leans his upper body back, kicking his right leg horizontally towards her torso. The room is brightly lit by overhead fluorescent lights, showing white walls, a ceiling projector, and studio equipment in the background, creating a clean, neutral atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the active kicker extending his right leg horizontally toward R2's torso",
+    "R2 is the target/observer of R1's kick rather than the person kicking",
+    "R1 leans his upper body back while kicking toward R2",
+    "R2 stands facing R1 and watches the action",
+    "the interaction takes place in an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person kicking his right leg horizontally toward R2's torso, rather than R2 kicking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active kicker extending his right leg horizontally toward R2's torso"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being aimed at by R1's kick, rather than R1 being aimed at by a kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the target/observer of R1's kick rather than the person kicking"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 lean his upper body back while performing the kick toward R2, rather than R2 leaning back to kick toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans his upper body back while kicking toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1's right leg held out horizontally toward R2's torso during the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right leg is aimed horizontally toward R2's torso"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

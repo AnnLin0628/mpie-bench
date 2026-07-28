@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__08d2596bbf41__T2",
+  "instruction": "A candid studio photograph capturing a genuine moment of laughter and affection between two friends. On the left, the woman in the distressed denim jacket (R1) wraps her arms around her friend's waist, laughing joyfully with an open mouth as she looks up. On the right, the woman in the blue-and-white striped off-the-shoulder top (R2) embraces her back, smiling warmly down at her. The medium shot at eye level captures them from the waist up against a solid, vibrant red background. The scene is illuminated by bright, even studio lighting that casts soft shadows, emphasizing their happy expressions and the rich red backdrop.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2's waist while laughing and looking up",
+    "R2 embraces R1 back while smiling down at R1",
+    "R1 is the waist-holder and R2 is the return-embracer, not the reverse",
+    "R1 and R2 are shown from the waist up in a close affectionate contact",
+    "solid vibrant red studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one wrapping her arms around R2's waist, rather than R2 wrapping her arms around R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps arms around R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one embracing R1 back while smiling down at her, rather than R1 being the one smiling down while embracing R2 back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 returns the embrace and smiles down at R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look up toward R2 while R2 smiles down toward R1, rather than R2 looking up toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up and R2 smiles down"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the friend laughing with an open mouth while holding R2 around the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 laughs while holding R2's waist"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the friend who receives R1's waist hold and responds by embracing R1 back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the waist hold and embraces back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

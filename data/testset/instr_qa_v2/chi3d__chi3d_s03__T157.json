@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T157",
+  "instruction": "Candid documentary photograph, full shot. In an indoor motion capture studio with a red carpet, the bearded man in the black polo and blue shorts (R1) stands on the right, facing left and looking down. Beside him, the woman in the white patterned t-shirt and blue jeans (R2) stands on the left, facing right and looking down. They are holding hands. Bright overhead lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 faces left toward R2 while holding R2's hand",
+    "R2 faces right toward R1 while holding R1's hand",
+    "R1 and R2 stand beside each other while holding hands",
+    "both R1 and R2 look downward during the hand-holding interaction",
+    "indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 facing left toward R2 while holding R2's hand, rather than R2 facing left toward R1 while holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces left toward R2 while holding R2's hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 facing right toward R1 while holding R1's hand, rather than R1 facing right toward R2 while holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces right toward R1 while holding R1's hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing beside each other while holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand beside each other while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

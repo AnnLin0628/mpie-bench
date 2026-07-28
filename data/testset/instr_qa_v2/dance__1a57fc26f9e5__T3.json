@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__1a57fc26f9e5__T3",
+  "instruction": "Candid outdoor photograph, full shot. On a grassy hilltop overlooking scenic green mountains under an overcast sky, the man in the red striped shirt (R2) and the woman in the yellow cardigan (R1) are dancing. The man (R2) stands on the left in profile, holding the woman's hand high above their heads. The woman (R1) stands on the right, facing sideways as she steps. The scene is illuminated by soft, diffused daylight, highlighting the natural green and blue tones of the landscape.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's hand high above their heads during the dance",
+    "R1 is the dancer whose hand is being raised by R2 while she steps",
+    "R1 and R2 are dancing together with hand contact",
+    "R2 is in profile while holding R1's hand during the dance",
+    "the dance takes place on a grassy hilltop overlooking green mountains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's hand high above their heads, rather than R1 holding R2's hand high above their heads?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hand high above their heads during the dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the dance, is R1 the dancer whose hand is being raised by R2 while she steps, rather than R2 being the dancer whose hand is raised by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dancer whose hand is being raised by R2 while she steps"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in profile while holding R1's hand during the dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in profile while holding R1's hand during the dance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

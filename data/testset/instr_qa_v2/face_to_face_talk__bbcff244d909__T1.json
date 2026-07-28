@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__bbcff244d909__T1",
+  "instruction": "Candid documentary photograph, medium shot from a slightly high angle. In a mossy green forest, a white duvet is spread on the ground. The woman in the blue striped shirt (R1) sits on the left, facing right and looking toward her companion with her right hand raised near her collarbone. The man in the white t-shirt (R2) sits on the right, facing left and looking slightly down with a neutral expression, his left arm resting on the bedding between them. They sit close together on the outdoor bed without touching. Soft, diffused daylight illuminates the scene, highlighting the natural green and white tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has her right hand raised near her collarbone rather than R2",
+    "R2 has his left arm resting on the bedding between them rather than R1",
+    "R1 looks toward R2 while R2 looks slightly down",
+    "R1 and R2 sit close together facing each other without touching",
+    "a white duvet or bedding is spread on the forest ground",
+    "the scene is set in a mossy green forest"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with a hand raised near her collarbone, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has her right hand raised near her collarbone rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose arm rests on the bedding between them, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his left arm resting on the bedding between them rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look toward R2 while R2 looks slightly downward, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks toward R2 while R2 looks slightly down"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

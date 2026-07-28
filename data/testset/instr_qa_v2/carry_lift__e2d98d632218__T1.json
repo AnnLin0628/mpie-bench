@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__e2d98d632218__T1",
+  "instruction": "Candid outdoor photograph, full shot. On a rocky coastal shoreline under an overcast sky, the man in the light blue shirt (R1) stands barefoot on the left, looking to the right. Beside him on the right, the blonde woman in the pink floral dress (R2) stands looking forward, holding her hair with her left hand as the wind blows her dress. They stand close together on the uneven rocks. The lighting is soft and diffused, highlighting the vibrant pink of the dress against the muted gray rocks and sea.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds her own hair with her left hand while R1 does not hold her hair",
+    "R1 looks to the right while R2 looks forward",
+    "R1 and R2 stand close together on uneven rocks",
+    "R1 is barefoot on the rocky shoreline",
+    "R2's dress is being blown by the wind",
+    "rocky coastal shoreline under an overcast sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding her own hair with her left hand, rather than R1 holding R2's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds her own hair with her left hand while R1 does not hold her hair"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking to the right while R2 looks forward, rather than R2 looking to the right while R1 looks forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks to the right while R2 looks forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's dress being blown by the wind while R2 stands beside R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's dress is being blown by the wind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

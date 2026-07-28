@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__4dc39298f834__T1",
+  "instruction": "A cinematic still with natural colors and a shallow depth of field captures a medium shot of four children standing in an outdoor park with green trees in the background. On the far left, the boy wearing glasses and a light yellow t-shirt (R3) stands with his right arm draped over the shoulder of the girl next to him, looking at the camera with a gentle smile. Next to him, the girl with curly hair tied up, wearing a white cardigan over a reddish-brown jumpsuit (R1), smiles warmly with her arms around the shoulders of the boys on either side. The boy in the blue denim button-up shirt (R4) stands second from the right, smiling brightly with his arm around the girl with dark hair and bangs, wearing a dark blue cardigan over a striped dress (R2), who grins happily on the far right. Bright, warm sunlight filters through the trees from behind, creating a soft backlighting effect.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 drapes his right arm over R1's shoulder",
+    "R1 places her arms around the shoulders of R3 and R4",
+    "R4 puts his arm around R2",
+    "R2 is the child receiving R4's arm around her",
+    "the children stand together in an outdoor park with green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 draping his right arm over R1's shoulder, rather than R1 draping that arm over R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 drapes his right arm over R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 have his arm around R2, rather than R2 being described as putting her arm around R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 puts his arm around R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 putting her arms around the shoulders of R3 and R4, rather than putting her arms around R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places her arms around the shoulders of R3 and R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 physically linked to both R3 and R4 by having her arms around their shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is connected by shoulder contact to R3 and R4"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the child who is next to R4 while receiving R4's arm around her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the child receiving R4's arm around her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

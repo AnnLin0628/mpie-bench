@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T217",
+  "instruction": "Candid documentary photograph, wide shot. Inside a white-walled studio with a red carpet, the woman in the white t-shirt and blue jeans (R2) stands on the left, balancing on her left leg as she kicks her right leg forward. On the right, the bearded man in the black polo shirt and blue shorts (R1) stands facing her, watching the kick. The room is brightly lit by overhead fluorescent fixtures, casting soft shadows on the red carpet. The background features studio equipment and white walls.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 performs the forward kick while R1 watches her rather than R1 performing the kick while R2 watches",
+    "R2 balances on her left leg and kicks her right leg forward toward R1 rather than R1 doing that toward R2",
+    "R1 faces R2 as the observer of her kick rather than R2 being the observer of R1's kick",
+    "R2 is the active kicker and R1 is the non-kicking viewer",
+    "the interaction takes place inside a brightly lit white-walled studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person kicking her right leg forward while R1 watches, rather than R1 kicking while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the forward kick while R1 watches her rather than R1 performing the kick while R2 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing on her left leg as she kicks, rather than R1 balancing on one leg to kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on her left leg and kicks her right leg forward toward R1 rather than R1 doing that toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 facing R2 as the observer of R2's kick, rather than R2 facing R1 as the observer of R1's kick?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 as the observer of her kick rather than R2 being the observer of R1's kick"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the active kicker while R1 remains standing and watching her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active kicker and R1 is the non-kicking viewer"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

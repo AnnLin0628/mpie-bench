@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T4",
+  "instruction": "Cinematic video still, medium shot. In a studio with a soft pink and blue gradient background, three friends dance energetically. In the center, the blonde woman in the black halter dress (R3) sings along with her left arm raised. On her left, the man in the black vest (R2) dances with his eyes closed and mouth open. On her right, the Black woman in the red fringed dress (R1) smiles brightly while dancing with her hands up. The scene is bathed in soft, colorful studio lighting, enhancing the lively party mood.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 sings along while raising her left arm",
+    "R1 smiles brightly while dancing with her hands up",
+    "R2 dances with his eyes closed and mouth open",
+    "R3 is the central singing dancer among the group",
+    "the scene is set in a studio with a soft pink and blue gradient background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one singing along with her left arm raised, rather than R1 or R2 being the singer with the raised left arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sings along while raising her left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer smiling brightly with her hands up, rather than R2 being described as the smiling dancer with hands up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles brightly while dancing with her hands up"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one dancing with eyes closed and mouth open, rather than R3 being described with eyes closed and mouth open?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances with his eyes closed and mouth open"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 perform the singing-along role while the others dance energetically around her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the central singing dancer among the group"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 dance with her hands up while R2 dances with his eyes closed and mouth open?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct dancing actions"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

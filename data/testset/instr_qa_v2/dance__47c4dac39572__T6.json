@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__47c4dac39572__T6",
+  "instruction": "Cinematic film still, medium close-up. In an outdoor park by a lake during the day, the bearded man in the beige corduroy shirt (R1) on the right and the woman in the beige hijab (R2) on the left stand facing each other in profile. The woman smiles warmly as she reaches her hand out toward his chest, and the man looks back at her with a gentle smile. Soft natural daylight illuminates the scene with warm tones and a blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches her hand toward R1's chest",
+    "R1 is the recipient of R2's reaching gesture",
+    "R2 is the active reaching participant while R1 looks back at her",
+    "R1 and R2 face each other in profile during the interaction",
+    "The scene is outdoors in a park by a lake during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 reaching her hand toward R1's chest, rather than R1 reaching his hand toward R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 reaches her hand toward R1's chest"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being approached by R2's outstretched hand, rather than R2 being the chest-targeted person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's reaching gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the active reaching participant while R1 responds by looking back at her, rather than R1 being the active reaching participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active reaching participant while R1 looks back at her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing face-to-face in profile while R2 reaches toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other in profile during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

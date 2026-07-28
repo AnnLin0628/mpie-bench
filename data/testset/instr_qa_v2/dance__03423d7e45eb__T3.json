@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03423d7e45eb__T3",
+  "instruction": "Candid full shot in a bright indoor ballet studio. The woman in the black long-sleeve top and white tulle skirt (R2) stands in the center, facing front-left while balancing on pointe. Behind her, the man in the black tank top and tights (R3) supports her by holding her waist. Soft, natural daylight fills the room, highlighting the dancers against the white walls.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 supports R2's body by holding R2's waist",
+    "R2 is the dancer balancing on pointe while R3 provides support",
+    "R3 stands behind R2 as the supporting partner, rather than R2 standing behind R3",
+    "R2 is centered in the ballet pose with R3 contacting her waist from behind",
+    "The setting is a bright indoor ballet studio with white walls and natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 supporting R2 by holding R2's waist, rather than R2 supporting R3's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 supports R2's body by holding R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person balancing on pointe while R3 provides support from behind, rather than R3 balancing on pointe while R2 supports him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer balancing on pointe while R3 provides support"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 stand behind R2 as the supporting partner, rather than R2 standing behind R3 as the supporting partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stands behind R2 as the supporting partner, rather than R2 standing behind R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in the central ballet pose on pointe while R3 is in contact with R2's waist from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is centered in the ballet pose with R3 contacting her waist from behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__37db26820939__T4",
+  "instruction": "Cinematic medium shot in a suburban yard. On the left, the man in the white shirt (R1) holds up and reads papers. On the right, the man in the striped shirt and tie (R2) stands with his hand in his pocket, smiling at him. A 'SOLD' sign stands between them under bright daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up and reads papers rather than R2",
+    "R2 stands with his hand in his pocket and smiles at R1 rather than R1 doing that toward R2",
+    "R1 focuses on papers while R2 directs attention toward R1",
+    "papers held by R1",
+    "SOLD sign between R1 and R2",
+    "suburban yard in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding up and reading papers, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds up and reads papers rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing with his hand in his pocket and smiling at R1, rather than R1 doing this toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with his hand in his pocket and smiles at R1 rather than R1 doing that toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 focus on the papers while R2 directs his smile and attention toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 focuses on papers while R2 directs attention toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__6938209d7511__T2",
+  "instruction": "Cinematic wedding photograph, medium close-up. Indoors by a wooden lattice window, the bride in the sheer beaded gown (R2) stands in the left foreground, looking left with a bright smile. Behind her on the right, the older woman in the sparkly beige dress (R1) smiles happily while adjusting the bride's hair or dress from behind. Soft, warm natural light from the window highlights their faces, casting a gentle glow over the scene with a shallow depth of field blurring the green foliage outside.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 adjusts R2's hair or dress from behind",
+    "R2 receives the bridal hair or dress adjustment from R1",
+    "R2 stands smiling in the foreground while R1 attends to her from behind",
+    "R2's hair or dress is the item being adjusted",
+    "The scene is indoors by a wooden lattice window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 adjusting R2's hair or dress from behind, rather than R2 adjusting R1's hair or dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 adjusts R2's hair or dress from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the bridal hair or dress adjustment from R1, rather than R1 receiving that adjustment from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the bridal hair or dress adjustment from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand smiling in the foreground while R1 attends to her from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands smiling in the foreground while R1 attends to her from behind"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

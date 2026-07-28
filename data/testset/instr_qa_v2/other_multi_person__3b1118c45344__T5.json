@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__3b1118c45344__T5",
+  "instruction": "Candid outdoor full shot of two women on a grassy lawn. On the left, the woman in the maroon patchwork dress (R2) stands barefoot, facing right and bowing slightly with her hands pressed together in a namaste gesture. On the right, the woman in the peach and blue dress (R1) bows forward deeply, facing left with her hands also in a namaste gesture. The two women face each other in a respectful greeting. The background features green bushes and trees under soft, natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 bows forward deeply toward R2 in the greeting",
+    "R2 bows only slightly toward R1 while R1 is the deeper-bowing participant",
+    "R1 and R2 face each other during a respectful namaste greeting",
+    "R1 has her hands pressed together in a namaste gesture toward R2",
+    "R2 has her hands pressed together in a namaste gesture toward R1",
+    "the greeting takes place on a grassy outdoor lawn"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the participant bowing forward deeply toward R2, rather than R2 being the one who bows deeply?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 bows forward deeply toward R2 in the greeting"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 only bowing slightly toward R1, rather than R1 being the slight-bowing participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 bows only slightly toward R1 while R1 is the deeper-bowing participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold her hands pressed together in a namaste gesture while bowing toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has her hands pressed together in a namaste gesture toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold her hands pressed together in a namaste gesture while bowing toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her hands pressed together in a namaste gesture toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

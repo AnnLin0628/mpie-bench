@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T57",
+  "instruction": "Candid outdoor medium full shot from a low angle of a group posing in a sunny park with green grass and background trees. In the center foreground, the East Asian man in a red polo shirt (R3) crouches down, looking forward with an open-mouthed smile. Behind him on the left, the Black woman with an afro (R6) in a red t-shirt and ripped jeans stands smiling, giving two thumbs up. On the right, the Black woman in a black beanie (R5) in a red t-shirt stands back-to-back with her, facing right in profile with hands clapped together. The group poses playfully in a tight pyramid formation. Bright, natural sunlight filters through the trees, casting soft shadows on the vibrant green lawn.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 crouches in the center foreground while R6 stands behind him smiling",
+    "R3 crouches in the center foreground while R5 stands behind him with hands clapped",
+    "R6 gives two thumbs up while R5 has her hands clapped together",
+    "R5 and R6 stand back-to-back in the group pose",
+    "R3 looks forward with an open-mouthed smile while crouching",
+    "The group poses outdoors in a sunny park with green grass and background trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 crouching in the center foreground while R6 stands behind him, rather than R6 crouching in the foreground while R3 stands behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 crouches in the center foreground while R6 stands behind him smiling"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 crouching in the center foreground while R5 stands behind him with hands clapped, rather than R5 crouching in the foreground while R3 stands behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 crouches in the center foreground while R5 stands behind him with hands clapped"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the person giving two thumbs up while R5 is the person with hands clapped together, rather than R5 giving two thumbs up while R6 claps her hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 gives two thumbs up while R5 has her hands clapped together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R5 and R6 posed back-to-back as part of the tight group formation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 and R6 stand back-to-back in the group pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

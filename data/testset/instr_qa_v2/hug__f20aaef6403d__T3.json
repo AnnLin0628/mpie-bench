@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__f20aaef6403d__T3",
+  "instruction": "Candid medium close-up in a bright indoor room. On the right, the man in the yellow t-shirt (R2) holds the little girl in the light long-sleeve shirt (R1) high up as she hugs his neck. On the left, the woman in the white sleeveless top (R3) has her back to the camera, wrapping her arms around them both in a warm group hug. Soft, natural light illuminates the happy moment.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 supports and holds R1 high up",
+    "R1 hugs R2's neck while being held",
+    "R3 wraps her arms around both R1 and R2 as the outside participant",
+    "R3 has her back to the camera while joining the group contact",
+    "bright indoor room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding and supporting R1 high up, rather than R1 holding and supporting R2 high up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports and holds R1 high up"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person wrapping her arms around both R1 and R2 from the outside of the group, rather than R1 being the outside person wrapping arms around R2 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arms around both R1 and R2 as the outside participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned high in R2's arms with her arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 hugs R2's neck while being held"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 have her back to the camera while joining the contact around both R1 and R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has her back to the camera while joining the group contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

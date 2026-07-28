@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1fb80cb80877__T4",
+  "instruction": "A clean studio portrait photograph captured in a medium shot at eye-level. In a minimalist indoor studio with a plain off-white background, the redhead woman (R1) stands on the left, wearing a light blue shirt draped off her shoulder over a brown top, with her right hand raised near her chin as she looks towards her friend with a soft, gentle smile. On the right, the dark-haired woman (R2) stands facing forward, wearing a white wrap blouse with puffed sleeves, with her left hand resting gently on her collarbone as she looks directly at the camera with a calm, slightly pensive expression. The two stand close together under soft, diffused studio lighting that creates a neutral, warm color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 raises her right hand near her chin while looking toward R2",
+    "R2 rests her left hand on her collarbone while looking directly at the camera",
+    "R1 directs attention toward R2 rather than toward the camera",
+    "R2 faces forward toward the camera rather than looking at R1",
+    "The two women stand close together in a studio portrait",
+    "The setting is a minimalist indoor studio with a plain off-white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman raising her right hand near her chin while looking toward R2, rather than R2 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's asymmetric hand gesture and gaze toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman resting her left hand gently on her collarbone while looking directly at the camera, rather than R1 doing that?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's asymmetric collarbone hand placement and camera-facing gaze"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 direct her gaze toward R2 while R2 directs her gaze toward the camera, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric gaze roles between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand close to R2 while giving a soft, gentle smile toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's close-standing role with attention toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

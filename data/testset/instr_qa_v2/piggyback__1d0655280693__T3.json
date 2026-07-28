@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__1d0655280693__T3",
+  "instruction": "Candid outdoor photograph, full shot. On a clifftop overlooking the sea, the blonde woman in the blue plaid shirt (R2) stands on the left, facing right. The man in the red plaid shirt (R1) stands on the right, facing her. They share an intimate moment; the blonde woman (R2) places her hand on the cheek of the man (R1), while his hand rests on her thigh. Soft overcast daylight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 places her hand on R1's cheek",
+    "R1 rests his hand on R2's thigh",
+    "R1 and R2 face each other during the intimate contact",
+    "R2 is the person touching R1's face",
+    "The scene is on a clifftop overlooking the sea"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 placing her hand on R1's cheek, rather than R1 placing his hand on R2's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one touching R1's cheek"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 resting his hand on R2's thigh, rather than R2 resting her hand on R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the one touching R2's thigh"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 touch R1's face while R1 touches R2's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R1 have distinct contact roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

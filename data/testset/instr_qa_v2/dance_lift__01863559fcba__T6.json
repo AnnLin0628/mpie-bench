@@ -1,0 +1,82 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__01863559fcba__T6",
+  "instruction": "A clean, minimalist lifestyle photograph captured from a low angle wide shot. Inside a bright, white-walled yoga studio with large windows, two subjects perform a deep stretch. In the foreground right, the young woman in the beige sports bra (R4) is bent forward over her front leg in a deep pigeon pose, her head lowered and hands flat on the floor. Behind her to the left, the blonde girl in the beige long-sleeve top (R5) mirrors this deep forward bend, her head lowered towards the ground. They are aligned diagonally in unison. Bright, soft natural light fills the space, creating a serene, neutral-toned atmosphere.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 is the foreground subject performing a deep pigeon pose with hands flat on the floor",
+    "R5 is positioned behind R4 and mirrors R4's deep forward bend",
+    "R4's head is lowered over her front leg during the stretch",
+    "R5's head is lowered toward the ground while mirroring the pose",
+    "the floor is the contact surface for R4's hands",
+    "the setting is a bright, white-walled yoga studio with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the foreground subject bent forward in a deep pigeon pose, rather than R5 being the foreground subject in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the foreground deep pigeon-pose role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 behind R4 mirroring the deep forward bend, rather than R4 being behind R5 mirroring her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 mirrors R4's forward bend from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 have her head lowered and hands flat on the floor while bent over her front leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's body configuration in the pigeon pose"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 perform a matching deep forward bend with her head lowered toward the ground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's mirrored forward-bend role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

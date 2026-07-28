@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T183",
+  "instruction": "Candid documentary photograph, medium-wide shot, slightly high angle. In an indoor motion capture studio with a red carpet and white walls, the man in the black t-shirt and blue shorts (R1) stands on the left, facing forward and smiling. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing left as she hugs him. She wraps her arm around his neck from the side, while he stands relaxed with his arms down. The room is lit by overhead fluorescent lights, creating a bright and neutral atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arm around R1's neck from the side",
+    "R1 remains relaxed with his arms down while R2 makes the neck contact",
+    "R2 faces toward R1 to initiate the side contact while R1 faces forward",
+    "R2 is the active contact initiator and R1 is the receiver of the contact",
+    "R1 does not hold R2 back with his arms during the contact",
+    "the scene is an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arm around R1's neck from the side, rather than R1 wrapping his arm around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arm around R1's neck from the side"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing relaxed with his arms down while R2 makes the neck-around contact, rather than R2 standing relaxed with her arms down while R1 makes that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains relaxed with his arms down while R2 makes the neck contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 face toward R1 to make the side contact while R1 faces forward, rather than R1 turning toward R2 to wrap around her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces toward R1 to initiate the side contact while R1 faces forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the active contact initiator whose arm is around R1's neck while R1 is the receiver of that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active contact initiator and R1 is the receiver of the contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep his arms down instead of using his arms to hold R2 during the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 does not hold R2 back with his arms during the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

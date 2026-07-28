@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__8921669c5051__T2",
+  "instruction": "Cinematic medium close-up still of a couple outdoors at sunset. On the left, the red-haired man in the denim jacket (R2) wears glasses and holds a glass of rosé wine, looking at his partner. On the right, the blonde woman in the patterned halter top (R1) holds her wine glass, smiling gently at him. They stand close together, facing each other. The bright setting sun behind them casts a warm golden glow and creates a prominent lens flare on the left side of the frame.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the blonde woman smiling gently at R2 while holding her wine glass",
+    "R2 is the red-haired man wearing glasses who holds a glass of rosé wine and looks at R1",
+    "R1 and R2 stand close together facing each other",
+    "both R1 and R2 hold wine glasses",
+    "the couple is outdoors at sunset with a warm golden glow and lens flare"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner smiling gently at R2 while holding her wine glass, rather than R2 being the one described as smiling gently at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles gently at R2 while holding her wine glass"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the red-haired man wearing glasses who looks at R1 while holding a glass of rosé wine, rather than R1 being that glasses-wearing man looking at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks at R1 while holding rosé wine"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold the glass of rosé wine while looking at his partner, rather than R1 being the rosé-holding partner looking at him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partner holding rosé and looking at R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

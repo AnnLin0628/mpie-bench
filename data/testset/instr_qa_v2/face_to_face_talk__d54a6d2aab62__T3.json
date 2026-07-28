@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__d54a6d2aab62__T3",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. In a modern cafe with a large beige arched partition, the woman in the beige blazer and blue bandana (R1) sits on the left, smiling broadly and gesturing with both hands spread wide. On the right, the woman in the pink corduroy blazer and glasses (R2) sits in a wheelchair, smiling back as she listens with her hands resting in her lap. They are seated opposite each other at a small black table with a coffee cup. Warm, natural daylight fills the space, casting soft shadows and enhancing the warm, friendly mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the active gesturer in the conversation, spreading both hands wide while R2 listens",
+    "R2 is seated in a wheelchair with hands resting in her lap, rather than R1 being in the wheelchair",
+    "R1 and R2 are seated opposite each other at a small black table in a face-to-face conversation",
+    "A wheelchair is associated with R2",
+    "A coffee cup is on the small black table",
+    "The setting is a modern cafe with a large beige arched partition"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gesturing broadly with both hands spread wide while R2 listens with her hands resting in her lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active gesturer while R2 listens"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 seated in the wheelchair rather than R1 being seated in the wheelchair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 occupies the wheelchair, not R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated opposite each other at a small black table during their face-to-face conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other across the table"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 appear to be animatedly engaging R2 while R2 smiles back and listens?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 engages actively while R2 listens"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

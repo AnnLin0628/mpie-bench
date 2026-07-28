@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T17",
+  "instruction": "A cinematic full shot of three friends celebrating joyfully in a sunny park. On the left, the woman in the dark blue t-shirt (R4) jumps on her toes to high-five her companions. In the center, the bald man in the dark blue t-shirt (R2) laughs heartily with his hands raised in the air. On the right, the large Black man in the dark t-shirt (R1) leans forward with his arms outstretched in a triumphant gesture. They stand close together on the vibrant green grass under the shade of mature trees, illuminated by bright, warm daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 jumps on her toes to high-five her companions",
+    "R2 laughs with his hands raised in the air",
+    "R1 leans forward with his arms outstretched in a triumphant gesture",
+    "R4 is the active high-five jumper while R2 is the hands-raised companion",
+    "R1, R2, and R4 stand close together celebrating in a sunny park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person leaning forward with arms outstretched in triumph, rather than R2 being described as leaning forward with outstretched arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the forward-leaning triumphant arm gesture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 participate by laughing heartily with his hands raised while close to R1 and R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hands-raised laughing role in the group celebration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1, R2, and R4 celebrating together on vibrant green grass in a sunny park?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "sunny park setting with green grass"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

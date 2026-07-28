@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T41",
+  "instruction": "Candid action photograph, low-angle medium shot. In an indoor judo dojo with a yellow tatami mat, the woman in the blue judo gi (R1) with her hair in a bun is pinning her opponent. She leans over the young man in the white judo gi (R2), wrapping her blue-sleeved arm tightly around his neck. The young man (R2) lies flat on his back on the mat, looking up with a calm, focused expression. Soft indoor lighting illuminates the scene, highlighting the contrast between the warm yellow mat and the cool blue gi.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 pins R2 from above rather than R2 pinning R1",
+    "R1 wraps her arm around R2's neck rather than R2 wrapping his arm around R1's neck",
+    "R2 lies flat on his back under R1 during the pin",
+    "R1 leans over R2 while maintaining the grappling hold",
+    "R2 is on the yellow tatami mat during the grapple",
+    "the interaction takes place in an indoor judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 pinning R2 from above, rather than R2 pinning R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pins R2 from above rather than R2 pinning R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her arm tightly around R2's neck, rather than R2 wrapping his arm around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arm around R2's neck rather than R2 wrapping his arm around R1's neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying flat on his back under R1, rather than R1 lying flat under R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies flat on his back under R1 during the pin"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean over R2 while maintaining the pinning hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans over R2 while maintaining the grappling hold"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 lying on a yellow tatami mat during the grapple?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 is on the yellow tatami mat during the grapple"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

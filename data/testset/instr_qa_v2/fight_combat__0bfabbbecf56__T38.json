@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T38",
+  "instruction": "Cinematic medium shot inside a boxing ring. The East Asian woman in a white ribbed sports bra (R2) stands on the left in profile, extending her left arm. Facing her on the right, the Caucasian woman in a black and orange sports top (R1) uses both hands to wrap a black athletic wrap around the East Asian woman's (R2) wrist. The background shows red and black ring ropes and hanging punching bags under bright overhead gym lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps a black athletic wrap around R2's wrist",
+    "R2 extends her left arm to be wrapped by R1",
+    "R1 uses both hands while applying the wrist wrap to R2",
+    "black athletic wrap on R2's wrist",
+    "boxing ring with red and black ropes",
+    "hanging punching bags in the gym background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping a black athletic wrap around R2's wrist, rather than R2 wrapping R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 applies the wrist wrap to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person extending her arm to receive the wrist wrap while R1 performs the wrapping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the wrap while R1 wraps"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use both hands on the athletic wrap around R2's wrist, rather than R2 using both hands on R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses both hands to wrap R2's wrist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 holding out her left arm in profile while R1 faces her and works on the wrist wrap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 presents her arm as R1 faces her to wrap it"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

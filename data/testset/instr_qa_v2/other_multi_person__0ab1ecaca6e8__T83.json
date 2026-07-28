@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T83",
+  "instruction": "A candid medium shot of friends playing a game in an outdoor park with green grass and trees in the background. In the right foreground, the woman with tied-back hair (R4) in a dark blue t-shirt and light blue jeans leans forward with a focused, cheerful expression, her hands raised as if preparing to catch or throw. In the left background, the East Asian man (R3) in a red polo shirt stands in a semi-squat, cheering her on. Behind them, the woman in a black beanie (R5) in a red t-shirt stands watching the game. Soft, natural daylight filters through the trees.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R4 is the active player leaning forward with hands raised as if preparing to catch or throw",
+    "R3 cheers R4 on while standing in a semi-squat",
+    "R5 watches the game from behind R3 and R4",
+    "R4 has a focused, cheerful expression during the game",
+    "the scene is an outdoor park with green grass and trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the active player leaning forward with hands raised as if preparing to catch or throw, rather than R3 taking that active player role while R4 cheers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the active catch-or-throw game duty while R3 cheers"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 cheering R4 on during the game, rather than R4 cheering R3 on?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the cheerer and R4 is the player being encouraged"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 watching the game from behind R3 and R4, rather than being the forward-leaning player with raised hands like R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is an observer while R4 is the active player"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 lean forward with her hands raised as if preparing to catch or throw in the game?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4's raised-hands catch-or-throw body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 stand in a semi-squat while cheering R4 on?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's semi-squat cheering role toward R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

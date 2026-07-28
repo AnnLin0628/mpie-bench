@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__77f377b9ad5b__T1",
+  "instruction": "Candid outdoor medium shot of a couple in a snowy forest. On the right, the woman in the grey beanie (R1) stands in a black leather jacket, holding a black dog and kissing its snout with closed eyes. On the left, the man in the brown coat (R2), wearing a black beanie, leans forward to kiss the dog's head. They stand close together on a snow-covered path, sharing a warm moment in the cold winter setting. Soft, diffused winter daylight illuminates the scene, creating a cool-toned palette with warm brown and beige accents.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds and supports the black dog while kissing its snout",
+    "R2 leans forward to kiss the dog's head instead of holding the dog",
+    "R1 is the person carrying the dog, not R2",
+    "R1 and R2 both direct their affection toward the dog with different duties",
+    "A black dog is the contact-relevant animal being held and kissed",
+    "The interaction takes place outdoors in a snowy forest setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and supporting the black dog while R2 leans in to kiss it, rather than R2 holding the dog while R1 only leans in?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the dog holder and supporter while R2 is the leaning kisser"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kissing the dog's snout while holding it, rather than R2 being the one holding the dog and kissing its snout?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the dog and kisses its snout"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 lean forward to kiss the dog's head while the dog is in R1's arms, rather than R1 leaning forward toward a dog held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans toward the dog held by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sharing contact with the same dog, with R1 carrying it and R2 approaching its head for a kiss?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the dog while R2 kisses toward its head"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

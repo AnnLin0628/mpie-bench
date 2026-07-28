@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__906857f24c03__T5",
+  "instruction": "Crisp studio photograph, full shot. In an indoor studio with draped beige curtains, a shirtless man in black pants (R2) stands with his back to the camera, lifting a woman in a beige sports bra and black shorts (R1) horizontally above his head. The shirtless man supports her upper back and thigh with his hands. The woman arches her back, extending her left arm upward. No bystanders are present. Soft, diffused studio lighting illuminates their athletic forms against the neutral background, creating a clean, focused composition.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lifts R1 horizontally above his head",
+    "R2 supports R1's upper back and thigh with his hands",
+    "R1 is the carried dancer while R2 is the base supporting her weight",
+    "R1 arches her back and extends her left arm upward while being held aloft",
+    "R2 stands beneath R1 with his back to the camera during the lift",
+    "indoor studio with draped beige curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lifting R1 horizontally above his head, rather than R1 lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lifts R1 horizontally above his head"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 support R1's upper back and thigh with his hands, rather than R1 supporting R2's body in that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's upper back and thigh with his hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being carried aloft while R2 is the base bearing her weight from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the carried dancer while R2 is the base supporting her weight"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 arching her back and extending her left arm upward while being lifted by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 arches her back and extends her left arm upward while being held aloft"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand beneath R1 with his hands contacting her upper back and thigh during the lift?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands beneath R1 with his hands contacting her upper back and thigh"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

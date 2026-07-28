@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc4bacc07276__T7",
+  "instruction": "Candid full-body photograph of a couple facing each other by a white wall and black fence. The woman in the white long-sleeved dress (R1) stands on the left, smiling at the man. The man in the patterned short-sleeved shirt (R2) stands on the right, holding both of her hands. Bright daylight casts soft shadows on the wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds both of R1's hands",
+    "R1 is the person whose hands are held by R2",
+    "R2 is the active hand-holder while R1 smiles at him",
+    "R1 and R2 face each other during the hand contact",
+    "The couple is by a white wall and black fence"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding both of R1's hands, rather than R1 holding both of R2's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds both of R1's hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose hands are being held by R2, rather than R2 being the person whose hands are being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose hands are held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one maintaining the two-hand hold while R1 smiles at him, rather than R1 being the described two-hand holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active hand-holder while R1 smiles at him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

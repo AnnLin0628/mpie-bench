@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__377ec7edaebd__T2",
+  "instruction": "Candid outdoor photograph, full shot at eye-level. On a dirt path in a wooded park, the man in the blue short-sleeved shirt (R1) and the woman in the grey blazer (R2) walk closely side-by-side. The man (R1) on the left looks down with a gentle smile, while the woman (R2) on the right looks forward. Her right arm is linked through his left arm as they stroll. Soft natural daylight illuminates the scene, creating a warm, peaceful atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 links her right arm through R1's left arm",
+    "R1 is the person whose arm R2 links onto",
+    "R2 hooks onto R1 as they walk rather than R1 hooking onto R2",
+    "R1 and R2 stroll closely side-by-side with linked arms",
+    "dirt path in a wooded park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one linking her right arm through R1's left arm, rather than R1 linking his arm through R2's?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 links her right arm through R1's left arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose left arm is being linked onto by R2, rather than R2 being the person whose arm R1 links onto?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose arm R2 links onto"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "As they walk, is R2 attached to R1 by hooking her arm through his, rather than R1 attaching to R2 by hooking his arm through hers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 hooks onto R1 as they walk rather than R1 hooking onto R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stroll closely side-by-side with their arms linked together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stroll closely side-by-side with linked arms"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

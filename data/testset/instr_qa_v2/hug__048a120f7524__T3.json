@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__048a120f7524__T3",
+  "instruction": "Candid studio photograph, medium shot. Against a plain white background, the man with curly blonde hair (R1) in a gray shirt on the left embraces the person with long brown hair (R2) in a green shirt on the right. The person (R2) has their arms around the man's (R1) neck, and the man (R1) holds the person's (R2) waist. They stand close, looking into each other's eyes under soft studio lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 has their arms around R1's neck while R1 holds R2's waist",
+    "R1 holds R2 at the waist rather than around the neck",
+    "R2 contacts R1's neck rather than R1's waist",
+    "R1 and R2 stand close while looking into each other's eyes",
+    "plain white studio background with soft studio lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have their arms around R1's neck while R1 holds R2's waist, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has their arms around R1's neck while R1 holds R2's waist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding R2's waist, rather than R2 holding R1's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 at the waist rather than around the neck"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one placing arms around R1's neck, rather than R1 placing arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 contacts R1's neck rather than R1's waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 maintain waist contact with R2 while standing close to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's waist during the close contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 maintain neck contact with R1 while standing close to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 keeps arms around R1's neck during the close contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

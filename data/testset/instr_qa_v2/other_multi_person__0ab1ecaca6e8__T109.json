@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T109",
+  "instruction": "A candid outdoor photograph with a medium full shot captures a sunny day at a grassy park with trees and hanging red and white pennants. On the right, the heavy-set bald man in a dark blue t-shirt and dark pants (R1) stands in profile, holding a giant white inflatable bowling pin with both hands. Next to him, the bald man in a dark blue t-shirt and black pants (R2) stands facing left, also holding a giant inflatable pin. Partially obscured behind them, the legs of the woman in light blue jeans (R4) are visible. The heavy-set bald man (R1) and the bald man (R2) are actively playing a game, swinging the oversized inflatable pins on the vibrant green lawn. The scene is illuminated by bright, natural daylight, casting soft shadows on the grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R1 grips a giant white inflatable bowling pin with both hands",
+    "R2 holds a separate giant inflatable pin next to R1",
+    "R1 and R2 are actively playing by swinging oversized inflatable pins",
+    "R4 is partially obscured behind R1 and R2 with only her legs visible",
+    "giant inflatable bowling pins are the contact-relevant game props",
+    "the scene is a sunny grassy park with trees and hanging red and white pennants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gripping the giant white inflatable bowling pin with both hands, rather than R2 being the one holding that white pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the giant white inflatable bowling pin"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding his own giant inflatable pin next to R1, rather than R1 being the only player holding an inflatable pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 separately holds a giant inflatable pin"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the active players swinging oversized inflatable pins during the game?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 actively swing oversized inflatable pins"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 partially obscured behind R1 and R2, with only her legs visible instead of actively swinging a pin?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is obscured behind the active players"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

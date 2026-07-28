@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__318b5a7a4e2a__T2",
+  "instruction": "Candid outdoor photograph, medium close-up. On a winter street, the woman in the red puffer jacket (R1) stands on the left, holding a red smartphone with both hands and smiling down at the screen. Leaning in close on the right, the woman in the light gray puffer jacket (R2) looks at the screen with a warm smile. They stand shoulder-to-shoulder, sharing a cheerful moment over the phone. Bright daylight and soft backlighting highlight their happy expressions against a soft, blurred background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds the red smartphone with both hands while R2 does not hold it",
+    "R2 leans in close to view the screen that R1 is holding",
+    "R1 shares the phone screen with R2 as R2 watches",
+    "R1 and R2 stand shoulder-to-shoulder during the shared phone moment",
+    "a red smartphone is the shared object of attention",
+    "the scene is outdoors on a winter street"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the red smartphone with both hands rather than R2 holding the phone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the phone rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning in close to look at the screen that R1 is holding, rather than R2 holding the screen for R1 to view?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the close viewer while R1 is the phone holder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 present or share the phone screen while R2 looks at it, rather than R2 presenting a phone to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 shares the phone screen with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing shoulder-to-shoulder while R1 keeps possession of the phone?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "shoulder-to-shoulder phone-sharing configuration with R1 holding the phone"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a red smartphone the object they are both focused on?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red smartphone as shared object of attention"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

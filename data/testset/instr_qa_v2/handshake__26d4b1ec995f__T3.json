@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__26d4b1ec995f__T3",
+  "instruction": "Cinematic film still, medium shot. Inside a modern office, the man in the grey patterned blazer (R2) on the left and the man in the light blue sweater (R1) on the right stand facing each other in profile. They continue their handshake with a firm, clasped grip. The background is a large window showing a city street under cool, diffused daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 and R2 maintain a firm clasped handshake with each other",
+    "R1 is the light-blue-sweater participant in the handshake with R2",
+    "R2 is the grey-patterned-blazer participant in the handshake with R1",
+    "R1 and R2 stand facing each other in profile while their hands are clasped",
+    "The interaction takes place inside a modern office",
+    "A large window shows a city street in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the light-blue-sweater participant clasping hands with R2, rather than R2 being the light-blue-sweater participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled handshake role and appearance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the grey-patterned-blazer participant clasping hands with R1, rather than R1 being the grey-patterned-blazer participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's labeled handshake role and appearance"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also raising a hand toward R1 for the handshake, rather than keeping both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake reciprocal raise"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

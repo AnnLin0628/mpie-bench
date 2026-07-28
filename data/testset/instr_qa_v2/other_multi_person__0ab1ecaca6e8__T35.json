@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T35",
+  "instruction": "A candid lifestyle photograph in a medium full shot captures a sunny rooftop under a clear blue sky. In the center foreground, the woman with short bleached hair (R9), wearing a denim jacket and black midi skirt, smiles with arms outstretched. To her left, the woman in the black beanie and colorful sleeves (R8), wearing khaki capri pants, dances actively. In the background, the woman with purple hair (R7) in a bright green hoodie stands behind her, while the man with puffy hair (R10) in a brown jacket stands on the right, smiling. The group enjoys dancing together in bright, direct sunlight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R8 dances actively while R7 stands behind her",
+    "R9 smiles with arms outstretched while R10 stands smiling",
+    "R9 is the central foreground person with arms outstretched",
+    "R7 stands in the background behind R8",
+    "R10 stands smiling rather than dancing actively",
+    "sunny rooftop under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R8 the person dancing actively while R7 stands behind her, rather than R7 being the active dancer and R8 standing behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R8 dances actively while R7 stands behind her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the person smiling with arms outstretched in the center foreground, rather than R10 being described with outstretched arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 smiles with arms outstretched while R10 stands smiling"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R9 hold her arms outstretched while smiling in the center foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 is the central foreground person with arms outstretched"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R7 stand in the background behind R8 while R8 dances?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 stands in the background behind R8"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

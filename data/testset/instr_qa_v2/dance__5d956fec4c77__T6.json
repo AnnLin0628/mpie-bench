@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__5d956fec4c77__T6",
+  "instruction": "Cinematic medium shot of an elderly couple dancing in a cozy bedroom. The blonde woman in a white shirt (R2) is on the left with her back to the camera, head turned slightly. The elderly man in a striped shirt (R1) stands on the right, facing forward, looking down warmly at her. His right hand is placed flat on her back, and they hold hands to the side. The background shows a softly blurred bed and doorway. Warm, soft indoor lighting casts a gentle glow over the intimate moment.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his right hand flat on R2's back during the dance",
+    "R1 faces forward and looks down warmly at R2 while R2 has her back to the camera",
+    "R1 and R2 hold hands to the side as part of the dance pose",
+    "R2 dances close to R1 with her back turned slightly toward the camera",
+    "the couple dances in a cozy bedroom with a softly blurred bed in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one placing his right hand flat on R2's back during the dance, rather than R2 placing her right hand flat on R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his right hand flat on R2's back during the dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 facing forward and looking down warmly at R2 while R2 has her back to the camera, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces forward and looks down warmly at R2 while R2 has her back to the camera"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R1 and R2 hold hands to the side while R1 is also the one with a hand on R2's back, rather than R2 being the one with a hand on R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands to the side while R1's other hand is on R2's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 dancing close to R1 with her back turned toward the camera while R1 faces her in the partner dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances close to R1 with her back turned slightly toward the camera"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 maintain back contact with R2 as they dance together and hold hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 maintains back contact with R2 while they hold hands in the dance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

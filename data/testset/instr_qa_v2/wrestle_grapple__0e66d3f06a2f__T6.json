@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T6",
+  "instruction": "Candid action photograph, full shot. In an indoor martial arts studio with wooden walls and dark floor mats, the smiling man in the white gi (R1) stands on the right side of the frame. He holds the arm of the man in the gray gi (R2), who is squatting low to the mat on the left with his back turned to the camera. Warm, natural indoor lighting illuminates the training session, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's arm during the martial arts interaction",
+    "R1 is standing while R2 is squatting low to the mat",
+    "R2 has his back turned to the camera while R1 controls his arm",
+    "R2 is the lower grappling partner being held by R1",
+    "dark floor mats are present in the indoor martial arts studio",
+    "wooden walls define the indoor studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding R2's arm, rather than R2 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's arm during the martial arts interaction"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing while controlling R2, rather than R2 standing while controlling R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is standing while R2 is squatting low to the mat"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the lower squatting partner whose arm is held by R1, rather than R1 being the lower squatting partner held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lower grappling partner being held by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 squat low to the mat with his back turned while R1 holds his arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his back turned to the camera while R1 controls his arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

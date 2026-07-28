@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T17",
+  "instruction": "Candid black and white medium full shot of a couple embracing outdoors on an overcast city street. In the center foreground, the man with wavy hair in a dark overcoat (R1) stands with his back to the camera, wrapping his arms around the woman in a black cap and dark coat (R2). The woman stands on the left, facing right, with her hands resting on his lower back as she looks over his shoulder with a soft, neutral expression. The background is softly blurred. The scene is illuminated by diffused, overcast daylight, creating a quiet, intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stands with his back to the camera while wrapping his arms around R2",
+    "R2 rests her hands on R1's lower back",
+    "R2 looks over R1's shoulder while R1 faces away from the camera",
+    "R1 and R2 are in close body contact with distinct arm and hand placements",
+    "The interaction occurs outdoors on an overcast city street"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with his back to the camera wrapping his arms around R2, rather than R2 being the one with her back to the camera wrapping her arms around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-to-camera wrapping role around R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest her hands on R1's lower back, rather than R1 resting his hands on R2's lower back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hands are placed on R1's lower back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking over R1's shoulder while R1 faces away from the camera, rather than R1 looking over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks over R1's shoulder while R1 faces away"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 in close body contact with R1's arms around R2 and R2's hands lower on R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct close-contact arm and hand positions"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T12",
+  "instruction": "Candid documentary full shot of an indoor martial arts studio with a brick wall. In the foreground, the boy in the white uniform with a striped white belt (R2) sits cross-legged on the floor with his back to the camera. In the background, the man in the black uniform with a black belt (R6) performs a high side kick. The boy watches the man's demonstration. Bright natural light streams from the left, casting strong diagonal shadows across the grey floor.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 performs a high side kick as a martial arts demonstration while R2 watches",
+    "R2 is the seated observer rather than the person kicking",
+    "R6 is demonstrating in the background while R2 remains seated in the foreground",
+    "R2 sits cross-legged on the floor with his back to the camera",
+    "the scene is an indoor martial arts studio with a brick wall",
+    "strong diagonal shadows fall across the grey floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 performing the high side kick demonstration while R2 watches, rather than R2 performing the kick for R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 demonstrates the kick and R2 observes"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the seated cross-legged observer with his back to the camera, rather than R6 being the seated observer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seated watching while R6 demonstrates"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the martial arts participant actively executing the high side kick while R2 remains on the floor as the watcher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 actively kicks while R2 remains seated"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 sit cross-legged on the floor while watching R6's demonstration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's seated watching role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R6 hold a high side-kick body position as part of the demonstration for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6's kicking demonstration role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T27",
+  "instruction": "A candid action photograph, eye-level medium full shot, of two boxers in an open-air pavilion. On the left, the boxer in the beige t-shirt (R1) crouches in a defensive stance wearing black sweatpants and black boxing gloves. On the right, the boxer in the blue tank top (R2) is seen from behind in black shorts, facing his opponent. In the background on the left, a bystander in a patterned shirt walks past. Bright daylight illuminates the pavilion, casting soft shadows.",
+  "n_person": 3,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the boxer crouching in a defensive stance facing R2",
+    "R2 is the boxer seen from behind facing R1 as his opponent",
+    "R3 is a background bystander walking past rather than a boxer in the fight",
+    "R1 wears black boxing gloves for the boxing interaction",
+    "R1 and R2 are the two boxers squared off in an open-air pavilion",
+    "The scene is set in a bright open-air pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer crouching in a defensive stance toward R2, rather than R2 being the crouching defensive boxer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the crouching defensive boxer facing R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer seen from behind while facing R1 as his opponent, rather than R1 being the boxer seen from behind facing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is viewed from behind facing R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 walking past in the background as a bystander, rather than taking the boxer role of R1 or R2 in the confrontation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is a background bystander, not one of the two boxers"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 squared off as boxing opponents while R3 remains outside the fight as a passerby?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are the combat pair; R3 is not participating"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

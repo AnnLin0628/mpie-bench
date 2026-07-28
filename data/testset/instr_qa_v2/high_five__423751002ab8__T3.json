@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__423751002ab8__T3",
+  "instruction": "Candid corporate medium close-up in a bright office. The woman with dark brown hair in a dark blue blazer (R1) on the far left laughs in profile, extending her arm. In the center, the woman with curly dark hair in a black blazer (R4) and the woman with long dark brown hair in a black blazer (R3) laugh joyfully, looking up. On the right, the blonde woman in a teal top (R2) smiles in profile. They all hold their hands together in a high, celebratory stack in the center under bright indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the participant explicitly extending her arm into the high celebratory hand stack",
+    "R4 and R3 are the central participants laughing and looking up while joining the hand stack",
+    "R2 is the right-side participant smiling in profile while joining the shared hand stack",
+    "All four labeled people hold their hands together in one high central celebratory stack",
+    "The scene is a bright office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person explicitly extending her arm into the high celebratory hand stack, rather than R2 being the one explicitly described as extending her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the active arm-extending role into the shared hand stack"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R4 and R3 the central participants laughing and looking up while joining the stack, rather than R1 and R2 being described as the central laughing, looking-up pair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 and R3 occupy the central looking-up stack-joining role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 smiling in profile while joining the shared hand stack, rather than R2 taking R1's explicitly arm-extending role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's described role differs from R1's explicit arm-extension into the stack"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, R3, and R4 all have their hands together in a single high celebratory stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "All four labeled people participate in the same high hand stack"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

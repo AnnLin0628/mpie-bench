@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T24",
+  "instruction": "Cinematic video still, full shot. Viewed through the red padded ropes of a boxing ring, the woman in the black and orange jumpsuit (R1) stands on the left, facing right and holding up red focus mitts. The woman in the white sports bra and black leggings (R2) stands on the right in a slightly more upright stance with her back to the camera, throwing a punch with her black boxing glove. The background features dark hanging punching bags under cool overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds up red focus mitts to receive R2's punch",
+    "R2 throws a punch with a black boxing glove toward R1's mitts",
+    "R1 acts as the mitt holder while R2 acts as the puncher",
+    "red focus mitts are held by R1",
+    "a black boxing glove is used by R2 while punching",
+    "the interaction takes place inside a boxing ring viewed through red padded ropes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding up the red focus mitts to absorb R2's punch, rather than R2 holding mitts for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds up red focus mitts to receive R2's punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person throwing a punch with a boxing glove toward R1's mitts, rather than R1 punching toward mitts held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 throws a punch with a black boxing glove toward R1's mitts"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 serve as the pad holder while R2 serves as the boxer striking the pads?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 acts as the mitt holder while R2 acts as the puncher"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 using a black boxing glove while throwing the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a black boxing glove is used by R2 while punching"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the boxing interaction shown inside a ring viewed through red padded ropes?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction takes place inside a boxing ring viewed through red padded ropes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__81587386f444__T5",
+  "instruction": "Candid cinematic film still, medium shot at eye-level. In a misty outdoor courtyard with a yellow building, the dark-haired man in the navy suit (R1) on the left and the blonde man in the black velvet suit (R2) on the right are slow-dancing together. The dark-haired man (R1) smiles warmly, holding the blonde man's (R2) hand raised, while the blonde man's (R2) other hand rests on his waist. In the background, two blurred men in suits cheer, one holding a white bouquet. The scene is illuminated by soft, diffused daylight with a misty, warm yellow palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's hand raised during the slow dance",
+    "R2 has his other hand resting at a waist during the dance",
+    "R1 smiles warmly while guiding the raised-hand dance contact with R2",
+    "R1 and R2 are slow-dancing together in close hand contact",
+    "a white bouquet is held by a blurred man in the background",
+    "misty outdoor courtyard with a yellow building"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding R2's hand raised during the slow dance, rather than R2 holding R1's hand raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hand raised during the slow dance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one whose other hand rests at a waist during the dance, rather than R1 having that other-hand-at-waist role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has his other hand resting at a waist during the dance"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 slow-dancing together with their hands connected?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are slow-dancing together in close hand contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a white bouquet being held by a blurred man in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "a white bouquet is held by a blurred man in the background"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

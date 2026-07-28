@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T4",
+  "instruction": "A candid black and white photograph in a close-up shot. On an outdoor city embankment, the woman in the black cap and dark coat (R2) on the right embraces the man with curly hair (R1) on the left. The woman looks at the man with a gentle, affectionate smile, her arm wrapped around his shoulder. The man is positioned with his back partially to the camera, facing her. The soft, diffuse daylight from an overcast sky illuminates their faces, with a blurred background of the riverbank.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 embraces R1 with her arm around R1's shoulder",
+    "R2 looks at R1 with a gentle affectionate smile",
+    "R1 has his back partially to the camera while facing R2",
+    "R1 is the person being embraced by R2",
+    "outdoor city embankment with a blurred riverbank background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one embracing R1 with her arm wrapped around R1's shoulder, rather than R1 being the one with an arm wrapped around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 with her arm around R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking at R1 with a gentle, affectionate smile, rather than R1 being described as the one smiling affectionately at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs the affectionate smile toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned with his back partially to the camera while facing R2, rather than R2 having her back partially to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's back is partially to the camera as he faces R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person being embraced by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's embrace"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep close contact with R1 by wrapping her arm around his shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 maintains shoulder contact with R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

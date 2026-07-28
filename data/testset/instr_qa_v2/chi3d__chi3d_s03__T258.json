@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T258",
+  "instruction": "A candid documentary wide shot at eye-level captures an indoor motion capture studio with a red carpeted floor and dark red dividers. On the left, the woman in the white t-shirt and blue jeans (R2) stands with her back completely turned to the camera. On the right, the man in the black polo shirt and blue shorts (R1) stands facing left, extending his right arm to place his hand on the woman (R2)'s shoulder. The scene is illuminated by overhead fluorescent lighting, creating a warm-toned atmosphere against the dark red background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his right arm to place his hand on R2's shoulder",
+    "R2 is the person receiving R1's hand on her shoulder",
+    "R1 faces toward R2 while making shoulder contact",
+    "R2 has her back completely turned to the camera during the contact",
+    "indoor motion capture studio with red carpeted floor and dark red dividers"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his right arm to place his hand on R2's shoulder, rather than R2 placing her hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates shoulder contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the hand on her shoulder from R1, rather than R1 receiving a hand on his shoulder from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's shoulder touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing with her back completely turned to the camera while R1 touches her shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body orientation while receiving contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

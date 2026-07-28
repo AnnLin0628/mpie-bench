@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__1175fbbf26ed__T3",
+  "instruction": "Candid full-body photograph of a couple walking down a bright white clinic hallway. The woman in the black and white plaid shirt (R2) walks on the left, looking in the direction of the gesture. The man in the white t-shirt (R1) walks on the right, pointing forward and to the left with his right hand while holding her hand. Both wear blue shoe covers. Bright, even overhead indoor lighting illuminates the clean corridor, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 points forward and to the left with his right hand while holding R2's hand",
+    "R2 looks in the direction of R1's pointing gesture rather than making the pointing gesture herself",
+    "R1 and R2 walk together while holding hands",
+    "Both R1 and R2 wear blue shoe covers",
+    "The interaction takes place in a bright white clinic hallway"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one pointing forward and to the left with his right hand while holding R2's hand, rather than R2 being the one pointing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric pointing duty while hand-holding R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking toward the direction of R1's pointing gesture, rather than R1 looking toward a gesture made by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 visually follows R1's gesture"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together while holding each other's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are hand-holding while walking"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep one hand connected to R2 while using his other hand to point ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 combines hand-holding with a forward pointing gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

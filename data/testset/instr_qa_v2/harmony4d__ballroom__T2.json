@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__ballroom__T2",
+  "instruction": "A candid full shot of an indoor dance studio with a wooden floor. On the left, the man in the striped polo (R2) stands with his back to the camera in a dance stance. On the right, the woman in the red dress (R1) faces left, embracing him. They are practicing a dance routine. In the background, two bystanders are visible, including a woman in a red skirt on the right and another person on the left. Warm indoor lighting casts soft shadows across the wooden floor.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman facing left and embracing R2 during the dance practice",
+    "R2 is the man with his back to the camera in a dance stance while R1 embraces him",
+    "R1 and R2 are the main dance partners practicing together in contact",
+    "The scene is an indoor dance studio with a wooden floor",
+    "Background bystanders are visible behind the dancing pair"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner who faces left and embraces R2, rather than R2 being the one facing left and embracing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman facing left and embracing R2 during the dance practice"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner shown with his back to the camera while R1 embraces him, rather than R1 being the back-to-camera partner embraced by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man with his back to the camera in a dance stance while R1 embraces him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the dance practice, is R1 the visibly embracing partner and R2 the partner standing in the dance stance with his back turned to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric dance-embrace roles between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 remain in a dance stance while being embraced by R1 as part of the routine?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's dance-stance role while R1 embraces him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

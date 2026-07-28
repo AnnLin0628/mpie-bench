@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0a7a557716c5__T15",
+  "instruction": "Candid medium shot of an indoor celebration. In the center, the man in the gray shirt (R1) and the man with curly hair (R8) in a red polo shirt are locked in a warm embrace, with the curly-haired man smiling. To the right, the man with glasses (R4) in a white sweatshirt stands watching them with a happy expression. The man in the brown shirt (R5) is partially visible in the background. The room is decorated with balloons and bunting under bright, soft light.",
+  "n_person": 11,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11"
+  ],
+  "elements": [
+    "R1 and R8 form the central contact pair in a warm embrace",
+    "R4 watches R1 and R8 rather than joining the embrace",
+    "R5 is partially visible in the background rather than being the central contact partner",
+    "R8 smiles while embraced with R1",
+    "balloons and bunting decorate the room",
+    "the setting is an indoor celebration"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1 and R8 the central contact pair in the embrace, rather than R4 being part of that central contact pair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R8 are the embracing pair while R4 is not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R4 stand watching R1 and R8, rather than R1 or R8 standing aside as the watcher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the observer while R1 and R8 are the contact participants"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 partially visible in the background rather than being one of the two central people embracing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is a background figure, not the central embrace partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R8 locked together in a warm embrace at the center of the shot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R8 share the central body-contact configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

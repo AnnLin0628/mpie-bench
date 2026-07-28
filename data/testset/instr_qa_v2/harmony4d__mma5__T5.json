@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma5__T5",
+  "instruction": "A candid action photograph with a full shot of an indoor martial arts gym with gray mats. On the left, the man in the black and yellow athletic wear (R1) stands in a semi-crouched position, facing right. On the right, the man in the gray t-shirt (R2) balances on his right leg while executing a backward kick with his left leg. The man in black and yellow (R1) catches and holds the kicked leg of the man in the gray t-shirt (R2) with both hands. In the background, several blurred bystanders in athletic wear stand near gym equipment and tripods. The scene is illuminated by neutral overhead gym lighting, creating a cool gray color palette.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 catches and holds R2's kicked leg with both hands",
+    "R2 executes the backward kick while R1 receives and holds the kicked leg",
+    "R1 controls or supports R2's raised leg as R2 balances on one leg",
+    "R2 balances on his right leg with his left leg extended in a backward kick",
+    "R1 stands semi-crouched while facing R2 during the leg catch",
+    "indoor martial arts gym with gray mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 catching and holding R2's kicked leg with both hands, rather than R2 holding R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 catches and holds R2's kicked leg with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person executing the backward kick while R1 receives and holds the kicked leg, rather than R1 being the kicker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 executes the backward kick while R1 receives and holds it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 control or support R2's raised kicking leg while R2 balances on one leg, rather than R2 controlling R1's raised leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports or controls R2's raised leg as R2 balances"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing on his right leg with his left leg extended in a backward kick toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on one leg while kicking with the other"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set in an indoor martial arts gym with gray mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor martial arts gym with gray mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

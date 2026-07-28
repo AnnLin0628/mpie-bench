@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__3b38af71cfba__T5",
+  "instruction": "A clean studio portrait photograph, close-up shot at eye level against a plain white background. The dark-haired woman in a beige top (R2) on the left and the blonde woman in a white top (R1) on the right stand close together with their heads touching and eyes closed in a serene, intimate pose. Their arms cross in front of their chests as the blonde woman (R1) gently cradles the dark-haired woman's (R2) cheek with her hand, and the dark-haired woman (R2) cradles the blonde woman's (R1) cheek with her hand. Soft, even studio lighting illuminates their faces, creating a gentle, minimalist aesthetic with clean, neutral tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 gently cradles R2's cheek with her hand",
+    "R2 gently cradles R1's cheek with her hand",
+    "R1 and R2 have their heads touching with eyes closed",
+    "R1 and R2's arms cross in front of their chests during the cheek-cradling pose",
+    "the scene is a close-up studio portrait against a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 gently cradle R2's cheek with her hand, rather than R2 being the only one whose hand cradles the other's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently cradles R2's cheek with her hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 gently cradle R1's cheek with her hand, rather than R1 being the only one whose hand cradles the other's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gently cradles R1's cheek with her hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 cross their arms in front of their chests while each cradles the other's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2's arms cross in front of their chests during the cheek-cradling pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

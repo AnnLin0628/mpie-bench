@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__fa84740b4c7e__T2",
+  "instruction": "Candid documentary photograph, medium full shot. In a modern living room, the woman in the blue button-down shirt (R1) stands on the left, gesturing with her hands held low and palms up. Facing her, the man in the light green t-shirt (R2) stands on the right, gesturing with open hands, palms up, looking exasperated. They are locked in an intense discussion, framed by potted plants and a blue painting in the background under bright, natural light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gestures with her hands held low and palms up while facing R2",
+    "R2 gestures with open hands and looks exasperated while facing R1",
+    "R1 and R2 are engaged in an intense discussion rather than physical contact",
+    "R1 and R2 face each other during the discussion",
+    "modern living room with potted plants and a blue painting in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gesturing with her hands held low and palms up, rather than R2 being the one described with the low-held gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the low, palms-up gesturing role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking exasperated while gesturing with open hands, rather than R1 being the exasperated one?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the exasperated open-hand gesturing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face R2 while making a low palms-up gesture, while R2 faces R1 with open hands and an exasperated expression?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct opposing discussion gestures"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other in an intense discussion rather than making physical contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are discussion partners facing each other"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 visually responding to R1 with an exasperated open-handed gesture during the discussion?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 responds to R1 with an exasperated gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

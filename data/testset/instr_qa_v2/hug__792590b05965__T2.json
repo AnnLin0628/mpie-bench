@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__792590b05965__T2",
+  "instruction": "A candid lifestyle photograph in a medium full shot captures a couple in a bright indoor room with plants. In the foreground, the woman in the yellow shirt (R1) stands smiling happily, leaning her head back slightly. Directly behind her, the man in the blue t-shirt (R2) wraps his arms around her waist, looking down at her with a warm smile. The woman (R1) holds her arms crossed over his hands in a cozy embrace. Soft, natural side lighting illuminates the scene, highlighting the warm yellow and cool blue tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps his arms around R1's waist from directly behind her",
+    "R1 is the person in front leaning her head back while R2 stands behind her",
+    "R1 crosses her arms over R2's hands in the waist embrace",
+    "R2 looks down at R1 with a warm smile during the embrace",
+    "The scene is a bright indoor room with plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 wrapping his arms around R1's waist from behind, rather than R1 wrapping her arms around R2's waist from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms around R1's waist from directly behind her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing in front and leaning her head back while R2 is directly behind her, rather than R2 being in front leaning back with R1 behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person in front leaning her head back while R2 stands behind her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 cross her arms over R2's hands at her waist, rather than R2 crossing his arms over R1's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 crosses her arms over R2's hands in the waist embrace"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person holding R1 around the waist while standing directly behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps his arms around R1's waist from directly behind her"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person being held at the waist while smiling and leaning back in front of R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person in front leaning her head back while R2 stands behind her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

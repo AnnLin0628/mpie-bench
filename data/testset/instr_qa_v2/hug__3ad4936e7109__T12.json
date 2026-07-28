@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T12",
+  "instruction": "Candid studio photograph, close-up shot at eye-level with a shallow depth of field. In a minimalist indoor studio with a plain white background and blurred purple flowers in the foreground, three women are embraced in a tight hug. On the left, the woman with wavy light-brown hair (R3) in a white shirt smiles with her eyes closed. In the center, the woman with straight dark hair (R2) in a white top and denim jacket smiles gently with her eyes closed. On the right, the curly-haired woman (R1) in a white shirt smiles warmly. They are locked in a tight group hug, with the outer two women wrapping their arms around the center woman, leaning their heads together in a peaceful, affectionate moment. The lighting is bright and soft.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is an outer participant wrapping her arms around the center woman R2",
+    "R3 is an outer participant wrapping her arms around the center woman R2",
+    "R2 is the center woman being embraced by both R1 and R3",
+    "R1, R2, and R3 lean their heads together in a tight group embrace",
+    "minimalist indoor studio with a plain white background and blurred purple flowers in the foreground"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her arms around the center woman R2, rather than R2 being an outer woman wrapping around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is an outer participant wrapping her arms around R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 wrapping her arms around the center woman R2, rather than R2 being an outer woman wrapping around R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is an outer participant wrapping her arms around R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the central woman being embraced by both R1 and R3, rather than R2 being one of the two outer women embracing someone else in the center?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the center participant receiving the outer embrace from R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two outer participants who close in around R2 during the tight group embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 are the outer women around R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 lean their heads together while maintaining close arm contact in the group embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 lean their heads together in close contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

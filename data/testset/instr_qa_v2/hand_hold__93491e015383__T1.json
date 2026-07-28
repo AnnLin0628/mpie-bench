@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__93491e015383__T1",
+  "instruction": "Candid outdoor full-length photograph of a couple walking on a dirt path in a sunny autumn park. On the left, the woman in the long black coat (R1) walks forward in blue jeans and white sneakers, looking down. On the right, the man in the black puffer jacket (R2) walks beside her in black cargo pants and light sneakers. They hold hands, her left hand clasped in his right hand, as they stroll forward. The background features bare trees and soft sunlight. The scene is illuminated by warm, direct sunlight casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1's left hand is clasped in R2's right hand",
+    "R2's right hand is the hand holding R1's left hand",
+    "R1 and R2 walk forward beside each other while holding hands",
+    "R1 looks downward while walking with R2",
+    "R1 and R2 are on a dirt path in a sunny autumn park"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's left hand clasped in R2's right hand, rather than R1's right hand being clasped in R2's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1-left-hand to R2-right-hand contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 use his right hand to hold R1's left hand, rather than R1 using her right hand to hold R2's left hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right-hand holding role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "In the hand-holding contact, is R1 the person whose left hand is held while R2 is the person whose right hand holds it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric hand assignment between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward beside each other while their hands remain clasped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "walking-together hand-holding role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 looking down while walking forward with R2 and holding his hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's walking posture during contact with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

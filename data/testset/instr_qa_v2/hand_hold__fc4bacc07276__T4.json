@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc4bacc07276__T4",
+  "instruction": "A candid outdoor full shot from a low angle captures a romantic embrace. On the left, the woman in the white long-sleeved dress (R1) leans against a white stone wall. On the right, the man in the patterned short-sleeved shirt (R2) stands very close, holding her face gently as they lean in to kiss. The scene is set against a black ornate metal fence under bright daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 gently holds R1's face as they lean in to kiss",
+    "R1 is the person whose face is being held by R2",
+    "R1 leans against a white stone wall while R2 stands close to her",
+    "white stone wall contacted by R1",
+    "black ornate metal fence in bright daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 gently holding R1's face as they lean in to kiss, rather than R1 holding R2's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gently holds R1's face as they lean in to kiss"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose face is being held gently by R2, rather than R2 being the one whose face is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose face is being held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning against the white stone wall while R2 stands very close to her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans against a white stone wall while R2 stands close to her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 leaning in toward each other for a kiss while R2 maintains the face-holding contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 maintains face-holding contact as both lean in to kiss"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T8",
+  "instruction": "Candid action photograph, full shot, eye-level. Inside a karate dojo with yellow walls, red and blue floor mats, and wall-mounted swords, two martial artists practice self-defense. On the left, the man in the black uniform with white stripes (R1) faces right, throwing a high right-hand strike. On the right, the woman in the black uniform with a red belt (R2) stands facing left, raising her left forearm overhead to block his strike. Bright overhead lighting illuminates the scene, casting soft shadows on the vibrant mats.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 throws a high right-hand strike toward R2",
+    "R2 raises her left forearm overhead to block R1's strike",
+    "R1 is the attacker while R2 is the defender/blocker in the self-defense drill",
+    "the martial artists practice on red and blue floor mats",
+    "the scene is inside a karate dojo with wall-mounted swords"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing a high right-hand strike toward R2, rather than R2 throwing the strike toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the striker and R2 is the target/defender"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 raising her left forearm overhead to block R1's strike, rather than R1 blocking a strike from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the blocking duty against R1's strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1's right hand serve as the attacking limb while R2's raised forearm serves as the defensive blocking limb?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 attacks with the right hand while R2 blocks with the forearm"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 acting as the attacker and R2 acting as the defender in the self-defense practice?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "attacker versus defender roles are assigned to R1 and R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's forearm positioned overhead in response to R1's high strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's blocking body configuration responds to R1's strike"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

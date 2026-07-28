@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__0920a8a99499__T1",
+  "instruction": "A clean cinematic still shot at eye-level shows a modern office interior with a large floor-to-ceiling window. On the left, the woman in the beige belted dress (R1) stands in profile facing right with a gentle smile. On the right, the woman with curly hair in the olive green shirt (R2) stands facing her. The two women clasp their right hands in a firm handshake in the center of the frame. Soft, diffused daylight streams through the window, illuminating the scene with a natural color palette of beige, green, and grey tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman shown in profile during the handclasp with R2",
+    "R2 stands facing R1 during the handclasp",
+    "R1 and R2 clasp each other's right hands",
+    "the handshake contact occurs between R1 and R2 at the center of the frame",
+    "the scene is a modern office interior with a large floor-to-ceiling window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman shown in profile while clasping R2's hand, rather than R2 being the woman shown in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the profile-positioned participant in the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman standing face-to-face with the profile-view R1 during their handclasp, rather than R1 being described as the one facing a profile-view R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces the profile-view R1 during the handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 extend her right hand to clasp R2's right hand, rather than using a different hand to make contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand is the contact hand clasping R2's right hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face one another while their hands meet in the center of the frame?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other with central hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__6eaf0296a8da__T1",
+  "instruction": "Candid outdoor photograph, full shot. On an outdoor cobblestone path next to a rustic stone wall with green foliage, the man in the brown fedora and white shirt (R1) walks to the left in the foreground, holding a silver saxophone in his hands. Slightly behind him on the left, the smiling woman in the polka-dot dress (R2) walks along, looking towards him. Natural daylight illuminates the scene with warm tones and soft shadows, highlighting their joyful expressions as they move together.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries the silver saxophone in his hands rather than R2 carrying it",
+    "R2 walks slightly behind R1 and looks toward him rather than R1 walking behind R2",
+    "R1 is in the foreground while R2 follows slightly behind him",
+    "silver saxophone held by R1",
+    "outdoor cobblestone path next to a rustic stone wall with green foliage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the silver saxophone in his hands rather than R2 holding it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the silver saxophone instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 walking slightly behind R1 and looking toward him, rather than R1 walking slightly behind R2 and looking toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 follows and looks toward R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look toward R1 as they walk together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's gaze is directed toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

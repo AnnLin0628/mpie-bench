@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T301",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and white walls. The man in the black polo shirt and blue shorts (R1) stands on the left, facing right, leaning forward to touch the shoulder of the woman in the white t-shirt and blue jeans (R2), who stands on the right facing away from the camera. Overhead fluorescent lights illuminate the room, casting soft shadows on the carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans forward to touch R2's shoulder",
+    "R2 is the recipient of R1's shoulder touch",
+    "R1 initiates contact while R2 faces away from the camera",
+    "R1 and R2 are in an indoor motion capture studio",
+    "The studio has a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward to touch R2's shoulder, rather than R2 leaning forward to touch R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the shoulder touch on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose shoulder is being touched by R1, rather than R1 being the person whose shoulder is being touched by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 make contact with R2 while R2 faces away from the camera, rather than R2 making contact with R1 while R1 faces away?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 contacts R2 as R2 faces away"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the toucher and R2 the recipient in the shoulder-touch interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct toucher versus recipient roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning forward toward R2 to make the shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body posture is leaning forward toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

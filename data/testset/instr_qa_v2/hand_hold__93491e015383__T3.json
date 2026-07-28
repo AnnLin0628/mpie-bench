@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__93491e015383__T3",
+  "instruction": "Candid outdoor medium photograph of a couple walking on a park path. On the left, the woman in the long black coat (R1) walks forward in blue jeans, looking down with sunglasses on her head. On the right, the man in the black puffer jacket (R2) walks beside her, looking down in her direction. They hold hands, fingers intertwined, as they stroll. The background consists of sunlit autumn trees. Warm afternoon sunlight bathes the scene, creating soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman walking forward while holding hands with R2",
+    "R2 is the man walking beside R1 and looking down in R1's direction",
+    "R1 and R2 hold hands with their fingers intertwined as they stroll",
+    "R1 has sunglasses on her head while walking with R2",
+    "The couple is on a park path with sunlit autumn trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking down in R1's direction while they walk hand in hand, rather than R1 looking down in R2's direction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs his gaze down toward R1 during the hand-holding walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman with sunglasses on her head holding hands with R2, rather than R2 being the person with sunglasses on his head holding hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the sunglasses-wearing partner in the hand-holding pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together with their fingers intertwined in a hand hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 share an intertwined hand-holding contact while strolling"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking beside R1 while maintaining the hand-holding contact with her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks beside R1 as her hand-holding partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

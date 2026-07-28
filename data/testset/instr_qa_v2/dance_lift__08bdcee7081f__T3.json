@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__08bdcee7081f__T3",
+  "instruction": "A candid outdoor photograph captures a dramatic partner balance. On beige concrete blocks under a cloudy blue sky, the woman in the black crop top and denim shorts (R1) balances on the thigh of the man in the black t-shirt and blue jeans (R2). She extends her right leg horizontally, resting her foot against his shoulder. Both individuals have their arms outstretched to the sides for balance without holding hands. The eye-level full shot highlights their poise in bright, natural daylight with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 balances on R2's thigh in a partner balance",
+    "R2 serves as the base supporting R1 rather than being balanced on her",
+    "R1 rests her foot against R2's shoulder",
+    "R1 extends her right leg horizontally while balancing",
+    "R1 and R2 keep their arms outstretched to the sides without holding hands",
+    "the pair is positioned on beige concrete blocks",
+    "the scene is outdoors under a cloudy blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on R2's thigh, rather than R2 balancing on R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances on R2's thigh in a partner balance"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 act as the supporting base for R1's balance, rather than R1 acting as the supporting base for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 serves as the base supporting R1 rather than being balanced on her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's foot resting against R2's shoulder, rather than R2's foot resting against R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her foot against R2's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person extending her right leg horizontally while maintaining the balance pose on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends her right leg horizontally while balancing"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 both keep their arms outstretched to the sides for balance without holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 keep their arms outstretched to the sides without holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

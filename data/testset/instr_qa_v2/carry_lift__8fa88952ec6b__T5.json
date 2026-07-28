@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__8fa88952ec6b__T5",
+  "instruction": "Candid full shot of a couple jumping on a white mattress in a pine forest. On the left, the woman in the light blue short-sleeved shirt and shorts (R1) jumps with bent knees, smiling in profile. On the right, the man in the white t-shirt and light blue pants (R2) jumps with legs spread, laughing. They face each other, holding both hands. Soft, diffused daylight illuminates the scene, highlighting the natural green and brown forest tones against the white bedding.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the jumper with bent knees while holding hands with R2",
+    "R2 is the jumper with legs spread while holding hands with R1",
+    "R1 and R2 face each other and hold both hands during the jump",
+    "R1 and R2 are jumping on a white mattress",
+    "white bedding is visible under the pair",
+    "the scene is set in a pine forest"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person jumping with bent knees while holding hands with R2, rather than R2 being the bent-knee jumper?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the bent-knee jumper in the hand-holding interaction"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person jumping with legs spread while holding hands with R1, rather than R1 being the legs-spread jumper?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the legs-spread jumper in the hand-holding interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while holding both of each other's hands as they jump?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other and hold both hands during the jump"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

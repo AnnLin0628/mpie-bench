@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__13f946740acf__T1",
+  "instruction": "Candid close-up photograph of a couple sharing an intimate moment in a sunny outdoor park. On the left, the man with curly gray hair (R1) is shown in profile, kissing his partner with his eyes closed. On the right, the woman with a dark ponytail (R3) wearing a brown leather jacket leans in, cradling the man's (R1) head and neck with her hands. Warm, backlit sunlight filters through the autumn trees, creating a soft, hazy glow and highlighting dry leaves in the foreground.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 cradles R1's head and neck with her hands",
+    "R1 is the partner being held by the head and neck while kissing",
+    "R3 leans in toward R1 during the intimate contact",
+    "R1 is shown in profile with his eyes closed while kissing R3",
+    "The couple is in a sunny outdoor park with warm backlit autumn trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 cradle R1's head and neck with her hands, rather than R1 cradling R3's head and neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 cradles R1's head and neck with her hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose head and neck are being held by R3 during the kiss, rather than R3 being held this way by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partner being held by the head and neck while kissing"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 lean in toward R1 while holding his head and neck, rather than R1 leaning in while holding R3's head and neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans in toward R1 during the intimate contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 shown in profile with his eyes closed while kissing R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is shown in profile with his eyes closed while kissing R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T29",
+  "instruction": "Candid outdoor photograph, medium shot. In a sunny park with green trees, four children stand side-by-side in a friendly huddle. On the far left, the boy with glasses in a yellow t-shirt (R1) stands facing forward with a neutral expression. Next to him, the girl with curly hair in a brown dress and white cardigan (R3) looks forward. Beside her, the boy in a blue denim shirt (R5) smiles warmly. On the far right, the girl with dark hair and bangs in a striped dress and dark cardigan (R4) smiles broadly. They have their arms wrapped around each other's shoulders. Warm, bright sunlight filters through the trees from behind, creating a soft backlighting effect.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R3 is the shoulder-huddle connector directly between R1 and R5, rather than R1 being between R3 and R5.",
+    "R5 is the shoulder-huddle connector directly between R3 and R4, rather than R4 being between R3 and R5.",
+    "R1 is an outside member of the shoulder huddle whose contact is with R3, rather than R3 being the outside member contacting only R1.",
+    "R1, R3, R5, and R4 stand side-by-side with arms wrapped around neighboring shoulders.",
+    "The group is in a sunny park with green trees."
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the child directly between R1 and R5 in the shoulder huddle, with shoulder contact to neighboring children, rather than R1 being between R3 and R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the shoulder-huddle connector directly between R1 and R5, rather than R1 being between R3 and R5."
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the child directly between R3 and R4 in the shoulder huddle, with shoulder contact to neighboring children, rather than R4 being between R3 and R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the shoulder-huddle connector directly between R3 and R4, rather than R4 being between R3 and R5."
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 an outside member of the huddle whose shoulder contact is with R3, rather than R3 being the outside member contacting only R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is an outside member of the shoulder huddle whose contact is with R3, rather than R3 being the outside member contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R3, R5, and R4 stand side-by-side with their arms wrapped around neighboring shoulders in a friendly huddle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R3, R5, and R4 stand side-by-side with arms wrapped around neighboring shoulders."
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

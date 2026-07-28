@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T20",
+  "instruction": "Candid documentary photograph of a sparring session in a misty gym. On the left, the man in the black graphic t-shirt (R1) stands in a boxing stance, facing right with a focused gaze. In the foreground on the right, the man in the black athletic shirt and leggings (R2) stands with his back to the camera, also in a boxing stance. The background is filled with soft white mist under cool, diffused lighting on a white floor.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the sparring participant facing right with a focused gaze, while R2 is shown from behind",
+    "R2 is the foreground sparring participant with his back to the camera, rather than R1",
+    "R1 stands in a boxing stance facing toward R2",
+    "R2 stands in a boxing stance with his back to the camera",
+    "The sparring session takes place in a misty gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer shown facing right with a focused gaze, rather than R2 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the sparring participant facing right with a focused gaze, while R2 is shown from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the foreground boxer shown with his back to the camera, rather than R1 being the foreground boxer turned away?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground sparring participant with his back to the camera, rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 also in a boxing stance while turned with his back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in a boxing stance with his back to the camera"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__18c9492fd49d__T9",
+  "instruction": "A candid documentary photograph with a shallow depth of field, captured in a medium shot at eye-level. On an outdoor wooden boardwalk with a metal railing, backed by a dense forest of green trees, two men are embracing. On the left, the man in the orange t-shirt (R2) stands facing right, hugging the man in the grey t-shirt (R4) who stands on the right facing left with his back to the camera. The warm embrace is captured in soft, natural daylight filtering through the trees, creating a sun-drenched and affectionate atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the man described as hugging R4",
+    "R4 is the man being hugged by R2 while his back is to the camera",
+    "R2 faces toward R4 during the embrace",
+    "R4 faces toward R2 during the embrace while turned away from the camera",
+    "The interaction takes place on an outdoor wooden boardwalk with a metal railing"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the man receiving R2's embrace with his back to the camera, rather than R2 being the back-to-camera recipient?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the man being hugged by R2 while his back is to the camera"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face toward R4 during their close embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces toward R4 during the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 face toward R2 while his back is turned to the camera during the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 faces toward R2 during the embrace while turned away from the camera"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R2 and R4 embracing on an outdoor wooden boardwalk with a metal railing?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "The interaction takes place on an outdoor wooden boardwalk with a metal railing"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "asymm_lt_2"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__19f2c5ee0c1c__T2",
+  "instruction": "A candid cinematic medium shot inside a restaurant decorated with hanging plants and warm lights. On the left, the man with dreadlocks in the dark suit (R2) stands in profile facing right, smiling. On the right, the bearded man in the black suit (R1) stands facing left, smiling warmly. They shake right hands in the center, while the bearded man (R1) holds a small black folder in his left hand. The background is softly blurred with warm pendant lights and natural light coming from a window on the right.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a small black folder in his left hand while clasping R2's right hand",
+    "R2 participates in the right-hand clasp without holding the folder",
+    "R1 and R2 face each other while their right hands meet in the center",
+    "small black folder held by R1",
+    "restaurant interior with hanging plants and warm lights"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the small black folder in his left hand while clasping R2's right hand, rather than R2 holding the folder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the folder-holding participant during the hand contact"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 keep his left hand occupied with the small black folder while his right hand meets R2's right hand, rather than R2 having his left hand occupied with the folder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's non-contact hand holds the folder while the right hands meet"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the participant whose right hand is clasped by R1's right hand while R1 holds the folder separately?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is the right-hand counterpart to R1's folder-holding role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

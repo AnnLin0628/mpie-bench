@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__097f6c255771__T2",
+  "instruction": "Cinematic film still, low-angle close-up. In a bright indoor dance studio, the woman in the purple top (R1) stands on the right, her right arm extended forward and leg raised. Behind her, the man in the black top (R2) supports her waist with both hands. Soft daylight from a large window illuminates the scene, highlighting their focused expressions.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1's waist with both hands while R1 performs the dance pose",
+    "R1 is the supported dancer with her arm extended and leg raised, rather than the supporter",
+    "R2 is positioned behind R1 and stabilizes her from the waist",
+    "R1 holds an extended-limb dance pose while R2 provides physical support",
+    "bright indoor dance studio with daylight from a large window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1's waist with both hands, rather than R1 supporting R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1's waist with both hands while R1 performs the dance pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer being physically stabilized while R2 is the one providing support from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the supported dancer with her arm extended and leg raised, rather than the supporter"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place both hands on R1's waist to support her pose, rather than R1 placing both hands on R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned behind R1 and stabilizes her from the waist"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding a dance pose with an arm extended forward and a leg raised while R2 supports her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds an extended-limb dance pose while R2 provides physical support"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

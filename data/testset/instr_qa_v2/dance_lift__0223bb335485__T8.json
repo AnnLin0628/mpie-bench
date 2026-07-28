@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__0223bb335485__T8",
+  "instruction": "Cinematic medium close-up vertical shot in a classical ballet studio. On the left, the blonde ballerina (R2) in a white leotard is shown in profile, smiling gently. In the background on the right, the dark-haired ballerina (R1) in a white leotard and sheer skirt stands holding the barre, looking downward. Soft, natural light fills the space, highlighting the clean white columns.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the ballerina holding the barre and looking downward",
+    "R2 is the ballerina shown in profile and smiling gently",
+    "R1 interacts with the barre while R2 is not described as holding it",
+    "R1 stands at the barre while R2 is separately posed in profile",
+    "a ballet barre is present",
+    "the scene is a classical ballet studio with white columns"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the ballerina holding the barre and looking downward, rather than R2 holding the barre and looking downward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the ballerina holding the barre and looking downward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballerina shown in profile and smiling gently, rather than R1 being the one shown in profile and smiling gently?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the ballerina shown in profile and smiling gently"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 interact with the barre while R2 is not described as holding the barre?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 interacts with the barre while R2 is not described as holding it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand at the barre while R2 is separately posed in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands at the barre while R2 is separately posed in profile"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

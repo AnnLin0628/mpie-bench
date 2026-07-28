@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T141",
+  "instruction": "Candid documentary photograph, wide shot, high angle. In an indoor motion capture studio with a red carpet, the man in the black polo shirt and blue shorts (R1) stands on the right, facing left, and touches the chest of the woman in the white t-shirt and blue jeans (R2) with his left hand. The woman stands on the left, facing right, looking at him. Neutral overhead lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 touches R2's chest with his left hand",
+    "R2 receives the chest touch from R1",
+    "R1 initiates the hand-to-chest contact rather than R2",
+    "R2 faces and looks at R1 while being touched",
+    "indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one touching R2's chest, rather than R2 touching R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates chest contact on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 receive the chest touch from R1, rather than R1 receiving a chest touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's chest touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 using his left hand to make contact with R2's chest, rather than R2 using her hand to touch R1's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's left hand contacts R2's chest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

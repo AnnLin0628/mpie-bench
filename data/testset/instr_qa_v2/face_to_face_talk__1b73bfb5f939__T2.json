@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__1b73bfb5f939__T2",
+  "instruction": "Candid lifestyle photograph, medium shot. In a cozy indoor living room with a white brick wall and hanging plants, the woman with curly dark hair in a beige fleece jacket (R1) sits on the left, gesturing with her hand raised while speaking. On the right, the woman with her hair in a bun wearing a striped sweater (R2) sits facing her, gesturing with a raised hand in motion. The two women sit side-by-side, actively conversing and gesturing. Bright, soft natural light illuminates the scene, creating a warm, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman described as speaking while raising her hand to gesture",
+    "R2 is the woman described as facing R1 and gesturing with a raised hand in motion",
+    "R1 and R2 sit side-by-side while actively conversing and gesturing",
+    "R2 remains oriented toward R1 during the conversation",
+    "The scene is a cozy indoor living room with a white brick wall and hanging plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person described as speaking while raising her hand to gesture, rather than R2 being described as the speaker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the speaker with a raised-hand gesture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person described as facing R1 while gesturing with a raised hand in motion, rather than R1 being described in that facing-gesture role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while gesturing with a raised hand in motion"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 gesture with a raised hand as she talks to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises a hand while speaking to R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

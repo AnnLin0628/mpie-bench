@@ -1,0 +1,71 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__1e374549203d__T1",
+  "instruction": "A candid office photograph in a medium shot shows a modern workspace with computers and a whiteboard. On the left, the woman in the white shirt (R2) sits in her office chair, facing right with a joyful laugh. On the right, the man in the white shirt (R1) sits facing left, smiling warmly. The two colleagues are actively celebrating a success by high-fiving each other, their raised hands meeting in the center of the frame. The scene is illuminated by bright, even indoor office lighting, creating a warm, collaborative atmosphere with soft shadows.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 actively raises his hand to meet R2's raised hand in a high-five",
+    "R2 actively raises her hand to meet R1's raised hand in a high-five",
+    "R1 and R2 sit facing each other while celebrating",
+    "R2 sits in an office chair during the interaction",
+    "the setting is a modern office workspace with computers and a whiteboard"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 seated in her office chair while high-fiving R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits in an office chair during the interaction"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": true
+  }
+}

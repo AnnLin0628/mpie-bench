@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "high_five__575db246ae0e__T1",
+  "instruction": "Candid medium shot in a bright office. The man in the black t-shirt and beanie (R1) stands in the center, laughing heartily. On the right, the woman in the plaid blazer (R3) smiles in profile. They join their hands in a central huddle with others at the bottom left. Bright, even indoor lighting.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R1 is the central laughing participant whose hand joins the group huddle",
+    "R3 is the smiling profile participant whose hand joins the group huddle",
+    "R1 and R3 both make hand contact in the central huddle with the other people",
+    "the interaction is a shared joined-hands team huddle",
+    "the scene is a bright office"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the central laughing participant joining a hand into the group huddle, rather than R3 being the central laughing participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the central laughing participant whose hand joins the group huddle"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the smiling participant seen in profile while joining the central hand huddle, rather than R1 being the smiling profile participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the smiling profile participant whose hand joins the group huddle"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 participate from the center of the joined-hands huddle while R3 participates from the side in profile, rather than those two contact positions being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 have distinct contact positions in the shared hand huddle"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the hand huddle take place in a bright office setting?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene is a bright office"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "high_five",
+    "used_fallback": false
+  }
+}

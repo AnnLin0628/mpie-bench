@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__bb04d9817a3b__T1",
+  "instruction": "Candid medium-shot documentary photograph of an indoor room with decorative wall tiles. On the left, the curly-haired woman in the white blouse (R1) stands in profile, gesturing with open hands. Facing her on the right, the straight-haired woman in the black blazer (R2) also gestures with open hands. They smile warmly at each other in mid-conversation. The scene is illuminated by bright, natural indoor light, creating a soft and welcoming atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the curly-haired woman standing in profile and gesturing with open hands",
+    "R2 is the straight-haired woman facing R1 and also gesturing with open hands",
+    "R1 and R2 smile warmly at each other during a mid-conversation exchange",
+    "R1 and R2 are in an indoor room with decorative wall tiles",
+    "the scene is lit by bright natural indoor light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman standing in profile and gesturing with open hands, rather than R2 being the one standing in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile with open-hand gestures"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman facing R1 while gesturing with open hands, rather than R1 being the one who faces the other from the front?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while gesturing"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned in profile toward R2 while R2 stands opposite her during their conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct facing orientations in conversation"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both using open-hand gestures as they converse with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "both R1 and R2 gesture with open hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

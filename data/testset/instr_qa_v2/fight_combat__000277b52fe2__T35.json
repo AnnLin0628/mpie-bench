@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T35",
+  "instruction": "Cinematic full shot of an indoor martial arts gym with a red wall mural. In the foreground right, the man in the black t-shirt and shorts (R1) stands in a sparring stance, facing left. In the background center, the man in the patterned rash guard (R4) stands in a fighting pose, while the man in the black 'GLORY' shorts (R2) moves in the background right. In the foreground left, a bystander in a black t-shirt and leggings spars with R1. Cool overhead light and a hazy atmosphere fill the training space.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the foreground fighter sparring with R3",
+    "R3 is the bystander sparring partner engaging R1",
+    "R4 holds a fighting pose while R2 is moving in the background",
+    "R1 stands in a sparring stance facing toward his sparring partner",
+    "the scene is an indoor martial arts gym with a red wall mural"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the foreground fighter who spars with R3, rather than R2 being the fighter sparring with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the foreground fighter sparring with R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the man holding a fighting pose in the background while R2 is the man moving in the background, rather than their roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds a fighting pose while R2 is moving in the background"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face toward R3 in a sparring stance, rather than R3 being described as the main foreground fighter facing R1 in that stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in a sparring stance facing toward his sparring partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 the bystander sparring partner who engages with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the bystander sparring partner engaging R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set inside a martial arts gym with a red wall mural?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene is an indoor martial arts gym with a red wall mural"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

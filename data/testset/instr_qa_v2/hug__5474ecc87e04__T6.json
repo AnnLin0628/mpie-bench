@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5474ecc87e04__T6",
+  "instruction": "A candid portrait photograph in a medium close-up shot against a plain light grey wall. On the left, the woman with dark curly hair (R1) wearing a dusty pink velvet jacket stands with her body turned away, looking back over her shoulder at the camera with a soft smile. On the right, the woman with straight brown hair (R3) in a blue and orange striped shirt leans her head back against R1's head, smiling widely with teeth showing as she looks upwards. They pose back-to-back with their heads touching. Soft, natural side lighting fills the frame, enhancing the warm, joyful atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 leans her head back against R1's head rather than R1 leaning back against R3",
+    "R1 looks back over her shoulder toward the camera while R3 looks upward",
+    "R1 and R3 pose back-to-back with their heads touching",
+    "R1 stands with her body turned away while maintaining the head contact pose",
+    "plain light grey wall setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one leaning her head back against R1's head, rather than R1 leaning her head back against R3's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans her head back against R1's head rather than R1 leaning back against R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking back over her shoulder toward the camera while R3 looks upward, rather than those gaze roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks back over her shoulder toward the camera while R3 looks upward"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand with her body turned away while keeping contact with R3 through their touching heads?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands with her body turned away while maintaining the head contact pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

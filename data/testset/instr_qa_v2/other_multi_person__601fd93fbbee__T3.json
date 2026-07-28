@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__601fd93fbbee__T3",
+  "instruction": "Candid documentary photograph, medium full shot. In a sunny outdoor park with a suspension bridge in the background, the woman with reddish-orange hair (R2) wearing a black off-the-shoulder crop top and grey pants dances in side profile, smiling happily. Behind her on the left, the man in the striped shirt (R4) stands on the grass, watching her dance with a smile. A cropped hand of an unseen bystander is visible on the far right. Bright natural daylight illuminates the scene, highlighting the warm tones of the afternoon.",
+  "n_person": 6,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R2 is the dancer while R4 watches her",
+    "R4 is the observer of R2's dance rather than the performer",
+    "R2 smiles while dancing in side profile",
+    "R4 stands on the grass watching R2 dance",
+    "the scene is a sunny outdoor park with a suspension bridge in the background",
+    "a cropped hand of an unseen bystander appears at the far edge"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person dancing while R4 watches her, rather than R4 dancing while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer and R4 is the watcher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 acting as an observer of R2's dance, rather than R2 acting as an observer of R4's dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 watches R2 perform"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 shown dancing in side profile with a happy smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances happily in side profile"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 standing on the grass and watching R2 dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 stands and watches R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T22",
+  "instruction": "Candid documentary photograph, low-angle medium full shot. Inside a judo dojo on yellow tatami mats, the woman in the blue judo gi (R1) on the left executes a dramatic throw on the young man in the white judo gi (R2). The woman stands firmly, leaning forward and holding the young man's arm to control his descent. The young man is captured mid-fall, landing on his back with his legs kicked high into the air. Soft indoor lighting illuminates the action, highlighting the texture of the mats.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 executes a dramatic judo throw on R2",
+    "R1 holds R2's arm to control R2's descent",
+    "R2 is mid-fall onto his back with legs kicked high while R1 remains standing",
+    "R1 leans forward and stands firmly during the throw",
+    "R2 is falling onto yellow tatami mats",
+    "The action takes place inside a judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 executing the judo throw on R2, rather than R2 throwing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the thrower and R2 is the person being thrown"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's arm to control R2's descent, rather than R2 holding R1's arm to control her descent?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls R2's fall by holding his arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one landing on his back with legs kicked high while R1 remains standing, rather than R1 being the one landing that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the falling person while R1 stays upright"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand firmly and lean forward as she performs the throw on R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body role is the stable, forward-leaning thrower"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

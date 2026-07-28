@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__a32b12070278__T1",
+  "instruction": "A candid documentary photograph in a medium shot. Indoors on a brown fabric sofa next to a window with green plants, the blonde woman in the black top and white pants (R1) sits facing right, extending her right arm to touch the forehead of the woman with long curly dark hair in a checkered shirt and denim shorts (R2). The curly-haired woman (R2) sits cross-legged on the right, facing left, calmly receiving the touch. Soft natural daylight illuminates the scene with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends her right arm to touch R2's forehead",
+    "R2 calmly receives the forehead touch from R1",
+    "R1 is the active toucher while R2 is the recipient",
+    "R2 sits cross-legged while receiving the touch from R1",
+    "both R1 and R2 are seated on a brown fabric sofa",
+    "the scene is indoors next to a window with green plants"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending her right arm to touch R2's forehead, rather than R2 extending her arm to touch R1's forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 actively touches R2's forehead"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 calmly receiving the forehead touch from R1, rather than R1 receiving a forehead touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's forehead touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 sit cross-legged while receiving R1's touch on her forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits cross-legged as the touch recipient"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

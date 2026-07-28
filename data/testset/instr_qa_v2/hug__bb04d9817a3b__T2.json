@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__bb04d9817a3b__T2",
+  "instruction": "Candid medium-shot documentary photograph of an indoor room with decorative wall tiles. On the left, the curly-haired woman in the white blouse (R1) stands in profile, reaching her arms forward. On the right, the straight-haired woman in the black blazer (R2) faces her, extending her arms to initiate a warm embrace. The two women smile as they step closer together. The scene is captured with bright, natural indoor light and soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her arms toward R1 to initiate the warm embrace",
+    "R1 stands in profile and reaches her arms forward toward R2",
+    "R2 faces R1 while initiating the embrace",
+    "R1 and R2 step closer together with arms extended toward each other",
+    "The interaction occurs in an indoor room with decorative wall tiles"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person extending her arms to initiate the warm embrace with R1, rather than R1 being described as the initiator?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the embrace toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman standing in profile and reaching her arms forward toward R2, while R2 faces R1 to initiate the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in profile reaching forward while R2 faces her"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 with arms extended as part of starting the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 and extends her arms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 reach her arms forward toward R2 as they move closer together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reaches forward toward R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

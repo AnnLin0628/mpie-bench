@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__ece68b23998b__T3",
+  "instruction": "Candid documentary photograph, medium close-up at eye-level with a shallow depth of field. On a warm outdoor patio, the woman in the grey long-sleeve shirt (R1) on the left smiles warmly with closed eyes, facing the young woman in the floral dress (R2) on the right. The young woman (R2) faces left, smiling softly with her gaze cast downward. The woman (R1) maintains a close embrace, keeping her right hand placed gently on the young woman's (R2) shoulder. The lighting is warm and natural, casting soft shadows and enhancing the tender, emotional mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places her right hand gently on R2's shoulder",
+    "R1 maintains the close embrace with R2",
+    "R2 faces R1 while receiving R1's shoulder contact",
+    "R1 smiles with closed eyes while facing R2",
+    "R2 smiles softly with her gaze cast downward",
+    "warm outdoor patio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person placing her right hand gently on R2's shoulder, rather than R2 placing her right hand on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hand-on-shoulder contact duty toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 described as maintaining the close embrace with R2, rather than R2 being described as maintaining the close embrace with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 maintains the embrace role toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 while R1's hand rests on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's shoulder contact while facing R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 with closed eyes and a warm smile during the shoulder contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's facial expression and orientation during contact with R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

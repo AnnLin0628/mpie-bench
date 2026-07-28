@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__87e78b8e411b__T3",
+  "instruction": "Candid documentary medium shot of a cozy indoor living room. On a yellow couch, the person with short curly hair and glasses (R1) sits on the right, gesturing with their right hand while speaking and looking at R2. On the left, the person with short dark hair in the green sweatshirt (R2) holds a document and looks back at R1, listening attentively. They sit side-by-side over a wooden coffee table in the foreground holding a laptop and a cup of black coffee. Warm, soft indoor lighting illuminates the scene with natural tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 speaks while gesturing with their right hand as R2 listens",
+    "R2 holds the document and listens attentively to R1 rather than speaking",
+    "R1 and R2 sit side-by-side on a yellow couch during the conversation",
+    "R2 holds a document",
+    "A laptop and a cup of black coffee sit on the wooden coffee table",
+    "Cozy indoor living room with warm soft lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one speaking and gesturing with their right hand while R2 listens, rather than R2 speaking and gesturing while R1 listens?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 speaks while gesturing as R2 listens"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the document and listening attentively to R1, rather than R1 holding the document and listening to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the document and listens attentively to R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look toward R2 while gesturing with their right hand during the conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks at R2 and gestures while speaking"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look back at R1 with an attentive listening posture while holding the document?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks back at R1 and listens attentively"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a document during the conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a document"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

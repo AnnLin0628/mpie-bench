@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma3__T3",
+  "instruction": "Candid action photograph, full shot. Inside a gym with grey padded walls and a circular logo, the shirtless man with a mullet (R2) is positioned on the right with his back to the camera, lunging forward in a wide stance to throw a punch. On the left, the man in the black t-shirt (R1) stands facing him defensively, wearing white shin guards and black gloves. Both fighters wear protective eyewear. The background features camera tripods against the wall, with no bystanders present. The scene is illuminated by flat, overhead gym lighting.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lunges forward in a wide stance to throw a punch at R1",
+    "R1 stands defensively facing R2 while R2 attacks",
+    "R2 has his back to the camera during the punch while R1 faces him",
+    "R1 wears black gloves as fighting protective gear",
+    "both R1 and R2 wear protective eyewear",
+    "the scene is inside a gym with grey padded walls and a circular logo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lunging forward in a wide stance to throw a punch at R1, rather than R1 lunging forward to punch R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attacking puncher while R1 is the target/defender"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the fighter standing defensively facing R2 while R2 attacks, rather than R2 standing defensively against an attack from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the defensive role while R2 has the attacking role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have his back to the camera while lunging to punch, rather than R1 having his back to the camera while lunging to punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the back-facing puncher"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

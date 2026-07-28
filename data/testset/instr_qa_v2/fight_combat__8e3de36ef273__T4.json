@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__8e3de36ef273__T4",
+  "instruction": "Cinematic sports photograph, medium profile shot. Inside a brightly lit indoor boxing gym, the shirtless, sweaty dark-skinned man with a black beard (R2) on the left, wearing red boxing gloves, stands facing the shirtless light-skinned man with braided hair and a tribal shoulder tattoo (R1) on the right, who wears black boxing gloves. Both men are in profile, locked in an intense, motionless face-off. The background features the boxing ring ropes and gym interior under bright overhead lighting, casting soft shadows on their athletic, muscular bodies.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the black-gloved boxer facing R2",
+    "R2 is the red-gloved boxer facing R1",
+    "R1 and R2 are locked in a motionless profile boxing face-off",
+    "boxing gloves on both men",
+    "boxing ring ropes in an indoor gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer wearing black boxing gloves while facing R2, rather than R2 being the one in black gloves?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the black-gloved boxer facing R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer wearing red boxing gloves while facing R1, rather than R1 being the one in red gloves?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the red-gloved boxer facing R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": true
+  }
+}

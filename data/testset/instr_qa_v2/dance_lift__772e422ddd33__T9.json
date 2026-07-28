@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T9",
+  "instruction": "A clean, realistic documentary photograph in a medium full shot shows a bright indoor ballet studio with white wooden platforms. On the right, the woman in a black long-sleeved top and white tights (R1) sits stretching her right leg forward, holding her foot with both hands. Beside her on the left, the young girl in a black crop top and shorts (R2) mirrors the pose, stretching her left leg forward and holding her foot. Both look forward with focused expressions under soft, natural side lighting that fills the clean white space.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 stretches her right leg forward while R2 mirrors by stretching her left leg forward",
+    "R1 holds her own right foot with both hands while R2 holds her own left foot with both hands",
+    "R1 and R2 are seated side by side in mirrored ballet stretching poses",
+    "R1 and R2 each hold their own forward foot during the stretch",
+    "white wooden platforms in the ballet studio",
+    "bright indoor ballet studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person stretching her right leg forward while R2 mirrors by stretching her left leg forward, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 right-leg stretch and R2 left-leg mirrored stretch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding her own forward right foot with both hands while R2 holds her own forward left foot with both hands, rather than R1 doing the left-foot hold and R2 doing the right-foot hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "which labeled person holds which forward foot"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both seated in ballet stretching poses with their forward legs extended and their hands holding their own feet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "seated mirrored stretching body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 mirror R1's seated stretch by extending the opposite leg forward while also holding her own foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 mirrors R1's stretch with the opposite leg"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

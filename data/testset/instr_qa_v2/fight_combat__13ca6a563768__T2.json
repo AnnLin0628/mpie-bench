@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__13ca6a563768__T2",
+  "instruction": "A crisp athletic photograph shows a medium shot in a boxing gym. On the left, the blonde woman in the purple cropped hoodie (R2) stands facing right, extending her left arm. On the right, the black man in the orange beanie (R1) stands facing her, actively instructing. He holds her brown boxing glove with his hand to adjust her punching form while gesturing with his other hand. The background features a gray concrete wall with a painted boxer graphic and a black punching bag on the left. The lighting is bright and even, capturing the focused training interaction between the coach and the athlete.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 actively instructs R2 in a boxing gym training interaction",
+    "R1 holds R2's brown boxing glove to adjust her punching form",
+    "R2 extends her left arm while R1 adjusts and coaches her",
+    "R1 gestures with his other hand while coaching R2",
+    "R2 has a brown boxing glove involved in the contact",
+    "A black punching bag is visible in the boxing gym background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding and adjusting R2's brown boxing glove, rather than R2 holding and adjusting R1's glove?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's glove to adjust her punching form"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person actively instructing R2's punching form, rather than R2 instructing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the coach/instructor duty over R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her punching arm for R1 to correct, rather than R1 extending his arm for R2 to correct?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 presents the punching arm while R1 corrects it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 while gesturing with one hand and using the other hand to guide her glove?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body role is to face, gesture, and guide R2's glove"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2's brown boxing glove the object being held by R1 during the training interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "brown boxing glove involved in contact"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black punching bag visible in the boxing gym background?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black punching bag in the gym"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

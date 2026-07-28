@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__71ba2ba4a6da__T2",
+  "instruction": "Candid outdoor photograph, full shot at eye-level. In a dry grassy field under a clear blue sky, the woman in the shearling-lined denim jacket (R1) on the left and the man in the denim jacket (R2) on the right walk forward hand-in-hand. They look at each other with joyful smiles, holding hands in the center. Bright natural sunlight casts soft shadows across the dry grass, highlighting their happy expressions in a warm, sunny color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the woman in the shearling-lined denim jacket holding hands with R2",
+    "R2 is the man in the denim jacket holding hands with R1",
+    "R1 and R2 keep non-reversed labeled roles in the hand-in-hand pair",
+    "R1 and R2 walk forward with their hands joined between them",
+    "R1 and R2 look at each other with joyful smiles while holding hands",
+    "The pair is in a dry grassy field under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman in the shearling-lined denim jacket holding R2's hand, rather than R2 being the woman in that jacket?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the woman in the shearling-lined denim jacket holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man in the denim jacket holding R1's hand, rather than R1 being the man in that denim jacket?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the man in the denim jacket holding hands with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do the labeled hand-holding roles remain R1 as the woman and R2 as the man, rather than those roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 keep non-reversed labeled roles in the hand-in-hand pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking forward with their hands joined between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk forward with their hands joined between them"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 looking at each other with joyful smiles while holding hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 look at each other with joyful smiles while holding hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

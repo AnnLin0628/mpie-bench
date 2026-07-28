@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__26d4b1ec995f__T1",
+  "instruction": "Cinematic film still, medium shot. Inside a modern office, the man in the grey patterned blazer (R2) on the left and the man in the light blue sweater (R1) on the right stand facing each other in profile. They clasp hands in a firm handshake in front of a large window overlooking a hazy city street. Cool, diffused daylight illuminates the scene, creating a muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1, the man in the light blue sweater, clasps hands with R2 in a firm handshake",
+    "R2, the man in the grey patterned blazer, reciprocally clasps R1's hand in the handshake",
+    "R1 and R2 stand facing each other in profile while their hands meet",
+    "The handshake occurs inside a modern office",
+    "A large window overlooking a hazy city street is behind the interaction"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the light-blue-sweater participant clasping hands with R2, rather than R1 being the grey-blazer participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled handshake role as the light-blue-sweater participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the grey-patterned-blazer participant whose hand is clasped by R1, rather than R2 being the light-blue-sweater participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's labeled reciprocal handshake role as the grey-blazer participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 face each other in profile while their hands are clasped together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other during the hand clasp"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1's hand directly clasped with R2's hand in front of their bodies?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "direct hand-to-hand contact between R1 and R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is there a large window overlooking a hazy city street behind the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "large window with hazy city street view"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

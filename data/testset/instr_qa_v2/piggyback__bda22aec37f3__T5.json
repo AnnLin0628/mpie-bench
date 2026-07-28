@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__bda22aec37f3__T5",
+  "instruction": "Candid family photograph, medium shot. Indoors in front of a white-paned glass door, the woman in the coral hoodie (R1) stands on the left, smiling as she holds the hand of the young blonde girl in the blue dress (R3) high in the air. The girl (R3) sits happily on the shoulders of the bald man with glasses (R2), who stands on the right smiling down. The man (R2) holds the girl's leg for support while she and the woman (R1) raise their clasped hands. Soft, natural indoor light illuminates the warm scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 supports R3 by carrying her on his shoulders",
+    "R3 is the person being carried on R2's shoulders",
+    "R2 holds R3's leg for support",
+    "R1 and R3 raise their clasped hands while R3 remains supported by R2",
+    "the scene is indoors in front of a white-paned glass door"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 carrying R3 on his shoulders, rather than R3 carrying R2 on her shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R3 by carrying her on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 sitting on R2's shoulders while R2 supports her weight from below, rather than R2 sitting on R3's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the person being carried on R2's shoulders"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R3's leg to support her, rather than R3 holding R2's leg for support?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R3's leg for support"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold R3's hand high in the air while R3 is seated on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 raise their clasped hands while R3 remains supported by R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

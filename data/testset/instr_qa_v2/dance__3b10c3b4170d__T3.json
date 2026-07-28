@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__3b10c3b4170d__T3",
+  "instruction": "Candid documentary photograph, medium shot. In a dark indoor studio, the woman in the black tank top (R3) with curly blonde hair stands on the left with her back to the camera. She reaches her left hand out to touch the arm of the woman in the pink sports bra (R1). On the right, the woman in the pink sports bra (R1), wearing glasses, smiles towards the camera while holding her long braids. Soft overhead lighting defines their shapes.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 reaches out to touch R1's arm",
+    "R1 is the person whose arm is touched by R3",
+    "R3 has her back to the camera while contacting R1",
+    "R1 holds her long braids while smiling toward the camera",
+    "dark indoor studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 reaching her left hand out to touch R1's arm, rather than R1 reaching out to touch R3's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 initiates the arm touch toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose arm is being touched by R3, rather than R3 being the one whose arm is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the arm touch from R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 have her back to the camera while reaching toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's body orientation during the contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding her long braids while R3 is the one reaching toward her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds her own braids during R3's touch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

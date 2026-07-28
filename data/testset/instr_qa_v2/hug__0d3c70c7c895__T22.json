@@ -1,0 +1,84 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T22",
+  "instruction": "A candid outdoor medium shot of three children standing side-by-side in a park. The boy in a blue denim shirt (R5) stands in the center with his arms around the curly-haired girl in a white cardigan and rust-colored dress (R3) on the left and the girl with bangs in a dark blue cardigan (R4) on the right. All three children smile happily at the camera. Strong golden sunlight streams from behind them, creating a bright sun flare in the center and a warm, glowing atmosphere with soft focus on the background trees.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R5 is the central child placing an arm around R3",
+    "R5 is the central child placing an arm around R4",
+    "R5 stands between R3 and R4 with arms around both",
+    "R3 is one of the children being held close by R5's arm",
+    "R4 is one of the children being held close by R5's arm",
+    "the children are outdoors in a park with background trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the child placing an arm around R3, rather than R3 being the child specified as placing an arm around R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the central child placing an arm around R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the child placing an arm around R4, rather than R4 being the child specified as placing an arm around R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the central child placing an arm around R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand between R3 and R4 while keeping his arms around both of them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 stands between R3 and R4 with arms around both"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 one of the children being held close by R5's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is one of the children being held close by R5's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

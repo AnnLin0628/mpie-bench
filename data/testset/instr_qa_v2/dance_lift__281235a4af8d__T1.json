@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__281235a4af8d__T1",
+  "instruction": "A candid outdoor photograph captured from a low angle. Against a clear blue sky, two acrobats perform on a stone block. The man in the black t-shirt (R1) is in a wide squat, looking forward with a focused expression. The woman in the black crop top (R2) stands on his right thigh. They hold hands with arms raised to maintain balance in their pose. No bystanders are present. Bright natural sunlight illuminates the scene, casting soft shadows on the warm stone.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the base in a wide squat supporting R2",
+    "R2 stands on R1's thigh as the elevated acrobat",
+    "R1 and R2 hold hands with raised arms to balance",
+    "the acrobats perform on a stone block",
+    "the scene is outdoors under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's weight from below in a wide squat, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 as the base"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing on R1's thigh, rather than R1 standing on R2's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is elevated on R1's thigh"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 serve as the lower acrobat stabilizing the pose while R2 balances above him, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the stabilizing base and R2 is the balancing flyer"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding each other's hands with their arms raised to maintain balance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands with raised arms for balance"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

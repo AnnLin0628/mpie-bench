@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0a7a557716c5__T4",
+  "instruction": "Candid documentary photograph, medium shot. In a festively decorated room, three friends pose together. On the left, the man with curly hair (R8) in a red polo shirt smiles with Canadian flags painted on his cheeks. In the center, the man with the red bandana (R5) smiles directly forward, draping his arms over the shoulders of the man with curly hair (R8) and the man with glasses (R4) on the right. In the background right, a blurred man in a gray shirt stands with his back to the camera. The scene is illuminated by warm, natural indoor light.",
+  "n_person": 11,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11"
+  ],
+  "elements": [
+    "R5 drapes his arms over the shoulders of both R8 and R4",
+    "R5's arm rests over R8's shoulder rather than R8 draping an arm over R5",
+    "R5's arm rests over R4's shoulder rather than R4 draping an arm over R5",
+    "R5 is centered between R8 and R4 while making shoulder contact with both",
+    "R8 and R4 are the recipients of R5's shoulder-draping pose",
+    "the setting is a festively decorated indoor room with warm natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5 actively drape his arms over both R8 and R4's shoulders, rather than R8 and R4 being the ones draping their arms over R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 drapes his arms over the shoulders of both R8 and R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5's contact with R8 consist of R5's arm resting over R8's shoulder, rather than R8's arm resting over R5's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's arm rests over R8's shoulder rather than R8 draping an arm over R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5's contact with R4 consist of R5's arm resting over R4's shoulder, rather than R4's arm resting over R5's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5's arm rests over R4's shoulder rather than R4 draping an arm over R5"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R5 positioned between R8 and R4 while connecting to both of them by draping his arms over their shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is centered between R8 and R4 while making shoulder contact with both"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R8 and R4 the two friends receiving R5's shoulder-draping contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R8 and R4 are the recipients of R5's shoulder-draping pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

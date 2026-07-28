@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T10",
+  "instruction": "Candid action photograph, full shot. Inside an outdoor covered concrete pavilion, the man in the beige t-shirt (R1) stands on the left, back partially to the camera, holding his black boxing gloves up defensively near his face. Opposite him, the man in the green long-sleeved shirt (R3) stands on the right wearing red shorts and grey clogs, holding up two focus mitts and looking intently at R1. The two are positioned close together, preparing for the next sequence of pad work under bright, natural daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 holds the focus mitts for pad work while R1 is the gloved boxer facing him",
+    "R1 keeps black boxing gloves raised defensively near his face rather than holding focus mitts",
+    "R3 is the pad holder looking intently at R1 rather than the boxer with gloves up",
+    "R1 and R3 stand close together preparing for a boxing pad-work sequence",
+    "black boxing gloves are on R1's hands",
+    "two focus mitts are held by R3",
+    "the scene is inside an outdoor covered concrete pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 holding up the focus mitts for R1's pad work, rather than R1 holding the focus mitts for R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the focus mitts for pad work while R1 is the gloved boxer facing him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man with black boxing gloves raised defensively near his face, rather than R3 being the one with the boxing gloves raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 keeps black boxing gloves raised defensively near his face rather than holding focus mitts"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 acting as the pad holder looking intently at R1, rather than R1 acting as the pad holder looking intently at R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the pad holder looking intently at R1 rather than the boxer with gloves up"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 positioned close together preparing for the next sequence of boxing pad work?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 stand close together preparing for a boxing pad-work sequence"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

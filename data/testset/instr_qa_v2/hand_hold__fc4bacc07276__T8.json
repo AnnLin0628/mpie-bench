@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__fc4bacc07276__T8",
+  "instruction": "Candid full-body photograph of a couple by a white wall and black fence. The woman in the white long-sleeved dress (R1) stands on the left, her long red hair blowing in the wind as she looks at the man. The man in the patterned short-sleeved shirt (R2) stands on the right, holding her hand. Bright daylight illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1's hand as the active hand-holder",
+    "R1 is the partner whose hand is being held by R2",
+    "R1 looks at R2 while R2 holds her hand",
+    "R1 and R2 are connected through a hand-holding contact",
+    "the couple is photographed by a white wall and black fence",
+    "bright daylight illuminates the scene"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding R1's hand, rather than R1 being described as holding R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hand as the active hand-holder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the partner whose hand is held by R2, rather than R2 being the partner whose hand is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the partner whose hand is being held by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look toward R2 while R2 holds her hand, rather than R2 looking toward R1 while she holds his hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks at R2 while R2 holds her hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected through hand contact, with R2 holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are connected through a hand-holding contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand with R2 as a couple while her hand is being held by him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands with R2 while R2 holds her hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T8",
+  "instruction": "High-angle studio portrait, medium shot. Indoors against a pale background, the curly-haired woman in a white shirt (R1) sits upright. To her left, the straight-haired woman in a denim jacket (R2) leans her head on R1's shoulder. In the foreground, the curly-haired woman in a black top (R3) lies on her back with her head on R1's lap, raising her hand to her hair while looking up. Soft, diffused lighting creates a gentle, warm mood.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 leans her head on R1's shoulder rather than R1 leaning on R2",
+    "R3 rests her head on R1's lap rather than R1 resting on R3",
+    "R1 sits upright while serving as the physical support point for R2 and R3",
+    "R3 lies on her back with her head on R1's lap and raises a hand to her hair",
+    "The portrait is indoors against a pale background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning her head on R1's shoulder, rather than R1 leaning her head on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head on R1's shoulder rather than R1 leaning on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3's head resting on R1's lap, rather than R1's head resting on R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 rests her head on R1's lap rather than R1 resting on R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated support for both R2's head at her shoulder and R3's head on her lap, rather than R2 or R3 supporting R1 in that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits upright while serving as the physical support point for R2 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 lying on her back with her head on R1's lap while raising a hand to her hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 lies on her back with her head on R1's lap and raises a hand to her hair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__072f7505bd5e__T3",
+  "instruction": "A candid family photograph in a medium shot captures an outdoor scene in a grassy park with blurred trees. In the center, the man in the white hoodie (R2) faces forward with a wide smile, carrying the baby girl in denim overalls (R1) on his shoulders. The baby girl (R1), wearing a pink fleece jacket, laughs joyfully with her arms raised. On the right, the woman in the black leather jacket (R3) stands in profile, smiling up at them and raising her left hand to touch the baby's hand. The man (R2) holds the baby's legs for support. Soft, natural daylight casts a gentle glow over the warm, autumnal setting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 carries R1 on his shoulders",
+    "R2 supports R1 by holding her legs",
+    "R1 is the child being carried above R2, not the supporter",
+    "R3 raises a hand to touch R1's hand while looking up at R1 and R2",
+    "outdoor grassy park with blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 carrying R1 on his shoulders, rather than R1 carrying R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 carries R1 on his shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1 from below by holding R1's legs, rather than R1 supporting R2's legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 by holding her legs"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person seated up on R2's shoulders while R2 bears her weight, rather than R2 being seated on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is carried above R2, not the supporter"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 raise a hand toward R1's hand while R1 remains on R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 reaches to touch R1's hand"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 have her arms raised while being carried by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises her arms while R2 carries her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

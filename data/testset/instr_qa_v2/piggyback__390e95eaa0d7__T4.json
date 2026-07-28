@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__390e95eaa0d7__T4",
+  "instruction": "Candid cinematic medium shot in a room with teal curtains. A woman with long twist braids (R2) sits on the lap of a shirtless man (R1) on a red couch. The woman (R2) rests her hand on the shoulder of the shirtless man (R1) as they smile warmly at each other. Warm orange light highlights their faces, contrasting with the cool teal background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 on his lap while seated on the red couch",
+    "R2 sits on R1's lap rather than R1 sitting on R2's lap",
+    "R2 rests her hand on R1's shoulder",
+    "R1 and R2 smile warmly at each other during the lap-sitting pose",
+    "red couch used as the seated support",
+    "room with teal curtains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 on his lap while seated, rather than R2 supporting R1 on her lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 on his lap while seated on the red couch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person sitting on R1's lap, rather than R1 sitting on R2's lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits on R1's lap rather than R1 sitting on R2's lap"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest her hand on R1's shoulder, rather than R1 resting his hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests her hand on R1's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated underneath R2 while R2 is positioned on his lap?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 seated underneath R2 in the lap-sitting pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

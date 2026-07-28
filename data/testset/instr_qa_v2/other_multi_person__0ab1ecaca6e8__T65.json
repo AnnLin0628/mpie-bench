@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T65",
+  "instruction": "A candid outdoor full shot captures a sunny grassy park with tall trees in the background. On the left, the Black woman in a red t-shirt (R5) leans forward in a deep squat, pulling a yellow rope with her face obscured. Behind her on the right, the East Asian man in a red polo shirt (R3) crouches low, pulling the rope with a wide, joyful smile. They are playing a competitive game of tug-of-war together, holding onto the rope with both hands. The scene is illuminated by bright, natural daylight, casting soft shadows on the green grass.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R5 is the forward-leaning front puller on the yellow rope while R3 is behind her",
+    "R3 crouches low behind R5 while pulling the same rope",
+    "R5 pulls the rope in a deep squat while R3 pulls from a low crouch behind her",
+    "R5 and R3 both hold the rope with both hands during tug-of-war",
+    "A yellow rope is the shared tug-of-war object",
+    "The interaction happens in a sunny grassy park with tall trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the forward-leaning front puller on the yellow rope, rather than R3 being in that forward-leaning front position?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the forward-leaning front puller on the rope"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 crouching low behind R5 while pulling the same rope, rather than R5 crouching behind R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the rear crouching puller behind R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5 pull the rope from a deep squat while R3 pulls from a low crouch behind her, rather than those body roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 deep-squat puller versus R3 low-crouching rear puller"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R5 and R3 playing tug-of-war together by gripping and pulling the same rope with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 and R3 both pull the shared tug-of-war rope"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a yellow rope the object being held and pulled by R5 and R3 in the tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow tug-of-war rope"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

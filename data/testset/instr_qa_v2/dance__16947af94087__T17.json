@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T17",
+  "instruction": "Cinematic full shot of a spacious indoor dance hall. The man in the brown shirt and beanie (R1) stands in the center, lifting his partner. The woman in the black outfit (R2) is held upside down, her body arched backwards toward the wooden floor. The man (R1) supports her weight with focused effort. Soft natural light illuminates the scene, casting gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lifts R2 rather than R2 lifting R1",
+    "R1 supports R2's weight while R2 is held upside down",
+    "R2 is the inverted partner with her body arched backward toward the floor",
+    "wooden floor beneath the inverted dance lift",
+    "spacious indoor dance hall setting",
+    "soft natural light illuminating the dance scene"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting R2 in the dance pose, rather than R2 lifting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts R2 rather than R2 lifting R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 support R2's weight with focused effort while R2 is held upside down, rather than R2 supporting R1's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's weight while R2 is held upside down"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the partner being carried upside down by R1, rather than R1 being the upside-down carried partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the inverted carried partner and R1 is the standing supporter"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in the center while holding R2 in an elevated dance lift?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands and holds R2 in a lifted dance position"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 upside down with her body arched backward toward the floor while R1 supports her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is inverted and arched backward while supported by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

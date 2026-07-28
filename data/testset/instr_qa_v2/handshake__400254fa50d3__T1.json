@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__400254fa50d3__T1",
+  "instruction": "Candid documentary photograph, medium full shot. In an office setting, the man in the gray blazer and jeans (R1) stands on the left in profile, shaking hands with the blonde woman in the blue t-shirt and black pants (R2) on the right. The man (R1) looks at her with a pleasant expression, while the blonde woman (R2) maintains a neutral gaze, holding a white binder under her left arm. They clasp right hands in a firm handshake. Bright, even indoor lighting illuminates the scene, highlighting the whiteboard with pinned papers behind them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 carries a white binder under her left arm during the handshake, rather than R1 carrying it",
+    "R1 gives R2 a pleasant look while R2 maintains a neutral gaze, rather than the expressions being swapped",
+    "R1 and R2 clasp each other's right hands in a firm handshake",
+    "R2 uses her right hand to shake R1's right hand while keeping the binder under her left arm",
+    "a white binder is held by R2",
+    "an office setting with a whiteboard and pinned papers behind them"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking at R2 with a pleasant expression while R2 maintains a neutral gaze, rather than R2 being the pleasant-looking one toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric facial expression and gaze between R1 and R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 using her right hand to clasp R1's right hand while keeping her left arm occupied with the binder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration during the handshake"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

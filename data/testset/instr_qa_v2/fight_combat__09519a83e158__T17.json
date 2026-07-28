@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09519a83e158__T17",
+  "instruction": "A candid athletic photograph in a medium shot captures a training session inside a brightly lit boxing gym. On the left, the man with the braided mohawk (R2) in a black t-shirt stands with his back partially to the camera, stabilizing a large black punching bag with his hand. On the right, the woman in the black tube top (R1) faces him, wearing black boxing gloves and extending her right arm to punch the bag directly above his hand. She maintains a focused, slight smile. The background features clean white walls and gym equipment under bright, even indoor lighting, creating a neutral and clean color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the striker punching the bag",
+    "R2 is stabilizing the punching bag for R1",
+    "R1 punches directly above R2's stabilizing hand",
+    "R1 faces R2 while extending her gloved arm toward the bag",
+    "large black punching bag",
+    "black boxing gloves",
+    "brightly lit boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending a gloved arm to punch the punching bag, rather than R2 being the puncher?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the striker punching the bag"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 stabilizing the punching bag with his hand while R1 punches it, rather than R1 stabilizing the bag for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is stabilizing the punching bag for R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 punch the bag directly above R2's stabilizing hand, making R1 the striker and R2 the bag holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 punches directly above R2's stabilizing hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing R2 while extending her gloved arm toward the punching bag?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 while extending her gloved arm toward the bag"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a large black punching bag being used in the training interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "large black punching bag"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 wearing boxing gloves for punching the bag?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black boxing gloves"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

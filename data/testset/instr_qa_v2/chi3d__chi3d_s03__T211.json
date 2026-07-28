@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T211",
+  "instruction": "A candid documentary photograph, wide shot at eye-level, in an indoor studio with a red carpeted floor and white walls. On the left, the man in the black polo shirt and blue shorts (R1) stands facing right, watching the woman. In the center, the woman in the white t-shirt and blue jeans (R2) balances on her left leg, lifting her right leg towards him. The room is brightly lit by overhead lights, with white radiators and a dark partition visible on the back wall.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 balances on her left leg while lifting her right leg toward R1",
+    "R1 stands and watches R2 rather than performing the lifted-leg pose",
+    "R2 directs the raised-leg action toward R1 while R1 remains the observer",
+    "R1 faces and observes R2 during her one-leg balance",
+    "The scene is an indoor studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing on her left leg and lifting her right leg toward R1, rather than R1 doing that toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the lifted-leg balance toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing and watching R2's movement, rather than R2 standing and watching R1's movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the observer while R2 performs the movement"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 direct her raised leg toward R1 while R1 remains the stationary watcher, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's raised-leg action is directed toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face and observe R2 during her balancing pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces and watches R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balanced on one leg with her other leg lifted toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a one-leg balance directed toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T48",
+  "model_id": "gpt-image-2",
+  "S_instr": 0.803921568627451,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.6666666666666666,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 5,
+  "n_all": 5,
+  "confidence": "medium",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching out with his right hand to hold R2's right wrist, rather than R2 reaching out to hold R1's wrist?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R1 grasps her wrist, but it appears left"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose right wrist is being held by R1, rather than R1 being the person whose right wrist is held by R2?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R2 is held, but not at right wrist"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 use his own right hand as the grasping hand on R2's wrist, rather than R2 using her right hand to grasp R1?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1's right hand is the grasping hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the active holder while R2 is the person being held at the wrist?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 is actively holding R2's wrist"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean forward slightly toward R2 while making the wrist-holding contact?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 leans slightly toward R2"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "chi3d__chi3d_s03__T48",
+    "model_id": "gpt-image-2",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 24.05,
+    "written_at": "2026-07-17T14:43:52",
+    "gen_relpath": "outputs/gpt-image-2/chi3d__chi3d_s03__T48.png",
+    "qa_relpath": "instr_qa_v2/chi3d__chi3d_s03__T48.json",
+    "n_questions": 5
+  }
+}

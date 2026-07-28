@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T167",
+  "instruction": "A candid wide-angle photograph from a high angle captures a motion capture studio with a red carpet. The woman in the white patterned t-shirt (R2) and the man in the black polo and blue shorts (R1) walk forward side-by-side. They are holding hands, with the woman looking down and the man looking toward her. Bright overhead lighting illuminates the room, showing background equipment and white walls.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's hand while looking toward R2 as they walk",
+    "R2 holds R1's hand while looking down as they walk",
+    "R1 and R2 walk forward side-by-side with their hands joined",
+    "R1 is the man walking beside R2 as her hand-holding partner",
+    "the interaction takes place in a motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "While R1 and R2 are holding hands and walking forward, is R1 the one looking toward R2 rather than R2 looking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hand while looking toward R2 as they walk"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the hand-holding walk, is R2 the one looking down rather than R1 being the one looking down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hand while looking down as they walk"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 walking beside R2 as her hand-holding partner rather than carrying or supporting her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man walking beside R2 as her hand-holding partner"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

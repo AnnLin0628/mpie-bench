@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__d49e03b6d029__T1",
+  "instruction": "Candid family photograph, medium close-up at eye level. In a bright indoor living room, the blonde toddler girl (R1) in a striped grey onesie sits upright on the shoulders of the bearded man (R2) in a white t-shirt. The man lies face down on a woven rug with his head bowed, while the toddler rests her hands on his dark hair and looks forward with a gentle smile. Soft, diffused natural light illuminates the warm neutral scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1 from below while R1 sits on R2's shoulders",
+    "R1 is the child seated above and R2 is the adult base lying underneath",
+    "R1 rests her hands on R2's dark hair",
+    "R2 lies face down with his head bowed on a woven rug",
+    "the setting is a bright indoor living room"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1 from below as R1 sits on his shoulders, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 from below while R1 sits on R2's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned upright on top of R2's shoulders while R2 is underneath face down, rather than R2 sitting on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated above while R2 is the base underneath"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 rest her hands on R2's dark hair, rather than R2 resting his hands on R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her hands on R2's dark hair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the toddler sitting upright on R2's shoulders while R2 lies face down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the child seated above and R2 is the adult base lying underneath"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

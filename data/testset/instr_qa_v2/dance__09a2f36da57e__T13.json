@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T13",
+  "instruction": "Cinematic medium shot of a contemporary dance performance in a dark studio. On the left, the woman in the yellow shirt (R2) stands facing forward with both arms raised high and a serious expression. In the center, the man in the brown shirt (R3) leans forward in profile, his right arm reaching upward. On the right, the woman in the yellow shirt (R4) tilts her head up with her arms raised. In the background, several other dancers' arms reach upward. Soft overhead lighting highlights the warm yellow and brown shirts against the dark backdrop.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is the dancer leaning forward in profile with his right arm reaching upward, rather than R2 or R4 doing that pose",
+    "R2 is the dancer standing facing forward with both arms raised high, rather than R3 doing that pose",
+    "R4 is the dancer tilting her head up with her arms raised, rather than R3 doing that pose",
+    "R2, R3, and R4 each perform distinct upward-reaching dance gestures",
+    "the dance performance takes place in a dark studio with soft overhead lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer leaning forward in profile with his right arm reaching upward, rather than R2 doing that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the asymmetric forward-leaning upward-reaching dance role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer standing facing forward with both arms raised high, rather than R3 leaning forward in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric forward-facing both-arms-raised dance role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the dancer tilting her head up with her arms raised, rather than R3 leaning forward with one arm reaching upward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has the asymmetric head-tilted-up arms-raised dance role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 lean forward while reaching upward with his right arm during the dance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's body configuration is forward-leaning with right arm reaching upward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T3",
+  "instruction": "Candid action photograph, full shot, eye-level. Set in an outdoor covered training area with concrete flooring and white pillars under bright daylight. On the left, the man in the beige t-shirt (R1) stands in a boxing stance, throwing a right punch. On the right, the man in the green long-sleeve shirt (R3) stands holding up black focus mitts to catch the blow. The gloved fist of the man in the beige t-shirt connects with the focus mitt held by the man in the green long-sleeve shirt. Bright natural daylight casts soft shadows across the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 throws a right punch toward R3",
+    "R3 holds up black focus mitts to catch R1's punch",
+    "R1's gloved fist connects with the focus mitt held by R3",
+    "R1 is the boxer while R3 is the pad holder",
+    "black focus mitts are used in the contact",
+    "the scene is an outdoor covered training area with concrete flooring and white pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 throwing the punch into a focus mitt held by R3, rather than R3 throwing a punch into a mitt held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the puncher and R3 is the mitt holder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold up the focus mitts to catch R1's blow, rather than R1 holding up mitts to catch R3's blow?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 catches R1's punch with focus mitts"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's gloved fist the one connecting with the focus mitt held by R3, rather than R3's fist connecting with a mitt held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's gloved fist contacts R3's held mitt"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in a boxing stance while R3 acts as the pad holder for R1's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 boxes while R3 serves as pad holder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

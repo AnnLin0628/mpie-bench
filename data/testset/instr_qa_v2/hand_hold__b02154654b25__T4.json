@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b02154654b25__T4",
+  "instruction": "Candid documentary full shot of a forest trail. On the left, the older man with a white beard (R1) in a rust shirt walks forward, smiling. On the right, the curly-haired youth (R2) in a yellow plaid shirt follows closely behind, also smiling. They hike together under sun-dappled natural light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks forward ahead while R2 follows closely behind",
+    "R2 follows behind R1 rather than leading him",
+    "R1 leads the hike with R2 trailing closely",
+    "R1 and R2 hike together in a front-and-following configuration",
+    "forest trail setting under sun-dappled natural light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 walking forward ahead while R2 follows closely behind, rather than R2 walking ahead while R1 follows?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks forward ahead while R2 follows closely behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 follow closely behind R1, rather than R1 following closely behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 follows behind R1 rather than leading him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leading the hike with R2 trailing behind him, rather than R2 leading with R1 trailing behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leads the hike with R2 trailing closely"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 hiking together with R1 in the forward position and R2 close behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hike together in a front-and-following configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

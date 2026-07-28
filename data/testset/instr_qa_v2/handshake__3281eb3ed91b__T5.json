@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__3281eb3ed91b__T5",
+  "instruction": "Candid documentary photograph, medium shot at eye-level. Outdoors in front of a light gray residential house, the man in the black puffer jacket (R2) stands on the left in profile, smiling as he shakes hands with the woman in the black patterned blouse (R1), who stands on the right facing him. They are shaking right hands, and the man holds a set of keys in his left hand. The background is softly blurred under natural overcast daylight with cool, soft tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds a set of keys in his left hand while shaking hands with R1",
+    "R1 and R2 clasp right hands with each other",
+    "R2 is shown in profile toward R1 while R1 faces him",
+    "R1 is the woman participating in the handshake with R2",
+    "The set of keys is a contact-relevant object held by R2",
+    "They are outdoors in front of a light gray residential house"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding a set of keys in his left hand while shaking R1's hand, rather than R1 holding the keys while shaking R2's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the keys during the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 shown in profile toward R1 while R1 faces him during their hand contact, rather than R1 being in profile while R2 faces her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is in profile and R1 faces him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman clasping R2's right hand while R2 is the man whose other hand holds the keys, rather than R2 being the woman and R1 being the key-holding man?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have distinct handshake and key-holding roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 clasping each other's right hands as their point of contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 shake right hands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

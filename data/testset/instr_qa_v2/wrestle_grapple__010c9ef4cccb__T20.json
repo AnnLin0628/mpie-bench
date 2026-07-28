@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T20",
+  "instruction": "An action sports photograph captured from an eye-level medium shot. Inside a brightly lit judo dojo with yellow tatami mats, the woman with curly hair in a bun (R1) wearing a blue judogi spars with the young man with short dark hair (R2) wearing a white judogi. Standing on the left, R1 grips R2's sleeve, while R2, positioned on the right, holds R1's shoulder in a dynamic, low-center-of-gravity grappling stance. Natural light filters in from large windows in the background, illuminating the sparring partners.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 grips R2's sleeve during the judo sparring exchange",
+    "R2 holds R1's shoulder during the grappling exchange",
+    "R1 and R2 have different contact roles: sleeve control by R1 and shoulder control by R2",
+    "R1 and R2 spar in a dynamic low-center-of-gravity grappling stance",
+    "R2's judogi sleeve is the contact point held by R1",
+    "the sparring occurs inside a brightly lit judo dojo with yellow tatami mats"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gripping R2's sleeve, rather than R2 gripping R1's sleeve?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's sleeve during the judo sparring exchange"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding R1's shoulder, rather than R1 holding R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's shoulder during the grappling exchange"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R1 and R2 have asymmetric grappling contacts, with R1 controlling R2 by the sleeve while R2 controls R1 at the shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 have different contact roles: sleeve control by R1 and shoulder control by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 sparring in a dynamic low-center-of-gravity grappling stance while maintaining their sleeve-and-shoulder grips?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 spar in a dynamic low-center-of-gravity grappling stance"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the judo sparring take place inside a brightly lit dojo with yellow tatami mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the sparring occurs inside a brightly lit judo dojo with yellow tatami mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__7bb263b1541d__T2",
+  "instruction": "A candid medium close-up photograph of two children indoors against a wooden wall. The red-haired boy in a white t-shirt (R2) on the left and the curly-haired girl in a white t-shirt (R1) on the right stand side-by-side, smiling directly at the camera. They have their arms wrapped around each other's shoulders in a friendly embrace. The scene is captured with soft, natural light and warm tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the curly-haired girl in shoulder contact with R2",
+    "R2 is the red-haired boy in shoulder contact with R1",
+    "R1 and R2 stand side-by-side with arms around each other's shoulders",
+    "both children smile toward the camera",
+    "the children are indoors against a wooden wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the curly-haired girl who has an arm wrapped around R2's shoulder, rather than the red-haired boy being R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's labeled shoulder-contact role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the red-haired boy who has an arm wrapped around R1's shoulder, rather than the curly-haired girl being R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's labeled shoulder-contact role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing side-by-side while each has an arm around the other's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "reciprocal arms-around-shoulders configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in shoulder-to-shoulder contact with R2 while both face the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 shoulder contact while facing camera"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

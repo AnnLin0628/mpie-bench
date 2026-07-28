@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__287b50c31e28__T2",
+  "instruction": "A candid documentary photograph taken from behind at eye-level shows an outdoor grassy field with a dark forest background. The older man with a white beard (R1) in a brown sweater and dark pants walks away from the camera on the left. Beside him, the curly blonde boy in a plaid shirt (R2) walks in unison on the right. The older man has his right arm draped warmly over the boy's shoulder as they walk together. The scene is captured in soft, diffused evening light, featuring muted green and brown tones that evoke a quiet, affectionate mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 drapes his right arm over R2's shoulder",
+    "R2 is the one receiving R1's shoulder contact",
+    "R1 provides the warm side-contact while they walk together",
+    "R2 walks in unison beside R1 under R1's arm",
+    "the pair are in an outdoor grassy field with a dark forest background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one draping his right arm over R2's shoulder, rather than R2 draping an arm over R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 drapes his right arm over R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one receiving the shoulder drape from R1, rather than R1 being tucked under R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one receiving R1's shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 create the warm side-contact by placing his arm on R2, rather than R2 being the one creating that contact on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides the warm side-contact while they walk together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking in unison beside R1 while positioned under R1's draped arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks in unison beside R1 under R1's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

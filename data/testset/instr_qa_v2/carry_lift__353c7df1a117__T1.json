@@ -1,0 +1,80 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__353c7df1a117__T1",
+  "instruction": "Cinematic close-up photograph of a couple outdoors. On the left, the bride in the light green saree (R1) stands in profile, smiling softly with her hair adorned with white flowers. On the right, the groom in the grey shirt (R2) leans in with his eyes closed, their foreheads almost touching. His hand gently rests on her shoulder. The background is softly blurred with natural green and warm light, creating an intimate atmosphere.",
+  "n_person": 5,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "elements": [
+    "R2 leans in toward R1 with his eyes closed rather than R1 leaning in with closed eyes toward R2",
+    "R2's hand rests on R1's shoulder rather than R1's hand resting on R2's shoulder",
+    "R1 receives the shoulder touch from R2 while standing in profile",
+    "R1 and R2 have their foreheads almost touching in an intimate close-up",
+    "white flowers adorn R1's hair",
+    "the couple is outdoors with a softly blurred green and warm-light background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning in toward R1 with his eyes closed, rather than R1 leaning in toward R2 with her eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the lean-in toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 place his hand gently on R1's shoulder, rather than R1 placing her hand on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand rests on R1's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person receiving the shoulder touch from R2 while standing in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's shoulder contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posed with their foreheads almost touching while R2 leans toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "near-forehead contact with R2 leaning in"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__a6b205b7ad80__T1",
+  "instruction": "Candid lifestyle medium shot of a bright apartment room. On the left, the smiling woman in the pink halter top (R2) stands facing forward, holding red dumbbells in both hands with her arms lowered. On the right, the man in the black athletic t-shirt (R1) stands slightly behind her, looking down with a focused expression as he gently touches her left elbow to guide her form. Soft natural light streams from a window on the left, illuminating the scene with a warm, clean palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently touches R2's left elbow to guide her exercise form",
+    "R2 holds red dumbbells in both hands while R1 does not hold them",
+    "R1 stands slightly behind R2 in a coaching or guiding role",
+    "R2 faces forward with her arms lowered during the exercise",
+    "red dumbbells are the contact-relevant objects",
+    "the scene is a bright apartment room with soft natural window light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently touching R2's left elbow to guide her form, rather than R2 touching R1's elbow to guide him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric elbow-guiding duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the red dumbbells in both hands, rather than R1 holding the dumbbells?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric dumbbell-holding role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 acting as the focused form guide for R2 while R2 performs the dumbbell exercise, rather than R2 guiding R1's form?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides R2 during the exercise"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face forward with her arms lowered while R1 guides her exercise form?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's exercise posture while being guided by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

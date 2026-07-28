@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__34d97a41e384__T1",
+  "instruction": "Cinematic close-up still of an outdoor winter scene. In a snowy forest during the day, a couple enjoys a quiet moment together. In the foreground, a man in a dark beanie and brown jacket embraces a smiling woman wearing a yellow beanie, blue scarf, and sherpa coat as they cuddle closely on a wooden swing. The camera is positioned at eye-level with a shallow depth of field, softly blurring the pine trees in the background. Soft natural daylight illuminates the couple, creating a warm, intimate mood with cool winter tones and soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the man who embraces R2",
+    "R2 is the smiling woman being embraced by R1",
+    "R1 and R2 cuddle closely together on a wooden swing",
+    "wooden swing used as the shared contact object",
+    "snowy forest setting during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person embracing R2, rather than R2 being described as the one embracing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man who embraces R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the smiling woman being held in R1's embrace, rather than R1 being the one held in R2's embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the smiling woman being embraced by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 cuddling closely together on a wooden swing, with R1's contact role described as embracing R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 cuddle closely together on a wooden swing"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned close against R1 as the person receiving R1's close cuddle and embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's close cuddle and embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

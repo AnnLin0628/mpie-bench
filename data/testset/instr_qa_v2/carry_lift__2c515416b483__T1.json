@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__2c515416b483__T1",
+  "instruction": "A clean studio portrait photograph captured in a medium shot at eye-level with a shallow depth of field. In a minimalist indoor studio with a plain white background, the brunette woman in the strapless white lace dress (R2) stands in the right foreground in profile, looking right with a soft expression while holding white roses. Behind her on the left, the blonde woman in the long-sleeved lace dress (R1) stands slightly out of focus, also facing right and holding white roses. The scene is illuminated by soft, bright studio lighting that creates a clean, high-key aesthetic with minimal shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the foreground profile subject holding white roses while R1 stands behind her slightly out of focus",
+    "R1 is positioned behind R2 and slightly out of focus rather than R2 being behind R1",
+    "R1 also faces right behind R2 while holding white roses",
+    "R2 holds white roses",
+    "R1 holds white roses",
+    "minimalist indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the foreground profile subject holding white roses while R1 stands behind her and slightly out of focus?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground subject while R1 is behind and out of focus"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the supporting / leading contact role relative to R2, rather than R2 taking that role toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric contact duty"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": true
+  }
+}

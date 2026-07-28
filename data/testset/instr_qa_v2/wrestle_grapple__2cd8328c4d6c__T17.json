@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T17",
+  "instruction": "A clean, high-contrast studio photograph captures a full shot of a minimalist white studio with a seamless white floor. On the left, the performer in the white hooded outfit (R2) leans forward with arms outstretched, facing away from the camera. On the right, the performer in the black hooded outfit (R1) crouches slightly, facing left with arms bent in a dynamic, defensive pose. The two performers engage in a dynamic, non-contact dance movement, oriented toward each other. Bright, diffused overhead lighting casts soft shadows on the floor, maintaining a clean, high-key color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 crouches slightly in a defensive bent-arm dance pose while R2 leans forward with outstretched arms",
+    "R2 performs the forward-leaning, arms-outstretched movement while R1 holds the crouched defensive stance",
+    "R1 faces toward R2 in a defensive pose while R2 faces away from the camera with arms extended",
+    "R1 and R2 perform a dynamic non-contact dance movement oriented toward each other",
+    "The scene is a clean white studio with a seamless white floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 crouching slightly with bent arms in a defensive dance pose, rather than R2 taking that crouched defensive role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the crouched defensive bent-arm role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward with arms outstretched, rather than R1 being the one leaning forward with outstretched arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the forward-leaning outstretched-arm movement"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face toward R2 in a defensive stance while R2 faces away from the camera with arms extended, rather than those body roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is defensive-facing while R2 is arms-extended and facing away"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 using a bent-arm defensive body configuration while R2 uses an open, arms-outstretched body configuration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contrasting R1 defensive pose and R2 open outstretched pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

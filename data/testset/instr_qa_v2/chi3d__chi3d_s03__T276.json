@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T276",
+  "instruction": "A candid documentary photograph from a wide angle shows an indoor studio with a red carpeted floor, white walls, and dark red partitions in the background. The woman in the white t-shirt and blue jeans (R2) leans forward from the left, placing both hands on the chest of the man in the dark grey t-shirt and blue shorts (R1). The man (R1) stands upright on the right, facing her with a neutral expression. Overhead fluorescent lighting illuminates the room, highlighting the warm red carpet and casting soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward toward R1",
+    "R2 places both hands on R1's chest",
+    "R1 receives the hand contact on his chest",
+    "R1 stands upright facing R2",
+    "indoor studio with red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 placing both hands on R1's chest, rather than R1 placing both hands on R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 makes two-handed chest contact on R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the hand contact on his chest from R2, rather than R2 receiving chest contact from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's chest contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward to initiate contact with R1's chest, rather than R1 leaning forward to initiate contact with R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates forward chest-touch contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lean forward toward R1 while using both hands to touch his chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's forward-leaning two-hand contact role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

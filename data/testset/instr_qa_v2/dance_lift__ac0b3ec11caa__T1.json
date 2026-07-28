@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__ac0b3ec11caa__T1",
+  "instruction": "Candid documentary full shot of an indoor setting with a large window showing a blurry wooded background. In the center foreground, the young girl with long red hair (R2) stands in a black leotard, smiling with her arms slightly out. Directly behind her, the woman with short brown hair (R1) in a black long-sleeve shirt stands looking down, using both hands to gather and hold the girl's long red hair. The scene is illuminated by soft natural light, creating a warm, muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gathers and holds R2's long red hair with both hands",
+    "R1 stands directly behind R2 while attending to R2's hair",
+    "R2 stands in the center foreground smiling with her arms slightly out",
+    "R2 is the recipient of the hair-handling while R1 performs it",
+    "The setting is indoors with a large window showing a blurry wooded background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 using both hands to gather and hold R2's long red hair, rather than R2 gathering and holding R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gathers and holds R2's long red hair with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned behind R2 while attending to R2's hair, rather than R2 standing behind R1 and attending to R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands directly behind R2 while attending to R2's hair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person standing in the center foreground while R1 handles her hair from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of the hair-handling while R1 performs it"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

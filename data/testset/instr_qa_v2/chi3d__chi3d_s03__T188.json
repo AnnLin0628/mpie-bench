@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T188",
+  "instruction": "A candid full shot shows an indoor studio with a red carpet and white pillars. The woman in a white t-shirt and blue jeans (R2) stands on the left, embracing the bearded man in a black polo shirt and blue shorts (R1) who stands on the right. She wraps her arms around his neck, and he holds her in a warm hug under even overhead lights.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1's neck",
+    "R1 is the person whose neck is encircled by R2's arms",
+    "R1 holds R2 in the embrace while R2 wraps around his neck",
+    "R2 embraces R1 with an arms-around-neck body configuration",
+    "the scene is an indoor studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's neck, rather than R1 wrapping his arms around R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose neck is encircled by R2's arms, rather than R2 being the one whose neck is encircled by R1's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person whose neck is encircled by R2's arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2 in the embrace while R2's specific contact action is wrapping her arms around R1's neck, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 in the embrace while R2 wraps around his neck"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 embracing R1 with her arms placed around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 with an arms-around-neck body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

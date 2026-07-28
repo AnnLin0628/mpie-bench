@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__185c4e46d822__T5",
+  "instruction": "A candid, intimate close-up photograph set indoors against a plain light grey wall. The curly-haired woman in a white ribbed top (R1) stands on the left, eyes closed, holding the girl with straight dark hair (R2) close. The girl in a beige ribbed top (R2) leans her head against the woman's chest, looking down in a moment of quiet comfort. The woman's arm is wrapped around the girl's back in a warm, protective embrace. Soft, diffused side lighting illuminates the scene, creating a gentle, calm mood with a neutral color palette of white, beige, and grey.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2 close in a protective embrace",
+    "R2 leans her head against R1's chest",
+    "R1 wraps her arm around R2's back",
+    "R2 receives quiet comfort while resting against R1",
+    "indoor close-up against a plain light grey wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2 close in a protective embrace, rather than R2 holding R1 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2 close in a protective embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning her head against R1's chest, rather than R1 leaning her head against R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans her head against R1's chest"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her arm around R2's back, rather than R2 wrapping her arm around R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arm around R2's back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 rest against R1 for comfort while R1 provides the protective contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives quiet comfort while resting against R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

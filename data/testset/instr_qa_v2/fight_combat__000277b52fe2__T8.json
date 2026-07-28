@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T8",
+  "instruction": "A cinematic action still captured in a medium full shot shows an indoor gym with metal training rigs and a hazy atmosphere. On the left, the man in the patterned black t-shirt (R4) faces right, throwing a left-hand strike forward. On the right, the man in the plain black t-shirt (R2) stands defensively, facing left and raising both forearms to block the blow. The man in the patterned black t-shirt (R4) executes the strike while the man in the plain black t-shirt (R2) successfully absorbs the impact. The scene is illuminated by cool, hazy lighting with a soft background glow and desaturated tones.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 throws a left-hand strike toward R2",
+    "R2 raises both forearms to block R4's blow",
+    "R4 is the attacker while R2 is the defender absorbing the impact",
+    "R2 faces R4 defensively during the strike",
+    "The scene is an indoor gym with metal training rigs and hazy lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one throwing the strike toward R2, rather than R2 throwing the strike toward R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 executes the attacking strike while R2 receives it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 absorb the impact with a defensive block, rather than R4 absorbing a blow from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the defender who blocks and absorbs R4's strike"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4's left hand the attacking hand aimed at R2 while R2 uses both forearms as the shield against it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 attacks with a left-hand strike and R2 blocks with both forearms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 raise both forearms in a defensive posture to block R4's incoming blow?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration is a two-forearm defensive block against R4"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

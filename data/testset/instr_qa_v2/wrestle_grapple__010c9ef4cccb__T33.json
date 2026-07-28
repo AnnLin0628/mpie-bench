@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T33",
+  "instruction": "Candid documentary photograph, medium full shot from a slightly high angle. Inside a judo dojo, the young woman in the blue judo gi (R1) grapples on the yellow mat with the young man in the white judo gi (R2). The young woman (R1) is on top, pinning the young man (R2) by wrapping her legs around his torso while looking down at him. The young man (R2) lies on his back, looking upward with a neutral expression. The scene is illuminated by bright, even indoor lighting that casts soft shadows on the yellow and blue mats.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is on top of R2 during the grapple, rather than R2 being on top of R1.",
+    "R1 pins R2 by wrapping her legs around R2's torso.",
+    "R2 lies on his back underneath R1 and looks upward while R1 looks down at him.",
+    "R1 and R2 are grappling on a yellow judo mat.",
+    "The interaction takes place inside a judo dojo."
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 on top pinning R2, rather than R2 being on top pinning R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the top pinner and R2 is the pinned person underneath"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her legs around R2's torso to control him, rather than R2 wrapping his legs around R1's torso?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses her legs to pin and control R2's torso"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying on his back underneath R1, rather than R1 lying on her back underneath R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person on his back under R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look down at R2 while R2 looks upward from the mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is above looking down and R2 is below looking upward"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a yellow judo mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow judo mat used as the grappling surface"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

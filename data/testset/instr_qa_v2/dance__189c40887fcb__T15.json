@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__189c40887fcb__T15",
+  "instruction": "Cinematic wide shot of an indoor dance hall. On the left, the blonde dancer in a black leather jacket (R1) lies on his back with one leg raised. In the center, the dark-haired dancer in a white t-shirt and black harness (R3) leans back with one leg raised high. On the right, the dancer in a black mesh top and kilt (R2) lies on the floor with one leg extended. They pose in a row under dim, cool blue ambient light.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 lies on his back with one leg raised while R2 lies on the floor with one leg extended",
+    "R3 leans back with one leg raised high while R2 lies on the floor with one leg extended",
+    "R3 is the dancer in the center leaning back with a high raised leg while R1 is lying on his back",
+    "R1's body configuration is lying on his back with one leg raised",
+    "R2's body configuration is lying on the floor with one leg extended",
+    "The scene is an indoor dance hall under dim, cool blue ambient light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 lie on his back with one leg raised while R2 lies on the floor with one leg extended, rather than R2 having the raised-leg-on-back pose and R1 having the extended-leg floor pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lies on his back with one leg raised while R2 lies on the floor with one leg extended"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 lean back with one leg raised high while R2 lies on the floor with one leg extended, rather than R2 being the one leaning back with a high raised leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans back with one leg raised high while R2 lies on the floor with one leg extended"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the dancer leaning back with one leg raised high while R1 is lying on his back, rather than R1 being the one leaning back with the high raised leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the dancer in the center leaning back with a high raised leg while R1 is lying on his back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 posed lying on his back with one leg raised?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is lying on his back with one leg raised"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 posed on the floor with one leg extended?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration is lying on the floor with one leg extended"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

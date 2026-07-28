@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T40",
+  "instruction": "A candid documentary photograph, medium full shot, inside a judo dojo with yellow and blue mats. The young woman in the blue judogi (R1) stands in the center, looking down at her partner with her hands slightly raised. In the foreground, the young man in the white judogi (R2) is kneeling and bowing deeply, his head lowered close to the mat. The background features a plain wall with a notice board. The scene is lit by bright, natural indoor light, creating a clean and focused atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is kneeling and bowing deeply with his head close to the mat rather than R1 doing so",
+    "R1 stands in the center looking down at R2 rather than R2 standing over R1",
+    "R1 has her hands slightly raised while R2 remains bowed near the mat",
+    "R2 is the bowed partner in the white judogi while R1 is the standing partner in the blue judogi",
+    "yellow and blue judo mats are present beneath the interaction",
+    "the scene takes place inside a judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one kneeling and bowing deeply with his head lowered close to the mat, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 bows deeply on the mat instead of R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing and looking down at R2 while R2 is bowed low, rather than R2 standing and looking down at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the standing partner looking down at the bowed R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 remain upright with her hands slightly raised while R2 is the partner lowered into a deep bow, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is upright with raised hands while R2 is bowed"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 in a kneeling bowing posture with his head close to the mat while R1 stands nearby?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kneels and bows while R1 stands"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>MPIE-Bench · N=2500</title>
+<style>
+:root { --bg:#f7f8fa; --card:#fff; --line:#e8eaee; --text:#1f2430; --muted:#6b7280; }
+* { box-sizing:border-box }
+body { margin:0; padding:28px 24px 48px; font-family:-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+  background:var(--bg); color:var(--text); }
+h1 { font-size:22px; margin:0 0 6px; font-weight:700; }
+.sub { color:var(--muted); font-size:13px; margin-bottom:20px; }
+h2 { font-size:15px; margin:28px 0 10px; font-weight:600; }
+.metrics { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:8px 16px;
+  background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-bottom:22px; }
+.metrics dt { font-weight:600; font-size:13px; }
+.metrics dd { margin:0 0 6px; color:var(--muted); font-size:12.5px; line-height:1.45; }
+table { width:100%; max-width:1100px; border-collapse:collapse; background:var(--card);
+  border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:13.5px; }
+th, td { padding:10px 12px; border-bottom:1px solid #f0f2f5; }
+th { background:#fafbfc; color:var(--muted); font-size:12px; font-weight:600; text-align:right; }
+th:first-child, td.model { text-align:left; font-weight:600; }
+th .th-hint { display:block; font-weight:500; font-size:10px; color:#9ca3af; margin-top:2px; }
+td.num { text-align:right; font-variant-numeric:tabular-nums; }
+tr:last-child td { border-bottom:0; }
+tr:hover td { background:#fafbff; }
+.charts { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:14px; margin-top:8px; max-width:1100px; }
+.chart { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
+.chart h3 { margin:0 0 10px; font-size:13px; font-weight:600; }
+.bar-row { display:grid; grid-template-columns:140px 1fr 48px; gap:8px; align-items:center; margin:5px 0; }
+.bn { font-size:11px; color:#374151; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.track { height:10px; background:#eef0f3; border-radius:5px; overflow:hidden; }
+.fill { height:100%; border-radius:5px; }
+.bv { font-size:11px; color:var(--muted); text-align:right; font-variant-numeric:tabular-nums; }
+.note { color:var(--muted); font-size:12px; margin-top:16px; }
+hr.sep { border:0; border-top:1px solid var(--line); margin:36px 0 8px; max-width:1100px; }
+.howto { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 18px;
+  max-width:960px; margin-bottom:22px; font-size:13px; line-height:1.55; color:#374151; }
+.howto p { margin:0 0 12px; }
+.howto h4 { margin:16px 0 8px; font-size:13px; font-weight:700; color:#1f2430; }
+.howto h4:first-child { margin-top:0; }
+.howto ul { margin:0 0 12px; padding-left:1.2em; }
+.howto code { display:inline-block; margin-top:4px; padding:2px 6px; background:#f3f4f6; border-radius:4px;
+  font-size:12px; color:#1f2430; }
+.tag-up { color:#059669; font-weight:600; }
+.tag-dn { color:#dc2626; font-weight:600; }
+.warn { background:#fff7ed; border:1px solid #fdba74; color:#9a3412; padding:10px 12px; border-radius:8px;
+  font-size:12.5px; max-width:960px; margin-bottom:16px; }
+table.dens { max-width:1200px; font-size:12.5px; }
+table.dens th.cband { text-align:center; border-left:1px solid #eef0f3; }
+table.dens th.subh { font-size:11px; font-weight:500; }
+table.dens td.delta { color:#b45309; font-weight:600; }
+.dens-charts { margin-top:14px; }
+.dens-multi-wrap { display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:1200px; }
+@media (max-width: 980px) { .dens-multi-wrap { grid-template-columns:1fr; } }
+.dens-multi { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
+.dens-multi h3 { margin:0 0 8px; font-size:14px; }
+.dens-legend { display:flex; flex-wrap:wrap; gap:8px 12px; margin:0 0 8px; font-size:11px; color:#4b5563; }
+.dens-legend .leg { display:inline-flex; align-items:center; gap:5px; }
+.dens-legend .leg i { width:10px; height:10px; border-radius:2px; display:inline-block; }
+.dens-analysis { margin-top:16px; max-width:1200px; }
+</style></head><body>
+<h1>MPIE-Bench · N=2500</h1>
+<p class="sub">N = 2500 · 2026-07-28T20:23:12 ·
+  mesh source: <code>hybrid:gemini-3-pro-image:recomputed_n=2469,gpt-image-2:recomputed_n=2078,seedream-5-pro:recomputed_n=2488</code>
+</p>
+<div class="warn">Main table: six axes for models with near-complete coverage.
+Missing cells are shown as <b>—</b>. Anat/Inter use Multi-HMR mesh;
+ID=ArcFace; Qual=HPSv2; Instr=frozen Instr QA; Count=VLM.</div>
+
+<h2>Metric glossary</h2>
+<dl class="metrics">
+  <div><dt>Count</dt><dd>Person-count correctness (VLM judge).</dd></div>
+  <div><dt>ID</dt><dd>Identity preservation vs. references (source: ArcFace).</dd></div>
+  <div><dt>Anat</dt><dd>Anatomy plausibility from Multi-HMR mesh (leftover/orphan + residual/structure/detect terms).</dd></div>
+  <div><dt>Inter</dt><dd>Interaction geometry from Multi-HMR mesh (penetration / proximity vs. prompt contact intent).</dd></div>
+  <div><dt>Instr</dt><dd>Instruction fidelity from frozen atomic QA (asymm 0.50 / role_duty 0.35 / prop_object 0.15).</dd></div>
+  <div><dt>Qual</dt><dd>HPSv2 raw score (source: HPSv2); typical range 0.20–0.35.</dd></div>
+</dl>
+
+<h2>Main results</h2>
+<p class="note" style="margin-top:0">Cells are <b>0–1 quality scores</b> when coverage is near-complete; otherwise —.</p>
+<table>
+<thead><tr><th>Model</th><th>Count</th><th>ID</th><th>Anat<br><span class="th-hint">mesh</span></th><th>Inter<br><span class="th-hint">mesh</span></th><th>Instr<br><span class="th-hint">weighted total score</span></th><th>Qual<br><span class="th-hint">HPS≈0.20–0.35</span></th></tr></thead>
+<tbody>
+<tr title="Anat=mesh Inter=mesh"><td class="model">gpt-image-2</td><td class="num">0.740</td><td class="num">0.576</td><td class="num">0.775</td><td class="num">0.692</td><td class="num">0.929</td><td class="num">0.288</td></tr>
+<tr title="Anat=mesh Inter=mesh"><td class="model">gemini-3-pro-image</td><td class="num">0.710</td><td class="num">0.502</td><td class="num">0.823</td><td class="num">0.800</td><td class="num">0.929</td><td class="num">0.273</td></tr>
+<tr title="Anat=mesh Inter=mesh"><td class="model">seedream-5-pro</td><td class="num">0.715</td><td class="num">0.491</td><td class="num">0.785</td><td class="num">0.814</td><td class="num">0.933</td><td class="num">0.293</td></tr>
+</tbody>
+</table>
+
+<h2>Comparison of items</h2>
+<div class="charts">
+<div class="chart"><h3>Count</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:74.0%;background:#3b82f6"></div></div><span class="bv">0.740</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:71.0%;background:#3b82f6"></div></div><span class="bv">0.710</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:71.5%;background:#3b82f6"></div></div><span class="bv">0.715</span></div></div><div class="chart"><h3>ID</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:57.6%;background:#8b5cf6"></div></div><span class="bv">0.576</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:50.2%;background:#8b5cf6"></div></div><span class="bv">0.502</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:49.1%;background:#8b5cf6"></div></div><span class="bv">0.491</span></div></div><div class="chart"><h3>Anat</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:77.5%;background:#ef4444"></div></div><span class="bv">0.775</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:82.3%;background:#ef4444"></div></div><span class="bv">0.823</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:78.5%;background:#ef4444"></div></div><span class="bv">0.785</span></div></div><div class="chart"><h3>Inter</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:69.2%;background:#f59e0b"></div></div><span class="bv">0.692</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:80.0%;background:#f59e0b"></div></div><span class="bv">0.800</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:81.4%;background:#f59e0b"></div></div><span class="bv">0.814</span></div></div><div class="chart"><h3>Instr</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:92.9%;background:#10b981"></div></div><span class="bv">0.929</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:92.9%;background:#10b981"></div></div><span class="bv">0.929</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:93.3%;background:#10b981"></div></div><span class="bv">0.933</span></div></div><div class="chart"><h3>Qual</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:28.8%;background:#06b6d4"></div></div><span class="bv">0.288</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:27.3%;background:#06b6d4"></div></div><span class="bv">0.273</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:29.3%;background:#06b6d4"></div></div><span class="bv">0.293</span></div></div>
+</div>
+
+<p class="note">The higher the score, the better (Qual Except, its scale is different). Sort by Anat/Inter/Count。</p>
+
+
+<hr class="sep">
+<h2>Anat / Inter × Contact density C0–C3(Core Observation Sheet)</h2>
+<p class="note" style="margin-top:0;margin-bottom:12px">
+  OK=model, column=Contact Density File (from <code>targets_tagged.csv</code> of <code>contact_c</code>,No board_cat）。
+  <b>C3 = high contact</b>(Original C3∪C4: Close-fitting and load-bearing + Fighting and confrontation).
+  Every report mesh <b>Anat</b> / <b>Inter</b> mean (only <code>ok</code> sample).
+  right side <b>Δ(C3−C0)</b>: Negative value=Decreases as density increases (expected degradation).
+  Hover the grid to see the number of samples in that file.
+</p>
+<table class="dens">
+<thead>
+<tr><th rowspan="2">Model</th><th colspan="2" class="cband">C0 No contact<span class="th-hint">n≈510</span></th><th colspan="2" class="cband">C1 light / instantaneous<span class="th-hint">n≈446</span></th><th colspan="2" class="cband">C2 point / line<span class="th-hint">n≈936</span></th><th colspan="2" class="cband">C3 High contact (close fit / fight)<span class="th-hint">n≈596</span></th><th colspan="2">Δ C3−C0</th></tr>
+<tr><th class="subh">Anat</th><th class="subh">Inter</th><th class="subh">Anat</th><th class="subh">Inter</th><th class="subh">Anat</th><th class="subh">Inter</th><th class="subh">Anat</th><th class="subh">Inter</th><th class="subh">Anat</th><th class="subh">Inter</th></tr>
+</thead>
+<tbody>
+<tr><td class="model">gpt-image-2</td><td class="num" title="n_anat=429 n_inter=429">0.773</td><td class="num" title="n_anat=429 n_inter=429">0.638</td><td class="num" title="n_anat=412 n_inter=412">0.806</td><td class="num" title="n_anat=412 n_inter=412">0.784</td><td class="num" title="n_anat=753 n_inter=753">0.784</td><td class="num" title="n_anat=753 n_inter=753">0.699</td><td class="num" title="n_anat=484 n_inter=484">0.735</td><td class="num" title="n_anat=484 n_inter=484">0.652</td><td class="num delta">-0.038</td><td class="num delta">0.014</td></tr><tr><td class="model">gemini-3-pro-image</td><td class="num" title="n_anat=506 n_inter=506">0.823</td><td class="num" title="n_anat=506 n_inter=506">0.767</td><td class="num" title="n_anat=444 n_inter=444">0.850</td><td class="num" title="n_anat=444 n_inter=444">0.847</td><td class="num" title="n_anat=933 n_inter=933">0.825</td><td class="num" title="n_anat=933 n_inter=933">0.802</td><td class="num" title="n_anat=586 n_inter=586">0.800</td><td class="num" title="n_anat=586 n_inter=586">0.789</td><td class="num delta">-0.023</td><td class="num delta">0.022</td></tr><tr><td class="model">seedream-5-pro</td><td class="num" title="n_anat=510 n_inter=510">0.800</td><td class="num" title="n_anat=510 n_inter=510">0.806</td><td class="num" title="n_anat=446 n_inter=446">0.807</td><td class="num" title="n_anat=446 n_inter=446">0.869</td><td class="num" title="n_anat=936 n_inter=936">0.781</td><td class="num" title="n_anat=936 n_inter=936">0.823</td><td class="num" title="n_anat=596 n_inter=596">0.762</td><td class="num" title="n_anat=596 n_inter=596">0.765</td><td class="num delta">-0.038</td><td class="num delta">-0.042</td></tr>
+</tbody>
+</table>
+<div class="charts dens-charts dens-multi-wrap">
+<div class="chart dens-multi"><h3>Anat · C0→C3(Multiple models)</h3><div class="dens-legend"><span class="leg"><i style="background:#2563eb"></i>gpt-image-2</span><span class="leg"><i style="background:#dc2626"></i>gemini-3-pro-image</span><span class="leg"><i style="background:#059669"></i>seedream-5-pro</span></div><svg width="560" height="280" viewBox="0 0 560 280" role="img" aria-label="Anat · C0→C3(Multiple models)"><line x1="48" y1="244.0" x2="544" y2="244.0" stroke="#eef0f3" stroke-width="1"/><text x="42" y="247.0" text-anchor="end" font-size="10" fill="#9ca3af">0.71</text><line x1="48" y1="187.5" x2="544" y2="187.5" stroke="#eef0f3" stroke-width="1"/><text x="42" y="190.5" text-anchor="end" font-size="10" fill="#9ca3af">0.75</text><line x1="48" y1="131.0" x2="544" y2="131.0" stroke="#eef0f3" stroke-width="1"/><text x="42" y="134.0" text-anchor="end" font-size="10" fill="#9ca3af">0.79</text><line x1="48" y1="74.5" x2="544" y2="74.5" stroke="#eef0f3" stroke-width="1"/><text x="42" y="77.5" text-anchor="end" font-size="10" fill="#9ca3af">0.83</text><line x1="48" y1="18.0" x2="544" y2="18.0" stroke="#eef0f3" stroke-width="1"/><text x="42" y="21.0" text-anchor="end" font-size="10" fill="#9ca3af">0.87</text><text x="48.0" y="268" text-anchor="middle" font-size="11" fill="#6b7280">C0</text><text x="213.3" y="268" text-anchor="middle" font-size="11" fill="#6b7280">C1</text><text x="378.7" y="268" text-anchor="middle" font-size="11" fill="#6b7280">C2</text><text x="544.0" y="268" text-anchor="middle" font-size="11" fill="#6b7280">C3</text><polyline fill="none" stroke="#2563eb" stroke-width="2.2" points="48.0,159.5 213.3,111.4 378.7,143.0 544.0,214.9"/><circle cx="48.0" cy="159.5" r="3" fill="#2563eb" stroke="#fff" stroke-width="1"/><circle cx="213.3" cy="111.4" r="3" fill="#2563eb" stroke="#fff" stroke-width="1"/><circle cx="378.7" cy="143.0" r="3" fill="#2563eb" stroke="#fff" stroke-width="1"/><circle cx="544.0" cy="214.9" r="3" fill="#2563eb" stroke="#fff" stroke-width="1"/><polyline fill="none" stroke="#dc2626" stroke-width="2.2" points="48.0,86.2 213.3,47.1 378.7,83.4 544.0,119.4"/><circle cx="48.0" cy="86.2" r="3" fill="#dc2626" stroke="#fff" stroke-width="1"/><circle cx="213.3" cy="47.1" r="3" fill="#dc2626" stroke="#fff" stroke-width="1"/><circle cx="378.7" cy="83.4" r="3" fill="#dc2626" stroke="#fff" stroke-width="1"/><circle cx="544.0" cy="119.4" r="3" fill="#dc2626" stroke="#fff" stroke-width="1"/><polyline fill="none" stroke="#059669" stroke-width="2.2" points="48.0,120.3 213.3,109.5 378.7,148.2 544.0,175.6"/><circle cx="48.0" cy="120.3" r="3" fill="#059669" stroke="#fff" stroke-width="1"/><circle cx="213.3" cy="109.5" r="3" fill="#059669" stroke="#fff" stroke-width="1"/><circle cx="378.7" cy="148.2" r="3" fill="#059669" stroke="#fff" stroke-width="1"/><circle cx="544.0" cy="175.6" r="3" fill="#059669" stroke="#fff" stroke-width="1"/></svg></div><div class="chart dens-multi"><h3>Inter · C0→C3(Multiple models)</h3><div class="dens-legend"><span class="leg"><i style="background:#2563eb"></i>gpt-image-2</span><span class="leg"><i style="background:#dc2626"></i>gemini-3-pro-image</span><span class="leg"><i style="background:#059669"></i>seedream-5-pro</span></div><svg width="560" height="280" viewBox="0 0 560 280" role="img" aria-label="Inter · C0→C3(Multiple models)"><line x1="48" y1="244.0" x2="544" y2="244.0" stroke="#eef0f3" stroke-width="1"/><text x="42" y="247.0" text-anchor="end" font-size="10" fill="#9ca3af">0.61</text><line x1="48" y1="187.5" x2="544" y2="187.5" stroke="#eef0f3" stroke-width="1"/><text x="42" y="190.5" text-anchor="end" font-size="10" fill="#9ca3af">0.68</text><line x1="48" y1="131.0" x2="544" y2="131.0" stroke="#eef0f3" stroke-width="1"/><text x="42" y="134.0" text-anchor="end" font-size="10" fill="#9ca3af">0.75</text><line x1="48" y1="74.5" x2="544" y2="74.5" stroke="#eef0f3" stroke-width="1"/><text x="42" y="77.5" text-anchor="end" font-size="10" fill="#9ca3af">0.83</text><line x1="48" y1="18.0" x2="544" y2="18.0" stroke="#eef0f3" stroke-width="1"/><text x="42" y="21.0" text-anchor="end" font-size="10" fill="#9ca3af">0.90</text><text x="48.0" y="268" text-anchor="middle" font-size="11" fill="#6b7280">C0</text><text x="213.3" y="268" text-anchor="middle" font-size="11" fill="#6b7280">C1</text><text x="378.7" y="268" text-anchor="middle" font-size="11" fill="#6b7280">C2</text><text x="544.0" y="268" text-anchor="middle" font-size="11" fill="#6b7280">C3</text><polyline fill="none" stroke="#2563eb" stroke-width="2.2" points="48.0,222.1 213.3,106.7 378.7,174.0 544.0,210.9"/><circle cx="48.0" cy="222.1" r="3" fill="#2563eb" stroke="#fff" stroke-width="1"/><circle cx="213.3" cy="106.7" r="3" fill="#2563eb" stroke="#fff" stroke-width="1"/><circle cx="378.7" cy="174.0" r="3" fill="#2563eb" stroke="#fff" stroke-width="1"/><circle cx="544.0" cy="210.9" r="3" fill="#2563eb" stroke="#fff" stroke-width="1"/><polyline fill="none" stroke="#dc2626" stroke-width="2.2" points="48.0,120.4 213.3,57.6 378.7,92.7 544.0,102.9"/><circle cx="48.0" cy="120.4" r="3" fill="#dc2626" stroke="#fff" stroke-width="1"/><circle cx="213.3" cy="57.6" r="3" fill="#dc2626" stroke="#fff" stroke-width="1"/><circle cx="378.7" cy="92.7" r="3" fill="#dc2626" stroke="#fff" stroke-width="1"/><circle cx="544.0" cy="102.9" r="3" fill="#dc2626" stroke="#fff" stroke-width="1"/><polyline fill="none" stroke="#059669" stroke-width="2.2" points="48.0,89.5 213.3,39.9 378.7,75.9 544.0,122.2"/><circle cx="48.0" cy="89.5" r="3" fill="#059669" stroke="#fff" stroke-width="1"/><circle cx="213.3" cy="39.9" r="3" fill="#059669" stroke="#fff" stroke-width="1"/><circle cx="378.7" cy="75.9" r="3" fill="#059669" stroke="#fff" stroke-width="1"/><circle cx="544.0" cy="122.2" r="3" fill="#059669" stroke="#fff" stroke-width="1"/></svg></div>
+</div>
+
+<div class="howto dens-analysis">
+  <h4>Contact density binning instructions (C0–C3）</h4>
+  <p>
+    Currently <b>Level 4</b>：C0 contactless → C1 light/Instantaneous → C2 point/line of continuous contact →
+    <b>C3 high contact</b>(formerly "large area/"Load-bearing" and "winding"/Confrontation" merger).
+    Reason for merger: close-fitting load-bearing (hug/piggyback) versus fighting (fight/wrestle) is not strictly sorted in terms of contact area,
+    But both are significantly higher than C0–C2; Forcibly splitting it into two levels can easily create a false "difficulty ladder".
+  </p>
+  <ul>
+    <li>C3 It still contains multiple interaction types; for fine-grained failure modes, please click board_cat（hug / fight ...) Separately.</li>
+    <li>main curve view <b>C2→C3</b> and <b>Δ(C3−C0)</b>: high contact relatively low/Whether the contact is degraded.</li>
+  </ul>
+</div>
+
+
+
+
+<hr class="sep">
+<h2>Instr Supplementary (weighted sub-scores)</h2>
+<p class="note" style="margin-top:0;margin-bottom:12px">
+  main table <b>Instr</b> = Weighted normalization of available subtype means:
+  <code>asymm 0.50</code> + <code>role_duty 0.35</code> + <code>prop_object 0.15</code>
+  (If a bucket is missing, it will be reset to one). Below is the diagnostic column.
+</p>
+<table>
+<thead><tr><th>Model</th><th>Instr</th><th>asymm×0.50</th><th>role_duty×0.35</th><th>prop_object×0.15</th><th>p✓ (Instr≥.999)</th></tr></thead>
+<tbody>
+<tr><td class="model">gpt-image-2</td><td class="num">0.929</td><td class="num">0.924</td><td class="num">0.934</td><td class="num">0.976</td><td class="num">0.808</td></tr><tr><td class="model">gemini-3-pro-image</td><td class="num">0.929</td><td class="num">0.925</td><td class="num">0.934</td><td class="num">0.953</td><td class="num">0.801</td></tr><tr><td class="model">seedream-5-pro</td><td class="num">0.933</td><td class="num">0.929</td><td class="num">0.937</td><td class="num">0.961</td><td class="num">0.819</td></tr>
+</tbody>
+</table>
+<div class="charts">
+<div class="chart"><h3>asymm×0.50</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:92.4%;background:#059669"></div></div><span class="bv">0.924</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:92.5%;background:#059669"></div></div><span class="bv">0.925</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:92.9%;background:#059669"></div></div><span class="bv">0.929</span></div></div><div class="chart"><h3>role_duty×0.35</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:93.4%;background:#0d9488"></div></div><span class="bv">0.934</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:93.4%;background:#0d9488"></div></div><span class="bv">0.934</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:93.7%;background:#0d9488"></div></div><span class="bv">0.937</span></div></div><div class="chart"><h3>prop_object×0.15</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:97.6%;background:#14b8a6"></div></div><span class="bv">0.976</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:95.3%;background:#14b8a6"></div></div><span class="bv">0.953</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:96.1%;background:#14b8a6"></div></div><span class="bv">0.961</span></div></div><div class="chart"><h3>p✓ (Instr≥.999)</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:80.8%;background:#64748b"></div></div><span class="bv">0.808</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:80.1%;background:#64748b"></div></div><span class="bv">0.801</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:81.9%;background:#64748b"></div></div><span class="bv">0.819</span></div></div>
+</div>
+
+
+<hr class="sep">
+<h2>Mesh Anat / Inter detail</h2>
+<p class="note" style="margin-top:0;margin-bottom:14px">
+  main table <b>Anat</b> = <b>Anat_mesh</b>，<b>Inter</b> = <b>Inter_mesh</b>。
+  The last three columns (P_extra / orphan / leftover) is a diagnostic quantity. Data source:hybrid:gemini-3-pro-image:recomputed_n=2469,gpt-image-2:recomputed_n=2078,seedream-5-pro:recomputed_n=2488。
+</p>
+
+<h2>How to calculate it (popular version)</h2>
+<div class="howto">
+  <h4>common prefix</h4>
+  <p>Multi-HMR After checking out the person, press prompt of R# number of people to do top-k（keep）。
+  Anat and Inter <b>share the same group of people</b>。</p>
+  <h4>Anat_mesh（↑the better)</h4>
+  <p>ask"N How much of the human body can a frame cover?"; how much of the body can't be covered? → leftover / orphan → s_extra, and then with the residual/structure/Number of people fidelity bonus points synthesis.</p>
+  <code>Anat ≈ 0.40 s_extra + 0.30 s_resid + 0.15 s_struct + 0.15 s_detect</code>（s=1−P）
+  <h4>Inter_mesh（↑the better)</h4>
+  <p>look at two people 3D: Whether the mold penetration and contact are consistent prompt Intention (to hold) / Don't touch / not specified).</p>
+  <code>Inter ≈ 0.55 s_pen + 0.45 s_prox</code>（required；forbidden use s_clear；unspecified only s_pen）
+</div>
+
+<table>
+<thead><tr><th>Model</th><th>Inter_mesh</th><th>Anat_mesh</th><th>P_extra</th><th>orphan</th><th>leftover</th></tr></thead>
+<tbody>
+<tr><td class="model">gpt-image-2</td><td class="num">0.692</td><td class="num">0.775</td><td class="num">0.325</td><td class="num">—</td><td class="num">0.664</td></tr>
+<tr><td class="model">gemini-3-pro-image</td><td class="num">0.800</td><td class="num">0.823</td><td class="num">0.283</td><td class="num">—</td><td class="num">0.599</td></tr>
+<tr><td class="model">seedream-5-pro</td><td class="num">0.814</td><td class="num">0.785</td><td class="num">0.329</td><td class="num">—</td><td class="num">0.670</td></tr>
+</tbody>
+</table>
+<div class="charts">
+<div class="chart"><h3>Inter_mesh</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:69.2%;background:#f59e0b"></div></div><span class="bv">0.692</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:80.0%;background:#f59e0b"></div></div><span class="bv">0.800</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:81.4%;background:#f59e0b"></div></div><span class="bv">0.814</span></div></div><div class="chart"><h3>Anat_mesh</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:77.5%;background:#ef4444"></div></div><span class="bv">0.775</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:82.3%;background:#ef4444"></div></div><span class="bv">0.823</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:78.5%;background:#ef4444"></div></div><span class="bv">0.785</span></div></div><div class="chart"><h3>P_extra</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:32.5%;background:#8b5cf6"></div></div><span class="bv">0.325</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:28.3%;background:#8b5cf6"></div></div><span class="bv">0.283</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:32.9%;background:#8b5cf6"></div></div><span class="bv">0.329</span></div></div><div class="chart"><h3>leftover</h3><div class="bar-row"><span class="bn">gpt-image-2</span><div class="track"><div class="fill" style="width:66.4%;background:#64748b"></div></div><span class="bv">0.664</span></div><div class="bar-row"><span class="bn">gemini-3-pro-image</span><div class="track"><div class="fill" style="width:59.9%;background:#64748b"></div></div><span class="bv">0.599</span></div><div class="bar-row"><span class="bn">seedream-5-pro</span><div class="track"><div class="fill" style="width:67.0%;background:#64748b"></div></div><span class="bv">0.670</span></div></div>
+</div>
+<p class="note">GT Rows are for reference only.P_extra / orphan / leftover Lower is usually better;Anat_mesh / Inter_mesh The higher the better.</p>
+</body></html>

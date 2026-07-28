@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T178",
+  "instruction": "Candid documentary full shot of an indoor motion capture studio with a red carpet and white walls. In the center, the bearded man in a dark shirt and blue shorts (R1) and the woman in a white t-shirt and blue jeans (R2) are embracing face-to-face. The woman is positioned with her back to the camera, while the man faces forward, wrapping his arms around her back. The background shows white walls with radiators and mounted motion capture cameras. Bright overhead studio lighting fills the room, highlighting the vibrant red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps his arms around R2's back during the embrace",
+    "R2 has her back to the camera while R1 faces forward",
+    "R1 is the forward-facing partner enclosing R2 in the face-to-face contact",
+    "R1 and R2 are in close face-to-face body contact",
+    "the scene is an indoor motion capture studio with a red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap his arms around R2's back, rather than R2 being the one described as wrapping arms around R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps his arms around R2's back during the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person with her back to the camera while R1 faces forward during their contact, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera while R1 faces forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the forward-facing partner enclosing R2's back in the face-to-face embrace, rather than R2 being the forward-facing partner enclosing R1's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the forward-facing partner enclosing R2 in the face-to-face contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned in close face-to-face body contact with R1's arms around R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in close face-to-face body contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing directly against R1 in the embrace with her back turned toward the viewer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera while R1 faces forward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

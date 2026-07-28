@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__072f7505bd5e__T7",
+  "instruction": "Candid family photograph, medium shot at eye-level in a sunny park with green grass and blurred trees. On the left, the curly-haired woman in a black leather jacket (R3) stands looking at the baby with a gentle expression. In the center, the man in a white zip-up hoodie (R2) stands holding the baby girl in denim overalls and a pink shirt (R1) in his arms, smiling down at her. The baby has a slight pouty expression. Natural daylight with soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 supports and holds R1 in his arms",
+    "R1 is the baby being carried by R2",
+    "R3 watches R1 while R2 holds R1",
+    "R1 is positioned in R2's arms as R2 stands",
+    "R2 smiles down at R1",
+    "sunny park setting with green grass and blurred trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1 in his arms, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports and holds R1 in his arms"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the baby being carried by R2, rather than R2 being carried by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the baby being carried by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 watching R1 while R2 holds R1, rather than R3 being the person held in R2's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 watches R1 while R2 holds R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned in R2's arms while R2 stands holding her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is positioned in R2's arms as R2 stands"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 smiling down at R1 while holding her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles down at R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

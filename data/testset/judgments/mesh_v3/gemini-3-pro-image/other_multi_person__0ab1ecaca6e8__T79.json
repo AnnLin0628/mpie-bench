@@ -1,0 +1,688 @@
+{
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T79",
+  "model_id": "gemini-3-pro-image",
+  "ok": true,
+  "backend": "multi_hmr",
+  "backend_model": "multiHMR_896_L",
+  "elapsed_ms": 171.4,
+  "cat": "other_multi_person",
+  "prompt": "A candid outdoor photograph with a wide shot of a group of friends sitting in a row on the grass. On the left, the woman with a large afro (R6) leans on a large black inflatable bowling ball. Next to her, the man in a red polo shirt (R3) and the woman in a black beanie (R5) sit holding white inflatable bowling pins. Further right, the woman in a dark blue t-shirt (R4) and the bald man in a dark blue t-shirt (R2) hold their pins, while the large man in a dark blue t-shirt (R1) sits on the far right laughing with his pin raised. Bright natural daylight illuminates the scene.",
+  "img": "outputs/gemini-3-pro-image/other_multi_person__0ab1ecaca6e8__T79.png",
+  "det_scores_kept": [
+    0.3345,
+    0.3062,
+    0.3713,
+    0.5117,
+    0.6426,
+    0.2832
+  ],
+  "keep_idx": [
+    0,
+    1,
+    2,
+    6,
+    8,
+    9
+  ],
+  "person_select": "top_k_by_score_vs_prompt_R",
+  "n_humans": 6,
+  "n_expected": 6,
+  "n_detected_raw": 10,
+  "S_count_mesh": 1.0,
+  "S_anat_mesh": 0.9196465449994728,
+  "S_anat_person": 0.9892746712552336,
+  "S_anat_joint": 1.0,
+  "S_anat_bone": 0.9427982466945791,
+  "S_anat_self": 1.0,
+  "S_anat_shape": 1.0,
+  "S_anat_hand": 1.0,
+  "S_anat_part_mesh": 1.0,
+  "S_anat_scale": 1.0,
+  "S_anat_contact_region": 1.0,
+  "S_anat_ownership": 0.7959183673469388,
+  "S_anat_residual": 1.0,
+  "S_anat_overcount": 0.8756469747435802,
+  "S_anat_abhuman": null,
+  "anat_scene": {
+    "cross_person_scale": {
+      "score": 1.0,
+      "available": true,
+      "height_ratio": 1.1805740812397418,
+      "arm_ratio": 1.043466946155274
+    },
+    "contact_region_anat": {
+      "score": 1.0,
+      "available": true,
+      "n_contact_joints": 18
+    },
+    "ownership": {
+      "score": 0.7959183673469388,
+      "available": true,
+      "confused_frac": 0.07142857142857142
+    },
+    "explain_residual": {
+      "score": 1.0,
+      "available": true,
+      "iou": 0.5258592421262271,
+      "iou_cues": {
+        "luma": 0.5258592421262271,
+        "otsu": 0.4453239453177584,
+        "sat": 0.29956933495795546
+      },
+      "method": "multi_cue_max",
+      "bbox_frac": 0.6486666666660524
+    },
+    "structure_overcount": {
+      "score": 0.8756469747435802,
+      "available": true,
+      "leftover_frac": 0.5794824202051359,
+      "orphan_frac": 0.0,
+      "n_leftover_blobs": 0,
+      "max_blob_frac": 0.0,
+      "P_extra_area": 0.12435302525641984,
+      "P_extra_blob": 0.0,
+      "method": "skeleton_torso",
+      "note": "unexplained_via_skeleton_torso",
+      "work_scale": 0.512,
+      "n_hands": null,
+      "n_torso": null
+    },
+    "abhuman": {
+      "score": null,
+      "available": false,
+      "n_anom": null,
+      "note": "missing_weights:abhuman/best.pt"
+    },
+    "P_anat_extra": 0.12435302525641978,
+    "P_anat_resid": 0.0,
+    "P_anat_struct": 0.20408163265306123,
+    "P_anat_detect": 0.0,
+    "anat_formula": "penalty 1-0.40P_extra-0.30P_resid-0.15P_struct-0.15P_detect",
+    "w_extra": 0.4,
+    "w_resid": 0.3,
+    "w_struct": 0.15,
+    "w_detect": 0.15
+  },
+  "anat_leftover_frac": 0.5794824202051359,
+  "anat_n_leftover_blobs": 0,
+  "anat_overcount_note": "unexplained_via_skeleton_torso",
+  "P_anat_extra": 0.12435302525641978,
+  "P_anat_resid": 0.0,
+  "P_anat_struct": 0.20408163265306123,
+  "P_anat_detect": 0.0,
+  "anat_formula": "penalty 1-0.40P_extra-0.30P_resid-0.15P_struct-0.15P_detect",
+  "S_inter_mesh": 0.8522306305032555,
+  "S_prox": 1.0,
+  "S_pen": 0.7313284190968283,
+  "anat_parts": [
+    {
+      "S_anat_mesh": 0.9892332518065318,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9425773429681694,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9425773429681694,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0765703067342316,
+          "thigh_over_shin": 0.9216672963485817,
+          "upper_arm_over_thigh": 0.7113656466451455,
+          "forearm_over_shin": 0.60901034345595,
+          "finger_over_shin": 0.34914121492555156,
+          "torso_over_leg": 0.5423149139713124
+        },
+        "symmetry": {
+          "upper_arm": 0.02729442250263776,
+          "forearm": 0.014017524763445182,
+          "thigh": 0.04578400705825019,
+          "shin": 0.013749709269027601
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.19412083327770233,
+        "beta_abs_max": 0.9456870555877686
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5869851095615156,
+          "right_finger_over_forearm": 0.5594071038901318
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    },
+    {
+      "S_anat_mesh": 0.9890265720329847,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9414750508425846,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9414750508425846,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0780015684141264,
+          "thigh_over_shin": 0.9236920677538948,
+          "upper_arm_over_thigh": 0.7118167905472004,
+          "forearm_over_shin": 0.609924458727595,
+          "finger_over_shin": 0.3500302662306547,
+          "torso_over_leg": 0.5407393265107306
+        },
+        "symmetry": {
+          "upper_arm": 0.027757673367469198,
+          "forearm": 0.014273423905199036,
+          "thigh": 0.04637594048820761,
+          "shin": 0.013907104853255931
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.1944563716650009,
+        "beta_abs_max": 0.9232261180877686
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5861205473551725,
+          "right_finger_over_forearm": 0.5614859993667606
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    },
+    {
+      "S_anat_mesh": 0.988285104574957,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9375205577331039,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9375205577331039,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0687353011042875,
+          "thigh_over_shin": 0.9184604305360361,
+          "upper_arm_over_thigh": 0.7166309282485895,
+          "forearm_over_shin": 0.6158654535080355,
+          "finger_over_shin": 0.3598315467460589,
+          "torso_over_leg": 0.5443326504930838
+        },
+        "symmetry": {
+          "upper_arm": 0.030382181012189275,
+          "forearm": 0.014549775220107128,
+          "thigh": 0.04952256209172992,
+          "shin": 0.016153708826850383
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.20645927265286446,
+        "beta_abs_max": 0.5102972388267517
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5919607399659093,
+          "right_finger_over_forearm": 0.5764660122730587
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    },
+    {
+      "S_anat_mesh": 0.990446771182075,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9490494463044001,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9490494463044001,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0781132569978482,
+          "thigh_over_shin": 0.9225628774194903,
+          "upper_arm_over_thigh": 0.7167811798730417,
+          "forearm_over_shin": 0.6133638590301931,
+          "finger_over_shin": 0.37111050942024676,
+          "torso_over_leg": 0.5608179103408699
+        },
+        "symmetry": {
+          "upper_arm": 0.02315282088010369,
+          "forearm": 0.010601241252077618,
+          "thigh": 0.04602934591961483,
+          "shin": 0.011927588600283666
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.1885032184422016,
+        "beta_abs_max": 0.6868979930877686
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.6141938835640699,
+          "right_finger_over_forearm": 0.5957913108713022
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    },
+    {
+      "S_anat_mesh": 0.9895384057684992,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9442048307653289,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9442048307653289,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.081209377827955,
+          "thigh_over_shin": 0.9215235871319651,
+          "upper_arm_over_thigh": 0.7298185402291825,
+          "forearm_over_shin": 0.6220303050816007,
+          "finger_over_shin": 0.37895018186670104,
+          "torso_over_leg": 0.60853626167741
+        },
+        "symmetry": {
+          "upper_arm": 0.026339202888688133,
+          "forearm": 0.013777413483461192,
+          "thigh": 0.04905827428289792,
+          "shin": 0.011256413967360773
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.45292435884475707,
+        "beta_abs_max": 1.3758796453475952
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.5909964357106599,
+          "right_finger_over_forearm": 0.6276862762622736
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    },
+    {
+      "S_anat_mesh": 0.9891179221663539,
+      "joint_limit_score": 1.0,
+      "bone_proportion_score": 0.9419622515538869,
+      "self_collision_score": 1.0,
+      "shape_plausibility_score": 1.0,
+      "bone_detail": {
+        "score": 0.9419622515538869,
+        "available": true,
+        "ratios": {
+          "upper_arm_over_forearm": 1.0731547034950446,
+          "thigh_over_shin": 0.9190698055868568,
+          "upper_arm_over_thigh": 0.7161848822305209,
+          "forearm_over_shin": 0.6133541588478815,
+          "finger_over_shin": 0.3755039083011847,
+          "torso_over_leg": 0.5683863405033672
+        },
+        "symmetry": {
+          "upper_arm": 0.028115592305600134,
+          "forearm": 0.013119930800335303,
+          "thigh": 0.04764962087158478,
+          "shin": 0.015582803225483458
+        }
+      },
+      "self_collision_detail": {
+        "score": 1.0,
+        "available": true,
+        "n_bad": 0
+      },
+      "shape_detail": {
+        "score": 1.0,
+        "available": true,
+        "beta_abs_mean": 0.29499604627490045,
+        "beta_abs_max": 0.7958015203475952
+      },
+      "hand_fine_score": 1.0,
+      "hand_detail": {
+        "score": 1.0,
+        "available": true,
+        "ratios": {
+          "left_finger_over_forearm": 0.6096052951086876,
+          "right_finger_over_forearm": 0.6148568460780008
+        }
+      },
+      "part_mesh_self_score": 1.0,
+      "part_mesh_self_detail": {
+        "score": 1.0,
+        "available": true,
+        "hit_ratio": 0.0
+      }
+    }
+  ],
+  "pen_vert_ratio": 0.046875,
+  "pen_inside_ratio": 0.4270833333333333,
+  "pen_volume_m3": 0.07686715809031718,
+  "pen_depth_mean": 0.00017409571079134547,
+  "min_surf_dist": 0.0012549657644039883,
+  "contact_band_hit": true,
+  "recon_fail": false,
+  "under_detect": false,
+  "pairs": [
+    {
+      "i": 0,
+      "j": 1,
+      "pen_vert_ratio": 0.046875,
+      "pen_depth_mean": 0.002611435661870182,
+      "min_surf_dist": 0.0012549657644039883,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.4270833333333333,
+      "pen_volume_m3": 0.07686715809031718,
+      "volume_method": "trimesh.contains",
+      "vol_hull_a": 0.17998163845537682,
+      "vol_hull_b": 0.18210685254379658,
+      "contact_band_hit": true
+    },
+    {
+      "i": 0,
+      "j": 2,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.010305004982984131,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.06510416666666667,
+      "pen_volume_m3": 0.011717554586938597,
+      "volume_method": "trimesh.contains",
+      "vol_hull_a": 0.17998163845537682,
+      "vol_hull_b": 0.20343545207223696,
+      "contact_band_hit": true
+    },
+    {
+      "i": 0,
+      "j": 3,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.4592762710693925,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.17998163845537682,
+      "vol_hull_b": 0.18310222044177699,
+      "contact_band_hit": false
+    },
+    {
+      "i": 0,
+      "j": 4,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 1.2601905632714485,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.17998163845537682,
+      "vol_hull_b": 0.23838626277078337,
+      "contact_band_hit": false
+    },
+    {
+      "i": 0,
+      "j": 5,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.6481874867711195,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.17998163845537682,
+      "vol_hull_b": 0.20889662972573825,
+      "contact_band_hit": false
+    },
+    {
+      "i": 1,
+      "j": 2,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.015154030600001636,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.09375,
+      "pen_volume_m3": 0.01707251742598093,
+      "volume_method": "trimesh.contains",
+      "vol_hull_a": 0.18210685254379658,
+      "vol_hull_b": 0.20343545207223696,
+      "contact_band_hit": true
+    },
+    {
+      "i": 1,
+      "j": 3,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.4642811042344268,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.18210685254379658,
+      "vol_hull_b": 0.18310222044177699,
+      "contact_band_hit": false
+    },
+    {
+      "i": 1,
+      "j": 4,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 1.2712145784305047,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.18210685254379658,
+      "vol_hull_b": 0.23838626277078337,
+      "contact_band_hit": false
+    },
+    {
+      "i": 1,
+      "j": 5,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.6620030708547439,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.18210685254379658,
+      "vol_hull_b": 0.20889662972573825,
+      "contact_band_hit": false
+    },
+    {
+      "i": 2,
+      "j": 3,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.41355750001205593,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.20343545207223696,
+      "vol_hull_b": 0.18310222044177699,
+      "contact_band_hit": false
+    },
+    {
+      "i": 2,
+      "j": 4,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 1.4175186071910477,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.20343545207223696,
+      "vol_hull_b": 0.23838626277078337,
+      "contact_band_hit": false
+    },
+    {
+      "i": 2,
+      "j": 5,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.7691839027212154,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.20343545207223696,
+      "vol_hull_b": 0.20889662972573825,
+      "contact_band_hit": false
+    },
+    {
+      "i": 3,
+      "j": 4,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.6749341812896027,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "none",
+      "vol_hull_a": 0.18310222044177699,
+      "vol_hull_b": 0.23838626277078337,
+      "contact_band_hit": false
+    },
+    {
+      "i": 3,
+      "j": 5,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.01233954143790272,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0026041666666666665,
+      "pen_volume_m3": 0.00047682869906712753,
+      "volume_method": "trimesh.contains",
+      "vol_hull_a": 0.18310222044177699,
+      "vol_hull_b": 0.20889662972573825,
+      "contact_band_hit": true
+    },
+    {
+      "i": 4,
+      "j": 5,
+      "pen_vert_ratio": 0.0,
+      "pen_depth_mean": 0.0,
+      "min_surf_dist": 0.22656831292109736,
+      "tau_overlap": 0.01,
+      "n_sample": 512,
+      "pen_inside_ratio": 0.0,
+      "pen_volume_m3": 0.0,
+      "volume_method": "trimesh.contains",
+      "vol_hull_a": 0.23838626277078337,
+      "vol_hull_b": 0.20889662972573825,
+      "contact_band_hit": false
+    }
+  ],
+  "tau_pen": 0.05,
+  "tau_contact": 0.02,
+  "tau_vol": 0.05,
+  "inter_regime": "prompt_contact_required",
+  "needs_contact": true,
+  "contact_intent": "required",
+  "pen_signal": "volume_band",
+  "P_fuse": 0.26867158090317167,
+  "P_miss": 0.0,
+  "P_unwanted": 0.0,
+  "vol_ok": 0.05,
+  "vol_bad": 0.15,
+  "d_good": 0.05,
+  "d_fail": 0.4,
+  "w_prox": 0.45,
+  "w_pen": 0.55,
+  "w_fuse": 0.55,
+  "w_miss": 0.45,
+  "w_unwanted": 0.45,
+  "written_at": "2026-07-17T14:00:34",
+  "fuse_value": 0.07686715809031718,
+  "fuse_ok": 0.05,
+  "fuse_bad": 0.15,
+  "rescored_at": "2026-07-17T14:08:23",
+  "w_extra": 0.4,
+  "w_resid": 0.3,
+  "w_struct": 0.15,
+  "w_detect": 0.15
+}

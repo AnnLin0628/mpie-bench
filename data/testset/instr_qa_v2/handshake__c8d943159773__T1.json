@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__c8d943159773__T1",
+  "instruction": "Candid office photograph, medium shot at eye-level. In a bright modern meeting room with a whiteboard in the background, the man in the white turtleneck (R2) stands on the left in profile, extending his right hand across a conference table. On the right, the man in the khaki tunic (R1) stands facing left, looking down at the gesture with a slightly surprised expression as he begins to extend his hand to return the handshake. A silver laptop sits open on the table in the foreground under bright, diffused indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 initiates the handshake by extending his right hand toward R1 first",
+    "R1 reacts to R2's offered handshake and begins extending his hand to return it",
+    "R1 looks down at R2's handshake gesture with a surprised expression",
+    "R2 extends his hand across a conference table toward R1",
+    "A silver laptop is open on the conference table",
+    "The scene is a bright modern meeting room with a whiteboard in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down at R2's extended-hand gesture with surprise, rather than R2 looking down at a gesture from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reacts visually to R2's gesture"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising a hand to complete a handshake with R2, rather than R1 remaining fully passive with both hands down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake initiator/active hand"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in profile while extending his right hand across the table toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's handshake posture"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people whose hands meet in the handshake, rather than interacting with someone else?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "handshake contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

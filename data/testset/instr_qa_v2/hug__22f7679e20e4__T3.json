@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__22f7679e20e4__T3",
+  "instruction": "Candid documentary medium shot of a cozy indoor room. The man with white hair and beard (R1) sits at a table wearing a brown knit sweater, smiling warmly. The woman with gray hair (R2) in a white shirt stands behind him, leaning over to wrap her arms around his neck and shoulders. On the table in front of them are pill organizers and medicine packets. Soft natural light filters in from a window, creating a gentle, intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands behind R1 and wraps her arms around R1's neck and shoulders",
+    "R1 is seated and receives the embrace while R2 is the one leaning over him",
+    "R1 remains seated at the table while R2 stands behind him in contact with his shoulders",
+    "pill organizers on the table in front of them",
+    "medicine packets on the table",
+    "cozy indoor room with soft natural window light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing behind R1 and wrapping her arms around R1's neck and shoulders, rather than R1 standing behind and wrapping his arms around R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 and wraps her arms around R1's neck and shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person receiving the embrace from R2, rather than R2 being seated and embraced from behind by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated and receives the embrace while R2 is the one leaning over him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 remain seated at the table while R2 stands behind him with her arms around his neck and shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 remains seated at the table while R2 stands behind him in contact with his shoulders"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

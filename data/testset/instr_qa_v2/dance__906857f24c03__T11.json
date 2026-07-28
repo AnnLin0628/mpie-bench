@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__906857f24c03__T11",
+  "instruction": "A dynamic athletic studio photograph, full shot. Against a plain grey background, the shirtless man (R2) stands below, lifting the woman in the beige crop top and black shorts (R1) high overhead. She arches her body horizontally in a backbend pose with one leg bent, supported securely by his extended arms. The cool studio lighting emphasizes their muscle definition and athletic forms against the neutral backdrop.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands below and lifts R1 high overhead",
+    "R2 supports R1's weight from underneath with extended arms",
+    "R1 is the carried dancer held overhead rather than the lifter",
+    "R1 arches horizontally in a backbend pose with one leg bent while supported by R2",
+    "R2 is shirtless and positioned under R1 as the base in the lift",
+    "The scene is an athletic studio photograph against a plain grey background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing below and lifting R1 high overhead, rather than R1 lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the lifter and R1 is the lifted person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 support R1's weight from underneath with extended arms, rather than R1 supporting R2's weight?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 from below"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 carried overhead in a horizontal backbend pose, rather than R2 being carried overhead by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the overhead carried dancer"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 arching her body horizontally in a backbend while being held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's held backbend body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned underneath R1 as the base of the lift with his arms extended upward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's base role in the overhead lift"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

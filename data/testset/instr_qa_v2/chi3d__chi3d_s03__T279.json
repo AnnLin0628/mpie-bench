@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T279",
+  "instruction": "A candid documentary photograph with a full shot of an indoor studio with a red carpeted floor. The man in the black t-shirt and blue shorts (R1) stands on the left, facing right, leaning forward to hold the arm of the woman in the white t-shirt with a red pattern and blue jeans (R2). The woman (R2) stands in the center, facing forward with a neutral expression. The background shows white walls and a printer. The lighting is bright and overhead.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's arm",
+    "R1 leans forward toward R2 to make the arm contact",
+    "R2 is the person whose arm is being held by R1",
+    "R1 faces toward R2 during the contact",
+    "indoor studio setting with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's arm, rather than R2 holding R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one leaning forward to make contact with R2's arm, rather than R2 leaning forward to hold R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward toward R2 to make the arm contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the person whose arm is being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose arm is being held by R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face toward R2 while holding R2's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces toward R2 during the contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

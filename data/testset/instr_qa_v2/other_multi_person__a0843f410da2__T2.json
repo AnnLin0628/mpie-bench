@@ -1,0 +1,92 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__a0843f410da2__T2",
+  "instruction": "A candid documentary medium close-up of three women laughing on an outdoor rooftop terrace. On the left, a woman in a black sleeveless top (R4) cheers excitedly with a raised hand and a wide smile. In the center, a dark-haired woman (R3) wearing a striped top claps and laughs heartily. On the right, a woman with a curly afro (R7) in a striped dress laughs joyfully, looking towards her friends. They stand close together against a brick wall background under bright, natural daylight.",
+  "n_person": 7,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "elements": [
+    "R4 cheers excitedly with a raised hand and wide smile",
+    "R3 claps and laughs heartily",
+    "R7 laughs joyfully while looking toward her friends",
+    "R4 cheers while R3 claps nearby",
+    "R7 attends to her friends as they laugh together",
+    "outdoor rooftop terrace with a brick wall under bright natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one cheering excitedly with a raised hand, rather than R3 or R7 doing that raised-hand cheer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 cheers excitedly with a raised hand and wide smile"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one clapping and laughing heartily, rather than R4 or R7 taking the clapping role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 claps and laughs heartily"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R7 the one laughing joyfully while looking toward her friends, rather than being the woman who raises a hand to cheer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 laughs joyfully while looking toward her friends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 cheer with a raised hand while R3 claps nearby?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 cheers while R3 claps nearby"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R7 look toward R3 and R4 as she laughs with them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 attends to her friends as they laugh together"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

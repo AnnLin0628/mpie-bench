@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5f3c3f4c5080__T5",
+  "instruction": "A cinematic film still, captured in a medium shot at eye-level with a shallow depth of field. The scene is set in a cozy indoor room with curtains and a houseplant in the background. The blonde woman in a white shirt (R2) stands on the left with her back to the camera, embracing the elderly man in a striped shirt (R1) who stands on the right facing left. They are locked in a warm hug; the blonde woman wraps her arms around the elderly man's shoulders, while the elderly man holds her close with his hands resting on her back, his eyes closed in a peaceful expression. The scene is illuminated by soft, warm indoor lighting, creating a gentle and intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1's shoulders while embracing him",
+    "R1 holds R2 close with his hands resting on her back",
+    "R2 has her back to the camera while R1 faces toward her",
+    "R1's eyes are closed during the close embrace",
+    "the scene is a cozy indoor room with curtains and a houseplant in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 wrap her arms around R1's shoulders, rather than R1 wrapping his arms around R2's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 wraps her arms around R1's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 hold R2 close with his hands resting on her back, rather than R2 holding R1 that way with hands on his back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's hands rest on R2's back"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned with her back to the camera while embracing R1, who faces toward her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back to the camera while R1 faces her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the person whose eyes are closed while he holds R2 close?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 closes his eyes while holding R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T5",
+  "instruction": "Candid documentary photograph, high-angle medium shot. In a brightly lit indoor dojo with polished wooden floors and black training mats, the girl in the pink gi (R2) kneels over the woman in the black gi (R1). The girl in the pink gi (R2) grips the lapel of the woman in the black gi (R1) with her right hand, looking down with a focused expression. The woman in the black gi (R1) sits on the mat, leaning back on her hands and defending from an open guard position. Natural side lighting from a nearby window illuminates the sparring partners, casting soft shadows on the black mat.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 kneels over R1 during the grappling exchange",
+    "R2 grips R1's gi lapel with her right hand",
+    "R1 sits on the mat leaning back on her hands",
+    "R1 defends from an open guard position while R2 is above her",
+    "R1's gi lapel is the contact point being held",
+    "The sparring takes place on black training mats in an indoor dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 kneeling over R1 rather than R1 kneeling over R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the partner kneeling over R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 grip R1's gi lapel with her right hand rather than R1 gripping R2's lapel?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips R1's lapel"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person seated and leaning back while R2 is the person positioned above her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is seated below while R2 is above"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 defending from an open guard position while R2 kneels over her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends in open guard against R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning back on her hands on the mat during the sparring with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans back on her hands"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the sparring partners on black training mats inside an indoor dojo?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor dojo with black training mats"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

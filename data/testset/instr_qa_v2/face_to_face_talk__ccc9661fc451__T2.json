@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__ccc9661fc451__T2",
+  "instruction": "Candid documentary medium shot of an indoor office lounge. An older woman with short white hair (R2) in a gray blazer sits on the left of a black leather sofa, gesturing with both hands open as she speaks. Beside her, a bearded man in a gray plaid suit (R1) sits on the right, holding a white paper and listening to her. A wooden coffee table with a laptop is in the foreground under soft indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 gestures with both open hands while speaking to R1",
+    "R1 listens to R2 while holding a white paper",
+    "R2 is the active speaker and R1 is the listener",
+    "R1 holds a white paper",
+    "A laptop sits on the wooden coffee table",
+    "The scene is an indoor office lounge with a black leather sofa"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one gesturing with both open hands as she speaks, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 speaks and gestures while R1 does not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one holding a white paper and listening to R2, rather than R2 holding the paper and listening to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 listens while holding the paper"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 taking the active speaking role while R1 takes the listening role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is speaker and R1 is listener"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated beside R2 while attending to her speech rather than being the one gesturing with both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits and listens beside speaking R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a white paper during the conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "white paper held by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

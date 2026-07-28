@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__610b7e6f2694__T4",
+  "instruction": "Candid lifestyle medium shot in a bedroom. The bearded man in a denim shirt (R2) lies on a bed on the left, holding the baby girl with pink hair clips (R1) close to his face to kiss her cheek. The baby girl (R1) wears a white shirt and jeans, looking forward with a gentle smile. Soft natural light illuminates the warm yellow bedding and cozy setting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds R1 close to his face",
+    "R2 kisses R1 on the cheek",
+    "R1 is the baby being held while R2 lies on the bed",
+    "the interaction occurs on a bed",
+    "warm yellow bedding is visible",
+    "the setting is a bedroom"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1 close to his face, rather than R1 holding R2 close to her face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1 close to his face"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 kissing R1 on the cheek, rather than R1 kissing R2 on the cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kisses R1 on the cheek"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 being held by R2 while R2 lies on the bed, rather than R2 being held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is held by R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the baby positioned close to R2's face as R2 holds her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the baby being held near R2's face"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

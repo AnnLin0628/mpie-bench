@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__21a7f6d8bbb1__T2",
+  "instruction": "Cinematic film still, medium full shot in a boxing ring. The shirtless athletic man with braids (R2) stands in the center, punching downward at the shirtless tattooed man (R1), who is falling backward onto the canvas in the foreground with his back to the camera. Both wear black shorts and boxing gloves. The scene is dramatically lit by overhead lights in a dark gym.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 punches downward at R1 rather than R1 punching downward at R2",
+    "R1 is falling backward onto the canvas rather than R2 falling backward",
+    "R2 remains standing while attacking as R1 goes down",
+    "R1 is the downed/falling fighter with his back to the camera while R2 is the standing fighter",
+    "boxing gloves are worn by both fighters during the combat",
+    "the fight takes place in a boxing ring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 punching downward at R1, rather than R1 punching downward at R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 punches downward at R1 rather than R1 punching downward at R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the fighter falling backward onto the canvas from the exchange, rather than R2 falling backward onto the canvas?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is falling backward onto the canvas rather than R2 falling backward"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 remain standing while striking as R1 goes down, rather than R1 standing and striking downward as R2 goes down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 remains standing while attacking as R1 goes down"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the downed or falling fighter with his back to the camera while R2 is the standing fighter in the center?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the downed/falling fighter with his back to the camera while R2 is the standing fighter"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the combat scene set inside a boxing ring?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the fight takes place in a boxing ring"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

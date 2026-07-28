@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T9",
+  "instruction": "Candid documentary photograph, medium shot, low angle. In an indoor judo dojo, the young man with a light beard (R4) is kneeling on a yellow mat wearing a white judogi with a black undershirt, looking forward calmly. In the foreground, the young man with short dark hair (R2) is seen from behind, out of focus, wearing a white judogi. The kneeling man (R4) faces the foreground man (R2) at a close distance. Bright, even indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 is kneeling on the yellow mat facing R2, rather than R2 being the kneeling man facing R4",
+    "R2 is the out-of-focus foreground man seen from behind, while R4 is the kneeling man looking forward",
+    "R4 faces R2 at close distance in the dojo",
+    "R4 is positioned on a yellow judo mat",
+    "The setting is an indoor judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the man kneeling on the yellow mat facing R2, rather than R2 being the kneeling man facing R4?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is kneeling on the yellow mat facing R2, rather than R2 being the kneeling man facing R4"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the out-of-focus foreground man seen from behind while R4 is the kneeling man looking forward, rather than those roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the out-of-focus foreground man seen from behind, while R4 is the kneeling man looking forward"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 face R2 at a close distance while kneeling in the dojo?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 faces R2 at close distance in the dojo"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 shown from behind in the foreground while R4 looks forward toward him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground figure seen from behind, with R4 looking forward toward him"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R4 kneeling on a yellow judo mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R4 is positioned on a yellow judo mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__4baaaf7fa1ad__T2",
+  "instruction": "A candid medium shot captures an elegant indoor room with cream walls, patterned wallpaper, and a framed painting on the left. On the left side of the frame, the man with short hair in a dark blue suit (R1) stands in profile facing right, smiling. On the right side, the bald man with glasses in a blue suit (R2) stands in profile facing left. The two men clasp right hands in a firm handshake, looking directly at each other during their conversation. Warm indoor lighting from an unseen source casts soft shadows, highlighting the rich blue suits and the cream background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the short-haired man in a dark blue suit who smiles while clasping R2's right hand",
+    "R2 is the bald man with glasses in a blue suit who clasps R1's right hand",
+    "R1 and R2 use their right hands for the handshake while facing each other",
+    "R1 and R2 look directly at each other during the handshake conversation",
+    "the interaction takes place in an elegant indoor room with cream walls and patterned wallpaper",
+    "a framed painting is visible on the wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the short-haired participant smiling while clasping R2's right hand, rather than R2 being the short-haired smiling participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the smiling short-haired handshake participant"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the bald participant with glasses who clasps R1's right hand, rather than R1 being the bald glasses-wearing participant?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the bald glasses-wearing handshake participant"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look directly at R1 while their right hands are clasped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's gaze is directed at R1 during the handshake"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

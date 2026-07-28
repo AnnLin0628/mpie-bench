@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T8",
+  "instruction": "A candid studio photograph captures a medium full shot of two women dancing against a plain white wall. On the left, the woman with an afro in a brown button-up dress (R1) leans back dramatically, raising her right arm high while looking confidently at the camera. Behind her on the right, the woman with short brown hair in a striped shirt and white trousers (R2) also leans back, eyes closed with a joyful smile, her left hand resting near her head. Bright, soft studio lighting fills the frame, creating a clean, high-energy atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans back dramatically while raising her right arm high and looking confidently at the camera",
+    "R2 leans back behind R1 with eyes closed, a joyful smile, and her left hand resting near her head",
+    "R1 and R2 are both dancing in a candid studio photograph",
+    "R1 and R2 have distinct dance poses rather than mirrored identical poses",
+    "The dance takes place against a plain white wall with bright, soft studio lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer raising her right arm high while leaning back, rather than R2 being the one raising her right arm high?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises her right arm high while leaning back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer with eyes closed and a joyful smile, rather than R1 having that eyes-closed smiling pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has eyes closed with a joyful smile"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have her left hand resting near her head, rather than R1 being described with a left hand near her head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's left hand rests near her head"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both leaning back as part of the dance, with R1 looking confidently at the camera and R2 keeping her eyes closed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct dance poses for R1 and R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

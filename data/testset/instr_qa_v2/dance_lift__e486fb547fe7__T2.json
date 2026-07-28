@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__e486fb547fe7__T2",
+  "instruction": "Cinematic wide shot of an indoor dance studio with a wooden ballet barre in the background. On the left, the blonde woman in a black long-sleeve top and leggings (R2) bends her torso completely forward over her split, head down. On the right, the young girl in a black leotard and white tights (R1) also bends her torso forward over her split, head down. The blonde woman and the young girl perform parallel forward stretches, their hands resting on the reflective floor. The scene is illuminated by soft, diffused indoor light, creating a cool, neutral color palette with gentle shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the young girl bending forward over her split with her head down",
+    "R2 is the blonde woman bending completely forward over her split with her head down",
+    "R1 and R2 perform parallel forward stretches rather than a lift or carry",
+    "R1 and R2 rest their hands on the reflective floor while stretching",
+    "A wooden ballet barre is visible in the indoor dance studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the young girl bending forward over her split while R2 is the blonde woman doing the parallel stretch, rather than R2 being the young girl and R1 being the blonde woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the young girl and R2 is the blonde woman during the parallel split stretch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the blonde woman bending completely forward with her head down over her split, rather than R1 being the blonde woman in that role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the blonde woman performing the complete forward bend over her split"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 bend her torso forward over her split with her head down and her hands on the floor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's forward split stretch body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 bend her torso completely forward over her split with her head down and her hands on the floor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's forward split stretch body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

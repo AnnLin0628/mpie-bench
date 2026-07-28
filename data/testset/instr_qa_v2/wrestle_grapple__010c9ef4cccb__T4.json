@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T4",
+  "instruction": "Candid sports photograph, full shot. On a yellow tatami mat inside a dojo, the young woman with a bun (R1) stands in the foreground with her back to the camera, wearing a blue judogi labeled 'C. PAIVA POR'. She is sparring with the young man with short hair (R2), who stands facing her in a white judogi. They are locked in a grip-fighting stance under soft, diffused indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is the back-to-camera grappler in the grip-fighting stance with R2",
+    "R2 is the grappler facing R1 during the sparring exchange",
+    "R1 and R2 are locked in a grip-fighting sparring stance",
+    "R1 wears a blue judogi labeled 'C. PAIVA POR' while sparring with R2",
+    "R2 wears a white judogi while sparring with R1",
+    "the sparring takes place on a yellow tatami mat inside a dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the grappler with her back to the camera while grip-fighting with R2, rather than R2 being the back-to-camera grappler?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the back-to-camera grappler in the grip-fighting stance with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the grappler facing R1 during the sparring exchange, rather than R1 being the one facing the camera while R2 turns away?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the grappler facing R1 during the sparring exchange"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 locked in a grip-fighting stance with each other?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are locked in a grip-fighting sparring stance"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sparring directly with R2 in the dojo setting?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is sparring with R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 sparring on a yellow tatami mat inside a dojo?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the sparring takes place on a yellow tatami mat inside a dojo"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

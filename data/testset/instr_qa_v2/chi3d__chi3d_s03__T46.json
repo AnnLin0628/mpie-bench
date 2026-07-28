@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T46",
+  "instruction": "Candid documentary photograph, full shot, eye-level. The setting is an indoor motion capture studio with a dark red carpet, wooden flooring, and an office copier visible in the background. The man in the black polo shirt and blue shorts (R1) stands on the right, facing away from the camera. The woman in the white t-shirt and blue jeans (R2) stands on the left, facing right. She extends her right arm to touch the man's (R1) left shoulder from behind. Overhead indoor lighting illuminates the scene, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 reaches from behind to touch R1's left shoulder",
+    "R1 receives the shoulder touch from R2 rather than initiating it",
+    "R2 uses her right arm for the contact on R1's shoulder",
+    "R1 faces away while R2 stands behind/near his back side",
+    "indoor motion capture studio setting with an office copier in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person extending an arm to touch R1's shoulder from behind, rather than R1 extending an arm to touch R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates shoulder contact on R1 from behind"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving the touch on his left shoulder from R2, rather than R2 receiving a shoulder touch from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the receiver of R2's shoulder touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 use her right arm to reach toward R1's left shoulder, rather than R1 using his right arm to reach toward R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's right arm makes the asymmetric shoulder-touch gesture"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 behind or near the back side of R1 while touching R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned to touch R1 from behind"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 facing away from the camera while R2 makes contact with his shoulder from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces away as the contact recipient"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

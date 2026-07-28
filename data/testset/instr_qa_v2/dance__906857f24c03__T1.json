@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__906857f24c03__T1",
+  "instruction": "Studio photograph, medium shot. In an indoor studio with a neutral beige fabric backdrop, the woman in the beige sports bra and black shorts (R1) stands on the left in profile, facing left with her arms raised overhead. Behind her on the right, the shirtless man in black pants (R2) stands facing left, extending his arms to hold her raised hands. Soft studio lighting illuminates their forms against the warm neutral background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 has her arms raised overhead as the contact target",
+    "R2 extends his arms to hold R1's raised hands",
+    "R2 is positioned behind R1 while making hand contact",
+    "R1 and R2 face the same direction during the dance-like pose",
+    "indoor studio with a neutral beige fabric backdrop"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person with arms raised overhead whose hands are being held by R2, rather than R2 being the person with raised hands held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has raised hands held by R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 extend his arms to hold R1's raised hands, rather than R1 extending her arms to hold R2's raised hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the hand-holding action on R1's raised hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person behind R1 making contact with her raised hands, rather than R1 being behind R2 making contact with his raised hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 while holding her hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in a dance-like pose with both arms overhead while R2 holds her hands from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's overhead-arm pose paired with R2's behind-handhold"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both oriented facing the same direction while R2 holds R1's raised hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "shared facing direction during R2-to-R1 hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

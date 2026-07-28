@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T25",
+  "instruction": "Cinematic medium shot of a studio setting with a pink and purple gradient background. On the left, the blonde woman in the black halter dress (R3) stands facing forward, smiling warmly at the camera. Beside her on the right, the man with the neck tattoo (R2), wearing a white t-shirt and black vest, poses with a slight smile. The blonde woman (R3) extends her left hand to touch the shoulder of the man (R2) as they dance together. The scene is illuminated by soft, warm studio lighting with colorful pink and purple tones, creating a lively, candid atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 extends her left hand to touch R2's shoulder while they dance",
+    "R2 is the person receiving the shoulder touch from R3 during the dance",
+    "R3 initiates the visible shoulder contact with R2 rather than R2 initiating it with R3",
+    "R3 and R2 dance together with R3's hand on R2's shoulder",
+    "R2 poses beside R3 as the partner being touched on the shoulder",
+    "studio setting with a pink and purple gradient background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 extending her left hand to touch R2's shoulder, rather than R2 extending his hand to touch R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the one initiating the shoulder touch on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the shoulder touch from R3 while they dance, rather than R3 receiving a shoulder touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R3's shoulder contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "During the dance, does R3 initiate the visible shoulder contact with R2 rather than R2 initiating visible shoulder contact with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 initiates visible shoulder contact with R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3 and R2 dancing together with R3's hand placed on R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R2 dance together with R3 maintaining shoulder contact on R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 pose beside R3 as the partner whose shoulder is being touched by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's role is the partner being touched on the shoulder by R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

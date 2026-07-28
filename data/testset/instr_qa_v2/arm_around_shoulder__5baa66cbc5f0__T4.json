@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__5baa66cbc5f0__T4",
+  "instruction": "Candid photographic medium close-up of two young women walking together. On the left, the blonde woman in a brown cap and black puffer vest (R2) looks affectionately at her friend with a soft smile. On the right, the red-haired woman wearing wire-rimmed glasses and a light blue knit vest (R1) is shown in profile, looking straight ahead. The blonde woman (R2) holds her arm around the red-haired woman's (R1) shoulder. The scene is illuminated by soft, natural daylight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds her arm around R1's shoulder",
+    "R1 is the person receiving the arm-around-shoulder contact from R2",
+    "R2 looks affectionately toward R1 while R1 looks straight ahead",
+    "R1 and R2 walk together with R2 maintaining shoulder contact on R1",
+    "soft natural daylight illuminates the scene"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold her arm around R1's shoulder, rather than R1 holding her arm around R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds her arm around R1's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose shoulder is being held by R2's arm, rather than R2 being the one whose shoulder is held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the arm-around-shoulder contact from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 look affectionately at R1 while R1 looks straight ahead, rather than R1 looking affectionately at R2 while R2 looks ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks affectionately toward R1 while R1 looks ahead"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking together while R2 maintains arm-around-shoulder contact on R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk together with R2's arm around R1's shoulder"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

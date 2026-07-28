@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__1fb80cb80877__T11",
+  "instruction": "An artistic studio portrait photograph captured in a medium shot at eye-level. In a minimalist indoor studio with a plain off-white background, the redhead woman (R1) sits on the left wearing a light blue shirt and beige skirt, holding a bouquet of yellow, red, and white flowers in both hands while looking away to the left with a serene profile expression. Sitting back-to-back and leaning against her, the dark-haired woman (R2) on the right wears a beige blazer, looking directly at the camera with a calm, poised expression. The composition is illuminated by soft, diffused studio lighting, creating a neutral, warm color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans back against R1 while they sit back-to-back",
+    "R1 is the person being leaned against by R2",
+    "R1 and R2 are seated back-to-back rather than facing each other",
+    "R1 holds a bouquet of yellow, red, and white flowers in both hands",
+    "R1 looks away while R2 looks directly at the camera",
+    "minimalist indoor studio with a plain off-white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning back against R1, rather than R1 leaning back against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans against R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person being leaned against by R2, rather than R2 being the one leaned against by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives R2's leaning contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated back-to-back with their backs in contact or close contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "back-to-back seated body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 look directly at the camera while R1 looks away from the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contrasting gaze roles of R1 and R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a bouquet of yellow, red, and white flowers in both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the flower bouquet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

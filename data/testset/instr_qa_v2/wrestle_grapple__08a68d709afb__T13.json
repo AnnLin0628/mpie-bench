@@ -1,0 +1,81 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T13",
+  "instruction": "A candid documentary photograph, full shot from a low angle. In an indoor martial arts dojo with a brick wall background and wooden floor, the boy in the white gi (R2) sits cross-legged in the foreground with his back to the camera, watching the demonstration. In the background, the man in the black gi (R6) stands facing right, executing a high side kick with his right leg raised high and body tilted. Bright natural light streams from the right side, casting long, sharp diagonal shadows across the wooden floor, creating a focused training atmosphere.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R6 performs the high side kick while R2 watches the demonstration",
+    "R2 is seated cross-legged as the observer rather than being the demonstrator",
+    "R6 is the standing kicker with his right leg raised high, not R2",
+    "R2 sits in the foreground with his back to the camera watching R6",
+    "R6 stands in the background facing right with his body tilted during the kick",
+    "the scene is an indoor martial arts dojo with a brick wall and wooden floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the person executing the high side kick while R2 is seated watching, rather than R2 kicking while R6 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 performs the high side kick while R2 watches the demonstration"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the seated cross-legged observer of the demonstration, rather than R6 being seated as the observer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seated cross-legged as the observer rather than being the demonstrator"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the standing participant with his right leg raised high for the kick, rather than R2 being the one with the raised kicking leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the standing kicker with his right leg raised high, not R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting cross-legged in the foreground with his back to the camera while watching R6's demonstration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits in the foreground with his back to the camera watching R6"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

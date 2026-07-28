@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__332f58373138__T4",
+  "instruction": "Candid medium full shot in a ballet studio. On the left, the young ballet student in a black tutu (R2) sits on the floor with her arms extended sideways. On the right, the female instructor in a black bodysuit (R1) crouches behind her, guiding her posture. Soft indoor lighting illuminates the gray wall and wooden floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the instructor guiding R2's posture",
+    "R2 is the seated ballet student receiving guidance from R1",
+    "R1 crouches behind R2 while guiding her",
+    "R2 sits with arms extended sideways",
+    "R2 is seated on the wooden floor",
+    "the setting is a ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 guiding R2's posture, rather than R2 guiding R1's posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the asymmetric instructor duty of guiding R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the ballet student receiving posture guidance from R1, rather than R1 receiving posture guidance from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric student role of being guided by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 crouched behind R2 while helping guide R2's ballet posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 crouches behind R2 to guide posture"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 sitting with her arms extended sideways while R1 guides her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's seated ballet pose with arms extended"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

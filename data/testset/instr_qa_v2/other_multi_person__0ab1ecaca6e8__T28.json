@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T28",
+  "instruction": "Candid medium-shot photograph in a grassy park with a sloping hill. On the left, the bald man in the navy t-shirt (R2) is seen from a three-quarter back view, gesturing with his right arm toward the large Black man in the dark blue t-shirt (R1) on the right. The large Black man (R1), wearing clear safety glasses, smiles warmly and gestures back with his left hand. Soft, warm daylight illuminates the scene.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R2 gestures with his right arm toward R1",
+    "R1 gestures back with his left hand toward R2",
+    "R1 smiles warmly while responding to R2",
+    "R2 is seen from a three-quarter back view while engaging R1",
+    "R1 wears clear safety glasses",
+    "the scene is a grassy park with a sloping hill"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person gesturing with his right arm toward R1, rather than R1 gesturing with his right arm toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 gestures with his right arm toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person smiling warmly and gesturing back with his left hand toward R2, rather than R2 doing that toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles and gestures back with his left hand toward R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 shown from a three-quarter back view while gesturing toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is seen from a three-quarter back view while engaging R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 face R2 and respond to R2's gesture with his own hand gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 responds to R2's gesture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

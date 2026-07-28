@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T13",
+  "instruction": "A clean studio portrait photograph, captured in a medium shot at eye-level with a shallow depth of field and blurred purple flowers in the foreground. In a minimalist indoor studio with a plain white background, three friends sit huddled closely together. On the left, the woman with wavy light brown hair (R3), wearing a white shirt over a black top, leans in with eyes closed and a peaceful smile. In the center, the woman with straight dark hair (R2), wearing a white high-neck top and denim jacket, smiles warmly. On the right, the woman with curly brown hair (R1), wearing a white shirt, smiles happily. The women on the left (R3) and right (R1) wrap their arms around the center woman (R2) in a warm group hug. The scene is illuminated by soft, bright studio lighting.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 wraps her arms around the center woman R2, rather than R2 being described as wrapping around R1",
+    "R3 wraps her arms around the center woman R2, rather than R2 being described as wrapping around R3",
+    "R2 is the central person receiving close arm contact from both R1 and R3",
+    "R1, R2, and R3 sit huddled closely together in a group-contact pose",
+    "The portrait is set in a minimalist indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her arms around R2 as the center woman, rather than R2 being described as wrapping her arms around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around the center woman R2, rather than R2 being described as wrapping around R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 wrapping her arms around R2 as the center woman, rather than R2 being described as wrapping her arms around R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arms around the center woman R2, rather than R2 being described as wrapping around R3"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the central person being embraced by both R1 and R3, rather than R2 being the outside person wrapping around the others?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central person receiving close arm contact from both R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 sit huddled closely together with R2 positioned as the center of the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1, R2, and R3 sit huddled closely together in a group-contact pose"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 lean inward toward the huddled group while R2 remains the central contact person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans inward toward the huddled group while R2 remains in the center"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

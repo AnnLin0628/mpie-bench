@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__5474ecc87e04__T5",
+  "instruction": "A candid portrait photograph in close-up shot showing two women indoors against a plain light grey wall. On the left, the woman with dark curly hair (R1) in a dusty pink velvet jacket turns her body away and looks back over her shoulder at the camera with a subtle smile. On the right, the woman with straight brown hair (R3) in a blue and orange striped shirt leans her head back against R1's head, looking upwards with a gentle smile. They are positioned back-to-back with their heads touching. Soft natural side lighting illuminates the scene, creating a warm, intimate mood.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 leans her head back against R1's head",
+    "R1 turns her body away and looks back over her shoulder",
+    "R1 and R3 are positioned back-to-back",
+    "R1 and R3 have their heads touching",
+    "the scene is indoors against a plain light grey wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one leaning her head back against R1's head, rather than R1 leaning her head back against R3's head?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans her head back against R1's head"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one turning her body away and looking back over her shoulder, rather than R3 doing that while R1 looks upward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 turns away and looks back over her shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 looking upward while her head rests against R1's head, rather than R1 being the one looking upward in that contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 looks upward while leaning against R1's head"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 positioned back-to-back with their heads touching?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 are back-to-back with heads touching"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 make head contact with R1 while R1 looks back toward the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 contacts R1's head while R1 looks back at the camera"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

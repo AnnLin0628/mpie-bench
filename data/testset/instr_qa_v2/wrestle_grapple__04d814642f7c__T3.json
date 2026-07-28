@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__04d814642f7c__T3",
+  "instruction": "Candid documentary photograph, full shot at eye-level. In a gym with fitness machines in the background, the man in the green hoodie and grey sweatpants (R1) stands on the left, holding a red medicine ball at chest height. Beside him on the right, the woman in the grey t-shirt and khaki pants (R2) holds an orange medicine ball in a similar pose. Both are focused on their workout, standing on a black rubber floor. Bright, even indoor lighting fills the space, highlighting the athletic gear.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a red medicine ball at chest height",
+    "R2 holds an orange medicine ball in a similar workout pose",
+    "R1 is the red-ball holder while R2 is the orange-ball holder",
+    "Both R1 and R2 are focused on their workout",
+    "Medicine balls are present as the contact-relevant workout props",
+    "The scene is a gym with fitness machines in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person holding the red medicine ball at chest height, rather than R2 holding the red medicine ball?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the red medicine ball"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the orange medicine ball, rather than R1 holding the orange medicine ball?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the orange medicine ball"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding his medicine ball at chest height as part of the workout pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a medicine ball at chest height"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 holding her medicine ball in a similar chest-level workout pose to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a medicine ball in a similar pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

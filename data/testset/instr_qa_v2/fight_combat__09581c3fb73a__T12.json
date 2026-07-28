@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T12",
+  "instruction": "Candid action photograph, medium shot. In an outdoor covered concrete pavilion, the man in the blue tank top (R2) is on the left, facing right, throwing a straight punch with his gloved left hand. On the right, the man in the beige t-shirt (R1) stands with his back to the camera, holding up a black focus mitt to catch the punch. The shot captures the dynamic moment of contact between R2's glove and R1's mitt, with a shallow depth of field blurring the background pillars under bright daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 holds up a focus mitt to catch R2's punch",
+    "R2 throws a straight punch toward the mitt held by R1",
+    "R2's glove makes contact with R1's mitt",
+    "R1 stands with his back to the camera while receiving the punch on the mitt",
+    "R2 wears a boxing glove on the punching hand",
+    "The interaction occurs in an outdoor covered concrete pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding up the focus mitt to catch R2's punch, rather than R2 holding the mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the mitt holder and R2 is the puncher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 throw the straight punch that lands on R1's mitt, rather than R1 punching into a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 delivers the punch while R1 receives it with the mitt"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is the contact specifically between R2's glove and the focus mitt held by R1, rather than between R1's glove and a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's glove contacts R1's mitt"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned with his back to the camera while holding the mitt for R2's incoming punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body orientation and mitt-holding role"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black focus mitt being used to receive the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black focus mitt"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 wearing a glove on the hand that is punching the mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing glove on R2's punching hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

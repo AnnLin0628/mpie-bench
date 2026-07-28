@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T3",
+  "instruction": "Candid documentary photograph, wide full-body shot from a slightly high angle. In a motion capture studio with a red carpet and white walls, the woman in a white t-shirt and blue jeans (R2) stands on the left, facing right. She leans forward, extending her left arm to touch the chest of the bearded man in a black cap and dark polo shirt (R1), who stands on the right facing her. The scene is evenly lit by overhead lights, highlighting the simple studio interior.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans forward and extends her left arm to touch R1's chest",
+    "R1 is the person receiving the chest touch from R2",
+    "R2 initiates the arm-to-chest contact rather than R1",
+    "R1 and R2 face each other during the contact",
+    "motion capture studio with red carpet and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her left arm to touch R1's chest, rather than R1 extending an arm to touch R2's chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates arm-to-chest contact with R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person whose chest is being touched by R2, rather than R2 being the person whose chest is touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the chest touch from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning forward toward R1 while making contact, rather than R1 leaning forward to make contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans forward as the active toucher"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 use her left arm to make contact with R1's chest while R1 faces her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's left-arm contact role on R1's chest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

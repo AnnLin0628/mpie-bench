@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__804dbe9bfa6d__T3",
+  "instruction": "Candid family photograph, low-angle medium shot. Indoors against a plain beige wall, the bearded man in the white t-shirt (R2) lifts the baby in the white bodysuit (R1) high above him. The baby, slightly blurred from motion, looks forward with an open mouth. The bearded man's hands support the baby under the arms. Soft, diffused lighting creates a warm, natural atmosphere with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 lifts R1 high above him",
+    "R2 supports R1 under the arms",
+    "R1 is the baby being carried while R2 is the bearded man carrying the baby",
+    "R1 is held above R2 rather than supporting R2",
+    "the scene is indoors against a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lifting R1 high above him, rather than R1 lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lifts R1 high above him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Do R2's hands support R1 under the arms, rather than R1's hands supporting R2 under the arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 under the arms"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person being carried above R2, rather than R2 being carried above R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is held above R2 rather than supporting R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the baby being held up while R2 is the bearded man doing the holding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the baby being carried while R2 is the bearded man carrying the baby"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

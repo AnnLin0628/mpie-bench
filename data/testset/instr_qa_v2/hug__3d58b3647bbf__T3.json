@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3d58b3647bbf__T3",
+  "instruction": "A candid studio photograph captured in a medium close-up from a high angle. Against a plain white background, the woman with straight brown hair (R1) sits on the left, leaning her head on the shoulder of the woman with curly dark hair (R2) who sits on the right. Both women have their eyes closed in a peaceful, serene moment. R1's hand rests gently on R2's shoulder. Soft, diffused studio lighting illuminates the scene, creating a gentle, intimate mood with a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 rests her head on R2's shoulder",
+    "R1 places her hand on R2's shoulder",
+    "R2 is the person whose shoulder supports R1's head",
+    "R1 and R2 are seated close together in a peaceful pose",
+    "Both R1 and R2 have their eyes closed",
+    "The scene is set against a plain white studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one resting her head on R2's shoulder, rather than R2 resting her head on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 rests her head on R2's shoulder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's hand resting on R2's shoulder, rather than R2's hand resting on R1's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places her hand on R2's shoulder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 provide the shoulder that R1 leans her head on, rather than R1 providing the shoulder for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose shoulder supports R1's head"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated close together while R1 leans against R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated close together in a peaceful pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

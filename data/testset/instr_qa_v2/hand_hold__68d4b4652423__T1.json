@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__68d4b4652423__T1",
+  "instruction": "Candid documentary photograph, medium shot. In a sunny outdoor park filled with green trees, the woman with curly dark hair (R1) and the man with long brown hair and sunglasses (R2) walk side-by-side. On the left, the woman wearing a dark blue shirt with a black panel walks forward, looking towards him with a warm smile. On the right, the man in a blue and white plaid shirt walks alongside her, looking slightly to his right. Bright, natural sunlight filters through the leafy canopy, casting warm light and soft shadows across the path.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks toward R2 with a warm smile while they walk",
+    "R2 looks slightly to his right while walking alongside R1",
+    "R1 and R2 walk side-by-side together",
+    "R2 wears sunglasses",
+    "They are in a sunny outdoor park with green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking toward R2 with a warm smile, rather than R2 looking toward R1 with a warm smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks toward R2 with a warm smile"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one looking slightly to his right while walking alongside R1, rather than R1 being the one looking slightly to her right?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 looks slightly to his right while walking"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking side-by-side together, with R1 walking alongside R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk side-by-side"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__71ba2ba4a6da__T3",
+  "instruction": "Candid outdoor photograph, full shot at eye-level. In a dry grassy field under a clear blue sky, the woman in the shearling-lined denim jacket (R1) on the left and the man in the denim jacket (R2) on the right stand closely embraced in a warm hug. She wraps her arms around his shoulders while he holds her waist, both smiling happily. Bright natural sunlight illuminates the couple, casting soft shadows on the dry grass and creating a warm, affectionate mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2's shoulders",
+    "R2 holds R1's waist",
+    "R1 and R2 stand closely embraced with distinct shoulder-versus-waist roles",
+    "R1 and R2 are smiling happily during the embrace",
+    "The scene is in a dry grassy field under a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 wrap her arms around R2's shoulders, rather than R2 wrapping his arms around R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the shoulder-wrapping role in the embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 hold R1's waist, rather than R1 holding R2's waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the waist-holding role in the embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Are R1's arms placed around R2's shoulders while R2's arms are placed at R1's waist, rather than the reverse arrangement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric shoulder-versus-waist arm placement"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing closely together in an embrace with R1 reaching around R2's shoulders and R2 holding R1 at the waist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct contact roles during the close embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

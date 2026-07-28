@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2f1a7131d3e9__T2",
+  "instruction": "Candid photograph, eye-level medium shot. Inside a spacious judo gym featuring large grid windows in the background, the short-haired man (R2) sits on the left on a red mat, smiling warmly as he holds up a black smartphone. Next to him, the wavy-haired man (R1) sits on the right, looking at the screen with a cheerful smile. Both athletes wear white judo gis with black belts. Soft, diffused daylight streams through the windows, creating a bright and friendly atmosphere, highlighting the clean white fabric of their uniforms and the red training mat.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds up a black smartphone for R1 to view",
+    "R1 looks at the smartphone screen while R2 is the phone holder",
+    "R1 and R2 sit next to each other on a red judo mat",
+    "black smartphone",
+    "spacious judo gym with large grid windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding up the black smartphone for R1 to look at, rather than R1 holding it up for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the phone holder and R1 is the viewer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking at the screen of the smartphone being held by R2, rather than R2 looking at a phone held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 views the screen while R2 presents the phone"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated next to each other on the red mat while R2 handles the smartphone and R1 watches it?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "seated shared viewing arrangement with R2 handling the phone"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 smile while holding up the smartphone near R1, who is also smiling at the screen?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 presents the phone as both men smile"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black smartphone visible in the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black smartphone"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

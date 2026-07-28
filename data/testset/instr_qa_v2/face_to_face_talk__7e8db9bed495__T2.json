@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__7e8db9bed495__T2",
+  "instruction": "Candid medium shot in a bright modern room with white shelves. On a black leather sofa, the bald man in the black polo shirt (R2) sits on the left, leaning his head on his hand and looking directly at his companion. On the right, the blonde woman in the blue floral blouse (R1) sits with her legs crossed, raising both hands expressively in the air and speaking with an animated, smiling expression. The two are seated close together on the L-shaped sofa. Soft, natural indoor light from a window on the right illuminates the clean, neutral-toned setting with a shallow depth of field.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the animated speaker raising both hands while R2 is not",
+    "R2 leans his head on his hand and looks directly at R1",
+    "R1 sits with legs crossed while speaking expressively near R2",
+    "black leather L-shaped sofa supporting both seated people",
+    "bright modern room with white shelves"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising both hands expressively while speaking, rather than R2 raising both hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the animated speaker raising both hands while R2 is not"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning his head on his hand and looking directly at R1, rather than R1 doing that toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans his head on his hand and looks directly at R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the smiling, animated talker while R2 is the seated companion looking at her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the animated speaker raising both hands while R2 is not"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 seated close to R2 with her legs crossed while she speaks expressively?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits with legs crossed while speaking expressively near R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

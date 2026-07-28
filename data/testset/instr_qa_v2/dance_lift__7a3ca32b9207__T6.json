@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__7a3ca32b9207__T6",
+  "instruction": "Candid dance photograph, full shot. Inside a bright, minimalist ballet studio with white walls and large windows, the male dancer in a black unitard (R2) on the left and the female dancer in a black long-sleeve top and white tutu (R1) on the right perform a coordinated partner pose. They hold hands overhead and in front, with the female dancer balancing gracefully on pointe and the male dancer leaning forward. Both dancers display focused expressions. Bright, natural daylight illuminates the scene, casting soft shadows on the floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the female dancer balancing on pointe during the partner pose",
+    "R2 is the male dancer leaning forward while connected to R1",
+    "R1 and R2 hold hands overhead and in front as part of the dance pose",
+    "R1 maintains the pointe-balanced role while R2 takes the forward-leaning partner role",
+    "The scene is a bright minimalist ballet studio with white walls and large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer balancing gracefully on pointe while holding hands with R2, rather than R2 being the one on pointe?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the pointe-balanced role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer leaning forward in the partnered pose while R1 balances on pointe, rather than R1 leaning forward while R2 balances on pointe?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the forward-leaning partner role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 keep the elevated pointe-balancing duty while R2 provides the contrasting forward-leaning partner stance, rather than their dance roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric dance pose roles between R1 and R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 connected by hand contact overhead and in front during the coordinated partner pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands overhead and in front"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 performing the poised ballet stance on pointe while maintaining hand contact with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration while connected to R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T12",
+  "instruction": "Candid action photograph, medium-full shot. In an indoor martial arts studio, the bearded Black man in a white gi (R1) on the left and the Asian man with braided hair in a gray gi (R2) on the right are locked in a close grapple on a dark mat. Both lean forward with their heads pressed together near the shoulder in a collar-and-elbow tie-up. Warm indoor lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the left-side grappler leaning forward into R2 in the collar-and-elbow tie-up",
+    "R2 is the right-side grappler leaning forward into R1 with their heads pressed together",
+    "R1 and R2 are locked in a close grapple on the mat",
+    "R1 and R2 are in a collar-and-elbow tie-up with head-to-shoulder contact",
+    "both participants wear martial arts gis during the grapple",
+    "the grapple takes place on a dark mat",
+    "the scene is an indoor martial arts studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the left-side grappler leaning forward into R2 in the collar-and-elbow tie-up, rather than R2 being the left-side grappler leaning into R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the left-side grappler leaning forward into R2 in the collar-and-elbow tie-up"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the right-side grappler leaning forward into R1 with their heads pressed together, rather than R1 being the right-side grappler?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the right-side grappler leaning forward into R1 with their heads pressed together"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 locked in a close grapple with each other on the mat?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are locked in a close grapple on the mat"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 have their heads pressed together near the shoulder while in a collar-and-elbow tie-up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in a collar-and-elbow tie-up with head-to-shoulder contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R2 grappling on a dark mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the grapple takes place on a dark mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

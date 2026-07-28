@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__109e9614672a__T1",
+  "instruction": "Candid action photograph, low-angle medium-full shot. In an indoor parking garage with a purple wall and concrete floor, the woman in the rainbow beanie (R2) sits happily inside a metal shopping cart, leaning back with her hands behind her head. Behind her, the man in the red beanie (R1), wearing a beige jacket, stands pushing the cart forward while looking down at her. The cart is in motion, creating a slight blur in the foreground. Dim overhead lighting illuminates the scene, casting cool tones and soft shadows against the purple background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 pushes the shopping cart forward while R2 rides inside it",
+    "R2 sits happily inside the metal shopping cart rather than pushing it",
+    "R1 stands behind the cart and guides it while looking down at R2",
+    "R2 leans back in the cart with her hands behind her head",
+    "A metal shopping cart carries R2 and is being pushed by R1",
+    "The scene is set in an indoor parking garage with a purple wall and concrete floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 pushing the shopping cart forward with R2 inside it, rather than R2 pushing a cart carrying R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pushes the shopping cart forward while R2 rides inside it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person seated inside the shopping cart being moved by R1, rather than R1 being seated inside a cart moved by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 sits happily inside the metal shopping cart rather than pushing it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 stand behind the cart and guide it while looking down at R2, rather than R2 standing behind and guiding R1 in the cart?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind the cart and guides it while looking down at R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning back inside the cart with her hands behind her head while R1 pushes her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leans back in the cart with her hands behind her head"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

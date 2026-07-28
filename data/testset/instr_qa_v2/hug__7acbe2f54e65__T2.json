@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__7acbe2f54e65__T2",
+  "instruction": "A dreamy cinematic medium shot captures a sunlit park path surrounded by trees, filled with a warm, hazy glow. On the left, the curly-haired woman in a light cardigan (R1) walks forward with a joyful smile. On the right, the blonde woman in a patterned shirt (R2) walks alongside her, smiling happily. The curly-haired woman and the blonde woman hold hands as they walk. Strong afternoon backlighting creates a prominent sun flare behind them, casting a soft, warm haze over the entire scene and softening the natural green colors.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 walks forward while R2 walks alongside her",
+    "R2 accompanies R1 at her side while they hold hands",
+    "R1 and R2 hold hands while walking together",
+    "R1 is the curly-haired woman and R2 is the blonde woman in the hand-holding pair",
+    "sunlit park path surrounded by trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman walking forward with R2 alongside her, rather than R2 being the one described as walking forward with R1 alongside her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 walks forward while R2 walks alongside her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the companion walking alongside R1 while holding R1's hand, rather than R1 being the companion described alongside R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 accompanies R1 at her side while they hold hands"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands as they walk together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hold hands while walking together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the curly-haired woman in the hand-holding pair while R2 is the blonde woman?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the curly-haired woman and R2 is the blonde woman in the hand-holding pair"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 walking on a sunlit park path surrounded by trees?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "sunlit park path surrounded by trees"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

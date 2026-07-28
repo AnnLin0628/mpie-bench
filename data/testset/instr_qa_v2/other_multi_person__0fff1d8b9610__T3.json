@@ -1,0 +1,83 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T3",
+  "instruction": "A clean studio photograph in a wide eye-level medium-full shot shows a group of cheerleaders standing in a line against a plain white backdrop with vertical light bars. From left to right, the wavy light brown-haired woman (R5), the blonde woman (R2), the dark-haired woman (R13), the straight brown-haired woman (R8), the curly-haired woman (R1) in the center, the purple-haired woman (R7), the short black-haired woman (R12), the long brown-haired woman (R9), and the long dark brown-haired woman (R14) stand side-by-side. All wear matching white t-shirts with a \"Warsaw Mets\" logo and white skirts. They stand facing forward with hands on hips, holding orange pom-poms. The scene is brightly lit with a soft purple ambient glow from below.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R1 is the curly-haired woman positioned in the center of the cheerleader line",
+    "R2 is the blonde woman in the cheerleader line rather than the central curly-haired woman",
+    "R7 is the purple-haired woman in the cheerleader line rather than R1 or R2",
+    "R1, R2, R5, R7, R8, R9, R12, R13, and R14 stand facing forward with hands on hips",
+    "the cheerleaders hold orange pom-poms",
+    "the group wears matching Warsaw Mets logo shirts",
+    "the studio scene has a plain white backdrop with vertical light bars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 an onlooker / non-contact person relative to the main hand contact between R1 and R3, rather than R2 being one of the two making contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "onlooker vs contact-pair duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand facing forward with hands on hips while holding pom-poms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's forward-facing hands-on-hips cheerleader pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 1,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "asymm_lt_2",
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": true
+  }
+}

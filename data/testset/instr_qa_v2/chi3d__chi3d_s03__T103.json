@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T103",
+  "instruction": "Candid documentary full shot at eye-level from the side in a motion capture studio featuring a red carpet and white pillars. The bearded man in the black polo shirt and blue shorts (R1) stands on the left, facing left in profile. The woman in the white t-shirt and blue jeans (R2) stands behind him on the right, facing left, extending her right arm to touch his back with her hand. The room is lit by overhead fluorescent lights, casting soft shadows on the red carpet and dark red screens.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 extends her right arm to touch R1's back",
+    "R1 is the recipient of R2's hand-to-back contact",
+    "R2 stands behind R1 while making contact with his back",
+    "R1 and R2 both face left during the interaction",
+    "motion capture studio with red carpet and white pillars"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending her right arm to touch R1's back, rather than R1 extending his arm to touch R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 extends her right arm to touch R1's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person receiving hand contact on his back from R2, rather than R2 receiving hand contact on her back from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the recipient of R2's hand-to-back contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 initiate the hand-to-back touch toward R1, rather than R1 initiating the hand-to-back touch toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 initiates the hand-to-back contact toward R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned behind R1 while reaching to touch his back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands behind R1 while making contact with his back"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in profile while R2 is behind him and reaching toward his back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands in profile as R2 reaches toward his back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

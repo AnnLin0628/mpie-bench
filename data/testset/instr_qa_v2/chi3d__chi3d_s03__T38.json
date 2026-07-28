@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T38",
+  "instruction": "Candid full shot in a motion capture studio with a red carpet and wall radiators. A bearded man in a black polo shirt and blue shorts (R1) stands on the left, leaning forward to hold the wrist of a woman in a white t-shirt and blue jeans (R2) who stands facing him on the right. Bright overhead studio lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's wrist rather than R2 holding R1's wrist",
+    "R2 is the person whose wrist is held by R1",
+    "R1 leans forward toward R2 to perform the wrist hold",
+    "R2 faces R1 during the wrist-holding interaction",
+    "the interaction takes place in a motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's wrist, rather than R2 holding R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's wrist rather than R2 holding R1's wrist"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose wrist is being held by R1, rather than R1 being the one whose wrist is held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person whose wrist is held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning forward toward R2 to perform the wrist hold, rather than R2 leaning forward to hold R1's wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward toward R2 to perform the wrist hold"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand facing R1 while R1 holds her wrist?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 during the wrist-holding interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

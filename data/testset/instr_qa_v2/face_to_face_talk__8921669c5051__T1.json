@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__8921669c5051__T1",
+  "instruction": "Cinematic medium close-up still of a couple at sunset by the water. On the left, the red-haired man in the denim jacket (R2) wears glasses and holds a glass of rosé wine, looking towards his partner. On the right, the blonde woman in the patterned halter top (R1) holds her wine glass and looks back at him with a soft smile. They stand close together, facing one another in an intimate moment. Warm golden hour light illuminates them from behind, creating a soft lens flare and a warm, romantic atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 holds a glass of rosé wine and looks toward R1",
+    "R1 looks back at R2 with a soft smile while holding her wine glass",
+    "R1 and R2 stand close together facing one another",
+    "wine glasses held by both R1 and R2",
+    "glasses worn by R2",
+    "sunset by the water with warm golden-hour lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding a glass of rosé wine and looking toward R1, rather than R1 being the one described with the rosé glass looking toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a glass of rosé wine and looks toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking back at R2 with a soft smile while holding her wine glass, rather than R2 being the one described as smiling softly back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks back at R2 with a soft smile while holding her wine glass"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": true
+  }
+}

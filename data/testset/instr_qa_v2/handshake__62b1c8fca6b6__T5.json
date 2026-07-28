@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__62b1c8fca6b6__T5",
+  "instruction": "Cinematic medium shot of a modern office. On the left, the young Black man in the white shirt (R1) sits at a wooden desk, looking down at a document on a clipboard. On the right, the older white man with the white beard (R2) in a dark suit sits looking towards him. A laptop sits on the desk between them. In the background, a blurred female office worker is partially visible. The scene has soft, diffused indoor lighting and a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 looks down at a document on a clipboard while R2 looks toward R1",
+    "R2 attends to R1 rather than using the clipboard himself",
+    "R1 and R2 sit at a wooden desk with distinct roles: R1 reviews the clipboard and R2 observes him",
+    "a clipboard with a document is on the desk near R1",
+    "a laptop sits on the desk between R1 and R2",
+    "the scene is set in a modern office with soft indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person looking down at a document on a clipboard, rather than R2 looking down at the clipboard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the clipboard-focused person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person looking toward R1 while R1 focuses on the clipboard, rather than R1 looking toward R2 while R2 uses the clipboard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 observes R1 as R1 attends to the clipboard"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated at the same wooden desk with R1 reviewing the clipboard and R2 watching him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 reviews the clipboard while R2 watches"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

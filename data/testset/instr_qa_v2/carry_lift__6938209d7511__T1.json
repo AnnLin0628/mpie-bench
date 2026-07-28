@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__6938209d7511__T1",
+  "instruction": "Cinematic wedding photograph, medium close-up. Indoors by a wooden lattice window, the bride in the sheer beaded gown (R2) stands in the left foreground, profile facing left with a soft smile. Behind her on the right, the older woman in the sparkly beige dress (R1) smiles warmly as she reaches forward to adjust the bride's gown near her neck. Warm, soft natural light streams from the window, illuminating their joyful expressions and creating a shallow depth of field with lush green foliage blurred in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 reaches forward to adjust R2's gown near R2's neck",
+    "R2 receives the gown adjustment from R1 rather than adjusting R1",
+    "R1 stands behind R2 while tending to R2's neckline",
+    "R2 is the bride whose gown is being adjusted",
+    "R2's sheer beaded gown is the contact-relevant garment being adjusted",
+    "The scene is indoors by a wooden lattice window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching forward to adjust R2's gown near R2's neck, rather than R2 adjusting R1's dress?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the gown-adjusting duty for R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the bride receiving the gown adjustment from R1, rather than R2 being the one adjusting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the neckline/gown adjustment"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 behind R2 while tending to R2's neckline, rather than R2 being behind R1 to tend to R1's clothing?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands behind and attends to R2's gown near the neck"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 stand as the bride being attended to while R1 smiles warmly and adjusts the gown near R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attended bride and R1 is the helper adjusting the gown"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

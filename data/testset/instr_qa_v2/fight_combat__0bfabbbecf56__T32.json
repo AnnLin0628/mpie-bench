@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__0bfabbbecf56__T32",
+  "instruction": "Cinematic action still, medium shot from a low angle in a boxing ring. On the left, the trainer in the black and orange sports top (R1) stands in profile, holding up a red focus mitt. On the right, the boxer in the white sports bra (R2) faces left, holding her black boxing glove against the mitt. The background is a dim gym with red ring ropes. Cool, low-key lighting with red accents.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the trainer holding up a red focus mitt for R2",
+    "R2 is the boxer placing a black boxing glove against R1's mitt",
+    "R1 receives the glove contact with the mitt rather than striking R2",
+    "R2 is the gloved striker/contact-maker rather than the mitt holder",
+    "red focus mitt",
+    "black boxing glove",
+    "boxing ring with dim gym background and red ropes"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding up the focus mitt for R2's glove contact, rather than R2 holding the mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the mitt for R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer pressing or holding a black boxing glove against R1's mitt, rather than R1 pressing a glove against R2's mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's glove contacts R1's mitt"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 take the trainer's receiving role with the focus mitt while R2 takes the boxer's striking-contact role, rather than the other way around?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "trainer-mitt role belongs to R1 and boxer-glove role belongs to R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 facing toward R1 while making glove-to-mitt contact with the mitt R1 holds?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 and contacts R1's mitt"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a red focus mitt present as the contact target in the boxing interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "red focus mitt"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black boxing glove present and used against the focus mitt?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black boxing glove"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

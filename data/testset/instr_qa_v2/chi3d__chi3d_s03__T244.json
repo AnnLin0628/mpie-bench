@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T244",
+  "instruction": "Candid documentary photograph, wide full shot, eye-level angle. Inside a spacious motion capture studio with a dark red carpeted floor and white walls, the woman in the white patterned t-shirt and blue jeans (R2) stands on the left with her arms crossed, facing forward. Next to her, the man in the black cap and blue shorts (R1) stands on the right, gesturing a peace sign with his raised left hand. Both face forward under bright overhead lights, with a tripod stand and equipment visible in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gestures a peace sign with his raised left hand rather than R2",
+    "R2 stands with her arms crossed rather than R1",
+    "R1 makes a raised-hand peace sign while R2 keeps her arms crossed",
+    "a tripod stand is visible in the background",
+    "studio equipment is visible in the background",
+    "the scene is inside a spacious motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person gesturing a peace sign with his raised left hand, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gestures a peace sign with his raised left hand rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing with arms crossed, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands with her arms crossed rather than R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 make a raised-hand peace sign while R2 keeps her arms crossed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 makes a raised-hand peace sign while R2 keeps her arms crossed"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

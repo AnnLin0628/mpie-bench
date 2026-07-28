@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T233",
+  "instruction": "A candid documentary wide shot from a high angle captures an indoor training studio with a red carpet and white walls. On the left, the woman in the white patterned t-shirt and blue jeans (R2) stands on her left leg, executing a high front kick with her right leg. On the right, the man in the dark polo shirt and blue shorts (R1) stands facing her, catching her extended right foot with both hands. The interaction is captured in full body view. The room is brightly lit by overhead fluorescent lights, creating a neutral color palette with soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 catches R2's extended right foot with both hands",
+    "R2 performs the high front kick while R1 receives and holds the kicked foot",
+    "R2 balances on her left leg while R1 stands facing her and stabilizes her raised right foot",
+    "R2's right leg is extended in a high front kick toward R1",
+    "the interaction takes place in an indoor training studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 catching R2's extended right foot with both hands, rather than R2 catching R1's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 catches R2's extended right foot with both hands"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person executing the high front kick while R1 is the person receiving and holding the kicked foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the high front kick while R1 receives and holds the kicked foot"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 stabilizing R2's raised right foot from in front of her, rather than R2 stabilizing R1's raised foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stabilizes R2's raised right foot"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing on her left leg with her right leg extended toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on her left leg while extending her right leg toward R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand facing R2 while using both hands to hold her extended kicking foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces R2 and holds her extended foot with both hands"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set in an indoor training studio with a red carpet?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the interaction takes place in an indoor training studio with a red carpet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

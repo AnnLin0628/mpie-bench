@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__d80557bd5202__T1",
+  "instruction": "Cinematic film still, medium eye-level tracking shot. Outdoors next to a brick building with large windows, the man in the maroon zip-up hoodie (R2) with a yellow backpack walks on the left, gesturing forward with his right hand and smiling as he speaks. Beside him on the right, the woman in the maroon puffer jacket (R1) with a white backpack walks forward, looking ahead with a neutral, listening expression. They walk side-by-side from left to right in soft natural daylight, casting subtle shadows on the warm brick wall behind them.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the speaking, smiling person who gestures forward with his right hand",
+    "R1 is the neutral listener looking ahead while walking beside R2",
+    "R2 leads the visible conversation while R1 listens rather than speaking",
+    "R2 has a yellow backpack",
+    "R1 has a white backpack",
+    "They are outdoors beside a brick building with large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one gesturing forward with his right hand while speaking, rather than R1 doing that gesture while speaking?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the speaking, smiling person who gestures forward with his right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking ahead with a neutral, listening expression while R2 smiles and speaks, rather than R2 being the neutral listener?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the neutral listener looking ahead while walking beside R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 lead the visible conversation by speaking as R1 walks beside him and listens?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 leads the visible conversation while R1 listens rather than speaking"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

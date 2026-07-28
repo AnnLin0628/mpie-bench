@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03333c9668cf__T8",
+  "instruction": "Cinematic full-shot film still of a bright indoor dance studio with a wooden floor and a brick wall. In the left foreground, the woman in the white long-sleeve top and white shorts (R4) holds a low lunge pose, looking forward. In the right background, the man in the blue 'VENICE' t-shirt and pink shorts (R2) jogs in place with one knee lifted. Soft natural light illuminates the scene, highlighting the warm wooden floor and contrasting with the dark brick wall on the left.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R4 holds a low lunge pose while looking forward",
+    "R2 jogs in place with one knee lifted",
+    "R4 is the lunge participant rather than R2",
+    "R2 is the jogging participant rather than R4",
+    "wooden dance studio floor",
+    "bright indoor dance studio with a brick wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 holding the low lunge pose rather than R2 holding that lunge pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the lunge participant rather than R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 jogging in place with one knee lifted rather than R4 doing that jogging action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the jogging participant rather than R4"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 hold a low lunge pose while looking forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 holds a low lunge pose while looking forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have one knee lifted while jogging in place?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 jogs in place with one knee lifted"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

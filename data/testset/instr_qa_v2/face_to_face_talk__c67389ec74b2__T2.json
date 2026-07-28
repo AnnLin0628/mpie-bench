@@ -1,0 +1,79 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__c67389ec74b2__T2",
+  "instruction": "A candid documentary photograph captured in a medium shot at eye-level, showing a couple at a restaurant table against a dark green paneled wall. On the left, the woman in the white hijab (R1) sits in a white dress, looking to the right with a calm, attentive expression. On the right, the man in the white button-down shirt (R2) sits facing her, looking back with a gentle smile. They are seated close together at a dining table with tableware in the foreground. The man (R2) has his arm resting on the booth behind the woman (R1) as they maintain direct eye contact. The lighting is soft and natural, casting gentle shadows and creating an intimate, quiet mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests his arm on the booth behind R1",
+    "R1 is the person with R2's arm positioned behind her",
+    "R1 and R2 sit close together facing each other and maintaining direct eye contact",
+    "dining table with tableware in the foreground",
+    "booth seating behind the couple",
+    "restaurant setting with a dark green paneled wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 rest his arm on the booth behind R1, rather than R1 resting her arm on the booth behind R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his arm on the booth behind R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person seated with R2's arm positioned behind her, rather than R2 being the person with R1's arm positioned behind him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person with R2's arm positioned behind her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one giving a gentle smile back to R1 while R1 looks at him calmly and attentively, rather than R1 being the one described as smiling back to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 smiles back at R1 while R1 looks calmly and attentively at him"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 shown at a restaurant table against a dark green paneled wall?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "restaurant setting with a dark green paneled wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 0,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [
+    "role_duty_missing"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

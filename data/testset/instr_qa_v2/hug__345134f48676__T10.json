@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__345134f48676__T10",
+  "instruction": "Candid black and white medium full shot from a low, tilted angle on a city embankment. In the foreground, the man with curly hair and a dark coat (R1) leans against a stone barrier, looking down the path with a somber expression. In the background, the woman in the black cap and dark coat (R2) runs away from him, her figure slightly blurred. The scene is captured in soft, overcast daylight with a shallow depth of field focusing on the man in the foreground.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 runs away from R1 while R1 remains in the foreground",
+    "R1 leans against a stone barrier rather than R2 leaning there",
+    "R1 is the stationary foreground focus while R2 is the blurred background figure departing",
+    "R1 looks down the path as R2 runs away from him",
+    "stone barrier that R1 leans against",
+    "city embankment setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one running away from R1, rather than R1 running away from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 runs away from R1 while R1 remains in the foreground"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the stationary foreground person leaning against the barrier while R2 is the departing background figure, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the stationary foreground focus while R2 is the blurred background figure departing"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 look down the path as R2 runs away from him, rather than R2 watching from the foreground while R1 runs away?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down the path as R2 runs away from him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning against the stone barrier while R2 runs away in the background?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans against a stone barrier rather than R2 leaning there"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__400254fa50d3__T2",
+  "instruction": "Candid documentary photograph, medium full shot. In an office setting, the man in the gray blazer and jeans (R1) stands on the left in profile, shaking hands with the blonde woman in the blue t-shirt and black pants (R2) on the right. Both the man (R1) and the blonde woman (R2) smile warmly at each other as they clasp right hands. The blonde woman (R2) holds a white binder under her left arm. Bright indoor lighting illuminates the office space and the whiteboard with pinned papers in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person shown in profile while clasping right hands with R2",
+    "R2 is the person holding a white binder under her left arm during the handshake with R1",
+    "R1 and R2 clasp each other's right hands in a handshake",
+    "R1 and R2 smile warmly at each other while shaking hands",
+    "R2 holds a white binder under her left arm",
+    "The interaction takes place in an office with a whiteboard and pinned papers in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person shown in profile while clasping right hands with R2, rather than R2 being the person described in profile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the in-profile participant in the handshake"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding a white binder under her left arm while shaking R1's hand, rather than R1 holding the binder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the binder during the handshake"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 smile warmly at each other while their hands are clasped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 smile during the handshake"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

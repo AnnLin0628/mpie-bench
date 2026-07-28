@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__04300ca50b4e__T3",
+  "instruction": "Candid studio medium photograph of two women posing cheerfully in front of a plain white wall. On the left, the woman with voluminous afro hair (R1) in a mauve shirt tilts her head and smiles at the camera. On the right, the woman with short brown hair (R2) in a striped shirt turns sideways and looks back with a wide smile. They stand side-by-side under soft, bright lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 tilts her head and smiles at the camera while R2 does not take that same pose",
+    "R2 turns sideways and looks back with a wide smile while R1 does not take that same pose",
+    "R1 faces the camera more directly while R2 poses sideways",
+    "R1 and R2 pose cheerfully side-by-side with distinct body orientations",
+    "the scene is a candid studio medium photograph in front of a plain white wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the woman tilting her head and smiling at the camera, rather than R2 being the one in that head-tilted camera-facing pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 tilts her head and smiles at the camera while R2 does not take that same pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman who turns sideways and looks back with a wide smile, rather than R1 doing that sideways looking-back pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 turns sideways and looks back with a wide smile while R1 does not take that same pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 face the camera more directly while R2 is the one turned sideways and looking back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces the camera more directly while R2 poses sideways"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 posing cheerfully side-by-side with R1 in a head-tilted pose and R2 in a sideways pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 pose cheerfully side-by-side with distinct body orientations"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T1",
+  "instruction": "Candid action photograph, full shot. In an indoor boxing gym with black wall mats and hanging red punching bags, the man in the gray t-shirt and black shorts (R1) stands on the left holding up black and white boxing mitts. The barefoot woman in the blue hoodie and gray shorts (R2) stands on the right with her back partially to the camera, throwing a punch with a pink boxing glove toward his mitts. Bright overhead lighting illuminates the scene.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds black and white boxing mitts for R2's punch",
+    "R2 throws a punch toward the mitts held by R1",
+    "R1 is the mitt holder and target while R2 is the striker",
+    "R2 uses a pink boxing glove for the punch",
+    "boxing mitts are contact-relevant training objects",
+    "the scene is an indoor boxing gym with hanging red punching bags"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding up boxing mitts to receive R2's punch, rather than R2 holding mitts for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds black and white boxing mitts for R2's punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing a punch toward R1's mitts, rather than R1 throwing a punch toward R2's mitts?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 throws a punch toward the mitts held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 acting as the mitt holder and target for R2's strike, rather than R2 acting as the mitt holder for R1's strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the mitt holder and target while R2 is the striker"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 extending a gloved punch toward the mitts that R1 is holding?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 uses a pink boxing glove for the punch"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are black and white boxing mitts being used as the contact target in the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "boxing mitts are contact-relevant training objects"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a pink boxing glove used for the punch toward the mitts?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 uses a pink boxing glove for the punch"
+    },
+    {
+      "id": "q7",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set in an indoor boxing gym with hanging red punching bags?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the scene is an indoor boxing gym with hanging red punching bags"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

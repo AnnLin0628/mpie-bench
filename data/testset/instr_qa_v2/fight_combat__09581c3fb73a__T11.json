@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T11",
+  "instruction": "Candid action photograph, full shot. In an outdoor covered concrete pavilion, the man in the beige t-shirt (R1) is on the left, back partially to the camera, shifting his weight in black sweatpants and grey sneakers as he prepares to strike. On the right, the man in the green long-sleeved shirt (R3) stands in red shorts and grey clogs, holding up two focus mitts to face R1. The two maintain an active training stance, preparing for another round of boxing drills under bright, natural daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 holds up two focus mitts for R1 to strike",
+    "R1 is preparing to strike while R3 serves as the mitt holder",
+    "R3 is the target-holder absorbing R1's boxing drill rather than the striker",
+    "R1 and R3 maintain an active boxing training stance facing each other",
+    "two focus mitts are present and held up for the drill",
+    "the scene is an outdoor covered concrete pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold up the focus mitts for R1 to strike, rather than R1 holding mitts for R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds focus mitts for R1's strikes"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer preparing to strike toward mitts held by R3, rather than R3 preparing to strike mitts held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is striker while R3 is mitt holder"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 serving as the target-holder who receives R1's boxing drill with the mitts, rather than R1 serving as the target-holder for R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 absorbs or receives R1's drill through focus mitts"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R3 maintain an active training stance with R1 preparing to strike and R3 positioned as the mitt holder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 have distinct boxer and mitt-holder roles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__95499000b35a__T4",
+  "instruction": "Candid lifestyle photograph, medium shot, eye-level. In a bright indoor space with a white wall and a glass window showing blurred greenery, the man in a denim shirt (R2) stands on the right, smiling towards the camera while holding a tall stack of four cardboard boxes. The woman with braided hair (R1) in a light blue denim shirt leans in from the left, smiling up at him as she helps support the bottom box. Soft, natural light streams from the right, creating a warm, neutral-toned atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the main carrier holding a tall stack of four cardboard boxes",
+    "R1 assists R2 by supporting the bottom box of the stack",
+    "R1 leans in toward R2 while helping support the boxes",
+    "R2 stands smiling toward the camera while holding the boxes",
+    "the contact-relevant object is a tall stack of four cardboard boxes",
+    "the scene is a bright indoor space with a white wall and glass window"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the main person holding the tall stack of cardboard boxes, rather than R1 being the main person holding the stack?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the main carrier holding the stack"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 helping by supporting the bottom box of the stack that R2 is carrying, rather than R2 supporting the bottom box of a stack carried by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports the bottom box while R2 carries the stack"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 assist R2's load from underneath, rather than R2 assisting R1's load from underneath?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides bottom support for R2's carried load"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning in toward R2 while helping support the boxes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans in to assist R2 with the boxes"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing and smiling toward the camera while holding the stack of boxes?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands holding the boxes"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a tall stack of four cardboard boxes involved in the interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "tall stack of four cardboard boxes"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__0fc80584ffa9__T1",
+  "instruction": "Clean studio portrait, medium close-up at eye-level. In an indoor studio with a plain white background, three friends pose closely. On the left, the curly-haired woman in a white shirt (R1) smiles softly at the camera. In the center, the straight-haired woman in a white sleeveless top (R2) smiles warmly, while on the right, the curly-haired woman in a black top (R3) smiles gently. They huddle in a diagonal line, leaning against one another with hands resting on shoulders. Bright, soft studio lighting illuminates the scene with clean, neutral tones.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R2 is the central person in the close huddle, with R1 and R3 as outer participants leaning against her",
+    "R1 is an outer participant leaning inward against R2, rather than R2 taking R1's outer leaning role",
+    "R3 is an outer participant leaning inward against R2, rather than R2 taking R3's outer leaning role",
+    "R1, R2, and R3 pose closely with hands resting on shoulders",
+    "R1, R2, and R3 form a diagonal huddled line while leaning against one another",
+    "The portrait is set in an indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the central person in the close huddle, making shoulder contact with both R1 and R3, rather than R1 being the central person between the others?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central contact person in the huddle"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 an outer participant leaning inward against R2, rather than R2 taking R1's outer leaning role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans inward against R2 from an outer position"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 an outer participant leaning inward against R2, rather than R2 taking R3's outer leaning role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 leans inward against R2 from an outer position"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 pose closely with their hands resting on one another's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the trio poses with hands resting on shoulders"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1, R2, and R3 form a close diagonal huddle while leaning against one another?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the trio leans together in a diagonal huddle"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

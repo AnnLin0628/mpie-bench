@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__03333c9668cf__T9",
+  "instruction": "Cinematic video still, medium full shot. Inside a bright dance studio with polished wooden floors and large windows, the man in the blue 'VENICE' t-shirt (R2) walks directly toward the camera in the foreground, wearing a red headband and smiling slightly. In the background to his left, the woman in the pink and silver outfit (R3) performs a dance pose with her head tilted back and eyes cast downward. Bright, natural daylight streams through the windows, highlighting the vibrant blue and pink tones of their athletic wear and casting soft shadows across the floor.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 walks directly toward the camera in the foreground rather than R3 doing so",
+    "R3 performs the dance pose in the background rather than R2 doing so",
+    "R3's dance pose includes her head tilted back and eyes cast downward",
+    "R2 is smiling slightly while walking toward the camera",
+    "The scene is inside a bright dance studio with polished wooden floors and large windows"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person walking directly toward the camera in the foreground, rather than R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks directly toward the camera in the foreground rather than R3 doing so"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person performing the dance pose in the background, rather than R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the dance pose in the background rather than R2 doing so"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 hold the dance-pose role with her head tilted back and eyes cast downward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's dance pose includes her head tilted back and eyes cast downward"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

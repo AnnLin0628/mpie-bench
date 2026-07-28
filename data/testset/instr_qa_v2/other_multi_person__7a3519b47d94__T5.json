@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__7a3519b47d94__T5",
+  "instruction": "A candid documentary photograph captured in a medium shot at eye-level with a shallow depth of field. In a bright indoor playroom with a white wall and a yellow beanbag, three children play tug-of-war. On the right, the girl in the white floral top (R3) stands facing left, pulling a green rope taut with both hands. On the left, the boy in the white t-shirt (R2) sits on the beanbag, leaning back to pull the rope. Behind him, the girl in the orange t-shirt (R1) also sits on the beanbag, holding the rope to assist. The scene is illuminated by soft, bright indoor light, creating a warm and playful atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 pulls the green rope against R2 and R1 rather than assisting them",
+    "R1 sits behind R2 and helps him pull the rope rather than opposing him",
+    "R2 sits on the beanbag leaning back to pull while R3 stands and pulls against him",
+    "R1 and R2 are seated on the beanbag while participating in tug-of-war with R3",
+    "The children use a green rope as the tug-of-war object",
+    "The playroom includes a yellow beanbag"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 pulling the green rope against R2 and R1, rather than helping R2 and R1 pull from their side?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the opposing tug-of-war puller against R2 and R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 positioned behind R2 while holding the rope to assist R2, rather than R2 assisting R1 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 assists R2 from behind during the rope pull"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 seated on the beanbag and leaning back to pull the rope while R3 stands and pulls against him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the seated puller opposed by standing R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 both seated on the beanbag while taking part in the tug-of-war with R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated participants in the tug-of-war"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a green rope the object being pulled in the tug-of-war?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "green tug-of-war rope"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a yellow beanbag that R1 and R2 sit on during the rope-pulling game?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow beanbag used by seated participants"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

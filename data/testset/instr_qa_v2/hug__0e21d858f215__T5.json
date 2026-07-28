@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0e21d858f215__T5",
+  "instruction": "A clean studio photograph with a medium shot at eye-level. In a minimalist white studio, three women pose playfully. On the left, the woman in the blue blazer (R1) stands facing right, smiling broadly and reaching her left hand toward the center. In the center, the woman in the lavender shirt (R2) stands in profile, laughing with her eyes closed. Behind her on the right, the woman in the green blazer (R3) hugs the woman in the lavender shirt (R2) from behind, wrapping her arm around her chest. The woman in the lavender shirt holds the hugging arm with both hands. Bright, even studio lighting illuminates the scene with soft shadows.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 wraps her arm around R2's chest from behind",
+    "R2 holds R3's wrapped arm with both hands",
+    "R1 reaches her left hand toward R2 in the center",
+    "R2 is the person being held from behind by R3",
+    "minimalist white studio setting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 wrap her arm around R2's chest from behind, rather than R2 wrapping her arm around R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the behind holder and R2 is the person being held"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R3's wrapped arm with both hands, rather than R3 holding R2's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the arm that R3 has wrapped around her"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching her left hand toward R2 in the center, rather than R2 reaching her hand toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person reaching toward R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the woman being held from behind while R3 is positioned behind her with an arm around her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the behind hold from R3"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

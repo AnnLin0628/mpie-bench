@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__1c005847af9d__T2",
+  "instruction": "Cinematic film still, low-angle medium shot looking up. In a high-rise office, the woman in the black blazer (R1) stands on the left in profile, looking towards her colleague. On the right, the man in the dark suit jacket and pink shirt (R2) stands in profile, looking back at her. They are shaking right hands in a firm clasp. The background consists of large windows with closed horizontal blinds. Bright daylight filters through the blinds, casting a soft, cool light over the scene with a professional, corporate mood.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 contributes her right hand to the firm clasp with R2",
+    "R2 contributes his right hand to the firm clasp with R1",
+    "R1 and R2 face each other in profile while maintaining the contact",
+    "R1 and R2 are the two participants in the right-hand clasp",
+    "closed horizontal blinds cover the large office windows in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 contribute her right hand to the firm clasp with R2, rather than R1 keeping that hand out of the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 contributes her right hand to firm clasp with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 contribute his right hand to the firm clasp with R1, rather than R2 keeping that hand out of the contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 contributes his right hand to firm clasp with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1's contact partner in the right-hand clasp R2, rather than an unlabelled person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are the two participants in the right-hand clasp"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": false
+  }
+}

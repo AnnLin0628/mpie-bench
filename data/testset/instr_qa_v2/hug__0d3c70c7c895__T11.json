@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T11",
+  "instruction": "A candid birthday party photograph, medium shot, depicts a gift exchange in a decorated living room. On the left, the boy with glasses (R7) wearing a red plaid shirt and a colorful party hat hands a small, patterned gift box to the girl with dark shoulder-length hair (R6) on the right. R6, wearing a light pink sweater and a pink hair bow, smiles as she reaches out to receive the present. The background features colorful balloons and party banners under bright, natural indoor light.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R7 hands a small patterned gift box to R6",
+    "R6 reaches out to receive the present from R7",
+    "R7 is the gift giver while R6 is the recipient",
+    "The contact-relevant object is a small patterned gift box",
+    "The scene is a decorated living room with balloons and party banners",
+    "The exchange occurs under bright indoor light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R7 handing the small patterned gift box to R6, rather than R6 handing it to R7?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 gives the gift box to R6"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 reaching out to receive the present from R7, rather than R7 reaching out to receive it from R6?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 receives the present from R7"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R7 the one offering the gift box for R6 to take, rather than R6 offering the gift box for R7 to take?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 is the presenter of the gift"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "In the gift exchange, is R7 the giver and R6 the recipient?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R7 and R6 have giver-recipient roles"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a small patterned gift box the object being exchanged between R7 and R6?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "small patterned gift box"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

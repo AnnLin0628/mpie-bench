@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma5__T1",
+  "instruction": "Candid full shot of an indoor martial arts gym with gray padded walls. On the right, the man in the black athletic shirt (R1) stands with his back mostly to the camera in a defensive stance. On the left, the man in the gray t-shirt (R2) balances on one leg, executing a kick toward him. In the background, a bystander in a red tank top stands watching. The scene is captured with even overhead lighting and a neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 executes a kick toward R1",
+    "R1 is in a defensive stance against R2's kick",
+    "R2 balances on one leg while kicking toward R1",
+    "R1 stands with his back mostly to the camera during the exchange",
+    "a bystander watches the action in the background",
+    "the interaction takes place in an indoor martial arts gym with gray padded walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one executing a kick toward R1, rather than R1 executing a kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 kicks toward R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 taking the defensive role against R2's incoming kick, rather than R2 defending against a kick from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends while R2 attacks with a kick"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 balancing on one leg as the active kicker while R1 remains planted in a defensive stance?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the one-legged active kicker and R1 is the defender"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have the action role of kicking toward R1 during the martial arts exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's contact role is the kicker"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand with his back mostly to the camera while holding a defensive stance toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is back mostly to camera in a defensive stance"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the scene set inside a martial arts gym with gray padded walls?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor martial arts gym with gray padded walls"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__0fb258408fd1__T7",
+  "instruction": "A medium eye-level photograph shows a joyful outdoor scene in front of a red brick wall. On the left, the curly-haired woman (R1) in a white one-shoulder ruffled dress walks alongside the woman in the white blazer (R2) on the right. They hold hands tightly in front of them, turning their heads to look at each other with bright, happy smiles. The natural daylight is bright and even, casting soft shadows and highlighting the clean white of their outfits against the warm brick background.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the curly-haired woman in the one-shoulder ruffled dress holding hands with R2",
+    "R2 is the woman in the blazer whose hand is held by R1",
+    "R1 and R2 walk alongside each other while tightly holding hands in front of them",
+    "R1 and R2 turn their heads to look at each other with happy smiles",
+    "the handholding interaction occurs outdoors in front of a red brick wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the curly-haired woman in the one-shoulder ruffled dress holding hands with R2, rather than R2 being that curly-haired one-shoulder-dress person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the curly-haired woman in the one-shoulder ruffled dress holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the woman in the blazer whose hand is tightly held with R1's hand, rather than R1 being the woman in the blazer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the woman in the blazer whose hand is held by R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking alongside each other while holding hands tightly in front of them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk alongside each other while tightly holding hands in front of them"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 turning her head to look at R2 while R2 turns her head to look at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 turn their heads to look at each other with happy smiles"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__99a180dc18c0__T1",
+  "instruction": "A candid full-shot photograph taken from a low angle shows a partner acrobatics pose outdoors against a clear blue sky. On top of a light-brown stone block, the man in the black t-shirt and blue jeans (R2) stands in a wide, stable squat. He holds his arms up to support the woman in the black crop top and denim shorts (R1), who crouches above him. The woman balances by holding both of his hands, looking forward with a neutral expression while the man maintains a focused gaze. The scene is illuminated by bright, direct sunlight, casting soft shadows on their clothing and the stone structure.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports R1 from below with his arms raised, rather than R1 supporting R2",
+    "R1 crouches above R2 while being supported, rather than R2 crouching above R1",
+    "R1 balances by holding both of R2's hands while R2 provides the base support",
+    "R2 stands in a wide, stable squat as the base of the acrobatics pose",
+    "A light-brown stone block is underneath R2 as part of the pose setup",
+    "The partner acrobatics pose takes place outdoors against a clear blue sky"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting R1 from below with his arms raised, rather than R1 supporting R2 from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports R1 from below with his arms raised, rather than R1 supporting R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 crouching above R2 in the acrobatics pose, rather than R2 crouching above R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 crouches above R2 while being supported, rather than R2 crouching above R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 act as the stable base while R1 balances on top by holding his hands, rather than R1 acting as the base for R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances by holding both of R2's hands while R2 provides the base support"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in a wide, stable squat while supporting R1 in the acrobatics pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands in a wide, stable squat as the base of the acrobatics pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

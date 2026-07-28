@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T15",
+  "instruction": "Crisp studio photograph, full shot from a high angle. In a minimalist white studio with a seamless background, the woman in the black hooded outfit (R1) in the foreground bends forward and leans to the right. Behind her, the woman in the white hooded outfit (R2) leans over R1's back, maintaining close physical contact in a supportive, fluid dance pose. Both barefoot dancers are captured mid-movement under bright high-key studio lighting that casts soft, distinct shadows on the clean floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans over R1's back rather than R1 leaning over R2's back",
+    "R1 bends forward underneath while R2 maintains close contact over her back",
+    "R1 serves as the lower/supporting dancer in the pose while R2 is positioned over her",
+    "R2 is behind R1 and in close physical contact with R1's back",
+    "both dancers are barefoot in a fluid dance pose",
+    "the scene is a minimalist white studio with a seamless background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning over R1's back rather than R1 leaning over R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 over R1's back"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer bent forward underneath R2, rather than R2 being bent forward underneath R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lower bent-forward support role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 maintain close physical contact on R1's back, rather than R1 maintaining that contact on R2's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric back contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 bending forward while R2 leans over her in a supportive dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 bends forward and R2 leans over her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

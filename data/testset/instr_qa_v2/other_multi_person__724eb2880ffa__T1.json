@@ -1,0 +1,99 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__724eb2880ffa__T1",
+  "instruction": "A candid action photograph with a full shot captures a lively scene in an outdoor grassy park during the day. In the foreground center-left, the girl in the pink shirt and denim shorts (R1) is captured mid-backflip, her hands reaching toward the grass. In the background, three boys watch and cheer her on: the boy in the teal t-shirt (R3) stands on the left cheering with a raised fist, the boy in the neon green t-shirt (R2) stands in the center watching, and the boy in the green t-shirt (R4) celebrates on the right with both arms raised. The interaction is a joyful moment of athletic celebration. The scene is illuminated by bright, natural daylight, highlighting the vibrant colors of their shirts against the lush green grass.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is captured mid-backflip with her hands reaching toward the grass",
+    "R2 watches R1's backflip from the background",
+    "R3 cheers R1 on with a raised fist",
+    "R4 celebrates R1's backflip with both arms raised",
+    "the grass is the surface R1's hands are reaching toward during the flip",
+    "the scene takes place in an outdoor grassy park during the day"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person performing the mid-backflip while R2 watches, rather than R2 performing the backflip while R1 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the backflip and R2 watches"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 cheering on R1's backflip with a raised fist, rather than R1 cheering on a backflip by R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 cheers for R1 as R1 flips"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 celebrating R1's athletic move with both arms raised, rather than R1 raising both arms to celebrate R4's move?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 celebrates while R1 is the athlete flipping"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in an upside-down flipping body position with her hands reaching toward the ground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's backflip body configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 acting as a watcher of R1's backflip rather than as the main flipping performer?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 watches R1's action"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the action taking place in an outdoor grassy park during the day?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor grassy daytime park setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

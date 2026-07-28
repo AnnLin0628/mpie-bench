@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__1ad4f8aa9ff0__T11",
+  "instruction": "Candid medium shot of a couple on an outdoor pier. The woman with buzzed hair (R1) in a beige sports bra stands on the left, leaning in to kiss the cheek of the bearded man (R2) in a white t-shirt on the right. The bearded man smiles with his eyes closed, his arm draped over her shoulder. The background features a large bridge under an overcast sky with soft, muted lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans in to kiss R2's cheek",
+    "R2 receives the cheek kiss while smiling with his eyes closed",
+    "R2 has his arm draped over R1's shoulder",
+    "R1 and R2 are posed as a couple in close contact",
+    "the couple is on an outdoor pier with a large bridge in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 leaning in to kiss R2's cheek, rather than R2 leaning in to kiss R1's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the cheek-kisser and R2 is the receiver"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one receiving the cheek kiss with a smile and closed eyes, rather than R1 receiving a cheek kiss from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the cheek kiss"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have his arm draped over R1's shoulder, rather than R1 having her arm draped over R2's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's arm is draped over R1's shoulder"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning toward R2 in close contact while kissing his cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's leaning cheek-kiss role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

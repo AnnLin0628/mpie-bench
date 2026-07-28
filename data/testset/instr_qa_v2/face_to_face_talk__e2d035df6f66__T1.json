@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__e2d035df6f66__T1",
+  "instruction": "A cinematic still medium shot captures an indoor scene by a large window overlooking a hazy winter cityscape. On the left, the bearded man in the white dress shirt (R2) stands in profile, holding a red cup and speaking. Opposite him on the right, the woman in the white button-down shirt (R1) stands in profile, holding a brown paper cup and smiling as she listens. The two stand close together, engaged in a friendly conversation. The scene is illuminated by soft, cool daylight filtering through the window, creating a muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the one speaking to R1 while R1 listens",
+    "R1 is the one smiling and listening while R2 speaks",
+    "R1 and R2 stand opposite each other in profile during the conversation",
+    "R2 holds a red cup",
+    "R1 holds a brown paper cup",
+    "They are indoors by a large window overlooking a hazy winter cityscape"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one speaking to R1, rather than R1 speaking to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active speaker in the conversation"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one smiling and listening to R2, rather than R2 smiling and listening to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the listener while R2 speaks"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Do R1 and R2 stand opposite each other in profile while R2 speaks and R1 listens?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "opposite profile conversation with assigned speaker and listener roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a red cup during the conversation?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the red cup"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 holding a brown paper cup while listening?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the brown paper cup"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

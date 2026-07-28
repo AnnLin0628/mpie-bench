@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T11",
+  "instruction": "Candid documentary photograph, medium full shot. Inside a judo dojo with yellow tatami mats, the woman in the blue judo gi (R1) stands leaning forward, pinning the young man in the white judo gi (R2) to the floor. The young man (R2) lies on his back, looking up, while the woman (R1) grips his collar to maintain control. Bright, even indoor lighting illuminates the scene, highlighting the warm tones of the yellow mat.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 pins R2 to the floor rather than R2 pinning R1",
+    "R1 grips R2's collar to maintain control rather than R2 gripping R1's collar",
+    "R2 lies on his back while R1 leans forward over him",
+    "R1 is the controlling grappler and R2 is the pinned person",
+    "R2's collar is used as the contact point for R1's grip",
+    "yellow tatami mats are the floor surface in the judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 pinning R2 to the floor, rather than R2 pinning R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pins R2 to the floor rather than R2 pinning R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 grip R2's collar to maintain control, rather than R2 gripping R1's collar?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's collar to maintain control rather than R2 gripping R1's collar"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying on his back under R1's control, rather than R1 lying on her back under R2's control?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on his back while R1 controls him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning forward over R2 while R2 lies on the floor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on his back while R1 leans forward over him"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the grappling scene set inside a judo dojo with yellow tatami mats?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "yellow tatami mats are the floor surface in the judo dojo"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

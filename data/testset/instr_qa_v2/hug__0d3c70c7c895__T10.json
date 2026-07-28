@@ -1,0 +1,94 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__0d3c70c7c895__T10",
+  "instruction": "A candid indoor portrait, medium shot, shows three children sitting close together on a couch. On the left, the boy with glasses (R1) in a gray hoodie over a green t-shirt smiles widely. In the center, the girl with curly hair (R3) wearing a gray sweatshirt and a dark hair bow smiles at the camera with her arms wrapped around her friends' shoulders. On the right, the girl with straight hair and bangs (R4) in a teal cardigan smiles gently. The scene is illuminated by soft, even indoor lighting with a bright, clean palette.",
+  "n_person": 9,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "elements": [
+    "R3 wraps her arms around R1 and R4's shoulders",
+    "R3 is the central child doing the shoulder-embracing contact",
+    "R1 is a recipient of R3's arm-around-shoulder contact",
+    "R4 is a recipient of R3's arm-around-shoulder contact",
+    "the children are sitting close together on a couch",
+    "the portrait is indoors with soft, even lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 wrap her arms around R1 and R4's shoulders, rather than R1 and R4 being the ones wrapping their arms around R3's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arms around R1 and R4's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the central child actively placing her arms around both friends' shoulders, rather than R1 being the child in the center doing that contact role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the central child doing the shoulder-embracing contact"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 place an arm around R4's shoulder, rather than R4 being the one described as placing an arm around R3's shoulder?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 makes arm-around-shoulder contact with R4"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 one of the friends whose shoulder is encircled by R3's arm while they sit close together?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is a recipient of R3's arm-around-shoulder contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R4 sitting close to R3 as one of the friends included in R3's shoulder-wrapping gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is a recipient of R3's arm-around-shoulder contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

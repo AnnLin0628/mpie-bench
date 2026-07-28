@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__5ded56b5791f__T2",
+  "instruction": "A candid family photograph in an eye-level full shot captures a playful morning scene. In a cozy bedroom with patterned wallpaper and a white bed, the bearded man in a white t-shirt and striped pajama pants (R1) planks on a woven rug, smiling directly at the camera. The woman in a white button-up shirt and matching pants (R3) sits on his lower back, smiling warmly. She holds the toddler in striped pajamas (R2) steady as the child stands upright on the man's back, looking slightly downward. Soft, natural indoor light fills the room, creating a warm and cheerful atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 planks on a woven rug and supports R3 and R2 on his back from below",
+    "R3 sits on R1's lower back rather than R1 sitting on R3",
+    "R3 holds R2 steady while R2 stands upright on R1's back",
+    "R2 stands on R1's back with R3 stabilizing the child",
+    "woven rug under R1 during the plank",
+    "cozy bedroom with patterned wallpaper and a white bed"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R3 and R2 on his back from below while planking, rather than R3 or R2 supporting R1 on their backs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports the others from below"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 seated on R1's lower back, rather than R1 seated on R3's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 sits on R1's lower back"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold R2 steady as R2 stands on R1's back, rather than R2 holding R3 steady?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 stabilizes R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing upright on R1's back while R3 keeps R2 steady?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 stands on R1 while R3 steadies R2"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

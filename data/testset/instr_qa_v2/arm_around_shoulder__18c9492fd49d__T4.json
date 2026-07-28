@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "arm_around_shoulder__18c9492fd49d__T4",
+  "instruction": "A cinematic still captured from a slightly low angle in a medium shot. On an outdoor wooden boardwalk with a metal railing, surrounded by lush green trees, four friends are interacting. On the left, the man in the orange t-shirt (R2) stands in profile facing right, clasping hands with the man in the grey t-shirt (R4) who stands on the right facing left. Between them, the woman in the beige hoodie (R1) stands facing right, while the woman in the grey hijab (R3) stands second from the right, smiling as she watches the hand clasp. Bright, warm sunlight filters through the canopy, creating a backlit effect with a warm color palette.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 clasps hands with R4 rather than with R1 or R3",
+    "R4 is the hand-clasp partner of R2 rather than an onlooker",
+    "R3 watches the hand clasp instead of participating in it",
+    "R1 stands between the interacting pair without being part of the hand clasp",
+    "the interaction occurs on an outdoor wooden boardwalk with a metal railing"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 clasping hands with R4, rather than R2 clasping hands with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's hand-clasp partner is R4, not R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the person clasping hands with R2, rather than R3 being the one clasping hands with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the hand-clasp contact partner while R3 is not"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 watching the hand clasp between R2 and R4, rather than R3 being the person whose hand R2 is clasping?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is an observer of the hand clasp, not a participant in it"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2 and R4 the two people directly connected by the hand clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R4 form the direct hand-contact pair"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned between the interacting R2 and R4 while not being part of their hand clasp?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is between the hand-clasp participants but not in the hand contact"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "arm_around_shoulder",
+    "used_fallback": false
+  }
+}

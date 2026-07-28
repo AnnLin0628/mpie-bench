@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T11",
+  "instruction": "Candid action photograph, medium full shot. In an indoor boxing gym, the woman with curly hair (R2) in a blue jacket and pink boxing gloves punches towards the left. Behind her, the man in the gray t-shirt (R1) stands in black shorts, watching her technique with a focused expression. Bright overhead fluorescent lighting illuminates the gym.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the active boxer throwing a punch while R1 watches her technique",
+    "R1 stands behind R2 as the observer rather than being the one punching",
+    "R2 wears boxing gloves while punching",
+    "R1 watches R2 with a focused expression",
+    "The scene is an indoor boxing gym"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person throwing a punch while R1 watches her technique, rather than R1 throwing the punch while R2 watches?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the active boxer and R1 is the watcher"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 standing behind R2 and observing her boxing technique, rather than R2 standing behind R1 and observing him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 observes R2 from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 perform the boxing action by punching while R1 remains in a watching role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 punches and R1 watches"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 focused on R2's technique instead of being the boxer currently making the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the observer role"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

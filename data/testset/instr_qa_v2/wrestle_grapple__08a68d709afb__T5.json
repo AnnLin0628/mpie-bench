@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__08a68d709afb__T5",
+  "instruction": "A candid medium over-the-shoulder photograph captures a moment inside a martial arts studio with a plain white wall and gray concrete floor. On the left foreground, the dark-haired student in a black gi (R5) is positioned with their back partially to the camera, standing in a defensive stance facing towards the right. On the right side of the frame, the bearded instructor with a patterned headband (R6) wearing a black gi stands in a sparring stance, facing left with his fists raised defensively. The two martial artists are engaged in a focused training session, with bright, even indoor lighting illuminating the scene and casting soft shadows on the floor.",
+  "n_person": 6,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "elements": [
+    "R5 is the dark-haired student seen partly from behind in a defensive stance facing R6",
+    "R6 is the bearded instructor with a patterned headband holding his fists raised defensively toward R5",
+    "R5 and R6 are positioned as sparring partners facing one another",
+    "R5 has their back partially to the camera while engaging R6",
+    "the interaction takes place inside a martial arts studio with a plain white wall and gray concrete floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 the dark-haired student seen partly from behind in a defensive stance facing R6, rather than R6 occupying that student role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is the student viewed partly from behind facing R6"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the bearded instructor with a patterned headband holding his fists raised defensively toward R5, rather than R5 being that instructor?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 is the instructor with raised defensive fists facing R5"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 have their back partially to the camera while oriented toward R6 in the training exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 is partly turned away from the camera while engaging R6"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__610b7e6f2694__T3",
+  "instruction": "Candid lifestyle medium shot of a bedroom. The bearded man in a denim shirt (R2) lies on a bed on the left, looking up with a joyful smile at the baby girl with pink hair clips (R1). He holds the baby girl (R1) aloft in the center, who laughs happily while looking down. The scene is bathed in soft, warm natural light, emphasizing the cozy yellow sheets.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 supports and holds R1 aloft from below rather than R1 supporting R2",
+    "R2 lies on the bed while lifting R1 rather than R1 lying on the bed lifting R2",
+    "R1 is the baby being held up above R2 and looking down at him",
+    "R2 is positioned below R1 on the bed during the lift",
+    "the bed supports R2 during the interaction",
+    "the setting is a cozy bedroom"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 supporting and holding R1 aloft from below, rather than R1 supporting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 supports and holds R1 aloft from below rather than R1 supporting R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person lying on the bed while lifting R1 up, rather than R1 lying on the bed while lifting R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 lies on the bed while lifting R1 rather than R1 lying on the bed lifting R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned below R1 on the bed as he lifts her upward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned below R1 on the bed during the lift"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

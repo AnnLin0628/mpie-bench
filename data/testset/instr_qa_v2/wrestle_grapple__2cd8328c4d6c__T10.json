@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__2cd8328c4d6c__T10",
+  "instruction": "A clean studio photograph captured in a high-angle full shot. In a minimalist white studio with a seamless white floor, the woman in the white outfit (R2) on the right performs a dramatic high kick, extending her right leg straight up into the air while balancing on her left leg. On the left, the woman in the black outfit (R1) ducks low to the ground, leaning her torso to the left with her arms outstretched for balance. The two barefoot dancers create a highly dynamic, athletic composition. Bright, even studio lighting casts soft, elongated shadows on the white floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 performs a dramatic high kick while R1 ducks low to the ground",
+    "R2 extends her right leg straight up while balancing on her left leg",
+    "R1 leans her torso low with arms outstretched for balance",
+    "R1 is the ducking dancer rather than the kicking dancer",
+    "R2 is the kicking dancer rather than the ducking dancer",
+    "The scene is a minimalist white studio with a seamless white floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 performing the dramatic high kick while R1 ducks low, rather than R1 performing the high kick while R2 ducks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the kicking dancer and R1 is the ducking dancer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer leaning low toward the ground with arms outstretched for balance, rather than R2 doing that low ducking action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the low ducking/balancing role"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending a leg straight up into the air while R1 stays low underneath the action, rather than R1 extending the leg upward while R2 stays low?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the raised-leg role while R1 has the low ducking role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing on her left leg while extending her right leg straight up?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on one leg during the high kick"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep her arms outstretched for balance while ducking low to the ground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 uses outstretched arms while ducking low"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

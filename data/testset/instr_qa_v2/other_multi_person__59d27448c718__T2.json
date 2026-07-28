@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__59d27448c718__T2",
+  "instruction": "Candid cinematic medium shot of an indoor party. On the left, the light-brown-haired man in a checkered shirt under a green t-shirt (R2) leans back cheering with his mouth wide open, holding a red cup. On the right, the dark-haired man in a green t-shirt (R1) stands looking down at the red cups on the table with a concentrated expression. Dim indoor lighting with blue and warm tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 leans back cheering with his mouth wide open while R1 looks down with concentration",
+    "R1 focuses on the red cups on the table rather than cheering like R2",
+    "R2 holds a red cup while R1 looks at cups on the table",
+    "red cups, including one held by R2 and cups on the table",
+    "indoor party with dim blue and warm lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 leaning back and cheering with his mouth wide open while R1 looks down with a concentrated expression, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 cheers while R1 concentrates downward"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one looking down at the red cups on the table while R2 is the one cheering and holding a red cup?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 focuses on table cups while R2 holds a cup and cheers"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold a red cup as he cheers, while R1 stands concentrating on the cups on the table?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the cheering cup-holder and R1 is the concentrated observer of the cups"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

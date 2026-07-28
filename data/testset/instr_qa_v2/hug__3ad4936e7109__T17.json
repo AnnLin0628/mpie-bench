@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__3ad4936e7109__T17",
+  "instruction": "Candid studio photograph, medium shot. In a minimalist white studio, three friends sit on the floor hugging. On the left, the woman with wavy light brown hair (R3) in a white shirt over a black top smiles warmly. In the center, the woman with straight dark hair (R2) in a white high-neck top laughs happily. On the right, the woman with curly brown hair (R1) in a white shirt smiles brightly. They are huddled close, with the woman with wavy light brown hair and the woman with curly brown hair wrapping their arms around the woman with straight dark hair. Bright, soft studio lighting illuminates the scene.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 wraps her arms around R2 as part of the close embrace",
+    "R3 wraps her arms around R2 as part of the close embrace",
+    "R2 is the central friend being embraced by both R1 and R3",
+    "R1 and R3 flank R2 while huddling close around her",
+    "The group is seated on the floor in a minimalist white studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 wrapping her arms around R2, rather than R2 being described as wrapping her arms around R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 wraps her arms around R2 as part of the close embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 wrapping her arms around R2, rather than R2 being described as wrapping her arms around R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 wraps her arms around R2 as part of the close embrace"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the central person being embraced by both R1 and R3, rather than R1 being the central person embraced by R2 and R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the central friend being embraced by both R1 and R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 huddled close around R2 with their arms involved in the embrace?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R3 flank R2 while huddling close around her"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

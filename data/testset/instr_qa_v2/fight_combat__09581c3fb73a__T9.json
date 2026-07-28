@@ -1,0 +1,98 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T9",
+  "instruction": "Candid action photograph, full shot. In an outdoor covered concrete pavilion during the day, the man in the beige t-shirt (R1) stands on the left with his back partially to the camera, extending his gloved right arm to punch. On the right, the man in the green long-sleeved shirt (R3) stands facing him in red shorts and grey clogs, holding up a black focus mitt to catch the punch. The two are engaged in active boxing mitt work, with R1's glove making contact with R3's mitt. The background shows a blue wooden board and metal pillars under natural daylight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the striker extending his gloved right arm to punch toward R3.",
+    "R3 is the mitt holder, holding up a black focus mitt to catch R1's punch.",
+    "R1's boxing glove makes contact with the focus mitt held by R3.",
+    "R1 and R3 are engaged in active boxing mitt work with distinct puncher and pad-holder roles.",
+    "A black focus mitt is used as the contact target.",
+    "The scene is an outdoor covered concrete pavilion in daylight."
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his gloved right arm to punch toward R3, rather than R3 punching toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the striker and R3 is the target-side mitt holder"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold up the black focus mitt to catch or absorb R1's punch, rather than R1 holding the mitt for R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the focus mitt that receives R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1's glove making contact with R3's mitt, rather than R3's glove making contact with a mitt held by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's glove contacts the mitt held by R3"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 performing the punching role while R3 faces him in the mitt-holder role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct boxing mitt-work roles for R1 and R3"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is there a black focus mitt being held up as the target for the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black focus mitt"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R1 wearing a boxing glove on the arm he extends to punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1's boxing glove"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

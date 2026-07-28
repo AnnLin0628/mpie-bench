@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T24",
+  "instruction": "Candid documentary photograph, medium full shot from a low angle in a gym with white mats and framed posters. In the foreground on the left, the man in the black t-shirt and leggings (R1) performs a low lunge stretch, smiling. Behind him on the right, the man in the black t-shirt and blue shorts (R2) does a split stretch while looking down. Both men stretch side-by-side on the mat under bright, even indoor lighting.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 performs a low lunge stretch while R2 does a split stretch",
+    "R2 does the split stretch while looking down rather than R1 doing it",
+    "R1 smiles during his low lunge while R2 looks down during his split",
+    "R1 and R2 stretch side-by-side on a mat with distinct body configurations",
+    "white gym mats beneath the stretching men",
+    "gym setting with framed posters and bright indoor lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man performing the low lunge stretch, rather than R2 being the one in the low lunge?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the low lunge stretch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the man doing the split stretch, rather than R1 being the one doing the split stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 performs the split stretch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 smiling during his low lunge while R2 looks down during his split, rather than those expressions and stretch roles being swapped?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles in a lunge while R2 looks down in a split"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 hold a low lunge body configuration while R2 holds a split body configuration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "distinct R1/R2 stretching body configurations"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 stretching side-by-side on the mat, with R1 in a lunge and R2 in a split?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "side-by-side stretching roles on the mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__bdef1d520bd6__T3",
+  "instruction": "Cinematic film still, medium shot. Indoors by a window with books and roses, an older blonde woman (R1) in a beige shirt and pants sits on the left, looking down slightly while speaking. On the right, a bearded man (R2) in a beige shirt and pants sits in an armchair, looking at her attentively. They hold hands warmly. Soft natural light fills the room, creating a gentle, intimate mood with warm neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 speaks while R2 looks at her attentively",
+    "R2 is the attentive listener seated in an armchair while R1 is the speaker",
+    "R1 and R2 hold hands warmly while seated",
+    "R2 sits in an armchair",
+    "the scene is indoors by a window with books and roses"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one speaking while R2 looks at her attentively, rather than R2 speaking while R1 listens?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 speaks while R2 listens attentively"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one seated in the armchair looking attentively at R1, rather than R1 being the attentive armchair sitter?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attentive listener in the armchair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 seated together while holding hands warmly?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are seated and hand-holding"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

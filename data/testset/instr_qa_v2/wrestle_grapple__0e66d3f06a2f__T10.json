@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__0e66d3f06a2f__T10",
+  "instruction": "Candid action photograph, medium-full shot. In an indoor martial arts studio, the bearded Black man in a white gi (R1) on the left bends deeply forward, tucking his head under the arm of the Asian man with braided hair in a gray gi (R2) on the right. R1 reaches to grip R2's leg, while R2 leans over him, draping an arm over R1's neck to defend. Warm indoor lighting illuminates the mat.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 bends deeply forward with his head tucked under R2's arm",
+    "R1 reaches to grip R2's leg during the grapple",
+    "R2 leans over R1 while draping an arm over R1's neck to defend",
+    "R1 is the lower, driving grappler and R2 is the upper, defending grappler",
+    "the interaction occurs on a martial arts mat in an indoor studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 bending forward with his head tucked under R2's arm, rather than R2 tucking his head under R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 tucks his head under R2's arm"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 reaching to grip R2's leg, rather than R2 reaching to grip R1's leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 grips R2's leg"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 drape an arm over R1's neck to defend, rather than R1 draping an arm over R2's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 defends by draping an arm over R1's neck"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 the lower grappler bent forward while R2 is leaning over him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is lower and bent forward while R2 is over him"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 defending against R1's leg-grip attempt by using his arm around R1's neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 defends while R1 attempts a leg grip"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are R1 and R2 grappling on a mat in an indoor martial arts studio?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor martial arts studio with mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

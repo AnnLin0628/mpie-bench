@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__332f58373138__T2",
+  "instruction": "Candid medium shot in a ballet studio. On the left, the female instructor in a black bodysuit (R1) stands gesturing with her arm raised. On the right, the young ballet student in a white leotard and tutu (R2) stands with her leg extended on the barre, looking attentively at the instructor. Soft indoor lighting fills the gray-walled room.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 is the instructor gesturing with a raised arm while R2 attends to her",
+    "R2 is the student extending a leg on the barre while R1 instructs",
+    "R2 looks attentively toward R1 for instruction",
+    "a ballet barre supports R2's extended leg",
+    "the scene is set in a ballet studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the instructor gesturing with a raised arm while R2 attends to her, rather than R2 instructing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 instructs and gestures while R2 attends"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 have her leg extended on the barre while R1 stands gesturing, rather than R1 extending her leg on the barre while R2 gestures?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 practices at the barre while R1 gestures"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing and demonstrating or explaining with her raised arm while R2 maintains a barre exercise pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 demonstrates while R2 practices"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

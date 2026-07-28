@@ -1,0 +1,67 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__6dde770d54d0__T2",
+  "instruction": "Cinematic film still, low-angle medium full shot. On a sunny sandy beach with dunes in the background, the man in the black wetsuit (R1) and the boy in the black and blue wetsuit (R2) walk forward side-by-side while holding hands. The man (R1) carries a surfboard under his left arm, looking upward with a warm smile. Beside him, the boy (R2) looks slightly upward with a calm expression. The image features bright, warm backlighting that creates a soft lens flare and a hazy, atmospheric look.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 carries the surfboard under his left arm while walking hand-in-hand with R2",
+    "R1 is the man and R2 is the boy in the hand-holding pair",
+    "R1 and R2 walk forward side-by-side while holding hands",
+    "the surfboard is carried by R1",
+    "the scene is a sunny sandy beach with dunes in the background",
+    "bright warm backlighting creates a soft lens flare"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one carrying the surfboard under his left arm while holding hands with R2, rather than R2 carrying the surfboard?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the surfboard while hand-in-hand with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the man in the hand-holding pair and R2 the boy beside him, rather than R2 being the man and R1 being the boy?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the man and R2 is the boy in the contact pair"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk beside R1 as R1 carries the surfboard, rather than R2 being carried by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks beside R1 instead of being carried"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

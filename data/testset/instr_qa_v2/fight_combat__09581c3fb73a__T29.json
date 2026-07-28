@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T29",
+  "instruction": "Candid full shot of two men sparring in an outdoor covered training area during the day. On the right, the man in the beige t-shirt (R1) lunges forward, throwing a straight right punch. On the left, the man in the blue tank top (R2) stands in a defensive stance, blocking the punch with his black boxing gloves raised to his head. Bright daylight illuminates the scene, casting natural shadows on the concrete floor.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 lunges forward and throws a straight right punch toward R2",
+    "R2 is in the defensive role, blocking R1's punch rather than punching R1",
+    "R1 is the attacking puncher while R2 is the blocker",
+    "R2 raises black boxing gloves to his head to absorb or block the punch",
+    "The sparring occurs in an outdoor covered training area during daylight",
+    "Natural shadows fall on the concrete floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lunging forward and throwing a straight right punch toward R2, rather than R2 throwing the punch at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the attacking puncher and R2 is the punch target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 blocking R1's punch with raised boxing gloves, rather than R1 blocking a punch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the defensive blocking duty against R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 play the forward-lunging attacker role while R2 stays in the defensive guard role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "asymmetric attacker versus defender roles"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 keep his black-gloved hands raised near his head to defend against R1's strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's defensive body configuration while blocking R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

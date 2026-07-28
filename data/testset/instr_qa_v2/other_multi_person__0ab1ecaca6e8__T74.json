@@ -1,0 +1,85 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T74",
+  "instruction": "Candid outdoor medium shot of friends playing a game in a grassy park during the day. In the foreground on the right, the woman in a dark blue t-shirt (R4) leans forward with an excited, shouting expression, gesturing dynamically with her hands. Behind her to the left, the woman in a black beanie and red t-shirt (R5) stands smiling warmly while holding a red frisbee flat against her chest. The background features soft-focus green grass and lush trees under bright, natural daylight, creating a warm and energetic atmosphere.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R5 holds the red frisbee flat against her chest rather than R4 holding it",
+    "R4 is the excited foreground participant leaning forward and gesturing while R5 stands behind smiling with the frisbee",
+    "R4 gestures dynamically with her hands as the expressive player",
+    "R5 smiles while holding the frisbee against her chest",
+    "red frisbee held against R5's chest",
+    "grassy outdoor park in daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R5 holding the red frisbee flat against her chest rather than R4 holding the frisbee?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 holds the red frisbee flat against her chest rather than R4 holding it"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 the one leaning forward with an excited, shouting expression while R5 stands behind her smiling with the frisbee?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 is the excited foreground participant while R5 is the smiling frisbee holder behind her"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R4 gesture dynamically with her hands as the expressive player in the foreground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 gestures dynamically with her hands"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R5 stand smiling warmly while keeping the frisbee pressed flat against her chest?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 smiles while holding the frisbee against her chest"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

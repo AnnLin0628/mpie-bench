@@ -1,0 +1,97 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__3a1ade1661a0__T2",
+  "instruction": "Candid action photograph, medium full shot. Inside an indoor boxing gym, the dark-skinned boxer in red shorts (R2) on the left throws a punch with his red glove. On the right, the light-skinned boxer in black shorts (R1) stands in a defensive stance, blocking the blow with his black gloves. The scene is viewed through the horizontal black ropes of the ring under bright overhead light.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 is the boxer throwing the punch while R1 is the boxer blocking it",
+    "R1 uses his gloves defensively to stop R2's incoming punch",
+    "R2 is in the offensive striking role and R1 is in the defensive blocking role",
+    "R1 stands in a defensive boxing stance against R2's blow",
+    "R2's red boxing glove and R1's black boxing gloves are the contact-relevant objects",
+    "The interaction takes place inside an indoor boxing gym ring"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing the punch while R1 blocks it, rather than R1 throwing the punch while R2 blocks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the puncher and R1 is the blocker"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 receive and stop R2's incoming blow with his gloves, rather than R2 receiving and stopping R1's blow?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the defensive blocking duty against R2's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 in the offensive striking role and R1 in the defensive guarding role, rather than the roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 attacks while R1 defends"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 standing in a defensive boxing stance while blocking R2's punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's defensive body configuration and blocking role"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 extending a gloved punch toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's punching action toward R1"
+    },
+    {
+      "id": "q6",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Does the boxing interaction take place inside an indoor boxing gym ring?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "indoor boxing gym ring setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

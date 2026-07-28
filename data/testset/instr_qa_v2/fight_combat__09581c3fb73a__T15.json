@@ -1,0 +1,88 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__09581c3fb73a__T15",
+  "instruction": "Candid sports photograph, full shot. Inside a covered outdoor pavilion, the boxer in the beige t-shirt (R1) on the left leans forward to throw a punch at the boxer in the blue tank top (R2) on the right, who blocks with both gloves up. In the background, a bystander in a blue shirt and cap stands watching. Bright natural daylight illuminates the scene.",
+  "n_person": 3,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 leans forward to throw a punch at R2",
+    "R2 blocks R1's punch with both gloves raised",
+    "R3 is a background bystander watching R1 and R2",
+    "R1 and R2 are engaged as boxers in a combat exchange",
+    "boxing gloves are used in the interaction",
+    "the scene is inside a covered outdoor pavilion"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the boxer leaning forward to throw a punch at R2, rather than R2 throwing a punch at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the puncher and R2 is the target/defender"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the boxer blocking R1's incoming punch with both gloves up, rather than R1 blocking a punch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the defensive blocking role against R1's punch"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 watching from the background as a bystander while R1 and R2 are the two active boxers, rather than R3 being one of the fighters?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the onlooker and R1/R2 are the combat pair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 lean forward toward R2 in an attacking boxing posture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's attacking body configuration toward R2"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold both gloves up in a defensive blocking posture while facing R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's defensive blocking body configuration toward R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

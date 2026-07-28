@@ -1,0 +1,96 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__28f54bd775cc__T6",
+  "instruction": "Candid documentary photograph, eye-level full shot. Inside a spacious dojo featuring a textured brown wall and a green potted plant, the girl in the pink gi (R2) stands and leans forward, gripping the ankle of the woman in the black gi (R1). The woman in the black gi (R1) lies flat on her back on the black mat, raising her legs high to defend against the guard pass. Warm indoor lighting casts soft shadows across the training area, highlighting the dynamic movement of the two grapplers.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 stands and leans forward while gripping R1's ankle",
+    "R1 lies flat on her back and raises her legs to defend against R2's guard pass",
+    "R2 is the upper standing grappler attempting the pass while R1 defends from below",
+    "R1 is positioned on the black mat during the grapple",
+    "the interaction takes place inside a spacious dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 standing and leaning forward while gripping R1's ankle, rather than R1 standing and gripping R2's ankle?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 grips R1's ankle from a standing forward-leaning position"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lying flat on her back with her legs raised to defend against R2's guard pass, rather than R2 lying on her back defending against R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 defends from her back while R2 is the passer"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the upper grappler applying pressure by controlling R1's ankle, while R1 is the lower grappler defending with raised legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 controls R1's ankle while R1 defends from below"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 positioned flat on her back on the mat during the grappling exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration is flat on her back"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 leaning forward over R1 as part of the guard-pass exchange?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body configuration is leaning forward over R1"
+    },
+    {
+      "id": "q6",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is the grappling action taking place on a black mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "black mat used as the grappling surface"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

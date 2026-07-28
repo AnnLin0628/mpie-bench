@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T234",
+  "instruction": "A candid documentary wide shot from a low angle captures an indoor training studio with a red carpet and white walls. In the foreground on the left, the man in the dark polo shirt and blue shorts (R1) is seen from behind, holding the woman's foot. In the background on the right, the woman in the white patterned t-shirt and blue jeans (R2) faces the camera, balancing on her left leg with her right leg extended. The man (R1) holds her right foot firmly. The scene is brightly illuminated by overhead lights, casting soft shadows on the red floor.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's right foot firmly",
+    "R2 balances on her left leg while extending her right leg",
+    "R1 is the helper holding the foot, while R2 is the person being supported",
+    "R2's extended right foot is the point of contact between R1 and R2",
+    "The interaction takes place in an indoor training studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's right foot firmly, rather than R2 holding R1's foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's right foot firmly"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person balancing on one leg while R1 assists by holding her extended foot, rather than R1 balancing while R2 holds his foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances while R1 assists by holding her foot"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 provide the firm foot hold for R2's extended right leg, rather than R2 providing that hold for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 provides the foot-holding support for R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2's right leg extended with R1 holding onto R2's right foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's extended right foot is held by R1"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing on her left leg while R1 maintains contact with her raised foot?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 balances on one leg as R1 holds her foot"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

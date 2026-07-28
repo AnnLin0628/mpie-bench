@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__13aca82e72ee__T1",
+  "instruction": "A candid lifestyle photograph in a medium shot shows a bright bedroom setting. On a bed with blue bedding, the shirtless man in light green shorts (R1) sits facing forward, smiling warmly. Behind him, the blonde woman in a white t-shirt (R2) wraps her arms around his neck in a loving embrace, leaning her head close to his. The shirtless man holds her hand gently as they look at each other with happy expressions. The scene is illuminated by soft, natural indoor light, highlighting the vibrant blue of the comforter and the warm wooden hexagonal wall decor in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 wraps her arms around R1's neck from behind",
+    "R1 is the seated person in front receiving R2's behind-the-neck embrace",
+    "R1 gently holds R2's hand while she leans close behind him",
+    "R1 sits on the bed facing forward as R2 leans her head close to his",
+    "the interaction takes place on a bed with blue bedding",
+    "the bedroom has warm wooden hexagonal wall decor in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned behind R1 with her arms wrapped around R1's neck, rather than R1 being behind R2 with his arms around her neck?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 embraces R1 from behind around his neck"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the seated person in front receiving the neck embrace from R2, rather than R2 sitting in front receiving it from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is in front while R2 wraps arms around his neck from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 gently hold R2's hand while R2 leans in close behind him, rather than R2 being the front seated person holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds R2's hand during R2's behind-the-neck embrace"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 sitting on the bed facing forward while R2 leans her head close to his from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 sits forward as R2 leans close behind him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

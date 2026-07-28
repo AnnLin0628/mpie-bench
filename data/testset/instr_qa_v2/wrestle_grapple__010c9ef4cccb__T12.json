@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T12",
+  "instruction": "Candid documentary photograph, medium shot. Inside a judo dojo, the young man in the white judo gi (R4) and the woman in the blue judo gi (R1) kneel side-by-side on a blue mat against a beige wall. The young man (R4) sits on the left with hands on his thighs, looking slightly aside. The woman (R1) sits on the right, adjusting her gi lapel while looking forward. Soft, diffused indoor lighting creates a calm atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 adjusts her own gi lapel while kneeling beside R4",
+    "R4 rests his hands on his thighs while R1 adjusts her gi lapel",
+    "R1 looks forward while R4 looks slightly aside",
+    "R1 and R4 kneel side-by-side on a blue mat",
+    "R1's gi lapel is being adjusted by R1",
+    "the pair are inside a judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 adjusting her own gi lapel rather than R4 adjusting R1's lapel?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the one adjusting her own gi lapel"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R4 resting his hands on his thighs while R1 is the one adjusting her gi lapel, rather than those actions being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R4 has hands on thighs while R1 adjusts the gi lapel"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking forward while adjusting her gi, rather than R4 being the one looking forward and adjusting a gi?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks forward while performing the lapel adjustment"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R4 both kneeling on the mat while R1 adjusts her gi and R4 keeps his hands on his thighs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "kneeling body configuration with distinct R1/R4 actions"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Are R1 and R4 kneeling on a blue judo mat?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "blue judo mat"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

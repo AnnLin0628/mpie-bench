@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T121",
+  "instruction": "A candid documentary full shot captures an indoor motion capture studio featuring a red carpet floor, white walls, and wall-mounted cameras. On the left side of the frame, the bearded man in a black polo shirt and blue shorts (R1) stands leaning forward, extending his right hand to gently touch the cheek of the woman in a white patterned t-shirt and blue jeans (R2). The woman stands on the right side, facing left towards him with a neutral expression. The entire scene is illuminated by warm overhead artificial lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 gently touches R2's cheek with his right hand",
+    "R1 initiates the cheek contact rather than R2 initiating it",
+    "R2 is the recipient of the cheek touch from R1",
+    "R1 leans forward while extending his hand toward R2's face",
+    "R2 faces R1 with a neutral expression during the contact",
+    "The scene is inside an indoor motion capture studio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently touching R2's cheek with his right hand, rather than R2 touching R1's cheek?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently touches R2's cheek with his right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person initiating the face contact while R2 receives the cheek touch, rather than R2 initiating contact on R1's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 initiates the cheek contact rather than R2 initiating it"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 remain the person whose cheek is being touched by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of the cheek touch from R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 leaning forward while extending his hand toward R2's face?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans forward while extending his hand toward R2's face"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

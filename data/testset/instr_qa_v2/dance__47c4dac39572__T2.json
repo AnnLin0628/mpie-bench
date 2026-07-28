@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__47c4dac39572__T2",
+  "instruction": "Cinematic medium shot in a lakeside park. On the right, the man in the beige corduroy shirt (R1) stands facing left, raising his arm to hold the hand of the woman in the beige hijab and black polka-dot dress (R2). The woman (R2) is on the left, her back partially turned as she spins under his arm. The background features a lake and distant mountains.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 raises his arm to hold R2's hand during the dance turn",
+    "R2 spins under R1's raised arm rather than R1 spinning under R2's arm",
+    "R1 leads the overhead handhold while R2 is the turning partner",
+    "R2 has her back partially turned as she spins under R1's arm",
+    "The scene is set in a lakeside park with distant mountains"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 raising his arm to hold R2's hand, rather than R2 raising her arm to hold R1's hand overhead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 raises his arm to hold R2's hand during the dance turn"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 spinning under R1's raised arm, rather than R1 spinning under R2's raised arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 spins under R1's raised arm rather than R1 spinning under R2's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 acting as the dance partner who leads the overhead handhold while R2 is the partner turning underneath?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leads the overhead handhold while R2 is the turning partner"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 have her back partially turned as she spins under R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has her back partially turned as she spins under R1's arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

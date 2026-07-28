@@ -1,0 +1,95 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0ab1ecaca6e8__T6",
+  "instruction": "Candid outdoor photograph of four friends sitting side-by-side on a green grassy lawn in a park. From left to right, the Asian man in the red 'T' shirt (R3) points forward with both hands while smiling; the woman in the dark blue 'E' shirt (R4) sits next to him smiling; the Black woman with an afro in the red 'A' shirt (R6) sits cross-legged laughing with open hands; and the bald man in the blue 'M' shirt (R2) sits on the far right smiling directly at the camera. The background shows a soft-focus green park under bright, natural daylight.",
+  "n_person": 10,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10"
+  ],
+  "elements": [
+    "R3 points forward with both hands while smiling",
+    "R6 sits cross-legged laughing with open hands",
+    "R2 smiles directly at the camera",
+    "R4 sits next to R3 while smiling",
+    "four friends sit side-by-side on a green grassy lawn in a park",
+    "the scene is outdoors in bright natural daylight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person pointing forward with both hands while smiling, rather than R4 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the asymmetric pointing action"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R6 the person sitting cross-legged and laughing with open hands, rather than R2 taking that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R6 has the asymmetric cross-legged laughing pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person smiling directly at the camera, rather than R6 doing so?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the asymmetric direct-to-camera smile"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R3, R4, R6, and R2 all seated side-by-side on the lawn?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "the named friends share a seated side-by-side configuration"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the group sitting on a green grassy lawn in a park under bright natural daylight?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "outdoor park lawn setting"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

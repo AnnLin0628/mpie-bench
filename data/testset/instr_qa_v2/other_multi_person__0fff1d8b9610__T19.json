@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T19",
+  "instruction": "An action photograph with a high-angle full shot shows a bright white indoor studio. In the foreground, the cheerleader with long dark hair (R14) in a white t-shirt and white skirt leans forward and to the right, extending her orange pom-poms downward with heavy motion blur. Behind her, the cheerleader with curly brown hair (R11) in a matching outfit mirrors the pose, leaning and extending her pom-poms to the right. The two perform a synchronized movement against a clean white background with vertical light stands. The lighting is bright and even, highlighting the vibrant orange of the pom-poms.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R14 is the foreground cheerleader while R11 is behind her",
+    "R11 mirrors R14's leaning pom-pom pose from behind",
+    "R14 extends her orange pom-poms downward with heavy motion blur while R11 mirrors the action",
+    "R14 and R11 perform a synchronized cheerleading movement",
+    "orange pom-poms are used in the movement",
+    "bright white indoor studio with vertical light stands"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R14 the cheerleader in the foreground while R11 is positioned behind her, rather than R11 being the foreground cheerleader?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 is the foreground cheerleader while R11 is behind her"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R11 mirror R14's leaning pom-pom pose from behind, rather than R14 mirroring R11 from behind?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R11 mirrors R14's leaning pom-pom pose from behind"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R14 the one described with heavy motion blur on her downward orange pom-poms while R11 follows by mirroring the pose behind her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 extends her orange pom-poms downward with heavy motion blur while R11 mirrors the action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R14 and R11 both leaning and extending their pom-poms as part of a synchronized cheerleading movement?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 and R11 perform a synchronized cheerleading movement"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

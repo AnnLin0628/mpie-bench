@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__772e422ddd33__T1",
+  "instruction": "A clean studio photograph, full-shot at eye-level. In a bright indoor dance studio with white paneled walls, the woman in a black leotard and white tights (R1) stands on the left, looking down as she guides the young girl in a black crop top and black skirt (R2). The girl (R2) stands on the right, holding a ballet pose with one leg bent in passé and arms raised. The woman (R1) gently supports the girl's arm. Soft, bright natural light illuminates the scene, creating a clean, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 guides R2 through the ballet pose rather than R2 guiding R1",
+    "R1 gently supports R2's arm rather than R2 supporting R1's arm",
+    "R2 is the dancer holding the passé pose while R1 assists her",
+    "R2 has one leg bent in passé with arms raised",
+    "the scene is a bright indoor dance studio with white paneled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 guiding R2 through the ballet pose rather than R2 guiding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides R2 through the ballet pose rather than R2 guiding R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 gently supporting R2's arm rather than R2 supporting R1's arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gently supports R2's arm rather than R2 supporting R1's arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the ballet pose while R1 assists her, rather than R1 posing while R2 assists?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the dancer holding the passé pose while R1 assists her"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold a passé pose with one leg bent and arms raised while R1 supports her arm?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has one leg bent in passé with arms raised while R1 supports her arm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

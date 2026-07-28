@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__3b1118c45344__T3",
+  "instruction": "A candid outdoor photograph, full shot at eye-level. In an outdoor grassy field with autumn trees in the background, the woman in the maroon patchwork dress (R2) on the left and the woman in the peach and blue patterned dress (R1) on the right face each other. Both are barefoot and holding hands with their arms fully extended forward in a dance pose. Warm natural daylight illuminates the scene with soft shadows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the peach and blue patterned-dress dance partner holding hands with R2",
+    "R2 is the maroon patchwork-dress dance partner holding hands with R1",
+    "R1 and R2 face each other in a dance pose with arms extended forward",
+    "R1 and R2 are both barefoot while holding hands",
+    "The scene is an outdoor grassy field with autumn trees in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the peach and blue patterned-dress woman holding hands with R2 in the dance pose, rather than R2 being the peach and blue patterned-dress partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the peach and blue patterned-dress dance partner holding hands with R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the maroon patchwork-dress woman holding hands with R1 in the dance pose, rather than R1 being the maroon patchwork-dress partner?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the maroon patchwork-dress dance partner holding hands with R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 facing each other while holding hands with their arms fully extended forward?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 face each other in a dance pose with arms extended forward"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 holding R2's hands as part of the dance pose, with R2 holding R1's hands back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are mutually holding hands in a dance pose"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "wrestle_grapple__010c9ef4cccb__T19",
+  "instruction": "A candid action photograph captured from a high-angle medium shot. In an indoor judo dojo on yellow tatami mats, the woman with curly hair in a bun (R1) wearing a blue judogi is kneeling and pinning the young man in a white judogi (R2) to the ground. R1's back, which features a white patch labeled 'G. PAIVA POR', is turned toward the camera as she grapples with R2, who lies flat on his back beneath her. The scene is brightly lit with even, soft indoor lighting, casting minimal shadows on the yellow mat.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 is kneeling and pinning R2 to the ground",
+    "R2 lies flat on his back beneath R1",
+    "R1 grapples from the top position while R2 is the pinned person below",
+    "R1's back is turned toward the camera during the grapple",
+    "the grappling takes place on yellow tatami mats",
+    "the scene is inside a judo dojo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 kneeling and pinning R2 to the ground, rather than R2 kneeling and pinning R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 pins R2 from above"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 lying flat on his back beneath R1, rather than R1 lying flat beneath R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the person pinned underneath"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 occupy the top grappling position while R2 is the person being controlled on the ground?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 controls from above and R2 is controlled below"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 kneeling over R2 as part of the grappling hold?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 kneels over R2 in contact"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 the participant lying on his back while being pinned by R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is pinned on his back by R1"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "wrestle_grapple",
+    "used_fallback": false
+  }
+}

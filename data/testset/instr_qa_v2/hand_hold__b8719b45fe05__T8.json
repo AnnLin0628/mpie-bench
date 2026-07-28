@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__b8719b45fe05__T8",
+  "instruction": "Candid outdoor full shot from a high angle of a couple walking down a rocky path next to a marble wall. The woman in the white sweater and beige hat (R1) on the left looks towards the man while touching the marble wall with her right hand. The man in the brown sweater and dark hat (R2) on the right walks down, holding her hand. Soft natural daylight highlights the cool blue-gray marble and the warm tones of their sweaters.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 touches the marble wall with her right hand while walking",
+    "R2 holds R1's hand as they walk down the rocky path",
+    "R1 is the wall-touching person and R2 is the hand-holding partner",
+    "R1 and R2 walk together down a rocky path",
+    "a marble wall is present and is contacted by R1",
+    "the scene is outdoors, shown as a high-angle full shot"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person touching the marble wall with her right hand, rather than R2 being the one touching the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 touches the marble wall with her right hand"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's hand while R1 is the one contacting the marble wall, rather than R1 holding R2's hand while R2 contacts the wall?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds R1's hand while R1 touches the wall"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 walk with R2 while R1's right hand touches the marble wall and R2 maintains the hand-hold with R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the wall-touching walker and R2 is the hand-holding walker"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 walk down the rocky path with R1 while holding R1's hand?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks down while holding R1's hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

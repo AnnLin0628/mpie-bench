@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T283",
+  "instruction": "A candid documentary wide shot captures an indoor motion capture studio with a red carpeted floor and white walls. The man in the black polo shirt and blue shorts (R1) stands on the left, facing away from the camera. The woman in the white patterned t-shirt and blue jeans (R2) stands on the right, also facing away. The man places his right hand on her lower back in a guiding gesture. The scene is illuminated by bright overhead fluorescent lighting, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his right hand on R2's lower back",
+    "R1 is guiding R2 rather than being guided by her",
+    "R2 receives the lower-back guiding touch from R1",
+    "R1 and R2 are both facing away from the camera during the contact",
+    "The setting is an indoor motion capture studio with a red carpeted floor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 placing his right hand on R2's lower back, rather than R2 placing a hand on R1's lower back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 gives the lower-back guiding touch to R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person guiding R2 with a hand on her back, rather than R2 guiding R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 guides R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving the lower-back touch from R1, rather than the person giving that touch to R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives R1's guiding contact"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1's right hand make contact with R2's lower back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's right hand contacts R2's lower back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

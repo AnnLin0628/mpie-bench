@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__16947af94087__T5",
+  "instruction": "Cinematic film still, medium full shot. Inside a spacious classical hall with polished wooden floors and white columns, the man in the brown shirt and beanie (R1) stands in the center, lifting the woman in the black dress (R2) in a horizontal cradle carry. The man (R1) looks up at her with a focused expression while supporting her body, and the woman (R2), wearing a white ribbon in her hair, looks down at him. Soft, natural light from large windows illuminates the scene, creating a warm, intimate atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lifts R2 in a horizontal cradle carry",
+    "R1 supports R2's body and weight rather than being supported by R2",
+    "R2 is the carried person in R1's arms",
+    "R1 looks up at R2 while R2 looks down at him during the carry",
+    "spacious classical hall with polished wooden floors and white columns"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 lifting R2 in a horizontal cradle carry, rather than R2 lifting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lifts R2 in a horizontal cradle carry"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2's body and weight from below, rather than R2 supporting R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2's body and weight rather than being supported by R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person being carried horizontally in R1's arms, rather than R1 being carried in R2's arms?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the carried person in R1's arms"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 positioned across R1's arms in a cradle-carry body configuration?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned horizontally across R1's arms"
+    },
+    {
+      "id": "q5",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 look up at R2 while holding her, with R2 looking down at R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks up at R2 while R2 looks down at him during the carry"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

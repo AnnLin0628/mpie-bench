@@ -1,0 +1,70 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "handshake__405a8e47b7e8__T5",
+  "instruction": "A candid medium shot of a bright indoor workshop with white wood-paneled walls. On the left, the man with the afro (R2) wearing a gray button-down shirt stands looking down at the table. On the right, the man with the fade haircut (R3) wearing a rust-red turtleneck sweater and a green apron leans forward over a wooden table, placing paper inside a yellow cylindrical container. Colorful glass vases and an open laptop sit on the left side of the table. Bright natural light streams from the windows, creating a clean and warm atmosphere.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R3 is the person placing paper inside the yellow cylindrical container, not R2",
+    "R3 leans forward over the wooden table to handle the paper and container while R2 only looks down at the table",
+    "R2 is observing the table rather than performing the paper-placement task",
+    "yellow cylindrical container receiving paper",
+    "paper being placed into the container",
+    "bright indoor workshop with white wood-paneled walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 placing paper inside the yellow cylindrical container, rather than R2 placing the paper?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 performs the paper-placement duty instead of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 leaning forward over the wooden table to handle the paper and container, while R2 is not the one doing that task?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 handles the table task while R2 does not"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R3 the two people whose hands meet in the contact, rather than R2 joining that hand contact?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact-pair membership"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "handshake",
+    "used_fallback": true
+  }
+}

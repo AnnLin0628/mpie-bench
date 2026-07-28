@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T115",
+  "instruction": "A candid wide-angle photograph shows an indoor studio with a red carpet. On the left, the woman in the white t-shirt and blue jeans (R2) stands in profile facing right. On the right, the man in the black polo shirt and blue shorts (R1) stands facing her, extending his right arm to touch her forehead. The background has white walls and red partition screens. The lighting is bright and even.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 extends his right arm to touch R2's forehead",
+    "R2 receives the forehead touch from R1 rather than touching him",
+    "R1 stands facing R2 while making contact with her forehead",
+    "R2 stands in profile facing R1 during the contact",
+    "The interaction takes place in an indoor studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 extending his right arm to touch R2's forehead, rather than R2 extending her arm to touch R1's forehead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active forehead-touching person"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 receiving a touch on her forehead from R1, rather than R1 receiving a forehead touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the recipient of R1's forehead touch"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 the two people executing the instructed contact interaction?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "contact pair"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [
+    "used_fallback"
+  ],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": true
+  }
+}

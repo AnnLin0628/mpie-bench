@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__27919ce920e9__T2",
+  "instruction": "A candid wedding photograph in a medium shot captures a tender moment indoors. Against a white wall with floral arrangements, the groom in the dark suit (R1) stands on the left in profile, placing his hands on the shoulders of the bride in the strapless white gown (R2). The bride stands on the right, holding a pastel bouquet and looking up at him as her sheer veil drapes behind her shoulders. They share a close, intimate gaze. Soft, bright natural light illuminates the scene, creating a clean, romantic atmosphere with neutral tones.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 places his hands on R2's shoulders rather than R2 placing hands on R1's shoulders",
+    "R2 receives the shoulder touch from R1 while looking up at him",
+    "R2 holds a pastel bouquet during the interaction",
+    "R2's sheer veil drapes behind her shoulders",
+    "the scene is indoors against a white wall with floral arrangements",
+    "R1 and R2 share a close, intimate gaze"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 place his hands on R2's shoulders, rather than R2 placing her hands on R1's shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 places his hands on R2's shoulders rather than R2 placing hands on R1's shoulders"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person receiving R1's shoulder touch while looking up at him, rather than R1 receiving that shoulder touch from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the shoulder touch from R1 while looking up at him"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand close to R2 with his hands placed on her shoulders?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 stands close to R2 and touches her shoulders"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 holding a pastel bouquet?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a pastel bouquet during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 1,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

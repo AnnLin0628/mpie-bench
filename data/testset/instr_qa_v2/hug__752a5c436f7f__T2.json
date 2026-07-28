@@ -1,0 +1,69 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__752a5c436f7f__T2",
+  "instruction": "Candid documentary photograph, medium close-up. In a bright dining room, the grey-haired man (R3) in a dark blazer on the left embraces the blonde woman (R2) in a black blazer on the right. R3 is seen from a three-quarter back view, while R2 faces him with a warm smile. A table with plates of food and wine glasses is blurred in the foreground under soft, backlit window light.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is the person embracing R2, rather than R2 being the one described as embracing R3",
+    "R2 faces R3 with a warm smile while R3 is seen from a three-quarter back view",
+    "R3 and R2 are in an embrace with R3 oriented partly away from the camera and R2 facing him",
+    "a dining table is blurred in the foreground",
+    "plates of food and wine glasses are on the foreground table",
+    "the setting is a bright dining room with soft backlit window light"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the one described as embracing R2, rather than R2 being described as embracing R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the active embracer of R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R2 face R3 with a warm smile while R3 is seen from a three-quarter back view, rather than the reverse?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R3 smiling while R3's back is partly toward the camera"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R3 oriented partly away from the camera as he embraces R2, while R2 faces him?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 and R2 have distinct body orientations during the embrace"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

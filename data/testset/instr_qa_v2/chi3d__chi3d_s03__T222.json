@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T222",
+  "instruction": "A candid documentary full shot of an indoor motion capture studio featuring a red carpeted floor and white walls. On the left, the woman in the white t-shirt and blue jeans (R2) balances on her left leg, delivering a high side kick with her right leg. On the right, the man in the black shirt and blue shorts (R1) stands facing left, receiving the kick near his chest while raising his hands. Bright overhead fluorescent lighting illuminates the entire scene, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 delivers a high side kick toward R1",
+    "R1 receives the kick near his chest with raised hands",
+    "R2 balances on her left leg while kicking with her right leg",
+    "R1 faces R2 during the incoming kick",
+    "the setting is an indoor motion capture studio with a red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 delivering a high side kick toward R1, rather than R1 delivering the kick toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the kicker and R1 is the receiver"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 receiving R2's kick near his chest with raised hands, rather than R2 receiving a kick from R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 receives the incoming kick from R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 balancing on her left leg while extending her right leg in a high side kick toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's kicking body configuration"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

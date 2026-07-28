@@ -1,0 +1,89 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "other_multi_person__0fff1d8b9610__T14",
+  "instruction": "A clean studio photograph, full shot. In an indoor studio with a plain white background, four cheerleaders perform a stunt. The dark-haired flyer (R9) stands at the top with hands on her hips, smiling and looking slightly upward. Supporting her are the dark-haired base on the left (R14) in profile facing right, the light-brown-haired base in the center (R5) facing forward, and the short-haired base on the right (R12) in profile facing left. The bases hold the flyer's legs to support her weight. The scene is illuminated by bright, even studio lighting.",
+  "n_person": 14,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14"
+  ],
+  "elements": [
+    "R9 is the flyer standing at the top while R14, R5, and R12 support her weight from below",
+    "R14 serves as a base holding R9's leg rather than being carried by R9",
+    "R5 serves as a base holding R9's leg rather than being carried by R9",
+    "R12 serves as a base holding R9's leg rather than being carried by R9",
+    "R9 stands with hands on her hips while being supported",
+    "the stunt takes place in an indoor studio with a plain white background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R9 the flyer being supported at the top by R14, R5, and R12, rather than R9 supporting their weight from below?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 is the flyer standing at the top while R14, R5, and R12 support her weight from below"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R14 act as a base holding R9's leg to support R9's weight, rather than R9 holding up R14?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R14 serves as a base holding R9's leg rather than being carried by R9"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R5 act as a base helping hold R9's legs to support R9, rather than R9 supporting R5?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R5 serves as a base holding R9's leg rather than being carried by R9"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R9 standing at the top of the cheerleading stunt with her hands on her hips while the bases support her legs?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R9 stands with hands on her hips while being supported"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "other_multi_person",
+    "used_fallback": false
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T227",
+  "instruction": "Candid documentary photograph, wide shot, slightly high angle. Inside a motion capture studio with a red carpet and white walls, the man in the black polo and blue shorts (R1) stands on the left, kicking his right leg forward. The woman in the white t-shirt and blue jeans (R2) stands on the right, facing him as his foot extends toward her thigh. R1 balances on his left leg while executing the kick. Overhead lights illuminate the room, casting soft shadows on the red carpet.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the one executing a forward kick toward R2",
+    "R2 is the target whose thigh R1's foot extends toward",
+    "R1 balances on his left leg while kicking with his right leg",
+    "R2 faces R1 during the kick",
+    "The scene is inside a motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person extending a kicking foot toward R2's thigh, rather than R2 extending a kicking foot toward R1's thigh?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the kicker and R2 is the target"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose thigh is approached by R1's foot, rather than R1 being the target of a kick from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives or is targeted by R1's kicking motion"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 balancing on one leg while executing the kick toward R2, rather than R2 balancing on one leg while kicking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the one-legged kicking action"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 kicking with his right leg while supporting himself on his left leg?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's body configuration during the kick"
+    },
+    {
+      "id": "q5",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Is the interaction set inside a motion capture studio with a red carpet?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "motion capture studio setting with red carpet"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

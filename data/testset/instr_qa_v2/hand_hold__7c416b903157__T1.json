@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__7c416b903157__T1",
+  "instruction": "A candid outdoor photograph with a full shot of a lakeside park in autumn, ground covered in fallen leaves. On the right, the man in the brown cardigan (R1) leans against a tree trunk, looking down and smiling. On the left, the red-haired woman in the white turtleneck (R2) stands facing him, holding yellow leaves. They are positioned close together, jointly holding and looking at the yellow autumn leaves. The background features a soft-focus lake. The scene is illuminated by soft natural daylight, highlighting a warm autumn palette of browns, whites, and yellows.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 leans against a tree trunk while R2 stands facing him",
+    "R2 holds the yellow autumn leaves that both people jointly hold and look at",
+    "R1 looks down and smiles while leaning near R2",
+    "R1 and R2 jointly hold and look at yellow autumn leaves",
+    "yellow autumn leaves are the shared contact object",
+    "lakeside park in autumn with fallen leaves"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one leaning against the tree trunk while R2 stands facing him, rather than R2 leaning against the tree while R1 stands facing her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 leans against a tree trunk while R2 stands facing him"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one holding the yellow leaves that she and R1 jointly hold and look at, rather than R1 being the sole person initially described as holding them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the yellow autumn leaves that both people jointly hold and look at"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 looking down and smiling while leaning near R2, rather than R2 being the one described as leaning and looking down with a smile?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 looks down and smiles while leaning near R2"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 positioned close together while jointly holding and looking at the same yellow autumn leaves?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 jointly hold and look at yellow autumn leaves"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

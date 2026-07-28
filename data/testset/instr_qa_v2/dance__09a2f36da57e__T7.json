@@ -1,0 +1,68 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__09a2f36da57e__T7",
+  "instruction": "Cinematic still, medium shot. In a dark indoor dance studio, the woman in the yellow long-sleeve shirt (R2) stands on the left, head tilted up with arms raised high. Beside her, the man in the rust-brown long-sleeve shirt (R3) is in profile, looking up with his arm reaching forward. On the right, a bystander woman with curly hair in a yellow shirt looks upward with raised arms, amidst other raised hands in the background. Soft overhead lighting highlights their expressive, overlapping movements against the dark backdrop.",
+  "n_person": 4,
+  "n_bystander": 1,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R2 is the woman with her head tilted up and both arms raised high, rather than R3 being the one posed that way",
+    "R3 is the man in profile looking upward with an arm reaching forward, rather than R2 having that forward-reaching profile role",
+    "R4 is the bystander woman looking upward with raised arms while R2 and R3 perform the more prominent dance movements",
+    "R2 and R3 have distinct dance poses: R2 raises both arms high while R3 reaches one arm forward",
+    "The scene is set in a dark indoor dance studio with soft overhead lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person with her head tilted up and arms raised high, rather than R3 being described as the one in that raised-arms pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the upward head tilt and high raised-arm dance pose"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person shown in profile looking upward with an arm reaching forward, rather than R2 taking that forward-reaching profile role?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the profile, upward-looking, forward-reaching arm role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 hold a high raised-arm dance pose while R3 performs a different reaching-forward dance gesture?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 and R3 have distinct expressive dance gestures"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

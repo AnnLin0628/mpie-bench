@@ -1,0 +1,81 @@
+{
+  "ok": true,
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__mma5__T2",
+  "model_id": "gemini-3-pro-image",
+  "S_instr": 0.9019607843137254,
+  "S_instr_role": 1.0,
+  "S_instr_asymm": 0.8333333333333334,
+  "S_instr_prop": null,
+  "S_instr_scene": null,
+  "S_instr_role_duty": 1.0,
+  "S_instr_prop_object": null,
+  "n_main": 4,
+  "n_all": 4,
+  "confidence": "high",
+  "detail": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 delivering a low kick toward R1's thigh, rather than R1 delivering a low kick toward R2?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R2's leg is striking R1's thigh"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person defending against the incoming kick with hands raised, rather than R2 defending against a kick from R1?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 has hands raised defensively"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 extending his right leg as the attacking leg toward R1 while R1 remains in a defensive stance, rather than R1 extending his right leg toward R2?",
+      "a": "partial",
+      "score": 0.5,
+      "gold_a": "yes",
+      "evidence": "R2 is kicking but the right leg is unclear"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand in a defensive stance with his hands raised while R2 performs the low kick?",
+      "a": "yes",
+      "score": 1.0,
+      "gold_a": "yes",
+      "evidence": "R1 guards while R2 low kicks"
+    }
+  ],
+  "weights": {
+    "asymm": 0.5,
+    "role_duty": 0.35,
+    "prop_object": 0.15
+  },
+  "_meta": {
+    "protocol": "instr_qa_v2",
+    "revision": "mpie_hard_v2.1",
+    "sample_id": "harmony4d__mma5__T2",
+    "model_id": "gemini-3-pro-image",
+    "judge_model": "gpt-5.5",
+    "qg_model": "gpt-5.5",
+    "seconds": 21.47,
+    "written_at": "2026-07-17T15:26:52",
+    "gen_relpath": "outputs/gemini-3-pro-image/harmony4d__mma5__T2.png",
+    "qa_relpath": "instr_qa_v2/harmony4d__mma5__T2.json",
+    "n_questions": 4
+  }
+}

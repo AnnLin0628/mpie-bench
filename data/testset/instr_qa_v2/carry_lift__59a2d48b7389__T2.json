@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__59a2d48b7389__T2",
+  "instruction": "Cinematic close-up photograph from a low angle, looking up under a canopy of green trees. The curly-haired young man in a light blue shirt (R1) smiles and looks upward, his head tilted. The young woman with a large afro in a cream dress (R2) is positioned behind him on his back, smiling warmly as she looks up into the sky. Her hands are clasped tightly over his chest in a close embrace. Bright sunlight backlights their curly hair, creating a warm, glowing rim light and a soft, dreamy atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 supports R2 on his back rather than R2 supporting R1",
+    "R2 is positioned behind R1 on his back rather than in front carrying him",
+    "R2 clasps her hands over R1's chest while being carried",
+    "R1 is the lower/front carrier and R2 is the rider on his back",
+    "low-angle close-up under a canopy of green trees"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R2 on his back, rather than R2 supporting R1 on her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 supports R2 on his back rather than R2 supporting R1"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 positioned behind R1 as the person being carried, rather than R1 being positioned behind R2 as the carried person?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is positioned behind R1 on his back rather than in front carrying him"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 serve as the lower/front support for R2, rather than R2 serving as the lower/front support for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the lower/front carrier and R2 is the rider on his back"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R2's hands clasped tightly over R1's chest while she is on his back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 clasps her hands over R1's chest while being carried"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

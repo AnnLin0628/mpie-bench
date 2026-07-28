@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__000277b52fe2__T6",
+  "instruction": "Candid documentary photograph, low-angle medium-wide shot. Inside a gym with training equipment and mirrors, the bearded man in the colorful patterned sleeves (R3) on the left sits on the floor, stretching his right leg out wide while looking to the right with a slight smile. Beside him, the man in the black graphic t-shirt (R1) on the right crouches low in a deep squat stretch, head bowed down, wearing blue athletic shoes. The two men stretch side-by-side on the floor. Soft, natural indoor lighting with warm tones casts gentle shadows across the training area.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R1 crouches low in a deep squat stretch with his head bowed, rather than R3 doing that posture",
+    "R3 sits on the floor stretching his right leg out wide and looking to the right with a slight smile, rather than R1 doing that posture",
+    "R1 and R3 stretch side-by-side on the floor with distinct stretching positions",
+    "R1 wears blue athletic shoes while crouching in the squat stretch",
+    "The setting includes gym training equipment and mirrors"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person crouching low in a deep squat stretch with his head bowed, rather than R3?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the deep squat stretch role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person sitting on the floor and stretching his right leg out wide, rather than R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 has the seated wide-leg stretch role"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 keep his head bowed down while holding the low squat stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's bowed-head squat body configuration"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R3 look to the right with a slight smile while doing the seated leg stretch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3's gaze and expression during seated stretch"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

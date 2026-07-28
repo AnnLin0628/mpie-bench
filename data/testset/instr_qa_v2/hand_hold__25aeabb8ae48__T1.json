@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hand_hold__25aeabb8ae48__T1",
+  "instruction": "A candid outdoor photograph, medium shot, captures a couple walking through a sunny park. On the left, the man with curly grey hair (R1) wearing a dark coat, blue scarf, and blue jeans walks forward, smiling ahead. On the right, the woman with dark hair (R2) in a brown leather jacket and beige turtleneck walks beside him, looking at him with a joyful laugh. They are holding hands as they stroll together. The background features soft-focus trees and autumn foliage under warm, natural sunlight.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 looks at R1 with a joyful laugh while they hold hands, rather than R1 looking at R2 that way",
+    "R1 walks forward smiling ahead while holding R2's hand, rather than R2 being described as smiling ahead",
+    "R1 and R2 hold hands while strolling together",
+    "R2 walks beside R1 and directs her attention toward him",
+    "The couple is walking through a sunny park with trees and autumn foliage"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 looking at R1 with a joyful laugh while they hold hands, rather than R1 looking at R2 in that same way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 directs joyful gaze toward R1 during the hand-hold"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one walking forward and smiling ahead while holding R2's hand, rather than R2 being the one described as smiling ahead?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 smiles ahead while walking hand-in-hand with R2"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 holding hands as they stroll together through the park?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 hand-hold while walking together"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 walking beside R1 while looking toward him during their hand-holding stroll?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 walks beside R1 and attends to him"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hand_hold",
+    "used_fallback": false
+  }
+}

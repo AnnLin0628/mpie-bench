@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "piggyback__07ab0f9247c2__T1",
+  "instruction": "Candid outdoor close-up photograph taken at a sunny waterfront pier with a clear blue sky. In the foreground on the right side, the smiling man in sunglasses and a blue waffle-knit shirt (R1) grins widely directly at the camera. Behind him on the left, the young girl in a pink ruffled top (R3) piggybacks on his back, wrapping her arms securely around his shoulders while looking off-camera to the right with a gentle expression. The background shows calm blue water stretching to the horizon under bright, warm afternoon sunlight.",
+  "n_person": 3,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "elements": [
+    "R1 carries and supports R3 in a piggyback position",
+    "R3 rides on R1's back rather than carrying him",
+    "R3 wraps her arms around R1's shoulders while being carried",
+    "R1 smiles toward the camera while carrying R3",
+    "R1 wears sunglasses",
+    "sunny waterfront pier setting with calm blue water"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 supporting R3 on his back in a piggyback ride, rather than R3 supporting R1 on her back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the carrier supporting R3"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the person riding on R1's back, rather than R1 riding on R3's back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 is the piggyback rider"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R3 hold onto R1 by wrapping her arms around R1's shoulders, rather than R1 wrapping his arms around R3's shoulders while being carried?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 clings to R1's shoulders during the piggyback"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 grinning toward the camera while R3 is positioned behind him on his back?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 faces the camera as the carrier while R3 is on his back"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "piggyback",
+    "used_fallback": false
+  }
+}

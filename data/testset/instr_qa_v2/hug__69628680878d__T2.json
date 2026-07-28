@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "hug__69628680878d__T2",
+  "instruction": "Candid lifestyle close-up shot in a cozy indoor living room. The boy in the brown long-sleeve shirt (R2) and the girl in the olive green overalls (R1) are locked in a tight, affectionate hug. The boy rests his cheek against hers while holding a cream-colored gift box, and the smiling girl holds a yellow plaid gift box. On the far left, a blurred hand holds a wooden toy. The scene features warm, soft indoor lighting.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R2 rests his cheek against R1's cheek during the close embrace",
+    "R1 holds the yellow plaid gift box while R2 holds the cream-colored gift box",
+    "R1 and R2 are in tight affectionate body contact with R2 cheek-to-cheek against R1",
+    "R1 holds a yellow plaid gift box",
+    "R2 holds a cream-colored gift box",
+    "the scene is a cozy indoor living room with warm soft lighting"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 resting his cheek against R1's cheek during the close embrace, rather than R1 being the one described as resting her cheek against R2's?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 rests his cheek against R1's cheek during the close embrace"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the yellow plaid gift box while R2 holds the cream-colored gift box, rather than the two gift boxes being swapped between them?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds the yellow plaid gift box while R2 holds the cream-colored gift box"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 in tight affectionate body contact with R2 while R2's cheek is pressed or rested against hers?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 are in tight affectionate body contact with R2 cheek-to-cheek against R1"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Does R1 hold a yellow plaid gift box?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a yellow plaid gift box"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Does R2 hold a cream-colored gift box?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds a cream-colored gift box"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "hug",
+    "used_fallback": false
+  }
+}

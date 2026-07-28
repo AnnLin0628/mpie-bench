@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance_lift__ac0b3ec11caa__T2",
+  "instruction": "Candid documentary full shot indoors in front of a large window with a blurry wooded background. In the center, the young girl with long red hair (R2) in a black leotard stands smiling and laughing. Directly behind her, the woman with short brown hair (R1) in a black long-sleeve shirt smiles as she uses both hands to tie the girl's long red hair into a high ponytail. The scene is captured in soft natural light with a muted color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 uses both hands to tie R2's long red hair into a high ponytail",
+    "R2 is the person having her hair tied by R1",
+    "R1 stands directly behind R2 while styling R2's hair",
+    "R2 stands smiling and laughing while R1 works on her hair",
+    "The scene is indoors in front of a large window with a blurry wooded background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 using both hands to tie R2's long red hair into a high ponytail, rather than R2 tying R1's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the hair-tying duty on R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person whose hair is being gathered and tied by R1, rather than R1 being the person whose hair is being tied by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 receives the hair-styling contact from R1"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 stand directly behind R2 while working on R2's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is positioned behind R2 to style her hair"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R2 standing in front as the person being styled while R1's hands are on R2's hair?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the foreground recipient of R1's hair-tying action"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance_lift",
+    "used_fallback": false
+  }
+}

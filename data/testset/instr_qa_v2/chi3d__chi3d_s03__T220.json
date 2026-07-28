@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T220",
+  "instruction": "Candid documentary photograph, wide shot. Inside a studio with a red carpet and white walls, the woman in the white t-shirt and blue jeans (R2) stands on the left, facing right. On the right, the bearded man in the black polo shirt and blue shorts (R1) balances on his left leg while kicking his right leg forward towards her. The scene is brightly lit by overhead studio lights, with a printer and wooden floor visible in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person balancing on his left leg and kicking his right leg forward toward R2",
+    "R2 is the standing person facing R1 and receiving the directed kick rather than performing it",
+    "R1 extends a leg toward R2 while R2 remains upright in front of him",
+    "R1 balances on one leg during the interaction",
+    "R2 faces R1 as the person toward whom the kick is aimed",
+    "a printer is visible in the studio background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one balancing on his left leg and kicking his right leg forward toward R2, rather than R2 kicking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the person balancing on his left leg and kicking his right leg forward toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person standing and facing R1 while R1 directs the forward kick toward her, rather than R1 standing still while R2 kicks?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the standing person facing R1 and receiving the directed kick rather than performing it"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Does R1 extend his right leg toward R2 while R2 remains upright in front of him, instead of R2 extending her leg toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 extends a leg toward R2 while R2 remains upright in front of him"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 balancing on one leg during the interaction with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 balances on one leg during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

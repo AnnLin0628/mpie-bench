@@ -1,0 +1,78 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "dance__12f4049cafad__T3",
+  "instruction": "Cinematic video still, medium shot. In an indoor studio with a soft pink and blue gradient background, three friends dance together. In the center foreground, the blonde woman in the black halter dress (R3) smiles at the camera with her arms outstretched. To her left, the Black woman in the red fringed dress (R1) dances with a joyful expression. To her right, the man in the black vest (R2) dances with his head tilted down and hands raised. The scene is illuminated by soft, colorful studio lighting, creating a vibrant, energetic atmosphere.",
+  "n_person": 4,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "elements": [
+    "R3 is the center-foreground dancer smiling at the camera with arms outstretched",
+    "R2 dances with his head tilted down and hands raised",
+    "R1 dances with a joyful expression",
+    "R3 maintains the focal dance pose while R1 and R2 dance beside her",
+    "indoor studio with a soft pink and blue gradient background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R3 the center-foreground dancer smiling at the camera with arms outstretched, rather than R1 or R2 taking that focal dance pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R3 holds the focal center-foreground dance role"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the dancer with his head tilted down and hands raised, rather than R1 being described with that pose?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 has the head-down, hands-raised dance pose"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the dancer with a joyful expression, rather than R2 being the one described that way?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 carries the joyful dancing role"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 dance with his hands raised while his head is tilted down?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 dances with raised hands and a downward head tilt"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "dance",
+    "used_fallback": false
+  }
+}

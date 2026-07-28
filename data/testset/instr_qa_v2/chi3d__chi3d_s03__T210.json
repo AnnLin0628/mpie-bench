@@ -1,0 +1,66 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T210",
+  "instruction": "A candid documentary photograph, wide shot at eye-level, in an indoor studio with a red carpeted floor and white walls. In the center of the frame, the man in the black polo shirt and blue shorts (R1) stands on his left leg, extending his right leg forward. On the right, the woman in the white t-shirt and blue jeans (R2) stands facing him, observing his leg extension. The scene is illuminated by bright overhead lights, with a projector visible on the ceiling and white walls in the background.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the person demonstrating the movement by standing on one leg and extending his right leg forward",
+    "R2 is the observer watching R1's leg extension rather than performing it herself",
+    "R1 and R2 face each other while R1 performs the leg extension",
+    "projector visible on the ceiling",
+    "indoor studio with red carpeted floor and white walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the person standing on one leg and extending his right leg forward, rather than R2 doing that action?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 performs the leg extension duty"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 observing R1's leg extension, rather than R1 observing R2 perform a leg extension?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 observes while R1 performs"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 balance on his left leg while extending his right leg toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 body configuration during the interaction"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}

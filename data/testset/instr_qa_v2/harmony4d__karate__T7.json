@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "harmony4d__karate__T7",
+  "instruction": "Candid action photograph, full shot, eye-level. Inside a karate dojo with yellow walls, red and blue floor mats, and wall-mounted swords, two martial artists practice a drill. On the left, the man in the black t-shirt with white-striped pants (R1) lunges forward to the right, extending his right arm in a strike. On the right, the woman in the black t-shirt with a red belt (R2) faces left, raising her left forearm to block his incoming arm. Bright overhead lighting illuminates the warm-toned room and colorful mats.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 lunges forward and extends his right arm in a strike toward R2",
+    "R2 raises her left forearm to block R1's incoming arm",
+    "R1 is the striker while R2 is the blocker in the drill",
+    "R2 faces R1 while blocking the strike with her forearm",
+    "red and blue floor mats in the karate dojo",
+    "karate dojo with yellow walls"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the martial artist lunging forward and extending his right arm in a strike toward R2, rather than R2 striking toward R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 lunges forward and extends his right arm in a strike toward R2"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the martial artist raising her left forearm to block R1's incoming arm, rather than R1 blocking an incoming arm from R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 raises her left forearm to block R1's incoming arm"
+    },
+    {
+      "id": "q3",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 playing the attacking striker role while R2 plays the defensive blocker role in the drill?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the striker while R2 is the blocker in the drill"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face R1 while using her left forearm as the blocking arm against R1's strike?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces R1 while blocking the strike with her forearm"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 3,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "harmony4d",
+    "used_fallback": false
+  }
+}

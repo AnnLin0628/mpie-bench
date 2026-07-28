@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "face_to_face_talk__221e4205794e__T1",
+  "instruction": "A candid documentary photograph in a medium shot at eye-level. Indoors against a plain beige wall, two women sit close together on a bed with white pillows. On the left, the woman in the white corduroy jacket (R1) sits cross-legged, gesturing expressively with her left hand as she speaks. On the right, the woman in the blue denim shirt (R2) sits angled toward her, listening intently with a serious expression and a direct gaze. The interaction is intimate and focused. Soft, diffused indoor lighting illuminates the scene, casting gentle shadows and creating a warm, neutral color palette.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 is the speaker, gesturing expressively with her left hand",
+    "R2 is the listener, angled toward R1 with serious attention",
+    "R1 speaks while R2 listens rather than the roles being reversed",
+    "R2 directs her gaze toward R1 during the focused conversation",
+    "both women sit close together on a bed with white pillows",
+    "the scene is indoors against a plain beige wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 the one speaking and gesturing expressively with her left hand, rather than R2 being the gesturing speaker?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the active speaker and gesturer"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the one listening intently to R1 with a serious expression, rather than R1 being the silent listener to R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 is the attentive listener"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 sit angled toward R1 while R1 speaks to her?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body is oriented toward R1 during the conversation"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R1 sit cross-legged while taking the expressive speaking role with R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1's seated speaking posture"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "face_to_face_talk",
+    "used_fallback": false
+  }
+}

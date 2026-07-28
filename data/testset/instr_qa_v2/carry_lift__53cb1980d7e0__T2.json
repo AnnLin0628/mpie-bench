@@ -1,0 +1,77 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "carry_lift__53cb1980d7e0__T2",
+  "instruction": "Cinematic medium shot of a man in a brown plaid coat (R1) and a woman in a red plaid blazer (R2) standing against a green wooden wall. The man (R1) on the left holds a grey rabbit and looks to his right. The woman (R2) on the right holds a black rabbit, turning her head further to her left. They stand shoulder-to-shoulder, looking in opposite directions. Soft, diffused outdoor lighting creates a moody, muted atmosphere.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a grey rabbit while R2 holds a black rabbit",
+    "R2 holds the black rabbit rather than the grey rabbit",
+    "R1 and R2 stand shoulder-to-shoulder while each holds a separate rabbit",
+    "a grey rabbit is being held",
+    "a black rabbit is being held",
+    "the pair is against a green wooden wall"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the grey rabbit while R2 holds the black rabbit, rather than R1 holding the black rabbit and R2 holding the grey rabbit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds grey rabbit and R2 holds black rabbit"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 the person holding the black rabbit, with R1 instead holding the grey rabbit, rather than those rabbit-holding roles being reversed?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 holds the black rabbit rather than the grey rabbit"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 standing shoulder-to-shoulder while each holds a separate rabbit?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 stand shoulder-to-shoulder while each holds a separate rabbit"
+    },
+    {
+      "id": "q4",
+      "bucket": "scene",
+      "subtype": "scene",
+      "main": false,
+      "q": "Are the people standing against a green wooden wall?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "the pair is against a green wooden wall"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 1
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "carry_lift",
+    "used_fallback": false
+  }
+}

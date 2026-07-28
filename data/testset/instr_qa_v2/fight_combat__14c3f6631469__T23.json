@@ -1,0 +1,87 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "fight_combat__14c3f6631469__T23",
+  "instruction": "Candid action photograph, full shot, eye-level. In an indoor boxing gym with red and black training pads in the background, the male trainer in a gray t-shirt (R1) stands on the left with his back to the camera, holding a black focus mitt. The barefoot woman in a blue hoodie (R2) stands on the right, throwing a fast right punch with her pink glove, creating motion blur. The woman (R2) directs her punch towards the mitt held by the trainer (R1). Bright overhead gym lighting illuminates the action, capturing the dynamic movement on the black floor mats.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds a black focus mitt for the punch",
+    "R2 throws a fast right punch toward R1's mitt",
+    "R1 is the trainer/pad holder while R2 is the puncher",
+    "R2 uses a pink glove on the punching hand",
+    "The action takes place in an indoor boxing gym",
+    "Red and black training pads are visible in the background"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding the black focus mitt to receive R2's punch, rather than R2 holding the mitt for R1?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 holds a black focus mitt for the punch"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 throwing a right punch toward the mitt held by R1, rather than R1 throwing a punch toward a mitt held by R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 throws a fast right punch toward R1's mitt"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Is R1 acting as the trainer or pad holder while R2 acts as the boxer delivering the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 is the trainer/pad holder while R2 is the puncher"
+    },
+    {
+      "id": "q4",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is a black focus mitt being used as the target for the punch?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R1 holds a black focus mitt for the punch"
+    },
+    {
+      "id": "q5",
+      "bucket": "prop",
+      "subtype": "prop_object",
+      "main": true,
+      "q": "Is R2 using a pink boxing glove on the hand that is punching?",
+      "gold_a": "yes",
+      "swap_sensitive": false,
+      "element": "R2 uses a pink glove on the punching hand"
+    }
+  ],
+  "bucket_counts": {
+    "role": 1,
+    "asymm": 2,
+    "prop": 2,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "fight_combat",
+    "used_fallback": false
+  }
+}

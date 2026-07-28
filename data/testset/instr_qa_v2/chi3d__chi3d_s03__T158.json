@@ -1,0 +1,76 @@
+{
+  "protocol": "instr_qa_v2",
+  "revision": "mpie_hard_v2.1",
+  "sample_id": "chi3d__chi3d_s03__T158",
+  "instruction": "Candid documentary photograph, full shot from behind. In an indoor motion capture studio with a red carpet, the bearded man in the black polo and blue shorts (R1) stands on the left with his back to the camera. The woman in the white patterned t-shirt and blue jeans (R2) stands on the right, facing left. They are holding hands while walking. Bright overhead lighting illuminates the studio.",
+  "n_person": 2,
+  "n_bystander": 0,
+  "ref_labels": [
+    "R1",
+    "R2"
+  ],
+  "elements": [
+    "R1 holds R2's hand while R1 has his back to the camera",
+    "R2 holds R1's hand while R2 faces left toward R1",
+    "R1 and R2 are walking hand-in-hand",
+    "R2 is the person facing toward R1 during the handhold",
+    "The scene is an indoor motion capture studio with a red carpet"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R1 holding R2's hand while R1 has his back to the camera, rather than R2 being the one with her back to the camera?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 has the back-to-camera contact role during the handhold"
+    },
+    {
+      "id": "q2",
+      "bucket": "asymm",
+      "subtype": "asymm",
+      "main": true,
+      "q": "Is R2 holding R1's hand while R2 faces left toward R1, rather than R1 being the one described as facing left toward R2?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2 faces toward R1 during the handhold"
+    },
+    {
+      "id": "q3",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Are R1 and R2 walking while holding each other's hands?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R1 and R2 walk hand-in-hand"
+    },
+    {
+      "id": "q4",
+      "bucket": "role",
+      "subtype": "role_duty",
+      "main": true,
+      "q": "Does R2 face toward R1 while their hands are joined as they walk?",
+      "gold_a": "yes",
+      "swap_sensitive": true,
+      "element": "R2's body orientation during the handhold"
+    }
+  ],
+  "bucket_counts": {
+    "role": 2,
+    "asymm": 2,
+    "prop": 0,
+    "scene": 0
+  },
+  "warnings": [],
+  "_meta": {
+    "revision": "mpie_hard_v2.1",
+    "qg_model": "gpt-5.5",
+    "filter": true,
+    "filter_model": "gpt-5.5",
+    "cat": "chi3d",
+    "used_fallback": false
+  }
+}
